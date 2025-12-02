@@ -1,4 +1,4 @@
-import { Inter, DM_Sans, Plus_Jakarta_Sans, Outfit, Sora, Space_Grotesk, Manrope } from 'next/font/google';
+import { Inter, DM_Sans, Plus_Jakarta_Sans, Outfit, Sora, Space_Grotesk, Manrope, Nunito, Quicksand, Poppins, Comfortaa } from 'next/font/google';
 
 // Ladda alla typsnitt
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -8,6 +8,10 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
+const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' });
+const quicksand = Quicksand({ subsets: ['latin'], variable: '--font-quicksand' });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-poppins' });
+const comfortaa = Comfortaa({ subsets: ['latin'], variable: '--font-comfortaa' });
 
 export const metadata = {
   title: "Typsnitt Test - Flocken",
@@ -16,12 +20,16 @@ export const metadata = {
 
 const fonts = [
   { name: 'Inter (Nuvarande)', class: inter.className, desc: 'Neutral, modern, mycket läsbar' },
-  { name: 'DM Sans 🔥', class: dmSans.className, desc: 'Varm, modern, läsbar - perfekt för hundappar!' },
+  { name: 'Sora ⭐', class: sora.className, desc: 'Mjuk, humanistisk, organisk känsla' },
+  { name: 'Manrope ⭐', class: manrope.className, desc: 'Modernt humanistiskt, behaglig läsning' },
+  { name: 'Nunito 🔥', class: nunito.className, desc: 'MYCKET runda hörn (F, T, E) - väldigt vänlig!' },
+  { name: 'Quicksand', class: quicksand.className, desc: 'Geometrisk + rund, jämna kurvor' },
+  { name: 'Poppins', class: poppins.className, desc: 'Rundare terminaler än Manrope, perfekt balans' },
+  { name: 'Comfortaa', class: comfortaa.className, desc: 'SUPER rund - max organisk känsla' },
+  { name: 'DM Sans', class: dmSans.className, desc: 'Varm, modern, läsbar - perfekt för hundappar!' },
   { name: 'Plus Jakarta Sans', class: jakarta.className, desc: 'Rundare hörn, mer lekfull och vänlig' },
   { name: 'Outfit', class: outfit.className, desc: 'Geometrisk men varm, unik personlighet' },
-  { name: 'Sora', class: sora.className, desc: 'Mjuk, humanistisk, organisk känsla' },
   { name: 'Space Grotesk', class: spaceGrotesk.className, desc: 'Tech-känsla men varm och modern' },
-  { name: 'Manrope', class: manrope.className, desc: 'Modernt humanistiskt, behaglig läsning' },
 ];
 
 const loremShort = "Flocken är appen där hundar och deras människor hittar varandra. Para, passa, rasta och besöka – allt samlas här.";
