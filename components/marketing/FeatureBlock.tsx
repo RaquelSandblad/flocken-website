@@ -36,7 +36,7 @@ export function FeatureBlock({
               <h2 className="text-3xl lg:text-5xl font-bold text-flocken-brown mb-4">
                 {title}
               </h2>
-              <p className="text-lg text-flocken-gray">
+              <p className="text-lg text-flocken-brown">
                 {subtitle}
               </p>
             </div>

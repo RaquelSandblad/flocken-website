@@ -1,4 +1,4 @@
-import { Source_Serif_4, Public_Sans, Epilogue, Sora, Manrope, DM_Sans, Inter, Nunito, Bricolage_Grotesque, Spectral, Outfit } from 'next/font/google';
+import { Source_Serif_4, Public_Sans, Epilogue, Sora, Manrope, DM_Sans, Inter, Nunito, Bricolage_Grotesque, Spectral } from 'next/font/google';
 
 // Ladda typsnitt
 const sourceSerif = Source_Serif_4({ subsets: ['latin'], variable: '--font-source-serif' });
@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' });
 const bricolage = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-bricolage' });
 const spectral = Spectral({ subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-spectral' });
-const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata = {
   title: "Typsnitt-kombinationer Test - Flocken",
@@ -28,16 +27,6 @@ const packages = [
     desc: 'Varmt, vuxet, lätt att lita på. Serif ger förtroende, sans-serif ger modernitet.',
     vibe: '💝 Trygghet + 🌿 Organisk + 👔 Vuxen',
     bestFor: 'Perfekt för parning och hundvakt - bygger förtroende',
-  },
-  {
-    name: 'Paket H 🎯',
-    heading: 'Source Serif 4',
-    body: 'Outfit',
-    headingClass: sourceSerif.className,
-    bodyClass: outfit.className,
-    desc: 'Varma serif-rubriker + geometrisk men vänlig body. Din egen kombination!',
-    vibe: '💝 Förtroende + 🎨 Unik + ⚡ Modern',
-    bestFor: 'Bästa av två världar: Serif-värme + Outfit-personlighet',
   },
   {
     name: 'Paket B',

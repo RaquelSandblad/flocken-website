@@ -24,7 +24,7 @@ export default function HomePage() {
         subtitle="Para, Passa, Rasta, Besöka. Fyra funktioner. En app. Tusentals svenska hundägare."
         ctaPrimary={{ text: "App Store", href: "#" }}
         ctaSecondary={{ text: "Google Play", href: "#" }}
-        image="/assets/flocken/generated/hero.png"
+        image="/assets/flocken/generated/flocken_image_malua-arlo-coco-play-ball-dog-park_1x1.jpg"
         launchOffer="Gratis i 6 månader för alla som skapar konto innan nyår"
       />
       
@@ -36,15 +36,15 @@ export default function HomePage() {
               <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-6">
                 Allt du behöver på ett ställe
               </h2>
-              <p className="text-lg text-flocken-gray leading-relaxed">
+              <p className="text-lg text-flocken-brown leading-relaxed">
                 Flocken samlar det du som hundägare behöver i vardagen. 
                 Allt i en och samma app – enkelt, tryggt och gjort för svenska hundägare.
               </p>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
               <Image
-                src="/assets/flocken/generated/community.png"
-                alt="Hundägare med sina hundar"
+                src="/assets/flocken/generated/flocken_image_malua-arlo-coco-chasing-ball_16x9.jpg"
+                alt="Hundägare med sina hundar i hundparken"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -145,27 +145,33 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center text-3xl">
-                🐾
+              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Helhetsplattform</h3>
-              <p className="text-flocken-gray">Allt på ett ställe istället för flera appar</p>
+              <p className="text-flocken-brown">Allt på ett ställe istället för flera appar</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center text-3xl">
-                ✨
+              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Lugn och vuxen</h3>
-              <p className="text-flocken-gray">Ingen social press, bara funktioner som fungerar</p>
+              <p className="text-flocken-brown">Ingen social press, bara funktioner som fungerar</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center text-3xl">
-                🇸🇪
+              <div className="w-16 h-16 mx-auto mb-4 bg-flocken-sand rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Svensk vardag</h3>
-              <p className="text-flocken-gray">Gjord för hur vi lever här, med svenska hundägare i fokus</p>
+              <p className="text-flocken-brown">Gjord för hur vi lever här, med svenska hundägare i fokus</p>
             </div>
           </div>
         </div>
@@ -207,29 +213,38 @@ export default function HomePage() {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
               <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center text-2xl">
-                  📍
+                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </div>
                 <p className="font-semibold text-flocken-brown">Dagliga promenader</p>
               </div>
               
               <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center text-2xl">
-                  👥
+                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
                 </div>
                 <p className="font-semibold text-flocken-brown">Aktivt community</p>
               </div>
               
               <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center text-2xl">
-                  ☕
+                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
                 </div>
                 <p className="font-semibold text-flocken-brown">Nya platser</p>
               </div>
               
               <div className="space-y-2">
-                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center text-2xl">
-                  🐕
+                <div className="w-12 h-12 mx-auto bg-flocken-sand rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
                 </div>
                 <p className="font-semibold text-flocken-brown">Passning & parning</p>
               </div>

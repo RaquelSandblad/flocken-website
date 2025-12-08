@@ -8,7 +8,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply text-flocken-brown font-bold font-heading;
+    @apply text-flocken-brown font-bold;
   }
   
   a {
@@ -41,15 +41,15 @@
   }
   
   .prose h2 {
-    @apply text-h2 font-bold font-heading mt-12 mb-6 text-flocken-brown;
+    @apply text-h2 font-bold mt-12 mb-6 text-flocken-brown;
   }
   
   .prose h3 {
-    @apply text-h3 font-bold font-heading mt-8 mb-4 text-flocken-brown;
+    @apply text-h3 font-bold mt-8 mb-4 text-flocken-brown;
   }
   
   .prose h4 {
-    @apply text-h4 font-semibold font-heading mt-6 mb-3 text-flocken-brown;
+    @apply text-h4 font-semibold mt-6 mb-3 text-flocken-brown;
   }
   
   .prose p {

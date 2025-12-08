@@ -49,7 +49,7 @@ export function CTABlock({
             
             {launchOffer && (
               <p className="text-white font-medium">
-                🎉 {launchOffer}
+                {launchOffer}
               </p>
             )}
           </div>

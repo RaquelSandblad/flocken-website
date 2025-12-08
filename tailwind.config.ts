@@ -29,9 +29,7 @@ const config: Config = {
         'flocken-favorite': '#C44536',   // Favorit-hjärta
       },
       fontFamily: {
-        heading: ['var(--font-heading)', 'serif'],
-        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
-        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         // Typografi-skala

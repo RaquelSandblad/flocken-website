@@ -62,7 +62,7 @@ export function HeroBlock({
               
               {launchOffer && (
                 <p className="text-sm text-flocken-olive font-medium">
-                  🎉 {launchOffer}
+                  {launchOffer}
                 </p>
               )}
             </div>
