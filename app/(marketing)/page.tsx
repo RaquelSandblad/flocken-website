@@ -24,7 +24,7 @@ export default function HomePage() {
         subtitle="Para, Passa, Rasta, Besöka. Fyra funktioner. En app. Tusentals svenska hundägare."
         ctaPrimary={{ text: "App Store", href: "#" }}
         ctaSecondary={{ text: "Google Play", href: "#" }}
-        image="/assets/flocken/generated/hero.png"
+        image="/assets/flocken/generated/flocken_image_hero.jpeg"
         launchOffer="Gratis i 6 månader för alla som skapar konto innan nyår"
       />
       
@@ -43,7 +43,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
               <Image
-                src="/assets/flocken/generated/community.png"
+                src="/assets/flocken/generated/flocken_image_community.jpeg"
                 alt="Hundägare med sina hundar i hundparken"
                 fill
                 className="object-cover"
