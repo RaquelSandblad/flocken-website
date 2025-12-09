@@ -24,7 +24,7 @@ export default function HomePage() {
         subtitle="Para, Passa, Rasta, Besöka. Fyra funktioner. En app. Tusentals svenska hundägare."
         ctaPrimary={{ text: "App Store", href: "#" }}
         ctaSecondary={{ text: "Google Play", href: "#" }}
-        image="/assets/flocken/generated/flocken_image_malua-arlo-coco-play-ball-dog-park_1x1.jpg"
+        image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
         launchOffer="Gratis i 6 månader för alla som skapar konto innan nyår"
       />
       
