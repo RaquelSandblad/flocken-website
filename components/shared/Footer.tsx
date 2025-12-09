@@ -53,7 +53,7 @@ export function Footer({ variant = 'marketing' }: FooterProps) {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/integritetspolicy" className="text-flocken-gray hover:text-flocken-olive transition-colors">Integritetspolicy</Link></li>
                 <li><Link href="/anvendarvillkor" className="text-flocken-gray hover:text-flocken-olive transition-colors">Användarvillkor</Link></li>
-                <li><a href="mailto:support@spitakolus.com" className="text-flocken-gray hover:text-flocken-olive transition-colors">Kontakt</a></li>
+                <li><Link href="/support" className="text-flocken-gray hover:text-flocken-olive transition-colors">Kontakt</Link></li>
               </ul>
             </div>
           </div>
