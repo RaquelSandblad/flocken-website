@@ -28,86 +28,80 @@ async function createIPhoneMockup(screenshotPath, outputPath) {
   try {
     console.log(`📱 Bearbetar: ${path.basename(screenshotPath)}`);
 
-    // Läs in screenshot
-    const screenshot = sharp(screenshotPath);
-    const metadata = await screenshot.metadata();
-
-    // Skala screenshot till iPhone-dimensioner (behåll aspect ratio)
-    const resizedScreenshot = await screenshot
+    // Läs in screenshot och skala till iPhone-storlek
+    const resizedScreenshot = await sharp(screenshotPath)
       .resize(DEVICE_WIDTH, DEVICE_HEIGHT, {
-        fit: 'inside',
-        withoutEnlargement: true
+        fit: 'cover',
+        position: 'center'
       })
+      .png()
       .toBuffer();
 
-    const resizedMeta = await sharp(resizedScreenshot).metadata();
-    const screenshotWidth = resizedMeta.width;
-    const screenshotHeight = resizedMeta.height;
+    // Skapa en SVG mask för rundade hörn (iPhone-stil)
+    const roundedCornersSVG = `
+      <svg width="${DEVICE_WIDTH}" height="${DEVICE_HEIGHT}">
+        <rect x="0" y="0" width="${DEVICE_WIDTH}" height="${DEVICE_HEIGHT}" 
+              rx="${CORNER_RADIUS}" ry="${CORNER_RADIUS}" fill="white"/>
+      </svg>
+    `;
 
-    // Centrera screenshot på device
-    const screenshotX = Math.floor((DEVICE_WIDTH - screenshotWidth) / 2);
-    const screenshotY = Math.floor((DEVICE_HEIGHT - screenshotHeight) / 2);
-
-    // Skapa device background (svart med rundade hörn)
-    const deviceBackground = await sharp({
-      create: {
-        width: DEVICE_WIDTH,
-        height: DEVICE_HEIGHT,
-        channels: 4,
-        background: { r: 20, g: 20, b: 20, alpha: 1 }
-      }
-    })
-    .png()
-    .toBuffer();
-
-    // Composita screenshot på device background
-    const deviceWithScreenshot = await sharp(deviceBackground)
+    // Applicera rundade hörn på screenshot
+    const screenshotWithRoundedCorners = await sharp(resizedScreenshot)
       .composite([
         {
-          input: resizedScreenshot,
-          top: screenshotY,
-          left: screenshotX
+          input: Buffer.from(roundedCornersSVG),
+          blend: 'dest-in'
         }
       ])
+      .png()
       .toBuffer();
 
-    // Skapa mockup canvas med transparent bakgrund
-    const mockupCanvas = await sharp({
+    // Skapa canvas med plats för skugga
+    const canvas = await sharp({
       create: {
         width: MOCKUP_WIDTH,
         height: MOCKUP_HEIGHT,
         channels: 4,
-        background: { r: 255, g: 255, b: 255, alpha: 0 }
+        background: { r: 0, g: 0, b: 0, alpha: 0 }
       }
     })
     .png()
     .toBuffer();
 
-    // Skapa skugga (blur effect)
-    const shadow = await sharp({
-      create: {
-        width: DEVICE_WIDTH + 40,
-        height: DEVICE_HEIGHT + 40,
-        channels: 4,
-        background: { r: 0, g: 0, b: 0, alpha: 0.15 }
-      }
-    })
-    .blur(15)
-    .png()
-    .toBuffer();
+    // Skapa mjuk skugga
+    const shadowSVG = `
+      <svg width="${MOCKUP_WIDTH}" height="${MOCKUP_HEIGHT}">
+        <defs>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+            <feOffset dx="0" dy="10" result="offsetblur"/>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <rect x="${OFFSET_X}" y="${OFFSET_Y}" width="${DEVICE_WIDTH}" height="${DEVICE_HEIGHT}" 
+              rx="${CORNER_RADIUS}" ry="${CORNER_RADIUS}" 
+              fill="black" filter="url(#shadow)"/>
+      </svg>
+    `;
 
-    // Composita allt tillsammans
-    const finalMockup = await sharp(mockupCanvas)
+    // Kombinera allt
+    await sharp(canvas)
       .composite([
         // Lägg till skugga
         {
-          input: shadow,
-          top: OFFSET_Y - 20,
-          left: OFFSET_X - 20
+          input: Buffer.from(shadowSVG),
+          top: 0,
+          left: 0
         },
-        // Lägg till device med screenshot
+        // Lägg till screenshot med rundade hörn
         {
-          input: deviceWithScreenshot,
+          input: screenshotWithRoundedCorners,
           top: OFFSET_Y,
           left: OFFSET_X
         }
