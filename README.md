@@ -36,14 +36,19 @@ flocken-website/
 │   ├── (legal)/            # Legal pages layout
 │   │   ├── layout.tsx      # Legal header + footer + sidebar
 │   │   ├── integritetspolicy/
-│   │   └── anvendarvillkor/
-│   ├── layout.tsx          # Root layout
+│   │   ├── anvendarvillkor/
+│   │   ├── privacy-choices/  # Användarens integritetsval (App Store-krav)
+│   │   └── support/
+│   ├── layout.tsx          # Root layout (inkl. cookie banner)
 │   └── globals.css         # Global styles
 ├── components/
-│   ├── shared/             # Shared components
+│   ├── shared/             # Shared components (Header, Footer)
 │   ├── marketing/          # Marketing blocks
 │   └── legal/              # Legal components
-├── public/assets/flocken/  # Assets (logos, screenshots, images)
+├── public/
+│   ├── assets/flocken/     # Assets (logos, screenshots, images)
+│   └── scripts/
+│       └── cookie-banner-custom.js  # GDPR cookie consent
 └── tailwind.config.ts      # Designsystem
 ```
 
