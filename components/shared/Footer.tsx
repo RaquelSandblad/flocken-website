@@ -3,6 +3,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Extend Window interface to include cookie banner function
+declare global {
+  interface Window {
+    showCookieSettings?: () => void;
+  }
+}
+
 interface FooterProps {
   variant?: 'marketing' | 'legal';
 }
