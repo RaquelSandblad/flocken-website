@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls", "delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bastavan.app",
+      "sha256_cert_fingerprints": [
+        "41:C9:1D:83:F8:CC:35:01:00:7B:34:DE:D2:FC:6B:FD:DD:F6:FF:AE:BA:AA:F0:AE:C4:2F:EC:55:98:53:4F:9C"
+      ]
+    }
+  }
+]
+
