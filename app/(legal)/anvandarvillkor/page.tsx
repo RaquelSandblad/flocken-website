@@ -11,7 +11,7 @@ export default function AnvandarvillkorPage() {
       <h1>Användarvillkor</h1>
       
       <p className="lead">
-        Senast uppdaterad: {new Date().toLocaleDateString('sv-SE')}
+        Senast uppdaterad: {new Date().toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
       </p>
       
       <p>
