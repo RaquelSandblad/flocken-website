@@ -1,7 +1,6 @@
 import { HeroBlock } from '@/components/marketing/HeroBlock';
 import { FeatureBlock } from '@/components/marketing/FeatureBlock';
 import { TestimonialBlock } from '@/components/marketing/TestimonialBlock';
-import { CTABlock } from '@/components/marketing/CTABlock';
 import Image from 'next/image';
 
 export const metadata = {
@@ -19,13 +18,14 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <HeroBlock
-        title="Ett enklare liv som hundägare"
+        title="Appen för ett enklare liv som hundägare"
         tagline="– gå med i Flocken"
-        subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka. För ett bättre liv som hund."
-        ctaPrimary={{ text: "App Store", href: "#" }}
-        ctaSecondary={{ text: "Google Play", href: "#" }}
+        subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
+        ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
         image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
-        launchOffer="Få alla premiumfunktioner gratis i 6 månader om du skapar konto senast den 31 januari"
+        launchInfo="Appen lanseras till MyDOG. Skapa ett konto och bli en av de första att gå med i Flocken."
+        appStoreComingSoon="Kommer snart på AppStore!"
+        launchOffer="Få gratis premiumfunktioner i 6 månader fram till den 31 januari."
       />
       
       {/* Community Section */}
@@ -34,11 +34,10 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-6">
-                Allt du behöver på ett ställe
+                Allt för hundägare på ett ställe
               </h2>
-              <p className="text-lg text-flocken-brown leading-relaxed">
-                I Flocken viktiga funktioner för dig i vardagen som hundägare. 
-                Allt i en app, framtagen av svenska hundägare.
+              <p className="text-xl lg:text-2xl text-flocken-brown leading-relaxed">
+                Flocken är en app framtagen av svenska hundägare för svenska hundägare.
               </p>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
@@ -57,13 +56,13 @@ export default function HomePage() {
       <div id="funktioner">
         {/* Feature: Para - För Marco */}
         <FeatureBlock
-          title="Hitta en lekkamrat eller parningspartner som lever upp till dina standarder"
-          subtitle="Enkel filtrering efter dina kriterier. Direktkontakt med med verifierade hundägare direkt i appen."
+          title="Hitta en lekkamrat eller parningspartner som matchar din hund"
+          subtitle="Enkel filtrering efter dina kriterier - slipp röriga grupper i sociala medier. Chatta direkt med hundägare i appen."
           bullets={[
-            "Filtrera på kön, ras, storlek och region",
-            "Se vilka hälsotester hunden har",
-            "Alla profiler BankID-verifierade",
-            "Betydligt enklare än Facebook-grupper"
+            "Se alla hundar på en karta",
+            "Filtrera på ras, kön, stad och mycket mer",
+            "Se hälsotester och läs mer om hunden",
+            "Mycket enklare än sociala medie-grupper"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_para_karta-alla-hundar.png"
           microCta="Se hur Para fungerar"
@@ -72,10 +71,10 @@ export default function HomePage() {
         
         {/* Feature: Passa - För Anna */}
         <FeatureBlock
-          title="Hitta en hundvakt du och din hund är trygg med"
-          subtitle="Välj rätt hundvakt i ditt närområde eller passa varandras hundar."
+          title="Hitta en hundvakt du och din hund är trygga med"
+          subtitle="Välj rätt hundvakt eller passa varandras hundar."
           bullets={[
-            "Verifierade hundvakter med tydliga profiler",
+            "Välj mellan hundvakter med tydliga profiler",
             "Ta kontakt direkt i appen",
             "Byt passning kostnadsfritt med andra",
             "Annonsera dina egna passningstjänster"
@@ -85,25 +84,9 @@ export default function HomePage() {
           reverse={true}
         />
         
-        {/* Quote Break - Jonas */}
-        <section className="py-16 bg-flocken-cream">
-          <div className="container-custom">
-            <div className="max-w-3xl mx-auto">
-              <blockquote className="text-center">
-                <p className="text-2xl lg:text-3xl font-semibold text-flocken-brown italic mb-4">
-                  "Flocken är navet i mitt hundliv numera."
-                </p>
-                <footer className="text-flocken-gray">
-                  — Jonas, erfaren hundägare med 2 hundar
-                </footer>
-              </blockquote>
-            </div>
-          </div>
-        </section>
-        
         {/* Feature: Rasta - För Anders */}
         <FeatureBlock
-          title="Upptäck nya rastplatser och rundor"
+          title="Registrera dina rundor och hur långt du går"
           subtitle="Logga dina promenader, hitta nya rundor och se hur mycket din hund rör sig."
           bullets={[
             "GPS-tracking för att spara dina rundor",
@@ -119,12 +102,12 @@ export default function HomePage() {
         {/* Feature: Besöka - För Alla */}
         <FeatureBlock
           title="Var är du välkommen att ta med hunden?"
-          subtitle="Karta över caféer, restauranger och barer som välkomnar hundar."
+          subtitle="Karta med caféer, restauranger och barer som välkomnar hundar"
           bullets={[
-            "Alla Googles samlade hundvänliga verksamheter",
-            "Användare lägger till sina ställen",
-            "Perfekt att ha med på resan",
-            "Spara din favoritlista"
+            "Alla hundvänliga verksamheter från Google Maps",
+            "Lägg till egna ställen för att tipsa andra",
+            "Perfekt när du är ute och reser",
+            "Skapa din lista med favoriter"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_besoka_karta-alla.png"
           microCta="Så fungerar Besöka"
@@ -149,7 +132,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Helhetsplattform</h3>
-              <p className="text-flocken-brown">Allt på ett ställe istället för flera appar och grupper i sociala medier.</p>
+              <p className="text-flocken-brown">Slipp en massa olika appar och att leta i facebook-grupper.</p>
             </div>
             
             <div className="text-center">
@@ -159,7 +142,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Lugn och vuxen</h3>
-              <p className="text-flocken-brown">Ingen social press, bara praktiska funktioner på dina villkor.</p>
+              <p className="text-flocken-brown">Ingen social press, utan praktiska funktioner på dina villkor.</p>
             </div>
             
             <div className="text-center">
@@ -169,7 +152,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-flocken-brown mb-2">Svensk vardag</h3>
-              <p className="text-flocken-brown">Gjord för hur vi lever här, av svenska hundägare för svenska hundägare</p>
+              <p className="text-flocken-brown">Appen är framtagen av svenska hundägare för svenska hundägare</p>
             </div>
           </div>
         </div>
@@ -206,7 +189,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown">
-              För att använda varje dag
+              För daglig användning och specifika tillfällen
             </h2>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
@@ -217,7 +200,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <p className="font-semibold text-flocken-brown">Dagliga promenader</p>
+                <p className="font-semibold text-flocken-brown">Promenader och rastrundor</p>
               </div>
               
               <div className="space-y-2">
@@ -235,7 +218,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
                 </div>
-                <p className="font-semibold text-flocken-brown">Nya platser som tar emot hundar</p>
+                <p className="font-semibold text-flocken-brown">Verksamheter som tar emot hundar</p>
               </div>
               
               <div className="space-y-2">
@@ -252,14 +235,46 @@ export default function HomePage() {
       </section>
       
       {/* Final CTA */}
-      <CTABlock
-        title="Gå med i flocken idag"
-        subtitle="En helt ny app och samlingsplats för alla hundägare"
-        ctaPrimary={{ text: "App Store", href: "#" }}
-        ctaSecondary={{ text: "Google Play", href: "#" }}
-        launchOffer="Gratis premiumfunktioner i 6 månader för konton som skapas före 31 jan."
-      />
+      <section className="section-padding bg-gradient-to-br from-flocken-olive to-flocken-accent">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl lg:text-6xl font-bold text-white">
+                Gå med i flocken idag
+              </h2>
+              <p className="text-xl text-white/90">
+                Ladda ner appen och skapa ditt konto
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <p className="text-lg text-white/80">
+                Appen lanseras till MyDOG
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://play.google.com/store/apps/details?id=com.bastavan.app" className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft">
+                  {/* Google Play icon */}
+                  <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                  </svg>
+                  Ladda ner på Google Play
+                </a>
+              </div>
+              
+              <p className="text-lg text-white/80">
+                Finns att ladda ner på Google Play. Kommer när som helst till AppStore.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
+                <p className="text-lg text-white font-semibold">
+                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 31 januari)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
-
