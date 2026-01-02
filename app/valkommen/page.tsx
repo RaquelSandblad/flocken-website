@@ -1,6 +1,7 @@
 import { HeroBlock } from '@/components/marketing/HeroBlock';
 import { FeatureBlock } from '@/components/marketing/FeatureBlock';
 import { TestimonialBlock } from '@/components/marketing/TestimonialBlock';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Välkommen till Flocken - Ett enklare liv som hundägare",
@@ -30,13 +31,24 @@ export default function ValkommenPage() {
       {/* Community Section */}
       <section className="section-padding bg-flocken-sand" id="om-appen">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown">
-              Allt för hundägare på ett ställe
-            </h2>
-            <p className="text-xl lg:text-2xl text-flocken-brown leading-relaxed">
-              Flocken är en app framtagen av svenska hundägare för svenska hundägare.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-6">
+                Allt för hundägare på ett ställe
+              </h2>
+              <p className="text-xl lg:text-2xl text-flocken-brown leading-relaxed">
+                Flocken är en app framtagen av svenska hundägare för svenska hundägare.
+              </p>
+            </div>
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
+              <Image
+                src="/assets/flocken/generated/flocken_image_malua-arlo-coco-chasing-ball_16x9.jpeg"
+                alt="Hundägare med sina hundar i hundparken"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -59,7 +71,7 @@ export default function ValkommenPage() {
         
         {/* Feature: Passa - För Anna */}
         <FeatureBlock
-          title="Hitta en hundvakt du och din hund är trygg med"
+          title="Hitta en hundvakt du och din hund är trygga med"
           subtitle="Välj rätt hundvakt eller passa varandras hundar."
           bullets={[
             "Välj mellan hundvakter med tydliga profiler",
@@ -237,17 +249,8 @@ export default function ValkommenPage() {
             
             <div className="space-y-4">
               <p className="text-lg text-white/80">
-                Appen lanseras till MyDOG.
+                Appen lanseras till MyDOG
               </p>
-              <p className="text-lg text-white/80">
-                Finns att ladda ner på Google Play. Kommer när som helst till AppStore.
-              </p>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
-                <p className="text-lg text-white font-semibold">
-                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 31 januari)
-                </p>
-              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://play.google.com/store/apps/details?id=com.bastavan.app" className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft">
@@ -257,6 +260,16 @@ export default function ValkommenPage() {
                   </svg>
                   Ladda ner på Google Play
                 </a>
+              </div>
+              
+              <p className="text-lg text-white/80">
+                Finns att ladda ner på Google Play. Kommer när som helst till AppStore.
+              </p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
+                <p className="text-lg text-white font-semibold">
+                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 31 januari)
+                </p>
               </div>
             </div>
           </div>
