@@ -62,6 +62,45 @@ Flockens färgschema implementerat i Tailwind:
 
 ## 📦 Deployment
 
+**⚠️ VIKTIGT: Dessa instruktioner gäller ENDAST för flocken-website. För nastahem, se nastahem/README.md**
+
+### Vercel Deployment (flocken-website)
+
+**KRITISKT:** Vercel är kopplad till **RaquelSandblad/flocken-website**, inte tbinho/flocken-website.
+
+För att trigga automatisk deployment måste du pusha till **`raquel` remote**:
+
+```powershell
+# Navigera till flocken-website (använd $PSScriptRoot i scripts)
+cd "C:\Users\Torbjörn\Desktop\flocken-website"
+
+# Lägg till ändringar
+git add .
+
+# Commit
+git commit -m "Beskrivning av ändringar"
+
+# ⚠️ VIKTIGT: Pusha till 'raquel' remote (inte 'origin' eller 'flocken')
+git push raquel main
+```
+
+**Varför `raquel` remote?**
+- Vercel är kopplad till `https://github.com/RaquelSandblad/flocken-website.git`
+- Push till `origin` eller `flocken` remote triggar INTE deployment
+- Endast push till `raquel` remote triggar automatisk Vercel deployment
+
+### Git Remotes (flocken-website)
+
+Detta repo har flera remotes konfigurerade:
+- `raquel` → `https://github.com/RaquelSandblad/flocken-website.git` ⭐ **Använd denna för deployment**
+- `flocken` → `https://github.com/tbinho/flocken-website.git`
+- `origin` → `https://github.com/tbinho/flocken-website.git`
+
+**Kontrollera remotes:**
+```powershell
+git remote -v
+```
+
 ### Git & specialtecken i sökvägar
 - Använd alltid `$PSScriptRoot` i PowerShell-skript för att undvika problem med `ö` i sökvägar.
 - Se `GIT_COMMANDS.md` och `README_GIT.md` för full guide.
@@ -70,22 +109,11 @@ Flockens färgschema implementerat i Tailwind:
   - `git -C $PSScriptRoot status`
   - `.\commit-changes.ps1` (ligger i repo-roten och använder `$PSScriptRoot`)
 
-### GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/tbinho/flocken-website.git
-git branch -M main
-git push -u origin main
-```
-
-### Vercel
+### Vercel Setup
 
 1. Logga in på https://vercel.com med GitHub
-2. Importera `tbinho/flocken-website`
-3. Deploy automatiskt
+2. Importera `RaquelSandblad/flocken-website` (inte tbinho/flocken-website)
+3. Deploy automatiskt vid push till `main` branch
 4. Konfigurera domän: flocken.info
 
 ## 📝 Företagsinformation
@@ -98,7 +126,8 @@ git push -u origin main
 ## 🔗 Länkar
 
 - Production: https://flocken.info
-- GitHub: https://github.com/tbinho/flocken-website
+- GitHub (Vercel-kopplad): https://github.com/RaquelSandblad/flocken-website
+- GitHub (backup): https://github.com/tbinho/flocken-website
 
 ## 📋 Changelog
 
