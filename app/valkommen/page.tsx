@@ -26,6 +26,7 @@ export default function ValkommenPage() {
         launchInfo="Appen lanseras till MyDOG. Skapa ett konto och bli en av de första att gå med i Flocken."
         appStoreComingSoon="Kommer snart på AppStore!"
         launchOffer="Få gratis premiumfunktioner i 6 månader fram till den 31 januari."
+        alignLeft={true}
       />
       
       {/* Community Section */}
@@ -65,7 +66,6 @@ export default function ValkommenPage() {
             "Mycket enklare än sociala medie-grupper"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_para_karta-alla-hundar.png"
-          microCta="Se hur Para fungerar"
           reverse={false}
         />
         
@@ -80,7 +80,6 @@ export default function ValkommenPage() {
             "Annonsera dina egna passningstjänster"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_passa_lista-personer-som-kan-passa.png"
-          microCta="Hitta hundvakter"
           reverse={true}
         />
         
@@ -95,7 +94,6 @@ export default function ValkommenPage() {
             "Samla kilometer och få belöningar"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_rasta_starta-promenad.png"
-          microCta="Upptäck Rasta"
           reverse={false}
         />
         
@@ -110,7 +108,6 @@ export default function ValkommenPage() {
             "Skapa din lista med favoriter"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_besoka_karta-alla.png"
-          microCta="Så fungerar Besöka"
           reverse={true}
         />
       </div>
@@ -158,19 +155,9 @@ export default function ValkommenPage() {
         </div>
       </section>
       
-      {/* Testimonials - Alla 4 personas */}
+      {/* Testimonials - Anders och Jonas */}
       <TestimonialBlock
         testimonials={[
-          {
-            quote: "Jag tänker inte para min hund med vem som helst. Med Flocken ser jag hälsotester och vet att alla ägaren är verifierad.",
-            author: "Marco",
-            role: "Golden Retriever-ägare"
-          },
-          {
-            quote: "När jag får en bild där hon sover gott hos hundvakten känns allt bra. Trygghet är allt för mig.",
-            author: "Anna",
-            role: "Bichon Havanais-ägare"
-          },
           {
             quote: "Fantastiskt att hitta nya favoritställen genom appen, så att hunden kan följa med på stan.",
             author: "Anders",

@@ -10,6 +10,7 @@ interface HeroBlockProps {
   launchOffer?: string;
   appStoreComingSoon?: string;
   launchInfo?: string;
+  alignLeft?: boolean;
 }
 
 export function HeroBlock({ 
@@ -21,37 +22,38 @@ export function HeroBlock({
   image, 
   launchOffer,
   appStoreComingSoon,
-  launchInfo
+  launchInfo,
+  alignLeft = false
 }: HeroBlockProps) {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white to-flocken-cream pt-20">
       <div className="container-custom py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Copy + CTA */}
-          <div className="space-y-8">
+          <div className={`space-y-8 ${alignLeft ? 'text-left' : ''}`}>
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-flocken-brown leading-tight">
+              <h1 className={`text-5xl lg:text-7xl font-bold text-flocken-brown leading-tight ${alignLeft ? 'text-left' : ''}`}>
                 {title}
                 <span className="block text-4xl lg:text-5xl text-flocken-olive mt-2">
                   {tagline}
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-flocken-brown opacity-90 leading-relaxed">
+              <p className={`text-xl lg:text-2xl text-flocken-brown opacity-90 leading-relaxed ${alignLeft ? 'text-left' : ''}`}>
                 {subtitle}
               </p>
             </div>
 
             {/* Launch Info */}
             {launchInfo && (
-              <p className="text-lg text-flocken-brown opacity-80">
+              <p className={`text-lg text-flocken-brown opacity-80 ${alignLeft ? 'text-left' : ''}`}>
                 {launchInfo}
               </p>
             )}
 
             {/* CTAs */}
             <div className="space-y-4">
-              <div className="flex flex-col items-center gap-4">
+              <div className={`flex flex-col gap-4 ${alignLeft ? 'items-start' : 'items-center'}`}>
                 <a href={ctaPrimary.href} className="btn-primary inline-flex items-center justify-center">
                   {/* Google Play icon */}
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -61,14 +63,14 @@ export function HeroBlock({
                 </a>
                 
                 {appStoreComingSoon && (
-                  <p className="text-sm text-flocken-olive font-medium">
+                  <p className={`text-sm text-flocken-olive font-medium ${alignLeft ? 'text-left' : ''}`}>
                     {appStoreComingSoon}
                   </p>
                 )}
               </div>
               
               {launchOffer && (
-                <p className="text-base text-flocken-brown opacity-75 text-center">
+                <p className={`text-base text-flocken-brown opacity-75 ${alignLeft ? 'text-left' : 'text-center'}`}>
                   {launchOffer}
                 </p>
               )}
