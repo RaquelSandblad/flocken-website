@@ -408,6 +408,13 @@
     if (!marketing) {
       // Block marketing tracking
       blockMarketingTracking();
+    } else {
+      // Allow Meta Pixel if marketing consent is granted
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('consent', 'grant');
+        // Track PageView if pixel is ready
+        window.fbq('track', 'PageView');
+      }
     }
     
     // Dispatch custom event for Meta Pixel and other tracking
@@ -727,6 +734,11 @@
     }
     if (!consent.marketing) {
       blockMarketingTracking();
+    } else {
+      // Allow Meta Pixel if marketing consent was previously granted
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('consent', 'grant');
+      }
     }
 
     console.log('Cookie banner: Existing consent found:', consent);

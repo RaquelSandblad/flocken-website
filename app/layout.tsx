@@ -106,7 +106,38 @@ export default function RootLayout({
                   s.parentNode.insertBefore(t,s)}(window, document,'script',
                   'https://connect.facebook.net/en_US/fbevents.js');
                   fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
-                  fbq('track', 'PageView');
+                  
+                  // Wait for cookie consent before tracking PageView
+                  // Cookie banner will call fbq('consent', 'grant') and fbq('track', 'PageView') when marketing cookies are accepted
+                  // If consent already exists, cookie banner will handle it
+                  function checkConsentAndTrack() {
+                    try {
+                      const consent = JSON.parse(localStorage.getItem('cookie_consent') || '{}');
+                      if (consent.marketing) {
+                        fbq('consent', 'grant');
+                        fbq('track', 'PageView');
+                      } else {
+                        // Wait for consentchange event from cookie banner
+                        window.addEventListener('consentchange', function(e) {
+                          if (e.detail && e.detail.marketing) {
+                            fbq('consent', 'grant');
+                            fbq('track', 'PageView');
+                          }
+                        });
+                      }
+                    } catch (e) {
+                      // If no consent found, wait for consentchange event
+                      window.addEventListener('consentchange', function(e) {
+                        if (e.detail && e.detail.marketing) {
+                          fbq('consent', 'grant');
+                          fbq('track', 'PageView');
+                        }
+                      });
+                    }
+                  }
+                  
+                  // Check consent after a short delay to ensure cookie banner has loaded
+                  setTimeout(checkConsentAndTrack, 100);
                 `,
               }}
             />
