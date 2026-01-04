@@ -220,12 +220,24 @@ ORDER BY event_timestamp;
 
 ## ✅ Checklist
 
-- [ ] BigQuery datasets skapade (flocken_raw, flocken_curated, flocken_marts)
-- [ ] GA4 → BigQuery linking aktiverad
-- [ ] Dataset vald: flocken_raw
-- [ ] Daily export aktiverad
-- [ ] Streaming export aktiverad (valfritt)
-- [ ] Test query körs korrekt
+### **Steg 1: Datasets (KLART ✅)**
+- [x] BigQuery datasets skapade (flocken_raw, flocken_curated, flocken_marts)
+- [x] Location: EU
+
+### **Steg 2: GA4 Linking (KLART ✅)**
+- [x] GA4 → BigQuery linking aktiverad
+- [x] Projekt: nastahem-tracking
+- [x] Region: EU
+- [x] Daily export aktiverad
+- [x] Streaming export aktiverad
+
+### **Steg 3: Vänta på första tabell (PÅGÅENDE ⏳)**
+- [ ] GA4 dataset `analytics_518338757` skapad automatiskt
+- [ ] Första tabell syns: `events_intraday_YYYYMMDD` eller `events_YYYYMMDD`
+
+### **Steg 4: Views och Tables (VÄNTAR ⏳)**
+- [ ] SQL-script körs för views och tables
+- [ ] Processing location: EU vald
 - [ ] Views fungerar (curated.events, user_journey, conversion_funnel)
 - [ ] Daily metrics table fungerar
 
