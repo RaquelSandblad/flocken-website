@@ -23,19 +23,21 @@
 2. Välj container: **GTM-PD5N4GT3** (samma som Nästa Hem)
 3. Klicka på "Tags" i vänstermenyn
 
-### **Steg 2: Skapa GA4 Configuration Tag för Flocken**
+### **Steg 2: Skapa Google Tag för Flocken**
+
+**OBS:** Google har ersatt "GA4 Configuration" med "Google Tag" i GTM.
 
 1. Klicka på "New" (Ny tag)
 2. **Tag Configuration:**
-   - Tag Type: **Google Analytics: GA4 Configuration**
-   - Measurement ID: `G-7B1SVKL89Q`
-   - **Server Container URL:** `https://gtm.nastahem.com` (samma server container)
+   - Tag Type: **Google-tagg** (Google Tag) - Välj den första optionen med blå ikon
+   - Tag ID: `G-7B1SVKL89Q` (detta är ditt GA4 Measurement ID)
+   - **Server Container URL:** `https://gtm.nastahem.com` (om det finns ett fält för detta - annars konfigureras detta i Server Container)
 3. **Triggering:**
    - Trigger Type: **All Pages**
    - **Lägg till condition:** 
      - Condition: **Page Hostname** equals `flocken.info`
      - (Detta säkerställer att taggen bara körs för Flocken, inte Nästa Hem)
-4. **Tag Name:** "GA4 Configuration - Flocken"
+4. **Tag Name:** "Google Tag - Flocken" (eller "GA4 - Flocken")
 5. Spara
 
 ### **Steg 3: Skapa GA4 Event Tag (för custom events)**
@@ -43,7 +45,7 @@
 1. Klicka på "New" (Ny tag)
 2. **Tag Configuration:**
    - Tag Type: **Google Analytics: GA4 Event**
-   - Configuration Tag: Välj "GA4 Configuration - Flocken" (från steg 2)
+   - Configuration Tag: Välj "Google Tag - Flocken" (från steg 2)
    - Event Name: `{{Event}}` (built-in variable)
 3. **Triggering:**
    - Trigger Type: **Custom Event**
@@ -157,22 +159,27 @@ window.dataLayer.push({
 ## ✅ Checklist
 
 ### **GTM Configuration:**
-- [ ] GA4 Configuration tag skapad för Flocken (G-7B1SVKL89Q)
-- [ ] Page Hostname condition: `flocken.info`
-- [ ] Server Container URL: `https://gtm.nastahem.com`
-- [ ] GA4 Event tag skapad för custom events
-- [ ] Google Ads tag konfigurerad (om nödvändigt)
+- [x] Google Tag skapad för Flocken (G-7B1SVKL89Q)
+- [x] Page Hostname condition: `flocken.info`
+- [x] Consent controls konfigurerade (ad_storage, analytics_storage, etc.)
+- [x] Server consent URL: `https://gtm.nastahem.com`
+- [x] Trigger: "Page View - Flocken" med hostname filter
+- [x] Publicerad och live
+- [ ] GA4 Event tag skapad för custom events (framtida behov)
+- [ ] Google Ads tag konfigurerad (framtida behov)
 
 ### **Server Container (GTM-THB49L3K):**
-- [ ] GA4 Configuration - Server tag för Flocken
+- [ ] Google Tag - Server tag för Flocken
 - [ ] Page Hostname condition: `flocken.info`
 - [ ] Measurement ID: `G-7B1SVKL89Q`
+- [ ] Server-side routing konfigurerad
 
 ### **Testing:**
-- [ ] GTM Preview Mode fungerar
-- [ ] GA4 Realtime visar events från flocken.info
-- [ ] Cookie consent fungerar korrekt
-- [ ] Inga konflikter (typeof gtag === 'undefined')
+- [x] GTM Preview Mode fungerar
+- [x] GA4 Realtime visar events från flocken.info
+- [x] Cookie consent fungerar korrekt
+- [x] Hostname routing fungerar (endast Flocken-taggen triggas på flocken.info)
+- [x] Publicerad och verifierad i produktion
 
 ---
 
