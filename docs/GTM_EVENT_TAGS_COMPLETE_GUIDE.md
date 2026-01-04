@@ -36,10 +36,21 @@ Denna guide visar exakt hur du skapar GA4 Event tags i GTM för alla custom even
    - **OBS:** Välj INTE "Google Tag" - det är för Configuration tags
    - Välj specifikt "Google Analytics: GA4 Event"
 
-**Configuration Tag:**
-- Under "Configuration Tag", klicka på dropdown
-- Välj: **"GA4 Configuration - Flocken"**
-  - (Detta är din Google Tag som redan finns)
+**Configuration Tag (eller Measurement ID):**
+Efter att du valt "Google Analytics: GA4 Event", kommer du se ett fält för att länka till din GA4-konfiguration. Det kan se ut på två sätt:
+
+**Alternativ A: Configuration Tag Dropdown**
+- Om du ser ett fält som heter **"Configuration Tag"** eller **"Choose a configuration tag"**:
+  - Klicka på dropdown-menyn
+  - Välj din befintliga tag: **"Google Tag - Flocken"** eller **"GA4 Configuration - Flocken"**
+  - (Detta är den Google Tag du skapade tidigare med Measurement ID G-7B1SVKL89Q)
+
+**Alternativ B: Measurement ID Fält**
+- Om du istället ser ett fält som heter **"Measurement ID"** eller **"Tag ID"**:
+  - Ange direkt: **`G-7B1SVKL89Q`**
+  - (Detta är ditt GA4 Measurement ID för Flocken)
+
+**Viktigt:** Om du inte ser någon av dessa alternativ, eller om dropdown är tom, behöver du först skapa en "Google Tag - Flocken" enligt [GTM_SETUP_INSTRUCTIONS.md](./GTM_SETUP_INSTRUCTIONS.md).
 
 **Event Name:**
 - Under "Event Name", klicka på variabel-ikonen ({{}})
