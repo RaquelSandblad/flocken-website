@@ -30,16 +30,22 @@
    - Hur man konfigurerar tags och triggers
    - Hostname routing implementation
 
+4. **[GTM_EVENT_TAGS_COMPLETE_GUIDE.md](./GTM_EVENT_TAGS_COMPLETE_GUIDE.md)** ⭐
+   - **Komplett guide för att skapa GA4 Event tags**
+   - Steg-för-steg instruktioner för app_install och övriga events
+   - Testning och verifiering
+   - Troubleshooting
+
 ---
 
 ### **📊 Arkitektur & Utvärdering**
 
-4. **[GA4_PROPERTY_STRUCTURE.md](./GA4_PROPERTY_STRUCTURE.md)**
+5. **[GA4_PROPERTY_STRUCTURE.md](./GA4_PROPERTY_STRUCTURE.md)**
    - Förklaring av GA4 property struktur
    - Varför en property med flera data streams
    - Cross-platform analysis
 
-5. **[GOOGLE_ANALYTICS_EVALUATION.md](./GOOGLE_ANALYTICS_EVALUATION.md)**
+6. **[GOOGLE_ANALYTICS_EVALUATION.md](./GOOGLE_ANALYTICS_EVALUATION.md)**
    - Utvärdering av Nästa Hems GA setup
    - Varför vi replikerar strukturen för Flocken
    - Best practices
@@ -48,22 +54,22 @@
 
 ### **🔜 Framtida Implementation**
 
-6. **[SERVER_SIDE_TRACKING_PLAN.md](./SERVER_SIDE_TRACKING_PLAN.md)**
+7. **[SERVER_SIDE_TRACKING_PLAN.md](./SERVER_SIDE_TRACKING_PLAN.md)**
    - Plan för server-side tracking via GTM Server Container
    - Steg-för-steg implementation
    - Förbättrad datakvalitet
 
-7. **[APP_TRACKING_PLAN.md](./APP_TRACKING_PLAN.md)**
+8. **[APP_TRACKING_PLAN.md](./APP_TRACKING_PLAN.md)**
    - Plan för iOS/Android app tracking
    - Firebase Analytics setup
    - Cross-platform tracking
 
-8. **[BIGQUERY_EXPORT_PLAN.md](./BIGQUERY_EXPORT_PLAN.md)**
+9. **[BIGQUERY_EXPORT_PLAN.md](./BIGQUERY_EXPORT_PLAN.md)**
    - Plan för BigQuery export från GA4
    - Dataset struktur
    - Query examples
 
-9. **[CUSTOM_EVENTS_PLAN.md](./CUSTOM_EVENTS_PLAN.md)**
+10. **[CUSTOM_EVENTS_PLAN.md](./CUSTOM_EVENTS_PLAN.md)**
    - Plan för custom events implementation
    - Events att tracka (sign_up, purchase, etc.)
    - GTM configuration
@@ -72,12 +78,12 @@
 
 ### **📱 Meta Pixel**
 
-10. **[META_MARKETING_API_TOKEN_GUIDE.md](./META_MARKETING_API_TOKEN_GUIDE.md)**
+11. **[META_MARKETING_API_TOKEN_GUIDE.md](./META_MARKETING_API_TOKEN_GUIDE.md)**
     - Guide för att få Meta Marketing API token
     - System User setup
     - Token generation
 
-11. **[META_PIXEL_DOMAIN_VERIFICATION.md](./META_PIXEL_DOMAIN_VERIFICATION.md)**
+12. **[META_PIXEL_DOMAIN_VERIFICATION.md](./META_PIXEL_DOMAIN_VERIFICATION.md)**
     - Guide för Meta Pixel domain verification
     - Hur man verifierar flocken.info i Meta Business Manager
 
@@ -85,7 +91,7 @@
 
 ### **🔐 Övrigt**
 
-12. **[PASSWORD_RESET_SETUP.md](./PASSWORD_RESET_SETUP.md)**
+13. **[PASSWORD_RESET_SETUP.md](./PASSWORD_RESET_SETUP.md)**
     - Password reset functionality setup
 
 ---
@@ -96,6 +102,7 @@
 - `TRACKING_SETUP_COMPLETE.md` - Huvuddokumentation
 - `GA4_SETUP_STATUS.md` - Status
 - `GTM_SETUP_INSTRUCTIONS.md` - Setup guide
+- `GTM_EVENT_TAGS_COMPLETE_GUIDE.md` - **Event tags guide** ⭐
 - `GA4_PROPERTY_STRUCTURE.md` - Arkitektur
 - `GOOGLE_ANALYTICS_EVALUATION.md` - Utvärdering
 
