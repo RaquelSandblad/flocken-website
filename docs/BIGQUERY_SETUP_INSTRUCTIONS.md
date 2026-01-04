@@ -1,7 +1,13 @@
 # BigQuery Setup Instructions för Flocken
 
-**Status:** ⏳ Ready to implement  
+**Status:** ⚠️ Pågående (datasets + länk skapad, inväntar första tabell)  
 **Tidsåtgång:** 30-60 minuter
+
+### Snabbsammanfattning (läget nu)
+- ✅ Datasets skapade (EU): `flocken_raw`, `flocken_curated`, `flocken_marts`
+- ✅ GA4 → BigQuery länk skapad: projekt `nastahem-tracking`, region **EU**, export: Daily + Streaming
+- ⏳ Väntar på första tabellen i GA4-datasetet `analytics_518338757` (t.ex. `events_intraday_YYYYMMDD`)
+- ⏳ När tabell finns: kör views/metrics-SQL (se Steg 3 nedan, använd källan `analytics_518338757.events_*` och Processing location **EU**)
 
 ---
 
@@ -13,7 +19,7 @@ Aktivera BigQuery export från GA4 för obegränsad data retention och SQL-analy
 
 ## 📋 Steg-för-steg Implementation
 
-### **Steg 1: Kör BigQuery Setup Script**
+### **Steg 1: Kör BigQuery Setup Script (KLART)**
 
 **1.1 Öppna BigQuery Console**
 - Gå till: https://console.cloud.google.com/bigquery
@@ -35,7 +41,7 @@ Aktivera BigQuery export från GA4 för obegränsad data retention och SQL-analy
 
 ---
 
-### **Steg 2: Aktivera GA4 → BigQuery Linking**
+### **Steg 2: Aktivera GA4 → BigQuery Linking (KLART)**
 
 **2.1 Öppna GA4 Admin**
 - Gå till: https://analytics.google.com
@@ -63,7 +69,7 @@ Aktivera BigQuery export från GA4 för obegränsad data retention och SQL-analy
 
 ---
 
-### **Steg 3: Verifiera Data Export**
+### **Steg 3: Verifiera Data Export (⏳ PÅGÅR)**
 
 **3.1 Vänta på första export**
 - Daily export körs vanligtvis kl 04:00 UTC
@@ -92,7 +98,16 @@ LIMIT 10;
 
 ---
 
-### **Steg 4: Verifiera Views och Tables**
+### **Steg 4: Skapa Views och Tables (körs när första tabellen finns)**
+
+**OBS:** Använd käll-datasetet `analytics_518338757` (GA4-datasetet som skapas av länken) och Processing location **EU**. Exempel: `FROM \`nastahem-tracking.analytics_518338757.events_*\``.
+
+Kör SQL-blocket för:
+- View: `flocken_curated.events`
+- Table: `flocken_marts.daily_metrics`
+- Views: `flocken_curated.user_journey`, `flocken_curated.conversion_funnel`
+
+> Tips: Blocket finns i den senaste uppdateringen i chatten. Kontrollera att GA4-exporttabeller (`events_intraday_*` eller `events_*`) finns innan körning.
 
 **4.1 Test Curated Events View**
 ```sql
