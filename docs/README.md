@@ -54,10 +54,11 @@
 
 ### **🔜 Framtida Implementation**
 
-7. **[SERVER_SIDE_TRACKING_PLAN.md](./SERVER_SIDE_TRACKING_PLAN.md)**
-   - Plan för server-side tracking via GTM Server Container
-   - Steg-för-steg implementation
-   - Förbättrad datakvalitet
+7. **[SERVER_SIDE_TRACKING_STEP_BY_STEP.md](./SERVER_SIDE_TRACKING_STEP_BY_STEP.md)** ⭐
+   - **Komplett steg-för-steg guide för server-side tracking**
+   - Exakta instruktioner med skärmbeskrivningar
+   - Testning och troubleshooting
+   - Konfigurera GTM Server Container för Flocken
 
 8. **[APP_TRACKING_PLAN.md](./APP_TRACKING_PLAN.md)**
    - Plan för iOS/Android app tracking
