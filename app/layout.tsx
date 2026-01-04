@@ -59,13 +59,14 @@ export default function RootLayout({
         {/* Facebook Domain Verification */}
         <meta name="facebook-domain-verification" content="jt1vlxalalidu3tkkaoufy8kv91tta" />
         
-        {/* Initialize dataLayer for consent management (if GTM is added later) */}
+        {/* Initialize dataLayer for GTM-only setup */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
               
-              // Default consent state - denied until user accepts
+              // GTM-only consent management (no direct gtag)
               window.dataLayer.push({
                 'event': 'consent_default',
                 'analytics_storage': 'denied',
@@ -82,17 +83,8 @@ export default function RootLayout({
         {/* Cookie Banner - Modal design */}
         <script defer src="/scripts/cookie-banner-custom.js"></script>
         
-        {/* Google tag (gtag.js) - Google Ads */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821309500"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17821309500');
-            `,
-          }}
-        />
+        {/* Google Tag Manager - GTM-only implementation */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PD5N4GT3&l=dataLayer"></script>
         
         {/* Meta Pixel - Facebook Pixel */}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
@@ -157,6 +149,17 @@ export default function RootLayout({
         )}
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            title="Google Tag Manager"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PD5N4GT3"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        
         {children}
       </body>
     </html>
