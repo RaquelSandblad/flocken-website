@@ -107,7 +107,7 @@ export default function RootLayout({
                   // If consent already exists, cookie banner will handle it
                   function checkConsentAndTrack() {
                     try {
-                      const consent = JSON.parse(localStorage.getItem('cookie_consent') || '{}');
+                      const consent = JSON.parse(localStorage.getItem('cookie-consent') || '{}');
                       if (consent.marketing) {
                         fbq('consent', 'grant');
                         fbq('track', 'PageView');
