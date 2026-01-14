@@ -144,6 +144,75 @@ export async function trackCompleteRegistration(data: {
 }
 
 // ============================================
+// GOOGLE ADS CONVERSION TRACKING
+// ============================================
+
+/**
+ * Get Google Click ID (gclid) from URL or cookie
+ */
+function getGclid(): string | undefined {
+  if (typeof window === 'undefined') return undefined;
+  
+  // Check URL first
+  const urlParams = new URLSearchParams(window.location.search);
+  const gclidFromUrl = urlParams.get('gclid');
+  if (gclidFromUrl) return gclidFromUrl;
+  
+  // Check cookie (Google stores it as _gcl_aw)
+  const cookies = document.cookie.split(';').reduce((acc, cookie) => {
+    const [key, value] = cookie.trim().split('=');
+    acc[key] = value;
+    return acc;
+  }, {} as Record<string, string>);
+  
+  // _gcl_aw format: GCL.timestamp.gclid
+  const gclCookie = cookies['_gcl_aw'];
+  if (gclCookie) {
+    const parts = gclCookie.split('.');
+    if (parts.length >= 3) return parts.slice(2).join('.');
+  }
+  
+  return undefined;
+}
+
+/**
+ * Track Google Ads conversion
+ * Sends to both dataLayer (for GTM) and optionally server-side
+ */
+export function trackGoogleAdsConversion(data: {
+  action: 'lead' | 'signup' | 'purchase' | 'app_install';
+  value?: number;
+  currency?: string;
+  transaction_id?: string;
+  send_to?: string; // e.g., 'AW-17821309500/AbCdEf' for specific conversion
+}): void {
+  const gclid = getGclid();
+  
+  // Push to dataLayer for GTM
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'conversion',
+      conversion_action: data.action,
+      conversion_value: data.value || 0,
+      conversion_currency: data.currency || 'SEK',
+      transaction_id: data.transaction_id,
+      gclid: gclid,
+      send_to: data.send_to,
+    });
+  }
+  
+  // Also push gtag conversion event if gtag exists
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: data.send_to || `AW-17821309500/${data.action}`,
+      value: data.value || 0,
+      currency: data.currency || 'SEK',
+      transaction_id: data.transaction_id,
+    });
+  }
+}
+
+// ============================================
 // GA4 DATALAYER EVENTS (existing)
 // ============================================
 
