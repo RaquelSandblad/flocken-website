@@ -482,12 +482,10 @@ export default function IntegritetspolicyPage() {
               window.showCookieSettings();
             }
           }}
-          className="text-flocken-olive hover:underline bg-transparent border-none p-0 cursor-pointer font-inherit text-inherit"
-          style={{ textDecoration: 'inherit' }}
+          className="text-flocken-olive hover:underline bg-transparent border-none p-0 cursor-pointer"
         >
           ändra dina cookie-inställningar
-        </button>
-        {' '}(där texten cookie-inställningar fungerar på samma sätt som i footern).
+        </button>.
       </p>
     </>
   );
