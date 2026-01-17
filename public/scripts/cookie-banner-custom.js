@@ -266,7 +266,6 @@
         box-shadow: 0 10px 30px rgba(62, 59, 50, 0.5);
       ">
         <h2 style="margin: 0 0 16px 0; color: #3E3B32;">Ändra cookie-inställningar</h2>
-        <p style="margin: 0 0 20px 0; color: #3E3B32;">Ändra dina cookie-inställningar:</p>
         
         <div style="margin-bottom: 16px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
           <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">

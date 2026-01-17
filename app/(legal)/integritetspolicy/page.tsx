@@ -1,15 +1,22 @@
-export const metadata = {
-  title: "Integritetspolicy för Flocken",
-  description: "Integritetspolicy för Flocken - hur vi samlar in, använder och skyddar dina personuppgifter",
-};
+'use client';
+
+import { useEffect } from 'react';
 
 export default function IntegritetspolicyPage() {
+  useEffect(() => {
+    document.title = 'Integritetspolicy för Flocken';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Integritetspolicy för Flocken - hur vi samlar in, använder och skyddar dina personuppgifter');
+    }
+  }, []);
+
   return (
     <>
       <h1>Integritetspolicy för Flocken</h1>
       
       <p className="lead">
-        <strong>Senast uppdaterad:</strong> 26 januari 2026
+        <strong>Senast uppdaterad:</strong> 26 januari 2016
       </p>
       
       <p>
@@ -30,8 +37,10 @@ export default function IntegritetspolicyPage() {
       <p>
         <strong>Spitakolus AB</strong><br />
         Organisationsnummer: 559554-6101<br />
-        E-post: support@spitakolus.com<br />
-        Support: support@spitakolus.com
+        E-post till support:{' '}
+        <a href="mailto:support@spitakolus.com" className="text-flocken-olive hover:underline">
+          support@spitakolus.com
+        </a>
       </p>
       <p>
         Vid frågor om denna policy eller vår behandling av personuppgifter kan du kontakta oss via ovanstående kontaktuppgifter.
@@ -460,16 +469,25 @@ export default function IntegritetspolicyPage() {
       
       <h2 id="privacy-choices">13. Hantera dina integritetsval</h2>
       <p>
-        Mer information om hur du kan hantera, ändra eller radera dina uppgifter finns på vår sida för{' '}
+        Mer information om hur du kan hantera, ändra dina uppgifter eller cookieinställningar, samt hur du gör för att radera dina uppgifter, finns på vår sida för{' '}
         <a href="/privacy-choices" className="text-flocken-olive hover:underline">
           användarens integritetsval
         </a>.
       </p>
       <p>
-        För mer information om cookies och för att ändra dina cookieinställningar, se:{' '}
-        <a href="https://flocken.info/privacy-choices" className="text-flocken-olive hover:underline">
-          https://flocken.info/privacy-choices
-        </a>
+        Här kan du{' '}
+        <button
+          onClick={() => {
+            if (typeof window !== 'undefined' && window.showCookieSettings) {
+              window.showCookieSettings();
+            }
+          }}
+          className="text-flocken-olive hover:underline bg-transparent border-none p-0 cursor-pointer font-inherit text-inherit"
+          style={{ textDecoration: 'inherit' }}
+        >
+          ändra dina cookie-inställningar
+        </button>
+        {' '}(där texten cookie-inställningar fungerar på samma sätt som i footern).
       </p>
     </>
   );
