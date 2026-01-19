@@ -411,12 +411,20 @@
       // Allow Meta Pixel if marketing consent is granted
       if (typeof window.fbq !== 'undefined') {
         window.fbq('consent', 'grant');
-        // Track PageView if pixel is ready
+        // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
         window.fbq('track', 'PageView');
+        // Then track ViewContent for additional conversion data
+        window.fbq('track', 'ViewContent', {
+          content_name: 'Landing Page',
+          content_category: 'Homepage',
+          content_ids: ['flocken-homepage'],
+          content_type: 'landing_page',
+        });
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (new consent)');
       }
     }
     
-    // Dispatch custom event for Meta Pixel and other tracking
+    // Dispatch custom event for other tracking (GA4, etc.)
     if (typeof window !== 'undefined') {
       const consentEvent = new CustomEvent('consentchange', {
         detail: {
@@ -737,11 +745,16 @@
       // Allow Meta Pixel if marketing consent was previously granted
       if (typeof window.fbq !== 'undefined') {
         window.fbq('consent', 'grant');
-        // CRITICAL: Track PageView for returning visitors with existing consent
-        // This is required for Meta Ads Manager "visning av målsida" to work
+        // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
         window.fbq('track', 'PageView');
-        // Note: ViewContent is handled by layout.tsx to avoid duplicates
-        console.log('Cookie banner: PageView tracked for returning visitor with existing consent');
+        // Then track ViewContent for additional conversion data
+        window.fbq('track', 'ViewContent', {
+          content_name: 'Landing Page',
+          content_category: 'Homepage',
+          content_ids: ['flocken-homepage'],
+          content_type: 'landing_page',
+        });
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (existing consent)');
       }
     }
 
