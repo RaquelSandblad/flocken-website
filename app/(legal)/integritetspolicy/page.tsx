@@ -112,7 +112,7 @@ export default function IntegritetspolicyPage() {
       
       <h3 id="uppgifter-kartvisning">2.3.1 Kartvisning och ungefärlig plats (kartbaserad tjänst – ej realtidsposition)</h3>
       <p>
-        Flocken är en kartbaserad tjänst. En kärnfunktion i appen är att användare ska kunna upptäcka och bli upptäckta via kartan genom publicerade annonser och tjänster (t.ex. parning, hundpassning och hundvänliga verksamheter).
+        Flocken är en kartbaserad tjänst. En kärnfunktion i appen är att användare ska kunna upptäcka publicerade annonser och tjänster via kartan (t.ex. parning, hundpassning och hundvänliga verksamheter).
       </p>
       <p>
         Kartvisning baseras uteslutande på information som användaren själv aktivt väljer att publicera i form av annonser eller profiler.
@@ -202,7 +202,7 @@ export default function IntegritetspolicyPage() {
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Skapa och hantera ditt konto</li>
-        <li>Visa hundar och hundägare i närheten</li>
+        <li>Visa publicerade annonser och listningar i kartan baserat på stad eller område</li>
         <li>Möjliggöra chatt och kontakt mellan användare</li>
         <li>Visa och hantera favoritmarkeringar och blockeringar</li>
       </ul>
@@ -313,7 +313,7 @@ export default function IntegritetspolicyPage() {
         När du använder Flocken delas vissa uppgifter med andra användare:
       </p>
       <ul>
-        <li><strong>Offentligt synliga uppgifter:</strong> hundprofiler (namn, bilder, ras, ålder, beskrivning, plats i form av stad/område), ditt användarnamn, din profilbild (om du valt att ladda upp en), eventuell beskrivning av dig som hundvakt eller liknande.</li>
+        <li><strong>Offentligt synliga uppgifter:</strong> hundprofiler (namn, bilder, ras, ålder, beskrivning, plats i form av stad/område), ditt användarnamn, din profilbild (om du valt att ladda upp en), eventuell beskrivning av dig som hundvakt eller liknande. <strong>Ingen exakt adress visas för privatpersoner, endast ungefärlig plats (t.ex. stad eller område). Ingen realtidsposition delas.</strong></li>
         <li><strong>När du kontaktar någon:</strong> din kontaktinformation (namn, profilbild) samt de meddelanden du skickar.</li>
         <li><strong>Favoritmarkeringar:</strong> om du markerar en användare som favorit kan den användaren se det (beroende på appens inställningar).</li>
       </ul>
@@ -324,7 +324,7 @@ export default function IntegritetspolicyPage() {
       </p>
       <ul>
         <li><strong>Supabase (backend och databas)</strong> – för lagring och hantering av användarkonton och data. Databastjänster tillhandahålls via Supabase, vars servrar är lokaliserade inom EU (Irland).</li>
-        <li><strong>Google Maps API</strong> – för kartfunktioner och geolokalisering</li>
+        <li><strong>Google Maps API</strong> – för kartfunktioner och geokodning (t.ex. stad eller postnummerområde)</li>
         <li><strong>Google (t.ex. Google Analytics och Firebase)</strong> – för analys och statistik</li>
         <li><strong>Tekniska tjänsteleverantörer</strong> för drift, säkerhet och mätning</li>
         <li><strong>Marknadsföringsplattformar</strong> (t.ex. Google Ads eller Meta), i den mån marknadsföringsmätning aktiveras och är tillåten enligt lag</li>
