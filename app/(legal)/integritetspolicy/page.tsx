@@ -115,6 +115,9 @@ export default function IntegritetspolicyPage() {
         Flocken är en kartbaserad tjänst. En kärnfunktion i appen är att användare ska kunna upptäcka och bli upptäckta via kartan genom publicerade annonser och tjänster (t.ex. parning, hundpassning och hundvänliga verksamheter).
       </p>
       <p>
+        Kartvisning baseras uteslutande på information som användaren själv aktivt väljer att publicera i form av annonser eller profiler.
+      </p>
+      <p>
         <strong>Ingen realtidsposition delas i kartan:</strong><br />
         Kartan visar inte användares live-position eller var en användares enhet befinner sig i realtid. Vi samlar inte in eller delar kontinuerlig GPS-position för kartvisning, och ingen automatisk eller manuell "check-in" förekommer.
       </p>
