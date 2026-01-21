@@ -221,8 +221,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Avtal (artikel 6.1 b) – för att möjliggöra de funktioner du valt att använda.
       </p>
       
-      
-      <h3 id="ändamål-support">4.4 För kommunikation och support</h3>
+      <h3 id="ändamål-support">4.3 För kommunikation och support</h3>
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Skicka viktig information om appen, villkor eller ändringar i policyn</li>
@@ -236,7 +235,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Avtal (artikel 6.1 b) – nödvändigt för att kunna hjälpa dig som användare. Berättigat intresse (artikel 6.1 f) – vårt intresse av att administrera appen och ge god kundservice.
       </p>
       
-      <h3 id="ändamål-utveckla">4.5 För att förbättra och utveckla appen</h3>
+      <h3 id="ändamål-utveckla">4.4 För att förbättra och utveckla appen</h3>
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Analys av hur appen används (t.ex. vilka funktioner som används mest)</li>
@@ -252,7 +251,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Berättigat intresse (artikel 6.1 f) – vårt berättigade intresse av att utveckla och förbättra våra tjänster.
       </p>
       
-      <h3 id="ändamål-marknadsföring">4.6 Marknadsföring och konverteringsmätning</h3>
+      <h3 id="ändamål-marknadsföring">4.5 Marknadsföring och konverteringsmätning</h3>
       <p>
         Flocken använder mätning kopplad till marknadsföring på vår webbplats (flocken.info) för att förstå om annonser leder till besök, installation, registrering eller annan användaraktivitet.
       </p>
@@ -282,7 +281,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Samtycke (artikel 6.1 a GDPR) – marknadsföringsspårning sker endast efter att du aktivt godkänt detta via cookie-bannern.
       </p>
       
-      <h3 id="ändamål-juridik">4.7 För att följa lagar och hantera tvister</h3>
+      <h3 id="ändamål-juridik">4.6 För att följa lagar och hantera tvister</h3>
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Uppfylla bokförings- och andra rättsliga skyldigheter</li>
@@ -292,7 +291,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Rättslig förpliktelse (artikel 6.1 c) – när vi är skyldiga enligt lag. Berättigat intresse (artikel 6.1 f) – för att bevaka och försvara våra rättsliga intressen.
       </p>
       
-      <h3 id="ändamål-profilering">4.8 Profilering och rekommendationer</h3>
+      <h3 id="ändamål-profilering">4.7 Profilering och rekommendationer</h3>
       <p>
         Eventuella rekommendationer i appen baseras på användarens egna val, filter och inställningar (t.ex. ras, storlek eller geografisk närhet).
       </p>
@@ -313,7 +312,8 @@ export default function IntegritetspolicyPage() {
         När du använder Flocken delas vissa uppgifter med andra användare:
       </p>
       <ul>
-        <li><strong>Offentligt synliga uppgifter:</strong> hundprofiler (namn, bilder, ras, ålder, beskrivning, plats i form av stad/område), ditt användarnamn, din profilbild (om du valt att ladda upp en), eventuell beskrivning av dig som hundvakt eller liknande. <strong>Ingen exakt adress visas för privatpersoner, endast ungefärlig plats (t.ex. stad eller område). Ingen realtidsposition delas.</strong></li>
+        <li><strong>Offentligt synliga uppgifter:</strong> hundprofiler (namn, bilder, ras, ålder, beskrivning, plats i form av stad/område), ditt användarnamn, din profilbild (om du valt att ladda upp en), eventuell beskrivning av dig som hundvakt eller liknande.</li>
+        <li><strong>Platsinformation:</strong> Ingen exakt adress visas för privatpersoner, endast ungefärlig plats (t.ex. stad eller område). Ingen realtidsposition delas.</li>
         <li><strong>När du kontaktar någon:</strong> din kontaktinformation (namn, profilbild) samt de meddelanden du skickar.</li>
         <li><strong>Favoritmarkeringar:</strong> om du markerar en användare som favorit kan den användaren se det (beroende på appens inställningar).</li>
       </ul>
