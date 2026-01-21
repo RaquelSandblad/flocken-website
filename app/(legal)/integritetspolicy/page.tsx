@@ -110,6 +110,27 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Behandling av platsdata sker för att fullgöra användarens uttryckliga begäran att registrera en promenad och baseras på avtalet mellan användaren och Flocken.
       </p>
       
+      <h3 id="uppgifter-kartvisning">2.3.1 Kartvisning och ungefärlig plats (kartbaserad tjänst – ej realtidsposition)</h3>
+      <p>
+        Flocken är en kartbaserad tjänst. En kärnfunktion i appen är att användare ska kunna upptäcka och bli upptäckta via kartan genom publicerade annonser och tjänster (t.ex. parning, hundpassning och hundvänliga verksamheter).
+      </p>
+      <p>
+        <strong>Ingen realtidsposition delas i kartan:</strong><br />
+        Kartan visar inte användares live-position eller var en användares enhet befinner sig i realtid. Vi samlar inte in eller delar kontinuerlig GPS-position för kartvisning, och ingen automatisk eller manuell "check-in" förekommer.
+      </p>
+      <p>
+        <strong>Privatpersoner (icke-företag):</strong><br />
+        För privatpersoner visas aldrig exakt adress i kartan. Platsinformation visas endast på en ungefärlig nivå, till exempel som stad eller område, och kan visualiseras som en approximativ punkt inom ett större geografiskt område (t.ex. postnummerområde). Detta görs för att skydda användarens integritet.
+      </p>
+      <p>
+        <strong>Företag och verksamheter:</strong><br />
+        Företag och verksamheter (t.ex. hunddagis) kan välja att visa sin verksamhetsadress i kartan, eftersom detta är en publikt avsedd adress som syftar till att kunder ska kunna hitta verksamheten.
+      </p>
+      <p>
+        <strong>Val och kontroll:</strong><br />
+        Att synas i kartan är kopplat till att aktivt skapa och publicera en profil eller annons. Användare som inte vill vara synliga i kartan ska inte publicera en sådan listning, eller kan när som helst ta bort sin listning eller radera sitt konto direkt i appen.
+      </p>
+      
       <h3 id="uppgifter-funktion">2.4 Funktionsspecifik data</h3>
       <ul>
         <li><strong>Hundvakt:</strong> tillgänglighet, priser, erfarenhet/beskrivning</li>
@@ -161,7 +182,7 @@ export default function IntegritetspolicyPage() {
       <ul>
         <li>Registrerar konto</li>
         <li>Skapar eller uppdaterar din profil eller din hunds profil</li>
-        <li>Aktiverar platstjänster</li>
+        <li>Startar en promenad i funktionen Rasta (platsåtkomst)</li>
         <li>Skickar meddelanden i appen</li>
         <li>Använder olika funktioner (sök, filter, favoriter, blockering m.m.)</li>
       </ul>
