@@ -146,6 +146,25 @@ Flocken har komplett tracking-infrastruktur implementerad:
 - [GTM Setup Instructions](./docs/GTM_SETUP_INSTRUCTIONS.md)
 - [Framtida Implementation Plans](./docs/README.md)
 
+## 📢 Meta Ads
+
+Projektet använder en fast, AI-first struktur för all annonsering i Meta Ads Manager.
+
+**⚠️ OBLIGATORISK STANDARD:** Dessa dokument är källan till sanningen och MÅSTE följas vid all Meta-annonsering:
+
+- [`meta_ads_structure_flocken.md`](./meta_ads_structure_flocken.md) - Definierar kontostruktur, naming convention, CID-logik och regler för campaign / ad set / ad
+- [`creative_structure_flocken.md`](./creative_structure_flocken.md) - Definierar hur Creative Bases (CB), briefs, copy, varianter och assets skapas UTANFÖR Meta
+
+**Viktiga principer:**
+- Alla Meta-objekt (campaign, ad set, ad) MÅSTE följa naming-specen
+- Alla objekt som hör ihop MÅSTE dela samma `cid`
+- `cid` är en teknisk primärnyckel och får aldrig ändras
+- Creative produktion sker via Creative Bases (CB), inte via enskilda annonser
+- Format/dimensioner får ALDRIG ligga i annonsnamn
+- Nya hypoteser (`h02`, `h03`, …) får inte skapas utan uttryckligt beslut
+
+**Detta är ett LÅST SYSTEM** – avvikelser är inte tillåtna utan nytt beslut.
+
 ---
 
 ## 📋 Changelog

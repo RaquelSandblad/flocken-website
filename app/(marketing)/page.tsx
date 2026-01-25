@@ -1,31 +1,24 @@
+'use client';
+
 import { HeroBlock } from '@/components/marketing/HeroBlock';
 import { FeatureBlock } from '@/components/marketing/FeatureBlock';
 import { TestimonialBlock } from '@/components/marketing/TestimonialBlock';
+import { trackAppInstall } from '@/lib/tracking';
 import Image from 'next/image';
-
-export const metadata = {
-  title: "Flocken - Ett enklare liv som hundägare",
-  description: "Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka. För ett bättre liv som hund.",
-  openGraph: {
-    title: "Flocken - Ett enklare liv som hundägare",
-    description: "Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka",
-    images: ['/assets/flocken/generated/hero.png'],
-  },
-};
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
       <HeroBlock
-        title="Appen för ett enklare liv som hundägare"
-        tagline="– gå med i Flocken"
+        title="Ett enklare liv som hundägare"
+        tagline="– ladda ner i Flocken"
         subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
         ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
+        ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
         image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
-        launchInfo="Appen lanseras till MyDOG. Skapa ett konto och bli en av de första att gå med i Flocken."
-        appStoreComingSoon="Kommer snart på AppStore!"
-        launchOffer="Få gratis premiumfunktioner i 6 månader fram till den 31 januari."
+        launchInfo="Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund."
+        launchOffer="Få gratis premiumfunktioner i 6 månader, gäller till den 28 februari."
         alignLeft={true}
       />
       
@@ -37,9 +30,41 @@ export default function HomePage() {
               <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-6">
                 Allt för hundägare på ett ställe
               </h2>
-              <p className="text-xl lg:text-2xl text-flocken-brown leading-relaxed">
-                Flocken är en app framtagen av svenska hundägare för svenska hundägare.
+              <p className="text-xl lg:text-2xl text-flocken-brown leading-relaxed mb-6">
+                Fyra funktioner så att du slipper röriga grupper i sociala medier.
               </p>
+              <ul className="space-y-3 text-lg text-flocken-brown mb-6">
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span><span className="font-semibold">Para</span> – Hitta en lekkamrat eller parningspartner till din hund</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span><span className="font-semibold">Passa</span> – Hitta en hundvakt du är trygg med</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span><span className="font-semibold">Rasta</span> – Registrera dina promenader och dela med andra</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span><span className="font-semibold">Besöka</span> – Karta med hundvänliga caféer och restauranger</span>
+                </li>
+              </ul>
+              <a 
+                href="/funktioner" 
+                className="inline-block text-flocken-olive hover:text-flocken-brown font-semibold text-lg transition-colors"
+              >
+                Läs mer om funktionerna i Flocken →
+              </a>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-card">
               <Image
@@ -57,12 +82,12 @@ export default function HomePage() {
       <div id="funktioner">
         {/* Feature: Para - För Marco */}
         <FeatureBlock
-          title="Hitta en lekkamrat eller parningspartner som matchar din hund"
+          title="Hitta en lekkamrat eller parningspartner till din hund"
           subtitle="Enkel filtrering efter dina kriterier - slipp röriga grupper i sociala medier. Chatta direkt med hundägare i appen."
           bullets={[
             "Se alla hundar på en karta",
             "Filtrera på ras, kön, stad och mycket mer",
-            "Se hälsotester och läs mer om hunden",
+            "Se om hunden är öppen för parning",
             "Mycket enklare än sociala medie-grupper"
           ]}
           screenshot="/assets/flocken/screenshots/flocken_para_karta-alla-hundar.png"
@@ -79,7 +104,7 @@ export default function HomePage() {
             "Byt passning kostnadsfritt med andra",
             "Annonsera dina egna passningstjänster"
           ]}
-          screenshot="/assets/flocken/screenshots/flocken_passa_lista-personer-som-kan-passa.png"
+          screenshot="/assets/flocken/screenshots/flocken_passa_yasmin.png"
           reverse={true}
         />
         
@@ -230,32 +255,40 @@ export default function HomePage() {
                 Gå med i flocken idag
               </h2>
               <p className="text-xl text-white/90">
-                Ladda ner appen och skapa ditt konto
+                Ladda ner appen, skapa ditt konto och lägg upp din hund
               </p>
             </div>
             
             <div className="space-y-4">
-              <p className="text-lg text-white/80">
-                Appen lanseras till MyDOG
-              </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://play.google.com/store/apps/details?id=com.bastavan.app" className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft">
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.bastavan.app" 
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft"
+                  onClick={() => trackAppInstall('android', 'final_cta')}
+                >
                   {/* Google Play icon */}
                   <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                   </svg>
                   Ladda ner på Google Play
                 </a>
+                
+                <a 
+                  href="https://apps.apple.com/app/flocken/id6755424578" 
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft"
+                  onClick={() => trackAppInstall('ios', 'final_cta')}
+                >
+                  {/* App Store icon */}
+                  <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C1.79 15.25 2.1 7.59 9.5 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                  </svg>
+                  Ladda ner på AppStore
+                </a>
               </div>
-              
-              <p className="text-lg text-white/80">
-                Finns att ladda ner på Google Play. Kommer när som helst till AppStore.
-              </p>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <p className="text-lg text-white font-semibold">
-                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 31 januari)
+                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 28 februari)
                 </p>
               </div>
             </div>
