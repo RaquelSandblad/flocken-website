@@ -29,8 +29,8 @@ export function HeroBlock({
   alignLeft = false
 }: HeroBlockProps) {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white to-flocken-cream pt-5">
-      <div className="container-custom py-10 lg:py-12">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white to-flocken-cream pt-20 lg:pt-8">
+      <div className="container-custom py-10 lg:py-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Copy + CTA */}
           <div className={`space-y-8 ${alignLeft ? 'text-left' : ''}`}>
