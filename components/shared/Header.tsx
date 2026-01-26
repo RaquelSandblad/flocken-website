@@ -45,15 +45,15 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
                 Om appen
               </Link>
               
-              {/* Invisible bridge för att förhindra gap */}
+              {/* Invisible bridge som täcker gapet mellan länken och dropdown */}
               {desktopDropdownOpen && (
-                <div className="absolute top-full left-0 w-full h-2" />
+                <div className="absolute top-full left-0 right-0 h-6" />
               )}
               
               {/* Dropdown meny */}
               {desktopDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 w-48">
-                  <div className="bg-white rounded-xl shadow-card border border-flocken-sand overflow-hidden">
+                <div className="absolute top-full left-0 w-48">
+                  <div className="bg-white rounded-xl shadow-card border border-flocken-sand overflow-hidden mt-2">
                     <Link 
                       href="/funktioner#para" 
                       className="block px-4 py-3 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors"

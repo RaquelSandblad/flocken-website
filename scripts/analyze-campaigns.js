@@ -39,15 +39,24 @@ if (!ACCESS_TOKEN) {
   process.exit(1);
 }
 
-// Funktion för att göra API-anrop
-function makeRequest(path) {
+// Funktion för att göra API-anrop med timeout och bättre felhantering
+function makeRequest(path, timeout = 30000) {
   return new Promise((resolve, reject) => {
     const url = new URL(`https://graph.facebook.com/v21.0${path}`);
     url.searchParams.set('access_token', ACCESS_TOKEN);
     
     const req = https.request(url, (res) => {
       let responseData = '';
-      res.on('data', chunk => responseData += chunk);
+      
+      res.on('data', chunk => {
+        responseData += chunk;
+        // Begränsa storlek för att undvika minnesproblem
+        if (responseData.length > 10 * 1024 * 1024) { // 10MB max
+          req.destroy();
+          reject(new Error('Response too large'));
+        }
+      });
+      
       res.on('end', () => {
         try {
           const parsed = JSON.parse(responseData);
@@ -63,20 +72,30 @@ function makeRequest(path) {
     });
 
     req.on('error', reject);
+    
+    // Timeout
+    req.setTimeout(timeout, () => {
+      req.destroy();
+      reject(new Error(`Request timeout after ${timeout}ms`));
+    });
+    
     req.end();
   });
 }
 
 // Formatera valuta
+// Meta API returnerar belopp direkt i SEK (inte i öre)
 function formatCurrency(amount, currency = 'SEK') {
   if (!amount) return '0.00';
-  return (parseFloat(amount) / 100).toFixed(2) + ' ' + currency;
+  return parseFloat(amount).toFixed(2) + ' ' + currency;
 }
 
-// Formatera nummer
+// Formatera nummer - använd Number() för att hantera stora nummer korrekt
 function formatNumber(num) {
-  if (!num) return '0';
-  return parseInt(num).toLocaleString('sv-SE');
+  if (!num && num !== 0) return '0';
+  const value = Number(num);
+  if (isNaN(value)) return '0';
+  return Math.floor(value).toLocaleString('sv-SE');
 }
 
 async function analyzeCampaigns(days = 7) {
@@ -116,10 +135,10 @@ async function analyzeCampaigns(days = 7) {
       }
       
       if (stats.action_values && stats.action_values.length > 0) {
-        const totalValue = stats.action_values.reduce((sum, av) => sum + parseFloat(av.value || 0), 0);
-        console.log(`\n   Total Conversion Value: ${formatCurrency(totalValue * 100)}`);
+        const totalValue = stats.action_values.reduce((sum, av) => sum + Number(av.value || 0), 0);
+        console.log(`\n   Total Conversion Value: ${formatCurrency(totalValue)}`);
         if (stats.spend) {
-          const roas = (totalValue * 100) / parseFloat(stats.spend);
+          const roas = Number(totalValue) / Number(stats.spend);
           console.log(`   ROAS: ${roas.toFixed(2)}x`);
         }
       }

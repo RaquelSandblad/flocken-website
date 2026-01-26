@@ -12,7 +12,7 @@ export default function ValkommenPage() {
       {/* Hero */}
       <HeroBlock
         title="Ett enklare liv som hundägare"
-        tagline="– ladda ner i Flocken"
+        tagline="– ladda ner Flocken"
         subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
         ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
         ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
