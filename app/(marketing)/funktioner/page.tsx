@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import { VideoPlayer } from '@/components/marketing/VideoPlayer';
 import { VideoInPhone } from '@/components/marketing/VideoInPhone';
 
 export default function FunktionerPage() {
@@ -96,8 +97,8 @@ export default function FunktionerPage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
               {/* Video */}
-              <div className="relative w-full max-w-sm mx-auto lg:sticky lg:top-32">
-                <VideoInPhone
+              <div className="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-card bg-flocken-sand lg:sticky lg:top-32">
+                <VideoPlayer
                   src="/assets/flocken/videos/para.mp4"
                   poster="/assets/flocken/screenshots/flocken_para_karta-alla-hundar.png"
                 />
@@ -253,8 +254,8 @@ export default function FunktionerPage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
               {/* Video */}
-              <div className="relative w-full max-w-sm mx-auto lg:sticky lg:top-32">
-                <VideoInPhone
+              <div className="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-card bg-flocken-sand lg:sticky lg:top-32">
+                <VideoPlayer
                   src="/assets/flocken/videos/rasta.mp4"
                   poster="/assets/flocken/screenshots/flocken_rasta_starta-promenad.png"
                 />
@@ -343,8 +344,8 @@ export default function FunktionerPage() {
               </div>
 
               {/* Video */}
-              <div className="relative w-full max-w-sm mx-auto lg:order-1 lg:sticky lg:top-32">
-                <VideoInPhone
+              <div className="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-card bg-flocken-sand lg:order-1 lg:sticky lg:top-32">
+                <VideoPlayer
                   src="/assets/flocken/videos/besoka.mp4"
                   poster="/assets/flocken/screenshots/flocken_besoka_karta-alla.png"
                 />
