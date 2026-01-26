@@ -223,13 +223,11 @@ export default function FunktionerPage() {
               </div>
 
               {/* Video */}
-              <div className="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-card bg-flocken-sand lg:order-1 lg:sticky lg:top-32 p-3">
-                <div className="w-full h-full border-4 border-black rounded-lg overflow-hidden">
-                  <VideoPlayer
-                    src="/assets/flocken/videos/passa.mp4"
-                    poster="/assets/flocken/screenshots/flocken_screens_passa_agneta-preview-b.png"
-                  />
-                </div>
+              <div className="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-card bg-flocken-sand lg:order-1 lg:sticky lg:top-32">
+                <VideoPlayer
+                  src="/assets/flocken/videos/passa.mp4"
+                  poster="/assets/flocken/screenshots/flocken_screens_passa_agneta-preview-b.png"
+                />
               </div>
             </div>
           </div>
