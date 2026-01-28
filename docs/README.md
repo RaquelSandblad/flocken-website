@@ -172,29 +172,6 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 
 ---
 
-### 🎨 **Brand** (`brand/`)
-
-**Brand Guidelines:**
-- [Visual Style](./brand/visual_style.md) - Visuell identitet
-- [Color System](./brand/color_system.md) - Färgsystem
-- [Tone of Voice](./brand/tone_of_voice.md) - Kommunikationsstil
-- [Value Proposition](./brand/value_proposition.md) - Värdeerbjudande
-
-**Personas:**
-- [Personas README](./brand/personas/README.md) - Översikt
-- [Anders - Rasta Explorer](./brand/personas/anders_rasta_explorer_01.md)
-- [Anna - Passa Safety](./brand/personas/anna_passa_safety_01.md)
-- [Jonas - Allround Community](./brand/personas/jonas_allround_community_01.md)
-- [Marco - Para Researcher](./brand/personas/marco_para_researcher_01.md)
-
----
-
-### 📢 **Marketing** (`marketing/`)
-
-- [Launch Plan](./marketing/LAUNCH_PLAN.md) - Lanseringsplan för Flocken
-
----
-
 ### 🛠️ **Development** (`development/`)
 
 - [Git Workflow](./development/GIT_WORKFLOW.md) ⭐ - Git-kommandon och deployment
