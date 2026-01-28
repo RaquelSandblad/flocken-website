@@ -9,9 +9,7 @@ Write-Host "🚀 Deploying Meta Pixel..." -ForegroundColor Cyan
 
 # Add the changed files
 git add app/layout.tsx
-git add PIXEL_STATUS.md
-git add META_SETUP_INSTRUCTIONS.md
-git add DEPLOY_INSTRUCTIONS.md
+git add docs/meta/META_PIXEL_SETUP.md
 git add deploy-meta-pixel.ps1
 
 # Check status

@@ -1,12 +1,20 @@
 # Kreativ Struktur – Creative Bases & Briefs (Flocken)  
-Version: 1.0    
-Status: LÅST    
-Syfte: Systematisk, skalbar produktion av annonser utanför Meta
+
+**Version:** 1.0  
+**Status:** LÅST  
+**Syfte:** Flocken-specifik creative workflow
+
+**⚠️ VIKTIGT:** Detta är Flocken-specifik dokumentation. För delad creative workflow, se:  
+👉 [spitakolus/meta-ads/CREATIVE_WORKFLOW.md](https://github.com/tbinho/spitakolus/tree/main/meta-ads)
 
 ---
 
 ## 0. Grundprincip
 
+**För delad creative workflow:**  
+👉 [spitakolus/meta-ads/CREATIVE_WORKFLOW.md](https://github.com/tbinho/spitakolus/tree/main/meta-ads)
+
+**Flocken-specifik:**
 Du skapar inte annonser.  
 Du skapar Creative Bases (CB).  
 Annonser är instanser av CB + variant.

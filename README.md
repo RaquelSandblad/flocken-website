@@ -1,6 +1,22 @@
 # Flocken Website
 
+**⚠️ VIKTIGT:** Detta är **FLOCKEN-WEBSITE** repo.  
+För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
+
 Modern webbplats för Flocken-appen byggd med Next.js 15, TypeScript och Tailwind CSS.
+
+---
+
+## 📍 Dokumentationsstruktur
+
+**Projekt-specifik dokumentation finns här i detta repo.**  
+**Delad dokumentation finns i [spitakolus](https://github.com/tbinho/spitakolus) repo.**
+
+- 📋 **[DOCUMENTATION_MAP.md](./DOCUMENTATION_MAP.md)** - Komplett översikt över ALL dokumentation
+- 📖 **[docs/README.md](./docs/README.md)** - Projekt-specifik dokumentation (tracking, meta, bigquery)
+- 🏢 **[spitakolus](https://github.com/tbinho/spitakolus)** - Företagsgemensam dokumentation (delade verktyg, processer)
+
+---
 
 ## 🚀 Snabbstart
 
@@ -103,7 +119,7 @@ git remote -v
 
 ### Git & specialtecken i sökvägar
 - Använd alltid `$PSScriptRoot` i PowerShell-skript för att undvika problem med `ö` i sökvägar.
-- Se `GIT_COMMANDS.md` och `README_GIT.md` för full guide.
+- Se [Git Workflow Guide](./docs/development/GIT_WORKFLOW.md) för fullständig guide.
 - Exempel:
   - `cd $PSScriptRoot`
   - `git -C $PSScriptRoot status`
@@ -141,10 +157,10 @@ Flocken har komplett tracking-infrastruktur implementerad:
 - ⏳ **BigQuery export** - Planerad
 
 **Dokumentation:**
-- [Komplett Tracking Setup](./docs/TRACKING_SETUP_COMPLETE.md) ⭐ Start här
-- [GA4 Setup Status](./docs/GA4_SETUP_STATUS.md)
-- [GTM Setup Instructions](./docs/GTM_SETUP_INSTRUCTIONS.md)
-- [Framtida Implementation Plans](./docs/README.md)
+- [Komplett Tracking Setup](./docs/tracking/TRACKING_SETUP_COMPLETE.md) ⭐ Start här
+- [GA4 Setup Status](./docs/tracking/GA4_SETUP_STATUS.md)
+- [GTM Setup Instructions](./docs/tracking/GTM_SETUP_INSTRUCTIONS.md)
+- [Tracking Documentation Index](./docs/README.md)
 
 ## 📢 Meta Ads
 
@@ -167,7 +183,39 @@ Projektet använder en fast, AI-first struktur för all annonsering i Meta Ads M
 
 ---
 
-## 📋 Changelog
+## 📚 Dokumentation
+
+### 🎯 Start Här
+- **[DOCUMENTATION_MAP.md](./DOCUMENTATION_MAP.md)** ⭐ - Komplett översikt över ALL dokumentation
+- [README.md](./README.md) - Denna fil (projektöversikt)
+- [INSTALLATION.md](./INSTALLATION.md) - Deployment och setup-guide
+- [Tracking Setup Complete](./docs/tracking/TRACKING_SETUP_COMPLETE.md) - Tracking-infrastruktur
+
+### 🏢 Delad dokumentation
+- **[spitakolus](https://github.com/tbinho/spitakolus)** - Företagsgemensam dokumentation (delade verktyg, processer, standarder)
+
+### 📁 Dokumentationsstruktur
+
+**Utveckling:**
+- [Git Workflow](./docs/development/GIT_WORKFLOW.md) - Git-kommandon och deployment
+
+**Tracking & Analytics:**
+- [Tracking Documentation Index](./docs/README.md) - Översikt över all tracking-dokumentation
+- [GA4 Setup Status](./docs/tracking/GA4_SETUP_STATUS.md)
+- [GTM Setup Instructions](./docs/tracking/GTM_SETUP_INSTRUCTIONS.md)
+
+**Meta (Ads & Pixel):**
+- [Meta Pixel Setup](./docs/meta/META_PIXEL_SETUP.md) - Meta Pixel konfiguration
+- [Meta Ads Complete Guide](./docs/meta/META_ADS_COMPLETE_GUIDE.md)
+- [Meta Ads Structure](./meta_ads_structure_flocken.md) - Naming conventions och struktur
+
+**Bildhantering:**
+- [IMAGE_MANAGEMENT.md](./IMAGE_MANAGEMENT.md) - Bildhanteringssystem
+
+**BigQuery:**
+- [BigQuery Setup Instructions](./docs/bigquery/BIGQUERY_SETUP_INSTRUCTIONS.md)
+
+### 📋 Changelog
 
 Se detaljerade ändringar i:
 - [CHANGELOG_20251216.md](./CHANGELOG_20251216.md) - Integritetspolicy uppdateringar (16 dec 2025)

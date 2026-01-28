@@ -1,12 +1,20 @@
 # Meta Ads – Struktur & Naming (Flocken)  
-Version: 1.0    
-Status: LÅST    
-Syfte: Skapa ett skalbart, AI-vänligt och analysbart Meta Ads-konto
+
+**Version:** 1.0  
+**Status:** LÅST  
+**Syfte:** Flocken-specifik Meta Ads struktur och naming conventions
+
+**⚠️ VIKTIGT:** Detta är Flocken-specifik dokumentation. För delade naming conventions, se:  
+👉 [spitakolus/meta-ads/NAMING_CONVENTIONS.md](https://github.com/tbinho/spitakolus/tree/main/meta-ads)
 
 ---
 
 ## 0. Grundprinciper
 
+**För delade naming conventions och best practices:**  
+👉 [spitakolus/meta-ads/NAMING_CONVENTIONS.md](https://github.com/tbinho/spitakolus/tree/main/meta-ads)
+
+**Flocken-specifik vokabulär:**
 - Endast tillåtna tecken: a–z, 0–9, _  
 - Inga mellanslag  
 - Inga specialtecken (+ | - : / @ å ä ö)  
