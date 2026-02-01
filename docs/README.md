@@ -4,7 +4,7 @@
 - För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem)
 - För delad dokumentation, se [spitakolus](https://github.com/tbinho/spitakolus)
 
-**Senast uppdaterad:** 2026-01-28
+**Senast uppdaterad:** 2026-02-01
 
 ---
 
@@ -174,6 +174,7 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 
 ### 🛠️ **Development** (`development/`)
 
+- [Infrastructure](./development/INFRASTRUCTURE.md) ⭐ - Testing, Validation, Security, ESLint
 - [Git Workflow](./development/GIT_WORKFLOW.md) ⭐ - Git-kommandon och deployment
 - [Password Reset Setup](./development/PASSWORD_RESET_SETUP.md) - Password reset functionality
 - [Download Page](./development/DOWNLOAD_PAGE.md) - Download page setup
@@ -227,4 +228,4 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 
 ---
 
-**Senast uppdaterad:** 2026-01-28
+**Senast uppdaterad:** 2026-02-01

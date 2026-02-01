@@ -34,7 +34,21 @@ npm run dev
 
 Öppna [http://localhost:3000](http://localhost:3000) i din browser.
 
-### 3. Bygg för production
+### 3. Kör tester
+
+```bash
+npm run test           # Kör alla tester
+npm run test:watch     # Watch-läge för utveckling
+npm run test:coverage  # Med coverage-rapport
+```
+
+### 4. Lint kod
+
+```bash
+npm run lint           # Kör ESLint
+```
+
+### 5. Bygg för production
 
 ```bash
 npm run build

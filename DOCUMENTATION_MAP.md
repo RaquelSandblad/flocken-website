@@ -93,7 +93,8 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 - [BIGQUERY_CREATE_VIEWS_STEP_BY_STEP.md](./docs/bigquery/BIGQUERY_CREATE_VIEWS_STEP_BY_STEP.md)
 
 #### Development (`docs/development/`)
-- [GIT_WORKFLOW.md](./docs/development/GIT_WORKFLOW.md) ⭐ Start här
+- [INFRASTRUCTURE.md](./docs/development/INFRASTRUCTURE.md) ⭐ Testing, Validation, Security
+- [GIT_WORKFLOW.md](./docs/development/GIT_WORKFLOW.md) ⭐ Git-kommandon och deployment
 - [PASSWORD_RESET_SETUP.md](./docs/development/PASSWORD_RESET_SETUP.md)
 - [DOWNLOAD_PAGE.md](./docs/development/DOWNLOAD_PAGE.md)
 
@@ -138,4 +139,4 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 
 ---
 
-**Senast uppdaterad:** 2026-01-28
+**Senast uppdaterad:** 2026-02-01

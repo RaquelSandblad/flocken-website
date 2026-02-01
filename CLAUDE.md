@@ -53,6 +53,9 @@ npm install          # Install dependencies
 npm run dev          # Dev server (localhost:3000)
 npm run build        # Production build
 npm run lint         # ESLint
+npm run test         # Run all tests
+npm run test:watch   # Tests in watch mode
+npm run test:coverage # Tests with coverage
 ```
 
 ---
@@ -157,6 +160,7 @@ flocken_ads/creative_bases/
 
 - `README.md` - Project overview
 - `DOCUMENTATION_MAP.md` - Complete doc index
+- `docs/development/INFRASTRUCTURE.md` - Testing, Validation, Security
 - `docs/tracking/` - GA4, GTM, event naming
 - `docs/meta/` - Meta Pixel, Meta Ads
 - `docs/brand/` - Color system, personas
