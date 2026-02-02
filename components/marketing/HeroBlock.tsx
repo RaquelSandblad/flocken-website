@@ -111,7 +111,7 @@ export function HeroBlock({
               </div>
               
               {launchOffer && (
-                <p className={`text-base text-flocken-brown opacity-75 ${alignLeft ? 'text-left' : 'text-center'}`}>
+                <p className={`text-base text-flocken-brown opacity-75 whitespace-pre-line ${alignLeft ? 'text-left' : 'text-center'}`}>
                   {launchOffer}
                 </p>
               )}

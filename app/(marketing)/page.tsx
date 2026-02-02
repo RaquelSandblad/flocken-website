@@ -18,7 +18,7 @@ export default function HomePage() {
         ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
         image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
         launchInfo="Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund."
-        launchOffer="Få gratis premiumfunktioner i 6 månader, gäller till den 28 februari."
+        launchOffer={`Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 28 februari.`}
         alignLeft={true}
       />
       
@@ -287,8 +287,9 @@ export default function HomePage() {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
-                <p className="text-lg text-white font-semibold">
-                  Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 28 februari)
+                <p className="text-lg text-white font-semibold whitespace-pre-line">
+                  Appen är alltid gratis.{"\n"}
+                  Testa premiumfunktioner gratis i 6 månader, gäller till den 28 februari.
                 </p>
               </div>
             </div>
