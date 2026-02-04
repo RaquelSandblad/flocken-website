@@ -42,3 +42,10 @@ next-env.d.ts
 
 # Generated images (Vertex AI Imagen)
 /generated_images/
+
+# Claude Code
+.claude/
+
+# MCP servers build output
+mcp-servers/*/dist/
+mcp-servers/*/node_modules/

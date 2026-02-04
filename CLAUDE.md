@@ -164,6 +164,7 @@ flocken_ads/creative_bases/
 - `docs/tracking/` - GA4, GTM, event naming
 - `docs/meta/` - Meta Pixel, Meta Ads
 - `docs/brand/` - Color system, personas
+- `docs/ab-testing/README.md` - A/B testing guide
 
 ---
 

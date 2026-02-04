@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ABTestProvider } from '@/lib/ab-testing';
+import { WebAttributionTracker } from '@/components/tracking/WebAttributionTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -126,7 +128,10 @@ export default function RootLayout({
           />
         </noscript>
         
-        {children}
+        <ABTestProvider>
+          <WebAttributionTracker />
+          {children}
+        </ABTestProvider>
       </body>
     </html>
   );

@@ -53,6 +53,9 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 1. **[docs/bigquery/BIGQUERY_SETUP_INSTRUCTIONS.md](./docs/bigquery/BIGQUERY_SETUP_INSTRUCTIONS.md)** - Flocken-specifik setup
 2. **[spitakolus/tracking/BIGQUERY_SHARED_PROJECT.md](https://github.com/tbinho/spitakolus/tree/main/tracking)** - Delat BigQuery projekt
 
+### För A/B-testning:
+1. **[docs/ab-testing/README.md](./docs/ab-testing/README.md)** - Komplett guide för att skapa och köra A/B-tester
+
 ---
 
 ## 📋 Komplett dokumentationslista
@@ -97,6 +100,9 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 - [GIT_WORKFLOW.md](./docs/development/GIT_WORKFLOW.md) ⭐ Git-kommandon och deployment
 - [PASSWORD_RESET_SETUP.md](./docs/development/PASSWORD_RESET_SETUP.md)
 - [DOWNLOAD_PAGE.md](./docs/development/DOWNLOAD_PAGE.md)
+
+#### A/B Testing (`docs/ab-testing/`)
+- [README.md](./docs/ab-testing/README.md) ⭐ Komplett guide för A/B-testning
 
 ### Delad dokumentation (spitakolus)
 
