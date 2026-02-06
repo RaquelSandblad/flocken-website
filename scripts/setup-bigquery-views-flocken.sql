@@ -23,9 +23,9 @@ SELECT
   
   -- Platform identification
   CASE 
-    WHEN platform = 'web' THEN 'web'
-    WHEN platform = 'android' THEN 'app_android'
-    WHEN platform = 'ios' THEN 'app_ios'
+    WHEN UPPER(platform) = 'WEB' THEN 'web'
+    WHEN UPPER(platform) = 'ANDROID' THEN 'app_android'
+    WHEN UPPER(platform) = 'IOS' THEN 'app_ios'
     ELSE 'unknown'
   END AS platform,
   
@@ -56,6 +56,32 @@ SELECT
   traffic_source.source AS traffic_source,
   traffic_source.medium AS traffic_medium,
   traffic_source.name AS campaign_name,
+
+  -- Attribution fields available in GA4 export (no GTM changes required)
+  -- First touch (FT): GA4's user acquisition fields (typically set on first_visit/first_open)
+  traffic_source.source AS ft_source,
+  traffic_source.medium AS ft_medium,
+  traffic_source.name AS ft_campaign,
+
+  -- Event-collected UTM/click identifiers (if present in the URL)
+  collected_traffic_source.manual_source AS evt_source,
+  collected_traffic_source.manual_medium AS evt_medium,
+  collected_traffic_source.manual_campaign_name AS evt_campaign,
+  collected_traffic_source.manual_term AS evt_term,
+  collected_traffic_source.manual_content AS evt_content,
+  collected_traffic_source.gclid AS evt_gclid,
+  collected_traffic_source.dclid AS evt_dclid,
+  collected_traffic_source.srsltid AS evt_srsltid,
+
+  -- Last touch (LT): GA4 last-click attribution at session level
+  session_traffic_source_last_click.manual_campaign.source AS lt_source,
+  session_traffic_source_last_click.manual_campaign.medium AS lt_medium,
+  session_traffic_source_last_click.manual_campaign.campaign_name AS lt_campaign,
+  session_traffic_source_last_click.manual_campaign.term AS lt_term,
+  session_traffic_source_last_click.manual_campaign.content AS lt_content,
+  session_traffic_source_last_click.manual_campaign.campaign_id AS lt_campaign_id,
+  session_traffic_source_last_click.google_ads_campaign.campaign_id AS lt_google_ads_campaign_id,
+  session_traffic_source_last_click.google_ads_campaign.ad_group_id AS lt_google_ads_ad_group_id,
   
   -- All event params as JSON (for flexibility)
   event_params AS event_params_json,
@@ -67,6 +93,23 @@ SELECT
 FROM `nastahem-tracking.analytics_518338757.events_*`
 WHERE _TABLE_SUFFIX >= FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY))
   AND event_name IS NOT NULL;
+
+-- ============================================
+-- STEP 1B: Curated Events View (with attribution defaults)
+-- ============================================
+
+-- View: flocken_curated.events_attribution (FT/LT resolved per event)
+-- This view resolves a practical "best available" source/medium/campaign per event:
+-- - prefer last-click (LT) if present
+-- - else use event-collected (evt_*)
+-- - else fall back to first-touch (FT)
+CREATE OR REPLACE VIEW `nastahem-tracking.flocken_curated.events_attribution` AS
+SELECT
+  e.*,
+  COALESCE(NULLIF(e.lt_source, ''), NULLIF(e.evt_source, ''), NULLIF(e.ft_source, '')) AS attr_source,
+  COALESCE(NULLIF(e.lt_medium, ''), NULLIF(e.evt_medium, ''), NULLIF(e.ft_medium, '')) AS attr_medium,
+  COALESCE(NULLIF(e.lt_campaign, ''), NULLIF(e.evt_campaign, ''), NULLIF(e.ft_campaign, '')) AS attr_campaign
+FROM `nastahem-tracking.flocken_curated.events` e;
 
 -- ============================================
 -- STEP 2: Skapa Daily Metrics Table
@@ -85,9 +128,9 @@ SELECT
   
   -- Platform breakdown
   CASE 
-    WHEN platform = 'web' THEN 'web'
-    WHEN platform = 'android' THEN 'app_android'
-    WHEN platform = 'ios' THEN 'app_ios'
+    WHEN UPPER(platform) = 'WEB' THEN 'web'
+    WHEN UPPER(platform) = 'ANDROID' THEN 'app_android'
+    WHEN UPPER(platform) = 'IOS' THEN 'app_ios'
     ELSE 'unknown'
   END AS platform,
   
@@ -169,9 +212,9 @@ SELECT
   (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_location') AS page_location,
   (SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title') AS page_title,
   CASE 
-    WHEN platform = 'web' THEN 'web'
-    WHEN platform = 'android' THEN 'app_android'
-    WHEN platform = 'ios' THEN 'app_ios'
+    WHEN UPPER(platform) = 'WEB' THEN 'web'
+    WHEN UPPER(platform) = 'ANDROID' THEN 'app_android'
+    WHEN UPPER(platform) = 'IOS' THEN 'app_ios'
     ELSE 'unknown'
   END AS platform,
   device.category AS device_category,

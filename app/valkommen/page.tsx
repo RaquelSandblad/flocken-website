@@ -1,28 +1,54 @@
 'use client';
 
 import { HeroBlock } from '@/components/marketing/HeroBlock';
+import { HeroBlockVariantB } from '@/components/marketing/HeroBlockVariantB';
+import { HowItWorksVariantB } from '@/components/marketing/HowItWorksVariantB';
 import { FeatureBlock } from '@/components/marketing/FeatureBlock';
 import { TestimonialBlock } from '@/components/marketing/TestimonialBlock';
 import { trackAppInstall } from '@/lib/tracking';
+import { useABContent } from '@/lib/ab-testing';
+import { ExperimentTracker } from '@/components/ab-testing';
 import Image from 'next/image';
 
 export default function ValkommenPage() {
+  const experimentId = 'valkommen_hero_v1';
+  const heroStructure = useABContent<string>(experimentId, 'heroStructure', 'default');
+  
+  // Check if variant B is active
+  const isVariantB = String(heroStructure) === 'variant_b';
+
   return (
     <>
-      {/* Hero */}
-      <HeroBlock
-        title="Ett enklare liv som hundägare"
-        tagline="– ladda ner Flocken"
-        subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
-        ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
-        ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
-        image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
-        launchInfo="Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund."
-        launchOffer={`Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 28 februari.`}
-        alignLeft={true}
-      />
+      {/* Track experiment */}
+      <ExperimentTracker experimentId={experimentId} />
       
-      {/* Community Section */}
+      {/* Hero - Conditional rendering based on variant */}
+      {isVariantB ? (
+        <>
+          <HeroBlockVariantB 
+            heroImage={useABContent(experimentId, 'heroImage', '/assets/flocken/generated/flocken_screen_varb_hero.jpeg')}
+          />
+          <HowItWorksVariantB
+            image1={useABContent(experimentId, 'howItWorksImage1', '/assets/flocken/generated/flocken_screen_varb_1.jpeg')}
+            image2={useABContent(experimentId, 'howItWorksImage2', '/assets/flocken/generated/flocken_screen_varb_2.jpeg')}
+            image3={useABContent(experimentId, 'howItWorksImage3', '/assets/flocken/generated/flocken_screen_varb_3.jpeg')}
+          />
+        </>
+      ) : (
+        <>
+          <HeroBlock
+            title="Ett enklare liv som hundägare"
+            tagline="– ladda ner Flocken"
+            subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
+            ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
+            ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
+            image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
+            launchInfo="Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund."
+            launchOffer={`Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 28 februari.`}
+            alignLeft={true}
+          />
+          
+          {/* Community Section */}
       <section className="section-padding bg-flocken-sand" id="om-appen">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -78,7 +104,10 @@ export default function ValkommenPage() {
           </div>
         </div>
       </section>
-      
+        </>
+      )}
+
+      {/* Gemensamma sektioner under (både variant A och B) */}
       <div id="funktioner">
         {/* Feature: Para - För Marco */}
         <FeatureBlock

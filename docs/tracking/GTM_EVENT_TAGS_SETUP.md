@@ -82,6 +82,19 @@ Skapa GA4 Event tags i GTM för alla custom events så att de skickas till GA4.
 - Configuration Tag: Välj "GA4 Configuration - Flocken"
 - Event Name: `{{Event}}` (built-in variable)
 
+**Event Parameters (rekommenderat)**
+Lägg till dessa parametrar (Name → Value som Data Layer Variable):
+- `platform` → `{{DLV - platform}}`
+- `source` → `{{DLV - source}}`
+- `value` → `{{DLV - value}}`
+- `currency` → `{{DLV - currency}}`
+
+**Attribution (first touch / last touch)**
+Flocken pushar dessa nycklar på relevanta events (t.ex. `app_install`, `generate_lead`, `sign_up`) när analytics-consent är granted.
+Lägg till dem som event params för att få dem in i GA4 → BigQuery:
+- First touch: `ft_source`, `ft_medium`, `ft_campaign`, `ft_content`, `ft_term`, `ft_gclid`, `ft_fbclid`, `ft_wbraid`, `ft_gbraid`, `ft_msclkid`, `ft_ts`
+- Last touch: `lt_source`, `lt_medium`, `lt_campaign`, `lt_content`, `lt_term`, `lt_gclid`, `lt_fbclid`, `lt_wbraid`, `lt_gbraid`, `lt_msclkid`, `lt_ts`
+
 **4. Trigger**
 - Trigger Type: **Custom Event**
 - Event name: `app_install`

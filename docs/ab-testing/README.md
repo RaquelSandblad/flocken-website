@@ -181,6 +181,8 @@ function CTAButton() {
 | **Färger** | Knappfärger, bakgrunder |
 | **Hela block** | Visa/dölja sektioner |
 
+**💡 Vill du testa mer än bara text?** Se [ADVANCED_LAYOUT_TESTING.md](./ADVANCED_LAYOUT_TESTING.md) för hur du testar olika layouts, bilder, komponenter och struktur.
+
 ---
 
 ## Events som skickas
