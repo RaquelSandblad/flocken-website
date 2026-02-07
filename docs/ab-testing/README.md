@@ -36,6 +36,13 @@ Demo-sidan visar:
 3. Lägg till mått: `Sessioner`, `Händelser`
 4. Filtrera på `event_name = experiment_impression`
 
+**Följ resultat för ett live-test (t.ex. valkommen_hero_v1):**
+- **Utforska** → **Skapa ny** → **Fri utforskning**
+- Dimensioner: `Variant ID` (eller custom dimension för `variant_id`), `Experiment ID`
+- Mått: **Händelser** (för `experiment_impression`), **Användare**, **Sessioner**
+- Händelse: `experiment_impression` (när någon ser varianten), `cta_click` (när någon klickar CTA)
+- Jämför **control** vs **variant_b** över tid (minst 1–2 veckor eller tills statistisk signifikans)
+
 ---
 
 ## Så fungerar det
