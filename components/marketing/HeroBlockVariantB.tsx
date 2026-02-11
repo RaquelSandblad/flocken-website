@@ -2,12 +2,26 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useABTest } from '@/lib/ab-testing';
+import { trackExperimentCTAClick } from '@/lib/ab-testing/tracking';
+import { getExperiment } from '@/lib/ab-testing';
 
 interface HeroBlockVariantBProps {
   heroImage: string;
 }
 
 export function HeroBlockVariantB({ heroImage }: HeroBlockVariantBProps) {
+  // Get A/B test context for valkommen_hero_v1
+  const abTest = useABTest('valkommen_hero_v1');
+  const experiment = abTest ? getExperiment('valkommen_hero_v1') : null;
+
+  const handleCTAClick = (ctaName: string, href: string) => {
+    // Track CTA click with experiment context if experiment is active
+    if (abTest && experiment && abTest.variant) {
+      trackExperimentCTAClick(experiment, abTest.variant, ctaName, href);
+    }
+  };
+
   return (
     <section className="relative bg-white pt-12 lg:pt-6">
       <div className="container-custom py-6 lg:py-10">
@@ -28,6 +42,7 @@ export function HeroBlockVariantB({ heroImage }: HeroBlockVariantBProps) {
               <Link
                 href="/download"
                 className="btn-primary inline-flex items-center justify-center text-center px-6 py-3 rounded-xl font-semibold bg-flocken-olive text-white hover:bg-flocken-accent transition-colors"
+                onClick={() => handleCTAClick('hero_primary', '/download')}
               >
                 Ladda ner appen
               </Link>
@@ -35,6 +50,7 @@ export function HeroBlockVariantB({ heroImage }: HeroBlockVariantBProps) {
               <Link
                 href="/funktioner"
                 className="inline-flex items-center justify-center text-center border-2 border-flocken-olive text-flocken-olive hover:bg-flocken-sand transition-colors px-6 py-3 rounded-xl font-semibold"
+                onClick={() => handleCTAClick('hero_secondary', '/funktioner')}
               >
                 Så fungerar appen
               </Link>

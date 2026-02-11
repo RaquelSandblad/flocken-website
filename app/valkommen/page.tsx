@@ -12,7 +12,13 @@ import Image from 'next/image';
 
 export default function ValkommenPage() {
   const experimentId = 'valkommen_hero_v1';
+  
+  // All hooks must be called unconditionally (React Rules of Hooks)
   const heroStructure = useABContent<string>(experimentId, 'heroStructure', 'default');
+  const heroImage = useABContent(experimentId, 'heroImage', '/assets/flocken/generated/flocken_screen_varb_hero_trbg.png');
+  const howItWorksImage1 = useABContent(experimentId, 'howItWorksImage1', '/assets/flocken/generated/flocken_screen_varb_1trbg.png');
+  const howItWorksImage2 = useABContent(experimentId, 'howItWorksImage2', '/assets/flocken/generated/flocken_screen_varb_2trbg.png');
+  const howItWorksImage3 = useABContent(experimentId, 'howItWorksImage3', '/assets/flocken/generated/flocken_screen_varb_3trbg.png');
   
   // Check if variant B is active
   const isVariantB = String(heroStructure) === 'variant_b';
@@ -26,12 +32,12 @@ export default function ValkommenPage() {
       {isVariantB ? (
         <>
           <HeroBlockVariantB 
-            heroImage={useABContent(experimentId, 'heroImage', '/assets/flocken/generated/flocken_screen_varb_hero.jpeg')}
+            heroImage={heroImage}
           />
           <HowItWorksVariantB
-            image1={useABContent(experimentId, 'howItWorksImage1', '/assets/flocken/generated/flocken_screen_varb_1.jpeg')}
-            image2={useABContent(experimentId, 'howItWorksImage2', '/assets/flocken/generated/flocken_screen_varb_2.jpeg')}
-            image3={useABContent(experimentId, 'howItWorksImage3', '/assets/flocken/generated/flocken_screen_varb_3.jpeg')}
+            image1={howItWorksImage1}
+            image2={howItWorksImage2}
+            image3={howItWorksImage3}
           />
         </>
       ) : (

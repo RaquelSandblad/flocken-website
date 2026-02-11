@@ -48,12 +48,12 @@ export const experiments: Record<string, Experiment> = {
           heroStructure: 'variant_b', // Special structure for variant B
           
           // Hero images
-          heroImage: '/assets/flocken/generated/flocken_screen_varb_hero.jpeg',
+          heroImage: '/assets/flocken/generated/flocken_screen_varb_hero_trbg.png',
           
           // How it works images
-          howItWorksImage1: '/assets/flocken/generated/flocken_screen_varb_1.jpeg',
-          howItWorksImage2: '/assets/flocken/generated/flocken_screen_varb_2.jpeg',
-          howItWorksImage3: '/assets/flocken/generated/flocken_screen_varb_3.jpeg',
+          howItWorksImage1: '/assets/flocken/generated/flocken_screen_varb_1trbg.png',
+          howItWorksImage2: '/assets/flocken/generated/flocken_screen_varb_2trbg.png',
+          howItWorksImage3: '/assets/flocken/generated/flocken_screen_varb_3trbg.png',
         },
       },
     ],

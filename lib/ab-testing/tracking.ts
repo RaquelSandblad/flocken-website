@@ -39,8 +39,8 @@ export function trackExperimentView(experiment: Experiment, variant: Variant): v
     });
   }
 
-  // Development logging
-  if (process.env.NODE_ENV === 'development') {
+  // Always log in browser (development or production for debugging)
+  if (typeof window !== 'undefined') {
     console.log('[AB Test] Experiment impression tracked:', {
       experimentId: experiment.id,
       variantId: variant.id,
@@ -122,7 +122,8 @@ export function trackExperimentCTAClick(
     });
   }
 
-  if (process.env.NODE_ENV === 'development') {
+  // Always log in browser (development or production for debugging)
+  if (typeof window !== 'undefined') {
     console.log('[AB Test] CTA click tracked:', eventData);
   }
 }

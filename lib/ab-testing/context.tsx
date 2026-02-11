@@ -149,8 +149,16 @@ export function useABTest(experimentId: string): ABTestContext | null {
 export function useABContent<T>(experimentId: string, key: string, defaultValue: T): T {
   const context = useContext(ABTestReactContext);
 
+  // During SSR or before provider is ready, return defaultValue
+  // This prevents hydration mismatches and hook order errors
   if (!context) {
-    throw new Error('useABContent must be used within an ABTestProvider');
+    if (typeof window === 'undefined') {
+      // Server-side: always return defaultValue
+      return defaultValue;
+    }
+    // Client-side but provider not ready: return defaultValue
+    // This can happen during initial render before provider mounts
+    return defaultValue;
   }
 
   return context.getContent(experimentId, key, defaultValue);
