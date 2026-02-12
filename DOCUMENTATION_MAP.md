@@ -70,6 +70,7 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 - [IMAGE_MANAGEMENT.md](./IMAGE_MANAGEMENT.md) - Bildhantering
 - [meta_ads_structure_flocken.md](./meta_ads_structure_flocken.md) - Meta Ads struktur
 - [creative_structure_flocken.md](./creative_structure_flocken.md) - Creative Bases
+- [CHANGELOG_20260212.md](./CHANGELOG_20260212.md) - Cookie banner + cookie policy (12 feb 2026)
 - [CHANGELOG_20251216.md](./CHANGELOG_20251216.md) - Changelog
 - [CHANGELOG_20241204.md](./CHANGELOG_20241204.md) - Changelog
 
@@ -105,6 +106,10 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 - [BIGQUERY_SETUP_INSTRUCTIONS.md](./docs/bigquery/BIGQUERY_SETUP_INSTRUCTIONS.md) ⭐ Start här
 - [BIGQUERY_CLEAN_SETUP_EU.md](./docs/bigquery/BIGQUERY_CLEAN_SETUP_EU.md)
 - [BIGQUERY_CREATE_VIEWS_STEP_BY_STEP.md](./docs/bigquery/BIGQUERY_CREATE_VIEWS_STEP_BY_STEP.md)
+
+#### Legal (`docs/legal/`)
+- [COOKIE_BANNER_IMPLEMENTATION.md](./docs/legal/COOKIE_BANNER_IMPLEMENTATION.md) - Teknisk implementation av cookie banner
+- [COOKIEPOLICY_FLOCKEN.md](./docs/legal/COOKIEPOLICY_FLOCKEN.md) - Ursprunglig cookie policy-template
 
 #### Development (`docs/development/`)
 - [INFRASTRUCTURE.md](./docs/development/INFRASTRUCTURE.md) ⭐ Testing, Validation, Security
@@ -156,4 +161,4 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 
 ---
 
-**Senast uppdaterad:** 2026-02-01
+**Senast uppdaterad:** 2026-02-12
