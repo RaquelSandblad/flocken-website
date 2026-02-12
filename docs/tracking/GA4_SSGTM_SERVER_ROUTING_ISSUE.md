@@ -1,0 +1,132 @@
+# GA4 server-side routing issue (Flocken vs Nästa Hem)
+
+**Status:** ? LÖST 2026-02-04
+
+---
+
+## Kort sammanfattning
+
+Webb-GTM (GTM-PD5N4GT3) skickar events med `tid=G-7B1SVKL89Q` (Flocken) till servern `https://gtm.nastahem.com`.
+
+**Tidigare problem:** Custom events (experiment_impression, cta_click, click) nådde server-containern men vidarebefordrades inte till GA4. Bara page_view kom igenom.
+
+**Rotorsak:** Taggen "GA4 - Forward All" i server-containern hade triggern "All Pages" som bara matchade page_view-events.
+
+**Fix:** Bytte triggern till "All Events".
+
+---
+
+## Nuvarande konfiguration (server, GTM-THB49L3K)
+
+### Klient
+- GA4 (webb), prioritet 0, standardvägar, aktiv.
+
+### Taggar
+
+| Tag | Status | Mätnings-id | Trigger |
+|-----|--------|-------------|---------|
+| **GA4 - Forward All** | ? Aktiv | `{{GA Measurement ID (tid)}}` | **All Events** |
+| GA4 - Flocken | ?? Pausad | G-7B1SVKL89Q | Flocken - GA4 Events |
+| GA4 Configuration | ?? Pausad | (All Pages) | All Pages |
+| GA4 Event Tag - Nästa Hem | ?? Pausad | G-7N67P0KT0B | Nästa Hem - GA4 Events |
+
+**Varför "GA4 - Forward All" är den enda aktiva taggen:**
+- Använder `{{GA Measurement ID (tid)}}` dynamiskt ? routar till rätt GA4-property baserat på `tid` i requesten
+- Hanterar ALLA events för ALLA brands (Flocken + Nästa Hem)
+- Standardparametrar: Alla (vidarebefordrar alla event-parametrar)
+- Användarattribut: Alla
+
+**Varför de andra är pausade:**
+- "GA4 - Flocken" och "GA4 Event Tag - Nästa Hem" hade triggers med AND-villkor som inte matchade alla event-typer (measurement_id, x-ga-measurement_id och tid krävdes alla tre)
+- "GA4 Configuration" (All Pages, Nästa Hem-ID) tog över alla events till Nästa Hem när den var aktiv
+
+### Variabler
+
+| Variabel | Typ | Key path |
+|----------|-----|----------|
+| GA Measurement ID | Händelsedata | measurement_id |
+| GA Measurement ID (x) | Händelsedata | x-ga-measurement_id |
+| GA Measurement ID (tid) | Händelsedata | tid |
+
+**Viktigt:** `tid` är det enda fältet som alltid finns i ALLA GA4-requests (page_view, custom events, etc.). `measurement_id` och `x-ga-measurement_id` finns bara i vissa request-typer.
+
+### Triggers
+
+| Trigger | Status | Villkor |
+|---------|--------|---------|
+| **All Events** | ? Aktiv (på GA4 - Forward All) | Inga villkor (fångar allt) |
+| Flocken - GA4 Events | Kopplad till pausad tag | measurement_id AND x-ga-measurement_id AND tid = G-7B1SVKL89Q |
+| Nästa Hem - GA4 Events | Kopplad till pausad tag | measurement_id AND x-ga-measurement_id AND tid = G-7N67P0KT0B |
+
+---
+
+## Historik
+
+### Problem 1: Data hamnade i Nästa Hem (löst jan 2025)
+- "GA4 Configuration" (All Pages, Nästa Hem-ID) var aktiv i sGTM och tog alla events ? Nästa Hem fick Flocken-data
+- Fix: Skapade brand-specifika triggers på measurement_id/x-ga-measurement_id och pausade Configuration-taggen
+
+### Problem 2: Flocken fick ingen data alls (löst jan 2025)
+- Brand-specifika triggers matchade inte events som hade measurement ID i `tid`-fältet istället för `measurement_id`/`x-ga-measurement_id`
+- Fix: Lade till `tid`-variabel och -villkor i triggers
+
+### Problem 3: Custom events nådde inte GA4 (löst feb 2026)
+- "GA4 - Forward All" hade "All Pages" trigger ? bara page_view vidarebefordrades
+- Custom events (experiment_impression, cta_click, click) ignorerades
+- Fix: Bytte trigger till "All Events"
+- Se även: `FIX_CTA_CLICK_GTM.md` för fullständig dokumentation
+
+---
+
+## Verifiering
+
+### Från webbläsarens nätverkspanel:
+```javascript
+performance.getEntriesByType('resource')
+  .filter(r => r.name.includes('collect'))
+  .map(r => ({
+    event: r.name.match(/en=([^&]*)/)?.[1],
+    tid: r.name.match(/tid=([^&]*)/)?.[1],
+    dest: new URL(r.name).hostname
+  }))
+```
+
+Förväntat resultat:
+```json
+[
+  {"event": "page_view", "tid": "G-7B1SVKL89Q", "dest": "gtm.nastahem.com"},
+  {"event": "experiment_impression", "tid": "G-7B1SVKL89Q", "dest": "gtm.nastahem.com"}
+]
+```
+
+### GA4 Realtime (Flocken):
+- ? page_view
+- ? experiment_impression
+- ? cta_click (efter klick)
+- ? click (efter klick)
+
+### GA4 Realtime (Nästa Hem):
+- Ska INTE visa flocken.info-trafik
+
+---
+
+## Om det slutar fungera igen
+
+1. **Kolla server-containern (GTM-THB49L3K):**
+   - Är "GA4 - Forward All" fortfarande aktiv?
+   - Har den triggern "All Events"?
+   - Är de tre andra taggarna pausade?
+
+2. **Kolla webb-containern (GTM-PD5N4GT3):**
+   - Finns "GA4 Event - Flocken Custom" med triggers för cta_click och experiment_impression?
+   - Finns "GA4 - Click Tracking - Flocken" med trigger för länkklick?
+   - Refererar de till "GA4 Configuration - Flocken" som mätnings-id?
+
+3. **Kolla nätverket:**
+   - Skickas requests till `gtm.nastahem.com/g/collect`?
+   - Innehåller de `tid=G-7B1SVKL89Q`?
+
+---
+
+**Senast uppdaterad:** 2026-02-04
+**Status:** ? LÖST ? Alla events når GA4 via "GA4 - Forward All" med "All Events" trigger

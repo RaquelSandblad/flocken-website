@@ -31,7 +31,21 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Google Cloud service account keys
+scripts/*-key.json
+scripts/*-credentials.json
+*.json.key
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
+# Generated images (Vertex AI Imagen)
+/generated_images/
+
+# Claude Code
+.claude/
+
+# MCP servers build output
+mcp-servers/*/dist/
+mcp-servers/*/node_modules/

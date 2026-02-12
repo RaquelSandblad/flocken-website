@@ -43,8 +43,8 @@ export default function SupportPage() {
       
       <h3>Hur skapar jag ett konto?</h3>
       <p>
-        Ladda ner Flocken-appen från App Store eller Google Play. När du öppnar appen 
-        kan du registrera dig med din e-postadress eller logga in via sociala medier.
+        Ladda ner Flocken-appen från <a href="/download" className="text-flocken-olive hover:underline">App Store eller Google Play</a>. När du öppnar appen 
+        kan du registrera dig med din e-postadress.
       </p>
       
       <h3>Hur lägger jag till min hund?</h3>
@@ -56,15 +56,13 @@ export default function SupportPage() {
       
       <h3>Är Flocken gratis?</h3>
       <p>
-        Ja, Flocken är gratis i 6 månader för alla som skapar konto innan nyår. 
-        Därefter kommer vi erbjuda olika prenumerationsplaner.
+        Ja, Flocken är gratis i 6 månader för alla som skapar konto innan den 28 februari. 
+        Därefter finns det olika prenumerationsplaner för premiumfunktioner, men även ett gratiskonto.
       </p>
       
-      <h3>Hur fungerar Para-funktionen?</h3>
+      <h3>Hur fungerar appen?</h3>
       <p>
-        Para-funktionen hjälper dig hitta rätt parningspartner för din hund. Du kan 
-        söka efter hundar baserat på ras, storlek, plats och andra kriterier. 
-        Kontakta hundägare direkt genom appen.
+        Här kan du läsa <a href="/funktioner" className="text-flocken-olive hover:underline">mer om de olika funktionerna Para, Passa, Rasta och Besöka</a>.
       </p>
       
       <h3>Är mina uppgifter säkra?</h3>

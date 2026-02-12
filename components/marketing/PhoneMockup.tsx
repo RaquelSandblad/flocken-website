@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 interface PhoneMockupProps {
@@ -10,13 +12,14 @@ export function PhoneMockup({ screenshot, badge, alt = 'Flocken app screenshot' 
   return (
     <div className="relative inline-block">
       {/* Screenshot med inbyggd iPhone mockup */}
-      <div className="relative mx-auto" style={{ width: '320px' }}>
+      <div className="relative mx-auto" style={{ width: '320px', maxWidth: '100%' }}>
         <Image
           src={screenshot}
           alt={alt}
-          width={320}
-          height={693}
+          width={500}
+          height={1020}
           className="w-full h-auto"
+          style={{ objectFit: 'contain' }}
         />
       </div>
       

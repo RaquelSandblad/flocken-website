@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ABTestProvider } from '@/lib/ab-testing';
+import { WebAttributionTracker } from '@/components/tracking/WebAttributionTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -56,13 +58,17 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <head>
-        {/* Initialize dataLayer for consent management (if GTM is added later) */}
+        {/* Facebook Domain Verification */}
+        <meta name="facebook-domain-verification" content="jt1vlxalalidu3tkkaoufy8kv91tta" />
+        
+        {/* Initialize dataLayer for GTM-only setup */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
               
-              // Default consent state - denied until user accepts
+              // GTM-only consent management (no direct gtag)
               window.dataLayer.push({
                 'event': 'consent_default',
                 'analytics_storage': 'denied',
@@ -79,20 +85,53 @@ export default function RootLayout({
         {/* Cookie Banner - Modal design */}
         <script defer src="/scripts/cookie-banner-custom.js"></script>
         
-        {/* Google tag (gtag.js) - Google Ads */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821309500"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17821309500');
-            `,
-          }}
-        />
+        {/* Google Tag Manager - GTM-only implementation */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PD5N4GT3&l=dataLayer"></script>
+        
+        {/* Meta Pixel - Facebook Pixel */}
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+          <>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  !function(f,b,e,v,n,t,s)
+                  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                  n.queue=[];t=b.createElement(e);t.async=!0;
+                  t.src=v;s=b.getElementsByTagName(e)[0];
+                  s.parentNode.insertBefore(t,s)}(window, document,'script',
+                  'https://connect.facebook.net/en_US/fbevents.js');
+                  fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID}');
+                  // CRITICAL: Start with consent revoked - cookie-banner will grant when user accepts
+                  // This is required for Meta's consent mode to work properly
+                  fbq('consent', 'revoke');
+                  // IMPORTANT: Do NOT track PageView or ViewContent here!
+                  // All Meta Pixel events are handled by cookie-banner-custom.js
+                  // to ensure correct event order (PageView must be first for "Landing Page View" to work)
+                `,
+              }}
+            />
+            {/* Noscript pixel removed to avoid tracking without consent */}
+          </>
+        )}
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        {children}
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            title="Google Tag Manager"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PD5N4GT3"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        
+        <ABTestProvider>
+          <WebAttributionTracker />
+          {children}
+        </ABTestProvider>
       </body>
     </html>
   );

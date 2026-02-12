@@ -1,0 +1,5 @@
+# Python dependencies för Flocken scripts
+# Installera med: pip install -r scripts/requirements-python.txt
+
+# Google Cloud Vertex AI SDK (för Imagen bildgenerering)
+google-cloud-aiplatform>=1.70.0

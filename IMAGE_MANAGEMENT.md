@@ -1,6 +1,8 @@
-# 🐕 Flocken - Bildhanteringssystem
+# 🐕 Flocken - Bildhantering
 
-**Hur man hanterar bilder för flocken.info på rätt sätt**
+**Flocken-specifik bildhantering för flocken.info**
+
+**📖 Gemensam dokumentation:** Se [spitakolus/development/IMAGE_PROCESSING_SYSTEM.md](https://github.com/tbinho/spitakolus/tree/main/development) för det kompletta bildhanteringssystemet.
 
 ---
 

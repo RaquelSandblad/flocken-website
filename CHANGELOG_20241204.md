@@ -38,8 +38,7 @@
 - ✅ **`public/assets/flocken/generated/`** - Auto-genererade optimerade versioner
 
 ### Dokumentation
-- ✅ **`IMAGE_MANAGEMENT.md`** - Fullständig guide för bildhantering
-- ✅ **`BILDBYTEN_INSTRUKTION.md`** - Snabbstart för bildbyten
+- ✅ **`IMAGE_MANAGEMENT.md`** - Fullständig guide för bildhantering (inkluderar snabbstart)
 
 ### Nya bilder (förberedda)
 Koden är uppdaterad att använda:
@@ -57,8 +56,7 @@ node scripts/image-processor-flocken.js process-all
 
 ### Filer skapade
 - `scripts/image-processor-flocken.js`
-- `IMAGE_MANAGEMENT.md`
-- `BILDBYTEN_INSTRUKTION.md`
+- `IMAGE_MANAGEMENT.md` (inkluderar snabbstart-guide)
 - `CHANGELOG_20241204.md` (denna fil)
 
 ### Filer modifierade

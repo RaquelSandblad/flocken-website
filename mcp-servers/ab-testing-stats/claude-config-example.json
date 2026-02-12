@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ab-testing-stats": {
+      "command": "node",
+      "args": ["C:/Dev/flocken-website/mcp-servers/ab-testing-stats/dist/index.js"],
+      "env": {
+        "GOOGLE_ADS_SERVICE_ACCOUNT_JSON": "<KOPIERA VÄRDET FRÅN .env.local>"
+      }
+    }
+  }
+}

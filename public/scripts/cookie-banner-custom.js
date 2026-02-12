@@ -266,7 +266,6 @@
         box-shadow: 0 10px 30px rgba(62, 59, 50, 0.5);
       ">
         <h2 style="margin: 0 0 16px 0; color: #3E3B32;">Ändra cookie-inställningar</h2>
-        <p style="margin: 0 0 20px 0; color: #3E3B32;">Ändra dina cookie-inställningar:</p>
         
         <div style="margin-bottom: 16px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
           <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">
@@ -408,9 +407,24 @@
     if (!marketing) {
       // Block marketing tracking
       blockMarketingTracking();
+    } else {
+      // Allow Meta Pixel if marketing consent is granted
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('consent', 'grant');
+        // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
+        window.fbq('track', 'PageView');
+        // Then track ViewContent for additional conversion data
+        window.fbq('track', 'ViewContent', {
+          content_name: 'Landing Page',
+          content_category: 'Homepage',
+          content_ids: ['flocken-homepage'],
+          content_type: 'landing_page',
+        });
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (new consent)');
+      }
     }
     
-    // Dispatch custom event for Meta Pixel and other tracking
+    // Dispatch custom event for other tracking (GA4, etc.)
     if (typeof window !== 'undefined') {
       const consentEvent = new CustomEvent('consentchange', {
         detail: {
@@ -727,6 +741,21 @@
     }
     if (!consent.marketing) {
       blockMarketingTracking();
+    } else {
+      // Allow Meta Pixel if marketing consent was previously granted
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('consent', 'grant');
+        // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
+        window.fbq('track', 'PageView');
+        // Then track ViewContent for additional conversion data
+        window.fbq('track', 'ViewContent', {
+          content_name: 'Landing Page',
+          content_category: 'Homepage',
+          content_ids: ['flocken-homepage'],
+          content_type: 'landing_page',
+        });
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (existing consent)');
+      }
     }
 
     console.log('Cookie banner: Existing consent found:', consent);

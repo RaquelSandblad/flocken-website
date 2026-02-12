@@ -1,19 +1,29 @@
-export const metadata = {
-  title: "Integritetspolicy för Flocken",
-  description: "Integritetspolicy för Flocken - hur vi samlar in, använder och skyddar dina personuppgifter",
-};
+'use client';
+
+import { useEffect } from 'react';
 
 export default function IntegritetspolicyPage() {
+  useEffect(() => {
+    document.title = 'Integritetspolicy för Flocken';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Integritetspolicy för Flocken - hur vi samlar in, använder och skyddar dina personuppgifter');
+    }
+  }, []);
+
   return (
     <>
       <h1>Integritetspolicy för Flocken</h1>
       
       <p className="lead">
-        <strong>Senast uppdaterad:</strong> 16 december 2025
+        <strong>Senast uppdaterad:</strong> 18 januari 2026
       </p>
       
       <p>
-        Denna integritetspolicy gäller för behandling av personuppgifter i samband med användning av Flocken-appen samt tillhörande tjänster. Policyn gäller även när personuppgifter samlas in via vår webbplats i den utsträckning de avser appen eller användarkonton i Flocken.
+        Denna integritetspolicy gäller för behandling av personuppgifter i samband med användning av Flockens tjänster, inklusive mobilappar (iOS och Android) samt våra webbplatser, såsom flocken.info.
+      </p>
+      <p>
+        Policyn beskriver hur vi samlar in, använder och skyddar personuppgifter i samband med kontoskapande, användning av funktioner, samt mätning och förbättring av våra tjänster. Viss mätning kan ske via våra egna system och domäner innan data delas med utvalda tjänsteleverantörer, i enlighet med denna policy.
       </p>
       
       <p>
@@ -27,8 +37,10 @@ export default function IntegritetspolicyPage() {
       <p>
         <strong>Spitakolus AB</strong><br />
         Organisationsnummer: 559554-6101<br />
-        E-post: support@spitakolus.com<br />
-        Support: support@spitakolus.com
+        E-post till support:{' '}
+        <a href="mailto:support@spitakolus.com" className="text-flocken-olive hover:underline">
+          support@spitakolus.com
+        </a>
       </p>
       <p>
         Vid frågor om denna policy eller vår behandling av personuppgifter kan du kontakta oss via ovanstående kontaktuppgifter.
@@ -98,6 +110,30 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Behandling av platsdata sker för att fullgöra användarens uttryckliga begäran att registrera en promenad och baseras på avtalet mellan användaren och Flocken.
       </p>
       
+      <h3 id="uppgifter-kartvisning">2.3.1 Kartvisning och ungefärlig plats (kartbaserad tjänst – ej realtidsposition)</h3>
+      <p>
+        Flocken är en kartbaserad tjänst. En kärnfunktion i appen är att användare ska kunna upptäcka publicerade annonser och tjänster via kartan (t.ex. parning, hundpassning och hundvänliga verksamheter).
+      </p>
+      <p>
+        Kartvisning baseras uteslutande på information som användaren själv aktivt väljer att publicera i form av annonser eller profiler.
+      </p>
+      <p>
+        <strong>Ingen realtidsposition delas i kartan:</strong><br />
+        Kartan visar inte användares live-position eller var en användares enhet befinner sig i realtid. Vi samlar inte in eller delar kontinuerlig GPS-position för kartvisning, och ingen automatisk eller manuell "check-in" förekommer.
+      </p>
+      <p>
+        <strong>Privatpersoner (icke-företag):</strong><br />
+        För privatpersoner visas aldrig exakt adress i kartan. Platsinformation visas endast på en ungefärlig nivå, till exempel som stad eller område, och kan visualiseras som en approximativ punkt inom ett större geografiskt område (t.ex. postnummerområde). Detta görs för att skydda användarens integritet.
+      </p>
+      <p>
+        <strong>Företag och verksamheter:</strong><br />
+        Företag och verksamheter (t.ex. hunddagis) kan välja att visa sin verksamhetsadress i kartan, eftersom detta är en publikt avsedd adress som syftar till att kunder ska kunna hitta verksamheten.
+      </p>
+      <p>
+        <strong>Val och kontroll:</strong><br />
+        Att synas i kartan är kopplat till att aktivt skapa och publicera en profil eller annons. Användare som inte vill vara synliga i kartan ska inte publicera en sådan listning, eller kan när som helst ta bort sin listning eller radera sitt konto direkt i appen.
+      </p>
+      
       <h3 id="uppgifter-funktion">2.4 Funktionsspecifik data</h3>
       <ul>
         <li><strong>Hundvakt:</strong> tillgänglighet, priser, erfarenhet/beskrivning</li>
@@ -125,6 +161,23 @@ export default function IntegritetspolicyPage() {
         <li>Tekniska loggar (t.ex. IP-adress, enhetstyp, appversion, tidsstämplar, kraschloggar)</li>
       </ul>
       
+      <h3 id="uppgifter-teknisk">2.7 Teknisk användningsdata och mätning</h3>
+      <p>
+        När du använder Flockens appar eller webbplatser samlar vi in teknisk användningsdata i syfte att säkerställa funktionalitet, förbättra användarupplevelsen och analysera hur tjänsten används.
+      </p>
+      <p>
+        Sådan data kan omfatta:
+      </p>
+      <ul>
+        <li>information om enhet och operativsystem</li>
+        <li>appversion, språk och tidsstämplar</li>
+        <li>hur funktioner används (t.ex. visningar, klick och andra interaktioner)</li>
+        <li>tekniska identifierare som krävs för drift, säkerhet och analys</li>
+      </ul>
+      <p>
+        Denna information används inte för att identifiera dig direkt, utan behandlas i första hand på aggregerad eller pseudonymiserad nivå.
+      </p>
+      
       <h2 id="varifrån">3. Varifrån vi får uppgifterna</h2>
       <p>
         Vi samlar främst in personuppgifter direkt från dig när du:
@@ -132,7 +185,7 @@ export default function IntegritetspolicyPage() {
       <ul>
         <li>Registrerar konto</li>
         <li>Skapar eller uppdaterar din profil eller din hunds profil</li>
-        <li>Aktiverar platstjänster</li>
+        <li>Startar en promenad i funktionen Rasta (platsåtkomst)</li>
         <li>Skickar meddelanden i appen</li>
         <li>Använder olika funktioner (sök, filter, favoriter, blockering m.m.)</li>
       </ul>
@@ -149,7 +202,7 @@ export default function IntegritetspolicyPage() {
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Skapa och hantera ditt konto</li>
-        <li>Visa hundar och hundägare i närheten</li>
+        <li>Visa publicerade annonser och listningar i kartan baserat på stad eller område</li>
         <li>Möjliggöra chatt och kontakt mellan användare</li>
         <li>Visa och hantera favoritmarkeringar och blockeringar</li>
       </ul>
@@ -168,8 +221,7 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Avtal (artikel 6.1 b) – för att möjliggöra de funktioner du valt att använda.
       </p>
       
-      
-      <h3 id="ändamål-support">4.4 För kommunikation och support</h3>
+      <h3 id="ändamål-support">4.3 För kommunikation och support</h3>
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Skicka viktig information om appen, villkor eller ändringar i policyn</li>
@@ -183,20 +235,50 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Avtal (artikel 6.1 b) – nödvändigt för att kunna hjälpa dig som användare. Berättigat intresse (artikel 6.1 f) – vårt intresse av att administrera appen och ge god kundservice.
       </p>
       
-      <h3 id="ändamål-utveckla">4.5 För att förbättra och utveckla appen</h3>
+      <h3 id="ändamål-utveckla">4.4 För att förbättra och utveckla appen</h3>
       <p><strong>Exempel på behandlingar:</strong></p>
       <ul>
         <li>Analys av hur appen används (t.ex. vilka funktioner som används mest)</li>
         <li>Felsökning, kraschloggar och prestandaoptimering</li>
       </ul>
       <p>
-        För analys, statistik och förbättring av tjänsten använder vi analysverktyg såsom Google Analytics 4 och Meta (Facebook). Dessa verktyg kan behandla teknisk information såsom IP-adress, enhetsinformation, operativsystem och användarbeteende i appen.
+        För analys och statistik använder vi analysverktyg såsom Google Analytics 4 och/eller Firebase (Google). Dessa verktyg hjälper oss att förstå hur våra tjänster används, identifiera förbättringsområden och säkerställa stabil drift.
       </p>
       <p>
-        Uppgifterna används för att förstå hur tjänsten används, förbättra funktionalitet och säkerställa stabil drift.
+        Analys sker för produktutveckling, felsökning och övergripande statistik, och är inte ett krav för att skapa konto eller använda tjänsten.
       </p>
       <p>
-        <strong>Rättslig grund:</strong> Berättigat intresse (artikel 6.1 f) – vårt berättigade intresse av att förbättra tjänsten, öka säkerheten och förstå användarbeteenden.
+        <strong>Rättslig grund:</strong> Berättigat intresse (artikel 6.1 f) – vårt berättigade intresse av att utveckla och förbättra våra tjänster.
+      </p>
+      
+      <h3 id="ändamål-marknadsföring">4.5 Marknadsföring och konverteringsmätning</h3>
+      <p>
+        Flocken använder mätning kopplad till marknadsföring på vår webbplats (flocken.info) för att förstå om annonser leder till besök, installation, registrering eller annan användaraktivitet.
+      </p>
+      <p>
+        Denna mätning innebär att tekniska händelser kan delas med marknadsföringsplattformar, såsom Google eller Meta, i syfte att:
+      </p>
+      <ul>
+        <li>mäta effektiviteten av marknadsföring</li>
+        <li>förbättra och optimera kampanjer</li>
+        <li>minska irrelevant annonsering</li>
+      </ul>
+      <p>
+        Vi använder följande verktyg för marknadsföringsmätning:
+      </p>
+      <ul>
+        <li><strong>Meta Pixel (Facebook Pixel)</strong> – för att mäta konverteringar från Meta-annonser och förbättra annonsering</li>
+        <li><strong>Google Tag Manager</strong> – för att hantera och koordinera spårningsskript</li>
+      </ul>
+      <p>
+        <strong>Viktigt:</strong> Marknadsföringsspårning aktiveras endast om du ger ditt samtycke via vår cookie-banner. Du kan när som helst ändra dina val via{' '}
+        <a href="/privacy-choices" className="text-flocken-olive hover:underline">
+          användarens integritetsval
+        </a>{' '}
+        eller genom att klicka på "Hantera cookies" i sidfoten.
+      </p>
+      <p>
+        <strong>Rättslig grund:</strong> Samtycke (artikel 6.1 a GDPR) – marknadsföringsspårning sker endast efter att du aktivt godkänt detta via cookie-bannern.
       </p>
       
       <h3 id="ändamål-juridik">4.6 För att följa lagar och hantera tvister</h3>
@@ -231,6 +313,7 @@ export default function IntegritetspolicyPage() {
       </p>
       <ul>
         <li><strong>Offentligt synliga uppgifter:</strong> hundprofiler (namn, bilder, ras, ålder, beskrivning, plats i form av stad/område), ditt användarnamn, din profilbild (om du valt att ladda upp en), eventuell beskrivning av dig som hundvakt eller liknande.</li>
+        <li><strong>Platsinformation:</strong> Ingen exakt adress visas för privatpersoner, endast ungefärlig plats (t.ex. stad eller område). Ingen realtidsposition delas.</li>
         <li><strong>När du kontaktar någon:</strong> din kontaktinformation (namn, profilbild) samt de meddelanden du skickar.</li>
         <li><strong>Favoritmarkeringar:</strong> om du markerar en användare som favorit kan den användaren se det (beroende på appens inställningar).</li>
       </ul>
@@ -241,8 +324,10 @@ export default function IntegritetspolicyPage() {
       </p>
       <ul>
         <li><strong>Supabase (backend och databas)</strong> – för lagring och hantering av användarkonton och data. Databastjänster tillhandahålls via Supabase, vars servrar är lokaliserade inom EU (Irland).</li>
-        <li><strong>Google Maps API</strong> – för kartfunktioner och geolokalisering</li>
-        <li><strong>Google Analytics 4 och Meta (Facebook)</strong> – för analys och spårning</li>
+        <li><strong>Google Maps API</strong> – för kartfunktioner och geokodning (t.ex. stad eller postnummerområde)</li>
+        <li><strong>Google (t.ex. Google Analytics och Firebase)</strong> – för analys och statistik</li>
+        <li><strong>Tekniska tjänsteleverantörer</strong> för drift, säkerhet och mätning</li>
+        <li><strong>Marknadsföringsplattformar</strong> (t.ex. Google Ads eller Meta), i den mån marknadsföringsmätning aktiveras och är tillåten enligt lag</li>
         <li><strong>Betalningsleverantörer</strong> (om vi i framtiden erbjuder betalfunktioner direkt i appen)</li>
         <li><strong>Hosting och infrastruktur</strong> – där appen och databasservrar körs</li>
       </ul>
@@ -288,7 +373,22 @@ export default function IntegritetspolicyPage() {
         <li><strong>Loggar och tekniska uppgifter:</strong> sparas endast så länge som behövs för säkerhet, felsökning och utveckling.</li>
       </ul>
       
-      <h2 id="rättigheter">7. Dina rättigheter</h2>
+      <h2 id="samtycke-val">7. Samtycke och dina val</h2>
+      <p>
+        Du kan påverka hur viss behandling av personuppgifter sker:
+      </p>
+      <ul>
+        <li><strong>Webb:</strong> För användning av cookies och liknande tekniker kan du lämna eller återkalla ditt samtycke via våra cookieinställningar. Dessa nås via{' '}
+        <a href="https://flocken.info/privacy-choices" className="text-flocken-olive hover:underline">
+          https://flocken.info/privacy-choices
+        </a>{' '}eller via länk i webbplatsens sidfot.</li>
+        <li><strong>App:</strong> Viss mätning kan styras av inställningar i din enhet eller i appen. Eventuell spårning för marknadsföringsändamål är alltid frivillig och påverkar inte möjligheten att använda tjänsten.</li>
+      </ul>
+      <p>
+        Du kan när som helst ändra dina val.
+      </p>
+      
+      <h2 id="rättigheter">8. Dina rättigheter</h2>
       <p>
         Som användare har du rätt att begära tillgång till de personuppgifter vi behandlar om dig, begära rättelse av felaktiga uppgifter eller invända mot viss behandling.
       </p>
@@ -354,7 +454,7 @@ export default function IntegritetspolicyPage() {
         För att utöva dina rättigheter kan du kontakta oss via de kontaktuppgifter som anges i avsnitt 1. Vi kan behöva be dig bekräfta din identitet för att säkerställa att vi lämnar ut uppgifter till rätt person.
       </p>
       
-      <h2 id="säkerhet">8. Datasäkerhet</h2>
+      <h2 id="säkerhet">9. Datasäkerhet</h2>
       <p>
         Vi vidtar lämpliga tekniska och organisatoriska säkerhetsåtgärder för att skydda dina personuppgifter, bl.a.:
       </p>
@@ -369,7 +469,7 @@ export default function IntegritetspolicyPage() {
         Trots våra åtgärder kan ingen teknisk lösning vara 100 % säker. Om en personuppgiftsincident skulle inträffa hanterar vi den i enlighet med GDPR och, vid behov, anmäler till IMY samt informerar berörda användare.
       </p>
       
-      <h2 id="barn">9. Barns integritet</h2>
+      <h2 id="barn">10. Barns integritet</h2>
       <p>
         <strong>Flocken är inte avsedd för barn under 13 år.</strong>
       </p>
@@ -379,7 +479,7 @@ export default function IntegritetspolicyPage() {
         <li>Vi kan ha en åldersverifiering vid registrering och du bekräftar att du är tillräckligt gammal enligt vår policy och tillämplig lag när du skapar konto.</li>
       </ul>
       
-      <h2 id="ändringar">10. Ändringar i denna integritetspolicy</h2>
+      <h2 id="ändringar">11. Ändringar i denna integritetspolicy</h2>
       <ul>
         <li>Vi kan ibland uppdatera denna integritetspolicy, t.ex. om vi lägger till nya funktioner eller om lagstiftningen ändras.</li>
         <li>Vid större ändringar informerar vi dig tydligt i appen eller via e-post.</li>
@@ -387,7 +487,7 @@ export default function IntegritetspolicyPage() {
         <li>Datumet högst upp på sidan visar när policyn senast uppdaterades.</li>
       </ul>
       
-      <h2 id="kontakt">11. Kontakt</h2>
+      <h2 id="kontakt">12. Kontakt</h2>
       <p>
         Har du frågor om hur vi behandlar dina personuppgifter, eller vill du utöva någon av dina rättigheter?
       </p>
@@ -402,12 +502,25 @@ export default function IntegritetspolicyPage() {
         </a>
       </p>
       
-      <h2 id="privacy-choices">12. Hantera dina integritetsval</h2>
+      <h2 id="privacy-choices">13. Hantera dina integritetsval</h2>
       <p>
-        Mer information om hur du kan hantera, ändra eller radera dina uppgifter finns på vår sida för{' '}
+        Mer information om hur du kan hantera, ändra dina uppgifter eller cookieinställningar, samt hur du gör för att radera dina uppgifter, finns på vår sida för{' '}
         <a href="/privacy-choices" className="text-flocken-olive hover:underline">
           användarens integritetsval
         </a>.
+      </p>
+      <p>
+        Här kan du{' '}
+        <button
+          onClick={() => {
+            if (typeof window !== 'undefined' && window.showCookieSettings) {
+              window.showCookieSettings();
+            }
+          }}
+          className="text-flocken-olive hover:underline bg-transparent border-none p-0 cursor-pointer"
+        >
+          ändra dina cookie-inställningar
+        </button>.
       </p>
     </>
   );
