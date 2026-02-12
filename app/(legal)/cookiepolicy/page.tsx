@@ -97,18 +97,18 @@ export default function CookiePolicyPage() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-flocken-sand">
-              <th className="border border-flocken-olive p-3 text-left">Cookie</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Cookie</th>
               <th className="border border-flocken-olive p-3 text-left">Syfte</th>
-              <th className="border border-flocken-olive p-3 text-left">Varaktighet</th>
-              <th className="border border-flocken-olive p-3 text-left">Typ</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Varaktighet</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Typ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>cookie-consent</code></td>
-              <td className="border border-flocken-olive p-3">Sparar dina cookie-preferenser (localStorage)</td>
-              <td className="border border-flocken-olive p-3">12 månader</td>
-              <td className="border border-flocken-olive p-3">Första part</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>cookie-consent</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Sparar dina cookie-preferenser (localStorage)</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">12 månader</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Första part</td>
             </tr>
           </tbody>
         </table>
@@ -137,30 +137,30 @@ export default function CookiePolicyPage() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-flocken-sand">
-              <th className="border border-flocken-olive p-3 text-left">Cookie</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Cookie</th>
               <th className="border border-flocken-olive p-3 text-left">Syfte</th>
-              <th className="border border-flocken-olive p-3 text-left">Varaktighet</th>
-              <th className="border border-flocken-olive p-3 text-left">Leverantör</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Varaktighet</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Leverantör</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>_ga</code></td>
-              <td className="border border-flocken-olive p-3">Används för att skilja mellan olika användare</td>
-              <td className="border border-flocken-olive p-3">2 år</td>
-              <td className="border border-flocken-olive p-3">Google</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>_ga</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Används för att skilja mellan olika användare</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">2 år</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Google</td>
             </tr>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>_gid</code></td>
-              <td className="border border-flocken-olive p-3">Används för att skilja mellan olika användare</td>
-              <td className="border border-flocken-olive p-3">24 timmar</td>
-              <td className="border border-flocken-olive p-3">Google</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>_gid</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Används för att skilja mellan olika användare</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">24 timmar</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Google</td>
             </tr>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>_gat</code></td>
-              <td className="border border-flocken-olive p-3">Används för att begränsa antal förfrågningar</td>
-              <td className="border border-flocken-olive p-3">1 minut</td>
-              <td className="border border-flocken-olive p-3">Google</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>_gat</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Används för att begränsa antal förfrågningar</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">1 minut</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Google</td>
             </tr>
           </tbody>
         </table>
@@ -195,30 +195,30 @@ export default function CookiePolicyPage() {
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-flocken-sand">
-              <th className="border border-flocken-olive p-3 text-left">Cookie</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Cookie</th>
               <th className="border border-flocken-olive p-3 text-left">Syfte</th>
-              <th className="border border-flocken-olive p-3 text-left">Varaktighet</th>
-              <th className="border border-flocken-olive p-3 text-left">Leverantör</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Varaktighet</th>
+              <th className="border border-flocken-olive p-3 text-left whitespace-nowrap">Leverantör</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>_fbp</code></td>
-              <td className="border border-flocken-olive p-3">Facebook Pixel – spårar besök och konverteringar</td>
-              <td className="border border-flocken-olive p-3">3 månader</td>
-              <td className="border border-flocken-olive p-3">Meta</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>_fbp</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Facebook Pixel – spårar besök och konverteringar</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">3 månader</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Meta</td>
             </tr>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>_fbc</code></td>
-              <td className="border border-flocken-olive p-3">Facebook Click ID – spårar klick från Facebook-annonser</td>
-              <td className="border border-flocken-olive p-3">3 månader</td>
-              <td className="border border-flocken-olive p-3">Meta</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>_fbc</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Facebook Click ID – spårar klick från Facebook-annonser</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">3 månader</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Meta</td>
             </tr>
             <tr>
-              <td className="border border-flocken-olive p-3"><code>fr</code></td>
-              <td className="border border-flocken-olive p-3">Facebook remarketing och annonsmätning (kan sättas från facebook.com)</td>
-              <td className="border border-flocken-olive p-3">3 månader</td>
-              <td className="border border-flocken-olive p-3">Meta</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap"><code>fr</code></td>
+              <td className="border border-flocken-olive p-3 break-words">Facebook remarketing och annonsmätning (kan sättas från facebook.com)</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">3 månader</td>
+              <td className="border border-flocken-olive p-3 whitespace-nowrap">Meta</td>
             </tr>
           </tbody>
         </table>
