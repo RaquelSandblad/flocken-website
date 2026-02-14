@@ -2,7 +2,10 @@
 
 import { HeroBlock } from '@/components/marketing/HeroBlock';
 import { HeroBlockVariantB } from '@/components/marketing/HeroBlockVariantB';
+import { HeroBlockVariantC } from '@/components/marketing/HeroBlockVariantC';
 import { HowItWorksVariantB } from '@/components/marketing/HowItWorksVariantB';
+import { QuickBenefitsSection } from '@/components/marketing/QuickBenefitsSection';
+import { SimpleCTASection } from '@/components/marketing/SimpleCTASection';
 import { FeatureBlock } from '@/components/marketing/FeatureBlock';
 import { TestimonialBlock } from '@/components/marketing/TestimonialBlock';
 import { trackAppInstall } from '@/lib/tracking';
@@ -12,26 +15,54 @@ import Image from 'next/image';
 
 export default function ValkommenPage() {
   const experimentId = 'valkommen_hero_v1';
-  
+
   // All hooks must be called unconditionally (React Rules of Hooks)
   const heroStructure = useABContent<string>(experimentId, 'heroStructure', 'default');
   const heroImage = useABContent(experimentId, 'heroImage', '/assets/flocken/generated/flocken_screen_varb_hero_trbg.png');
   const howItWorksImage1 = useABContent(experimentId, 'howItWorksImage1', '/assets/flocken/generated/flocken_screen_varb_1trbg.png');
   const howItWorksImage2 = useABContent(experimentId, 'howItWorksImage2', '/assets/flocken/generated/flocken_screen_varb_2trbg.png');
   const howItWorksImage3 = useABContent(experimentId, 'howItWorksImage3', '/assets/flocken/generated/flocken_screen_varb_3trbg.png');
-  
-  // Check if variant B is active
+
+  // Variant C content
+  const heroTitle = useABContent(experimentId, 'heroTitle', 'Ett enklare liv som hundägare');
+  const heroSubtitle = useABContent(experimentId, 'heroSubtitle', 'Underlätta vardagen som hundägare');
+  const ctaPrimaryText = useABContent(experimentId, 'ctaPrimaryText', 'Ladda ner på Google Play');
+  const ctaSecondaryText = useABContent(experimentId, 'ctaSecondaryText', 'Ladda ner på AppStore');
+  const socialProof = useABContent(experimentId, 'socialProof', '');
+  const offer = useABContent(experimentId, 'offer', '');
+
+  // Check which variant is active
   const isVariantB = String(heroStructure) === 'variant_b';
+  const isVariantC = String(heroStructure) === 'variant_c';
 
   return (
     <>
       {/* Track experiment */}
       <ExperimentTracker experimentId={experimentId} />
-      
+
       {/* Hero - Conditional rendering based on variant */}
-      {isVariantB ? (
+      {isVariantC ? (
         <>
-          <HeroBlockVariantB 
+          {/* VARIANT C: Problem/Solution Split Screen */}
+          <HeroBlockVariantC
+            heroTitle={heroTitle}
+            heroSubtitle={heroSubtitle}
+            ctaPrimaryText={ctaPrimaryText}
+            ctaSecondaryText={ctaSecondaryText}
+            socialProof={socialProof}
+            offer={offer}
+            heroImage={heroImage}
+          />
+
+          {/* Quick Benefits - 4 cards */}
+          <QuickBenefitsSection />
+
+          {/* Simple CTA Repeat */}
+          <SimpleCTASection socialProof={socialProof} offer={offer} />
+        </>
+      ) : isVariantB ? (
+        <>
+          <HeroBlockVariantB
             heroImage={heroImage}
           />
           <HowItWorksVariantB
