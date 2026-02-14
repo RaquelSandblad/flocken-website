@@ -48,7 +48,7 @@ export const experiments: Record<string, Experiment> = {
 
           // Headline (problem-focused, specific, relatable)
           heroTitle: 'Slipp röriga Facebook-grupper för hundägare',
-          heroSubtitle: 'Hitta hundvakt, lekkompisar och hundvänliga ställen – allt i en app',
+          heroSubtitle: 'Hitta hundvakt, lekkompisar och hundvänliga ställen – allt i Flocken-appen',
 
           // CTA (tydligt vilken butik)
           ctaPrimaryText: 'Ladda ner på Google Play',

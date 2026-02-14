@@ -43,14 +43,14 @@ export function HeroBlockVariantC({
         {/* Split Screen Grid */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-          {/* LEFT: Problem (Facebook Groups) */}
+          {/* LEFT: Comparison (FB chaos vs Flocken app) */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-elevated bg-white">
-              {/* Problem image - FB group chaos (clean, no overlay) */}
+            <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-elevated bg-flocken-sand">
+              {/* Comparison image - FB chaos vs clean Flocken */}
               <div className="absolute inset-0 flex items-center justify-center p-8">
                 <Image
-                  src="/assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.jpg"
-                  alt="Röriga Facebook-grupper för hundägare"
+                  src="/assets/flocken/generated/flocken_image_jmf_v1_1x1_large.jpg"
+                  alt="Jämförelse: Röriga Facebook-grupper vs Flocken-appen"
                   width={1024}
                   height={1024}
                   className="object-contain w-full h-full"
