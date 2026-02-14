@@ -45,9 +45,9 @@ export function HeroBlockVariantC({
 
           {/* LEFT: Comparison (FB chaos vs Flocken app) */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-elevated bg-flocken-sand">
-              {/* Comparison image - FB chaos vs clean Flocken */}
-              <div className="absolute inset-0 flex items-center justify-center p-8">
+            <div className="relative h-[400px] lg:h-[600px]">
+              {/* Comparison image - FB chaos vs clean Flocken (no frame, no shadow) */}
+              <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/assets/flocken/generated/flocken_image_jmf_v1_1x1_large.jpg"
                   alt="Jämförelse: Röriga Facebook-grupper vs Flocken-appen"
