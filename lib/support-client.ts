@@ -81,7 +81,7 @@ class SupportClient {
     }
 
     this.appId = data.id;
-    return this.appId;
+    return data.id;
   }
 
   /**
