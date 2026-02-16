@@ -41,21 +41,21 @@ export function ResultCard({ slug, quiz, score, badge, tier, interpretation, use
 
         <div className="mt-4 flex flex-col gap-2">
           <a
-            href="/download"
+            href="https://flocken.info/download"
             onClick={() => {
               track('quiz_cta_click', { slug, cta: 'download' });
               track('quiz_cta_download_click', { slug, cta: 'download' });
             }}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--quiz-radius-card)] bg-flocken-olive px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-flocken-accent"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-[var(--quiz-radius-card)] bg-flocken-olive px-4 py-3 text-sm font-semibold text-white no-underline transition-colors hover:bg-flocken-accent hover:text-white"
           >
             Ladda ner Flocken – gratis
           </a>
           <a
-            href="/funktioner"
+            href="https://flocken.info/funktioner"
             onClick={() => {
               track('quiz_cta_click', { slug, cta: 'how_it_works' });
             }}
-            className="inline-flex w-full items-center justify-center rounded-[var(--quiz-radius-card)] border border-flocken-olive/40 bg-white/80 px-4 py-3 text-sm font-semibold text-flocken-brown transition-colors hover:bg-white"
+            className="inline-flex w-full items-center justify-center rounded-[var(--quiz-radius-card)] border border-flocken-olive/40 bg-white/80 px-4 py-3 text-sm font-semibold text-flocken-brown no-underline transition-colors hover:bg-white hover:text-flocken-brown"
           >
             Läs mer om Flocken
           </a>

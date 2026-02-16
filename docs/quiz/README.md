@@ -30,12 +30,49 @@ Quiz-systemet är en marknadsföringskanal och samtalsstartare som leder använd
 
 ### Key Features
 - ✅ Multi-quiz plattform (kan hantera obegränsat antal quiz)
-- ✅ 10 frågor per quiz (mix av fakta och profil-frågor)
-- ✅ Personliga resultat med badges
+- ✅ 10 frågor per quiz (endast faktafrågor - alla poängsättbara)
+- ✅ Personliga resultat med rosett-badges (bronze/silver/gold)
+- ✅ Auto-advance efter svar med färg-feedback
+- ✅ Delningsfunktion (Web Share API + kopiera-länk)
 - ✅ Naturliga CTA:er till Flocken-funktioner
 - ✅ Komplett GA4/GTM tracking
 - ✅ Mobil-first design
 - ✅ Sub-domän support (`quiz.flocken.info`)
+
+### Senaste uppdateringar (2026-02-16)
+
+**UX-förbättringar:**
+- ✅ Tog bort symboler från svarsalternativ (endast färg-feedback)
+- ✅ Auto-advance efter svar (0.8s delay) - ingen manuell "Nästa"-knapp
+- ✅ "Tillbaka"-knappen visas endast när den kan användas
+- ✅ Förklaringar visas endast på resultatskärmen (inte under spelet)
+
+**Badge-system:**
+- ✅ Ny rosett-design med CSS/SVG (ingen emoji)
+- ✅ Tre visuella tiers: bronze (0-4), silver (5-7), gold (8-10)
+- ✅ Tass-ikon i SVG för mer professionell känsla
+
+**Delningsfunktionalitet:**
+- ✅ Ny `ShareChallenge`-komponent
+- ✅ Web Share API för mobil (native delning)
+- ✅ Kopiera-länk-fallback för desktop
+- ✅ Trackas som `quiz_share` event
+
+**Resultatskärm:**
+- ✅ Ny ordning: Score+Badge → Dela → CTA → Svar
+- ✅ CTA flyttad upp för bättre synlighet (innan svarsgenomgången)
+- ✅ Förbättrad visuell hierarki
+
+**Score-kriterier:**
+- ✅ Justerade buckets: 0-4 (low), 5-7 (med), 8-10 (high)
+- ✅ Uppdaterade badge-texter: "Skarp hundkännare" (tidigare "Stabil")
+
+**Deployment:**
+- ✅ Committat och deployat till produktion
+- 🔧 Subdomän `quiz.flocken.info` (kräver Vercel + DNS-konfiguration första gången)
+
+**Framtida planering:**
+- 📧 Email-capture system (MailerSend-integration) - research klar, implementation väntar
 
 ---
 
@@ -49,8 +86,7 @@ Quiz-systemet är en marknadsföringskanal och samtalsstartare som leder använd
 **Beskrivning:** Från adrenalinfyllda starter till doftnörderi – var hamnar du?
 
 **Innehåll:**
-- 6 faktafrågor om hundsport (agility, nose work, IGP, drag, etc.)
-- 4 profilfrågor om personlighet och preferenser
+- 10 faktafrågor om hundsport (agility, nose work, IGP, drag, etc.)
 - Fokus: Aktivitet, samarbete, träning
 
 **Målgrupp:** Aktiva hundägare, sportintresserade
@@ -63,8 +99,7 @@ Quiz-systemet är en marknadsföringskanal och samtalsstartare som leder använd
 **Beskrivning:** Jakt, vall, drag eller soffhäng? Testa din koll.
 
 **Innehåll:**
-- 8 faktafrågor om olika rasers historiska syfte
-- 2 profilfrågor om preferenser
+- 10 faktafrågor om olika rasers historiska syfte
 - Täcker: Vallhundar, apportörer, drag, terrier, etc.
 
 **Målgrupp:** Alla hundägare, rasintresserade
@@ -77,8 +112,7 @@ Quiz-systemet är en marknadsföringskanal och samtalsstartare som leder använd
 **Beskrivning:** 10 frågor om hur hunden blev människans bästa vän.
 
 **Innehåll:**
-- 9 faktafrågor om domesticering, rasavel, kennelklubb-historia
-- 1 profilfråga om intresseområde
+- 10 faktafrågor om domesticering, rasavel, kennelklubb-historia
 - Täcker: Varg-hund-relation, SKK, FCI, DNA-forskning
 
 **Målgrupp:** Historiaintresserade, generellt hundintresserade
@@ -103,10 +137,11 @@ components/quiz/
 ├── QuizLayout.tsx             # Layout wrapper
 ├── QuizPlayer.tsx             # Quiz-motor (client component)
 ├── QuestionCard.tsx           # Enskild fråga
-├── AnswerOption.tsx           # Svarsalternativ
+├── AnswerOption.tsx           # Svarsalternativ (färg-baserad feedback)
 ├── ProgressIndicator.tsx      # Progress bar
 ├── ResultCard.tsx             # Resultatvisning
-└── Badge.tsx                  # (Deprecated - badge inline nu)
+├── BadgeDisplay.tsx           # Rosett-badge med CSS/SVG (bronze/silver/gold)
+└── ShareChallenge.tsx         # Dela/utmana-funktionalitet
 
 lib/quiz/
 ├── types.ts                   # TypeScript types
@@ -133,14 +168,13 @@ data/quizzes/
   questions: [               // Exakt 10 frågor
     {
       id: string,           // Unik fråge-ID
-      type: 'fact' | 'profile',
+      type: 'fact',         // Alla frågor är faktafrågor (poängsättbara)
       question: string,
       options: string[],    // 2-4 alternativ
-      // Endast för 'fact':
-      correctIndex?: number,
-      explanation?: string,
-      sources?: string[],   // Fakta-källa refs
-      factId?: string      // Intern referens
+      correctIndex: number, // Krävs för alla frågor
+      explanation: string,  // Krävs för alla frågor
+      sources: string[],    // Krävs för alla frågor (fakta-källa refs)
+      factId: string        // Krävs för alla frågor (intern referens)
     }
   ]
 }
@@ -151,8 +185,8 @@ data/quizzes/
 Alla quiz valideras vid laddning med Zod:
 - Slug: `^[a-z0-9_-]+$`
 - Exakt 10 frågor
-- Faktafrågor måste ha `correctIndex`, `explanation`, `sources[]`, `factId`
-- Profilfrågor har inga "rätt svar"
+- Alla frågor måste vara `type: 'fact'` med `correctIndex`, `explanation`, `sources[]`, `factId`
+- Inga profilfrågor (alla måste vara poängsättbara)
 
 Fel kastar synliga exceptions i dev-läge.
 
@@ -207,9 +241,9 @@ Quiz-systemet pushar följande events till GTM `dataLayer`:
 ```
 
 **Buckets:**
-- `low`: 0-3 poäng → "Nyfiken hundvän"
-- `med`: 4-7 poäng → "Stabil hundkännare"
-- `high`: 8-10 poäng → "Hundnörd deluxe"
+- `low`: 0-4 poäng → "Nyfiken hundvän"
+- `med`: 5-7 poäng → "Skarp hundkännare"
+- `high`: 8-10 poäng → "Hundexpert"
 
 #### 5. `quiz_cta_click`
 **När:** Användare klickar CTA på resultatskärmen  
@@ -233,6 +267,18 @@ Quiz-systemet pushar följande events till GTM `dataLayer`:
 }
 ```
 
+#### 7. `quiz_share`
+**När:** Användare delar quizet via dela-knapp eller kopiera-länk  
+**Payload:**
+```javascript
+{
+  event: 'quiz_share',
+  slug: 'hundsport',
+  score: 7,
+  method: 'native' | 'copy' // Web Share API eller kopiera-länk
+}
+```
+
 ### GTM Integration
 
 Events pushas automatiskt till `window.dataLayer` som GTM lyssnar på.
@@ -253,23 +299,31 @@ Events pushas automatiskt till `window.dataLayer` som GTM lyssnar på.
    - En fråga per vy
    - Stora klickbara svarskort
    - Tydlig progress (X/10)
-   - Ingen "tillbaka till start"-knapp mitt i quiz
+   - Auto-advance efter svar (0.8s) - ingen manuell "Nästa"-knapp
+   - Ingen "Tillbaka"-knapp när den inte kan användas
 
-2. **Visuellt engagerande**
+2. **Omedelbar feedback**
+   - Färg-baserad feedback (grönt=rätt, rött=fel) - inga symboler
+   - Förklaringar visas endast på resultatskärmen (inte under spelet)
+   - Snabb övergång till nästa fråga efter feedback
+
+3. **Visuellt engagerande**
    - Quiz-specifika bilder på kort
    - Hero-bild i biblioteket
    - Resultatbild på slutskärmen
-   - Gradient-badge (inte knapp)
+   - Rosett-badge med CSS/SVG (bronze/silver/gold tiers)
 
-3. **Naturlig koppling till Flocken**
+4. **Naturlig koppling till Flocken**
    - Resultatskärm förklarar hur Flocken hjälper
-   - CTA:er kopplar till funktioner (Para, Passa, Rasta, Besöka)
+   - CTA:er placerade högt upp (innan svarsgenomgången)
+   - Delningsfunktion för att utmana kompisar
    - Mjuk övergång - inte aggressiv försäljning
 
-4. **Mobil-first**
+5. **Mobil-first**
    - Touch-vänliga knappar
    - Läsbar text på små skärmar
    - Snabba laddningstider
+   - Web Share API för enkel delning på mobil
 
 ### Brand Tokens
 
@@ -344,29 +398,31 @@ Alla bilder följer Flockens visuella identitet:
 
 **Säkra ändringar:**
 - Titel/beskrivning
-- Profilfrågor (inga "rätta svar")
 - Ordningsföljd på frågor
 
 **Osäkra ändringar (kräver faktakoll):**
 - Ändra rätt svar (`correctIndex`)
 - Ändra förklaringar
 - Lägga till/ta bort alternativ
+- Alla ändringar kräver faktakoll eftersom alla frågor är faktafrågor
 
 ### Uppdatera badges/tolkningar
 
 Redigera `lib/quiz/score.ts` > `getResultMeta()`:
 
 ```typescript
-if (score <= 3) {
+if (score <= 4) {
   return {
-    badge: '🐕 Din badge här',
+    badge: 'Din badge-text här',
+    tier: 'bronze', // 'bronze' | 'silver' | 'gold'
     interpretation: 'Din text här...'
   };
 }
 ```
 
 **Tänk på:**
-- Badges ska vara visuella (emoji + text)
+- Badges är nu CSS/SVG-rosetter med tass-ikon (ingen emoji)
+- Tre tiers: bronze (0-4), silver (5-7), gold (8-10)
 - Tolkningar ska koppla till Flocken naturligt
 - Undvik "nästa nivå" eller hierarkiska termer
 
@@ -397,8 +453,15 @@ if (score <= 3) {
 
 4. **Vercel deployment** sker automatiskt
 
-5. **Verifiera live:**
-   - `https://quiz.flocken.info`
+5. **Konfigurera subdomän** (första gången):
+   - Gå till Vercel Dashboard → Settings → Domains
+   - Lägg till `quiz.flocken.info`
+   - Skapa CNAME-post hos domänleverantör: `quiz` → `cname.vercel-dns.com`
+   - Vänta på DNS-propagering (1-5 min, max 1h)
+
+6. **Verifiera live:**
+   - `https://flocken.info/quiz` (fungerar alltid)
+   - `https://quiz.flocken.info` (efter DNS-konfiguration)
    - Testa tracking i GA4 Realtime
 
 ---
@@ -406,14 +469,24 @@ if (score <= 3) {
 ## 📈 Framtida Förbättringar
 
 ### v1.1 (planerat)
-- [ ] Delningsfunktion för badges (social media)
+- [x] Delningsfunktion för badges (social media) - ✅ Klart
+- [x] Förbättrad badge-design (CSS/SVG rosetter) - ✅ Klart
+- [x] Auto-advance UX-förbättringar - ✅ Klart
 - [ ] Quiz-specifika resultatbilder
 - [ ] A/B-test olika CTA-copy
-- [ ] Email capture för högpresterande
+- [ ] Email capture för högpresterande (MailerSend-integration planerad)
+
+**Email-system research:**
+- ✅ Analyserat nastahem's MailerSend-integration
+- ✅ Supabase `email_signups`-tabell med UTM-parametrar
+- ✅ MailerSend API med template-system
+- ✅ BigQuery-sync och Meta Pixel Lead-event tracking
+- 📋 Implementation väntar på beslut om Supabase-instans och MailerSend-konto
 
 ### v1.2 (idéer)
 - [ ] Quiz-serier (del 1 av 3)
 - [ ] Personligt poängsystem över flera quiz
+- [ ] Leaderboards (kräver databas)
 - [ ] Community-feature (jämför med andra)
 - [ ] Integrering med Flocken-app (om användare har appen)
 
