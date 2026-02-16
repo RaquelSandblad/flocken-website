@@ -1,0 +1,157 @@
+{
+  "slug": "rasers_syfte",
+  "title": "Vad är olika hundraser egentligen framavlade för?",
+  "description": "Jakt, vall, drag eller soffhäng? Testa din koll.",
+  "questions": [
+    {
+      "id": "ras-1",
+      "type": "fact",
+      "question": "Vad är border collie ursprungligen framavlad för?",
+      "options": [
+        "Apportering i vatten",
+        "Vallning av boskap",
+        "Sällskap i salonger",
+        "Dragarbete i snö"
+      ],
+      "correctIndex": 1,
+      "explanation": "Border collie är en klassisk vallhund.",
+      "sources": ["RAS_SYFTE_BORDER_COLLIE"],
+      "factId": "ras_syfte_border_collie"
+    },
+    {
+      "id": "ras-2",
+      "type": "fact",
+      "question": "Vad användes dalmatiner historiskt till?",
+      "options": [
+        "Sälja boskap",
+        "Följa hästdragna vagnar",
+        "Spåra varg",
+        "Valla får"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dalmatinern fungerade som vagnhund och eskort.",
+      "sources": ["RAS_SYFTE_DALMATINER"],
+      "factId": "ras_syfte_dalmatiner"
+    },
+    {
+      "id": "ras-3",
+      "type": "fact",
+      "question": "Vad är golden retriever ursprungligen framtagen för?",
+      "options": [
+        "Vakthund",
+        "Apportera fågel i jakt",
+        "Drag i arktiskt klimat",
+        "Skyddsarbete"
+      ],
+      "correctIndex": 1,
+      "explanation": "Golden retriever utvecklades för apportering.",
+      "sources": ["RAS_SYFTE_GOLDEN"],
+      "factId": "ras_syfte_golden"
+    },
+    {
+      "id": "ras-4",
+      "type": "fact",
+      "question": "Vad är en typisk uppgift för terrierraser?",
+      "options": [
+        "Valla ren",
+        "Jaga och driva småvilt under jord",
+        "Apportera i vatten",
+        "Dra släde"
+      ],
+      "correctIndex": 1,
+      "explanation": "Terriers användes ofta för grytjakt.",
+      "sources": ["RAS_SYFTE_TERRIER"],
+      "factId": "ras_syfte_terrier"
+    },
+    {
+      "id": "ras-5",
+      "type": "fact",
+      "question": "Vad är siberian husky främst avlad för?",
+      "options": [
+        "Sällskap i stadsmiljö",
+        "Dragarbete över långa distanser",
+        "Skyddsarbete",
+        "Vallning"
+      ],
+      "correctIndex": 1,
+      "explanation": "Husky är utvecklad för släddragning.",
+      "sources": ["RAS_SYFTE_HUSKY"],
+      "factId": "ras_syfte_husky"
+    },
+    {
+      "id": "ras-6",
+      "type": "fact",
+      "question": "Vad är tax (dachshund) ursprungligen avlad för?",
+      "options": [
+        "Sällskap i kungliga hov",
+        "Vallning av getter",
+        "Jakt på grävling i gryt",
+        "Dragarbete"
+      ],
+      "correctIndex": 2,
+      "explanation": "Taxens långa kropp och modiga temperament utvecklades för jakt i trånga gryt.",
+      "sources": ["RAS_SYFTE_TAX"],
+      "factId": "ras_syfte_tax"
+    },
+    {
+      "id": "ras-7",
+      "type": "fact",
+      "question": "Vad är vinthundar (t.ex. greyhound) avlade för?",
+      "options": [
+        "Spåra doft långsamt",
+        "Jaga med syn och hög fart",
+        "Skydda boskap",
+        "Arbeta i vatten"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vinthundar jagar främst med syn och hastighet.",
+      "sources": ["RAS_SYFTE_VINTHUND"],
+      "factId": "ras_syfte_vinthund"
+    },
+    {
+      "id": "ras-8",
+      "type": "fact",
+      "question": "Vad är pudeln ursprungligen framtagen för?",
+      "options": [
+        "Vallning",
+        "Apportering i vatten",
+        "Skyddsarbete",
+        "Drag"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pudeln utvecklades som vattenapportör.",
+      "sources": ["RAS_SYFTE_PUDEL"],
+      "factId": "ras_syfte_pudel"
+    },
+    {
+      "id": "ras-9",
+      "type": "fact",
+      "question": "Vad är labrador retriever ursprungligen framavlad för?",
+      "options": [
+        "Vallning av boskap",
+        "Hjälpa fiskare och apportera fångst",
+        "Vakta gårdar",
+        "Jaga i gryt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Labradoren utvecklades för att hjälpa fiskare i Newfoundland och apportera i vatten.",
+      "sources": ["RAS_SYFTE_LABRADOR"],
+      "factId": "ras_syfte_labrador"
+    },
+    {
+      "id": "ras-10",
+      "type": "fact",
+      "question": "Vad är herdehundar generellt framavlade för?",
+      "options": [
+        "Skydd och boskapskontroll",
+        "Apportering i vatten",
+        "Spårarbete i stad",
+        "Släddragning"
+      ],
+      "correctIndex": 0,
+      "explanation": "Många herdehundar har kombinerad vall- och vaktfunktion.",
+      "sources": ["RAS_SYFTE_HERDEHUND"],
+      "factId": "ras_syfte_herdehund"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "slug": "hundens_historia",
+  "title": "Från varg till vardagskompis – hur bra kan du hundens historia?",
+  "description": "10 frågor om hur hunden blev människans bästa vän.",
+  "questions": [
+    {
+      "id": "historia-1",
+      "type": "fact",
+      "question": "Vilket djur anses vara hundens närmaste nu levande släkting?",
+      "options": [
+        "Schakal",
+        "Räv",
+        "Varg",
+        "Hyena"
+      ],
+      "correctIndex": 2,
+      "explanation": "Den moderna hunden delar närmast genetiskt ursprung med vargen.",
+      "sources": ["HISTORIA_VARGLINJE"],
+      "factId": "historia_varglinje"
+    },
+    {
+      "id": "historia-2",
+      "type": "fact",
+      "question": "Ungefär hur långt tillbaka i tiden började hundens domesticering?",
+      "options": [
+        "Ca 2 000 år sedan",
+        "Ca 5 000 år sedan",
+        "Minst 15 000 år sedan",
+        "Under medeltiden"
+      ],
+      "correctIndex": 2,
+      "explanation": "Forskning pekar på att domesticeringen skedde för minst 15 000 år sedan.",
+      "sources": ["HISTORIA_DOMESTICERING"],
+      "factId": "historia_domesticering"
+    },
+    {
+      "id": "historia-3",
+      "type": "fact",
+      "question": "Vad är en trolig anledning till att varg blev hund?",
+      "options": [
+        "Människan tämjde dem genom träning",
+        "Vargar sökte sig till mänskliga boplatser och anpassade sig över tid",
+        "De korsades med rävar",
+        "De användes som boskap"
+      ],
+      "correctIndex": 1,
+      "explanation": "En teori är att mindre skygga vargar sökte föda nära människor och gradvis domesticerades.",
+      "sources": ["HISTORIA_SELF_DOMESTICATION"],
+      "factId": "historia_self_domestication"
+    },
+    {
+      "id": "historia-4",
+      "type": "fact",
+      "question": "När började organiserad rasavel ta fart i Europa?",
+      "options": [
+        "Under romartiden",
+        "På 1800-talet",
+        "På 1500-talet",
+        "Efter andra världskriget"
+      ],
+      "correctIndex": 1,
+      "explanation": "Systematisk rasavel och standardisering tog fart under 1800-talet.",
+      "sources": ["HISTORIA_1800"],
+      "factId": "historia_1800"
+    },
+    {
+      "id": "historia-5",
+      "type": "fact",
+      "question": "Vad var syftet med de första kennelklubbarna?",
+      "options": [
+        "Att reglera veterinärvård",
+        "Att standardisera regler och registrera stamtavlor",
+        "Att sälja hundar internationellt",
+        "Att skapa mentaltester"
+      ],
+      "correctIndex": 1,
+      "explanation": "Kennelklubbar skapades för att registrera hundar och standardisera rasbeskrivningar.",
+      "sources": ["HISTORIA_KENNELKLUBB"],
+      "factId": "historia_kennelklubb"
+    },
+    {
+      "id": "historia-6",
+      "type": "fact",
+      "question": "Vilken roll hade hundar i det forntida Egypten?",
+      "options": [
+        "De användes enbart som vakter",
+        "De hade religiös och ceremoniell betydelse och användes i jakt",
+        "De fanns inte i Egypten",
+        "De användes enbart för dragarbete"
+      ],
+      "correctIndex": 1,
+      "explanation": "I det forntida Egypten hade hundar en viktig roll som jaktkamrater och hade religiös betydelse – bland annat avbildades guden Anubis med hundliknande drag.",
+      "sources": ["HISTORIA_EGYPTEN"],
+      "factId": "historia_egypten"
+    },
+    {
+      "id": "historia-7",
+      "type": "fact",
+      "question": "När grundades FCI (Fédération Cynologique Internationale)?",
+      "options": [
+        "1873",
+        "1889",
+        "1911",
+        "1950"
+      ],
+      "correctIndex": 2,
+      "explanation": "FCI grundades 1911 som en internationell samarbetsorganisation.",
+      "sources": ["HISTORIA_FCI"],
+      "factId": "historia_fci"
+    },
+    {
+      "id": "historia-8",
+      "type": "fact",
+      "question": "När grundades Svenska Kennelklubben (SKK)?",
+      "options": [
+        "1873",
+        "1889",
+        "1911",
+        "1925"
+      ],
+      "correctIndex": 1,
+      "explanation": "SKK grundades 1889.",
+      "sources": ["HISTORIA_SKK"],
+      "factId": "historia_skk"
+    },
+    {
+      "id": "historia-9",
+      "type": "fact",
+      "question": "Vad innebär införandet av rasstandarder?",
+      "options": [
+        "Alla hundar skulle se likadana ut",
+        "En beskrivning av hur en ras ska se ut och fungera",
+        "Ett krav på tävling",
+        "Att blandraser förbjöds"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rasstandarder beskriver ideal exteriör och egenskaper.",
+      "sources": ["HISTORIA_RASSTANDARD"],
+      "factId": "historia_rasstandard"
+    },
+    {
+      "id": "historia-10",
+      "type": "fact",
+      "question": "Vad har modern DNA-forskning visat om hundar?",
+      "options": [
+        "Att alla raser är genetiskt identiska",
+        "Att hundar har komplex genetisk bakgrund och historiskt utbyte med varg",
+        "Att rasavel började på 1900-talet",
+        "Att hunden inte härstammar från varg"
+      ],
+      "correctIndex": 1,
+      "explanation": "Genetiska studier visar komplex utveckling och historiskt genetiskt utbyte.",
+      "sources": ["HISTORIA_DNA"],
+      "factId": "historia_dna"
+    }
+  ]
+}

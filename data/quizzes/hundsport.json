@@ -1,0 +1,157 @@
+{
+  "slug": "hundsport",
+  "title": "Hur hundsportig är du egentligen?",
+  "description": "Från adrenalinfyllda starter till doftnörderi – var hamnar du?",
+  "questions": [
+    {
+      "id": "hundsport-1",
+      "type": "fact",
+      "question": "Vilken egenskap är allra viktigast i agility?",
+      "options": [
+        "Maximal muskelmassa",
+        "Perfekt päls",
+        "Snabbhet och samarbete",
+        "Stark jaktinstinkt"
+      ],
+      "correctIndex": 2,
+      "explanation": "Agility bygger på fart, precision och tajming mellan hund och förare.",
+      "sources": ["HUNDSPORT_AGILITY_GRUND"],
+      "factId": "hundsport_agility_grund"
+    },
+    {
+      "id": "hundsport-2",
+      "type": "fact",
+      "question": "Vad kallas sporten där hund och förare följer en bana med skyltade moment?",
+      "options": [
+        "Agility",
+        "Rallylydnad",
+        "Freestyle",
+        "Viltspår"
+      ],
+      "correctIndex": 1,
+      "explanation": "I rallylydnad följer ekipaget en bana med numrerade skyltar som visar vilka moment som ska utföras.",
+      "sources": ["HUNDSPORT_RALLYLYDNAD"],
+      "factId": "hundsport_rallylydnad"
+    },
+    {
+      "id": "hundsport-3",
+      "type": "fact",
+      "question": "Vad skiljer nose work från traditionellt spår?",
+      "options": [
+        "Nose work bygger på specifika dofter i olika miljöer",
+        "Spår är alltid snabbare",
+        "Nose work kräver hoppmoment",
+        "Spår sker inomhus"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nose work innebär att hunden söker efter bestämda doftkällor i varierande miljöer.",
+      "sources": ["HUNDSPORT_NOSEWORK"],
+      "factId": "hundsport_nosework"
+    },
+    {
+      "id": "hundsport-4",
+      "type": "fact",
+      "question": "Vad är gemensamt för de flesta officiella hundsporter?",
+      "options": [
+        "De prioriterar hundens välfärd",
+        "De kräver renrasig hund",
+        "De kräver utställningsmerit",
+        "De dömer på utseende"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hundens välfärd är en grundprincip i organiserad hundsport.",
+      "sources": ["HUNDSPORT_VÄLFÄRD"],
+      "factId": "hundsport_valfard"
+    },
+    {
+      "id": "hundsport-5",
+      "type": "fact",
+      "question": "Vad menas med 'ekipage' i hundsportsammanhang?",
+      "options": [
+        "En grupp av hundar",
+        "Hund och förare som enhet",
+        "Tävlingsområdet",
+        "Domargruppen"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ekipage är termen för hund och förare som samarbetande par i tävling och träning.",
+      "sources": ["HUNDSPORT_EKIPAGE"],
+      "factId": "hundsport_ekipage"
+    },
+    {
+      "id": "hundsport-6",
+      "type": "fact",
+      "question": "Vilken typ av hund förknippas ofta med dragarbete?",
+      "options": [
+        "Spetsraser från nordliga områden",
+        "Små sällskapshundar",
+        "Terriers",
+        "Vinthundar"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nordliga spetsraser utvecklades för dragarbete.",
+      "sources": ["HUNDSPORT_DRAG"],
+      "factId": "hundsport_drag"
+    },
+    {
+      "id": "hundsport-7",
+      "type": "fact",
+      "question": "Vad kallas sporten där hund och förare utför tricks och rörelser till musik?",
+      "options": [
+        "Rallylydnad",
+        "Agility",
+        "Freestyle (Heelwork to Music)",
+        "Nose work"
+      ],
+      "correctIndex": 2,
+      "explanation": "I freestyle utför ekipaget koreograferade rörelser och tricks till musik.",
+      "sources": ["HUNDSPORT_FREESTYLE"],
+      "factId": "hundsport_freestyle"
+    },
+    {
+      "id": "hundsport-8",
+      "type": "fact",
+      "question": "Vilken sport kombinerar ofta spår, lydnad och skydd?",
+      "options": [
+        "Freestyle",
+        "IGP",
+        "Rallylydnad",
+        "Viltspår"
+      ],
+      "correctIndex": 1,
+      "explanation": "IGP är en tredelad sport med spår, lydnad och skydd.",
+      "sources": ["HUNDSPORT_IGP"],
+      "factId": "hundsport_igp"
+    },
+    {
+      "id": "hundsport-9",
+      "type": "fact",
+      "question": "Vad är bikejöring?",
+      "options": [
+        "Cykling med hund som drar",
+        "En form av agility med cykel",
+        "Hundsim på tid",
+        "Spårning från cykel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bikejöring är en dragsport där hunden drar föraren på cykel.",
+      "sources": ["HUNDSPORT_BIKEJORING"],
+      "factId": "hundsport_bikejoring"
+    },
+    {
+      "id": "hundsport-10",
+      "type": "fact",
+      "question": "Vad är en viktig del i nästan all hundträning för sport?",
+      "options": [
+        "Bestraffning",
+        "Belöningsbaserad träning",
+        "Tävlingspress",
+        "Strikt fysisk korrigering"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modern hundsport bygger i hög grad på belöningsbaserad träning.",
+      "sources": ["HUNDSPORT_TRÄNING"],
+      "factId": "hundsport_traning"
+    }
+  ]
+}
