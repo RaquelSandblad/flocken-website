@@ -9,9 +9,9 @@ interface AnswerOptionProps {
 
 const stateStyles: Record<AnswerState, string> = {
   default:
-    'border-flocken-warm/50 bg-white text-flocken-brown hover:border-[var(--quiz-color-accent)] hover:bg-flocken-cream/40',
+    'border-flocken-warm/50 bg-flocken-cream/30 text-flocken-brown shadow-sm hover:border-[var(--quiz-color-accent)] hover:bg-flocken-cream/50 hover:shadow-md',
   correct:
-    'border-green-500 bg-green-50 text-green-900',
+    'border-flocken-accent bg-flocken-accent/20 text-flocken-olive',
   wrong:
     'border-red-400 bg-red-50 text-red-900',
   missed:

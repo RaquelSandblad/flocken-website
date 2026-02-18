@@ -17,7 +17,9 @@ export function QuizLayout({ children, title, subtitle, style }: QuizLayoutProps
         {(title || subtitle) && (
           <section className="mb-6 text-center">
             {title && <h1 className="text-3xl font-bold sm:text-4xl">{title}</h1>}
-            {subtitle && <p className="mx-auto mt-3 max-w-2xl text-base text-flocken-gray sm:text-lg">{subtitle}</p>}
+            {subtitle && (
+              <p className="mx-auto mt-3 max-w-2xl text-base text-flocken-brown/60 sm:text-lg">{subtitle}</p>
+            )}
           </section>
         )}
         {children}
