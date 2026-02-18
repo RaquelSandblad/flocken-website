@@ -1,7 +1,7 @@
 {
   "slug": "hundens_kroppssprak",
   "title": "Hur bra kan du hundens kroppsspråk?",
-  "description": "Testa din koll på vad hunden faktiskt kommunicerar med kroppen. Svansviftning, den 'skyldiga minen' och läppslickning – visst kan du tolka dem rätt?",
+  "description": "Svansviftning betyder glad hund. Eller? Testa om du faktiskt förstår vad din hund kommunicerar – eller om du missar hälften av det den säger.",
   "images": {
     "cardKey": "flocken_quiz_hundens_kroppssprak_syfte_card",
     "cardAlt": "Hund och människa som kommunicerar med kroppsspråk i varm, naturlig stil."
@@ -10,10 +10,10 @@
     {
       "id": "kroppssprak-1",
       "type": "fact",
-      "question": "Hur definierar SKK:s beteendeterminologi aggression hos hund?",
+      "question": "Hur beskriver SKK aggression hos hund – vad är syftet med beteendet enligt deras definition?",
       "options": [
         "Att hunden angriper utan föregående varning",
-        "Ett beteende eller hot i avsikt att skada eller skrämma för att öka avståndet till en annan individ",
+        "Ett beteende eller hot som syftar till att skapa avstånd till en annan individ",
         "Att hunden regelbundet morrnar mot okända i alla situationer",
         "Beteende som enbart uppträder kring mat eller leksaker"
       ],
@@ -25,7 +25,7 @@
     {
       "id": "kroppssprak-2",
       "type": "fact",
-      "question": "En hund förstör en soppåse. Ägaren kommer hem, ser röran och låter irriterad. Hunden sänker kroppen och undviker blick. Vad visar experimentell forskning om den 'skyldiga minen'?",
+      "question": "En hund förstör en soppåse. Ägaren kommer hem, ser röran och låter irriterad. Hunden sänker kroppen och undviker blick. Vad visar forskning om den 'skyldiga minen'?",
       "options": [
         "Att hunden har ett konkret minne av handlingen och vet att den var fel",
         "Att hunden är utpräglat social och lär sig snabbt av ägarens humör",
@@ -48,7 +48,7 @@
         "Signalerna bör läsas som ett kluster och alltid i relation till situationen och sammanhanget"
       ],
       "correctIndex": 3,
-      "explanation": "Kontrollerade studier visar att människor systematiskt riskerar att läsa in situationskontexten snarare än hundens faktiska beteende – och kan ge helt olika tolkningar av samma hundsignal beroende på kontext. Att läsa kroppsspråk kräver helhetsperspektiv: posturer, rörelser, ljud och vad som händer runtomkring.",
+      "explanation": "Forskning visar att vi lätt läser in situationen snarare än hundens faktiska beteende – och kan tolka samma signal helt olika beroende på vad vi förväntar oss. Att läsa kroppsspråk kräver ett helhetsperspektiv: rörelser, ljud och vad som händer runtomkring.",
       "sources": ["BETEENDE_CONTEXT_BIAS_ANTHROZOOOS"],
       "factId": "kroppssprak_kontext_helhet"
     },
@@ -58,19 +58,19 @@
       "question": "Forskning har visat att svansviftning kan vara 'lateraliserad'. Vad innebär det?",
       "options": [
         "Att hunden viftar mer åt vänster vid möten med bekanta individer",
-        "Att viftningens riktning (vänster/höger-dominans) är kopplad till olika emotionella stimuli, och att andra hundar reagerar på skillnaden",
+        "Att viftningens riktning är kopplad till olika känslomässiga situationer, och att andra hundar faktiskt reagerar på skillnaden",
         "Att bara tikar uppvisar tydlig lateralisering i svansviftning",
         "Att svansviftningens tempo, inte riktning, är det som avgör hundens känsloläge"
       ],
       "correctIndex": 1,
-      "explanation": "Studier visade höger-dominant viftning vid bekanta, positiva stimuli och vänster-dominant vid okända eller mer negativa. Andra hundar uppvisade stressreaktioner när de såg vänsterdominerad viftning – vilket tyder på att svansen kommunicerar mer nyanserad information än en enkel 'glad'-signal.",
+      "explanation": "Forskning visade att hundar viftar mer åt höger vid bekanta, positiva saker och mer åt vänster vid okända eller negativa. Andra hundar blev stressade när de såg vänsterdominerad viftning – svansen kommunicerar alltså mer än en enkel 'glad'-signal.",
       "sources": ["BETEENDE_SVANS_LATERALISERING_QUARANTA"],
       "factId": "kroppssprak_svans_lateralisering"
     },
     {
       "id": "kroppssprak-5",
       "type": "fact",
-      "question": "Vad vet vi med störst säkerhet om lekbugningen (play bow)?",
+      "question": "En hund buktar sig framåt med rumpan i luften mot en annan hund – vad vet vi med störst säkerhet om det beteendet?",
       "options": [
         "Den är en leksignal som ofta förekommer vid start eller fortsättning av lek",
         "Den är en underkastelsegest mot äldre eller mer dominanta hundar",
@@ -78,7 +78,7 @@
         "Den används uteslutande som hälsningsritual mot bekanta hundar"
       ],
       "correctIndex": 0,
-      "explanation": "Lekbugning är en av de bäst dokumenterade leksignalerna i hunddjur – stereotyp och tydligt kopplad till lek. Forskningen diskuterar fortfarande om den exakt fungerar som 'metakommunikation' (förklaring av efterföljande beteenden) eller mer som ett sätt att upprätthålla lekmotivation hos mottagaren.",
+      "explanation": "Lekbugning är en av de bäst dokumenterade leksignalerna vi känner till hos hundar. Forskare diskuterar fortfarande om den fungerar som en slags förklaring ('det jag gör härnäst är lek') eller mer som ett sätt att hålla igång leklusten hos den andra hunden.",
       "sources": ["BETEENDE_LEKBUGNING_BEKOFF_BYOSIERE"],
       "factId": "kroppssprak_lekbugning"
     },
@@ -100,15 +100,15 @@
     {
       "id": "kroppssprak-7",
       "type": "fact",
-      "question": "Studier har visat att hundar producerar fler ansiktsrörelser i ett specifikt läge. När?",
+      "question": "Forskare har märkt att hundar gör fler ansiktsuttryck i ett visst läge – när händer det?",
       "options": [
         "När de är ensamma och utforskar en ny miljö utan mänsklig närvaro",
         "Direkt efter intensiv fysisk aktivitet",
-        "När en människa tittar på dem – vilket tyder på att ansiktsuttryck har en kommunikativ komponent",
+        "När en människa tittar på dem – vilket tyder på att ansiktsuttrycken är riktade till någon",
         "När de möter okända hundar av samma ras"
       ],
       "correctIndex": 2,
-      "explanation": "Det så kallade 'audience effect' stödjer att ansiktsuttryck hos hund inte enbart är emotionella reflexer – hunden anpassar sina uttryck beroende på om det finns en mottagare. Det liknar hur sociala djur generellt kommunicerar mer aktivt när det finns någon att kommunicera med.",
+      "explanation": "Resultatet tyder på att hundens ansiktsuttryck inte är rena reflexer – hunden anpassar dem beroende på om det finns någon att kommunicera med. Det påminner om hur sociala djur generellt är mer expressiva när de har en publik.",
       "sources": ["BETEENDE_ANSIKTSUTTRYCK_AUDIENCE_KAMINSKI"],
       "factId": "kroppssprak_ansiktsuttryck_audience"
     },
@@ -130,7 +130,7 @@
     {
       "id": "kroppssprak-9",
       "type": "fact",
-      "question": "Vad är 'aggressionshämmande signaler' enligt SKK:s beteendeterminologi?",
+      "question": "Hunden vänder bort blicken, gäspar och ger dig sidan. Vad kallas den typen av signal?",
       "options": [
         "Signaler som ett mer dominant djur sänder för att initiera en konfrontation",
         "Skall och morrning som varnar en angripare att backa",
@@ -145,7 +145,7 @@
     {
       "id": "kroppssprak-10",
       "type": "fact",
-      "question": "En hund som tidigare tolererat hantering börjar morra och snappa vid beröring i ett visst område. Vad lyfter veterinär beteendevetenskap fram som viktigt att tänka på?",
+      "question": "Din hund har alltid tyckt om att bli klappad på ryggen. Nu morrar och snappar den vid beröring i det området. Vad bör du tänka på?",
       "options": [
         "Att hunden troligen testar sociala gränser och behöver tydligare ledarskap",
         "Att hunden förmodligen fått för lite mental stimulering och behöver mer träning",
@@ -153,7 +153,7 @@
         "Att hunden kommit in i en ny social fas och behöver ny socialisering med okända"
       ],
       "correctIndex": 2,
-      "explanation": "Kliniska fallrapporter och veterinärmedicinsk litteratur betonar att smärta kan sänka aggressionströskeln – så kallad 'irritabel aggression'. En hund som plötsligt förändrar sitt beteende vid beröring bör utredas medicinskt innan beteendet enbart tolkas som en attityd- eller träningsfråga.",
+      "explanation": "Forskning och klinisk erfarenhet visar att smärta kan sänka hundens toleranströskel – ibland kallas det 'smärtrelaterad aggression'. En hund som plötsligt ändrar beteende vid beröring bör alltid undersökas av veterinär innan man tolkar det som en attityd- eller träningsfråga.",
       "sources": ["BETEENDE_SMARTAGGRESSION_VET"],
       "factId": "kroppssprak_smarta_aggression"
     }

@@ -1,7 +1,7 @@
 {
   "slug": "hundsport",
   "title": "Hur hundsportig är du egentligen?",
-  "description": "Testa din koll på allt från doftjakt till musikalisk koreografi. Hundsporten är bredare än de flesta tror.",
+  "description": "De flesta kan agility. Men vet du vad BPH, nosework och mondioring egentligen är? 10 frågor som separerar hundentusiasterna från de riktiga sportnördarna.",
   "images": {
     "cardKey": "flocken_quiz_hundsport_card",
     "cardAlt": "Hund som hoppar agilityhinder i varm, naturlig stil."
@@ -58,7 +58,7 @@
       "question": "Vad är den tekniska skillnaden mellan heelwork to music (HtM) och freestyle?",
       "options": [
         "Freestyle är snabbare och mer tävlingsfokuserat",
-        "HtM bygger på tio fasta fotpositioner; freestyle är friare koreografi",
+        "HtM bygger på tio fasta fotpositioner medan freestyle är friare koreografi",
         "Freestyle kräver att hunden bär utrustning under uppträdandet",
         "HtM är enbart öppet för stora raser"
       ],

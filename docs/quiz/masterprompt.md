@@ -17,6 +17,43 @@ Skapa 10 quizfrågor om [ÄMNE] för Flockens hundquiz. Målgruppen är svenska 
 - Aldrig Wikipedia-stil eller akademisk ton.
 - Mjuk humor är ok. Aldrig nedlåtande om man svarar fel.
 
+**Språkliga regler för vardagsvarm känsla:**
+- Undvik semikolon (;) – det känns akademiskt och stelt
+- Kortare meningar är bättre än långa sammansatta
+- "Forskare har visat" istället för "studier indikerar"
+- "Vad hände sen?" istället för "vad orsakade återuppkomsten?"
+- Prata OM fakta snarare än att citera dem som i en artikel
+- Undvik trunkering (...) – skriv ut hela tanken
+- Byt passiv form mot aktiv: "anses vara" → "forskare tror"
+- Ställ frågan som du skulle fråga en kompis
+- Tankstreck (–) kan användas, men sparsamt – överanvändning är ett AI-tecken
+
+**Exempel – Akademisk vs Vardagsvarm:**
+
+❌ Stelt: "En stor studie analyserade 643 hundskallar från de senaste 50 000 åren. Vad visade den om tidig hundutveckling?"
+✅ Varmare: "Forskare har studerat hundkranier från 50 000 år tillbaka – vad visade det om tidiga hundar?"
+
+❌ Stelt: "FCI grundades 1911, men organisationen försvann kort därefter. Vad fick den att återuppstå?"
+✅ Varmare: "FCI (internationella hundorganisationen) grundades 1911 men försvann snart igen – vad hände sen?"
+
+❌ Stelt: "Vilken funktion fyller det beteende som benämns 'play bow'; en postur där hunden sänker frambenen medan bakdelen förblir upphöjd?"
+✅ Varmare: "När en hund buktar sig framåt med rumpan i luften – vad betyder det?"
+
+❌ Stelt: "Under vilken utvecklingsperiod börjar valpens socialisering gentemot artfränder och andra djur; den så kallade primära socialiseringsperioden?"
+✅ Varmare: "När börjar valpar lära sig umgås med andra hundar och djur?"
+
+❌ Stelt: "Border collie utvecklades ursprungligen för vallning av får i gränsregionen mellan England och Skottland. Vilken egenskap selekterades primärt för i denna ras?"
+✅ Varmare: "Border collies avlades för fårskötsel – vad var viktigast när man valde ut rätt hundar?"
+
+❌ Stelt: "I agility förekommer kontaktzoner på vissa hinder; områden som hunden måste beröra. Vilket är det primära syftet med dessa zoner?"
+✅ Varmare: "Vissa agility-hinder har kontaktzoner som hunden måste nudda – varför finns de?"
+
+❌ Stelt: "De första veckorna kan valpar varken se eller höra. Hur hittar de mammas mjölk?"
+✅ Varmare: "Nyfödda valpar kan varken se eller höra – hur hittar de då till mamman?"
+
+❌ Stelt: "Brachycefala raser karaktäriseras av förkortad skalle och komprimerade luftvägar. Vilket fenomen är en vanlig konsekvens av denna morfologi?"
+✅ Varmare: "Kortnosade hundar har plattare ansikten och trängre luftvägar – vad blir följden?"
+
 ---
 
 ## Frågemix – obligatorisk variation
@@ -52,7 +89,7 @@ Handlar om hundägarlivet, beteenden eller situationer som resonerar med vardage
 
 **Undvik:**
 - Årtal för nischade organisationer (t.ex. "När grundades FCI?")
-- Förkortningar som kräver branschkännedom (FCI, SKK, IPO osv.) utan förklaring
+- Förkortningar som kräver branschkännedom utan förklaring – om du använder en förkortning, förklara den direkt i frågan: "FCI (internationella hundorganisationen)" eller "SKK (Svenska Kennelklubben)"
 - Titeln eller frågan avslöjar svaret
 - Felalternativ som är uppenbart trams (t.ex. "De användes som boskap" om egyptiska hundar)
 - Felalternativ som är för olika i stil från rätt svar – alla alternativ ska kännas möjliga

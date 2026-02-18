@@ -1,7 +1,7 @@
 {
   "slug": "hundens_historia",
   "title": "Hur bra kan du hundens historia?",
-  "description": "Testa din koll på hur hunden egentligen kom till och fick de egenskaper vi känner igen idag. Viss forskning ger helt andra svar än man förväntar sig.",
+  "description": "Hunden har funnits vid vår sida i minst 15 000 år – men vet du var, hur och varför? Viss forskning ger helt andra svar än man tror.",
   "images": {
     "cardKey": "flocken_quiz_hundens_historia_card",
     "cardAlt": "Illustration av varg till hund i varm, naturlig stil."
@@ -25,7 +25,7 @@
     {
       "id": "historia-2",
       "type": "fact",
-      "question": "Vad har moderna genetiska studier visat om relationen mellan hund och varg efter domesticeringen?",
+      "question": "Genetiker har undersökt vad som hände mellan hund och varg efter att domesticeringen kom igång. Vad visade de?",
       "options": [
         "Det har förekommit genetiskt utbyte i båda riktningar – inte bara från varg till hund",
         "Hund och varg är genetiskt sett identiska; skillnaderna är rent beteendemässiga",
@@ -55,22 +55,22 @@
     {
       "id": "historia-4",
       "type": "fact",
-      "question": "En stor studie analyserade 643 hundskallar från de senaste 50 000 åren. Vad visade den om tidig hundutveckling?",
+      "question": "Forskare har studerat hundkranier från 50 000 år tillbaka – vad visade det om tidiga hundar?",
       "options": [
         "Att alla hundar var nästan identiska i form tills 1800-talets rasavel",
-        "Att tydlig hundmorfologi och betydande variation redan fanns för ca 11 000 år sedan",
-        "Att morfologisk diversifiering startade med egyptiska och kinesiska raslinjer",
-        "Att hundar inte skilde sig från vargar morfologiskt förrän för 5 000 år sedan"
+        "Att tydlig hundform och stor variation redan fanns för ca 11 000 år sedan",
+        "Att den stora variationen i hundars utseende startade med egyptiska och kinesiska raslinjer",
+        "Att hundar inte skilde sig från vargar i form förrän för 5 000 år sedan"
       ],
       "correctIndex": 1,
-      "explanation": "Studien använde 3D-geometrisk morfometri för att analysera kranier – en metod som kan skilja tidig hund från varg utan att luta sig mot moderna rashundar som mall. Den morfologiska mångfald vi ser idag har alltså mycket djupa rötter.",
+      "explanation": "Forskarna använde avancerade mätmetoder på kranier för att skilja tidig hund från varg – utan att jämföra med moderna rashundar. Resultatet visade att den variation vi ser idag har mycket djupare rötter än vad man länge trodde.",
       "sources": ["HISTORIA_010", "HISTORIA_033"],
       "factId": "historia_morfologisk_mangfald"
     },
     {
       "id": "historia-5",
       "type": "fact",
-      "question": "Hur tror forskning att domesticeringen av hunden sannolikt gick till?",
+      "question": "Hur tror forskare att domesticeringen av hunden egentligen gick till?",
       "options": [
         "Att mindre skygga vargar sökte sig till mänskliga boplatser och gradvis anpassade sig",
         "Att människor aktivt fångade och tämjde vargvalpar i fångenskap",
@@ -78,7 +78,7 @@
         "Att vargar korsades med schakaler för att ge ett mer samarbetsvilligt temperament"
       ],
       "correctIndex": 0,
-      "explanation": "Den så kallade 'self-domestication'-hypotesen menar att mindre rädda vargar hade en fördel nära mänskliga boplatser och gradvis selektion mot det vi kallar hund. Aktiv tämjning av vilda djur verkar ha spelat en underordnad roll.",
+      "explanation": "Den mest stödda hypotesen är att mindre skygga vargar hade en fördel nära mänskliga boplatser och att de över tid blev det vi kallar hund. Aktiv tämjning av vilda djur verkar ha haft liten del i det.",
       "sources": ["HISTORIA_003", "HISTORIA_004"],
       "factId": "historia_domesticering_mekanism"
     },
@@ -138,7 +138,7 @@
         "Under antiken, med fokus på strids- och jakthundar"
       ],
       "correctIndex": 0,
-      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. Royal Kennel Club 1873 framställer sig som världens första nationella kennelklubb, och deras första Stud Book publicerades 1874 och listade resultat sedan 1859.",
+      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. Royal Kennel Club, som bildades 1873, räknas som världens första nationella kennelklubb och publicerade sitt första Stud Book 1874 med resultat ända från 1859.",
       "sources": ["HISTORIA_019", "HISTORIA_020", "HISTORIA_015"],
       "factId": "historia_1800_rasavel"
     },

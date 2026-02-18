@@ -1,0 +1,161 @@
+{
+  "slug": "hundmat_naring",
+  "title": "Hur mat-kunnig är du egentligen?",
+  "description": "Alla har en åsikt om vad hunden borde äta. Testa om du faktiskt vet vad forskning och myndigheter säger – om näring, myter och vanliga misstag.",
+  "images": {
+    "cardKey": "flocken_quiz_hundmat_naring_card",
+    "cardAlt": "Matskålar med hundmat, lax och grönsaker i lekfull, illustrativ stil."
+  },
+  "questions": [
+    {
+      "id": "hundmat-1",
+      "type": "fact",
+      "question": "Du köper ett hundfoder märkt 'komplett hundfoder'. Vad garanterar den märkningen egentligen?",
+      "options": [
+        "Att fodret täcker hundens hela näringsbehov som enda foderkälla",
+        "Att fodret är godkänt och rekommenderat av veterinär",
+        "Att fodret är fritt från konstgjorda tillsatser och konserveringsmedel",
+        "Att fodret passar alla hundraser och åldrar"
+      ],
+      "correctIndex": 0,
+      "explanation": "EU-förordningen 767/2009 reglerar märkningen – 'komplett hundfoder' (helfoder) innebär specifikt att fodret täcker alla näringsbehov utan komplettering. Det säger däremot ingenting om veterinärgodkännande eller tillsatser.",
+      "sources": ["HUNDMAT_EU_767_2009", "HUNDMAT_JORDBRUKSVERKET_FODER"],
+      "factId": "hundmat_helfoder_definition"
+    },
+    {
+      "id": "hundmat-2",
+      "type": "fact",
+      "question": "Hunden har råkat äta lite lök ur din matlåda. Du googlar snabbt. Vad hittar du?",
+      "options": [
+        "Lök i små mängder är ofarligt om hunden inte visar symtom inom 30 minuter",
+        "Lök kan orsaka blodbrist hos hund – även i liten mängd",
+        "Lök är bara farligt för katter, inte för hundar",
+        "Kokt lök är säkrare än rå lök för hundar"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lök och vitlök innehåller svavelföreningar som bryter ner röda blodkroppar och kan orsaka hemolytisk anemi. Det finns ingen känd säker dos – rådet från veterinärer är att undvika helt, oavsett om hunden verkar oberörd direkt efteråt.",
+      "sources": ["HUNDMAT_LOK_GIFTIGHET_SVF"],
+      "factId": "hundmat_lok_blodbrist"
+    },
+    {
+      "id": "hundmat-3",
+      "type": "fact",
+      "question": "Veterinärer beräknar hundens energibehov med hjälp av RER. Vad beskriver RER?",
+      "options": [
+        "Hundens maximala energiförbrukning under intensivt arbete eller tävling",
+        "Det totala dagliga energibehovet inklusive aktivitet – grunden för foderberäkningar",
+        "Den energimängd hunden behöver i vila – utgångspunkten för alla energiberäkningar",
+        "Rekommenderat energiintag för hundar med viktproblem"
+      ],
+      "correctIndex": 2,
+      "explanation": "RER (Resting Energy Requirement) beräknas med formeln 70 × (kroppsvikt i kg)^0,75 och ger baslinjen i vila. Därifrån multipliceras värdet med en aktivitetsfaktor för att få MER – det faktiska dagliga behovet. En aktiv jakthund kan ha en MER-faktor på 2–3× jämfört med en lugn soffahund.",
+      "sources": ["HUNDMAT_RER_FEDIAF", "HUNDMAT_NRC_2006"],
+      "factId": "hundmat_rer_definition"
+    },
+    {
+      "id": "hundmat-4",
+      "type": "fact",
+      "question": "SVA och WHO har mätt bakterieinnehållet i rått kött jämfört med kokt. Vad visade de?",
+      "options": [
+        "Rått kött innehåller generellt färre bakterier tack vare naturliga enzymer",
+        "Det går inte att generalisera – resultaten varierar helt beroende på hantering",
+        "Rått och kokt kött bedöms ha ungefär samma bakterierisk vid korrekt förvaring",
+        "Rått kött innehåller generellt fler bakterier, bland annat salmonella"
+      ],
+      "correctIndex": 3,
+      "explanation": "SVA och WHO har dokumenterat att råfoder regelbundet testar positivt för salmonella och andra bakterier – och att smittan kan spridas till familjemedlemmar via hantering. Tillagning är det effektivaste sättet att reducera bakterier i kött.",
+      "sources": ["HUNDMAT_SVA_RATT_KOTT", "HUNDMAT_WHO_BACTERIER"],
+      "factId": "hundmat_ratt_kott_bakterier"
+    },
+    {
+      "id": "hundmat-5",
+      "type": "fact",
+      "question": "Din hund har återkommande hudproblem och du misstänker matrelaterad allergi. Vad är det rätta sättet att ta reda på vad hunden reagerar på?",
+      "options": [
+        "Blodprov för att mäta antikroppar mot vanliga proteinallergeener",
+        "Eliminationsdiet med ett nytt protein i 8–12 veckor, följt av återinsättning av det misstänkta proteinet",
+        "Hudtest där vanliga allergener injiceras under huden",
+        "Byta till spannmålsfritt foder och utvärdera efter 2–3 veckor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Blodprov för matallergier hos hundar har visat låg träffsäkerhet i kliniska studier. Guldstandarden är eliminationsdiet – ett protein hunden aldrig ätit förut – under tillräckligt lång tid, följt av återinsättning av det misstänkta proteinet för att bekräfta reaktionen. Det är proteinet, inte spannmålet, som oftast är boven.",
+      "sources": ["HUNDMAT_ALLERGI_ELIMINATIONSDIET_WSAVA"],
+      "factId": "hundmat_allergi_eliminationsdiet"
+    },
+    {
+      "id": "hundmat-6",
+      "type": "fact",
+      "question": "En hundägare ger sin valp enbart rått kött, utan några tillskott. Vilket näringsproblem är mest sannolikt?",
+      "options": [
+        "Brist på omega-3-fettsyror som stör hjärnutvecklingen",
+        "Överskott av vitamin A som lagras i levern",
+        "Kalciumbrist, eftersom kött är rikt på fosfor men fattigt på kalcium",
+        "Brist på kolhydrater som försämrar energiomsättningen"
+      ],
+      "correctIndex": 2,
+      "explanation": "Kött innehåller mycket fosfor men lite kalcium. Utan komplettering rubbas Ca/P-balansen – för växande valpar kan det ge allvarliga skelettskador. Det är en av anledningarna till att FEDIAF specificerar kalciumkrav separat för valpar, och varför 'bara kött' aldrig räcker som komplett valpdiet.",
+      "sources": ["HUNDMAT_CA_P_BALANS_FEDIAF"],
+      "factId": "hundmat_kalk_fosfor_valpar"
+    },
+    {
+      "id": "hundmat-7",
+      "type": "fact",
+      "question": "Valpfoder har mer protein än vuxenfoder. Hur mycket mer – vad säger näringsforskningen ungefär?",
+      "options": [
+        "Samma som för vuxna hundar – ungefär 18–22 %",
+        "Ungefär 10–15 % – valpar behöver inte mer protein, bara mer kalorier",
+        "Över 35 % – valpar är i intensiv muskeluppbyggnad",
+        "Ungefär 25–30 % – mer än för vuxna, men inte extremt högt"
+      ],
+      "correctIndex": 3,
+      "explanation": "Valpar behöver mer protein för tillväxt av muskler och organ, men extremt högt proteinintag är inte fördelaktigt – och kan ge för snabb tillväxt, framför allt hos stora raser. Därför är rekommendationen ett definierat intervall, inte 'mer är alltid bättre'.",
+      "sources": ["HUNDMAT_FEDIAF_VALPPROTEIN", "HUNDMAT_NRC_2006"],
+      "factId": "hundmat_protein_valpar_procent"
+    },
+    {
+      "id": "hundmat-8",
+      "type": "fact",
+      "question": "De flesta vitaminer måste hundar få via maten. Vilket vitamin är undantaget – hundar kan tillverka det själva?",
+      "options": [
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin B12",
+        "Vitamin E"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hundar kan syntetisera vitamin C i levern, till skillnad från primater och marsvin som behöver det via kosten. Det innebär att C-vitaminbrist i princip inte uppstår hos friska hundar. Däremot behöver hundar alla fettlösliga vitaminer (A, D, E, K) och B-komplex via maten.",
+      "sources": ["HUNDMAT_VITAMIN_C_SYNTES_NRC"],
+      "factId": "hundmat_vitamin_c_syntes"
+    },
+    {
+      "id": "hundmat-9",
+      "type": "fact",
+      "question": "Nästan all torrfoder innehåller en hel del kolhydrater. Vad stämmer egentligen om kolhydraternas roll?",
+      "options": [
+        "Kolhydrater är ett essentiellt näringsämne – hundar måste ha det i sin kost",
+        "Kolhydrater är inte essentiella för hundar, men fungerar som energi- och fiberkälla i foder",
+        "Hundar kan inte bryta ner stärkelse och reagerar negativt på spannmål",
+        "Torr- och våtfoder innehåller ungefär lika mycket kolhydrater"
+      ],
+      "correctIndex": 1,
+      "explanation": "Till skillnad från protein och fett finns inget definierat essentiellt minimibehov av kolhydrater för hundar. Ändå fungerar stärkelse som en praktisk energikälla i torrfoder, och fiber bidrar till tarmhälsa. Hundar kan dessutom tillgodogöra sig stärkelse – till skillnad från katter, som är strikt köttätare.",
+      "sources": ["HUNDMAT_KOLHYDRATER_NRC_2006"],
+      "factId": "hundmat_kolhydrater_essentialitet"
+    },
+    {
+      "id": "hundmat-10",
+      "type": "fact",
+      "question": "Många väljer 'grain-free' hundmat av hälsoskäl. Vad har forskning de senaste åren uppmärksammat kring dessa fodersorter?",
+      "options": [
+        "Grain-free foder innehåller för lite fiber, vilket ökar risken för tjocktarmsproblem",
+        "Hundar på grain-free foder får i sig för mycket protein, vilket belastar njurarna",
+        "Grain-free foder höjer risken för övervikt eftersom baljväxter är kaloririka",
+        "Hög andel baljväxter i grain-free foder har kopplats till en hjärtsjukdom kallad DCM"
+      ],
+      "correctIndex": 3,
+      "explanation": "FDA i USA publicerade rapporter om en möjlig koppling mellan hög andel baljväxter (ärtor, linser) och dilaterad kardiomyopati (DCM). Mekanismen är inte klarlagd – taurinbrist diskuteras. Vetenskaplig konsensus är ännu inte fastlagd, men fallet illustrerar varför nytrender i hundmat bör granskas kritiskt.",
+      "sources": ["HUNDMAT_GRAINFREE_DCM_FDA"],
+      "factId": "hundmat_grainfree_dcm"
+    }
+  ]
+}
