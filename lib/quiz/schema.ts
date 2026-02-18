@@ -21,6 +21,11 @@ const profileQuestionSchema = baseQuestionSchema.extend({
 
 const questionSchema = z.union([factQuestionSchema, profileQuestionSchema]);
 
+const quizImagesSchema = z.object({
+  cardKey: z.string().min(1),
+  cardAlt: z.string().min(1),
+});
+
 const quizSchema = z.object({
   slug: z
     .string()
@@ -28,6 +33,7 @@ const quizSchema = z.object({
     .regex(/^[a-z0-9_-]+$/),
   title: z.string().min(1),
   description: z.string().min(1),
+  images: quizImagesSchema.optional(),
   questions: z.array(questionSchema).length(10),
 });
 

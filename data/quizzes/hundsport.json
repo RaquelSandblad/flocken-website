@@ -2,6 +2,10 @@
   "slug": "hundsport",
   "title": "Hur hundsportig är du egentligen?",
   "description": "Från adrenalinfyllda starter till doftnörderi – var hamnar du?",
+  "images": {
+    "cardKey": "flocken_quiz_hundsport_card",
+    "cardAlt": "Hund som hoppar agilityhinder i varm, naturlig stil."
+  },
   "questions": [
     {
       "id": "hundsport-1",

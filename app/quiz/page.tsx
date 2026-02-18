@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { QuizCard } from '@/components/quiz/QuizCard';
 import { QuizLayout } from '@/components/quiz/QuizLayout';
 import { getQuizBrandStyle } from '@/lib/quiz/brand';
@@ -34,16 +35,16 @@ export default async function QuizLibraryPage() {
             </div>
           </div>
 
-          {/* Hero Image Placeholder */}
-          <div className="relative aspect-square overflow-hidden rounded-xl bg-flocken-sand/50 shadow-soft md:aspect-[4/3]">
-            {/* PLACEHOLDER: Hero image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-center text-sm text-flocken-gray">
-                📸 Hero-bild kommer här
-                <br />
-                <span className="text-xs">(Glad hundägare + hund, quiz-tema)</span>
-              </p>
-            </div>
+          {/* Hero Image */}
+          <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-flocken-sand/50 shadow-soft">
+            <Image
+              src="/assets/flocken/generated/flocken_quiz_hero_medium.webp"
+              alt="Glad hundägare med hund i varm, naturlig stil."
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

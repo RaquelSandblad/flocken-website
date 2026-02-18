@@ -359,15 +359,21 @@ Alla bilder följer Flockens visuella identitet:
    - Plats: Bibliotekssidans hero-sektion
 
 2. **Quiz Card Images** (per quiz)
-   - `flocken_quiz_hundsport_card.jpg` (640x400px, 16:10)
-   - `flocken_quiz_raser_card.jpg` (640x400px, 16:10)
-   - `flocken_quiz_historia_card.jpg` (640x400px, 16:10)
+   - `flocken_quiz_hundsport_card.jpg` (16:9)
+   - `flocken_quiz_rasers_syfte_card.jpg` (16:9)
+   - `flocken_quiz_hundens_historia_card.jpg` (16:9)
 
 3. **Result Screen Image** (`flocken_quiz_result.jpg`)
    - Storlek: 1200x675px (16:9)
    - Används för alla quiz
 
 **Detaljerade prompts:** Se [`QUIZ_IMAGE_PROMPTS.md`](./QUIZ_IMAGE_PROMPTS.md)
+
+**Placering/workflow:**
+- Lägg originalbilder i: `public/assets/flocken/_originals/`
+- Kör: `node scripts/image-processor-flocken.js process-all`
+- Använd genererade filer från: `public/assets/flocken/generated/`
+- För quiz thumbnails: sätt `images.cardKey` + `images.cardAlt` i quiz JSON (t.ex. `flocken_quiz_hundsport_card`)
 
 ---
 

@@ -2,6 +2,10 @@
   "slug": "rasers_syfte",
   "title": "Vad är olika hundraser egentligen framavlade för?",
   "description": "Jakt, vall, drag eller soffhäng? Testa din koll.",
+  "images": {
+    "cardKey": "flocken_quiz_rasers_syfte_card",
+    "cardAlt": "Flera hundraser sida vid sida i varm, naturlig stil."
+  },
   "questions": [
     {
       "id": "ras-1",

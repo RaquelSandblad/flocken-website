@@ -1,5 +1,14 @@
 export type QuizQuestionType = 'fact' | 'profile';
 
+export interface QuizImages {
+  /**
+   * Base key used by image-processor output files.
+   * Example: `flocken_quiz_hundsport_card` → `/assets/flocken/generated/flocken_quiz_hundsport_card_small.webp`
+   */
+  cardKey: string;
+  cardAlt: string;
+}
+
 export interface BaseQuestion {
   id: string;
   type: QuizQuestionType;
@@ -25,5 +34,6 @@ export interface QuizDefinition {
   slug: string;
   title: string;
   description: string;
+  images?: QuizImages;
   questions: QuizQuestion[];
 }

@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { QuizDefinition } from '@/lib/quiz/types';
 
 interface QuizCardProps {
-  quiz: Pick<QuizDefinition, 'slug' | 'title' | 'description'>;
+  quiz: Pick<QuizDefinition, 'slug' | 'title' | 'description' | 'images'>;
 }
 
 // Quiz-specific visual themes
@@ -23,16 +24,28 @@ const quizThemes: Record<string, { emoji: string; imagePlaceholder: string }> = 
 
 export function QuizCard({ quiz }: QuizCardProps) {
   const theme = quizThemes[quiz.slug] || { emoji: '🎯', imagePlaceholder: 'Generisk hundbild' };
+  const cardImageSrc = quiz.images?.cardKey
+    ? `/assets/flocken/generated/${quiz.images.cardKey}_small.webp`
+    : null;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-warm/40 bg-white shadow-soft transition-shadow hover:shadow-card">
       {/* Quiz Image */}
-      <div className="relative aspect-[16/10] bg-flocken-sand/30">
-        {/* PLACEHOLDER: Quiz-specific image */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4">
-          <div className="text-5xl">{theme.emoji}</div>
-          <p className="text-center text-xs text-flocken-gray">{theme.imagePlaceholder}</p>
-        </div>
+      <div className="relative aspect-[16/9] bg-flocken-sand/30">
+        {cardImageSrc ? (
+          <Image
+            src={cardImageSrc}
+            alt={quiz.images?.cardAlt || quiz.title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4">
+            <div className="text-5xl">{theme.emoji}</div>
+            <p className="text-center text-xs text-flocken-gray">{theme.imagePlaceholder}</p>
+          </div>
+        )}
       </div>
 
       {/* Content */}

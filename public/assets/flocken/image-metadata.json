@@ -1,0 +1,1046 @@
+{
+  "version": "1.0",
+  "project": "Flocken",
+  "lastUpdated": "2026-02-18T07:35:51.191Z",
+  "images": {
+    "flocken_image_community": {
+      "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
+      "originalDimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "processedAt": "2026-02-14T23:00:09.851Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_community_thumbnail.avif",
+            "size": 15262
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_community_thumbnail.webp",
+            "size": 10776
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_community_thumbnail.jpg",
+            "size": 9672
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_community_small.avif",
+            "size": 54806
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_community_small.webp",
+            "size": 39220
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_community_small.jpg",
+            "size": 34269
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_community_medium.avif",
+            "size": 162428
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_community_medium.webp",
+            "size": 132808
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_community_medium.jpg",
+            "size": 120171
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_community_large.avif",
+            "size": 294128
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_community_large.webp",
+            "size": 250516
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_community_large.jpg",
+            "size": 242290
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_community_hero.avif",
+            "size": 579018
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_community_hero.webp",
+            "size": 510094
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_community_hero.jpg",
+            "size": 520232
+          }
+        }
+      }
+    },
+    "flocken_image_hero": {
+      "originalPath": "assets/flocken/_originals/flocken_image_hero.jpg",
+      "originalDimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "processedAt": "2026-02-14T23:00:32.487Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_hero_thumbnail.avif",
+            "size": 13861
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_hero_thumbnail.webp",
+            "size": 10140
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_hero_thumbnail.jpg",
+            "size": 9409
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_hero_small.avif",
+            "size": 59470
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_hero_small.webp",
+            "size": 47000
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_hero_small.jpg",
+            "size": 46090
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_hero_medium.avif",
+            "size": 172292
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_hero_medium.webp",
+            "size": 147706
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_hero_medium.jpg",
+            "size": 148046
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_hero_large.avif",
+            "size": 295654
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_hero_large.webp",
+            "size": 254030
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_hero_large.jpg",
+            "size": 281676
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_hero_hero.avif",
+            "size": 378888
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_hero_hero.webp",
+            "size": 316416
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_hero_hero.jpg",
+            "size": 363795
+          }
+        }
+      }
+    },
+    "flocken_image_some-mess_v1_trbg_1x1": {
+      "originalPath": "assets/flocken/_originals/flocken_image_some-mess_v1_trbg_1x1.png",
+      "originalDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "processedAt": "2026-02-14T23:01:09.630Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_thumbnail.avif",
+            "size": 10885
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_thumbnail.webp",
+            "size": 8866
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_thumbnail.jpg",
+            "size": 7058
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_small.avif",
+            "size": 40274
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_small.webp",
+            "size": 36660
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_small.jpg",
+            "size": 33791
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_medium.avif",
+            "size": 84320
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_medium.webp",
+            "size": 87490
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_medium.jpg",
+            "size": 89233
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_large.avif",
+            "size": 104728
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_large.webp",
+            "size": 107856
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_large.jpg",
+            "size": 123192
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_hero.avif",
+            "size": 158680
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_hero.webp",
+            "size": 162780
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_hero.jpg",
+            "size": 214850
+          }
+        }
+      }
+    },
+    "flocken_image_some-mess_v1_wbg_1x1": {
+      "originalPath": "assets/flocken/_originals/flocken_image_some-mess_v1_wbg_1x1.jpeg",
+      "originalDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "processedAt": "2026-02-14T23:01:43.309Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_thumbnail.avif",
+            "size": 7527
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_thumbnail.webp",
+            "size": 5898
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_thumbnail.jpg",
+            "size": 6605
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_small.avif",
+            "size": 31415
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_small.webp",
+            "size": 28506
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_small.jpg",
+            "size": 32856
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_medium.avif",
+            "size": 74453
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_medium.webp",
+            "size": 71262
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_medium.jpg",
+            "size": 91098
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.avif",
+            "size": 98158
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.webp",
+            "size": 98562
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.jpg",
+            "size": 130457
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_hero.avif",
+            "size": 164783
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_hero.webp",
+            "size": 155312
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_hero.jpg",
+            "size": 236318
+          }
+        }
+      }
+    },
+    "flocken_image_jmf_v1_1x1": {
+      "originalPath": "assets/flocken/_originals/flocken_image_jmf_v1_1x1.png",
+      "originalDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "processedAt": "2026-02-14T23:00:58.366Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_thumbnail.avif",
+            "size": 7354
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_thumbnail.webp",
+            "size": 5544
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_thumbnail.jpg",
+            "size": 6101
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_small.avif",
+            "size": 29534
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_small.webp",
+            "size": 26232
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_small.jpg",
+            "size": 29319
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_medium.avif",
+            "size": 72487
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_medium.webp",
+            "size": 68502
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_medium.jpg",
+            "size": 82810
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_large.avif",
+            "size": 100094
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_large.webp",
+            "size": 95318
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_large.jpg",
+            "size": 118539
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_hero.avif",
+            "size": 187142
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_hero.webp",
+            "size": 176272
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_hero.jpg",
+            "size": 251654
+          }
+        }
+      }
+    },
+    "flocken_quiz_hero": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hero.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T07:34:52.627Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_thumbnail.avif",
+            "size": 9769
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_thumbnail.webp",
+            "size": 6838
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_thumbnail.jpg",
+            "size": 7577
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_small.avif",
+            "size": 22695
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_small.webp",
+            "size": 17004
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_small.jpg",
+            "size": 19950
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_medium.avif",
+            "size": 47691
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_medium.webp",
+            "size": 41102
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_medium.jpg",
+            "size": 54078
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_large.avif",
+            "size": 73259
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_large.webp",
+            "size": 68170
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_large.jpg",
+            "size": 95727
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_hero.avif",
+            "size": 117526
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_hero.webp",
+            "size": 118036
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hero_hero.jpg",
+            "size": 184692
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundens_historia_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundens_historia_card.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T07:35:04.401Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_thumbnail.avif",
+            "size": 6628
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_thumbnail.webp",
+            "size": 4816
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_thumbnail.jpg",
+            "size": 5788
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_small.avif",
+            "size": 16372
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_small.webp",
+            "size": 12800
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_small.jpg",
+            "size": 16065
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_medium.avif",
+            "size": 35294
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_medium.webp",
+            "size": 33562
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_medium.jpg",
+            "size": 45822
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_large.avif",
+            "size": 56772
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_large.webp",
+            "size": 55574
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_large.jpg",
+            "size": 83428
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_hero.avif",
+            "size": 98182
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_hero.webp",
+            "size": 99982
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_hero.jpg",
+            "size": 165287
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundsport_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundsport_card.jpeg",
+      "originalDimensions": {
+        "width": 1312,
+        "height": 816
+      },
+      "processedAt": "2026-02-18T07:35:15.604Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1312,
+            "height": 816
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_thumbnail.avif",
+            "size": 8782
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_thumbnail.webp",
+            "size": 6150
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_thumbnail.jpg",
+            "size": 7192
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1312,
+            "height": 816
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_small.avif",
+            "size": 20045
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_small.webp",
+            "size": 16052
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_small.jpg",
+            "size": 19486
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1312,
+            "height": 816
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_medium.avif",
+            "size": 43539
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_medium.webp",
+            "size": 40488
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_medium.jpg",
+            "size": 54749
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1312,
+            "height": 816
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_large.avif",
+            "size": 67868
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_large.webp",
+            "size": 68308
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_large.jpg",
+            "size": 98101
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1312,
+            "height": 816
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_hero.avif",
+            "size": 110180
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_hero.webp",
+            "size": 116574
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundsport_card_hero.jpg",
+            "size": 182605
+          }
+        }
+      }
+    },
+    "flocken_quiz_rasers_syfte_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_rasers_syfte_card.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T07:35:27.801Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_thumbnail.avif",
+            "size": 8677
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_thumbnail.webp",
+            "size": 6138
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_thumbnail.jpg",
+            "size": 7302
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_small.avif",
+            "size": 21937
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_small.webp",
+            "size": 16520
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_small.jpg",
+            "size": 20865
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_medium.avif",
+            "size": 44013
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_medium.webp",
+            "size": 39618
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_medium.jpg",
+            "size": 56808
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_large.avif",
+            "size": 68977
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_large.webp",
+            "size": 65664
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_large.jpg",
+            "size": 100516
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_hero.avif",
+            "size": 114891
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_hero.webp",
+            "size": 118412
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_hero.jpg",
+            "size": 192694
+          }
+        }
+      }
+    },
+    "flocken_quiz_result": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_result.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T07:35:39.844Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_result_thumbnail.avif",
+            "size": 6922
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_result_thumbnail.webp",
+            "size": 5192
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_result_thumbnail.jpg",
+            "size": 6434
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_result_small.avif",
+            "size": 14485
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_result_small.webp",
+            "size": 12018
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_result_small.jpg",
+            "size": 15683
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_result_medium.avif",
+            "size": 27230
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_result_medium.webp",
+            "size": 26500
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_result_medium.jpg",
+            "size": 40132
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_result_large.avif",
+            "size": 41394
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_result_large.webp",
+            "size": 43008
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_result_large.jpg",
+            "size": 70587
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_result_hero.avif",
+            "size": 72026
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_result_hero.webp",
+            "size": 80250
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_result_hero.jpg",
+            "size": 141268
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "formats": {
+      "avif": {
+        "quality": 85,
+        "effort": 6
+      },
+      "webp": {
+        "quality": 90,
+        "effort": 6
+      }
+    },
+    "sizes": {
+      "thumbnail": {
+        "width": 150,
+        "height": 150,
+        "fit": "cover"
+      },
+      "small": {
+        "width": 400,
+        "height": null,
+        "fit": "inside"
+      },
+      "medium": {
+        "width": 800,
+        "height": null,
+        "fit": "inside"
+      },
+      "large": {
+        "width": 1200,
+        "height": null,
+        "fit": "inside"
+      },
+      "hero": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "cover"
+      }
+    }
+  }
+}

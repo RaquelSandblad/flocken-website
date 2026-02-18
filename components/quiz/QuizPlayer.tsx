@@ -8,7 +8,7 @@ import { getScoreBucket } from '@/lib/quiz/score';
 import { track } from '@/lib/quiz/tracking';
 import type { FactQuestion, QuizDefinition } from '@/lib/quiz/types';
 
-const AUTO_ADVANCE_MS = 800;
+const AUTO_ADVANCE_MS = 1200;
 
 interface QuizPlayerProps {
   quiz: QuizDefinition;
