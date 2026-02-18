@@ -1,7 +1,7 @@
 {
   "slug": "hundsport",
   "title": "Hur hundsportig är du egentligen?",
-  "description": "Från adrenalinfyllda starter till doftnörderi – var hamnar du?",
+  "description": "Testa din koll på allt från doftjakt till musikalisk koreografi. Hundsporten är bredare än de flesta tror.",
   "images": {
     "cardKey": "flocken_quiz_hundsport_card",
     "cardAlt": "Hund som hoppar agilityhinder i varm, naturlig stil."
@@ -10,152 +10,152 @@
     {
       "id": "hundsport-1",
       "type": "fact",
-      "question": "Vilken egenskap är allra viktigast i agility?",
+      "question": "Din hund har just genomgått en BPH. Vad är det egentligen?",
       "options": [
-        "Maximal muskelmassa",
-        "Perfekt päls",
-        "Snabbhet och samarbete",
-        "Stark jaktinstinkt"
+        "Ett prov som avgör om hunden är lämplig för avel",
+        "En tävling med poäng och rangordning",
+        "En beskrivning av hundens beteende i standardiserade moment",
+        "Ett godkännande för att delta i hundsporter"
       ],
       "correctIndex": 2,
-      "explanation": "Agility bygger på fart, precision och tajming mellan hund och förare.",
-      "sources": ["HUNDSPORT_AGILITY_GRUND"],
-      "factId": "hundsport_agility_grund"
+      "explanation": "BPH ger varken 'godkänd' eller 'underkänd' – det finns inte ens poäng att samla. En BPH-beskrivning innehåller åtta moment och tar ungefär 45 minuter. Genomförandet noteras som en officiell merit, men formatet är beskriva, inte döma.",
+      "sources": ["HUNDSPORT_031", "HUNDSPORT_032"],
+      "factId": "hundsport_bph_beskrivning"
     },
     {
       "id": "hundsport-2",
       "type": "fact",
-      "question": "Vad kallas sporten där hund och förare följer en bana med skyltade moment?",
+      "question": "Vad är grundidén i agility?",
       "options": [
-        "Agility",
-        "Rallylydnad",
-        "Freestyle",
-        "Viltspår"
+        "Att ta sig igenom en hinderbana så snabbt och felfritt som möjligt",
+        "Att följa en bana med skyltar som visar vilka moment som ska utföras",
+        "Att genomföra koreograferade trick till musik",
+        "Att söka en specifik doft i en okänd miljö"
       ],
-      "correctIndex": 1,
-      "explanation": "I rallylydnad följer ekipaget en bana med numrerade skyltar som visar vilka moment som ska utföras.",
-      "sources": ["HUNDSPORT_RALLYLYDNAD"],
-      "factId": "hundsport_rallylydnad"
+      "correctIndex": 0,
+      "explanation": "Agility kombinerar fart och precision – fel ger konsekvenser för tidresultatet. En bana kan innehålla hinder som tunnlar, gungbrädor, balansbom och slalom. Storleksklasser gör att både chihuahua och schäfer kan tävla.",
+      "sources": ["HUNDSPORT_010", "HUNDSPORT_011", "HUNDSPORT_012"],
+      "factId": "hundsport_agility_grundide"
     },
     {
       "id": "hundsport-3",
       "type": "fact",
-      "question": "Vad skiljer nose work från traditionellt spår?",
+      "question": "På en FCI-agilitytävling får ekipaget göra en sak innan det springer – men bara utan hunden. Vad?",
       "options": [
-        "Nose work bygger på specifika dofter i olika miljöer",
-        "Spår är alltid snabbare",
-        "Nose work kräver hoppmoment",
-        "Spår sker inomhus"
+        "Prova hindren för att kontrollera stabiliteten",
+        "Träna tre rundor på banan för att lära sig ordningen",
+        "Diskutera banlösningar med domaren",
+        "Gå runt banan och planera sin löpning"
       ],
-      "correctIndex": 0,
-      "explanation": "Nose work innebär att hunden söker efter bestämda doftkällor i varierande miljöer.",
-      "sources": ["HUNDSPORT_NOSEWORK"],
-      "factId": "hundsport_nosework"
+      "correctIndex": 3,
+      "explanation": "Banvandring utan hund är ett klassiskt inslag i snabbhetssporter – du planerar ditt lopp, men hunden möter banan för första gången under provet. Att träna med hunden på tävlingsbanan är uttryckligen förbjudet på FCI-nivå.",
+      "sources": ["HUNDSPORT_014"],
+      "factId": "hundsport_banvandring_fci"
     },
     {
       "id": "hundsport-4",
       "type": "fact",
-      "question": "Vad är gemensamt för de flesta officiella hundsporter?",
+      "question": "Vad är den tekniska skillnaden mellan heelwork to music (HtM) och freestyle?",
       "options": [
-        "De prioriterar hundens välfärd",
-        "De kräver renrasig hund",
-        "De kräver utställningsmerit",
-        "De dömer på utseende"
+        "Freestyle är snabbare och mer tävlingsfokuserat",
+        "HtM bygger på tio fasta fotpositioner; freestyle är friare koreografi",
+        "Freestyle kräver att hunden bär utrustning under uppträdandet",
+        "HtM är enbart öppet för stora raser"
       ],
-      "correctIndex": 0,
-      "explanation": "Hundens välfärd är en grundprincip i organiserad hundsport.",
-      "sources": ["HUNDSPORT_VÄLFÄRD"],
-      "factId": "hundsport_valfard"
+      "correctIndex": 1,
+      "explanation": "I HtM är positionen relativt föraren det tekniska fundamentet – hunden rör sig i specificerade positioner till musiken. Freestyle ger mer utrymme för tricks och rörelser utanför de tio fasta positionerna.",
+      "sources": ["HUNDSPORT_035"],
+      "factId": "hundsport_htm_vs_freestyle"
     },
     {
       "id": "hundsport-5",
       "type": "fact",
-      "question": "Vad menas med 'ekipage' i hundsportsammanhang?",
+      "question": "Vad är egentligen fokus i rallylydnad?",
       "options": [
-        "En grupp av hundar",
-        "Hund och förare som enhet",
-        "Tävlingsområdet",
-        "Domargruppen"
+        "Att sprinta igenom ett hinderfält på kortast möjliga tid",
+        "Att söka ett föremål med doften som enda ledtråd",
+        "Samarbete och kontakt – 'rally' syftar inte på tempo",
+        "Att genomföra ett lydnadsprogram utan vägledande skyltar"
       ],
-      "correctIndex": 1,
-      "explanation": "Ekipage är termen för hund och förare som samarbetande par i tävling och träning.",
-      "sources": ["HUNDSPORT_EKIPAGE"],
-      "factId": "hundsport_ekipage"
+      "correctIndex": 2,
+      "explanation": "Många tror att 'rally' betyder högt tempo, men sporten handlar om samarbete och glädje längs en bana med skyltar som beskriver moment. Skyltarna kan till och med innehålla 'frestelser' – godis placerat så hunden kan känna doften men inte komma åt det.",
+      "sources": ["HUNDSPORT_019", "HUNDSPORT_022"],
+      "factId": "hundsport_rallylydnad_fokus"
     },
     {
       "id": "hundsport-6",
       "type": "fact",
-      "question": "Vilken typ av hund förknippas ofta med dragarbete?",
+      "question": "Du vill anmäla din hund till ett officiellt prov inom SKK. Vilket grundkrav gäller alltid för hunden?",
       "options": [
-        "Spetsraser från nordliga områden",
-        "Små sällskapshundar",
-        "Terriers",
-        "Vinthundar"
+        "Att hunden är ID-märkt med tatuering eller chip",
+        "Att hunden klarat en mentalbeskrivning",
+        "Att hunden har en utställningsmerit",
+        "Att ägaren har godkänd tränarlicens"
       ],
       "correctIndex": 0,
-      "explanation": "Nordliga spetsraser utvecklades för dragarbete.",
-      "sources": ["HUNDSPORT_DRAG"],
-      "factId": "hundsport_drag"
+      "explanation": "ID-märkning är ett obligatoriskt krav för deltagande i utställningar, prov, tävlingar och beskrivningar inom SKK. Arrangören har rätt att kontrollera märkningen på plats. Märkning kan ske via tatuering eller microchip med godkänd ISO-standard.",
+      "sources": ["HUNDSPORT_003"],
+      "factId": "hundsport_id_krav"
     },
     {
       "id": "hundsport-7",
       "type": "fact",
-      "question": "Vad kallas sporten där hund och förare utför tricks och rörelser till musik?",
+      "question": "Hur gammal måste en hund vara för att delta i tävling i nose work?",
       "options": [
-        "Rallylydnad",
-        "Agility",
-        "Freestyle (Heelwork to Music)",
-        "Nose work"
+        "Minst 6 månader",
+        "Minst 8 månader",
+        "Minst 10 månader",
+        "Minst 12 månader"
       ],
-      "correctIndex": 2,
-      "explanation": "I freestyle utför ekipaget koreograferade rörelser och tricks till musik.",
-      "sources": ["HUNDSPORT_FREESTYLE"],
-      "factId": "hundsport_freestyle"
+      "correctIndex": 3,
+      "explanation": "Nose work-reglerna skiljer på doftprov (minst 10 månader) och tävlingstillfälle (minst 12 månader). Sportens fokus på säkerhet och välmående speglas i alla delar av regelverket – även i hur progressionen är uppbyggd.",
+      "sources": ["HUNDSPORT_034"],
+      "factId": "hundsport_nosework_alder"
     },
     {
       "id": "hundsport-8",
       "type": "fact",
-      "question": "Vilken sport kombinerar ofta spår, lydnad och skydd?",
+      "question": "Vilket hinder ingår i agilityklass men INTE i hoppklass?",
       "options": [
-        "Freestyle",
-        "IGP",
-        "Rallylydnad",
-        "Viltspår"
+        "Slalom",
+        "Balansbom",
+        "Tunnel",
+        "Hopphinder"
       ],
       "correctIndex": 1,
-      "explanation": "IGP är en tredelad sport med spår, lydnad och skydd.",
-      "sources": ["HUNDSPORT_IGP"],
-      "factId": "hundsport_igp"
+      "explanation": "Hoppklass och agilityklass delar många hinder, men balansbommen – ett av de kontaktytefordrande hindren – ingår bara i agilityklass. Det gör att de två klasserna skiljer sig mer åt än man kanske tror vid en första anblick.",
+      "sources": ["HUNDSPORT_018"],
+      "factId": "hundsport_hoppklass_vs_agility"
     },
     {
       "id": "hundsport-9",
       "type": "fact",
       "question": "Vad är bikejöring?",
       "options": [
-        "Cykling med hund som drar",
-        "En form av agility med cykel",
-        "Hundsim på tid",
-        "Spårning från cykel"
+        "En dragsport där hunden drar föraren på cykel",
+        "En form av agility med cykelhinder på banan",
+        "Simträning på tid för hund och förare",
+        "Spårning som utförs från cykel"
       ],
       "correctIndex": 0,
-      "explanation": "Bikejöring är en dragsport där hunden drar föraren på cykel.",
-      "sources": ["HUNDSPORT_BIKEJORING"],
+      "explanation": "Bikejöring är en av flera draggrenar – andra är canicross (löpning) och pulka/släde. Dragprov inom SBK kräver både minimiålder och licens för ekipaget. Det är en sport med starka rötter i nordiska arbetsraser.",
+      "sources": ["SKK_DRAGPROV_SBK_REGELBOK"],
       "factId": "hundsport_bikejoring"
     },
     {
       "id": "hundsport-10",
       "type": "fact",
-      "question": "Vad är en viktig del i nästan all hundträning för sport?",
+      "question": "Vad gör bruksprov annorlunda jämfört med de flesta andra hundsporter?",
       "options": [
-        "Bestraffning",
-        "Belöningsbaserad träning",
-        "Tävlingspress",
-        "Strikt fysisk korrigering"
+        "Det avgörs alltid av ett enda moment utan upprepning",
+        "Bara hundar under ett år tillåts delta",
+        "Det kombinerar flera moment som spår, lydnad och sök",
+        "Det kräver att hunden saknar stamtavla"
       ],
-      "correctIndex": 1,
-      "explanation": "Modern hundsport bygger i hög grad på belöningsbaserad träning.",
-      "sources": ["HUNDSPORT_TRÄNING"],
-      "factId": "hundsport_traning"
+      "correctIndex": 2,
+      "explanation": "Bruksprov är egentligen en kombination av moment snarare än en enda sport – beroende på grupp kan det ingå spår, sök, rapport- och skyddsmoment. Skyddsmoment är dessutom bara öppet för brukshundraser, och hunden måste vara SKK-registrerad.",
+      "sources": ["HUNDSPORT_028", "HUNDSPORT_027"],
+      "factId": "hundsport_bruksprov_kombination"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "rasers_syfte",
-  "title": "Vad är olika hundraser egentligen framavlade för?",
-  "description": "Jakt, vall, drag eller soffhäng? Testa din koll.",
+  "title": "Klarar du vårt hundras-quiz?",
+  "description": "Testa din koll på vad olika hundraser egentligen är framavlade för. Svaren är ibland mer överraskande än man tror.",
   "images": {
     "cardKey": "flocken_quiz_rasers_syfte_card",
     "cardAlt": "Flera hundraser sida vid sida i varm, naturlig stil."
@@ -10,152 +10,152 @@
     {
       "id": "ras-1",
       "type": "fact",
-      "question": "Vad är border collie ursprungligen framavlad för?",
+      "question": "Border collie rankas ofta bland de mest arbetsvilliga hundarna. Vad är rasen ursprungligen framavlad för?",
       "options": [
-        "Apportering i vatten",
+        "Apportering av fågel vid jakt",
         "Vallning av boskap",
-        "Sällskap i salonger",
-        "Dragarbete i snö"
+        "Dragarbete i nordliga klimat",
+        "Vakthund på gårdar och bondgårdar"
       ],
       "correctIndex": 1,
-      "explanation": "Border collie är en klassisk vallhund.",
+      "explanation": "Border collies 'eye' – det intensiva blicklåset mot boskap – är ett välkänt drag som härstammar direkt från vallningsarbetet i skotska och brittiska höglander. Rasen har fortfarande ett av de starkaste vallningsinstinkterna av alla raser.",
       "sources": ["RAS_SYFTE_BORDER_COLLIE"],
-      "factId": "ras_syfte_border_collie"
+      "factId": "ras_border_collie_vallning"
     },
     {
       "id": "ras-2",
       "type": "fact",
-      "question": "Vad användes dalmatiner historiskt till?",
+      "question": "Taxen är den enda hundras som ensam bildar en hel FCI-grupp. Vad är taxens ursprungliga uppgift?",
       "options": [
-        "Sälja boskap",
-        "Följa hästdragna vagnar",
-        "Spåra varg",
-        "Valla får"
+        "Leda hundspann i nordisk terräng",
+        "Apportera fågel i vatten åt jägare",
+        "Vakta kungliga slott i Centraleuropa",
+        "Jaga grävling och annat vilt nere i gryt"
       ],
-      "correctIndex": 1,
-      "explanation": "Dalmatinern fungerade som vagnhund och eskort.",
-      "sources": ["RAS_SYFTE_DALMATINER"],
-      "factId": "ras_syfte_dalmatiner"
+      "correctIndex": 3,
+      "explanation": "Taxens långa kropp och korta ben är ingen tillfällighet – allt är anpassat för att ta sig ner i trånga jordgryt efter grävling och räv. Rasen finns i tre storlekar (normalstor, miniatyr och kanin) och tre pälstyper – totalt nio kombinationer inom en och samma ras.",
+      "sources": ["RAS_010"],
+      "factId": "ras_tax_grytjakt_grupp"
     },
     {
       "id": "ras-3",
       "type": "fact",
-      "question": "Vad är golden retriever ursprungligen framtagen för?",
+      "question": "Din granne säger att hunden tillhör SKK:s grupp 1. Vad säger det om hundens bakgrund?",
       "options": [
-        "Vakthund",
-        "Apportera fågel i jakt",
-        "Drag i arktiskt klimat",
-        "Skyddsarbete"
+        "Ursprung i att valla eller vakta boskap",
+        "Ursprung i doftspårning och driv vid jakt",
+        "Framavlad primärt som sällskaps- och resesällskap",
+        "Ursprung i dragarbete i kallt klimat"
       ],
-      "correctIndex": 1,
-      "explanation": "Golden retriever utvecklades för apportering.",
-      "sources": ["RAS_SYFTE_GOLDEN"],
-      "factId": "ras_syfte_golden"
+      "correctIndex": 0,
+      "explanation": "Grupp 1 samlar raser som ursprungligen arbetat med att valla eller vakta boskap – allt från border collie till australisk herdehund. Många raser i gruppen är idag också populära bruks- och tävlingshundar.",
+      "sources": ["RAS_007"],
+      "factId": "ras_grupp1_vallhundar"
     },
     {
       "id": "ras-4",
       "type": "fact",
-      "question": "Vad är en typisk uppgift för terrierraser?",
+      "question": "Vad är det som i första hand skiljer vinthundar från spårhundar när de jagar?",
       "options": [
-        "Valla ren",
-        "Jaga och driva småvilt under jord",
-        "Apportera i vatten",
-        "Dra släde"
+        "Vinthundar jagar alltid i flock och delar bytet lika",
+        "Vinthundar är tränade att leverera viltet levande och oskaddat",
+        "Vinthundar förlitar sig på synen och hastigheten snarare än doften",
+        "Vinthundar specialiserar sig på att jaga i vatten och sumpmark"
       ],
-      "correctIndex": 1,
-      "explanation": "Terriers användes ofta för grytjakt.",
-      "sources": ["RAS_SYFTE_TERRIER"],
-      "factId": "ras_syfte_terrier"
+      "correctIndex": 2,
+      "explanation": "Vinthundar är 'sighthounds' – de lokaliserar och jagar byte med ögonen och farten, inte med nosen. Det är raka motsatsen till spårhundar som följer doftspår metodiskt. Idag används många vinthundar i coursing och kapplöpning.",
+      "sources": ["RAS_016"],
+      "factId": "ras_vinthund_syn_fart"
     },
     {
       "id": "ras-5",
       "type": "fact",
-      "question": "Vad är siberian husky främst avlad för?",
+      "question": "Labrador retriever är känd för sin vattentålighet och simningsförmåga. Vad är rasen ursprungligen framtagen för?",
       "options": [
-        "Sällskap i stadsmiljö",
-        "Dragarbete över långa distanser",
-        "Skyddsarbete",
-        "Vallning"
+        "Att hjälpa fiskare och apportera fångst i vatten",
+        "Att valla och skydda boskap på irländska slätter",
+        "Att jaga sjöfågel längs kustlinjer och vid insjöar",
+        "Att vakta gods och herrgårdar i norra England"
       ],
-      "correctIndex": 1,
-      "explanation": "Husky är utvecklad för släddragning.",
-      "sources": ["RAS_SYFTE_HUSKY"],
-      "factId": "ras_syfte_husky"
+      "correctIndex": 0,
+      "explanation": "Labrador retriever (trots namnet) kommer från Newfoundland – inte Labrador. Rasen hjälpte fiskare att dra in nät och apportera fisk som hoppat ur båten. Det förklarar den karakteristiska vattentåliga pälsen och uthålligheten i kallt vatten.",
+      "sources": ["RAS_SYFTE_LABRADOR"],
+      "factId": "ras_labrador_fiskare"
     },
     {
       "id": "ras-6",
       "type": "fact",
-      "question": "Vad är tax (dachshund) ursprungligen avlad för?",
+      "question": "SKK:s grupp 9 rymmer raser som många ser som typiska knähundar. Vad lyfter SKK fram om dem?",
       "options": [
-        "Sällskap i kungliga hov",
-        "Vallning av getter",
-        "Jakt på grävling i gryt",
-        "Dragarbete"
+        "De är förbjudna att delta i de flesta officiella hundsporter",
+        "De kräver specialanpassade hinderhöjder för att tävla på lika villkor",
+        "De lämpar sig bäst för enklare aktiviteter utan sportinriktning",
+        "Många passar utmärkt för hundsporter trots bakgrunden som sällskapshund"
       ],
-      "correctIndex": 2,
-      "explanation": "Taxens långa kropp och modiga temperament utvecklades för jakt i trånga gryt.",
-      "sources": ["RAS_SYFTE_TAX"],
-      "factId": "ras_syfte_tax"
+      "correctIndex": 3,
+      "explanation": "SKK bryter aktivt mot stereotypen – grupp 9 innehåller raser som pudel (toy), cavalier och papillon, och SKK beskriver uttryckligen att många trivs med hundsporter. Bakgrunden som sällskapshund säger ingenting om arbetsviljan.",
+      "sources": ["RAS_015"],
+      "factId": "ras_grupp9_sport"
     },
     {
       "id": "ras-7",
       "type": "fact",
-      "question": "Vad är vinthundar (t.ex. greyhound) avlade för?",
+      "question": "Du hör att en hund är en 'stötande fågelhund'. Vad gör den egentligen?",
       "options": [
-        "Spåra doft långsamt",
-        "Jaga med syn och hög fart",
-        "Skydda boskap",
-        "Arbeta i vatten"
+        "Den ger skall när den hittar vilt och håller sig still tills föraren kommer",
+        "Den söker markvittring och driver aktivt upp vilt i luften",
+        "Den markerar viltets plats med blicken och fryser till",
+        "Den apporterar fällt vilt direkt till förarens hand"
       ],
       "correctIndex": 1,
-      "explanation": "Vinthundar jagar främst med syn och hastighet.",
-      "sources": ["RAS_SYFTE_VINTHUND"],
-      "factId": "ras_syfte_vinthund"
+      "explanation": "'Stötande' (grupp 8) och 'stående' (grupp 7) är en klassisk förvirring. Stående fågelhundar söker luftvittring och fryser till vid fyndet – de 'stands'. Stötande fågelhundar söker markvittring och driver aktivt upp viltet. Spaniels är ett typexempel.",
+      "sources": ["RAS_014"],
+      "factId": "ras_stotande_fagelhund"
     },
     {
       "id": "ras-8",
       "type": "fact",
-      "question": "Vad är pudeln ursprungligen framtagen för?",
+      "question": "Dalmatinern är lätt att känna igen på fläckarna. Men vad användes rasen historiskt till?",
       "options": [
-        "Vallning",
-        "Apportering i vatten",
-        "Skyddsarbete",
-        "Drag"
+        "Att patrullera kustlinjer och varna för strandade skepp",
+        "Att bära meddelanden under krig i Centraleuropa",
+        "Att följa hästdragna vagnar och eskortera dem",
+        "Att jaga vildsvin i dalmatinska skogar"
       ],
-      "correctIndex": 1,
-      "explanation": "Pudeln utvecklades som vattenapportör.",
-      "sources": ["RAS_SYFTE_PUDEL"],
-      "factId": "ras_syfte_pudel"
+      "correctIndex": 2,
+      "explanation": "Dalmatinern kallas ibland 'coach dog' eller vagnhund – rasen sprang bredvid eller under hästdragna vagnar och fungerade som statussymbol och eskorteringshund. Rasen har exceptionell uthållighet, ett direkt arv från detta arbete.",
+      "sources": ["RAS_SYFTE_DALMATINER"],
+      "factId": "ras_dalmatiner_vagnhund"
     },
     {
       "id": "ras-9",
       "type": "fact",
-      "question": "Vad är labrador retriever ursprungligen framavlad för?",
+      "question": "Vad är terriers ursprungligen framavlade för?",
       "options": [
-        "Vallning av boskap",
-        "Hjälpa fiskare och apportera fångst",
-        "Vakta gårdar",
-        "Jaga i gryt"
+        "Att jaga och driva bort skadedjur och småvilt – ofta nere i gryt",
+        "Att vakta hus och tillhörigheter under ägarens frånvaro",
+        "Att apportera viltfåglars byte från marken åt jägare",
+        "Att spåra och driva viltdjur i tät skog"
       ],
-      "correctIndex": 1,
-      "explanation": "Labradoren utvecklades för att hjälpa fiskare i Newfoundland och apportera i vatten.",
-      "sources": ["RAS_SYFTE_LABRADOR"],
-      "factId": "ras_syfte_labrador"
+      "correctIndex": 0,
+      "explanation": "Terriernamnet kommer från latinets 'terra' (jord) – rasen sändes bokstavligen ner i marken efter grävling, räv och råttor. Gruppen har till stor del brittiskt ursprung, och vissa raser används fortfarande i grytjakt idag.",
+      "sources": ["RAS_009"],
+      "factId": "ras_terrier_grytjakt"
     },
     {
       "id": "ras-10",
       "type": "fact",
-      "question": "Vad är herdehundar generellt framavlade för?",
+      "question": "Sverige är 'hemland' för ett antal hundraser inom FCI:s system. Ungefär hur många?",
       "options": [
-        "Skydd och boskapskontroll",
-        "Apportering i vatten",
-        "Spårarbete i stad",
-        "Släddragning"
+        "Tre",
+        "Sex",
+        "Tolv",
+        "Tjugofem"
       ],
-      "correctIndex": 0,
-      "explanation": "Många herdehundar har kombinerad vall- och vaktfunktion.",
-      "sources": ["RAS_SYFTE_HERDEHUND"],
-      "factId": "ras_syfte_herdehund"
+      "correctIndex": 2,
+      "explanation": "Sverige och SKK är hemland för tolv hundraser – nio med FCI-erkännande och tre med nordiskt erkännande (NKU). Det innebär att Sverige har ansvaret för att fastställa och uppdatera standarderna för dessa raser internationellt.",
+      "sources": ["RAS_026"],
+      "factId": "ras_sverige_hemland"
     }
   ]
 }
