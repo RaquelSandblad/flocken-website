@@ -2,6 +2,10 @@
   "slug": "hundens_kroppssprak",
   "title": "Hur bra kan du hundens kroppsspråk?",
   "description": "Testa din koll på vad hunden faktiskt kommunicerar med kroppen. Svansviftning, den 'skyldiga minen' och läppslickning – visst kan du tolka dem rätt?",
+  "images": {
+    "cardKey": "flocken_quiz_hundens_kroppssprak_syfte_card",
+    "cardAlt": "Hund och människa som kommunicerar med kroppsspråk i varm, naturlig stil."
+  },
   "questions": [
     {
       "id": "kroppssprak-1",

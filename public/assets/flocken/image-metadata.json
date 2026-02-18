@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "Flocken",
-  "lastUpdated": "2026-02-18T07:35:51.191Z",
+  "lastUpdated": "2026-02-18T10:51:33.542Z",
   "images": {
     "flocken_image_community": {
       "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
@@ -9,7 +9,7 @@
         "width": 2752,
         "height": 1536
       },
-      "processedAt": "2026-02-14T23:00:09.851Z",
+      "processedAt": "2026-02-18T10:46:52.480Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -109,7 +109,7 @@
         "width": 2048,
         "height": 2048
       },
-      "processedAt": "2026-02-14T23:00:32.487Z",
+      "processedAt": "2026-02-18T10:47:17.814Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -209,7 +209,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-14T23:01:09.630Z",
+      "processedAt": "2026-02-18T10:48:07.215Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -309,7 +309,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-14T23:01:43.309Z",
+      "processedAt": "2026-02-18T10:49:01.160Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -409,7 +409,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-14T23:00:58.366Z",
+      "processedAt": "2026-02-18T10:47:49.348Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -509,7 +509,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T07:34:52.627Z",
+      "processedAt": "2026-02-18T10:49:39.743Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -609,7 +609,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T07:35:04.401Z",
+      "processedAt": "2026-02-18T10:50:02.150Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -709,7 +709,7 @@
         "width": 1312,
         "height": 816
       },
-      "processedAt": "2026-02-18T07:35:15.604Z",
+      "processedAt": "2026-02-18T10:50:44.965Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -809,7 +809,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T07:35:27.801Z",
+      "processedAt": "2026-02-18T10:51:02.391Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -909,7 +909,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T07:35:39.844Z",
+      "processedAt": "2026-02-18T10:51:16.081Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -999,6 +999,106 @@
           "jpg": {
             "path": "assets/flocken/generated/flocken_quiz_result_hero.jpg",
             "size": 141268
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundens_kroppssprak_syfte_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundens_kroppssprak_syfte_card.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T10:50:24.264Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_thumbnail.avif",
+            "size": 5268
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_thumbnail.webp",
+            "size": 4348
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_thumbnail.jpg",
+            "size": 5221
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_small.avif",
+            "size": 13536
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_small.webp",
+            "size": 11442
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_small.jpg",
+            "size": 14929
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_medium.avif",
+            "size": 29995
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_medium.webp",
+            "size": 28818
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_medium.jpg",
+            "size": 41105
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_large.avif",
+            "size": 48690
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_large.webp",
+            "size": 48320
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_large.jpg",
+            "size": 73936
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.avif",
+            "size": 84683
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.webp",
+            "size": 86324
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.jpg",
+            "size": 146198
           }
         }
       }
