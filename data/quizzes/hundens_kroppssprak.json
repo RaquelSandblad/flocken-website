@@ -1,0 +1,157 @@
+{
+  "slug": "hundens_kroppssprak",
+  "title": "Hur bra kan du hundens kroppsspråk?",
+  "description": "Testa din koll på vad hunden faktiskt kommunicerar med kroppen. Svansviftning, den 'skyldiga minen' och läppslickning – visst kan du tolka dem rätt?",
+  "questions": [
+    {
+      "id": "kroppssprak-1",
+      "type": "fact",
+      "question": "Hur definierar SKK:s beteendeterminologi aggression hos hund?",
+      "options": [
+        "Att hunden angriper utan föregående varning",
+        "Ett beteende eller hot i avsikt att skada eller skrämma för att öka avståndet till en annan individ",
+        "Att hunden regelbundet morrnar mot okända i alla situationer",
+        "Beteende som enbart uppträder kring mat eller leksaker"
+      ],
+      "correctIndex": 1,
+      "explanation": "Definitionen är viktig: den beskriver aggression som en funktion – hunden försöker skapa avstånd och säkerhet, inte vara 'elak'. Det gör att hotbeteenden, morrning och bitförsök kan förstås som en sammanhängande skala av signaler med samma underliggande syfte.",
+      "sources": ["BETEENDE_SKK_AGGRESSION_DEF"],
+      "factId": "kroppssprak_aggression_skk_def"
+    },
+    {
+      "id": "kroppssprak-2",
+      "type": "fact",
+      "question": "En hund förstör en soppåse. Ägaren kommer hem, ser röran och låter irriterad. Hunden sänker kroppen och undviker blick. Vad visar experimentell forskning om den 'skyldiga minen'?",
+      "options": [
+        "Att hunden har ett konkret minne av handlingen och vet att den var fel",
+        "Att hunden är utpräglat social och lär sig snabbt av ägarens humör",
+        "Att beteendet främst triggas av ägarens reaktion – inte av om hunden faktiskt gjorde något",
+        "Att hunden visar sann ånger, liknande mänskliga skuldkänslor"
+      ],
+      "correctIndex": 2,
+      "explanation": "Experiment visade att hundar uppvisar 'guilty look' även när de inte gjort något fel – bara för att ägaren beter sig som om de hade. Det är ett svar på mänskliga spänningssignaler, inte en inre skuldupplevelse. Tolkningen 'min hund vet om det' är sannolikt en systematisk feltolkning.",
+      "sources": ["BETEENDE_GUILTY_LOOK_EXPERIMENT"],
+      "factId": "kroppssprak_guilty_look"
+    },
+    {
+      "id": "kroppssprak-3",
+      "type": "fact",
+      "question": "Du ser en hund med låg svans, öronen bakåt och nosslickning. Vad är det bästa rådet om tolkning?",
+      "options": [
+        "De tre signalerna pekar entydigt på stress – flytta dig bort från hunden omedelbart",
+        "Du kan läsa av hundens känsloläge säkert via svansen och öronen",
+        "Enstaka signaler som dessa ger en tillräckligt säker tolkning",
+        "Signalerna bör läsas som ett kluster och alltid i relation till situationen och sammanhanget"
+      ],
+      "correctIndex": 3,
+      "explanation": "Kontrollerade studier visar att människor systematiskt riskerar att läsa in situationskontexten snarare än hundens faktiska beteende – och kan ge helt olika tolkningar av samma hundsignal beroende på kontext. Att läsa kroppsspråk kräver helhetsperspektiv: posturer, rörelser, ljud och vad som händer runtomkring.",
+      "sources": ["BETEENDE_CONTEXT_BIAS_ANTHROZOOOS"],
+      "factId": "kroppssprak_kontext_helhet"
+    },
+    {
+      "id": "kroppssprak-4",
+      "type": "fact",
+      "question": "Forskning har visat att svansviftning kan vara 'lateraliserad'. Vad innebär det?",
+      "options": [
+        "Att hunden viftar mer åt vänster vid möten med bekanta individer",
+        "Att viftningens riktning (vänster/höger-dominans) är kopplad till olika emotionella stimuli, och att andra hundar reagerar på skillnaden",
+        "Att bara tikar uppvisar tydlig lateralisering i svansviftning",
+        "Att svansviftningens tempo, inte riktning, är det som avgör hundens känsloläge"
+      ],
+      "correctIndex": 1,
+      "explanation": "Studier visade höger-dominant viftning vid bekanta, positiva stimuli och vänster-dominant vid okända eller mer negativa. Andra hundar uppvisade stressreaktioner när de såg vänsterdominerad viftning – vilket tyder på att svansen kommunicerar mer nyanserad information än en enkel 'glad'-signal.",
+      "sources": ["BETEENDE_SVANS_LATERALISERING_QUARANTA"],
+      "factId": "kroppssprak_svans_lateralisering"
+    },
+    {
+      "id": "kroppssprak-5",
+      "type": "fact",
+      "question": "Vad vet vi med störst säkerhet om lekbugningen (play bow)?",
+      "options": [
+        "Den är en leksignal som ofta förekommer vid start eller fortsättning av lek",
+        "Den är en underkastelsegest mot äldre eller mer dominanta hundar",
+        "Den signalerar att hunden vill pausa och vila en stund",
+        "Den används uteslutande som hälsningsritual mot bekanta hundar"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lekbugning är en av de bäst dokumenterade leksignalerna i hunddjur – stereotyp och tydligt kopplad till lek. Forskningen diskuterar fortfarande om den exakt fungerar som 'metakommunikation' (förklaring av efterföljande beteenden) eller mer som ett sätt att upprätthålla lekmotivation hos mottagaren.",
+      "sources": ["BETEENDE_LEKBUGNING_BEKOFF_BYOSIERE"],
+      "factId": "kroppssprak_lekbugning"
+    },
+    {
+      "id": "kroppssprak-6",
+      "type": "fact",
+      "question": "Din hund slickar sig om nosen och gäspar när du tar fram kopplet inför en promenad. Vad är den mest välgrundade tolkningen?",
+      "options": [
+        "Samma beteenden kan signalera både positiv förväntan och stress – kontexten avgör",
+        "Hunden visar tydliga stresssignaler och verkar ogilla promenader",
+        "Hunden markerar sitt revir med luktsignaler inomhus",
+        "Hunden är hungrig och associerar kopplet med matritualen"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nosslick och gäspning lyfts ofta fram som 'stresssignaler', men forskning visar att samma beteenden förekommer vid hög arousal och positiv förväntan – till exempel inför något kul. Att kalla dem 'stressbevis' utan sammanhang ger en skev bild. De är riskmarkörer som kräver kontext för korrekt tolkning.",
+      "sources": ["BETEENDE_DISPLACEMENT_FIRNKES", "BETEENDE_AROUSAL_VALENS"],
+      "factId": "kroppssprak_gasp_nosslick"
+    },
+    {
+      "id": "kroppssprak-7",
+      "type": "fact",
+      "question": "Studier har visat att hundar producerar fler ansiktsrörelser i ett specifikt läge. När?",
+      "options": [
+        "När de är ensamma och utforskar en ny miljö utan mänsklig närvaro",
+        "Direkt efter intensiv fysisk aktivitet",
+        "När en människa tittar på dem – vilket tyder på att ansiktsuttryck har en kommunikativ komponent",
+        "När de möter okända hundar av samma ras"
+      ],
+      "correctIndex": 2,
+      "explanation": "Det så kallade 'audience effect' stödjer att ansiktsuttryck hos hund inte enbart är emotionella reflexer – hunden anpassar sina uttryck beroende på om det finns en mottagare. Det liknar hur sociala djur generellt kommunicerar mer aktivt när det finns någon att kommunicera med.",
+      "sources": ["BETEENDE_ANSIKTSUTTRYCK_AUDIENCE_KAMINSKI"],
+      "factId": "kroppssprak_ansiktsuttryck_audience"
+    },
+    {
+      "id": "kroppssprak-8",
+      "type": "fact",
+      "question": "Vilken funktion fyller morrning som kommunikationssignal?",
+      "options": [
+        "Det är alltid ett tecken på omedelbar bettintention och ska behandlas som en nödsignal",
+        "Det kan fungera som varning och avståndsökande signal – men förekommer också i lek",
+        "Det används enbart i konflikter med andra hundar, aldrig riktat mot människor",
+        "Det är alltid ett tecken på smärta och bör utredas veterinärmedicinskt"
+      ],
+      "correctIndex": 1,
+      "explanation": "Morrning beskrivs i beteendevetenskap som ett avståndsstyrkande varningsbeteende med syfte att undvika konflikt. Samma ljud kan ingå i social lek, vilket gör kontext avgörande. Att förstå morrning som en signal – med en funktion att kommunicera – är centralt för att läsa situationer rätt.",
+      "sources": ["BETEENDE_SKK_MORRNING_VARNING"],
+      "factId": "kroppssprak_morrning_signal"
+    },
+    {
+      "id": "kroppssprak-9",
+      "type": "fact",
+      "question": "Vad är 'aggressionshämmande signaler' enligt SKK:s beteendeterminologi?",
+      "options": [
+        "Signaler som ett mer dominant djur sänder för att initiera en konfrontation",
+        "Skall och morrning som varnar en angripare att backa",
+        "Beteenden ett djur använder för att öka sin rang i gruppen",
+        "Signaler som ett djur sänder när det vill undvika konflikt"
+      ],
+      "correctIndex": 3,
+      "explanation": "Aggressionshämmande signaler är det 'sociala kittet' som gör att hundar i normalfallet kan lösa spänningar utan fysisk konfrontation. De hör ihop med hundens förmåga att de-eskalera situationer – och är lika viktiga att förstå som aggressionsuttrycken de motverkar.",
+      "sources": ["BETEENDE_SKK_AGGRESSIONSHAMMANDE"],
+      "factId": "kroppssprak_aggressionshammande"
+    },
+    {
+      "id": "kroppssprak-10",
+      "type": "fact",
+      "question": "En hund som tidigare tolererat hantering börjar morra och snappa vid beröring i ett visst område. Vad lyfter veterinär beteendevetenskap fram som viktigt att tänka på?",
+      "options": [
+        "Att hunden troligen testar sociala gränser och behöver tydligare ledarskap",
+        "Att hunden förmodligen fått för lite mental stimulering och behöver mer träning",
+        "Att smärta eller fysiskt obehag kan ha sänkt hundens toleranströskel – vilket bör uteslutas",
+        "Att hunden kommit in i en ny social fas och behöver ny socialisering med okända"
+      ],
+      "correctIndex": 2,
+      "explanation": "Kliniska fallrapporter och veterinärmedicinsk litteratur betonar att smärta kan sänka aggressionströskeln – så kallad 'irritabel aggression'. En hund som plötsligt förändrar sitt beteende vid beröring bör utredas medicinskt innan beteendet enbart tolkas som en attityd- eller träningsfråga.",
+      "sources": ["BETEENDE_SMARTAGGRESSION_VET"],
+      "factId": "kroppssprak_smarta_aggression"
+    }
+  ]
+}
