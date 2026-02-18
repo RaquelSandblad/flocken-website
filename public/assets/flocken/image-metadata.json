@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "Flocken",
-  "lastUpdated": "2026-02-18T10:51:33.542Z",
+  "lastUpdated": "2026-02-18T11:31:53.150Z",
   "images": {
     "flocken_image_community": {
       "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
@@ -9,7 +9,7 @@
         "width": 2752,
         "height": 1536
       },
-      "processedAt": "2026-02-18T10:46:52.480Z",
+      "processedAt": "2026-02-18T11:28:17.001Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -109,7 +109,7 @@
         "width": 2048,
         "height": 2048
       },
-      "processedAt": "2026-02-18T10:47:17.814Z",
+      "processedAt": "2026-02-18T11:28:48.559Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -209,7 +209,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T10:48:07.215Z",
+      "processedAt": "2026-02-18T11:29:31.500Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -309,7 +309,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T10:49:01.160Z",
+      "processedAt": "2026-02-18T11:30:07.274Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -409,7 +409,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T10:47:49.348Z",
+      "processedAt": "2026-02-18T11:29:18.227Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -509,7 +509,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T10:49:39.743Z",
+      "processedAt": "2026-02-18T11:30:25.315Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -609,7 +609,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T10:50:02.150Z",
+      "processedAt": "2026-02-18T11:30:35.657Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -709,7 +709,7 @@
         "width": 1312,
         "height": 816
       },
-      "processedAt": "2026-02-18T10:50:44.965Z",
+      "processedAt": "2026-02-18T11:31:08.270Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -809,7 +809,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T10:51:02.391Z",
+      "processedAt": "2026-02-18T11:31:20.960Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -909,7 +909,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T10:51:16.081Z",
+      "processedAt": "2026-02-18T11:31:33.250Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1009,7 +1009,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T10:50:24.264Z",
+      "processedAt": "2026-02-18T11:30:45.989Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1099,6 +1099,206 @@
           "jpg": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.jpg",
             "size": 146198
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundmat_naring_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundmat_naring_card.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T11:30:57.941Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_thumbnail.avif",
+            "size": 5944
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_thumbnail.webp",
+            "size": 4856
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_thumbnail.jpg",
+            "size": 5681
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_small.avif",
+            "size": 14868
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_small.webp",
+            "size": 12442
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_small.jpg",
+            "size": 15781
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_medium.avif",
+            "size": 34586
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_medium.webp",
+            "size": 32502
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_medium.jpg",
+            "size": 43768
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_large.avif",
+            "size": 58440
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_large.webp",
+            "size": 57430
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_large.jpg",
+            "size": 81389
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_hero.avif",
+            "size": 100649
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_hero.webp",
+            "size": 102564
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_hero.jpg",
+            "size": 160839
+          }
+        }
+      }
+    },
+    "flocken_quiz_valpar_socialisering_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_valpar_socialisering_card.jpeg",
+      "originalDimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "processedAt": "2026-02-18T11:31:43.757Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_thumbnail.avif",
+            "size": 5859
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_thumbnail.webp",
+            "size": 4378
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_thumbnail.jpg",
+            "size": 5536
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_small.avif",
+            "size": 15614
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_small.webp",
+            "size": 12254
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_small.jpg",
+            "size": 15651
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_medium.avif",
+            "size": 33302
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_medium.webp",
+            "size": 31444
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_medium.jpg",
+            "size": 43083
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_large.avif",
+            "size": 53288
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_large.webp",
+            "size": 51124
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_large.jpg",
+            "size": 78485
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1376,
+            "height": 768
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.avif",
+            "size": 90425
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.webp",
+            "size": 90852
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.jpg",
+            "size": 152873
           }
         }
       }
