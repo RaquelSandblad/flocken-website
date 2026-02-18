@@ -1,8 +1,27 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { QuizCard } from '@/components/quiz/QuizCard';
 import { QuizLayout } from '@/components/quiz/QuizLayout';
 import { getQuizBrandStyle } from '@/lib/quiz/brand';
 import { getAllQuizzes } from '@/lib/quiz/loader';
+
+export const metadata: Metadata = {
+  title: 'Flocken Quiz – Testa din hundkunskap',
+  description: 'Fyra quiz om hundsport, raser, historia och kroppsspråk. 10 frågor, 2–3 minuter, en badge.',
+  openGraph: {
+    title: 'Flocken Quiz – Testa din hundkunskap',
+    description: 'Fyra quiz. Välj ditt ämne och se hur du klarar dig.',
+    url: 'https://quiz.flocken.info',
+    images: [
+      {
+        url: '/assets/flocken/generated/flocken_quiz_hero_large.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'Flocken Quiz – Hundquiz på 2 minuter',
+      },
+    ],
+  },
+};
 
 export default async function QuizLibraryPage() {
   const quizzes = await getAllQuizzes();

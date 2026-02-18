@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { QuizLayout } from '@/components/quiz/QuizLayout';
 import { ResultCard } from '@/components/quiz/ResultCard';
@@ -8,6 +9,41 @@ import { getResultMeta } from '@/lib/quiz/score';
 interface QuizResultPageProps {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ score?: string; answers?: string }>;
+}
+
+export async function generateMetadata({ params, searchParams }: QuizResultPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { score: rawScore } = await searchParams;
+  const quiz = await getQuizBySlug(slug);
+  if (!quiz) return {};
+
+  const score = Math.min(Math.max(Number.parseInt(rawScore ?? '0', 10) || 0, 0), 10);
+  const { badge } = getResultMeta(score);
+
+  const ogImage = quiz.images?.cardKey
+    ? `/assets/flocken/generated/${quiz.images.cardKey}_large.jpg`
+    : '/assets/flocken/generated/flocken_quiz_hero_large.jpg';
+
+  const title = `${score}/10 – ${badge}`;
+  const description = `Jag fick "${badge}" på quizet "${quiz.title}". Klarar du dig bättre?`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://quiz.flocken.info/${slug}`,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 675,
+          alt: quiz.images?.cardAlt ?? quiz.title,
+        },
+      ],
+    },
+  };
 }
 
 function parseScore(value: string | undefined): number {
