@@ -81,10 +81,11 @@ export default async function QuizLibraryPage() {
           </div>
           <div className="min-w-0">
             <p className="text-sm font-bold text-flocken-brown">Upptäck Flocken</p>
-            <p className="mt-0.5 text-sm text-flocken-brown/70">Appen för ett enklare liv som hundägare. Hitta hundsällskap, hundpassning och karta med hundvänliga caféer.</p>
+            <p className="mt-0.5 text-sm text-flocken-brown/70">Appen för alla hundägare. Hitta andra hundar, trygga hundvakter och platser där ni är välkomna.</p>
             <p className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-flocken-olive group-hover:underline">
-              Ladda ner gratis
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-3.5">
+              Ladda ner
+              <span className="font-normal text-flocken-gray">(appen är gratis)</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-3.5 text-flocken-olive">
                 <path fillRule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
               </svg>
             </p>
