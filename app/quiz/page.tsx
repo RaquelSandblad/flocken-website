@@ -36,7 +36,7 @@ export default async function QuizLibraryPage() {
               Hundquiz på 2 minuter
             </h1>
             <p className="mt-3 text-lg leading-relaxed text-flocken-brown">
-              Testa din hundkunskap, få din badge och upptäck hur Flocken kan göra ditt hundliv enklare.
+              Testa din hundkunskap, få din badge och utmana dina vänner.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-flocken-brown shadow-soft">
@@ -46,10 +46,6 @@ export default async function QuizLibraryPage() {
               <div className="flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-flocken-brown shadow-soft">
                 <span>⏱️</span>
                 <span>2–3 min</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-flocken-brown shadow-soft">
-                <span>🏆</span>
-                <span>Badge direkt</span>
               </div>
             </div>
           </div>
@@ -78,23 +74,29 @@ export default async function QuizLibraryPage() {
         </div>
       </section>
 
-      {/* Why Section */}
-      <section className="mt-8 rounded-xl bg-white p-6 shadow-soft">
-        <h2 className="text-lg font-bold text-flocken-brown">Varför göra quizen?</h2>
-        <ul className="mt-3 space-y-2 text-sm text-flocken-gray">
-          <li className="flex items-start gap-2">
-            <span className="text-flocken-olive">✓</span>
-            <span>Testa din hundkunskap på ett roligt sätt</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-flocken-olive">✓</span>
-            <span>Få din personliga badge att dela</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-flocken-olive">✓</span>
-            <span>Upptäck hur Flocken kan hjälpa dig träffa andra hundägare</span>
-          </li>
-        </ul>
+      {/* Flocken App Promo */}
+      <section className="mt-8">
+        <a
+          href="https://flocken.info/funktioner"
+          className="group flex items-center gap-4 rounded-xl border border-flocken-warm/40 bg-gradient-to-br from-flocken-sand to-flocken-cream p-4 shadow-soft transition-shadow hover:shadow-card sm:gap-5 sm:p-5"
+        >
+          <div className="shrink-0">
+            <Image
+              src="/assets/flocken/flocken_logo_clay.png"
+              alt="Flocken – appen för hundägare"
+              width={56}
+              height={56}
+              className="rounded-xl"
+            />
+          </div>
+          <div className="min-w-0">
+            <p className="text-sm font-bold text-flocken-brown">Upptäck Flocken</p>
+            <p className="mt-0.5 text-sm text-flocken-gray">Appen för hundägare – hitta hundsällskap, passa hundar och mer.</p>
+            <p className="mt-1.5 text-sm font-semibold text-flocken-olive group-hover:underline">
+              Ladda ner gratis →
+            </p>
+          </div>
+        </a>
       </section>
     </QuizLayout>
   );
