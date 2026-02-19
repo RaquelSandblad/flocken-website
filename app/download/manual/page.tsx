@@ -42,6 +42,13 @@ export default function ManualDownloadPage() {
             Google Play
           </a>
         </div>
+
+        <p className="text-sm text-flocken-gray">
+          Vill du veta mer först?{' '}
+          <Link href="/funktioner" className="font-semibold text-flocken-olive underline underline-offset-2 hover:text-flocken-male">
+            Läs mer om Flocken
+          </Link>
+        </p>
       </div>
     </main>
   );
