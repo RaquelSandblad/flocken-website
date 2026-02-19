@@ -1,0 +1,161 @@
+{
+  "slug": "valpar_socialisering",
+  "title": "Klarar du vårt valp-quiz?",
+  "description": "De flesta vet att valpar ska socialiseras tidigt. Men vet du varför fönstret faktiskt stänger, och vad som händer om man missar det? Svaren är mer konkreta än man tror.",
+  "images": {
+    "cardKey": "flocken_quiz_valpar_socialisering_card",
+    "cardAlt": "Valpar som leker och nosas med varandra."
+  },
+  "questions": [
+    {
+      "id": "valpar-1",
+      "type": "fact",
+      "question": "Valpar lär sig kontrollera hur hårt de biter under lek med kullsyskon. Vad kan hända om valpen skiljs från kullen för tidigt?",
+      "options": [
+        "Valpen biter aldrig lika hårt eftersom tiken redan lärt den att dämpa bettet",
+        "Bettkontroll är medfött och påverkas inte av hur tidigt valpen separeras",
+        "Valpen biter hårdare men lär sig snabbt av sin nya familj",
+        "Den kan ha svårare att kontrollera bettstyrkan som äldre"
+      ],
+      "correctIndex": 3,
+      "explanation": "Bettkontroll tränas framför allt genom kullens naturliga lek. Kullsyskon skriker till och avbryter leken när bett gör ont. Människor kan träna om valpen till viss del, men kvaliteten och mängden feedback från kullsyskon är svår att ersätta.",
+      "sources": ["Scott & Fuller (1965)", "Overall (2013)"],
+      "factId": "valpar_bettkontroll_separation"
+    },
+    {
+      "id": "valpar-2",
+      "type": "fact",
+      "question": "Hur länge håller socialiseringsperioden, den tid då valpar lättast lär sig acceptera nya djur, människor och miljöer?",
+      "options": [
+        "0–4 veckor",
+        "3–12 veckor",
+        "6–16 veckor",
+        "8–20 veckor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Perioden ungefär 3–12 veckor är den mest kritiska för social inlärning. Från runt 3 veckor öppnar ögon och öron och valpen börjar utforska världen aktivt. Runt 12 veckor stänger fönstret gradvis och nya saker och varelser blir svårare att normalisera.",
+      "sources": ["Scott & Fuller (1965)", "Freedman, King & Elliot (1961)"],
+      "factId": "valpar_socialiseringsperiod_timing"
+    },
+    {
+      "id": "valpar-3",
+      "type": "fact",
+      "question": "Många väntar med att ta valpen till hundrastgård tills alla vaccin är klara. Vad visar forskning och WSAVA:s riktlinjer om det?",
+      "options": [
+        "Socialiseringsperioden stänger runt 12 veckor, så väntar man tills vaccinserien är klar missar man fönstret",
+        "Det är rätt att vänta. Full vaccination ger bästa skyddet och socialisering kan börja direkt efteråt",
+        "Valpen bör undvika alla nya miljöer tills den är 16 veckor och vaccinserien är klar",
+        "WSAVA rekommenderar att vänta exakt 2 veckor efter sista vaccinet"
+      ],
+      "correctIndex": 0,
+      "explanation": "WSAVA:s riktlinjer är tydliga: risken med att missa socialiseringsperioden är större än smittrisken i kontrollerade miljöer. Valpar bör exponeras för nya intryck i lågriskmiljöer redan under vaccinationsperioden, till exempel den egna gården, friska vänners vuxna hundar eller lugna miljöer utan hög hunddensitet.",
+      "sources": ["WSAVA Vaccination Guidelines", "Overall (2013)"],
+      "factId": "valpar_vaccination_socialisering_konflikt"
+    },
+    {
+      "id": "valpar-4",
+      "type": "fact",
+      "question": "Det finns en period tidigt i valpens liv då negativa upplevelser kan sätta extra djupa spår. Ungefär när infaller den?",
+      "options": [
+        "Direkt vid födseln, dagarna 1–7",
+        "Under 4–6 veckorsfasen då motoriken tränas",
+        "Runt 8–11 veckor",
+        "Vid 14–16 veckor när hormonsystemet mognar"
+      ],
+      "correctIndex": 2,
+      "explanation": "Forskning pekar på en rädsleperiod runt 8–11 veckor då ett enstaka skrämmande möte kan ge varaktig reaktion. Det är också just den åldern de flesta valpar hämtas av sina nya ägare, vilket är ett dåligt sammanträffande om man inte är medveten om det.",
+      "sources": ["Scott & Fuller (1965)", "Overall (2013)"],
+      "factId": "valpar_radslekanslighetsfas"
+    },
+    {
+      "id": "valpar-5",
+      "type": "fact",
+      "question": "Hur gammal måste en valp vara innan den permanent får lämna tiken, enligt Jordbruksverkets föreskrifter i Sverige?",
+      "options": [
+        "6 veckor",
+        "8 veckor",
+        "10 veckor",
+        "12 veckor"
+      ],
+      "correctIndex": 1,
+      "explanation": "Jordbruksverkets föreskrifter (SJVFS 2020:8) sätter 8 veckor som minimum. Det betyder att en uppfödare inte får sälja eller omplacera en valp permanent före dess. Det stämmer med forskning som visar att separation före 8 veckor ökar risken för beteendeproblem senare i livet, bland annat visat av Appleby et al. (2002).",
+      "sources": ["Jordbruksverket SJVFS 2020:8", "Appleby et al. (2002)"],
+      "factId": "valpar_8veckorslag"
+    },
+    {
+      "id": "valpar-6",
+      "type": "fact",
+      "question": "Tänk dig en valp som under socialiseringsperioden bara träffat katter och inte en enda hund. Vad visade forskning om sådana valpar som vuxna?",
+      "options": [
+        "De lärde sig katternas beteenden men föredrog ändå hundar som sällskap",
+        "De uppvisade rädsla för katter men socialiserades snabbt om de fick rätt hjälp",
+        "De sökte sällskap av katter snarare än hundar",
+        "De visade ingen preferens eftersom artidentitet sätts genetiskt och inte av miljön"
+      ],
+      "correctIndex": 2,
+      "explanation": "Vilken art en valp identifierar sig med formas framför allt under socialiseringsperioden, inte enbart av generna. Det fungerar åt båda håll: kattungar som socialiserats med hundar söker hundsällskap som vuxna. Det är ett av de tydligaste bevisen för hur stark den här perioden faktiskt är.",
+      "sources": ["Scott & Fuller (1965)", "Freedman, King & Elliot (1961)"],
+      "factId": "valpar_artidentifikation"
+    },
+    {
+      "id": "valpar-7",
+      "type": "fact",
+      "question": "Hur kan tikens stressnivå under dräktigheten och de första veckorna påverka valparna?",
+      "options": [
+        "Valparna kan bli mer stressreaktiva och känsliga inför nya saker som vuxna",
+        "Det påverkar inte valparna direkt eftersom beteende formas av miljön senare",
+        "Tikens stress gör valparna mer vaksamma och snabbare att lära sig",
+        "Stressade tikar producerar kortare digivningsperioder vilket påverkar vikt men inte beteende"
+      ],
+      "correctIndex": 0,
+      "explanation": "Stresshormoner hos tiken kan påverka fosterna och de nyfödda valparna och ge ökad benägenhet till förhöjd stressreaktivitet senare i livet. Det är en av anledningarna till att tikens välmående och närmiljö ses som en aktiv del av uppfödararbetet.",
+      "sources": ["Overall (2013)", "Serpell (red.), The Domestic Dog"],
+      "factId": "valpar_tik_stress_reaktivitet"
+    },
+    {
+      "id": "valpar-8",
+      "type": "fact",
+      "question": "Valpar som inte träffat en enda människa under socialiseringsperioden. Vad visade forskning om dem som vuxna?",
+      "options": [
+        "De sökte mer mänsklig kontakt som vuxna, som att kompensera för vad de missat",
+        "De var svårare att träna men löste problem mer självständigt",
+        "De var kraftigt rädda för människor och svåra att tämja",
+        "De socialiserades relativt snabbt med rätt metodik och tålamod"
+      ],
+      "correctIndex": 2,
+      "explanation": "Isolerade valpar uppvisade starka rädsloreaktioner mot människor som vuxna. Reaktionerna var svåra att helt vända, även med mycket träning. Det är det starkaste argumentet för tidig och positiv mänsklig kontakt redan hos uppfödaren.",
+      "sources": ["Scott & Fuller (1965)", "Freedman, King & Elliot (1961)"],
+      "factId": "valpar_isolering_manniskokontakt"
+    },
+    {
+      "id": "valpar-9",
+      "type": "fact",
+      "question": "Vad lär valpar sig av kullsyskonen som är svårt att lära ut på annat sätt?",
+      "options": [
+        "Grundläggande lydnad som att följa kommandon och sin ägares rörelser",
+        "Rangordning och hur de ska bete sig mot sin framtida ägare",
+        "Att identifiera och svara på hot i omgivningen",
+        "Att kommunicera med signaler, hantera frustration och dämpa bettstyrkan"
+      ],
+      "correctIndex": 3,
+      "explanation": "Kullinteraktionen ger valpar en unik träning i hundarnas eget kommunikationsspråk: signaler för lek, stopp och socialt utbyte, som när en valp fryser, vänder bort blicken eller går därifrån. Den grunden är svår att bygga upp i en miljö med bara människor.",
+      "sources": ["Scott & Fuller (1965)", "Serpell (red.), The Domestic Dog"],
+      "factId": "valpar_kullinteraktion_larande"
+    },
+    {
+      "id": "valpar-10",
+      "type": "fact",
+      "question": "En ny hundägare hämtar sin valp vid 8 veckor. En vecka senare verkar valpen plötsligt rädd för saker den nyss tyckte var ok. Vad är det troligast?",
+      "options": [
+        "Valpen är sjuk och behöver till veterinären",
+        "Byte av miljö har orsakat en permanent tillbakagång i socialisering",
+        "Det är troligen en rädsleperiod där negativa upplevelser fastnar lättare just nu",
+        "Valpen uttrycker separationsångest och behöver mer tid ensam"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rädsleperioden runt 8–11 veckor är välkänd men underskattas av många hundägare. Det gäller att inte tvinga på valpen skrämmande möten just nu, men heller inte undvika allting. Positiva upplevelser är extra värdefulla nu, som att låta valpen titta på nya saker på avstånd och själv gå fram när den är redo.",
+      "sources": ["Scott & Fuller (1965)", "Overall (2013)"],
+      "factId": "valpar_radslefas_nytt_hem"
+    }
+  ]
+}
