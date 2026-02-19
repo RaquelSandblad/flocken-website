@@ -64,20 +64,10 @@ export default async function QuizLibraryPage() {
         </div>
       </section>
 
-      {/* Quiz Grid */}
-      <section>
-        <h2 className="mb-4 text-xl font-bold text-flocken-brown">Välj ditt quiz</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {quizzes.map((quiz) => (
-            <QuizCard key={quiz.slug} quiz={quiz} />
-          ))}
-        </div>
-      </section>
-
       {/* Flocken App Promo */}
-      <section className="mt-8">
+      <section className="mb-8">
         <a
-          href="https://flocken.info/funktioner"
+          href="https://flocken.info/download"
           className="group flex items-center gap-4 rounded-xl border border-flocken-warm/40 bg-gradient-to-br from-flocken-sand to-flocken-cream p-4 shadow-soft transition-shadow hover:shadow-card sm:gap-5 sm:p-5"
         >
           <div className="shrink-0">
@@ -91,12 +81,25 @@ export default async function QuizLibraryPage() {
           </div>
           <div className="min-w-0">
             <p className="text-sm font-bold text-flocken-brown">Upptäck Flocken</p>
-            <p className="mt-0.5 text-sm text-flocken-gray">Appen för hundägare – hitta hundsällskap, passa hundar och mer.</p>
-            <p className="mt-1.5 text-sm font-semibold text-flocken-olive group-hover:underline">
-              Ladda ner gratis →
+            <p className="mt-0.5 text-sm text-flocken-brown/70">Appen för ett enklare liv som hundägare. Hitta hundsällskap, hundpassning och karta med hundvänliga caféer.</p>
+            <p className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-flocken-olive group-hover:underline">
+              Ladda ner gratis
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-3.5">
+                <path fillRule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+              </svg>
             </p>
           </div>
         </a>
+      </section>
+
+      {/* Quiz Grid */}
+      <section>
+        <h2 className="mb-4 text-xl font-bold text-flocken-brown">Välj ditt quiz</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {quizzes.map((quiz) => (
+            <QuizCard key={quiz.slug} quiz={quiz} />
+          ))}
+        </div>
       </section>
     </QuizLayout>
   );
