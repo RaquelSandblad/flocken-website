@@ -119,7 +119,8 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
           )}
 
           <p className="mt-2 text-xs text-flocken-gray">
-            Inga spamutskick. Du kan avregistrera dig när som helst.
+            Inga spamutskick. Du kan avregistrera dig när som helst.{' '}
+            <a href="/integritetspolicy" className="underline hover:text-flocken-brown">Integritetspolicy</a>.
           </p>
       </div>
     </div>

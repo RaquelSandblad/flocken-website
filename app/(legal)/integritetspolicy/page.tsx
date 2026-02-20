@@ -141,6 +141,17 @@ export default function IntegritetspolicyPage() {
         <li><strong>Hundrastgårdar:</strong> platser du markerar som favorit eller rekommenderar</li>
       </ul>
       
+      <h3 id="uppgifter-quiz">2.4a E-postadress via quiz</h3>
+      <p>
+        På quiz.flocken.info erbjuder vi möjligheten att frivilligt lämna sin e-postadress för att ta emot quiz och notifieringar om nya quiz. Uppgiften samlas in via ett formulär och registreringen sker genom ett aktivt val.
+      </p>
+      <ul>
+        <li>E-postadress (obligatorisk för att registrera sig)</li>
+      </ul>
+      <p>
+        Du kan när som helst avregistrera dig via länken i varje utskick.
+      </p>
+
       <h3 id="uppgifter-kommunikation">2.5 Kommunikation mellan användare</h3>
       <p>
         Flocken erbjuder möjlighet till direkt kommunikation mellan användare via privat chatt. Meddelanden är endast synliga för de konton som deltar i konversationen.
@@ -251,6 +262,17 @@ export default function IntegritetspolicyPage() {
         <strong>Rättslig grund:</strong> Berättigat intresse (artikel 6.1 f) – vårt berättigade intresse av att utveckla och förbättra våra tjänster.
       </p>
       
+      <h3 id="ändamål-quiz-epost">4.4a Quiz och e-postnotifieringar</h3>
+      <p>
+        För användare som frivilligt registrerat sin e-postadress via quiz.flocken.info skickar vi quiz och notifieringar om nya quiz. Inga kommersiella erbjudanden eller annonser skickas utan uttryckligt samtycke.
+      </p>
+      <p>
+        Du kan när som helst avregistrera dig via länken i varje utskick eller genom att kontakta oss.
+      </p>
+      <p>
+        <strong>Rättslig grund:</strong> Samtycke (artikel 6.1 a GDPR) – du registrerar dig aktivt och kan när som helst återkalla ditt samtycke.
+      </p>
+
       <h3 id="ändamål-marknadsföring">4.5 Marknadsföring och konverteringsmätning</h3>
       <p>
         Flocken använder mätning kopplad till marknadsföring på vår webbplats (flocken.info) för att förstå om annonser leder till besök, installation, registrering eller annan användaraktivitet.
@@ -327,6 +349,7 @@ export default function IntegritetspolicyPage() {
         <li><strong>Google Maps API</strong> – för kartfunktioner och geokodning (t.ex. stad eller postnummerområde)</li>
         <li><strong>Google (t.ex. Google Analytics och Firebase)</strong> – för analys och statistik</li>
         <li><strong>Tekniska tjänsteleverantörer</strong> för drift, säkerhet och mätning</li>
+        <li><strong>MailerSend</strong> – för utskick av e-post till användare som registrerat sig via quiz.flocken.info. MailerSend är etablerat inom EU och behandlar personuppgifter i enlighet med GDPR.</li>
         <li><strong>Marknadsföringsplattformar</strong> (t.ex. Google Ads eller Meta), i den mån marknadsföringsmätning aktiveras och är tillåten enligt lag</li>
         <li><strong>Betalningsleverantörer</strong> (om vi i framtiden erbjuder betalfunktioner direkt i appen)</li>
         <li><strong>Hosting och infrastruktur</strong> – där appen och databasservrar körs</li>
