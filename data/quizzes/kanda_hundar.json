@@ -56,7 +56,7 @@
     {
       "id": "kanda-4",
       "type": "fact",
-      "question": "Endal, en labrador retriever i Storbritannien, var servicehund till en krigsinneskadad man. En dag slog en bil till rullstolen och mannen föll medvetslös på marken. Vad gjorde Endal?",
+      "question": "Endal, en labrador retriever i Storbritannien, var servicehund till en krigsskadad man. En dag slog en bil till rullstolen och mannen föll medvetslös på marken. Vad gjorde Endal?",
       "options": [
         "Han lade sig intill mannen och höll honom varm tills ambulansen kom",
         "Han la mannen i framstupa sidoläge, drog fram filten, hämtade telefonen och gick sedan till ett hotell för att larma",
@@ -104,7 +104,7 @@
       "question": "Pickles, en svartvit collieblandras, gick in i brittisk historia 1966. Vad hittade han?",
       "options": [
         "En försvunnen brittisk militärattaché som legat skadad i tre dagar",
-        "En obdetonerad bomb under en bostadsgata i södra London",
+        "En odetonerad bomb under en bostadsgata i södra London",
         "Den stulna VM-pokalen i fotboll, månader innan VM-finalen i England",
         "En påse med stulet guld från ett av Londons mest uppmärksammade rånfall"
       ],
@@ -136,7 +136,7 @@
         "Han fick de flesta rösterna för bästa skådespelare, men Academy höll en ny omröstning och valde en människa",
         "Han nominerades men uteslöts när filmbranschen protesterade mot att en hund fick tävla",
         "Han vann ett hederspris för att ha räddat filmbolagets ekonomi under en kris",
-        "Han fick flest röster men priset gick till Emil Jannings som kompromiss efter omröstning"
+        "Han fick flest röster men diskvalificerades – djur hade aldrig officiellt ingått i nomineringskriterierna"
       ],
       "correctIndex": 0,
       "explanation": "Enligt välkänd Hollywood-tradition fick Rin Tin Tin flest röster för bästa skådespelare. Academy:s ledning, bland annat Louis B. Mayer, ansåg att priset inte kunde gå till en hund och höll en ny omröstning med enbart mänskliga kandidater. Emil Jannings vann. Historien är väldokumenterad men tekniskt sett inte officiellt bekräftad av Academy.",
