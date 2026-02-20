@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { ProgressIndicator } from '@/components/quiz/ProgressIndicator';
 import { QuestionCard } from '@/components/quiz/QuestionCard';
 import { getScoreBucket } from '@/lib/quiz/score';
@@ -96,6 +97,19 @@ export function QuizPlayer({ quiz }: QuizPlayerProps) {
 
   return (
     <div className="space-y-4">
+      {currentIndex === 0 && quiz.images?.cardKey && (
+        <div className="overflow-hidden rounded-[var(--quiz-radius-card)] shadow-card">
+          <Image
+            src={`/assets/flocken/generated/${quiz.images.cardKey}_medium.jpg`}
+            alt={quiz.images.cardAlt ?? quiz.title}
+            width={800}
+            height={450}
+            className="w-full object-cover"
+            priority
+          />
+        </div>
+      )}
+
       <ProgressIndicator current={currentIndex + 1} total={totalQuestions} />
 
       <QuestionCard

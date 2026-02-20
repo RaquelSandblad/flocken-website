@@ -11,7 +11,7 @@
     {
       "id": "kanda-1",
       "type": "fact",
-      "question": "Hachikō, en akita från Japan, väntar fortfarande på sin ägare vid Shibuya Station. Vad hände egentligen?",
+      "question": "Hachikō, en akita från Japan, väntade varje dag på sin ägare vid Shibuya Station. Vad hände egentligen?",
       "options": [
         "Ägaren försvann på en resa och Hachikō väntade tills han hittades",
         "Ägaren dog på jobbet och Hachikō väntade vid stationen varje dag i nästan tio år",
@@ -58,10 +58,10 @@
       "type": "fact",
       "question": "Endal, en labrador retriever i Storbritannien, var servicehund till en krigsinneskadad man. En dag slog en bil till rullstolen och mannen föll medvetslös på marken. Vad gjorde Endal?",
       "options": [
-        "Han stannade hos mannen och skällde utan avbrott tills folk kom",
+        "Han lade sig intill mannen och höll honom varm tills ambulansen kom",
         "Han la mannen i framstupa sidoläge, drog fram filten, hämtade telefonen och gick sedan till ett hotell för att larma",
-        "Han sprang till närmaste grannar och ledde dem tillbaka",
-        "Han tryckte upprepade gånger på nödknappen på rullstolen"
+        "Han drog i mannens kläder tills en förbipasserande stannade och hjälpte till",
+        "Han hittade en mobiltelefon i rullstolens ficka och tryckte på knappar tills ett samtal kopplades upp"
       ],
       "correctIndex": 1,
       "explanation": "Endal utförde hela sekvensen på eget initiativ. Ingen hade tränat honom specifikt för det scenariot. Han fick PDSA Gold Medal, Storbritanniens högsta utmärkelse för djur, och dokumenterades av hundratals filmteam från hela världen. Han utsågs också till Dog of the Millennium.",
@@ -71,30 +71,30 @@
     {
       "id": "kanda-5",
       "type": "fact",
-      "question": "Laika blev 1957 det första levande djuret i omloppsbana kring jorden. I vilket rymdfordon sköts hon upp?",
+      "question": "Asterix-hunden Idéfix heter något helt annat i de engelska utgåvorna. Vad?",
       "options": [
-        "Sputnik 1",
-        "Vostok 1",
-        "Sputnik 2",
-        "Mir"
+        "Fidelix",
+        "Treepaw",
+        "Dogmatix",
+        "Fixie"
       ],
       "correctIndex": 2,
-      "explanation": "Laika sköts upp i Sputnik 2, drygt en månad efter att Sputnik 1 blivit den första satelliten i omloppsbana. Vostok 1 var Jurij Gagarins farkost fyra år senare. Laika var en gatuhund från Moskva.",
-      "sources": ["Soviet space program archives", "NASA historical records"],
-      "factId": "kanda_laika_sputnik2"
+      "explanation": "I engelska utgåvor heter han Dogmatix. Det franska originalnamnet Idéfix är hämtat från 'idée fixe' – en tanke man inte kan släppa – vilket perfekt beskriver hundens besatthet vid trädfällningar. Den ordvitsen försvinner helt i den engelska översättningen. På svenska behöll man Idéfix.",
+      "sources": ["Goscinny & Uderzo – Asterix-serien", "Hanna-Barbera production history"],
+      "factId": "kanda_idefix_namn"
     },
     {
       "id": "kanda-6",
       "type": "fact",
-      "question": "Balto fick en staty i Central Park och en animerad film. Men en annan hund ledde den längsta och farligaste etappen av serumtransporten till Nome 1925. Vilken?",
+      "question": "Balto, en siberian husky, fick en staty i Central Park och en animerad film. Vad är hans berömda insats?",
       "options": [
-        "Rex",
-        "Nome",
-        "Kasen",
-        "Togo"
+        "Han räddade sina förare från en lavin under en polarexpedition",
+        "Han körde det längsta och farligaste segmentet av en nödtransport i Alaska",
+        "Han ledde sista etappen av en nödtransport med difteriserum till Nome 1925",
+        "Han hittades ensam i en snöstorm och utbildades till ledarhund på rekordtid"
       ],
-      "correctIndex": 3,
-      "explanation": "Togo, en siberian husky tränad av Leonhard Seppala, ledde det längsta och svåraste segmentet av transporten, nära 400 km i iskallt väder. Balto fick äran eftersom han ledde den sista etappen in till Nome. Togos insats uppmärksammades mer brett först efter en film 2019.",
+      "correctIndex": 2,
+      "explanation": "Balto ledde hundspannet den sista etappen in till Nome i februari 1925 under en difterisepidemi. Det var en riktig insats – men det var Togo, en annan husky tränad av Leonhard Seppala, som körde den längsta och farligaste etappen, nära 400 km. Balto fick staty och film. Togo fick inget – tills en film 2019 äntligen lyfte hans historia.",
       "sources": ["Nome serum run 1925 historical records", "Seppala memoirs"],
       "factId": "kanda_togo_balto"
     },
@@ -146,12 +146,12 @@
     {
       "id": "kanda-10",
       "type": "fact",
-      "question": "Den officiella historien sa länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
+      "question": "Den officiella versionen hävdade länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
       "options": [
         "Laika dog av överhettning inom några timmar efter uppskjutningen",
         "Laika sövdes ner efter tre dagar som planerat men kapseln nådde aldrig jorden",
         "Signalerna upphörde direkt vid uppskjutningen och orsaken förblir okänd",
-        "Laika landade säkert och hittades levande av bönder i Sibirien"
+        "Laika dog av rädsla och chock under uppskjutningen, innan kapseln nått omloppsbana"
       ],
       "correctIndex": 0,
       "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",

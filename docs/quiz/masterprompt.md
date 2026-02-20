@@ -238,6 +238,48 @@ Kommentar: [Tillför något nytt, eller lämna tomt]
 
 ---
 
+## Vanliga misstag att undvika
+
+Dessa mönster har dykt upp i faktisk feedback och ska aktivt undvikas:
+
+### 1. Fel tempus för historiska personer och händelser
+Använd aldrig nutid om något som är avslutat. En hund som dog 1935 "väntade" – inte "väntar". En spion som fångades "fångades" – inte "fångas". Kontrollera varje fråga: är händelsen historisk? Då ska allt stå i dåtid.
+
+❌ "Hachikō väntar fortfarande på sin ägare."
+✅ "Hachikō väntade varje dag på sin ägare."
+
+### 2. Wow-gap – alternativens "imponerings-nivå" måste matcha rätt svar
+Om rätt svar beskriver en komplex, imponerande sekvens av handlingar, ska felalternativen vara lika konkreta och specifika – inte enbetingshandlingar. Stor skillnad i detaljrikedom avslöjar rätt svar utan att kräva kunskap.
+
+❌ Rätt svar: "Han la mannen i sidoläge, drog fram filten, hämtade telefonen och gick till hotellet."
+   Felsvar: "Han skällde tills folk kom." / "Han tryckte på en knapp."
+✅ Felsvar: "Han lade sig intill mannen och höll honom varm tills ambulansen kom." / "Han drog i kläderna tills en förbipasserande stannade."
+
+### 3. Frågestrukturen pekar ut svaret
+Skriv aldrig en "vilket av dessa"-fråga där bara ett alternativ logiskt uppfyller premissen. Då behövs ingen kunskap – bara elimination.
+
+❌ "Vilket av dessa seriehundsnamn är faktiskt ett franskt uttryck?" (Idéfix är uppenbart det enda franska namnet)
+✅ "Asterix-hunden Idéfix har ett namn med en dold ordvits. Vad betyder 'idée fixe' på svenska?" (kräver att man faktiskt vet)
+
+Test: Kan man svara rätt utan att kunna faktan, bara genom att läsa frågan noggrant? Om ja – skriv om.
+
+### 4. Okänt egennamn som frågans startpunkt
+Börja inte med det okända och nämna det kända som parentes. Starta med det kända namnet eller händelsen, bygg förståelse, och lägg twisten i rätt svar eller förklaring.
+
+❌ "En annan hund ledde den längsta etappen av serumtransporten till Nome. Balto fick äran. Vilken hund var det egentligen?"
+✅ "Balto fick staty i Central Park och en animerad film. Vad är hans berömda insats?" (Togo-twisten lever i förklaringen)
+
+Generell regel: Om du skriver en fråga och en rimlig läsare kan fråga "vad är det?" om ett ord i frågetexten – ge kortfattad kontext eller byt ansats.
+
+### 5. Alternativ som logiskt motsäger frågans premiss
+Om frågans formulering implicit anger att något är sant (t.ex. att en hund dog), ska inget felalternativ direkt neka det. Det är inte en trovärdig distraktör – det är en logisk omöjlighet givet premissen.
+
+❌ Fråga: "Vad visade dokument om Laikas öde?" (frågan signalerar att hon dog)
+   Felsvar: "Laika hittades levande av bönder i Sibirien." (kontradiktoriskt)
+✅ Felsvar: "Laika dog av rädsla och chock under uppskjutningen, innan kapseln nått omloppsbana." (plausibelt, men fel)
+
+---
+
 ## Kvalitetskoll innan leverans
 
 Gå igenom dessa punkter innan du lämnar ifrån dig frågorna:
@@ -249,3 +291,7 @@ Gå igenom dessa punkter innan du lämnar ifrån dig frågorna:
 - [ ] Tillför varje kommentar något utöver rätt svar?
 - [ ] Varierar svårighetsgraden genom quizzen?
 - [ ] Är inga två frågor i rad av samma typ?
+- [ ] Är alla händelser i korrekt tempus – dåtid för historiska fakta, nutid bara om det stämmer?
+- [ ] Kan rätt svar avslöjas via elimination utan faktakunskap? Om ja – skriv om frågan.
+- [ ] Är alternativens specificitet och imponeringsgrad på samma nivå som rätt svar?
+- [ ] Är alla alternativ logiskt kompatibla med frågans premiss?
