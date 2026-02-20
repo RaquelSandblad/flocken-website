@@ -11,17 +11,17 @@
     {
       "id": "kanda-1",
       "type": "fact",
-      "question": "Lassie är kanske världens mest kända filmhund. Vilken ras föreställer hon?",
+      "question": "Hachikō, en akita från Japan, väntar fortfarande på sin ägare vid Shibuya Station. Vad hände egentligen?",
       "options": [
-        "Border collie",
-        "Rough collie",
-        "Schäfer",
-        "Golden retriever"
+        "Ägaren försvann på en resa och Hachikō väntade tills han hittades",
+        "Ägaren dog på jobbet och Hachikō väntade vid stationen varje dag i nästan tio år",
+        "Hachikō tappades bort vid stationen och hittade aldrig hem",
+        "Ägaren emigrerade och Hachikō väntade tills han återvände fem år senare"
       ],
       "correctIndex": 1,
-      "explanation": "Lassie är en rough collie, inte border collie som många tror. Skillnaden är framför allt pälsen och storleken. Rough collien är den mer yviga, längre varianten som Lassie populariserade globalt.",
-      "sources": ["Eric Knight – Lassie Come-Home (1940)", "Hollywood Walk of Fame"],
-      "factId": "kanda_lassie_ras"
+      "explanation": "Hachikō följde varje dag sin ägare Hidesaburo Ueno till Shibuya Station. När Ueno dog på jobbet 1925 fortsatte Hachikō att gå dit varje dag till sin egen död 1935. Statyn vid stationen är i dag en av Tokyos mest besökta mötesplatser.",
+      "sources": ["Hidesaburo Ueno memorial records", "Shibuya Station historical archive"],
+      "factId": "kanda_hachiko_historia"
     },
     {
       "id": "kanda-2",
@@ -41,20 +41,50 @@
     {
       "id": "kanda-3",
       "type": "fact",
-      "question": "Hachikō, en akita från Japan, väntar fortfarande på sin ägare vid Shibuya Station. Vad hände egentligen?",
+      "question": "En border collie vid namn Chaser tränades av en psykologiprofessor i fyra timmar om dagen i tre år. Vad klarade hon till slut?",
       "options": [
-        "Ägaren försvann på en resa och Hachikō väntade tills han hittades",
-        "Ägaren dog på jobbet och Hachikō väntade vid stationen varje dag i nästan tio år",
-        "Hachikō tappades bort vid stationen och hittade aldrig hem",
-        "Ägaren emigrerade och Hachikō väntade tills han återvände fem år senare"
+        "Att hålla isär namnen på 1 022 unika föremål",
+        "Att följa 47 kommandon på tre olika språk",
+        "Att lösa enkla matteproblem med tassarna",
+        "Att läsa och matcha skrivna lappar med rätt föremål"
       ],
-      "correctIndex": 1,
-      "explanation": "Hachikō följde varje dag sin ägare Hidesaburo Ueno till Shibuya Station. När Ueno dog på jobbet 1925 fortsatte Hachikō att gå dit varje dag till sin egen död 1935. Statyn vid stationen är i dag en av Tokyos mest besökta mötesplatser.",
-      "sources": ["Hidesaburo Ueno memorial records", "Shibuya Station historical archive"],
-      "factId": "kanda_hachiko_historia"
+      "correctIndex": 0,
+      "explanation": "Chaser kände igen 800 gosedjur, 116 bollar och 26 frisbees vid namn. Studien publicerades i Behavioural Processes 2011. Forskarna slutade inte för att Chaser nått sin gräns, utan för att de inte orkade mer. Hon kunde dessutom lära sig nya ord via uteslutning: om hon inte kände till ett ord antog hon att det hörde till det okända föremålet.",
+      "sources": ["Pilley & Reid – Behavioural Processes (2011)", "NPR, NYT, ABC News"],
+      "factId": "kanda_chaser_vokabular"
     },
     {
       "id": "kanda-4",
+      "type": "fact",
+      "question": "Endal, en labrador retriever i Storbritannien, var servicehund till en krigsinneskadad man. En dag slog en bil till rullstolen och mannen föll medvetslös på marken. Vad gjorde Endal?",
+      "options": [
+        "Han stannade hos mannen och skällde utan avbrott tills folk kom",
+        "Han la mannen i framstupa sidoläge, drog fram filten, hämtade telefonen och gick sedan till ett hotell för att larma",
+        "Han sprang till närmaste grannar och ledde dem tillbaka",
+        "Han tryckte upprepade gånger på nödknappen på rullstolen"
+      ],
+      "correctIndex": 1,
+      "explanation": "Endal utförde hela sekvensen på eget initiativ. Ingen hade tränat honom specifikt för det scenariot. Han fick PDSA Gold Medal, Storbritanniens högsta utmärkelse för djur, och dokumenterades av hundratals filmteam från hela världen. Han utsågs också till Dog of the Millennium.",
+      "sources": ["PDSA Gold Medal records", "Canine Partners for Independence", "Wikipedia – Endal"],
+      "factId": "kanda_endal_raddar"
+    },
+    {
+      "id": "kanda-5",
+      "type": "fact",
+      "question": "Laika blev 1957 det första levande djuret i omloppsbana kring jorden. I vilket rymdfordon sköts hon upp?",
+      "options": [
+        "Sputnik 1",
+        "Vostok 1",
+        "Sputnik 2",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "explanation": "Laika sköts upp i Sputnik 2, drygt en månad efter att Sputnik 1 blivit den första satelliten i omloppsbana. Vostok 1 var Jurij Gagarins farkost fyra år senare. Laika var en gatuhund från Moskva.",
+      "sources": ["Soviet space program archives", "NASA historical records"],
+      "factId": "kanda_laika_sputnik2"
+    },
+    {
+      "id": "kanda-6",
       "type": "fact",
       "question": "Balto fick en staty i Central Park och en animerad film. Men en annan hund ledde den längsta och farligaste etappen av serumtransporten till Nome 1925. Vilken?",
       "options": [
@@ -69,49 +99,19 @@
       "factId": "kanda_togo_balto"
     },
     {
-      "id": "kanda-5",
-      "type": "fact",
-      "question": "Laika blev 1957 det första levande djuret i omloppsbana kring jorden. I vilket rymdfordon sköts hon upp?",
-      "options": [
-        "Sputnik 1",
-        "Vostok 1",
-        "Sputnik 2",
-        "Mir"
-      ],
-      "correctIndex": 2,
-      "explanation": "Laika sköts upp i Sputnik 2, drygt en månad efter att Sputnik 1 blivit det första satelliten i omloppsbana. Vostok 1 var Jurij Gagarins rymdfarkosten fyra år senare. Laika var en gatuhund från Moskva.",
-      "sources": ["Soviet space program archives", "NASA historical records"],
-      "factId": "kanda_laika_sputnik2"
-    },
-    {
-      "id": "kanda-6",
-      "type": "fact",
-      "question": "Den officiella historien sa länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
-      "options": [
-        "Laika dog av överhettning inom några timmar efter uppskjutningen",
-        "Laika sövdes ner efter tre dagar som planerat men capseln nådde aldrig jorden",
-        "Signalerna upphörde direkt vid uppskjutningen och orsaken förblir okänd",
-        "Laika landade säkert och hittades levande av bönder i Sibirien"
-      ],
-      "correctIndex": 0,
-      "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
-      "sources": ["Declassified Soviet space documents (1990s)", "Malashenkov, D. – 2002 World Space Congress"],
-      "factId": "kanda_laika_sanning"
-    },
-    {
       "id": "kanda-7",
       "type": "fact",
-      "question": "Scooby-Doo har följt med sedan 1969. Vilken ras föreställer han?",
+      "question": "Pickles, en svartvit collieblandras, gick in i brittisk historia 1966. Vad hittade han?",
       "options": [
-        "Grand danois",
-        "Boxer",
-        "Blandras",
-        "Weimaraner"
+        "En försvunnen brittisk militärattaché som legat skadad i tre dagar",
+        "En obdetonerad bomb under en bostadsgata i södra London",
+        "Den stulna VM-pokalen i fotboll, månader innan VM-finalen i England",
+        "En påse med stulet guld från ett av Londons mest uppmärksammade rånfall"
       ],
-      "correctIndex": 0,
-      "explanation": "Scooby-Doo är en grand danois, en av världens största raser. Skaparna valde rasen som kontrast mot den fege personligheten. En normalt modig stor hund som är rädd för allt gav en komisk poäng som fungerat i över 50 år.",
-      "sources": ["Hanna-Barbera production notes (1969)", "CBS animation archive"],
-      "factId": "kanda_scooby_ras"
+      "correctIndex": 2,
+      "explanation": "VM-pokalen Jules Rimet stals i mars 1966, månader innan England skulle stå värd för VM. Pickles hittade den inlindad i tidningspapper under en buske i Beulah Hill i London. England vann VM samma sommar och Pickles fick en livslång tillgång till all mat han ville ha.",
+      "sources": ["FIFA records 1966", "Metropolitan Police archives"],
+      "factId": "kanda_pickles_vm"
     },
     {
       "id": "kanda-8",
@@ -131,32 +131,32 @@
     {
       "id": "kanda-9",
       "type": "fact",
-      "question": "Pickles, en svartvit collieblandras, gick in i brittisk historia 1966. Vad hittade han?",
+      "question": "Rin Tin Tin, en schäfer räddad från ett franskt slagfält under första världskriget, medverkade i över 20 Hollywood-filmer. Vad hände vid den allra första Oscarsgalan 1929?",
       "options": [
-        "En försvunnen brittisk militärattaché som legat skadad i tre dagar",
-        "En obdetonerad bomb under en bostadsgata i södra London",
-        "Den stulna VM-pokalen i fotboll, månader innan VM-finalen i England",
-        "En påse med stulet guld från ett av Londons mest uppmärksammade rånfall"
+        "Han fick de flesta rösterna för bästa skådespelare, men Academy höll en ny omröstning och valde en människa",
+        "Han nominerades men uteslöts när filmbranschen protesterade mot att en hund fick tävla",
+        "Han vann ett hederspris för att ha räddat filmbolagets ekonomi under en kris",
+        "Han fick flest röster men priset gick till Emil Jannings som kompromiss efter omröstning"
       ],
-      "correctIndex": 2,
-      "explanation": "VM-pokalen Jules Rimet stals i mars 1966, månader innan England skulle stå värd för VM. Pickles hittade den inlindad i tidningspapper under en buske i Beulah Hill i London. England vann VM samma sommar och Pickles fick en livslång tillgång till all mat han ville ha.",
-      "sources": ["FIFA records 1966", "Metropolitan Police archives"],
-      "factId": "kanda_pickles_vm"
+      "correctIndex": 0,
+      "explanation": "Enligt välkänd Hollywood-tradition fick Rin Tin Tin flest röster för bästa skådespelare. Academy:s ledning, bland annat Louis B. Mayer, ansåg att priset inte kunde gå till en hund och höll en ny omröstning med enbart mänskliga kandidater. Emil Jannings vann. Historien är väldokumenterad men tekniskt sett inte officiellt bekräftad av Academy.",
+      "sources": ["Susan Orlean – Rin Tin Tin biography", "todayifoundout.com", "Wikipedia – Academy Award for Best Actor"],
+      "factId": "kanda_rintin_oscar"
     },
     {
       "id": "kanda-10",
       "type": "fact",
-      "question": "Toto i Trollkarlen från Oz (1939) är en av filmhistoriens mest kända hundar. Vilken ras är Toto?",
+      "question": "Den officiella historien sa länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
       "options": [
-        "Jack Russell terrier",
-        "Cairn terrier",
-        "Scottish terrier",
-        "West Highland white terrier"
+        "Laika dog av överhettning inom några timmar efter uppskjutningen",
+        "Laika sövdes ner efter tre dagar som planerat men kapseln nådde aldrig jorden",
+        "Signalerna upphörde direkt vid uppskjutningen och orsaken förblir okänd",
+        "Laika landade säkert och hittades levande av bönder i Sibirien"
       ],
-      "correctIndex": 1,
-      "explanation": "Toto spelades av en cairn terrier vid namn Terry. Många tror att det är en Jack Russell eftersom raserna liknar varandra, men Jack Russells erkändes inte som officiell ras av AKC förrän 2012. Terry tjänade mer per vecka under inspelningen än flera av de mänskliga skådespelarna.",
-      "sources": ["MGM production records (1939)", "AKC breed recognition history"],
-      "factId": "kanda_toto_ras"
+      "correctIndex": 0,
+      "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
+      "sources": ["Malashenkov, D. – 2002 World Space Congress", "Declassified Soviet space documents"],
+      "factId": "kanda_laika_sanning"
     }
   ]
 }
