@@ -70,6 +70,7 @@ För Nästa Hem-projektet, se [nastahem](https://github.com/tbinho/nastahem).
 - [IMAGE_MANAGEMENT.md](./IMAGE_MANAGEMENT.md) - Bildhantering
 - [meta_ads_structure_flocken.md](./meta_ads_structure_flocken.md) - Meta Ads struktur
 - [creative_structure_flocken.md](./creative_structure_flocken.md) - Creative Bases
+- [CHANGELOG_20260219.md](./CHANGELOG_20260219.md) - Quiz-epostlista, MailerSend, Supabase, GDPR (19 feb 2026)
 - [CHANGELOG_20260212.md](./CHANGELOG_20260212.md) - Cookie banner + cookie policy (12 feb 2026)
 - [CHANGELOG_20251216.md](./CHANGELOG_20251216.md) - Changelog
 - [CHANGELOG_20241204.md](./CHANGELOG_20241204.md) - Changelog

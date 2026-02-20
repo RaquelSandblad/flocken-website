@@ -245,6 +245,7 @@ Projektet använder en fast, AI-first struktur för all annonsering i Meta Ads M
 ### 📋 Changelog
 
 Se detaljerade ändringar i:
+- [CHANGELOG_20260219.md](./CHANGELOG_20260219.md) - Quiz-epostlista, MailerSend, Supabase, GDPR (19 feb 2026)
 - [CHANGELOG_20260212.md](./CHANGELOG_20260212.md) - Cookie banner mobil + cookie policy (12 feb 2026)
 - [CHANGELOG_20251216.md](./CHANGELOG_20251216.md) - Integritetspolicy uppdateringar (16 dec 2025)
 - [CHANGELOG_20241204.md](./CHANGELOG_20241204.md) - Designförbättringar och bildhantering (4 dec 2024)
