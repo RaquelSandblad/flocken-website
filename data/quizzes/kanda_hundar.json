@@ -1,0 +1,162 @@
+{
+  "slug": "kanda_hundar",
+  "title": "Hur bra kan du kända hundar?",
+  "description": "Från Hollywood till rymdkapplöpningen och krigets slagfält. Testa hur väl du känner historiens och populärkulturens mest namnkunniga hundar.",
+  "hidden": true,
+  "images": {
+    "cardKey": "flocken_quiz_kanda_hundar_card",
+    "cardAlt": "Collage med kända hundar från film, historia och populärkultur."
+  },
+  "questions": [
+    {
+      "id": "kanda-1",
+      "type": "fact",
+      "question": "Lassie är kanske världens mest kända filmhund. Vilken ras föreställer hon?",
+      "options": [
+        "Border collie",
+        "Rough collie",
+        "Schäfer",
+        "Golden retriever"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lassie är en rough collie, inte border collie som många tror. Skillnaden är framför allt pälsen och storleken. Rough collien är den mer yviga, längre varianten som Lassie populariserade globalt.",
+      "sources": ["Eric Knight – Lassie Come-Home (1940)", "Hollywood Walk of Fame"],
+      "factId": "kanda_lassie_ras"
+    },
+    {
+      "id": "kanda-2",
+      "type": "fact",
+      "question": "Lassie är en tik i berättelserna. Men vad är sant om hundarna som faktiskt spelade rollen?",
+      "options": [
+        "Pal var en tik men tränades som hanhund för att klara tuffare scener",
+        "Filmbolaget ville ha en tik men kunde inte hitta en som klarade träningen",
+        "Lassie spelades alltid av hanhundar, från Pal och framåt",
+        "Pal var den enda hanhunden, alla efterföljare var tikar"
+      ],
+      "correctIndex": 2,
+      "explanation": "Pal, hunden som spelade Lassie från 1943, var en hanhund. Alla hans efterkommande som tog över rollen var också hanhundar. Anledningen är praktisk: hanhundar behåller pälsen bättre under filmning och ser jämnare ut året om.",
+      "sources": ["Lassie filmhistoria", "Rudd Weatherwax – original trainer"],
+      "factId": "kanda_lassie_hanhund"
+    },
+    {
+      "id": "kanda-3",
+      "type": "fact",
+      "question": "Hachikō, en akita från Japan, väntar fortfarande på sin ägare vid Shibuya Station. Vad hände egentligen?",
+      "options": [
+        "Ägaren försvann på en resa och Hachikō väntade tills han hittades",
+        "Ägaren dog på jobbet och Hachikō väntade vid stationen varje dag i nästan tio år",
+        "Hachikō tappades bort vid stationen och hittade aldrig hem",
+        "Ägaren emigrerade och Hachikō väntade tills han återvände fem år senare"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hachikō följde varje dag sin ägare Hidesaburo Ueno till Shibuya Station. När Ueno dog på jobbet 1925 fortsatte Hachikō att gå dit varje dag till sin egen död 1935. Statyn vid stationen är i dag en av Tokyos mest besökta mötesplatser.",
+      "sources": ["Hidesaburo Ueno memorial records", "Shibuya Station historical archive"],
+      "factId": "kanda_hachiko_historia"
+    },
+    {
+      "id": "kanda-4",
+      "type": "fact",
+      "question": "Balto fick en staty i Central Park och en animerad film. Men en annan hund ledde den längsta och farligaste etappen av serumtransporten till Nome 1925. Vilken?",
+      "options": [
+        "Rex",
+        "Nome",
+        "Kasen",
+        "Togo"
+      ],
+      "correctIndex": 3,
+      "explanation": "Togo, en siberian husky tränad av Leonhard Seppala, ledde det längsta och svåraste segmentet av transporten, nära 400 km i iskallt väder. Balto fick äran eftersom han ledde den sista etappen in till Nome. Togos insats uppmärksammades mer brett först efter en film 2019.",
+      "sources": ["Nome serum run 1925 historical records", "Seppala memoirs"],
+      "factId": "kanda_togo_balto"
+    },
+    {
+      "id": "kanda-5",
+      "type": "fact",
+      "question": "Laika blev 1957 det första levande djuret i omloppsbana kring jorden. I vilket rymdfordon sköts hon upp?",
+      "options": [
+        "Sputnik 1",
+        "Vostok 1",
+        "Sputnik 2",
+        "Mir"
+      ],
+      "correctIndex": 2,
+      "explanation": "Laika sköts upp i Sputnik 2, drygt en månad efter att Sputnik 1 blivit det första satelliten i omloppsbana. Vostok 1 var Jurij Gagarins rymdfarkosten fyra år senare. Laika var en gatuhund från Moskva.",
+      "sources": ["Soviet space program archives", "NASA historical records"],
+      "factId": "kanda_laika_sputnik2"
+    },
+    {
+      "id": "kanda-6",
+      "type": "fact",
+      "question": "Den officiella historien sa länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
+      "options": [
+        "Laika dog av överhettning inom några timmar efter uppskjutningen",
+        "Laika sövdes ner efter tre dagar som planerat men capseln nådde aldrig jorden",
+        "Signalerna upphörde direkt vid uppskjutningen och orsaken förblir okänd",
+        "Laika landade säkert och hittades levande av bönder i Sibirien"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
+      "sources": ["Declassified Soviet space documents (1990s)", "Malashenkov, D. – 2002 World Space Congress"],
+      "factId": "kanda_laika_sanning"
+    },
+    {
+      "id": "kanda-7",
+      "type": "fact",
+      "question": "Scooby-Doo har följt med sedan 1969. Vilken ras föreställer han?",
+      "options": [
+        "Grand danois",
+        "Boxer",
+        "Blandras",
+        "Weimaraner"
+      ],
+      "correctIndex": 0,
+      "explanation": "Scooby-Doo är en grand danois, en av världens största raser. Skaparna valde rasen som kontrast mot den fege personligheten. En normalt modig stor hund som är rädd för allt gav en komisk poäng som fungerat i över 50 år.",
+      "sources": ["Hanna-Barbera production notes (1969)", "CBS animation archive"],
+      "factId": "kanda_scooby_ras"
+    },
+    {
+      "id": "kanda-8",
+      "type": "fact",
+      "question": "Sergeant Stubby deltog i första världskriget och är USA:s mest dekorerade militärhund. Utöver att varna för gasattacker, vad annars anses han ha gjort?",
+      "options": [
+        "Sprungit med meddelanden mellan skyttegravarna under strid",
+        "Hittat sårade soldater i ingenmansland under natten",
+        "Lärt sig exakt 27 militärkommandon på engelska och franska",
+        "Fångat en tysk spion som försökte kartlägga truppernas positioner"
+      ],
+      "correctIndex": 3,
+      "explanation": "Sergeant Stubby ska ha gripit tag i byxbenet på en tysk spion och hållit fast tills soldaterna kom. Han varnade också trupperna för gasattacker och artilleribeskjutning. Han hittades som valp av soldaten J. Robert Conroy 1917 och smugglades in till fronten.",
+      "sources": ["US Army Center of Military History", "Smithsonian Institution – Stubby records"],
+      "factId": "kanda_stubby_spion"
+    },
+    {
+      "id": "kanda-9",
+      "type": "fact",
+      "question": "Pickles, en svartvit collieblandras, gick in i brittisk historia 1966. Vad hittade han?",
+      "options": [
+        "En försvunnen brittisk militärattaché som legat skadad i tre dagar",
+        "En obdetonerad bomb under en bostadsgata i södra London",
+        "Den stulna VM-pokalen i fotboll, månader innan VM-finalen i England",
+        "En påse med stulet guld från ett av Londons mest uppmärksammade rånfall"
+      ],
+      "correctIndex": 2,
+      "explanation": "VM-pokalen Jules Rimet stals i mars 1966, månader innan England skulle stå värd för VM. Pickles hittade den inlindad i tidningspapper under en buske i Beulah Hill i London. England vann VM samma sommar och Pickles fick en livslång tillgång till all mat han ville ha.",
+      "sources": ["FIFA records 1966", "Metropolitan Police archives"],
+      "factId": "kanda_pickles_vm"
+    },
+    {
+      "id": "kanda-10",
+      "type": "fact",
+      "question": "Toto i Trollkarlen från Oz (1939) är en av filmhistoriens mest kända hundar. Vilken ras är Toto?",
+      "options": [
+        "Jack Russell terrier",
+        "Cairn terrier",
+        "Scottish terrier",
+        "West Highland white terrier"
+      ],
+      "correctIndex": 1,
+      "explanation": "Toto spelades av en cairn terrier vid namn Terry. Många tror att det är en Jack Russell eftersom raserna liknar varandra, men Jack Russells erkändes inte som officiell ras av AKC förrän 2012. Terry tjänade mer per vecka under inspelningen än flera av de mänskliga skådespelarna.",
+      "sources": ["MGM production records (1939)", "AKC breed recognition history"],
+      "factId": "kanda_toto_ras"
+    }
+  ]
+}

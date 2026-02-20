@@ -35,5 +35,6 @@ export interface QuizDefinition {
   title: string;
   description: string;
   images?: QuizImages;
+  hidden?: boolean;
   questions: QuizQuestion[];
 }

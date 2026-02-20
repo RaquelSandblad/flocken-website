@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "Flocken",
-  "lastUpdated": "2026-02-18T11:31:53.150Z",
+  "lastUpdated": "2026-02-20T11:16:13.800Z",
   "images": {
     "flocken_image_community": {
       "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
@@ -9,7 +9,7 @@
         "width": 2752,
         "height": 1536
       },
-      "processedAt": "2026-02-18T11:28:17.001Z",
+      "processedAt": "2026-02-20T11:12:04.899Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -109,7 +109,7 @@
         "width": 2048,
         "height": 2048
       },
-      "processedAt": "2026-02-18T11:28:48.559Z",
+      "processedAt": "2026-02-20T11:12:32.077Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -209,7 +209,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T11:29:31.500Z",
+      "processedAt": "2026-02-20T11:13:37.159Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -309,7 +309,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T11:30:07.274Z",
+      "processedAt": "2026-02-20T11:14:49.878Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -409,7 +409,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-02-18T11:29:18.227Z",
+      "processedAt": "2026-02-20T11:13:16.837Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -509,7 +509,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:30:25.315Z",
+      "processedAt": "2026-02-20T11:15:24.627Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -609,7 +609,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:30:35.657Z",
+      "processedAt": "2026-02-20T11:15:49.270Z",
       "variants": {
         "thumbnail": {
           "dimensions": {

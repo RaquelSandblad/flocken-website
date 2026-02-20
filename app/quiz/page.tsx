@@ -24,7 +24,8 @@ export const metadata: Metadata = {
 };
 
 export default async function QuizLibraryPage() {
-  const quizzes = await getAllQuizzes();
+  const allQuizzes = await getAllQuizzes();
+  const quizzes = allQuizzes.filter((q) => !q.hidden);
 
   return (
     <QuizLayout style={getQuizBrandStyle()}>

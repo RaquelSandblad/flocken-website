@@ -34,6 +34,7 @@ const quizSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
   images: quizImagesSchema.optional(),
+  hidden: z.boolean().optional(),
   questions: z.array(questionSchema).length(10),
 });
 
