@@ -13,7 +13,9 @@ export type QuizTrackingEvent =
   | 'quiz_score_bucket'
   | 'quiz_cta_click'
   | 'quiz_cta_download_click'
-  | 'quiz_share';
+  | 'quiz_share'
+  | 'quiz_email_subscribe_attempt'
+  | 'quiz_email_subscribe_success';
 
 export function track(eventName: QuizTrackingEvent, payload: Record<string, unknown> = {}): void {
   if (typeof window === 'undefined') {

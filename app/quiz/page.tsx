@@ -65,8 +65,18 @@ export default async function QuizLibraryPage() {
         </div>
       </section>
 
-      {/* Flocken App Promo */}
-      <section className="mb-8">
+      {/* Quiz Grid */}
+      <section>
+        <h2 className="mb-4 text-xl font-bold text-flocken-brown">Välj ditt quiz</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {quizzes.map((quiz) => (
+            <QuizCard key={quiz.slug} quiz={quiz} />
+          ))}
+        </div>
+      </section>
+
+      {/* Flocken App Promo – längst ner */}
+      <section className="mt-8">
         <a
           href="https://flocken.info/download"
           className="group flex items-center gap-4 rounded-xl border border-flocken-warm/40 bg-gradient-to-br from-flocken-sand to-flocken-cream p-4 shadow-soft transition-shadow hover:shadow-card sm:gap-5 sm:p-5"
@@ -92,16 +102,6 @@ export default async function QuizLibraryPage() {
             </p>
           </div>
         </a>
-      </section>
-
-      {/* Quiz Grid */}
-      <section>
-        <h2 className="mb-4 text-xl font-bold text-flocken-brown">Välj ditt quiz</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {quizzes.map((quiz) => (
-            <QuizCard key={quiz.slug} quiz={quiz} />
-          ))}
-        </div>
       </section>
     </QuizLayout>
   );
