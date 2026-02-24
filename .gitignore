@@ -46,6 +46,10 @@ next-env.d.ts
 # Claude Code
 .claude/
 
+# MCP configuration (contains credentials)
+.mcp.json
+.google-credentials.json
+
 # MCP servers build output
 mcp-servers/*/dist/
 mcp-servers/*/node_modules/

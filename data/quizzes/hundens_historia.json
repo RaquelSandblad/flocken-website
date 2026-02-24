@@ -1,0 +1,161 @@
+{
+  "slug": "hundens_historia",
+  "title": "Hur bra kan du hundens historia?",
+  "description": "Hunden har funnits vid vår sida i minst 15 000 år – men vet du var, hur och varför? Viss forskning ger helt andra svar än man tror.",
+  "images": {
+    "cardKey": "flocken_quiz_hundens_historia_card",
+    "cardAlt": "Illustration av varg till hund i varm, naturlig stil."
+  },
+  "questions": [
+    {
+      "id": "historia-1",
+      "type": "fact",
+      "question": "Vilket djur är hundens närmaste nu levande släkting?",
+      "options": [
+        "Schakal",
+        "Präriehund",
+        "Varg",
+        "Räv"
+      ],
+      "correctIndex": 2,
+      "explanation": "Genetiska studier visar att hunden delar ett gemensamt ursprung med vargen – men att alla hundar bildar en egen klade som är skild från dagens vargar. Hund och varg är alltså inte samma art, men de är varandras närmaste levande släktingar.",
+      "sources": ["HISTORIA_001", "HISTORIA_002"],
+      "factId": "historia_varg_slakting"
+    },
+    {
+      "id": "historia-2",
+      "type": "fact",
+      "question": "Genetiker har undersökt vad som hände mellan hund och varg efter att domesticeringen kom igång. Vad visade de?",
+      "options": [
+        "Det har förekommit genetiskt utbyte i båda riktningar – inte bara från varg till hund",
+        "Hund och varg är genetiskt sett identiska; skillnaderna är rent beteendemässiga",
+        "Vargar i Europa härstammar från återförvildade tamhundar",
+        "Hunden härstammar från tre separata domesticeringar av olika vargpopulationer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Forskning visar att hundar har påverkat vargar genetiskt och vice versa, lång tid efter att domesticeringen inleddes. Det gör hundens historia till ett nätverk av utbyten snarare än en rak linje från varg till hund.",
+      "sources": ["HISTORIA_032"],
+      "factId": "historia_genetiskt_utbyte"
+    },
+    {
+      "id": "historia-3",
+      "type": "fact",
+      "question": "Du har registrerat din hund i SKK:s stambok. Behöver du också registrera hos Jordbruksverket?",
+      "options": [
+        "Nej, SKK-registrering gäller som officiell ägarregistrering hos myndigheter",
+        "Bara om hunden ska exporteras till ett EU-land",
+        "Bara om hunden saknar stamtavla och är av okänd ras",
+        "Ja, Jordbruksverkets ägarregister är ett separat lagkrav"
+      ],
+      "correctIndex": 3,
+      "explanation": "SKK:s stambok innehåller härstamning, hälsodata och meriter. Jordbruksverkets register kopplar hunden till en ägare och används t.ex. om en hund springer lös. De fyller helt olika syften och krävs parallellt – det ena ersätter inte det andra.",
+      "sources": ["HISTORIA_027", "HISTORIA_025"],
+      "factId": "historia_skk_vs_jordbruksverket"
+    },
+    {
+      "id": "historia-4",
+      "type": "fact",
+      "question": "Forskare har studerat hundkranier från 50 000 år tillbaka – vad visade det om tidiga hundar?",
+      "options": [
+        "Att alla hundar var nästan identiska i form tills 1800-talets rasavel",
+        "Att tydlig hundform och stor variation redan fanns för ca 11 000 år sedan",
+        "Att den stora variationen i hundars utseende startade med egyptiska och kinesiska raslinjer",
+        "Att hundar inte skilde sig från vargar i form förrän för 5 000 år sedan"
+      ],
+      "correctIndex": 1,
+      "explanation": "Forskarna använde avancerade mätmetoder på kranier för att skilja tidig hund från varg – utan att jämföra med moderna rashundar. Resultatet visade att den variation vi ser idag har mycket djupare rötter än vad man länge trodde.",
+      "sources": ["HISTORIA_010", "HISTORIA_033"],
+      "factId": "historia_morfologisk_mangfald"
+    },
+    {
+      "id": "historia-5",
+      "type": "fact",
+      "question": "Hur tror forskare att domesticeringen av hunden egentligen gick till?",
+      "options": [
+        "Att mindre skygga vargar sökte sig till mänskliga boplatser och gradvis anpassade sig",
+        "Att människor aktivt fångade och tämjde vargvalpar i fångenskap",
+        "Att hundar domesticerades av bönder för jordbruksändamål",
+        "Att vargar korsades med schakaler för att ge ett mer samarbetsvilligt temperament"
+      ],
+      "correctIndex": 0,
+      "explanation": "Den mest stödda hypotesen är att mindre skygga vargar hade en fördel nära mänskliga boplatser och att de över tid blev det vi kallar hund. Aktiv tämjning av vilda djur verkar ha haft liten del i det.",
+      "sources": ["HISTORIA_003", "HISTORIA_004"],
+      "factId": "historia_domesticering_mekanism"
+    },
+    {
+      "id": "historia-6",
+      "type": "fact",
+      "question": "Bonn-Oberkassel i Tyskland är en viktig plats i hundhistorien. Varför?",
+      "options": [
+        "Det var den första platsen i Europa med organiserad hundavel i modern mening",
+        "Där hittades de äldsta kända kennelklubbsdokumenten",
+        "Fyndplatsen innehåller några av de äldsta obestridda bevisen för en domesticerad hund",
+        "Där fastslogs de tio FCI-rasgrupperna vid ett historiskt möte"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bonn-Oberkassel-fyndet innehåller en människa och en hund begravda tillsammans – DNA-bekräftat domesticerad hund. Det gör platsen central i forskning om tidiga hundar. Att klassificera ben som 'hund' eller 'varg' kan dock vara metodberoende och ibland omtvistat.",
+      "sources": ["HISTORIA_009", "HISTORIA_008"],
+      "factId": "historia_bonn_oberkassel"
+    },
+    {
+      "id": "historia-7",
+      "type": "fact",
+      "question": "Vem bestämmer egentligen innehållet i en FCI-rasstandard?",
+      "options": [
+        "FCI:s vetenskapliga kommitté",
+        "Den nationella kennelklubben i landet där rasen är vanligast",
+        "En internationell domarkommitté som möts vart fjärde år",
+        "Rasens hemland – landet som rasen ursprungligen tillhör"
+      ],
+      "correctIndex": 3,
+      "explanation": "I FCI-systemet är det hemlandet som 'äger' standarden – de bestämmer hur rasen ska se ut och fungera. FCI publicerar och hanterar internationell spridning, men initiativet till ändringar måste komma från hemlandet.",
+      "sources": ["RAS_019", "RAS_022"],
+      "factId": "historia_rasstandard_hemland"
+    },
+    {
+      "id": "historia-8",
+      "type": "fact",
+      "question": "FCI grundades 1911, men organisationen försvann kort därefter. Vad fick den att återuppstå?",
+      "options": [
+        "En kampanj från svenska och norska kennelklubbar under tidigt 1920-tal",
+        "FCI återskapades 1921 efter att ha upplösts i samband med första världskriget",
+        "En internationell hundutställning i Paris 1920 samlade grundarna igen",
+        "FCI slogs samman med Royal Kennel Club och fick nytt mandat 1919"
+      ],
+      "correctIndex": 1,
+      "explanation": "Det är en påminnelse om att hundorganisationer inte lever i ett vakuum – även de påverkas av krig och samhällsomvälvningar. FCI:s nutida form är i grunden ett 1921-projekt, inte 1911.",
+      "sources": ["HISTORIA_012", "HISTORIA_013"],
+      "factId": "historia_fci_wwi"
+    },
+    {
+      "id": "historia-9",
+      "type": "fact",
+      "question": "När tog organiserad rasavel och standardisering av hundraser fart i Europa?",
+      "options": [
+        "Under 1800-talet, parallellt med industrialisering och framväxten av kennelklubbar",
+        "Under tidig medeltid, driven av jaktintresset hos adeln",
+        "Under 1900-talets början, som en direkt reaktion på biologisk forskning",
+        "Under antiken, med fokus på strids- och jakthundar"
+      ],
+      "correctIndex": 0,
+      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. Royal Kennel Club, som bildades 1873, räknas som världens första nationella kennelklubb och publicerade sitt första Stud Book 1874 med resultat ända från 1859.",
+      "sources": ["HISTORIA_019", "HISTORIA_020", "HISTORIA_015"],
+      "factId": "historia_1800_rasavel"
+    },
+    {
+      "id": "historia-10",
+      "type": "fact",
+      "question": "Hur skrivs rasnamn korrekt i svensk löptext, enligt SKK:s norm?",
+      "options": [
+        "Med stor bokstav, eftersom rasnamn är egennamn",
+        "Med gemener (liten bokstav), eftersom rasnamn inte betraktas som egennamn",
+        "Varierar beroende på om rasen har svensk eller utländsk härkomst",
+        "Med versaler i officiella dokument, annars gemener"
+      ],
+      "correctIndex": 1,
+      "explanation": "Många hundägare skriver 'Border Collie' med stor bokstav, men SKK:s norm är 'border collie' med gemener i löptext – precis som 'labrador' och 'schäfer'. Det är en liten detalj som avslöjar den som verkligen har koll på sina regler.",
+      "sources": ["RAS_027"],
+      "factId": "historia_rasnamn_gemener"
+    }
+  ]
+}

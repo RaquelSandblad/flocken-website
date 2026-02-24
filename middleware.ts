@@ -1,7 +1,7 @@
 // Next.js Middleware
 // Handles A/B test variant assignment server-side to prevent flicker
 
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { handleABTestMiddleware } from './lib/ab-testing';
 
 export function middleware(request: NextRequest) {
@@ -16,6 +16,15 @@ export function middleware(request: NextRequest) {
     pathname.includes('.') // Static files like .js, .css, .png
   ) {
     return;
+  }
+
+  const host = request.headers.get('host')?.toLowerCase() ?? '';
+  const isQuizHost = host.startsWith('quiz.flocken.info') || host.startsWith('quiz.localhost');
+
+  if (isQuizHost && !pathname.startsWith('/quiz')) {
+    const rewriteUrl = request.nextUrl.clone();
+    rewriteUrl.pathname = `/quiz${pathname === '/' ? '' : pathname}`;
+    return NextResponse.rewrite(rewriteUrl);
   }
 
   // Handle A/B test assignments

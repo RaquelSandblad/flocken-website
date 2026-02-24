@@ -1,0 +1,162 @@
+{
+  "slug": "kanda_hundar",
+  "title": "Hur bra kan du kända hundar?",
+  "description": "Från Hollywood till rymdkapplöpningen och krigets slagfält. Testa hur väl du känner historiens och populärkulturens mest namnkunniga hundar.",
+  "hidden": true,
+  "images": {
+    "cardKey": "flocken_quiz_kanda_hundar_card",
+    "cardAlt": "Collage med kända hundar från film, historia och populärkultur."
+  },
+  "questions": [
+    {
+      "id": "kanda-1",
+      "type": "fact",
+      "question": "Hachikō, en akita från Japan, väntade varje dag på sin ägare vid Shibuya Station. Vad hände egentligen?",
+      "options": [
+        "Ägaren försvann på en resa och Hachikō väntade tills han hittades",
+        "Ägaren dog på jobbet och Hachikō väntade vid stationen varje dag i nästan tio år",
+        "Hachikō tappades bort vid stationen och hittade aldrig hem",
+        "Ägaren emigrerade och Hachikō väntade tills han återvände fem år senare"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hachikō följde varje dag sin ägare Hidesaburo Ueno till Shibuya Station. När Ueno dog på jobbet 1925 fortsatte Hachikō att gå dit varje dag till sin egen död 1935. Statyn vid stationen är i dag en av Tokyos mest besökta mötesplatser.",
+      "sources": ["Hidesaburo Ueno memorial records", "Shibuya Station historical archive"],
+      "factId": "kanda_hachiko_historia"
+    },
+    {
+      "id": "kanda-2",
+      "type": "fact",
+      "question": "Lassie är en tik i berättelserna. Men vad är sant om hundarna som faktiskt spelade rollen?",
+      "options": [
+        "Pal var en tik men tränades som hanhund för att klara tuffare scener",
+        "Filmbolaget ville ha en tik men kunde inte hitta en som klarade träningen",
+        "Lassie spelades alltid av hanhundar, från Pal och framåt",
+        "Pal var den enda hanhunden, alla efterföljare var tikar"
+      ],
+      "correctIndex": 2,
+      "explanation": "Pal, hunden som spelade Lassie från 1943, var en hanhund. Alla hans efterkommande som tog över rollen var också hanhundar. Anledningen är praktisk: hanhundar behåller pälsen bättre under filmning och ser jämnare ut året om.",
+      "sources": ["Lassie filmhistoria", "Rudd Weatherwax – original trainer"],
+      "factId": "kanda_lassie_hanhund"
+    },
+    {
+      "id": "kanda-3",
+      "type": "fact",
+      "question": "En border collie vid namn Chaser tränades av en psykologiprofessor i fyra timmar om dagen i tre år. Vad klarade hon till slut?",
+      "options": [
+        "Att hålla isär namnen på 1 022 unika föremål",
+        "Att följa 47 kommandon på tre olika språk",
+        "Att lösa enkla matteproblem med tassarna",
+        "Att läsa och matcha skrivna lappar med rätt föremål"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chaser kände igen 800 gosedjur, 116 bollar och 26 frisbees vid namn. Studien publicerades i Behavioural Processes 2011. Forskarna slutade inte för att Chaser nått sin gräns, utan för att de inte orkade mer. Hon kunde dessutom lära sig nya ord via uteslutning: om hon inte kände till ett ord antog hon att det hörde till det okända föremålet.",
+      "sources": ["Pilley & Reid – Behavioural Processes (2011)", "NPR, NYT, ABC News"],
+      "factId": "kanda_chaser_vokabular"
+    },
+    {
+      "id": "kanda-4",
+      "type": "fact",
+      "question": "Endal, en labrador retriever i Storbritannien, var servicehund till en krigsskadad man. En dag slog en bil till rullstolen och mannen föll medvetslös på marken. Vad gjorde Endal?",
+      "options": [
+        "Han lade sig intill mannen och höll honom varm tills ambulansen kom",
+        "Han la mannen i framstupa sidoläge, drog fram filten, hämtade telefonen och gick sedan till ett hotell för att larma",
+        "Han drog i mannens kläder tills en förbipasserande stannade och hjälpte till",
+        "Han hittade en mobiltelefon i rullstolens ficka och tryckte på knappar tills ett samtal kopplades upp"
+      ],
+      "correctIndex": 1,
+      "explanation": "Endal utförde hela sekvensen på eget initiativ. Ingen hade tränat honom specifikt för det scenariot. Han fick PDSA Gold Medal, Storbritanniens högsta utmärkelse för djur, och dokumenterades av hundratals filmteam från hela världen. Han utsågs också till Dog of the Millennium.",
+      "sources": ["PDSA Gold Medal records", "Canine Partners for Independence", "Wikipedia – Endal"],
+      "factId": "kanda_endal_raddar"
+    },
+    {
+      "id": "kanda-5",
+      "type": "fact",
+      "question": "Asterix-hunden Idéfix heter något helt annat i de engelska utgåvorna. Vad?",
+      "options": [
+        "Fidelix",
+        "Treepaw",
+        "Dogmatix",
+        "Fixie"
+      ],
+      "correctIndex": 2,
+      "explanation": "I engelska utgåvor heter han Dogmatix. Det franska originalnamnet Idéfix är hämtat från 'idée fixe' – en tanke man inte kan släppa – vilket perfekt beskriver hundens besatthet vid trädfällningar. Den ordvitsen försvinner helt i den engelska översättningen. På svenska behöll man Idéfix.",
+      "sources": ["Goscinny & Uderzo – Asterix-serien", "Hanna-Barbera production history"],
+      "factId": "kanda_idefix_namn"
+    },
+    {
+      "id": "kanda-6",
+      "type": "fact",
+      "question": "Balto, en siberian husky, fick en staty i Central Park och en animerad film. Vad är hans berömda insats?",
+      "options": [
+        "Han räddade sina förare från en lavin under en polarexpedition",
+        "Han körde det längsta och farligaste segmentet av en nödtransport i Alaska",
+        "Han ledde sista etappen av en nödtransport med difteriserum till Nome 1925",
+        "Han hittades ensam i en snöstorm och utbildades till ledarhund på rekordtid"
+      ],
+      "correctIndex": 2,
+      "explanation": "Balto ledde hundspannet den sista etappen in till Nome i februari 1925 under en difterisepidemi. Det var en riktig insats – men det var Togo, en annan husky tränad av Leonhard Seppala, som körde den längsta och farligaste etappen, nära 400 km. Balto fick staty och film. Togo fick inget – tills en film 2019 äntligen lyfte hans historia.",
+      "sources": ["Nome serum run 1925 historical records", "Seppala memoirs"],
+      "factId": "kanda_togo_balto"
+    },
+    {
+      "id": "kanda-7",
+      "type": "fact",
+      "question": "Pickles, en svartvit collieblandras, gick in i brittisk historia 1966. Vad hittade han?",
+      "options": [
+        "En försvunnen brittisk militärattaché som legat skadad i tre dagar",
+        "En odetonerad bomb under en bostadsgata i södra London",
+        "Den stulna VM-pokalen i fotboll, månader innan VM-finalen i England",
+        "En påse med stulet guld från ett av Londons mest uppmärksammade rånfall"
+      ],
+      "correctIndex": 2,
+      "explanation": "VM-pokalen Jules Rimet stals i mars 1966, månader innan England skulle stå värd för VM. Pickles hittade den inlindad i tidningspapper under en buske i Beulah Hill i London. England vann VM samma sommar och Pickles fick en livslång tillgång till all mat han ville ha.",
+      "sources": ["FIFA records 1966", "Metropolitan Police archives"],
+      "factId": "kanda_pickles_vm"
+    },
+    {
+      "id": "kanda-8",
+      "type": "fact",
+      "question": "Sergeant Stubby deltog i första världskriget och är USA:s mest dekorerade militärhund. Utöver att varna för gasattacker, vad annars anses han ha gjort?",
+      "options": [
+        "Sprungit med meddelanden mellan skyttegravarna under strid",
+        "Hittat sårade soldater i ingenmansland under natten",
+        "Lärt sig exakt 27 militärkommandon på engelska och franska",
+        "Fångat en tysk spion som försökte kartlägga truppernas positioner"
+      ],
+      "correctIndex": 3,
+      "explanation": "Sergeant Stubby ska ha gripit tag i byxbenet på en tysk spion och hållit fast tills soldaterna kom. Han varnade också trupperna för gasattacker och artilleribeskjutning. Han hittades som valp av soldaten J. Robert Conroy 1917 och smugglades in till fronten.",
+      "sources": ["US Army Center of Military History", "Smithsonian Institution – Stubby records"],
+      "factId": "kanda_stubby_spion"
+    },
+    {
+      "id": "kanda-9",
+      "type": "fact",
+      "question": "Rin Tin Tin, en schäfer räddad från ett franskt slagfält under första världskriget, medverkade i över 20 Hollywood-filmer. Vad hände vid den allra första Oscarsgalan 1929?",
+      "options": [
+        "Han fick de flesta rösterna för bästa skådespelare, men Academy höll en ny omröstning och valde en människa",
+        "Han nominerades men uteslöts när filmbranschen protesterade mot att en hund fick tävla",
+        "Han vann ett hederspris för att ha räddat filmbolagets ekonomi under en kris",
+        "Han fick flest röster men diskvalificerades – djur hade aldrig officiellt ingått i nomineringskriterierna"
+      ],
+      "correctIndex": 0,
+      "explanation": "Enligt välkänd Hollywood-tradition fick Rin Tin Tin flest röster för bästa skådespelare. Academy:s ledning, bland annat Louis B. Mayer, ansåg att priset inte kunde gå till en hund och höll en ny omröstning med enbart mänskliga kandidater. Emil Jannings vann. Historien är väldokumenterad men tekniskt sett inte officiellt bekräftad av Academy.",
+      "sources": ["Susan Orlean – Rin Tin Tin biography", "todayifoundout.com", "Wikipedia – Academy Award for Best Actor"],
+      "factId": "kanda_rintin_oscar"
+    },
+    {
+      "id": "kanda-10",
+      "type": "fact",
+      "question": "Den officiella versionen hävdade länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
+      "options": [
+        "Laika dog av överhettning inom några timmar efter uppskjutningen",
+        "Laika sövdes ner efter tre dagar som planerat men kapseln nådde aldrig jorden",
+        "Signalerna upphörde direkt vid uppskjutningen och orsaken förblir okänd",
+        "Laika dog av rädsla och chock under uppskjutningen, innan kapseln nått omloppsbana"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
+      "sources": ["Malashenkov, D. – 2002 World Space Congress", "Declassified Soviet space documents"],
+      "factId": "kanda_laika_sanning"
+    }
+  ]
+}
