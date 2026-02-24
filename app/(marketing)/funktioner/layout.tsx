@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Flockens funktioner - Para, Passa, Rasta, Besöka",
-  description: "Lär dig mer om Flockens fyra huvudfunktioner: Para, Passa, Rasta och Besöka. Se hur appen fungerar i praktiken.",
+  title: "Flockens funktioner - Hundar, Passa, Rasta, Besöka",
+  description: "Lär dig mer om Flockens fyra huvudfunktioner: Hundar, Passa, Rasta och Besöka. Se hur appen fungerar i praktiken.",
   openGraph: {
-    title: "Flockens funktioner - Para, Passa, Rasta, Besöka",
+    title: "Flockens funktioner - Hundar, Passa, Rasta, Besöka",
     description: "Lär dig mer om Flockens fyra huvudfunktioner och se hur appen fungerar i praktiken",
   },
 };

@@ -92,8 +92,8 @@ const packages = [
 
 const heroText = "För ett bättre liv som hund";
 const tagline = "Flocken – där hundar och människor hittar varandra";
-const bodyShort = "Flocken är appen där hundar och deras människor hittar varandra. Para, passa, rasta och besöka – allt samlas här.";
-const bodyMedium = "Flocken är appen där hundar och deras människor hittar varandra. Para din hund med andra hundar i närheten, hitta pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hitta hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund.";
+const bodyShort = "Flocken är appen där hundar och deras människor hittar varandra. Hundar, passa, rasta och besöka – allt samlas här.";
+const bodyMedium = "Flocken är appen där hundar och deras människor hittar varandra. Hitta lekkamrater och parningspartners till din hund, pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund.";
 const bodyLegal = "Du har rätt att få bekräftelse på om vi behandlar dina personuppgifter och få en kopia av dem. I appen under Inställningar kan du exportera din data i JSON-format. Du kan när som helst begära tillgång till dina uppgifter genom att kontakta oss på support@spitakolus.com.";
 
 export default function KombinationerTestPage() {
@@ -176,7 +176,7 @@ export default function KombinationerTestPage() {
             {/* H2 + Medium text */}
             <div className="mb-8">
               <h5 className={`text-2xl font-semibold text-flocken-brown mb-3 ${pkg.headingClass}`}>
-                Para, passa, rasta och besöka
+                Hundar, passa, rasta och besöka
               </h5>
               <p className={`text-base text-flocken-brown leading-relaxed ${pkg.bodyClass}`}>
                 {bodyMedium}

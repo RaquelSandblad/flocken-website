@@ -18,7 +18,7 @@ export function TermsSV() {
       <ul>
         <li><strong>&quot;Användare&quot;:</strong> Person som har skapat ett konto i Flocken</li>
         <li><strong>&quot;Hundprofil&quot;:</strong> Profil för en hund som läggs upp av en användare</li>
-        <li><strong>&quot;Para&quot;:</strong> Funktion för att matcha hundar för parning eller lek</li>
+        <li><strong>&quot;Hundar&quot;:</strong> Funktion för att matcha hundar för parning eller lek</li>
         <li><strong>&quot;Passa&quot;:</strong> Funktion för att hitta och boka hundvakter</li>
         <li><strong>&quot;Rasta&quot;:</strong> Funktion för att spåra och dela promenader</li>
         <li><strong>&quot;Besöka&quot;:</strong> Funktion för att hitta hundvänliga platser</li>
@@ -111,7 +111,7 @@ export function TermsSV() {
       
       <h2 id="funktioner">4. Tjänstens funktioner</h2>
       
-      <h3 id="funk-para">4.1 Para (Hundmatchning)</h3>
+      <h3 id="funk-hundar">4.1 Hundar (Hundmatchning)</h3>
       <p><strong>Tillåten användning:</strong></p>
       <ul>
         <li>Hitta hundar för parning eller lek</li>

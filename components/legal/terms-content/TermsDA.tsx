@@ -25,7 +25,7 @@ export function TermsDA() {
       <ul>
         <li><strong>&quot;Bruger&quot;:</strong> Person der har oprettet en konto i Flocken</li>
         <li><strong>&quot;Hundeprofil&quot;:</strong> Profil for en hund som oprettes af en bruger</li>
-        <li><strong>&quot;Par&quot;:</strong> Funktion til at matche hunde til parring eller leg</li>
+        <li><strong>&quot;Hundar&quot;:</strong> Funktion til at matche hunde til parring eller leg</li>
         <li><strong>&quot;Pas&quot;:</strong> Funktion til at finde og booke hundepassere</li>
         <li><strong>&quot;Luft&quot;:</strong> Funktion til at spore og dele gåture</li>
         <li><strong>&quot;Besøg&quot;:</strong> Funktion til at finde hundevenlige steder</li>
@@ -124,7 +124,7 @@ export function TermsDA() {
 
       <h2 id="funktioner">4. Tjenestens funktioner</h2>
 
-      <h3 id="funk-para">4.1 Par (Hundematchning)</h3>
+      <h3 id="funk-hundar">4.1 Hundar (Hundematchning)</h3>
       <p><strong>Tilladt brug:</strong></p>
       <ul>
         <li>Finde hunde til parring eller leg</li>

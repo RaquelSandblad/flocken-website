@@ -25,7 +25,7 @@ export function TermsNO() {
       <ul>
         <li><strong>&quot;Bruker&quot;:</strong> Person som har opprettet en konto i Flocken</li>
         <li><strong>&quot;Hundeprofil&quot;:</strong> Profil for en hund som legges ut av en bruker</li>
-        <li><strong>&quot;Par&quot;:</strong> Funksjon for å matche hunder for parring eller lek</li>
+        <li><strong>&quot;Hundar&quot;:</strong> Funksjon for å matche hunder for parring eller lek</li>
         <li><strong>&quot;Pass&quot;:</strong> Funksjon for å finne og bestille hundepassing</li>
         <li><strong>&quot;Luft&quot;:</strong> Funksjon for å spore og dele turer</li>
         <li><strong>&quot;Besøk&quot;:</strong> Funksjon for å finne hundevennlige steder</li>
@@ -124,7 +124,7 @@ export function TermsNO() {
 
       <h2 id="funktioner">4. Tjenestens funksjoner</h2>
 
-      <h3 id="funk-para">4.1 Par (Hundematching)</h3>
+      <h3 id="funk-hundar">4.1 Hundar (Hundematching)</h3>
       <p><strong>Tillatt bruk:</strong></p>
       <ul>
         <li>Finne hunder for parring eller lek</li>
