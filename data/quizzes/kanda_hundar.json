@@ -2,7 +2,7 @@
   "slug": "kanda_hundar",
   "title": "Hur bra kan du kända hundar?",
   "description": "Från Hollywood till rymdkapplöpningen och krigets slagfält. Testa hur väl du känner historiens och populärkulturens mest namnkunniga hundar.",
-  "hidden": true,
+  "hidden": false,
   "images": {
     "cardKey": "flocken_quiz_kanda_hundar_card",
     "cardAlt": "Collage med kända hundar från film, historia och populärkultur."
