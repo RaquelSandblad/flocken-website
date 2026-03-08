@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "Flocken",
-  "lastUpdated": "2026-02-20T11:16:13.800Z",
+  "lastUpdated": "2026-02-20T11:18:15.009Z",
   "images": {
     "flocken_image_community": {
       "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
@@ -709,7 +709,7 @@
         "width": 1312,
         "height": 816
       },
-      "processedAt": "2026-02-18T11:31:08.270Z",
+      "processedAt": "2026-02-20T11:16:52.819Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -809,7 +809,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:31:20.960Z",
+      "processedAt": "2026-02-20T11:17:35.002Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -909,7 +909,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:31:33.250Z",
+      "processedAt": "2026-02-20T11:17:52.312Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1009,7 +1009,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:30:45.989Z",
+      "processedAt": "2026-02-20T11:16:13.814Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1109,7 +1109,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:30:57.941Z",
+      "processedAt": "2026-02-20T11:16:37.496Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1209,7 +1209,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-02-18T11:31:43.757Z",
+      "processedAt": "2026-02-20T11:18:04.881Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1299,6 +1299,106 @@
           "jpg": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.jpg",
             "size": 152873
+          }
+        }
+      }
+    },
+    "flocken_quiz_kanda_hundar_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_kanda_hundar_card.png",
+      "originalDimensions": {
+        "width": 1080,
+        "height": 608
+      },
+      "processedAt": "2026-02-20T11:17:13.869Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1080,
+            "height": 608
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_thumbnail.avif",
+            "size": 8750
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_thumbnail.webp",
+            "size": 7432
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_thumbnail.jpg",
+            "size": 7233
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1080,
+            "height": 608
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_small.avif",
+            "size": 29883
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_small.webp",
+            "size": 23876
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_small.jpg",
+            "size": 24348
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1080,
+            "height": 608
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.avif",
+            "size": 82446
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.webp",
+            "size": 68922
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.jpg",
+            "size": 74645
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1080,
+            "height": 608
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_large.avif",
+            "size": 128134
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_large.webp",
+            "size": 106132
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_large.jpg",
+            "size": 118012
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1080,
+            "height": 608
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_hero.avif",
+            "size": 198809
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_hero.webp",
+            "size": 194614
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_hero.jpg",
+            "size": 265611
           }
         }
       }
