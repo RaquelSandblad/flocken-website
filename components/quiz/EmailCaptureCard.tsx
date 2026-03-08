@@ -92,7 +92,7 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
       <div className="md:grid md:grid-cols-[1fr_200px]">
         {/* Text + formulär */}
         <div className="p-5">
-          <p className="font-bold text-flocken-brown">Vet du när socialiseringsfönstret stänger? 🐾</p>
+          <p className="font-bold text-flocken-brown">Vad lär sig valpar bäst av kullsyskonen? 🐾</p>
           <p className="mt-1 text-sm leading-relaxed text-flocken-brown/70">
             Registrera din mejladress så skickar vi valp-quizet direkt. Du får även veta först när vi släpper nya quiz.
           </p>
