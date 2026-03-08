@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Flocken - För ett bättre liv som hund',
     template: '%s | Flocken'
   },
-  description: 'Allt du behöver som hundägare på ett ställe. Para, Passa, Rasta, Besöka. Fyra funktioner. En app.',
+  description: 'Allt du behöver som hundägare på ett ställe. Hundar, Passa, Rasta, Besöka. Fyra funktioner. En app.',
   keywords: ['hundapp', 'hundparning', 'hundvakt', 'hundpromenader', 'hundvänliga platser', 'hund', 'Sverige'],
   authors: [{ name: 'Spitakolus AB' }],
   openGraph: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Flocken - För ett bättre liv som hund',
-    description: 'Para, Passa, Rasta, Besöka. Allt på ett ställe.',
+    description: 'Hundar, Passa, Rasta, Besöka. Allt på ett ställe.',
     images: ['/assets/flocken/generated/hero.png']
   },
   robots: {

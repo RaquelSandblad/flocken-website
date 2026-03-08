@@ -51,7 +51,7 @@ export default function FunktionerPage() {
               onClick={() => scrollToSection(paraRef)}
               className="px-3 sm:px-6 py-2 text-flocken-brown hover:text-flocken-olive bg-flocken-cream rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0"
             >
-              Para
+              Hundar
             </button>
             <button
               onClick={() => scrollToSection(passaRef)}
@@ -75,17 +75,17 @@ export default function FunktionerPage() {
         </div>
       </section>
 
-      {/* Para Section */}
+      {/* Hundar Section */}
       <section 
         ref={paraRef}
-        id="para"
+        id="hundar"
         className="section-padding bg-white scroll-mt-24"
       >
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-4">
-                Para
+                Hundar
               </h2>
               <p className="text-xl text-flocken-brown max-w-3xl mx-auto mb-2">
                 Hitta en lekkamrat eller parningspartner till din hund. Genom att filtrera på kön, storlek, ort och ras blir det enkelt att matcha rätt.
@@ -108,7 +108,7 @@ export default function FunktionerPage() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold text-flocken-brown mb-6">
-                    Så fungerar funktionen Para
+                    Så fungerar funktionen Hundar
                   </h3>
                   
                   <div className="space-y-4 text-flocken-brown">
@@ -211,7 +211,7 @@ export default function FunktionerPage() {
                     </p>
                     
                     <p>
-                      I funktionen passa ser du inte andra hundägare som är intresserade av att byta hundvaktstjänster. Dessa hittar du i Para där du klickar i &quot;intresserad av att dela hundpassning&quot; i sökfunktionen.
+                      I funktionen passa ser du inte andra hundägare som är intresserade av att byta hundvaktstjänster. Dessa hittar du i Hundar där du klickar i &quot;intresserad av att dela hundpassning&quot; i sökfunktionen.
                     </p>
                     
                     <div className="bg-white rounded-xl p-4 mt-6">

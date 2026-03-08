@@ -55,7 +55,7 @@ export default function SupportPage() {
 
       <h3>Hur fungerar appen?</h3>
       <p>
-        Här kan du läsa <a href="/funktioner" className="text-flocken-olive hover:underline">mer om de olika funktionerna Para, Passa, Rasta och Besöka</a>.
+        Här kan du läsa <a href="/funktioner" className="text-flocken-olive hover:underline">mer om de olika funktionerna Hundar, Passa, Rasta och Besöka</a>.
       </p>
 
       <h3>Är mina uppgifter säkra?</h3>

@@ -55,10 +55,10 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
                 <div className="absolute top-full left-0 w-48">
                   <div className="bg-white rounded-xl shadow-card border border-flocken-sand overflow-hidden mt-2">
                     <Link 
-                      href="/funktioner#para" 
+                      href="/funktioner#hundar" 
                       className="block px-4 py-3 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors"
                     >
-                      Para
+                      Hundar
                     </Link>
                     <Link 
                       href="/funktioner#passa" 
@@ -118,11 +118,11 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
             </Link>
             <div className="pl-4 space-y-1">
               <Link 
-                href="/funktioner#para" 
+                href="/funktioner#hundar" 
                 className="block py-2 text-sm text-flocken-brown/80 hover:text-flocken-olive transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Para
+                Hundar
               </Link>
               <Link 
                 href="/funktioner#passa" 
