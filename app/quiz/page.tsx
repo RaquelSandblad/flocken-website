@@ -25,7 +25,25 @@ export const metadata: Metadata = {
 
 export default async function QuizLibraryPage() {
   const allQuizzes = await getAllQuizzes();
-  const quizzes = allQuizzes.filter((q) => !q.hidden);
+  const QUIZ_ORDER = [
+    'hundens_historia',
+    'valpar_socialisering',
+    'hundens_kroppssprak',
+    'hundmat_naring',
+    'hundsport',
+    'kanda_hundar',
+    'rasers_syfte',
+  ];
+  const quizzes = allQuizzes
+    .filter((q) => !q.hidden)
+    .sort((a, b) => {
+      const ai = QUIZ_ORDER.indexOf(a.slug);
+      const bi = QUIZ_ORDER.indexOf(b.slug);
+      if (ai === -1 && bi === -1) return 0;
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
 
   return (
     <QuizLayout style={getQuizBrandStyle()}>

@@ -92,24 +92,28 @@ function flockenPromo(): string {
 
 // =============================================================================
 // VÄLKOMSTMEJL – skickas direkt vid registrering
-// Innehåller länk till kända hundar-quizet som lead magnet
+// Innehåller länk till valpar_socialisering-quizet som lead magnet
 // =============================================================================
 export function buildWelcomeEmail(): { subject: string; html: string; text: string } {
-  const quizUrl = `${BRAND.baseUrl}/kanda_hundar`;
+  const quizUrl = `${BRAND.baseUrl}/quiz/valpar_socialisering`;
 
   const content = `
     <h1 style="margin:0 0 8px;font-size:24px;font-weight:700;color:${BRAND.brown};line-height:1.3;">
-      Ditt bonusquiz väntar! 🐶
+      Här är ditt valp-quiz 🐶
     </h1>
     <p style="margin:0 0 20px;font-size:16px;color:${BRAND.gray};line-height:1.6;">
       Tack för att du registrerade dig.
     </p>
 
     <p style="margin:0 0 8px;font-size:15px;color:${BRAND.brown};line-height:1.7;">
-      Som utlovat – här är quizet om <strong>kända hundar</strong>. Känner du igen dem alla?
+      Valpar verkar mest syssla med att tumla runt, äta och sova – men det händer faktiskt väldigt mycket mer. Det här quizet ger dig tio frågor om valpar, och svaren är ofta lite överraskande.
     </p>
 
-    ${ctaButton('Starta quizet om kända hundar', quizUrl)}
+    <p style="margin:8px 0 4px;font-size:15px;color:${BRAND.brown};line-height:1.7;">
+      Du behöver inte vara expert. Det räcker att tycka om valpar.
+    </p>
+
+    ${ctaButton('Ta valp-quizet nu', quizUrl)}
 
     <p style="margin:0;font-size:14px;color:${BRAND.gray};line-height:1.7;">
       Vi hör av oss när vi släpper nästa quiz.
@@ -118,10 +122,10 @@ export function buildWelcomeEmail(): { subject: string; html: string; text: stri
     ${flockenPromo()}
   `;
 
-  const text = `Ditt bonusquiz väntar!\n\nTack för att du registrerade dig på Flocken Quiz.\n\nHär är quizet om kända hundar: ${quizUrl}\n\nVi hör av oss när vi släpper nästa quiz.\n\n© Spitakolus AB\nAvregistrera dig: ${BRAND.unsubscribeUrl}`;
+  const text = `Här är ditt valp-quiz!\n\nValpar verkar mest syssla med att tumla runt, äta och sova – men det händer faktiskt väldigt mycket mer. Tio frågor, svaren är ofta lite överraskande.\n\nTa quizet här: ${quizUrl}\n\nVi hör av oss när vi släpper nästa quiz.\n\n© Spitakolus AB\nAvregistrera dig: ${BRAND.unsubscribeUrl}`;
 
   return {
-    subject: 'Ditt quiz om kända hundar – öppna och testa 🐾',
+    subject: 'Ditt valp-quiz väntar – 10 frågor om de minsta 🐾',
     html: emailWrapper(content),
     text,
   };

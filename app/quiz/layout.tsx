@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import Script from 'next/script';
+import { QuizPageTracker } from '@/components/quiz/QuizPageTracker';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://quiz.flocken.info'),
@@ -19,5 +21,25 @@ export const metadata: Metadata = {
 };
 
 export default function QuizRootLayout({ children }: { children: ReactNode }) {
-  return children;
+  return (
+    <>
+      {/* Ensure GTM is initialized for quiz subdomain */}
+      <Script id="quiz-gtm-init" strategy="beforeInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          if (!window.__GTM_INITIALIZED__) {
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            window.__GTM_INITIALIZED__ = true;
+          }
+        `}
+      </Script>
+      <Script
+        id="quiz-gtm"
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-PD5N4GT3&l=dataLayer"
+        strategy="afterInteractive"
+      />
+      <QuizPageTracker />
+      {children}
+    </>
+  );
 }

@@ -56,7 +56,7 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
           <div>
             <p className="font-bold text-flocken-brown">Vi har tagit emot din mejladress!</p>
             <p className="mt-1 text-sm text-flocken-brown/70">
-              Quizet om kända hundar har skickats. Glöm inte att kolla skräpposten.
+              Valp-quizet har skickats till din inkorg. Glöm inte att kolla skräpposten.
             </p>
           </div>
         </div>
@@ -76,23 +76,25 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
 
   return (
     <div className="rounded-[var(--quiz-radius-card)] border border-flocken-olive/30 bg-gradient-to-br from-flocken-sand/60 to-flocken-cream/80 shadow-card overflow-hidden">
-      {/* Hero-bild 16:9 */}
-      <div className="relative aspect-video w-full">
+      {/* Mobil: hero-bild (dold på desktop) */}
+      <div className="relative aspect-square w-full md:hidden">
         <Image
-          src="/assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.webp"
-          alt="Quiz om kända hundar"
+          src="/assets/flocken/generated/quiz_valpar_socialisering_1x1_medium.webp"
+          alt="Quiz om valpar och socialisering"
           fill
-          sizes="(max-width: 768px) 100vw, 580px"
+          sizes="100vw"
           className="object-cover"
           priority
         />
       </div>
 
-      {/* Text + formulär */}
-      <div className="p-5">
-          <p className="font-bold text-flocken-brown">Få quizet om kända hundar – och alla nya quiz 🐾</p>
+      {/* Desktop: tvåkolumnslayout – text+formulär vänster, bild höger */}
+      <div className="md:grid md:grid-cols-[1fr_200px]">
+        {/* Text + formulär */}
+        <div className="p-5">
+          <p className="font-bold text-flocken-brown">Vad lär sig valpar bäst av kullsyskonen? 🐾</p>
           <p className="mt-1 text-sm leading-relaxed text-flocken-brown/70">
-            Skriv in din mejladress så får du quizet om kända hundar direkt. Du blir även först att få nya quiz.
+            Registrera din mejladress så skickar vi valp-quizet direkt. Du får även veta först när vi släpper nya quiz.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-3 flex flex-col gap-2 sm:flex-row">
@@ -110,7 +112,7 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
               disabled={status === 'loading' || !email}
               className="rounded-[var(--quiz-radius-card)] bg-flocken-olive px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-flocken-accent disabled:opacity-60 sm:flex-shrink-0"
             >
-              {status === 'loading' ? 'Skickar…' : 'Ja, meddela mig'}
+              {status === 'loading' ? 'Skickar…' : 'Lägg till mejladressen'}
             </button>
           </form>
 
@@ -122,6 +124,18 @@ export function EmailCaptureCard({ quizSlug }: EmailCaptureCardProps) {
             Inga spamutskick. Du kan avregistrera dig när som helst.{' '}
             <a href="/integritetspolicy" className="underline hover:text-flocken-brown">Integritetspolicy</a>.
           </p>
+        </div>
+
+        {/* Desktop-bild: 1:1 (dold på mobil) */}
+        <div className="relative hidden md:block">
+          <Image
+            src="/assets/flocken/generated/quiz_valpar_socialisering_1x1_medium.webp"
+            alt="Quiz om valpar och socialisering"
+            fill
+            sizes="200px"
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );

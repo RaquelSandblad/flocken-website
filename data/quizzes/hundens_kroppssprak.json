@@ -8,19 +8,19 @@
   },
   "questions": [
     {
-      "id": "kroppssprak-1",
+      "id": "kroppssprak-6",
       "type": "fact",
-      "question": "Hur beskriver SKK aggression hos hund – vad är syftet med beteendet enligt deras definition?",
+      "question": "Din hund slickar sig om nosen och gäspar när du tar fram kopplet inför en promenad. Vad är den mest välgrundade tolkningen?",
       "options": [
-        "Att hunden angriper utan föregående varning",
-        "Ett beteende eller hot som syftar till att skapa avstånd till en annan individ",
-        "Att hunden regelbundet morrnar mot okända i alla situationer",
-        "Beteende som enbart uppträder kring mat eller leksaker"
+        "Samma beteenden kan signalera både positiv förväntan och stress – kontexten avgör",
+        "Hunden visar tydliga stresssignaler och verkar ogilla promenader",
+        "Hunden markerar sitt revir med luktsignaler inomhus",
+        "Hunden är hungrig och associerar kopplet med matritualen"
       ],
-      "correctIndex": 1,
-      "explanation": "Definitionen är viktig: den beskriver aggression som en funktion – hunden försöker skapa avstånd och säkerhet, inte vara 'elak'. Det gör att hotbeteenden, morrning och bitförsök kan förstås som en sammanhängande skala av signaler med samma underliggande syfte.",
-      "sources": ["BETEENDE_SKK_AGGRESSION_DEF"],
-      "factId": "kroppssprak_aggression_skk_def"
+      "correctIndex": 0,
+      "explanation": "Nosslick och gäspning lyfts ofta fram som 'stresssignaler', men forskning visar att samma beteenden förekommer vid hög arousal och positiv förväntan – till exempel inför något kul. Att kalla dem 'stressbevis' utan sammanhang ger en skev bild. De är riskmarkörer som kräver kontext för korrekt tolkning.",
+      "sources": ["BETEENDE_DISPLACEMENT_FIRNKES", "BETEENDE_AROUSAL_VALENS"],
+      "factId": "kroppssprak_gasp_nosslick"
     },
     {
       "id": "kroppssprak-2",
@@ -83,19 +83,19 @@
       "factId": "kroppssprak_lekbugning"
     },
     {
-      "id": "kroppssprak-6",
+      "id": "kroppssprak-1",
       "type": "fact",
-      "question": "Din hund slickar sig om nosen och gäspar när du tar fram kopplet inför en promenad. Vad är den mest välgrundade tolkningen?",
+      "question": "Vad syftar aggressivt beteende hos hund till, enligt beteendevetenskaplig definition?",
       "options": [
-        "Samma beteenden kan signalera både positiv förväntan och stress – kontexten avgör",
-        "Hunden visar tydliga stresssignaler och verkar ogilla promenader",
-        "Hunden markerar sitt revir med luktsignaler inomhus",
-        "Hunden är hungrig och associerar kopplet med matritualen"
+        "Att hunden angriper utan föregående varning",
+        "Ett beteende eller hot som syftar till att skapa avstånd till en annan individ",
+        "Att hunden regelbundet morrnar mot okända i alla situationer",
+        "Beteende som enbart uppträder kring mat eller leksaker"
       ],
-      "correctIndex": 0,
-      "explanation": "Nosslick och gäspning lyfts ofta fram som 'stresssignaler', men forskning visar att samma beteenden förekommer vid hög arousal och positiv förväntan – till exempel inför något kul. Att kalla dem 'stressbevis' utan sammanhang ger en skev bild. De är riskmarkörer som kräver kontext för korrekt tolkning.",
-      "sources": ["BETEENDE_DISPLACEMENT_FIRNKES", "BETEENDE_AROUSAL_VALENS"],
-      "factId": "kroppssprak_gasp_nosslick"
+      "correctIndex": 1,
+      "explanation": "Definitionen är viktig: den beskriver aggression som en funktion – hunden försöker skapa avstånd och säkerhet, inte vara 'elak'. Det gör att hotbeteenden, morrning och bitförsök kan förstås som en sammanhängande skala av signaler med samma underliggande syfte.",
+      "sources": ["BETEENDE_SKK_AGGRESSION_DEF"],
+      "factId": "kroppssprak_aggression_def"
     },
     {
       "id": "kroppssprak-7",
