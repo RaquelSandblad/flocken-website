@@ -63,8 +63,47 @@ export default function SupportPage() {
         Ja, vi tar din integritet på största allvar. Läs vår{' '}
         <a href="/integritetspolicy" className="text-flocken-olive hover:underline">
           integritetspolicy
-        </a>{' '}
+        </a>
         för mer information om hur vi hanterar dina personuppgifter.
+      </p>
+
+      <h3>Hur fungerar det med prenumerationer och återbetalning?</h3>
+      <p>
+        Alla betalningar för Flocken Premium hanteras av{' '}
+        <strong>Apple App Store</strong> (iPhone/iPad) eller{' '}
+        <strong>Google Play</strong> (Android). Det innebär att din betalning
+        formellt sker till Apple eller Google, inte direkt till oss.
+      </p>
+      <p>
+        Om du har frågor om en debitering eller vill begära återbetalning
+        behöver du därför i första hand gå via den plattform där köpet gjordes:
+      </p>
+      <ul className="list-disc ml-6 space-y-1">
+        <li>
+          <strong>iPhone/iPad:</strong> Besök{' '}
+          <a
+            href="https://reportaproblem.apple.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-flocken-olive hover:underline"
+          >
+            reportaproblem.apple.com
+          </a>{' '}
+          och följ Apples steg för att begära återbetalning.
+        </li>
+        <li>
+          <strong>Android:</strong> Öppna Google Play-appen &rarr;{' '}
+          <em>Betalningar och prenumerationer</em> &rarr; <em>Prenumerationer</em>{' '}
+          &rarr; välj Flocken och följ Googles instruktioner.
+        </li>
+      </ul>
+      <p>
+        Om du kör fast eller är osäker på vilket abonnemang som är aktivt är du
+        alltid välkommen att kontakta oss på{' '}
+        <a href="mailto:kontakt@flocken.info" className="text-flocken-olive hover:underline">
+          kontakt@flocken.info
+        </a>
+        , så hjälper vi dig att reda ut det.
       </p>
 
       <h2 id="feedback">Feedback & Förslag</h2>
