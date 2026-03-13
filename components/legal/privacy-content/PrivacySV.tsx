@@ -6,7 +6,7 @@ export function PrivacySV() {
       <h1>Integritetspolicy för Flocken</h1>
       
       <p className="lead">
-        <strong>Senast uppdaterad:</strong> 18 januari 2026
+        <strong>Senast uppdaterad:</strong> 13 mars 2026
       </p>
       
       <p>
@@ -182,8 +182,14 @@ export function PrivacySV() {
         <li><strong>Meta Pixel (Facebook Pixel)</strong> – för att mäta konverteringar från Meta-annonser och förbättra annonsering</li>
         <li><strong>Google Tag Manager</strong> – för att hantera och koordinera spårningsskript</li>
       </ul>
-      <p><strong>Viktigt:</strong> Marknadsföringsspårning aktiveras endast om du ger ditt samtycke via vår cookie-banner. Du kan när som helst ändra dina val via{' '}<a href="/privacy-choices" className="text-flocken-olive hover:underline">användarens integritetsval</a>{' '}eller genom att klicka på &quot;Hantera cookies&quot; i sidfoten.</p>
-      <p><strong>Rättslig grund:</strong> Samtycke (artikel 6.1 a GDPR) – marknadsföringsspårning sker endast efter att du aktivt godkänt detta via cookie-bannern.</p>
+      <p><strong>Viktigt:</strong> Marknadsföringsspårning på webbplatsen aktiveras endast om du ger ditt samtycke via vår cookie-banner. Du kan när som helst ändra dina val via{' '}<a href="/privacy-choices" className="text-flocken-olive hover:underline">användarens integritetsval</a>{' '}eller genom att klicka på &quot;Hantera cookies&quot; i sidfoten.</p>
+      <p>För marknadsföring och mätning direkt i mobilappen används även:</p>
+      <ul>
+        <li><strong>SKAdNetwork (Apple)</strong> – Apples inbyggda ramverk för att mäta appinstallationer på iOS på ett integritetsskyddande sätt, utan att personuppgifter delas</li>
+        <li><strong>Android Advertising ID</strong> – ett anonymt och återställbart annons-ID på Android-enheter, som används för att mäta om en installation härrör från en annons. Du kan när som helst återställa eller inaktivera detta ID i din enhets inställningar</li>
+      </ul>
+      <p>Dessa system samlar inte in namn, e-postadress eller annan direkt identifierande information och används uteslutande för att mäta hur effektiv vår marknadsföring är.</p>
+      <p><strong>Rättslig grund:</strong> Samtycke (artikel 6.1 a GDPR) för webb-spårning. Berättigat intresse (artikel 6.1 f GDPR) för aggregerad mätning i appen – vårt berättigade intresse av att förstå och förbättra effekten av vår marknadsföring.</p>
       
       <h3 id="ändamål-juridik">4.6 För att följa lagar och hantera tvister</h3>
       <p><strong>Exempel på behandlingar:</strong></p>

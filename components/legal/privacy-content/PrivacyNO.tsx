@@ -6,7 +6,7 @@ export function PrivacyNO() {
       <h1>Personvernerklæring for Flocken</h1>
       
       <p className="lead">
-        <strong>Sist oppdatert:</strong> 12. februar 2026
+        <strong>Sist oppdatert:</strong> 13. mars 2026
       </p>
       
       <p>Denne personvernerklæringen gjelder for behandling av personopplysninger i forbindelse med bruk av Flockens tjenester, inkludert mobilapper (iOS og Android) samt våre nettsider, som flocken.info.</p>
@@ -164,8 +164,14 @@ export function PrivacyNO() {
         <li><strong>Meta Pixel (Facebook Pixel)</strong> – for å måle konverteringer fra Meta-annonser og forbedre annonsering</li>
         <li><strong>Google Tag Manager</strong> – for å administrere og koordinere sporingsskript</li>
       </ul>
-      <p><strong>Viktig:</strong> Markedsføringssporing aktiveres kun hvis du gir ditt samtykke via vår cookie-banner. Du kan når som helst endre valgene dine via{' '}<a href="/privacy-choices" className="text-flocken-olive hover:underline">brukerens personvernvalg</a>{' '}eller ved å klikke på &quot;Administrer cookies&quot; i bunnteksten.</p>
-      <p><strong>Rettslig grunnlag:</strong> Samtykke (artikkel 6.1 a GDPR) – markedsføringssporing skjer kun etter at du aktivt har godkjent dette via cookie-banneren.</p>
+      <p><strong>Viktig:</strong> Markedsføringssporing på nettsiden aktiveres kun hvis du gir ditt samtykke via vår cookie-banner. Du kan når som helst endre valgene dine via{' '}<a href="/privacy-choices" className="text-flocken-olive hover:underline">brukerens personvernvalg</a>{' '}eller ved å klikke på &quot;Administrer cookies&quot; i bunnteksten.</p>
+      <p>For markedsføring og måling direkte i mobilappen bruker vi også:</p>
+      <ul>
+        <li><strong>SKAdNetwork (Apple)</strong> – Apples innebygde rammeverk for personvernvennlig måling av appinstallasjoner på iOS, uten at personopplysninger deles</li>
+        <li><strong>Android Advertising ID</strong> – et anonymt og tilbakestillbart annonserings-ID på Android-enheter, som brukes for å måle om en installasjon stammer fra en annonse. Du kan når som helst tilbakestille eller deaktivere dette ID-et i enhetens innstillinger</li>
+      </ul>
+      <p>Disse systemene samler ikke inn navn, e-postadresse eller annen direkte identifiserende informasjon, og brukes utelukkende for å måle effektiviteten av vår markedsføring.</p>
+      <p><strong>Rettslig grunnlag:</strong> Samtykke (artikkel 6.1 a GDPR) for nettstedssporing. Berettiget interesse (artikkel 6.1 f GDPR) for aggregert måling i appen – vår berettigede interesse i å forstå og forbedre effekten av vår markedsføring.</p>
       
       <h3 id="formaal-juridisk">4.6 For å overholde lovgivning og håndtere tvister</h3>
       <p><strong>Eksempler på behandlinger:</strong></p>
