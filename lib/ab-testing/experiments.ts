@@ -34,7 +34,7 @@ export const experiments: Record<string, Experiment> = {
 
           // Additional content
           launchInfo: 'Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund.',
-          launchOffer: 'Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 28 februari.',
+          launchOffer: 'Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 31 mars.',
 
           heroStructure: 'default',
         },

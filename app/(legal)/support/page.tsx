@@ -49,7 +49,7 @@ export default function SupportPage() {
 
       <h3>Är Flocken gratis?</h3>
       <p>
-        Ja, Flocken är gratis i 6 månader för alla som skapar konto innan den 28 februari.
+        Ja, Flocken är gratis i 6 månader för alla som skapar konto innan den 31 mars.
         Därefter finns det olika prenumerationsplaner för premiumfunktioner, men även ett gratiskonto.
       </p>
 

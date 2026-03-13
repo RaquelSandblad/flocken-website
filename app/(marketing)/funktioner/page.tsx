@@ -493,7 +493,7 @@ export default function FunktionerPage() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
               <p className="text-lg text-white font-semibold">
-                Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 28 februari). Appen är alltid gratis.
+                Just nu: Gratis premiumfunktioner i 6 månader (gäller till den 31 mars). Appen är alltid gratis.
               </p>
             </div>
           </div>
