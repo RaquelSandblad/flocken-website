@@ -40,17 +40,17 @@
     {
       "id": "historia-3",
       "type": "fact",
-      "question": "Du har registrerat din hund i SKK:s stambok. Behöver du också registrera hos Jordbruksverket?",
+      "question": "Var i världen tror de flesta forskare att hunden först domesticerades?",
       "options": [
-        "Nej, SKK-registrering gäller som officiell ägarregistrering hos myndigheter",
-        "Bara om hunden ska exporteras till ett EU-land",
-        "Bara om hunden saknar stamtavla och är av okänd ras",
-        "Ja, Jordbruksverkets ägarregister är ett separat lagkrav"
+        "I Nordafrika, i samband med tidiga jordbrukssamhällen",
+        "Frågan är fortfarande öppen – det finns starka bevis för både Europa och Östasien",
+        "I Sibirien, baserat på de äldsta kända hundfynden",
+        "I Sydamerika, där den genetiska mångfalden hos hundar är störst"
       ],
-      "correctIndex": 3,
-      "explanation": "SKK:s stambok innehåller härstamning, hälsodata och meriter. Jordbruksverkets register kopplar hunden till en ägare och används t.ex. om en hund springer lös. De fyller helt olika syften och krävs parallellt – det ena ersätter inte det andra.",
-      "sources": ["HISTORIA_027", "HISTORIA_025"],
-      "factId": "historia_skk_vs_jordbruksverket"
+      "correctIndex": 1,
+      "explanation": "Trots decennier av DNA-studier och arkeologiska fynd finns inget vetenskapligt konsensus om exakt var domesticeringen skedde. Både Europa och Östasien har starka bevis, och vissa forskare har föreslagit att det kan ha skett oberoende på mer än ett ställe.",
+      "sources": ["HISTORIA_005", "HISTORIA_006"],
+      "factId": "historia_geografiskt_ursprung"
     },
     {
       "id": "historia-4",
@@ -100,32 +100,32 @@
     {
       "id": "historia-7",
       "type": "fact",
-      "question": "Vem bestämmer egentligen innehållet i en FCI-rasstandard?",
+      "question": "Hur kom hunden till Amerika?",
       "options": [
-        "FCI:s vetenskapliga kommitté",
-        "Den nationella kennelklubben i landet där rasen är vanligast",
-        "En internationell domarkommitté som möts vart fjärde år",
-        "Rasens hemland – landet som rasen ursprungligen tillhör"
+        "Européer tog med sig hundar under koloniseringen på 1500-talet",
+        "Hundar korsade Berings landbrygga med människor för tusentals år sedan",
+        "Amerikanska hundar domesticerades oberoende från nordamerikanska vargar",
+        "Hunden spreds till Amerika via Polynesien och Sydostasien"
       ],
-      "correctIndex": 3,
-      "explanation": "I FCI-systemet är det hemlandet som 'äger' standarden – de bestämmer hur rasen ska se ut och fungera. FCI publicerar och hanterar internationell spridning, men initiativet till ändringar måste komma från hemlandet.",
-      "sources": ["RAS_019", "RAS_022"],
-      "factId": "historia_rasstandard_hemland"
+      "correctIndex": 1,
+      "explanation": "Genetiska studier visar att de första amerikanska hundarna härstammade från östasiatiska hundar som följde med människor över Beringia för minst 10 000 år sedan. De flesta av dessa ursprungliga hundlinjer ersattes senare av europeiska hundar efter kolonisationen.",
+      "sources": ["HISTORIA_014", "HISTORIA_016"],
+      "factId": "historia_hundar_amerika"
     },
     {
       "id": "historia-8",
       "type": "fact",
-      "question": "FCI grundades 1911, men organisationen försvann kort därefter. Vad fick den att återuppstå?",
+      "question": "Vad är det äldsta kända arkeologiska beviset för att hundar använts som draghundar?",
       "options": [
-        "En kampanj från svenska och norska kennelklubbar under tidigt 1920-tal",
-        "FCI återskapades 1921 efter att ha upplösts i samband med första världskriget",
-        "En internationell hundutställning i Paris 1920 samlade grundarna igen",
-        "FCI slogs samman med Royal Kennel Club och fick nytt mandat 1919"
+        "Norska vikingagravar med hundspann, daterade till ca 800 e.Kr.",
+        "Egyptiska väggmålningar av hunddrivna vagnar, ca 3 000 f.Kr.",
+        "Fynd på Zhokhov-ön i arktiska Sibirien, daterade till ca 9 000 år sedan",
+        "Medeltida manuskript från 1200-talets Europa"
       ],
-      "correctIndex": 1,
-      "explanation": "Det är en påminnelse om att hundorganisationer inte lever i ett vakuum – även de påverkas av krig och samhällsomvälvningar. FCI:s nutida form är i grunden ett 1921-projekt, inte 1911.",
-      "sources": ["HISTORIA_012", "HISTORIA_013"],
-      "factId": "historia_fci_wwi"
+      "correctIndex": 2,
+      "explanation": "På den arktiska Zhokhov-ön i östra Sibirien har forskare hittat bevis för specialiserade slädehundar som levde för ca 9 000 år sedan. DNA-analys visar att dessa hundar redan var anpassade för arbete i extrem kyla – långt innan vikingarna eller andra europeiska kulturer använde draghundar.",
+      "sources": ["HISTORIA_017", "HISTORIA_018"],
+      "factId": "historia_aeldsta_draghundar"
     },
     {
       "id": "historia-9",
@@ -145,17 +145,17 @@
     {
       "id": "historia-10",
       "type": "fact",
-      "question": "Hur skrivs rasnamn korrekt i svensk löptext, enligt SKK:s norm?",
+      "question": "När människan övergick från jakt till jordbruk förändrades hundens kost. Vad visar genetiken?",
       "options": [
-        "Med stor bokstav, eftersom rasnamn är egennamn",
-        "Med gemener (liten bokstav), eftersom rasnamn inte betraktas som egennamn",
-        "Varierar beroende på om rasen har svensk eller utländsk härkomst",
-        "Med versaler i officiella dokument, annars gemener"
+        "Hunden fortsatte att äta enbart kött, precis som vargen",
+        "Hundar utvecklade fler kopior av genen AMY2B, som bryter ner stärkelse",
+        "Jordbrukshundar fick mindre mat och blev därför mindre än sina föregångare",
+        "Det finns inga genetiska bevis för att jordbruket påverkade hundens kost"
       ],
       "correctIndex": 1,
-      "explanation": "Många hundägare skriver 'Border Collie' med stor bokstav, men SKK:s norm är 'border collie' med gemener i löptext – precis som 'labrador' och 'schäfer'. Det är en liten detalj som avslöjar den som verkligen har koll på sina regler.",
-      "sources": ["RAS_027"],
-      "factId": "historia_rasnamn_gemener"
+      "explanation": "Ett av de tydligaste genetiska bevisen för samevolution mellan hund och människa är genen AMY2B. Hundar har betydligt fler kopior av den genen än vargar – en anpassning som sannolikt skedde i takt med att människans kost blev mer stärkelserik under jordbruksrevolutionen.",
+      "sources": ["HISTORIA_035", "HISTORIA_036"],
+      "factId": "historia_starkelsegen"
     }
   ]
 }
