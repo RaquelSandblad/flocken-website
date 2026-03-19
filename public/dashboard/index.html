@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flocken – Veckovis aktivitet</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --card: #fff;
+      --border: #dee2e6;
+      --text: #212529;
+      --muted: #6c757d;
+      --accent: #2d5a27;
+      --accent-light: #e8f0e6;
+      --tr-hover: #f8f9fa;
+      --input-bg: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #1a1d21;
+      --card: #25282c;
+      --border: #3d4248;
+      --text: #f0f2f5;
+      --muted: #d0d3d8;
+      --accent: #8fd38f;
+      --accent-light: #2d3d2d;
+      --tr-hover: #2d3136;
+      --input-bg: #1a1d21;
+    }
+    [data-theme="dark"] .analysis-box { background: #1e2a1e; border-left-color: var(--accent); }
+    [data-theme="dark"] .sanity-alert { background: #3d3500; border-color: #665500; color: #ffd700; }
+    [data-theme="dark"] .error { background: #4a2020; color: #ffb3ba; }
+    [data-theme="dark"] .kpi-card .kpi-value { color: #f0f2f5; }
+    [data-theme="dark"] .kpi-card .kpi-label { color: #d0d3d8; }
+    [data-theme="dark"] th { color: #8fd38f; }
+    [data-theme="dark"] .help { color: #d0d3d8; }
+    [data-theme="dark"] td.num { color: #f0f2f5; }
+    [data-theme="dark"] .copy-hint { color: #c0c3c8; }
+    [data-theme="dark"] .disclaimer { color: #d0d3d8; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      margin: 0;
+      padding: 1rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 { font-size: 1.5rem; margin-top: 0; color: var(--accent); }
+    h2 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .help {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.8rem;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      resize: vertical;
+      background: var(--input-bg);
+      color: var(--text);
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    button:hover { opacity: 0.9; }
+    .error { color: #b02a37; background: #f8d7da; padding: 0.5rem; border-radius: 6px; margin-top: 0.5rem; font-size: 0.9rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: var(--accent-light); color: var(--accent); font-weight: 600; }
+    tr:hover { background: var(--tr-hover); }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .section-events table { font-size: 0.85rem; }
+    .section-events th { white-space: nowrap; }
+    .disclaimer { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .analysis-box { background: #f0f4ff; border-left: 4px solid #2d5a27; padding: 1rem 1.25rem; margin: 0.75rem 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+    .analysis-box h3 { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--accent); }
+    .analysis-box ul { margin: 0.25rem 0; padding-left: 1.25rem; }
+    .analysis-box .good { color: #0d6832; }
+    .analysis-box .bad { color: #b02a37; }
+    .analysis-box .attention { color: #856404; }
+    .copy-hint { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.5rem; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+    .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; }
+    .kpi-card .kpi-value { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+    .kpi-card .kpi-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.15rem; }
+    .kpi-card .wow { font-size: 0.8rem; margin-top: 0.25rem; }
+    .wow-up { color: #0d6832; }
+    .wow-down { color: #b02a37; }
+    .badge { font-size: 0.7rem; background: var(--muted); color: #fff; padding: 0.1rem 0.4rem; border-radius: 4px; margin-left: 0.35rem; }
+    .sanity-alert { background: #fff3cd; border: 1px solid #ffc107; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.85rem; margin-top: 0.5rem; }
+    .chart-card { margin-bottom: 2rem; }
+    .chart-card h3 { font-size: 1rem; margin: 0 0 0.75rem 0; color: var(--accent); }
+    .chart-wrap { position: relative; height: 220px; max-width: 100%; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <script>
+    if(!sessionStorage.getItem('dashboard_ok')){location.replace('index.html');}
+    (function(){
+      var t = localStorage.getItem('dashboard_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <p style="margin:0 0 0.5rem 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+    <span></span>
+    <button type="button" id="themeToggle" style="margin:0;">Mörkt tema</button>
+  </p>
+  <script>
+    (function(){
+      var btn = document.getElementById('themeToggle');
+      function updateBtn() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        btn.textContent = isDark ? 'Ljust tema' : 'Mörkt tema';
+      }
+      btn.onclick = function() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        localStorage.setItem('dashboard_theme', isDark ? 'light' : 'dark');
+        updateBtn();
+      };
+      updateBtn();
+    })();
+  </script>
+  <h1>Flocken – Veckovis aktivitet</h1>
+  <div id="textSummary" class="sr-only" role="region" aria-label="Textsammanfattning för skärmläsare och AI"></div>
+  <p class="help"><strong>Här nedan ser du:</strong> antal nya konton, hundar, hundvaktprofiler, konversationer, meddelanden, promenader och hundvänliga platser vecka för vecka – plus app-events (inloggningar, annonser skapade, kontakt med hundvakt). Alla siffror exkluderar Raquel, Torbjörn och tb.sandblad.</p>
+  <p class="help" style="margin-bottom:0;"><strong>Live-data</strong> <span id="fetchStatus" style="font-weight:600;"></span></p>
+
+  <div class="card">
+    <h2>Dagens höjdpunkter</h2>
+    <p class="help">Dagens nyckeltal</p>
+    <div id="outHighlights"></div>
+  </div>
+
+  <div class="card">
+    <h2>Användare per prenumerationstyp</h2>
+    <p class="help">Totalt antal användare: gratiskonto, gratis-premium (trial), betalande.</p>
+    <div id="outSubscriptionBars"></div>
+  </div>
+
+  <div class="card">
+    <h2>KPI – senaste fulla veckan</h2>
+    <div id="outKpi"></div>
+  </div>
+
+  <div class="card">
+    <h2>Grafer per parameter</h2>
+    <p class="help">Samma data som tabellen ovan, ett stapeldiagram per mått. Fullständiga namn – inga förkortningar.</p>
+    <div id="outCharts"></div>
+  </div>
+
+  <div class="card">
+    <h2>Kontotyper – fördelning och e-postbekräftelse</h2>
+    <p class="help">Totalt antal konton per typ, hur många som bekräftat sin e-post, och nya konton per vecka uppdelat på typ.</p>
+    <div id="outAccountTypes"></div>
+    <div id="outAccountWeekly"></div>
+  </div>
+
+  <div class="card">
+    <h2>App-events veckovis (pivoterat – en rad per vecka)</h2>
+    <p class="help">Unika användare per event och vecka. Visar senaste tre fulla veckor.</p>
+    <div class="table-wrap"><div id="outEvents"></div></div>
+    <h3 style="margin-top:1.5rem; font-size:1rem;">Pågående vecka (dag för dag)</h3>
+    <div class="table-wrap"><div id="outEventsDaily"></div></div>
+    <details style="margin-top:1rem;">
+      <summary style="cursor:pointer; color:var(--muted); font-size:0.9rem;">Uppdatera med ny data från Supabase</summary>
+      <textarea id="jsonEvents" placeholder='Klistra in JSON här...' style="min-height:80px;"></textarea>
+      <button type="button" id="btnEvents">Visa uppdaterade events</button>
+      <div id="errEvents" class="error" style="display:none;"></div>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>Daglig återkomst (retention per kohort)</h2>
+    <p class="help">Av de som skapade konto en given dag – hur många öppnade appen igen? Dag 0 = senare samma dag. ~Dag 14/21/30 räknar ±1–2 dagar runt exakt dag för att fånga upp folk som kom tillbaka strax innan/efter. Visar antal och % av kohorten.</p>
+    <div id="outRetention"></div>
+  </div>
+
+  <div class="card">
+    <h2>Veckovis översikt (råtal + andelar)</h2>
+    <div class="table-wrap"><div id="outMain"></div></div>
+    <div id="outPartial" style="margin-top:1rem;"></div>
+    <p style="margin-top:0.75rem;">
+      <button type="button" id="btnExportCsv">Exportera huvudtabell som CSV</button>
+      <button type="button" id="btnClearCache" style="margin-left:0.5rem; background:#dc3545;">Rensa cache & ladda om</button>
+    </p>
+    <details style="margin-top:1rem;">
+      <summary style="cursor:pointer; color:var(--muted); font-size:0.9rem;">Uppdatera med ny data från Supabase</summary>
+      <p class="help">Kör huvudfrågan i Supabase SQL Editor, kopiera resultatet som JSON och klistra in här, klicka sedan på knappen. Data sparas lokalt (localStorage) så du slipper klistra in nästa gång.</p>
+      <textarea id="jsonMain" placeholder='Klistra in JSON här...' style="min-height:80px;"></textarea>
+      <button type="button" id="btnMain">Visa uppdaterad huvudtabell</button>
+      <div id="errMain" class="error" style="display:none;"></div>
+    </details>
+  </div>
+
+  <p class="disclaimer">Alla siffror exkluderar Raquel Sandblad, Torbjörn Sandblad och tb.sandblad-konton (analytics_excluded_users).</p>
+
+  <script>
+    (function() {
+      var SUPABASE_URL = 'https://jzbdxcsocwdxwzjjlnrw.supabase.co';
+      var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp6YmR4Y3NvY3dkeHd6ampsbnJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyMjY4NTEsImV4cCI6MjA3NjgwMjg1MX0.eWpRvtv_2dClpwRYnLsD8yvNWz75jd1J42KLstVGpd4';
+
+      function rpc(fnName) {
+        return fetch(SUPABASE_URL + '/rest/v1/rpc/' + fnName, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: '{}'
+        }).then(function(r) { return r.json(); });
+      }
+
+      var mainLabels = {
+        label: 'Vecka',
+        nya_konton: 'Nya konton',
+        nya_hundar: 'Nya hundar',
+        nya_hundvakt_profiler: 'Nya hundvaktprofiler',
+        sitter_konversationer: 'Nya sitter-konversationer',
+        tindog_konversationer: 'Nya tindog-konversationer',
+        sitter_meddelanden: 'Meddelanden (sitter)',
+        tindog_meddelanden: 'Meddelanden (tindog)',
+        promenader: 'Promenader',
+        hundvanliga_platser: 'Hundvänliga platser',
+        bokningar: 'Bokningar'
+      };
+
+      var DEFAULT_MAIN_DATA = [
+        {"label":"22–28 jan","nya_konton":69,"nya_hundar":14,"nya_hundvakt_profiler":22,"sitter_konversationer":0,"tindog_konversationer":0,"sitter_meddelanden":0,"tindog_meddelanden":0,"promenader":0,"hundvanliga_platser":0,"bokningar":0},
+        {"label":"29 jan–4 feb","nya_konton":74,"nya_hundar":19,"nya_hundvakt_profiler":11,"sitter_konversationer":0,"tindog_konversationer":0,"sitter_meddelanden":0,"tindog_meddelanden":3,"promenader":0,"hundvanliga_platser":2,"bokningar":0},
+        {"label":"5–11 feb","nya_konton":108,"nya_hundar":18,"nya_hundvakt_profiler":23,"sitter_konversationer":1,"tindog_konversationer":1,"sitter_meddelanden":1,"tindog_meddelanden":1,"promenader":2,"hundvanliga_platser":2,"bokningar":0},
+        {"label":"12–18 feb","nya_konton":131,"nya_hundar":16,"nya_hundvakt_profiler":20,"sitter_konversationer":0,"tindog_konversationer":2,"sitter_meddelanden":0,"tindog_meddelanden":1,"promenader":1,"hundvanliga_platser":2,"bokningar":0},
+        {"label":"19–25 feb","nya_konton":112,"nya_hundar":12,"nya_hundvakt_profiler":27,"sitter_konversationer":2,"tindog_konversationer":4,"sitter_meddelanden":2,"tindog_meddelanden":2,"promenader":0,"hundvanliga_platser":0,"bokningar":0},
+        {"label":"26 feb–4 mar","nya_konton":145,"nya_hundar":37,"nya_hundvakt_profiler":41,"sitter_konversationer":2,"tindog_konversationer":11,"sitter_meddelanden":1,"tindog_meddelanden":9,"promenader":1,"hundvanliga_platser":0,"bokningar":0},
+        {"label":"5 mar (1 dag)","nya_konton":13,"nya_hundar":2,"nya_hundvakt_profiler":2,"sitter_konversationer":5,"tindog_konversationer":0,"sitter_meddelanden":4,"tindog_meddelanden":0,"promenader":0,"hundvanliga_platser":0,"bokningar":0}
+      ];
+
+      var DEFAULT_EVENTS_DATA = [
+        {"label":"12–18 feb","event_name":"app_opened","antal_events":66,"unika_anvandare":46},
+        {"label":"12–18 feb","event_name":"listing_created","antal_events":9,"unika_anvandare":9},
+        {"label":"12–18 feb","event_name":"login","antal_events":140,"unika_anvandare":65},
+        {"label":"12–18 feb","event_name":"user_signed_in","antal_events":70,"unika_anvandare":65},
+        {"label":"19–25 feb","event_name":"app_opened","antal_events":202,"unika_anvandare":81},
+        {"label":"19–25 feb","event_name":"listing_created","antal_events":12,"unika_anvandare":12},
+        {"label":"19–25 feb","event_name":"login","antal_events":220,"unika_anvandare":95},
+        {"label":"19–25 feb","event_name":"sitter_contacted","antal_events":2,"unika_anvandare":1},
+        {"label":"19–25 feb","event_name":"user_signed_in","antal_events":110,"unika_anvandare":95},
+        {"label":"26 feb–4 mar","event_name":"app_opened","antal_events":265,"unika_anvandare":98},
+        {"label":"26 feb–4 mar","event_name":"listing_created","antal_events":40,"unika_anvandare":30},
+        {"label":"26 feb–4 mar","event_name":"login","antal_events":288,"unika_anvandare":129},
+        {"label":"26 feb–4 mar","event_name":"sitter_contacted","antal_events":3,"unika_anvandare":1},
+        {"label":"26 feb–4 mar","event_name":"user_signed_in","antal_events":145,"unika_anvandare":129},
+        {"label":"5 mar","event_name":"app_opened","antal_events":16,"unika_anvandare":14},
+        {"label":"5 mar","event_name":"listing_created","antal_events":2,"unika_anvandare":2},
+        {"label":"5 mar","event_name":"login","antal_events":22,"unika_anvandare":11},
+        {"label":"5 mar","event_name":"sitter_contacted","antal_events":7,"unika_anvandare":2},
+        {"label":"5 mar","event_name":"user_signed_in","antal_events":11,"unika_anvandare":11}
+      ];
+
+      function showErr(id, msg) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.textContent = msg || '';
+        el.style.display = msg ? 'block' : 'none';
+      }
+
+      function isPartialWeek(row) {
+        if (row.days_in_week != null && row.days_in_week < 7) return true;
+        var l = (row.label || '') + '';
+        return /\(1 dag\)|1 dag/i.test(l) || l.indexOf('(dag 1)') !== -1;
+      }
+
+      function getFullWeeks(data) {
+        if (!Array.isArray(data)) return [];
+        return data.filter(function(row) { return !isPartialWeek(row); });
+      }
+
+      function getPartialWeek(data) {
+        if (!Array.isArray(data)) return null;
+        var found = data.filter(function(row) { return isPartialWeek(row); });
+        return found.length ? found[0] : null;
+      }
+
+      function computeDerived(row) {
+        var konton = row.nya_konton || 0;
+        var konv = (row.sitter_konversationer || 0) + (row.tindog_konversationer || 0);
+        var medd = (row.sitter_meddelanden || 0) + (row.tindog_meddelanden || 0);
+        return {
+          hund_aktivering_pct: konton ? ((row.nya_hundar || 0) / konton) * 100 : 0,
+          vakt_aktivering_pct: konton ? ((row.nya_hundvakt_profiler || 0) / konton) * 100 : 0,
+          konv_per_100: konton ? (konv / konton) * 100 : 0,
+          medd_per_konv: konv ? (medd / konv) : 0
+        };
+      }
+
+      function renderHighlights(mainData, todayData) {
+        var container = document.getElementById('outHighlights');
+        if (!container) return;
+        
+        if (!todayData || !todayData.date) {
+          container.innerHTML = '<p class="help">Ingen data för idag tillgänglig än.</p>';
+          return;
+        }
+
+        var html = '<div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin-bottom:1rem;">';
+        html += '<div><div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr);">';
+        
+        var totalNewAccounts = 0;
+        if (todayData.accounts && todayData.accounts.length > 0) {
+          todayData.accounts.forEach(function(a) {
+            totalNewAccounts += a.new_accounts || 0;
+          });
+        }
+        
+        html += '<div class="kpi-card"><div class="kpi-value">' + totalNewAccounts + '</div><div class="kpi-label">Nya konton</div></div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + (todayData.new_dogs || 0) + '</div><div class="kpi-label">Nya hundar</div></div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + (todayData.new_sitters || 0) + '</div><div class="kpi-label">Nya hundvaktprofiler</div></div>';
+        html += '</div></div>';
+        
+        html += '<div><canvas id="highlightsChart" style="max-height:180px;"></canvas></div>';
+        html += '</div>';
+        
+        container.innerHTML = html;
+
+        if (!todayData.accounts || todayData.accounts.length === 0) return;
+
+        var ownerAcct = todayData.accounts.find(function(a) { return a.account_type === 'dog_owner'; });
+        var sitterAcct = todayData.accounts.find(function(a) { return a.account_type === 'dog_sitter'; });
+        var kennelAcct = todayData.accounts.find(function(a) { return a.account_type === 'kennel'; });
+        var daycareAcct = todayData.accounts.find(function(a) { return a.account_type === 'dog_daycare'; });
+
+        var labels = ['Hundägare', 'Hundvakt', 'Kennel', 'Hunddagis'];
+        
+        var ownerTotal = (ownerAcct && ownerAcct.new_accounts) || 0;
+        var ownerWithProfile = (ownerAcct && ownerAcct.with_profile) || 0;
+        var ownerNoProfile = Math.max(0, ownerTotal - ownerWithProfile);
+        
+        var sitterTotal = (sitterAcct && sitterAcct.new_accounts) || 0;
+        var sitterWithProfile = (sitterAcct && sitterAcct.with_profile) || 0;
+        var sitterNoProfile = Math.max(0, sitterTotal - sitterWithProfile);
+        
+        var kennelTotal = (kennelAcct && kennelAcct.new_accounts) || 0;
+        var kennelWithProfile = (kennelAcct && kennelAcct.with_profile) || 0;
+        
+        var daycareTotal = (daycareAcct && daycareAcct.new_accounts) || 0;
+        var daycareWithProfile = (daycareAcct && daycareAcct.with_profile) || 0;
+
+        var solidData = [ownerWithProfile, sitterWithProfile, kennelWithProfile, daycareWithProfile];
+        var hatchData = [ownerNoProfile, sitterNoProfile, Math.max(0, kennelTotal - kennelWithProfile), Math.max(0, daycareTotal - daycareWithProfile)];
+
+        var colors = [
+          ACCOUNT_TYPE_COLORS.dog_owner,
+          ACCOUNT_TYPE_COLORS.dog_sitter,
+          ACCOUNT_TYPE_COLORS.kennel,
+          ACCOUNT_TYPE_COLORS.dog_daycare
+        ];
+
+        var hatchPatterns = colors.map(function(c) { return makeHatchPattern(c); });
+
+        var ctx = document.getElementById('highlightsChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Med profil',
+                data: solidData,
+                backgroundColor: colors,
+                borderWidth: 0
+              },
+              {
+                label: 'Utan profil',
+                data: hatchData,
+                backgroundColor: hatchPatterns,
+                borderColor: colors,
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: true, position: 'top' },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    return ctx.dataset.label + ': ' + ctx.parsed.y;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { stacked: true },
+              y: { stacked: true, beginAtZero: true }
+            }
+          }
+        });
+      }
+
+      function renderKpiCards(mainData, eventsData) {
+        mainData = mainData || [];
+        eventsData = eventsData || [];
+        var full = getFullWeeks(mainData);
+        if (full.length < 2) return '<p class="help">Minst 2 fulla veckor krävs för KPI och jämförelse med föregående vecka.</p>';
+        var curr = full[full.length - 1];
+        var prev = full[full.length - 2];
+        var dCurr = computeDerived(curr);
+        var dPrev = computeDerived(prev);
+        var pivot = pivotEvents(eventsData || []);
+        var currPivot = pivot.find(function(p) { return p.label === curr.label; }) || {};
+        var listingUnika = currPivot.listing_created_unika != null ? currPivot.listing_created_unika : 0;
+        var listingRate = (curr.nya_konton && curr.nya_konton > 0) ? (listingUnika / curr.nya_konton) * 100 : 0;
+        function pctChange(current, previous) {
+          if (previous == null || previous === 0) return null;
+          return ((current - previous) / previous) * 100;
+        }
+        function ppChange(currentPct, previousPct) {
+          if (previousPct == null) return null;
+          return (currentPct - previousPct);
+        }
+        function fmtPpChange(currPct, prevPct) {
+          var pp = currPct - prevPct;
+          return 'från ' + prevPct.toFixed(1).replace('.', ',') + '% → ' + currPct.toFixed(1).replace('.', ',') + '% (' + (pp >= 0 ? '+' : '') + pp.toFixed(1).replace('.', ',') + ' procentenheter)';
+        }
+        var kontonChange = pctChange(curr.nya_konton, prev.nya_konton);
+        var hundPp = ppChange(dCurr.hund_aktivering_pct, dPrev.hund_aktivering_pct);
+        var vaktPp = ppChange(dCurr.vakt_aktivering_pct, dPrev.vakt_aktivering_pct);
+        var html = '<div class="kpi-grid">';
+        html += '<div class="kpi-card"><div class="kpi-value">' + (curr.nya_konton || 0) + '</div><div class="kpi-label">Nya konton</div>' + (kontonChange != null ? '<div class="wow ' + (kontonChange >= 0 ? 'wow-up' : 'wow-down') + '">' + (kontonChange >= 0 ? '+' : '') + kontonChange.toFixed(1) + '% vs föregående vecka</div>' : '') + '</div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + dCurr.hund_aktivering_pct.toFixed(1).replace('.', ',') + '%</div><div class="kpi-label">Hund-aktivering (' + (curr.nya_hundar || 0) + ' av ' + (curr.nya_konton || 0) + ')</div>' + (hundPp != null ? '<div class="wow ' + (hundPp >= 0 ? 'wow-up' : 'wow-down') + '">Jämfört med förra veckan: ' + fmtPpChange(dCurr.hund_aktivering_pct, dPrev.hund_aktivering_pct) + '</div>' : '') + '</div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + dCurr.vakt_aktivering_pct.toFixed(1).replace('.', ',') + '%</div><div class="kpi-label">Vakt-aktivering</div>' + (vaktPp != null ? '<div class="wow ' + (vaktPp >= 0 ? 'wow-up' : 'wow-down') + '">Jämfört med förra veckan: ' + fmtPpChange(dCurr.vakt_aktivering_pct, dPrev.vakt_aktivering_pct) + '</div>' : '') + '</div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + dCurr.konv_per_100.toFixed(2) + '</div><div class="kpi-label">Konv per 100 konton</div></div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + (dCurr.medd_per_konv ? dCurr.medd_per_konv.toFixed(1) : '–') + '</div><div class="kpi-label">Medd per konv</div></div>';
+        html += '<div class="kpi-card"><div class="kpi-value">' + listingRate.toFixed(1) + '%</div><div class="kpi-label">Listing-rate (annons/konton)</div></div>';
+        var aktiva = (currPivot.app_opened_unika != null) ? currPivot.app_opened_unika : (currPivot.login_unika != null ? currPivot.login_unika : null);
+        html += '<div class="kpi-card"><div class="kpi-value">' + (aktiva != null ? aktiva : '–') + '</div><div class="kpi-label">Aktiva användare (unika)</div><div class="copy-hint">Mätt som unika app-öppningar (fallback: unika login)</div></div>';
+        var sitterU = currPivot.sitter_contacted_unika != null ? currPivot.sitter_contacted_unika : null;
+        if (aktiva != null && sitterU != null) {
+          var contactRate = (sitterU / aktiva) * 100;
+          html += '<div class="kpi-card"><div class="kpi-value">' + contactRate.toFixed(1) + '%</div><div class="kpi-label">Kontakt med hundvakt</div><div class="copy-hint">' + sitterU + ' av ' + aktiva + ' aktiva (endast sitter_contacted)</div></div>';
+        }
+        var bokningar = curr.bokningar != null ? curr.bokningar : 0;
+        html += '<div class="kpi-card"><div class="kpi-value">' + (bokningar === 0 ? '⚠️ 0' : bokningar) + '</div><div class="kpi-label">Bokningar</div></div>';
+        html += '</div>';
+        return html;
+      }
+
+      function pivotEvents(events) {
+        var byWeek = {};
+        var order = [];
+        events.forEach(function(e) {
+          var w = e.label || '';
+          if (!byWeek[w]) { byWeek[w] = { label: w }; order.push(w); }
+          byWeek[w][e.event_name + '_unika'] = e.unika_anvandare != null ? e.unika_anvandare : 0;
+          byWeek[w][e.event_name + '_antal'] = e.antal_events != null ? e.antal_events : 0;
+        });
+        return order.map(function(k) { return byWeek[k]; });
+      }
+
+      function renderMainTable(data) {
+        if (!Array.isArray(data) || data.length === 0) return '<p>Inga rader att visa.</p>';
+        var full = getFullWeeks(data);
+        var keys = ['nya_konton','nya_hundar','nya_hundvakt_profiler','sitter_konversationer','tindog_konversationer','sitter_meddelanden','tindog_meddelanden','promenader','hundvanliga_platser','bokningar'];
+        var keyLabels = { nya_konton: 'Nya konton', nya_hundar: 'Nya hundar', nya_hundvakt_profiler: 'Nya vaktprofiler', sitter_konversationer: 'Sitter-konv', tindog_konversationer: 'Tindog-konv', sitter_meddelanden: 'Sitter-medd', tindog_meddelanden: 'Tindog-medd', promenader: 'Promenader', hundvanliga_platser: 'Platser', bokningar: 'Bokningar', hund_aktivering_pct: 'Hund-akt %', vakt_aktivering_pct: 'Vakt-akt %', konv_per_100: 'Konv/100', medd_per_konv: 'Medd/konv' };
+        if (full.length === 0) return '<p>Inga fulla veckor.</p>';
+        full.sort(function(a,b) { return (a.week_num != null && b.week_num != null) ? a.week_num - b.week_num : 0; });
+        var html = '<table><thead><tr><th>Vecka</th>';
+        keys.forEach(function(k) { html += '<th class="num">' + (mainLabels[k] || k) + '</th>'; });
+        html += '<th class="num">Hund-akt %</th><th class="num">Vakt-akt %</th><th class="num">Konv/100</th><th class="num">Medd/konv</th><th class="num">Push-notiser</th><th class="num">Unika mottagare</th></tr></thead><tbody>';
+        full.forEach(function(row) {
+          var d = computeDerived(row);
+          html += '<tr><td>' + (row.label || '') + '</td>';
+          keys.forEach(function(k) { html += '<td class="num">' + (row[k] != null ? row[k] : '–') + '</td>'; });
+          html += '<td class="num">' + (d.hund_aktivering_pct ? d.hund_aktivering_pct.toFixed(1) + '%' : '–') + '</td>';
+          html += '<td class="num">' + (d.vakt_aktivering_pct ? d.vakt_aktivering_pct.toFixed(1) + '%' : '–') + '</td>';
+          html += '<td class="num">' + (d.konv_per_100 != null ? d.konv_per_100.toFixed(2) : '–') + '</td>';
+          html += '<td class="num">' + (d.medd_per_konv != null ? d.medd_per_konv.toFixed(1) : '–') + '</td>';
+          html += '<td class="num">' + (row.notiser_skickade != null ? row.notiser_skickade : '–') + '</td>';
+          html += '<td class="num">' + (row.unika_mottagare != null ? row.unika_mottagare : '–') + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        return html;
+      }
+
+      function renderPartialSection(row) {
+        if (!row) return '';
+        var d = computeDerived(row);
+        var dayCount = row.days_in_week || 1;
+        var html = '<p class="help"><strong>Pågående vecka</strong> <span class="badge">' + dayCount + ' dag' + (dayCount > 1 ? 'ar' : '') + '</span> – jämför inte rakt av med 7-dagarsveckor.</p>';
+        html += '<table><thead><tr><th>Vecka</th><th class="num">Nya konton</th><th class="num">Nya hundar</th><th class="num">Hund-akt %</th><th class="num">Sitter-konv</th><th class="num">Tindog-konv</th><th class="num">Medd</th></tr></thead><tbody>';
+        html += '<tr><td>' + (row.label || '') + '</td><td class="num">' + (row.nya_konton ?? '–') + '</td><td class="num">' + (row.nya_hundar ?? '–') + '</td><td class="num">' + (d.hund_aktivering_pct ? d.hund_aktivering_pct.toFixed(1) + '%' : '–') + '</td><td class="num">' + (row.sitter_konversationer ?? '–') + '</td><td class="num">' + (row.tindog_konversationer ?? '–') + '</td><td class="num">' + ((row.sitter_meddelanden || 0) + (row.tindog_meddelanden || 0)) + '</td></tr>';
+        html += '</tbody></table>';
+        return html;
+      }
+
+      function isPartialEventWeek(label) {
+        if (!label || label.indexOf('–') === -1) return false;
+        var parts = label.split('–').map(function(s) { return s.trim(); });
+        return parts.length === 2 && parts[0] === parts[1];
+      }
+
+      function renderEventsTable(data) {
+        var pivot = pivotEvents(Array.isArray(data) ? data : []);
+        var fullOnly = pivot.filter(function(r) { return !isPartialEventWeek(r.label); });
+        var threeWeeks = fullOnly.slice(-3);
+        var cols = ['app_opened_unika','login_unika','listing_created_unika','sitter_contacted_unika'];
+        var colLabels = { app_opened_unika: 'App öppnad (unika)', login_unika: 'Login (unika)', listing_created_unika: 'Listing skapad (unika)', sitter_contacted_unika: 'Sitter kontaktad (unika)' };
+        var html = '<p class="help">Senaste tre fulla veckor.</p><table><thead><tr><th>Vecka</th>';
+        cols.forEach(function(c) { html += '<th class="num">' + (colLabels[c] || c) + '</th>'; });
+        html += '</tr></thead><tbody>';
+        (threeWeeks.length ? threeWeeks : pivot).forEach(function(row) {
+          html += '<tr><td>' + (row.label || '') + '</td>';
+          cols.forEach(function(c) { html += '<td class="num">' + (row[c] != null ? row[c] : '–') + '</td>'; });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+        return html;
+      }
+
+      function renderEventsDailyTable(data) {
+        if (!data || data.length === 0) return '<p class="help">Ingen dagvis data för pågående vecka.</p>';
+        var cols = ['app_opened_unika','login_unika','listing_created_unika','sitter_contacted_unika'];
+        var colLabels = { app_opened_unika: 'App öppnad (unika)', login_unika: 'Login (unika)', listing_created_unika: 'Listing skapad (unika)', sitter_contacted_unika: 'Sitter kontaktad (unika)' };
+        var html = '<p class="help">Pågående vecka, dag för dag.</p><table><thead><tr><th>Dag</th>';
+        cols.forEach(function(c) { html += '<th class="num">' + (colLabels[c] || c) + '</th>'; });
+        html += '</tr></thead><tbody>';
+        data.forEach(function(row) {
+          html += '<tr><td>' + (row.day_label || '') + '</td>';
+          cols.forEach(function(c) { html += '<td class="num">' + (row[c] != null ? row[c] : '–') + '</td>'; });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+        return html;
+      }
+
+      function buildRuleBasedAnalysis(mainData, eventsData) {
+        var full = getFullWeeks(mainData || []);
+        if (full.length < 2) return '<p class="copy-hint">Minst 2 fulla veckor krävs.</p>';
+
+        var curr = full[full.length - 1];
+        var prev = full[full.length - 2];
+        var dCurr = computeDerived(curr);
+        var dPrev = computeDerived(prev);
+
+        var konvCurr = (curr.sitter_konversationer || 0) + (curr.tindog_konversationer || 0);
+        var konvPrev = (prev.sitter_konversationer || 0) + (prev.tindog_konversationer || 0);
+        var meddCurr = (curr.sitter_meddelanden || 0) + (curr.tindog_meddelanden || 0);
+        var meddPrev = (prev.sitter_meddelanden || 0) + (prev.tindog_meddelanden || 0);
+
+        var pivot = pivotEvents(eventsData || []);
+        var currPivot = pivot.find(function(p) { return p.label === curr.label; }) || {};
+        var aktiva = (currPivot.app_opened_unika != null) ? currPivot.app_opened_unika : (currPivot.login_unika != null ? currPivot.login_unika : currPivot.user_signed_in_unika);
+        var sitterContacted = currPivot.sitter_contacted_unika != null ? currPivot.sitter_contacted_unika : null;
+        var contactRate = (aktiva && sitterContacted != null) ? (sitterContacted / aktiva) * 100 : null;
+
+        function pp(a, b) { return (a - b); }
+        function pct(a, b) { return (b ? ((a - b) / b) * 100 : null); }
+        function fmtPp(currPct, prevPct) {
+          var pp = currPct - prevPct;
+          return 'från ' + prevPct.toFixed(1).replace('.', ',') + '% → ' + currPct.toFixed(1).replace('.', ',') + '% (' + (pp >= 0 ? '+' : '') + pp.toFixed(1).replace('.', ',') + ' procentenheter)';
+        }
+
+        var hundPp = pp(dCurr.hund_aktivering_pct, dPrev.hund_aktivering_pct);
+        var vaktPp = pp(dCurr.vakt_aktivering_pct, dPrev.vakt_aktivering_pct);
+        var kontonPct = pct(curr.nya_konton || 0, prev.nya_konton || 0);
+
+        var bottleneck = null;
+        if (dCurr.hund_aktivering_pct < 15) bottleneck = 'Aktivering: för få nya konton lägger upp hund (mål: ≥15–25%).';
+        else if (dCurr.konv_per_100 < 3) bottleneck = 'Matchning: för få startar kontakt (mål: ≥3–10 konv per 100 konton).';
+        else if (dCurr.medd_per_konv < 2) bottleneck = 'Dialog: chats startas men dör (mål: ≥2 medd/konv eller mät reply rate).';
+
+        var replyRatePct = (curr.reply_rate_pct != null && !isNaN(curr.reply_rate_pct)) ? curr.reply_rate_pct : null;
+
+        var html = '';
+
+        html += '<h3>Veckans läge (' + (curr.label || 'senaste veckan') + ')</h3><ul class="good">';
+        html += '<li><strong>Nya konton:</strong> ' + (curr.nya_konton || 0) + (kontonPct != null ? ' (' + (kontonPct >= 0 ? '+' : '') + kontonPct.toFixed(1) + '% vs föregående vecka)' : '') + '</li>';
+        html += '<li><strong>Hund-aktivering:</strong> ' + dCurr.hund_aktivering_pct.toFixed(1).replace('.', ',') + '% (' + (curr.nya_hundar || 0) + ' av ' + (curr.nya_konton || 0) + ') – ' + (hundPp != null ? fmtPp(dCurr.hund_aktivering_pct, dPrev.hund_aktivering_pct) : '') + '</li>';
+        html += '<li><strong>Vakt-aktivering:</strong> ' + dCurr.vakt_aktivering_pct.toFixed(1).replace('.', ',') + '% – ' + (vaktPp != null ? fmtPp(dCurr.vakt_aktivering_pct, dPrev.vakt_aktivering_pct) : '') + '</li>';
+        html += '<li><strong>Nya konversationer:</strong> ' + konvCurr + ' (Sitter+Tindog) • <strong>' + dCurr.konv_per_100.toFixed(2) + '</strong> per 100 konton</li>';
+        html += '<li><strong>Dialogdjup:</strong> ' + (dCurr.medd_per_konv ? dCurr.medd_per_konv.toFixed(1) : '–') + ' medd/konv (tot ' + meddCurr + ' medd)</li>';
+        if (aktiva != null) html += '<li><strong>Aktiva användare (unika):</strong> ' + aktiva + (contactRate != null ? ' • <strong>Kontakt med hundvakt:</strong> ' + sitterContacted + ' av ' + aktiva + ' (' + contactRate.toFixed(1).replace('.', ',') + '%, endast sitter_contacted)</li>' : '</li>');
+        if (replyRatePct != null) html += '<li><strong>Reply rate:</strong> ' + replyRatePct.toFixed(1).replace('.', ',') + '% (' + (curr.reply_with || 0) + ' av ' + (curr.reply_total || 0) + ' konversationer fick svar inom 24h)</li>';
+        else html += '<li><strong>Reply rate:</strong> – (data hämtas automatiskt om RPC är skapad)</li>';
+        html += '</ul>';
+
+        html += '<h3>Tre tolkningar</h3><ul class="attention">';
+        if (hundPp >= 8) html += '<li>✅ <strong>Aktivering förbättras kraftigt.</strong> Det ni ändrade i hundprofil-flödet verkar ha effekt.</li>';
+        if (dCurr.konv_per_100 > dPrev.konv_per_100) html += '<li>✅ <strong>Kontakt ökar.</strong> Fler tar första steget att skriva.</li>';
+        if (dCurr.medd_per_konv < 2 && konvCurr > 0) html += '<li>⚠️ <strong>Chats dör tidigt.</strong> Nästa steg är reply rate / "få svar".</li>';
+        html += '</ul>';
+
+        html += '<h3>Veckans fokus</h3><ul class="bad">';
+        html += '<li><strong>Flaskhals:</strong> ' + (bottleneck || 'Ingen tydlig flaskhals – följ trenden 1–2 veckor till.') + '</li>';
+        html += '<li><strong>Gör nästa steg lätt:</strong> förifyllt första meddelande + tydlig CTA "Ställ en fråga" efter match/kontakt.</li>';
+        if (replyRatePct != null && replyRatePct < 50) html += '<li><strong>Reply rate:</strong> Bara ' + replyRatePct.toFixed(0) + '% får svar inom 24h – överväg push-notis / påminnelser för snabbare svar.</li>';
+        else if (replyRatePct != null) html += '<li><strong>Reply rate:</strong> ' + replyRatePct.toFixed(0) + '% – bra nivå! Fortsätt följa.</li>';
+        else html += '<li><strong>Reply rate:</strong> Visas automatiskt när RPC dashboard_reply_rate är skapad i Supabase.</li>';
+        html += '</ul>';
+
+        if (getPartialWeek(mainData || [])) {
+          html += '<p class="copy-hint">Obs: pågående vecka är ofullständig – jämför inte rakt av med 7 dagar.</p>';
+        }
+        return html;
+      }
+
+      function runSanityChecks(mainData) {
+        var alerts = [];
+        var everHadConversations = (mainData || []).some(function(row) {
+          var konv = (row.sitter_konversationer || 0) + (row.tindog_konversationer || 0);
+          return konv > 0;
+        });
+
+        (mainData || []).forEach(function(row) {
+          var konv = (row.sitter_konversationer || 0) + (row.tindog_konversationer || 0);
+          var medd = (row.sitter_meddelanden || 0) + (row.tindog_meddelanden || 0);
+
+          if (medd > 0 && konv === 0 && everHadConversations) {
+            alerts.push('Info ' + (row.label || '') + ': meddelanden skickades, men inga *nya* konversationer startades denna vecka (troligen aktivitet i äldre trådar).');
+          }
+          if (medd > 0 && konv === 0 && !everHadConversations) {
+            alerts.push('⚠️ Datamismatch ' + (row.label || '') + ': meddelanden finns men konversationer är alltid 0. Kolla event/SQL.');
+          }
+        });
+        return alerts;
+      }
+
+      var chartInstances = [];
+      var CHART_METRICS = [
+        { key: 'nya_konton', label: 'Nya konton', derived: false, förklaring: 'Antal nya användarkonton registrerade per vecka: ' },
+        { key: 'nya_hundar', label: 'Nya hundar', derived: false, förklaring: 'Antal nya hundar tillagda i appen per vecka: ' },
+        { key: 'nya_hundvakt_profiler', label: 'Nya hundvaktprofiler', derived: false, förklaring: 'Antal nya hundvaktprofiler skapade per vecka: ' },
+        { key: 'sitter_konversationer', label: 'Sitter-konversationer', derived: false, förklaring: 'Antal nya konversationer mellan användare och hundvakter per vecka: ' },
+        { key: 'tindog_konversationer', label: 'Tindog-konversationer', derived: false, förklaring: 'Antal nya Tindog-matchningar/konversationer per vecka: ' },
+        { key: 'sitter_meddelanden', label: 'Sitter-meddelanden', derived: false, förklaring: 'Antal meddelanden skickade i hundvakt-konversationer per vecka: ' },
+        { key: 'tindog_meddelanden', label: 'Tindog-meddelanden', derived: false, förklaring: 'Antal meddelanden skickade i Tindog-konversationer per vecka: ' },
+        { key: 'promenader', label: 'Promenader', derived: false, förklaring: 'Antal promenader loggade i appen per vecka: ' },
+        { key: 'hundvanliga_platser', label: 'Hundvänliga platser', derived: false, förklaring: 'Antal hundvänliga platser tillagda eller besökta per vecka: ' },
+        { key: 'bokningar', label: 'Bokningar', derived: false, förklaring: 'Antal bokningar av hundvakt genom appen per vecka: ' },
+        { key: 'hund_aktivering_pct', label: 'Hund-aktivering (procent)', derived: true, förklaring: 'Andel nya konton som lade till minst en hund (procent): ' },
+        { key: 'vakt_aktivering_pct', label: 'Vakt-aktivering (procent)', derived: true, förklaring: 'Andel nya konton som skapade hundvaktprofil (procent): ' },
+        { key: 'konv_per_100', label: 'Konversationer per 100 konton', derived: true, förklaring: 'Konversationer (Sitter + Tindog) per 100 nya konton: ' },
+        { key: 'medd_per_konv', label: 'Meddelanden per konversation', derived: true, förklaring: 'Genomsnitt antal meddelanden per konversation per vecka: ' },
+        { key: 'reply_rate_pct', label: 'Reply rate (procent)', derived: false, förklaring: 'Andel konversationer som fick svar inom 24 timmar: ' },
+        { key: 'notiser_skickade', label: 'Push-notiser skickade', derived: false, förklaring: 'Antal push-notiser skickade till användare per vecka: ' },
+        { key: 'unika_mottagare', label: 'Unika notis-mottagare', derived: false, förklaring: 'Antal unika användare som fick en push-notis per vecka: ' }
+      ];
+
+      function getChartValue(row, metric) {
+        if (metric.derived) {
+          var d = computeDerived(row);
+          var v = d[metric.key];
+          return v != null ? (typeof v === 'number' ? v : parseFloat(v)) : null;
+        }
+        var v = row[metric.key];
+        return v != null ? (typeof v === 'number' ? v : parseInt(v, 10)) : null;
+      }
+
+      function renderCharts(mainData) {
+        var container = document.getElementById('outCharts');
+        if (!container) return;
+        chartInstances.forEach(function(ch) { if (ch && ch.destroy) ch.destroy(); });
+        chartInstances = [];
+        container.innerHTML = '';
+
+        var full = getFullWeeks(mainData || []);
+        var partial = getPartialWeek(mainData || []);
+        
+        if (full.length === 0 && !partial) {
+          container.innerHTML = '<p class="help">Inga veckor – grafer visas när det finns data.</p>';
+          return;
+        }
+
+        // Alltid 7 staplar: de 6 föregående veckorna (gröna) + sista veckan (orange = pågående)
+        var allData = full.slice();
+        if (partial) allData.push(partial);
+        allData.sort(function(a,b) { return (a.week_num||0) - (b.week_num||0); });
+        var allWeeks = allData.slice(-7);
+        var lastIdx = allWeeks.length - 1;
+        var labels = allWeeks.map(function(r) { return r.label || ''; });
+
+        CHART_METRICS.forEach(function(metric) {
+          var values = allWeeks.map(function(row) { return getChartValue(row, metric); });
+          var hasAny = values.some(function(v) { return v != null && !isNaN(v); });
+          if (!hasAny) return;
+
+          var backgroundColors = allWeeks.map(function(row, idx) {
+            return idx === lastIdx ? 'rgba(255, 152, 0, 0.6)' : 'rgba(45, 90, 39, 0.6)';
+          });
+          var borderColors = allWeeks.map(function(row, idx) {
+            return idx === lastIdx ? 'rgb(255, 152, 0)' : 'rgb(45, 90, 39)';
+          });
+
+          var wrap = document.createElement('div');
+          wrap.className = 'chart-card';
+          var title = document.createElement('h3');
+          var förklaring = (metric.förklaring || '').replace(/:?\s*$/, '').trim();
+          title.textContent = metric.label + (förklaring ? ': ' + förklaring : '');
+          wrap.appendChild(title);
+          var canvasWrap = document.createElement('div');
+          canvasWrap.className = 'chart-wrap';
+          var canvas = document.createElement('canvas');
+          canvasWrap.appendChild(canvas);
+          wrap.appendChild(canvasWrap);
+          container.appendChild(wrap);
+
+          var ctx = canvas.getContext('2d');
+          var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: labels,
+              datasets: [{
+                label: metric.label,
+                data: values,
+                backgroundColor: backgroundColors,
+                borderColor: borderColors,
+                borderWidth: 1
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false }
+              },
+              scales: {
+                y: { beginAtZero: true },
+                x: { ticks: { maxRotation: 45, minRotation: 0 } }
+              }
+            }
+          });
+          chartInstances.push(chart);
+        });
+      }
+
+      var lastMainData = null;
+      var lastEventsData = null;
+      var lastReplyData = null;
+      var lastNotifData = null;
+      var lastAccountData = null;
+      var lastTodayData = null;
+      var lastRetentionData = null;
+      var lastSubscriptionData = null;
+      var lastEventsDailyData = null;
+
+      function renderSubscriptionBars(data) {
+        var container = document.getElementById('outSubscriptionBars');
+        if (!container) return;
+        if (!data || (data.gratis_konto == null && data.gratis_erbjudande_premium == null && data.betalande == null)) {
+          container.innerHTML = '<p class="help">Ingen data tillgänglig än.</p>';
+          return;
+        }
+        var gratis = data.gratis_konto || 0;
+        var trial = data.gratis_erbjudande_premium || 0;
+        var betalande = data.betalande || 0;
+        var total = gratis + trial + betalande;
+        var pct = function(n) { return total > 0 ? (n / total * 100).toFixed(1).replace('.', ',') : '0'; };
+        var labels = [
+          'Gratiskonto (' + pct(gratis) + ' %)',
+          'Gratis-premium (' + pct(trial) + ' %)',
+          'Betalande (' + pct(betalande) + ' %)'
+        ];
+        var values = [gratis, trial, betalande];
+        var colors = ['rgba(100, 100, 100, 0.6)', 'rgba(255, 152, 0, 0.6)', 'rgba(45, 90, 39, 0.6)'];
+        var borderColors = ['rgb(80,80,80)', 'rgb(255, 152, 0)', 'rgb(45, 90, 39)'];
+        container.innerHTML = '<div class="chart-wrap" style="height:200px;"><canvas id="subscriptionBarsChart"></canvas></div>';
+        var ctx = document.getElementById('subscriptionBarsChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Antal användare',
+              data: values,
+              backgroundColor: colors,
+              borderColor: borderColors,
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    var v = ctx.parsed.y;
+                    var p = total > 0 ? (v / total * 100).toFixed(1).replace('.', ',') : '0';
+                    return v + ' st (' + p + ' %)';
+                  }
+                }
+              }
+            },
+            scales: { x: { }, y: { beginAtZero: true } }
+          }
+        });
+      }
+
+      function renderRetention(data) {
+        var container = document.getElementById('outRetention');
+        if (!container) return;
+        if (!data || data.length === 0) {
+          container.innerHTML = '<p class="help">Ingen retentionsdata tillgänglig än.</p>';
+          return;
+        }
+
+        var days = [];
+        for (var i = 0; i <= 30; i++) {
+          days.push({ key: 'day_' + i, label: 'Dag ' + i, offset: i });
+        }
+        var html = '<div class="table-wrap"><table><thead><tr>';
+        html += '<th>Datum</th><th class="num">Nya konton</th><th class="num" title="Genomsnittligt antal enheter per användare i kohortet (första veckan)">Devices</th>';
+        days.forEach(function(d) { html += '<th class="num">' + d.label + '</th>'; });
+        html += '</tr></thead><tbody>';
+
+        function addDays(dateStr, n) {
+          var d = new Date(dateStr + 'T12:00:00');
+          d.setDate(d.getDate() + n);
+          return d.toISOString().slice(0, 10);
+        }
+        var todayStr = new Date().toLocaleDateString('sv-SE');
+
+        // Genomsnittsrad FÖRST (överst)
+        var avgRow = '<tr style="font-weight:600; background:var(--accent-light);"><td>Genomsnitt</td><td class="num">–</td><td class="num">–</td>';
+        days.forEach(function(d) {
+          var totalPct = 0;
+          var validCount = 0;
+          data.forEach(function(row) {
+            var cohortDate = row.cohort_date;
+            var size = row.cohort_size;
+            var count = row[d.key] || 0;
+            var dayDateStr = addDays(cohortDate, d.offset);
+            if (dayDateStr <= todayStr && size > 0) {
+              totalPct += (count / size * 100);
+              validCount++;
+            }
+          });
+          var avgPct = validCount > 0 ? (totalPct / validCount) : 0;
+          if (validCount === 0) {
+            avgRow += '<td class="num" style="color:#ccc;">–</td>';
+          } else {
+            avgRow += '<td class="num">' + avgPct.toFixed(1) + '%</td>';
+          }
+        });
+        avgRow += '</tr>';
+        html += avgRow;
+
+        data.forEach(function(row) {
+          var cohortDate = row.cohort_date;
+          var size = row.cohort_size;
+          var devices = row.avg_devices != null ? row.avg_devices : '–';
+          html += '<tr><td>' + cohortDate + '</td><td class="num">' + size + '</td><td class="num">' + devices + '</td>';
+          days.forEach(function(d) {
+            var count = row[d.key] || 0;
+            var pct = size > 0 ? (count / size * 100) : 0;
+            var dayDateStr = addDays(cohortDate, d.offset);
+
+            if (dayDateStr > todayStr) {
+              html += '<td class="num" style="color:#ccc;">–</td>';
+            } else if (count === 0) {
+              html += '<td class="num" style="color:#ccc;">0%</td>';
+            } else {
+              var intensity = Math.min(pct / 30, 1);
+              var r = Math.round(45 + (1-intensity) * 200);
+              var g = Math.round(90 + (1-intensity) * 150);
+              var b = Math.round(39 + (1-intensity) * 200);
+              var bg = 'rgba(' + r + ',' + g + ',' + b + ',' + (0.15 + intensity * 0.6) + ')';
+              html += '<td class="num" style="background:' + bg + '; font-weight:600;">' + count + ' <span style="font-weight:400;font-size:0.8em;color:#555;">(' + pct.toFixed(0) + '%)</span></td>';
+            }
+          });
+          html += '</tr>';
+        });
+
+        html += '</tbody></table></div>';
+        container.innerHTML = html;
+      }
+
+      var ACCOUNT_TYPE_LABELS = {
+        dog_owner: 'Hundägare',
+        dog_sitter: 'Hundvakt',
+        kennel: 'Kennel',
+        dog_daycare: 'Hunddagis',
+        okand: 'Okänd'
+      };
+      var ACCOUNT_TYPE_COLORS = {
+        dog_owner: 'rgba(45, 90, 39, 0.7)',
+        dog_sitter: 'rgba(54, 162, 235, 0.7)',
+        kennel: 'rgba(255, 159, 64, 0.7)',
+        dog_daycare: 'rgba(153, 102, 255, 0.7)',
+        okand: 'rgba(150, 150, 150, 0.7)'
+      };
+
+      function makeHatchPattern(color) {
+        var c = document.createElement('canvas');
+        c.width = 10; c.height = 10;
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, 10, 10);
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(0, 10); ctx.lineTo(10, 0);
+        ctx.moveTo(-3, 3); ctx.lineTo(3, -3);
+        ctx.moveTo(7, 13); ctx.lineTo(13, 7);
+        ctx.stroke();
+        return ctx.createPattern(c, 'repeat');
+      }
+
+      function renderAccountTypes(data) {
+        var container = document.getElementById('outAccountTypes');
+        var weeklyContainer = document.getElementById('outAccountWeekly');
+        if (!container || !data) return;
+
+        var byType = data.by_type || [];
+        var byWeek = data.by_week || [];
+
+        var html = '<h3>Totalt per kontotyp</h3><table><thead><tr><th>Kontotyp</th><th class="num">Totalt</th><th class="num">Bekräftad e-post</th><th class="num">Inte bekräftad</th><th class="num">Obekräftade %</th></tr></thead><tbody>';
+        byType.forEach(function(t) {
+          var pct = t.total > 0 ? ((t.unconfirmed / t.total) * 100).toFixed(1) : '0';
+          html += '<tr><td>' + (ACCOUNT_TYPE_LABELS[t.account_type] || t.account_type) + '</td>';
+          html += '<td class="num">' + t.total + '</td>';
+          html += '<td class="num">' + t.confirmed + '</td>';
+          html += '<td class="num">' + (t.unconfirmed > 0 ? '<strong style="color:#b02a37">' + t.unconfirmed + '</strong>' : '0') + '</td>';
+          html += '<td class="num">' + pct + '%</td></tr>';
+        });
+        html += '</tbody></table>';
+        container.innerHTML = html;
+
+        if (!weeklyContainer || byWeek.length === 0) return;
+        weeklyContainer.innerHTML = '<h3>Nya konton per vecka och kontotyp</h3><p class="help">Solidfärg = bekräftad e-post, skrafferad = ej bekräftad</p><div class="chart-wrap" style="height:320px;"><canvas id="accountTypeChart"></canvas></div>';
+
+        var labels = byWeek.map(function(w) { return w.label; });
+        var allTypes = {};
+        byWeek.forEach(function(w) {
+          (w.breakdown || []).forEach(function(b) { allTypes[b.account_type] = true; });
+        });
+        var typeKeys = Object.keys(allTypes).sort();
+
+        var datasets = [];
+        typeKeys.forEach(function(type) {
+          var solidColor = ACCOUNT_TYPE_COLORS[type] || 'rgba(150,150,150,0.7)';
+          var hatch = makeHatchPattern(solidColor);
+          var lbl = ACCOUNT_TYPE_LABELS[type] || type;
+
+          datasets.push({
+            label: lbl + ' (bekräftad)',
+            stack: 'main',
+            data: byWeek.map(function(w) {
+              var found = (w.breakdown || []).find(function(b) { return b.account_type === type; });
+              if (!found) return 0;
+              return found.new_accounts - found.new_unconfirmed;
+            }),
+            backgroundColor: solidColor,
+            borderColor: solidColor,
+            borderWidth: 0
+          });
+
+          datasets.push({
+            label: lbl + ' (ej bekräftad)',
+            stack: 'main',
+            data: byWeek.map(function(w) {
+              var found = (w.breakdown || []).find(function(b) { return b.account_type === type; });
+              return found ? found.new_unconfirmed : 0;
+            }),
+            backgroundColor: hatch,
+            borderColor: solidColor,
+            borderWidth: 1
+          });
+        });
+
+        var ctx1 = document.getElementById('accountTypeChart').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: { labels: labels, datasets: datasets },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: {
+                  filter: function(item) {
+                    return item.text.indexOf('(bekräftad)') > -1;
+                  },
+                  generateLabels: function(chart) {
+                    var orig = Chart.defaults.plugins.legend.labels.generateLabels(chart);
+                    return orig.filter(function(l) {
+                      return l.text.indexOf('(bekräftad)') > -1;
+                    }).map(function(l) {
+                      l.text = l.text.replace(' (bekräftad)', '');
+                      return l;
+                    });
+                  }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    return ctx.dataset.label + ': ' + ctx.parsed.y;
+                  }
+                }
+              }
+            },
+            scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } }
+          }
+        });
+      }
+
+      function buildChatGPTPrompt(mainData, eventsData) {
+        mainData = mainData || DEFAULT_MAIN_DATA;
+        eventsData = eventsData || DEFAULT_EVENTS_DATA;
+        var t = 'Jag har veckovis statistik från en hund-app (Flocken). Analysera siffrorna och ge mig:\n';
+        t += '1) Bra indikatorer (vad som ser starkt ut)\n2) Vad jag ska vara uppmärksam på\n3) Dåliga indikatorer / risker\n4) Korta, konkreta råd.\n\n';
+        t += '--- Veckovis översikt (vecka, nya konton, nya hundar, nya hundvaktprofiler, sitter-konv, tindog-konv, sitter-medd, tindog-medd, promenader, hundvänliga platser, bokningar) ---\n';
+        t += JSON.stringify(mainData, null, 2) + '\n\n';
+        t += '--- App-events veckovis (vecka, event_name, antal_events, unika_anvandare) ---\n';
+        t += JSON.stringify(eventsData, null, 2) + '\n\n';
+        t += 'Svara på svenska.';
+        return t;
+      }
+
+      function updatePrompt() {
+        var el = document.getElementById('chatgptPrompt');
+        if (el) el.value = buildChatGPTPrompt(lastMainData, lastEventsData);
+      }
+
+      function mergeReplyRate(mainData, replyData) {
+        if (!Array.isArray(replyData) || !Array.isArray(mainData)) return;
+        mainData.forEach(function(row) {
+          var match = replyData.find(function(r) { return r.label === row.label; });
+          if (match) {
+            row.reply_rate_pct = match.reply_rate_pct;
+            row.reply_total = match.total_conversations;
+            row.reply_with = match.with_reply;
+          }
+        });
+      }
+
+      function mergeNotifData(mainData, notifData) {
+        if (!Array.isArray(notifData) || !Array.isArray(mainData)) {
+          console.warn('mergeNotifData: invalid data', { notifData, mainData });
+          return;
+        }
+        console.log('mergeNotifData: starting merge', { 
+          mainRows: mainData.length, 
+          notifRows: notifData.length,
+          notifLabels: notifData.map(function(n) { return n.label; }),
+          mainLabels: mainData.map(function(m) { return m.label; })
+        });
+        var mergedCount = 0;
+        mainData.forEach(function(row) {
+          var match = notifData.find(function(n) { return n.label === row.label; });
+          if (match) {
+            row.notiser_skickade = match.notiser_skickade;
+            row.unika_mottagare = match.unika_mottagare;
+            row.push_tokens_aktiva = match.push_tokens_aktiva;
+            mergedCount++;
+            console.log('Merged notification data for week:', row.label, match);
+          }
+        });
+        console.log('mergeNotifData: merged ' + mergedCount + ' weeks');
+      }
+
+      function renderTextSummary(mainData, eventsData) {
+        var container = document.getElementById('textSummary');
+        if (!container) return;
+        var full = getFullWeeks(mainData || []);
+        if (full.length < 2) {
+          container.textContent = 'Minst 2 fulla veckor krävs för textsammanfattning.';
+          return;
+        }
+        var curr = full[full.length - 1];
+        var prev = full[full.length - 2];
+        var dCurr = computeDerived(curr);
+        var pivot = pivotEvents(eventsData || []);
+        var currPivot = pivot.find(function(p) { return p.label === curr.label; }) || {};
+        
+        var text = 'Flocken Dashboard Textsammanfattning (för AI/screen readers):\n\n';
+        text += 'SENASTE FULLA VECKAN (' + curr.label + '):\n';
+        text += '- Nya konton: ' + (curr.nya_konton || 0) + '\n';
+        text += '- Nya hundar: ' + (curr.nya_hundar || 0) + ' (aktivering: ' + dCurr.hund_aktivering_pct.toFixed(1) + '%)\n';
+        text += '- Nya hundvaktprofiler: ' + (curr.nya_hundvakt_profiler || 0) + ' (aktivering: ' + dCurr.vakt_aktivering_pct.toFixed(1) + '%)\n';
+        text += '- Sitter-konversationer: ' + (curr.sitter_konversationer || 0) + '\n';
+        text += '- Tindog-konversationer: ' + (curr.tindog_konversationer || 0) + '\n';
+        text += '- Sitter-meddelanden: ' + (curr.sitter_meddelanden || 0) + '\n';
+        text += '- Tindog-meddelanden: ' + (curr.tindog_meddelanden || 0) + '\n';
+        text += '- Promenader: ' + (curr.promenader || 0) + '\n';
+        text += '- Hundvänliga platser: ' + (curr.hundvanliga_platser || 0) + '\n';
+        text += '- Bokningar: ' + (curr.bokningar || 0) + '\n';
+        text += '- Push-notiser skickade: ' + (curr.notiser_skickade || 0) + '\n';
+        text += '- Unika notis-mottagare: ' + (curr.unika_mottagare || 0) + '\n';
+        text += '- Konversationer per 100 konton: ' + dCurr.konv_per_100.toFixed(2) + '\n';
+        text += '- Meddelanden per konversation: ' + (dCurr.medd_per_konv ? dCurr.medd_per_konv.toFixed(1) : 'N/A') + '\n\n';
+        
+        text += 'APP-EVENTS (senaste fulla veckan):\n';
+        text += '- App öppnad (unika): ' + (currPivot.app_opened_unika || 0) + '\n';
+        text += '- Login (unika): ' + (currPivot.login_unika || 0) + '\n';
+        text += '- Listing skapad (unika): ' + (currPivot.listing_created_unika || 0) + '\n';
+        text += '- Sitter kontaktad (unika): ' + (currPivot.sitter_contacted_unika || 0) + '\n\n';
+        
+        if (lastTodayData && lastTodayData.date) {
+          text += 'DAGENS HÖJDPUNKTER (' + lastTodayData.date + '):\n';
+          var totalToday = 0;
+          (lastTodayData.accounts || []).forEach(function(a) { totalToday += a.new_accounts || 0; });
+          text += '- Nya konton idag: ' + totalToday + '\n';
+          text += '- Nya hundar idag: ' + (lastTodayData.new_dogs || 0) + '\n';
+          text += '- Nya hundvaktprofiler idag: ' + (lastTodayData.new_sitters || 0) + '\n\n';
+        }
+        
+        text += 'HISTORIK (alla fulla veckor):\n';
+        full.forEach(function(row) {
+          var d = computeDerived(row);
+          text += row.label + ': ' + (row.nya_konton || 0) + ' konton, ' + (row.nya_hundar || 0) + ' hundar, ' + (row.nya_hundvakt_profiler || 0) + ' vaktprofiler, hund-akt ' + d.hund_aktivering_pct.toFixed(1) + '%, vakt-akt ' + d.vakt_aktivering_pct.toFixed(1) + '%\n';
+        });
+        
+        container.textContent = text;
+      }
+
+      function renderAll(mainData, eventsData) {
+        mainData = mainData || DEFAULT_MAIN_DATA;
+        eventsData = eventsData || DEFAULT_EVENTS_DATA;
+        if (lastReplyData) mergeReplyRate(mainData, lastReplyData);
+        if (lastNotifData) mergeNotifData(mainData, lastNotifData);
+        var outKpi = document.getElementById('outKpi');
+        var outMain = document.getElementById('outMain');
+        var outPartial = document.getElementById('outPartial');
+        var outEvents = document.getElementById('outEvents');
+        if (outKpi) outKpi.innerHTML = renderKpiCards(mainData, eventsData);
+        if (outMain) outMain.innerHTML = renderMainTable(mainData);
+        if (outPartial) outPartial.innerHTML = renderPartialSection(getPartialWeek(mainData));
+        if (outEvents) outEvents.innerHTML = renderEventsTable(eventsData);
+        var outEventsDaily = document.getElementById('outEventsDaily');
+        if (outEventsDaily) outEventsDaily.innerHTML = renderEventsDailyTable(lastEventsDailyData);
+        renderHighlights(mainData, lastTodayData);
+        renderSubscriptionBars(lastSubscriptionData);
+        renderRetention(lastRetentionData);
+        renderCharts(mainData);
+        renderAccountTypes(lastAccountData);
+        renderTextSummary(mainData, eventsData);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var statusEl = document.getElementById('fetchStatus');
+
+        // Show cached/default data immediately while fetching live data
+        var main = lastMainData;
+        var events = lastEventsData;
+        try {
+          var savedMain = localStorage.getItem('flocken_dashboard_main');
+          var savedEvents = localStorage.getItem('flocken_dashboard_events');
+          var savedReply = localStorage.getItem('flocken_dashboard_reply');
+          if (savedMain) { main = JSON.parse(savedMain); lastMainData = main; }
+          if (savedEvents) { events = JSON.parse(savedEvents); lastEventsData = events; }
+          if (savedReply) { lastReplyData = JSON.parse(savedReply); }
+          var savedNotif = localStorage.getItem('flocken_dashboard_notif');
+          if (savedNotif) { lastNotifData = JSON.parse(savedNotif); }
+          var savedAcct = localStorage.getItem('flocken_dashboard_accounts');
+          if (savedAcct) { lastAccountData = JSON.parse(savedAcct); }
+          var savedToday = localStorage.getItem('flocken_dashboard_today');
+          if (savedToday) { lastTodayData = JSON.parse(savedToday); }
+          var savedRetention = localStorage.getItem('flocken_dashboard_retention');
+          if (savedRetention) { lastRetentionData = JSON.parse(savedRetention); }
+          var savedSubscription = localStorage.getItem('flocken_dashboard_subscription');
+          if (savedSubscription) { lastSubscriptionData = JSON.parse(savedSubscription); }
+        } catch (e) {}
+        renderAll(main, events);
+
+        // Auto-fetch live data from Supabase
+        if (statusEl) statusEl.textContent = 'Hämtar live-data...';
+        Promise.all([rpc('dashboard_weekly_main'), rpc('dashboard_weekly_events'), rpc('dashboard_reply_rate'), rpc('dashboard_notification_stats'), rpc('dashboard_account_types'), rpc('dashboard_today_highlights'), rpc('dashboard_retention'), rpc('dashboard_subscription_bars'), rpc('dashboard_events_daily_current_week')])
+          .then(function(results) {
+            var mainResult = results[0];
+            var eventsResult = results[1];
+            var replyResult = results[2];
+            if (Array.isArray(mainResult) && mainResult.length > 0) {
+              lastMainData = mainResult;
+              try { localStorage.setItem('flocken_dashboard_main', JSON.stringify(mainResult)); } catch (e) {}
+            }
+            if (Array.isArray(eventsResult) && eventsResult.length > 0) {
+              lastEventsData = eventsResult;
+              try { localStorage.setItem('flocken_dashboard_events', JSON.stringify(eventsResult)); } catch (e) {}
+            }
+            var replyArr = replyResult;
+            if (Array.isArray(replyResult) && replyResult.length === 1 && replyResult[0] && replyResult[0].dashboard_reply_rate) {
+              replyArr = replyResult[0].dashboard_reply_rate;
+            }
+            if (Array.isArray(replyArr) && replyArr.length > 0) {
+              lastReplyData = replyArr;
+              try { localStorage.setItem('flocken_dashboard_reply', JSON.stringify(replyArr)); } catch (e) {}
+            }
+            var notifResult = results[3];
+            var notifArr = notifResult;
+            if (Array.isArray(notifResult) && notifResult.length === 1 && notifResult[0] && notifResult[0].dashboard_notification_stats) {
+              notifArr = notifResult[0].dashboard_notification_stats;
+            }
+            if (Array.isArray(notifArr) && notifArr.length > 0) {
+              lastNotifData = notifArr;
+              try { localStorage.setItem('flocken_dashboard_notif', JSON.stringify(notifArr)); } catch (e) {}
+            }
+            var acctResult = results[4];
+            var acctObj = acctResult;
+            if (Array.isArray(acctResult) && acctResult.length === 1 && acctResult[0] && acctResult[0].dashboard_account_types) {
+              acctObj = acctResult[0].dashboard_account_types;
+            }
+            if (acctObj && acctObj.by_type) {
+              lastAccountData = acctObj;
+              try { localStorage.setItem('flocken_dashboard_accounts', JSON.stringify(acctObj)); } catch (e) {}
+            }
+            var todayResult = results[5];
+            var todayObj = todayResult;
+            // Om det är ett direkt objekt från REST API
+            if (todayObj && todayObj.date) {
+              lastTodayData = todayObj;
+              try { localStorage.setItem('flocken_dashboard_today', JSON.stringify(todayObj)); } catch (e) {}
+            }
+            // Om det är wrappat i array med function name
+            else if (Array.isArray(todayResult) && todayResult.length === 1 && todayResult[0] && todayResult[0].dashboard_today_highlights) {
+              todayObj = todayResult[0].dashboard_today_highlights;
+              if (todayObj && todayObj.date) {
+                lastTodayData = todayObj;
+                try { localStorage.setItem('flocken_dashboard_today', JSON.stringify(todayObj)); } catch (e) {}
+              }
+            }
+            var retentionResult = results[6];
+            var retentionArr = retentionResult;
+            if (Array.isArray(retentionResult) && retentionResult.length === 1 && retentionResult[0] && retentionResult[0].dashboard_retention) {
+              retentionArr = retentionResult[0].dashboard_retention;
+            }
+            if (Array.isArray(retentionArr) && retentionArr.length > 0) {
+              lastRetentionData = retentionArr;
+              try { localStorage.setItem('flocken_dashboard_retention', JSON.stringify(retentionArr)); } catch (e) {}
+            }
+            var subResult = results[7];
+            var subObj = subResult;
+            if (Array.isArray(subResult) && subResult.length === 1 && subResult[0] && subResult[0].dashboard_subscription_bars) {
+              subObj = subResult[0].dashboard_subscription_bars;
+            }
+            if (subObj && (subObj.gratis_konto != null || subObj.betalande != null)) {
+              lastSubscriptionData = subObj;
+              try { localStorage.setItem('flocken_dashboard_subscription', JSON.stringify(subObj)); } catch (e) {}
+            }
+            lastEventsDailyData = Array.isArray(results[8]) ? results[8] : [];
+            if (Array.isArray(results[8]) && results[8].length === 1 && results[8][0] && results[8][0].dashboard_events_daily_current_week) {
+              lastEventsDailyData = results[8][0].dashboard_events_daily_current_week;
+            }
+            renderAll(lastMainData, lastEventsData);
+            if (statusEl) statusEl.textContent = 'Uppdaterad ' + new Date().toLocaleString('sv-SE');
+            if (statusEl) statusEl.style.color = '#0d6832';
+          })
+          .catch(function(err) {
+            console.error('Dashboard fetch error:', err);
+            if (statusEl) statusEl.textContent = 'Kunde inte hämta live-data (visar cachad)';
+            if (statusEl) statusEl.style.color = '#b02a37';
+          });
+      });
+
+      document.getElementById('btnExportCsv').onclick = function() {
+        var data = lastMainData || DEFAULT_MAIN_DATA;
+        var full = getFullWeeks(data);
+        if (full.length === 0) return;
+        var headers = ['Vecka','Nya konton','Nya hundar','Nya vaktprofiler','Sitter-konv','Tindog-konv','Sitter-medd','Tindog-medd','Promenader','Platser','Bokningar','Hund-akt %','Vakt-akt %','Konv/100','Medd/konv','Push-notiser','Unika mottagare'];
+        var rows = [headers.join(';')];
+        full.forEach(function(row) {
+          var d = computeDerived(row);
+          rows.push([
+            (row.label || '').replace(/;/g, ','),
+            row.nya_konton ?? '',
+            row.nya_hundar ?? '',
+            row.nya_hundvakt_profiler ?? '',
+            row.sitter_konversationer ?? '',
+            row.tindog_konversationer ?? '',
+            row.sitter_meddelanden ?? '',
+            row.tindog_meddelanden ?? '',
+            row.promenader ?? '',
+            row.hundvanliga_platser ?? '',
+            row.bokningar ?? '',
+            d.hund_aktivering_pct ? d.hund_aktivering_pct.toFixed(1) : '',
+            d.vakt_aktivering_pct ? d.vakt_aktivering_pct.toFixed(1) : '',
+            d.konv_per_100 != null ? d.konv_per_100.toFixed(2) : '',
+            d.medd_per_konv != null ? d.medd_per_konv.toFixed(1) : '',
+            row.notiser_skickade ?? '',
+            row.unika_mottagare ?? ''
+          ].join(';'));
+        });
+        var csv = rows.join('\n');
+        var blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'flocken-veckodata.csv';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      };
+
+      document.getElementById('btnClearCache').onclick = function() {
+        if (!confirm('Detta raderar all cachad dashboard-data och laddar om från Supabase. Fortsätt?')) return;
+        console.log('🗑️ Clearing localStorage cache...');
+        localStorage.removeItem('flocken_dashboard_main');
+        localStorage.removeItem('flocken_dashboard_events');
+        localStorage.removeItem('flocken_dashboard_reply');
+        localStorage.removeItem('flocken_dashboard_notif');
+        localStorage.removeItem('flocken_dashboard_accounts');
+        localStorage.removeItem('flocken_dashboard_today');
+        localStorage.removeItem('flocken_dashboard_retention');
+        localStorage.removeItem('flocken_dashboard_subscription');
+        console.log('✅ Cache cleared. Reloading page...');
+        location.reload();
+      };
+
+      document.getElementById('btnMain').onclick = function() {
+        var raw = document.getElementById('jsonMain').value.trim();
+        showErr('errMain', '');
+        if (!raw) { showErr('errMain', 'Klistra in JSON först.'); return; }
+        try {
+          var parsed = JSON.parse(raw);
+          var data = Array.isArray(parsed) ? parsed : (parsed.data || parsed.result || [parsed]);
+          if (!Array.isArray(data)) data = [data];
+          lastMainData = data;
+          try { localStorage.setItem('flocken_dashboard_main', JSON.stringify(data)); } catch (e) {}
+          renderAll(lastMainData, lastEventsData);
+        } catch (e) {
+          showErr('errMain', 'Ogiltig JSON: ' + e.message);
+        }
+      };
+
+      document.getElementById('btnEvents').onclick = function() {
+        var raw = document.getElementById('jsonEvents').value.trim();
+        showErr('errEvents', '');
+        if (!raw) { showErr('errEvents', 'Klistra in JSON först.'); return; }
+        try {
+          var parsed = JSON.parse(raw);
+          var data = Array.isArray(parsed) ? parsed : (parsed.data || parsed.result || [parsed]);
+          if (!Array.isArray(data)) data = [data];
+          lastEventsData = data;
+          try { localStorage.setItem('flocken_dashboard_events', JSON.stringify(data)); } catch (e) {}
+          renderAll(lastMainData, lastEventsData);
+        } catch (e) {
+          showErr('errEvents', 'Ogiltig JSON: ' + e.message);
+        }
+      };
+    })();
+  </script>
+</body>
+</html>
