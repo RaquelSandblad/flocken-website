@@ -1223,10 +1223,24 @@
               try { localStorage.setItem('flocken_dashboard_reply', JSON.stringify(replyArr)); } catch (e) {}
             }
             var notifResult = results[3];
-            var notifArr = notifResult;
-            if (Array.isArray(notifResult) && notifResult.length === 1 && notifResult[0] && notifResult[0].dashboard_notification_stats) {
+            var notifArr = null;
+            // RPC returns JSONB → REST wraps as [{ dashboard_notification_stats: [...] }]
+            if (Array.isArray(notifResult) && notifResult.length >= 1 && notifResult[0] && notifResult[0].dashboard_notification_stats) {
               notifArr = notifResult[0].dashboard_notification_stats;
             }
+            // Direct object with key
+            else if (notifResult && !Array.isArray(notifResult) && notifResult.dashboard_notification_stats) {
+              notifArr = notifResult.dashboard_notification_stats;
+            }
+            // Already a flat array of week objects (has label field)
+            else if (Array.isArray(notifResult) && notifResult.length > 0 && notifResult[0] && notifResult[0].label) {
+              notifArr = notifResult;
+            }
+            // String that needs parsing
+            if (typeof notifArr === 'string') {
+              try { notifArr = JSON.parse(notifArr); } catch(e) { notifArr = null; }
+            }
+            console.log('notifArr after unwrap:', JSON.stringify(notifArr ? notifArr.slice(0,2) : null));
             if (Array.isArray(notifArr) && notifArr.length > 0) {
               lastNotifData = notifArr;
               try { localStorage.setItem('flocken_dashboard_notif', JSON.stringify(notifArr)); } catch (e) {}
