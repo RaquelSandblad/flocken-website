@@ -92,25 +92,23 @@ class SupportClient {
       const appId = await this.getAppId();
       const deviceInfo = this.getDeviceInfo();
 
-      const { data, error } = await this.supabase
-        .from('issues')
-        .insert({
-          app_id: appId,
-          description: params.description,
-          user_email: params.userEmail,
-          user_name: params.userName,
-          user_id: params.userId,
-          device_info: deviceInfo,
-        })
-        .select('id')
-        .single();
+      // Ingen .select() här: anon får INSERT men inte läsa raden tillbaka
+      // (SELECT-policy kräver auth.uid() = user_id — gäster har båda null).
+      const { error } = await this.supabase.from('issues').insert({
+        app_id: appId,
+        description: params.description,
+        user_email: params.userEmail,
+        user_name: params.userName,
+        user_id: params.userId,
+        device_info: deviceInfo,
+      });
 
       if (error) {
         console.error('Error submitting issue:', error);
         return { success: false, error: error.message };
       }
 
-      return { success: true, issueId: data.id };
+      return { success: true };
     } catch (error) {
       console.error('Error submitting issue:', error);
       return {

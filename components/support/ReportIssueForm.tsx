@@ -100,7 +100,7 @@ export function ReportIssueForm({
 
       if (result.success) {
         setIsSubmitted(true);
-        onSuccess?.(result.issueId!);
+        if (result.issueId) onSuccess?.(result.issueId);
       } else {
         setError(result.error || 'Kunde inte skicka ärendet. Försök igen.');
       }
