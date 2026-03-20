@@ -3,6 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { track } from '@/lib/quiz/tracking';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const EXPERIMENT_ID = 'quiz_app_cta_v1';
 const STORAGE_KEY = 'flocken_ab_quiz_app_cta_v1';
 const CTA_URL = 'https://flocken.info/download';
@@ -106,11 +113,36 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
   const content = VARIANTS[variant];
 
   function handleClick() {
-    track('quiz_app_cta_click', {
+    const eventData = {
       experiment_id: EXPERIMENT_ID,
-      variant,
+      variant_id: variant,
+      cta_name: 'quiz_result_download',
+      cta_destination: CTA_URL,
       quiz_slug: quizSlug,
+      source: 'quiz_result',
+    };
+
+    // GA4 via gtag (direct - doesn't need GTM tag)
+    if (window.gtag) {
+      window.gtag('event', 'cta_click', eventData);
+    }
+
+    // Meta Pixel
+    if (window.fbq) {
+      window.fbq('trackCustom', 'CTAClick', eventData);
+    }
+
+    // GTM dataLayer (backup - uses existing cta_click tag)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'cta_click',
+      ...eventData,
     });
+
+    // Debug logging
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Quiz CTA] Click tracked:', eventData);
+    }
   }
 
   return (
