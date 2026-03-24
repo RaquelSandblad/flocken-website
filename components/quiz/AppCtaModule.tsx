@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { track } from '@/lib/quiz/tracking';
 
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     fbq?: (...args: unknown[]) => void;
+    dataLayer?: Record<string, unknown>[];
   }
 }
 
@@ -84,11 +84,27 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     if (!variant || hasTrackedView.current) return;
     hasTrackedView.current = true;
 
-    track('quiz_app_cta_view', {
+    const eventData = {
       experiment_id: EXPERIMENT_ID,
-      variant,
+      variant_id: variant,
       quiz_slug: quizSlug,
+    };
+
+    // GA4 via gtag (direct - same as click tracking)
+    if (window.gtag) {
+      window.gtag('event', 'quiz_app_cta_view', eventData);
+    }
+
+    // GTM dataLayer (backup)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'quiz_app_cta_view',
+      ...eventData,
     });
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Quiz CTA] View tracked:', eventData);
+    }
   }, [variant, quizSlug]);
 
   if (!variant) {
