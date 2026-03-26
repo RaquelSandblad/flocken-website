@@ -2,14 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    fbq?: (...args: unknown[]) => void;
-    dataLayer?: Record<string, unknown>[];
-  }
-}
-
 const EXPERIMENT_ID = 'quiz_app_cta_v1';
 const STORAGE_KEY = 'flocken_ab_quiz_app_cta_v1';
 const CTA_URL = 'https://flocken.info/download';
