@@ -1,8 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ABTestProvider } from '@/lib/ab-testing';
+import { WebAttributionTracker } from '@/components/tracking/WebAttributionTracker';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://flocken.info'),
@@ -10,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Flocken - För ett bättre liv som hund',
     template: '%s | Flocken'
   },
-  description: 'Allt du behöver som hundägare på ett ställe. Para, Passa, Rasta, Besöka. Fyra funktioner. En app.',
+  description: 'Allt du behöver som hundägare på ett ställe. Hundar, Passa, Rasta, Besöka. Fyra funktioner. En app.',
   keywords: ['hundapp', 'hundparning', 'hundvakt', 'hundpromenader', 'hundvänliga platser', 'hund', 'Sverige'],
   authors: [{ name: 'Spitakolus AB' }],
   openGraph: {
@@ -32,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Flocken - För ett bättre liv som hund',
-    description: 'Para, Passa, Rasta, Besöka. Allt på ett ställe.',
+    description: 'Hundar, Passa, Rasta, Besöka. Allt på ett ställe.',
     images: ['/assets/flocken/generated/hero.png']
   },
   robots: {
@@ -126,7 +134,10 @@ export default function RootLayout({
           />
         </noscript>
         
-        {children}
+        <ABTestProvider>
+          <WebAttributionTracker />
+          {children}
+        </ABTestProvider>
       </body>
     </html>
   );

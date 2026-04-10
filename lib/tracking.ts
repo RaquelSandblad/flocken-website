@@ -4,6 +4,8 @@
  * och Meta Conversions API (CAPI) för server-side tracking
  */
 
+import { getAttributionEventParams } from '@/lib/web-attribution';
+
 // ============================================
 // META PIXEL + CAPI HELPERS
 // ============================================
@@ -140,6 +142,7 @@ export async function trackLead(data: {
       event: 'generate_lead',
       lead_source: data.source || 'website',
       content_name: data.content_name,
+      ...getAttributionEventParams(),
     });
   }
 }
@@ -208,7 +211,8 @@ export function trackAppInstall(platform: 'android' | 'ios', source?: string) {
       platform: platform,
       source: source || 'website',
       value: value,
-      currency: 'SEK'
+      currency: 'SEK',
+      ...getAttributionEventParams(),
     });
   }
 
@@ -264,7 +268,8 @@ export async function trackSignUp(method: 'email' | 'google' | 'apple', userId?:
       signup_method: method,
       user_id: userId,
       value: value,
-      currency: 'SEK'
+      currency: 'SEK',
+      ...getAttributionEventParams(),
     });
   }
 

@@ -32,7 +32,16 @@ npm install
 npm run dev
 ```
 
-Öppna [http://localhost:3000](http://localhost:3000) i din browser.
+Öppna [http://localhost:3000](http://localhost:3000) i din browser.  
+Om port 3000 är upptagen använder Next automatiskt t.ex. `http://localhost:3001`.
+
+### 2b. A/B-test (snabbtest lokalt)
+
+Flocken har ett inbyggt A/B-testverktyg för content-varianter på sidor (t.ex. `/valkommen`).
+
+- **Guide**: [`docs/ab-testing/README.md`](./docs/ab-testing/README.md)
+- **Demo/debug-sida**: `http://localhost:3000/valkommen/ab-demo` (eller samma port som dev-servern kör på)
+- **Experiment-konfig**: `lib/ab-testing/experiments.ts` (ändra `status: 'running'` för att aktivera)
 
 ### 3. Kör tester
 
@@ -67,6 +76,7 @@ flocken-website/
 │   │   ├── layout.tsx      # Legal header + footer + sidebar
 │   │   ├── integritetspolicy/
 │   │   ├── anvendarvillkor/
+│   │   ├── cookiepolicy/     # Cookie policy för flocken.info
 │   │   ├── privacy-choices/  # Användarens integritetsval (App Store-krav)
 │   │   └── support/
 │   ├── layout.tsx          # Root layout (inkl. cookie banner)
@@ -79,6 +89,9 @@ flocken-website/
 │   ├── assets/flocken/     # Assets (logos, screenshots, images)
 │   └── scripts/
 │       └── cookie-banner-custom.js  # GDPR cookie consent
+├── lib/ab-testing/          # A/B-testverktyg (experiments, hooks, middleware, tracking)
+├── components/ab-testing/   # ExperimentTracker mm.
+├── middleware.ts            # Next.js middleware (variant-tilldelning via cookie)
 └── tailwind.config.ts      # Designsystem
 ```
 
@@ -232,6 +245,8 @@ Projektet använder en fast, AI-first struktur för all annonsering i Meta Ads M
 ### 📋 Changelog
 
 Se detaljerade ändringar i:
+- [CHANGELOG_20260219.md](./CHANGELOG_20260219.md) - Quiz-epostlista, MailerSend, Supabase, GDPR (19 feb 2026)
+- [CHANGELOG_20260212.md](./CHANGELOG_20260212.md) - Cookie banner mobil + cookie policy (12 feb 2026)
 - [CHANGELOG_20251216.md](./CHANGELOG_20251216.md) - Integritetspolicy uppdateringar (16 dec 2025)
 - [CHANGELOG_20241204.md](./CHANGELOG_20241204.md) - Designförbättringar och bildhantering (4 dec 2024)
 

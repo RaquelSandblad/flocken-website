@@ -55,10 +55,10 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
                 <div className="absolute top-full left-0 w-48">
                   <div className="bg-white rounded-xl shadow-card border border-flocken-sand overflow-hidden mt-2">
                     <Link 
-                      href="/funktioner#para" 
+                      href="/funktioner#hundar" 
                       className="block px-4 py-3 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors"
                     >
-                      Para
+                      Hundar
                     </Link>
                     <Link 
                       href="/funktioner#passa" 
@@ -108,49 +108,51 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
         
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-flocken-sand">
-            <Link 
-              href="/funktioner" 
-              className="block py-2 text-flocken-brown hover:text-flocken-olive transition-colors font-semibold"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Om appen
-            </Link>
-            <div className="pl-4 space-y-1">
-              <Link 
-                href="/funktioner#para" 
-                className="block py-2 text-sm text-flocken-brown/80 hover:text-flocken-olive transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Para
-              </Link>
-              <Link 
-                href="/funktioner#passa" 
-                className="block py-2 text-sm text-flocken-brown/80 hover:text-flocken-olive transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Passa
-              </Link>
-              <Link 
-                href="/funktioner#rasta" 
-                className="block py-2 text-sm text-flocken-brown/80 hover:text-flocken-olive transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Rasta
-              </Link>
-              <Link 
-                href="/funktioner#besoka" 
-                className="block py-2 text-sm text-flocken-brown/80 hover:text-flocken-olive transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Besöka
-              </Link>
+          <div className="md:hidden border-t border-flocken-sand bg-flocken-cream/60">
+            <div className="py-5 px-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-flocken-gray mb-3">
+                Om appen
+              </p>
+              <nav className="rounded-xl bg-white/80 border border-flocken-sand/60 overflow-hidden shadow-soft">
+                <Link
+                  href="/funktioner#para"
+                  className="block px-4 py-3.5 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors border-b border-flocken-sand/40 last:border-b-0"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Para
+                </Link>
+                <Link
+                  href="/funktioner#passa"
+                  className="block px-4 py-3.5 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors border-b border-flocken-sand/40 last:border-b-0"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Passa
+                </Link>
+                <Link
+                  href="/funktioner#rasta"
+                  className="block px-4 py-3.5 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors border-b border-flocken-sand/40 last:border-b-0"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Rasta
+                </Link>
+                <Link
+                  href="/funktioner#besoka"
+                  className="block px-4 py-3.5 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Besöka
+                </Link>
+              </nav>
+              {variant === 'marketing' && (
+                <Link
+                  href="/download"
+                  className="mt-5 block w-full rounded-xl bg-flocken-olive px-4 py-3.5 text-center font-semibold text-white shadow-soft transition-colors hover:bg-flocken-accent"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Ladda ner appen
+                </Link>
+              )}
             </div>
-            {variant === 'marketing' && (
-              <Link href="/download" className="btn-primary w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
-                Ladda ner appen
-              </Link>
-            )}
           </div>
         )}
       </nav>

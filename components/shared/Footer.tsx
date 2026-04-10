@@ -44,7 +44,7 @@ export function Footer({ variant = 'marketing' }: FooterProps) {
             <div>
               <h4 className="font-semibold text-flocken-brown mb-4">Appen</h4>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/#para" className="text-flocken-gray hover:text-flocken-olive transition-colors">Para</Link></li>
+                <li><Link href="/funktioner#hundar" className="text-flocken-gray hover:text-flocken-olive transition-colors">Hundar</Link></li>
                 <li><Link href="/#passa" className="text-flocken-gray hover:text-flocken-olive transition-colors">Passa</Link></li>
                 <li><Link href="/#rasta" className="text-flocken-gray hover:text-flocken-olive transition-colors">Rasta</Link></li>
                 <li><Link href="/#besoka" className="text-flocken-gray hover:text-flocken-olive transition-colors">Besöka</Link></li>
@@ -56,6 +56,7 @@ export function Footer({ variant = 'marketing' }: FooterProps) {
               <h4 className="font-semibold text-flocken-brown mb-4">Juridiskt</h4>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/integritetspolicy" className="text-flocken-gray hover:text-flocken-olive transition-colors">Integritetspolicy</Link></li>
+                <li><Link href="/cookiepolicy" className="text-flocken-gray hover:text-flocken-olive transition-colors">Cookiepolicy</Link></li>
                 <li><Link href="/anvandarvillkor" className="text-flocken-gray hover:text-flocken-olive transition-colors">Användarvillkor</Link></li>
                 <li><Link href="/support" className="text-flocken-gray hover:text-flocken-olive transition-colors">Kontakt</Link></li>
                 <li>
@@ -78,6 +79,8 @@ export function Footer({ variant = 'marketing' }: FooterProps) {
           <div className="text-center">
             <p className="text-sm text-flocken-gray">
               <Link href="/integritetspolicy" className="hover:text-flocken-olive transition-colors">Integritetspolicy</Link>
+              {' · '}
+              <Link href="/cookiepolicy" className="hover:text-flocken-olive transition-colors">Cookiepolicy</Link>
               {' · '}
               <Link href="/anvandarvillkor" className="hover:text-flocken-olive transition-colors">Användarvillkor</Link>
               {' · '}

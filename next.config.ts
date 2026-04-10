@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Avoid ESLint "Invalid Options: useEslintrc, extensions" during Vercel build (Next.js + ESLint 9)
+  eslint: { ignoreDuringBuilds: true },
   images: {
     formats: ['image/avif', 'image/webp'],
   },

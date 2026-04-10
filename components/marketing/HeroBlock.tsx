@@ -2,6 +2,9 @@
 
 import Image from 'next/image';
 import { trackAppInstall } from '@/lib/tracking';
+import { useABTest } from '@/lib/ab-testing';
+import { trackExperimentCTAClick } from '@/lib/ab-testing/tracking';
+import { getExperiment } from '@/lib/ab-testing';
 
 interface HeroBlockProps {
   title: string;
@@ -28,6 +31,20 @@ export function HeroBlock({
   launchInfo,
   alignLeft = false
 }: HeroBlockProps) {
+  // Get A/B test context for valkommen_hero_v1
+  const abTest = useABTest('valkommen_hero_v1');
+  const experiment = abTest ? getExperiment('valkommen_hero_v1') : null;
+
+  const handleCTAClick = (platform: 'android' | 'ios', ctaName: string, href: string) => {
+    // Track app install (existing tracking)
+    trackAppInstall(platform, 'hero_cta');
+    
+    // Track CTA click with experiment context if experiment is active
+    if (abTest && experiment && abTest.variant) {
+      trackExperimentCTAClick(experiment, abTest.variant, ctaName, href);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white to-flocken-cream pt-20 lg:pt-8">
       <div className="container-custom py-10 lg:py-6">
@@ -62,13 +79,12 @@ export function HeroBlock({
                     href={ctaPrimary.href} 
                     className="btn-primary inline-flex items-center justify-center"
                     onClick={() => {
-                      // Track app install click
                       const isAndroid = ctaPrimary.href.includes('play.google.com');
                       const isIOS = ctaPrimary.href.includes('apps.apple.com');
                       if (isAndroid) {
-                        trackAppInstall('android', 'hero_cta');
+                        handleCTAClick('android', 'hero_primary', ctaPrimary.href);
                       } else if (isIOS) {
-                        trackAppInstall('ios', 'hero_cta');
+                        handleCTAClick('ios', 'hero_primary', ctaPrimary.href);
                       }
                     }}
                   >
@@ -84,13 +100,12 @@ export function HeroBlock({
                       href={ctaSecondary.href} 
                       className="btn-primary inline-flex items-center justify-center"
                       onClick={() => {
-                        // Track app install click
                         const isAndroid = ctaSecondary.href.includes('play.google.com');
                         const isIOS = ctaSecondary.href.includes('apps.apple.com');
                         if (isAndroid) {
-                          trackAppInstall('android', 'hero_cta');
+                          handleCTAClick('android', 'hero_secondary', ctaSecondary.href);
                         } else if (isIOS) {
-                          trackAppInstall('ios', 'hero_cta');
+                          handleCTAClick('ios', 'hero_secondary', ctaSecondary.href);
                         }
                       }}
                     >

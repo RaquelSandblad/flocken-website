@@ -32,11 +32,11 @@ const fonts = [
   { name: 'Space Grotesk', class: spaceGrotesk.className, desc: 'Tech-känsla men varm och modern' },
 ];
 
-const loremShort = "Flocken är appen där hundar och deras människor hittar varandra. Para, passa, rasta och besöka – allt samlas här.";
+const loremShort = "Flocken är appen där hundar och deras människor hittar varandra. Hundar, passa, rasta och besöka – allt samlas här.";
 
-const loremMedium = "Flocken är appen där hundar och deras människor hittar varandra. Para din hund med andra hundar i närheten, hitta pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hitta hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund.";
+const loremMedium = "Flocken är appen där hundar och deras människor hittar varandra. Hitta lekkamrater och parningspartners till din hund, pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund.";
 
-const loremLong = "Flocken är appen där hundar och deras människor hittar varandra. Para din hund med andra hundar i närheten, hitta pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hitta hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund. Vi vet att hundar är familjemedlemmar som förtjänar det bästa. Därför har vi skapat Flocken – en app byggd för hundars behov och ägares trygghet.";
+const loremLong = "Flocken är appen där hundar och deras människor hittar varandra. Hitta lekkamrater och parningspartners till din hund, pålitliga hundvakter när livet krånglar, upptäck nya promenadrunor och hundvänliga caféer. Allt samlas på ett ställe – för ett bättre liv som hund. Vi vet att hundar är familjemedlemmar som förtjänar det bästa. Därför har vi skapat Flocken – en app byggd för hundars behov och ägares trygghet.";
 
 export default function TypsnittTestPage() {
   return (
@@ -89,7 +89,7 @@ export default function TypsnittTestPage() {
             <div className="mb-8">
               <p className="text-xs text-flocken-gray uppercase tracking-wide mb-2">H2 (Underrubriker)</p>
               <h5 className={`text-2xl font-semibold text-flocken-brown ${font.class}`}>
-                Para, passa, rasta och besöka
+                Hundar, passa, rasta och besöka
               </h5>
             </div>
 

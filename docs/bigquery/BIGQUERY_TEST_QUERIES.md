@@ -180,6 +180,48 @@ GROUP BY event_date
 ORDER BY event_date DESC;
 ```
 
+### **4.3 App Funnel (Install → Profil → Annons)**
+
+**Syfte:** Räkna konverteringsgrader i appen mellan:
+- **Install/aktivering**: `first_open` (Firebase/GA4 standard för app)
+- **Profil/registrering**: `sign_up` (eller ert faktiska event)
+- **Annons skapad**: `listing_created`
+
+**OBS:** Uppdatera dataset-namnet om GA4 exporterar till `analytics_XXXXXX` (vanligt).
+
+```sql
+-- App funnel per dag och plattform (iOS/Android)
+WITH user_day AS (
+  SELECT
+    event_date,
+    platform,
+    user_pseudo_id,
+    MAX(event_name = 'first_open') AS did_first_open,
+    MAX(event_name = 'sign_up') AS did_sign_up,
+    MAX(event_name = 'listing_created') AS did_listing_created
+  FROM `nastahem-tracking.analytics_518338757.events_*`
+  WHERE _TABLE_SUFFIX >= FORMAT_DATE('%Y%m%d', DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY))
+    AND platform IN ('ANDROID', 'IOS')
+  GROUP BY 1, 2, 3
+)
+SELECT
+  event_date,
+  platform,
+  COUNTIF(did_first_open) AS first_opens,
+  COUNTIF(did_sign_up) AS sign_ups,
+  COUNTIF(did_listing_created) AS listings_created,
+  SAFE_DIVIDE(COUNTIF(did_sign_up), COUNTIF(did_first_open)) AS first_open_to_sign_up_rate,
+  SAFE_DIVIDE(COUNTIF(did_listing_created), COUNTIF(did_sign_up)) AS sign_up_to_listing_rate,
+  SAFE_DIVIDE(COUNTIF(did_listing_created), COUNTIF(did_first_open)) AS first_open_to_listing_rate
+FROM user_day
+GROUP BY 1, 2
+ORDER BY event_date DESC, platform;
+```
+
+**Tips:**
+- Om ni använder ett annat event än `sign_up` i appen (t.ex. `profile_created`), byt i queryn.
+- Vill ni filtrera per datastream kan ni lägga till `AND stream_id IN ('13304341139','13304376900')`.
+
 ---
 
 ## 🔍 Troubleshooting

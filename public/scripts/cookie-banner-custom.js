@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // Cookie banner HTML - Modal design som blockerar hela sidan
+  // Cookie banner HTML - Compact bottom sheet design
   // Anpassad för Flocken med Flockens färgschema
   const bannerHTML = `
     <div id="custom-cookie-banner" style="
@@ -10,232 +10,121 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(62, 59, 50, 0.85);
+      background: rgba(62, 59, 50, 0.7);
       z-index: 999999;
       display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
     ">
       <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background: #F5F1E8;
-        border: 3px solid #6B7A3A;
-        border-radius: 12px;
-        padding: 30px;
-        max-width: 600px;
-        width: 100%;
-        max-height: 90vh;
+        border-top: 3px solid #6B7A3A;
+        border-radius: 16px 16px 0 0;
+        padding: 24px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 20px rgba(62, 59, 50, 0.3);
+        max-height: 85vh;
         overflow-y: auto;
-        box-shadow: 0 10px 30px rgba(62, 59, 50, 0.5);
+        -webkit-overflow-scrolling: touch;
       ">
-        <!-- Header -->
-        <div style="text-align: center; margin-bottom: 25px;">
-          <h2 style="margin: 0 0 12px 0; color: #3E3B32; font-size: 24px; font-weight: 700;">
-            Cookie-inställningar
+        <div style="max-width: 600px; margin: 0 auto;">
+          <!-- Header -->
+          <h2 style="margin: 0 0 6px 0; color: #3E3B32; font-size: 18px; font-weight: 700;">
+            Webbplatsen använder cookies
           </h2>
-          <p style="margin: 0; color: #3E3B32; font-size: 16px; line-height: 1.5;">
-            Vi använder cookies för att förbättra din upplevelse. Välj vilka kategorier du tillåter:
+          <p style="margin: 0 0 16px 0; color: #3E3B32; font-size: 14px; line-height: 1.4;">
+            Cookies hjälper oss att förbättra din upplevelse och samlar information för olika ändamål. Du väljer vilka du godkänner.
+            <a href="/cookiepolicy" style="color: #6B7A3A; text-decoration: underline; font-weight: 600;">Läs mer</a>
           </p>
-        </div>
 
-        <!-- Cookie kategorier -->
-        <div style="margin-bottom: 25px;">
+          <!-- Buttons -->
+          <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+            <button id="cookie-accept-selected" style="
+              flex: 1;
+              background: transparent;
+              color: #6B7A3A;
+              border: 2px solid #6B7A3A;
+              padding: 12px 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 700;
+              font-size: 15px;
+              transition: all 0.3s ease;
+            ">Spara val</button>
+            <button id="cookie-accept-all" style="
+              flex: 1;
+              background: #6B7A3A;
+              color: #F5F1E8;
+              border: 2px solid #6B7A3A;
+              padding: 12px 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 700;
+              font-size: 15px;
+              transition: all 0.3s ease;
+            ">Tillåt alla</button>
+          </div>
 
-          <!-- Nödvändiga cookies -->
-          <div style="
-            background: #FFFFFF;
-            border: 2px solid #6B7A3A;
-            border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 16px;
-          ">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-              <h3 style="margin: 0; color: #3E3B32; font-size: 18px; font-weight: 600;">
-                Nödvändiga cookies
-              </h3>
-              <label style="
-                position: relative;
-                display: inline-block;
-                width: 60px;
-                height: 30px;
-              ">
+          <!-- Toggles grid -->
+          <div id="cookie-toggle-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <!-- Nödvändiga -->
+            <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.4); border-radius: 6px; padding: 10px; min-height: 44px; opacity: 0.7;">
+              <span style="color: #3E3B32; font-size: 13px; font-weight: 600;">Nödvändiga</span>
+              <label style="position: relative; display: inline-block; width: 44px; height: 24px; flex-shrink: 0; margin-left: 8px;">
                 <input type="checkbox" id="necessary-toggle" checked disabled style="opacity: 0; width: 0; height: 0;">
                 <span style="
-                  position: absolute;
-                  cursor: not-allowed;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: #6B7A3A;
-                  transition: .4s;
-                  border-radius: 30px;
+                  position: absolute; cursor: not-allowed; inset: 0;
+                  background-color: #A29D89; transition: .4s; border-radius: 24px;
                 ">
                   <span style="
-                    position: absolute;
-                    content: '';
-                    height: 22px;
-                    width: 22px;
-                    left: 4px;
-                    bottom: 4px;
-                    background-color: white;
-                    transition: .4s;
-                    border-radius: 50%;
-                    transform: translateX(30px);
+                    position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+                    background-color: white; transition: .4s; border-radius: 50%;
+                    transform: translateX(20px);
                   "></span>
                 </span>
               </label>
             </div>
-            <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.4;">
-              Krävs för webbplatsens grundfunktioner som navigering och säkerhet. <strong>Kan inte stängas av.</strong>
-            </p>
-          </div>
-
-          <!-- Analys cookies -->
-          <div style="
-            background: #FFFFFF;
-            border: 2px solid #6B7A3A;
-            border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 16px;
-          ">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-              <h3 style="margin: 0; color: #3E3B32; font-size: 18px; font-weight: 600;">
-                Analys cookies
-              </h3>
-              <label style="
-                position: relative;
-                display: inline-block;
-                width: 60px;
-                height: 30px;
-              ">
+            <!-- Analys -->
+            <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.6); border-radius: 6px; padding: 10px; min-height: 44px;">
+              <span style="color: #3E3B32; font-size: 13px; font-weight: 600;">Analys</span>
+              <label style="position: relative; display: inline-block; width: 44px; height: 24px; flex-shrink: 0; margin-left: 8px;">
                 <input type="checkbox" id="analytics-toggle" checked style="opacity: 0; width: 0; height: 0;">
                 <span class="toggle-slider" style="
-                  position: absolute;
-                  cursor: pointer;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: #A29D89;
-                  transition: .4s;
-                  border-radius: 30px;
+                  position: absolute; cursor: pointer; inset: 0;
+                  background-color: #6B7A3A; transition: .4s; border-radius: 24px;
                 ">
                   <span class="toggle-button" style="
-                    position: absolute;
-                    content: '';
-                    height: 22px;
-                    width: 22px;
-                    left: 4px;
-                    bottom: 4px;
-                    background-color: white;
-                    transition: .4s;
-                    border-radius: 50%;
-                    transform: translateX(0px);
+                    position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+                    background-color: white; transition: .4s; border-radius: 50%;
+                    transform: translateX(20px);
                   "></span>
                 </span>
               </label>
             </div>
-            <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.4;">
-              Google Analytics och liknande verktyg som hjälper oss förstå hur webbplatsen används. Data är anonymiserad.
-            </p>
-          </div>
-
-          <!-- Marknadsföring cookies -->
-          <div style="
-            background: #FFFFFF;
-            border: 2px solid #6B7A3A;
-            border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 0;
-          ">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-              <h3 style="margin: 0; color: #3E3B32; font-size: 18px; font-weight: 600;">
-                Marknadsföring cookies
-              </h3>
-              <label style="
-                position: relative;
-                display: inline-block;
-                width: 60px;
-                height: 30px;
-              ">
+            <!-- Marknadsföring -->
+            <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.6); border-radius: 6px; padding: 10px; min-height: 44px;">
+              <span style="color: #3E3B32; font-size: 13px; font-weight: 600;">Marknadsföring</span>
+              <label style="position: relative; display: inline-block; width: 44px; height: 24px; flex-shrink: 0; margin-left: 8px;">
                 <input type="checkbox" id="marketing-toggle" checked style="opacity: 0; width: 0; height: 0;">
                 <span class="toggle-slider" style="
-                  position: absolute;
-                  cursor: pointer;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  background-color: #A29D89;
-                  transition: .4s;
-                  border-radius: 30px;
+                  position: absolute; cursor: pointer; inset: 0;
+                  background-color: #6B7A3A; transition: .4s; border-radius: 24px;
                 ">
                   <span class="toggle-button" style="
-                    position: absolute;
-                    content: '';
-                    height: 22px;
-                    width: 22px;
-                    left: 4px;
-                    bottom: 4px;
-                    background-color: white;
-                    transition: .4s;
-                    border-radius: 50%;
-                    transform: translateX(0px);
+                    position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+                    background-color: white; transition: .4s; border-radius: 50%;
+                    transform: translateX(20px);
                   "></span>
                 </span>
               </label>
             </div>
-            <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.4;">
-              Facebook Pixel, Google Ads och andra verktyg för riktad marknadsföring och konverteringsspårning.
-            </p>
           </div>
-        </div>
-
-        <!-- Knappar -->
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <button id="cookie-decline-all" style="
-            background: transparent;
-            color: #A29D89;
-            border: 3px solid #A29D89;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 16px;
-            min-width: 120px;
-          ">Avvisa</button>
-          <button id="cookie-accept-selected" style="
-            background: #6B7A3A;
-            color: #F5F1E8;
-            border: 3px solid #6B7A3A;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 16px;
-            min-width: 120px;
-          ">Spara val</button>
-          <button id="cookie-accept-all" style="
-            background: #6B7A3A;
-            color: #F5F1E8;
-            border: 3px solid #6B7A3A;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 16px;
-            min-width: 120px;
-          ">Tillåt alla</button>
-        </div>
-
-        <div style="text-align: center; margin-top: 15px;">
-          <small style="color: #666; font-size: 13px;">
-            Du måste göra ett val för att fortsätta använda webbplatsen
-          </small>
+          
+          <!-- Info text -->
+          <p style="text-align: center; margin-top: 12px; font-size: 12px; color: #666; line-height: 1.3;">
+            Du måste göra ett val för att använda webbplatsen.
+          </p>
         </div>
       </div>
     </div>
@@ -602,7 +491,7 @@
     if (slider && button) {
       if (toggleInput.checked) {
         slider.style.backgroundColor = '#6B7A3A';
-        button.style.transform = 'translateX(30px)';
+        button.style.transform = 'translateX(20px)';
       } else {
         slider.style.backgroundColor = '#A29D89';
         button.style.transform = 'translateX(0px)';
@@ -670,7 +559,7 @@
         background-color: #6B7A3A !important;
       }
       input[type="checkbox"]:checked + .toggle-slider .toggle-button {
-        transform: translateX(30px) !important;
+        transform: translateX(20px) !important;
       }
 
       /* Toggle unchecked state - button slides to LEFT (inactive) */
@@ -686,11 +575,10 @@
       }
 
       /* Button hover effects - Flocken färger */
-      #cookie-decline-all:hover {
-        background-color: #A29D89 !important;
+      #cookie-accept-selected:hover {
+        background-color: #6B7A3A !important;
         color: #F5F1E8 !important;
       }
-      #cookie-accept-selected:hover,
       #cookie-accept-all:hover,
       #modal-save-settings:hover {
         background-color: #8BA45D !important;
@@ -698,6 +586,19 @@
       #modal-close:hover {
         background-color: #A29D89 !important;
         color: #F5F1E8 !important;
+      }
+
+      /* Responsive: single column toggles on very narrow screens (Galaxy Fold etc) */
+      @media (max-width: 340px) {
+        #cookie-toggle-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      /* Ensure minimum touch targets (44px) for accessibility */
+      #cookie-accept-selected,
+      #cookie-accept-all {
+        min-height: 44px;
       }
 
       /* Prevent page scroll when modal is open - using CSS custom property */
@@ -801,13 +702,13 @@
   function showBannerIfNeeded() {
     const banner = document.getElementById('custom-cookie-banner');
     if (banner) {
-      banner.style.display = 'flex';
+      banner.style.display = 'block';
       // Disable page scrolling using html data attribute (no hydration issues)
       if (typeof document !== 'undefined') {
         document.documentElement.setAttribute('data-modal-open', '');
       }
     }
-    console.log('Cookie banner: No consent found, showing MODAL banner (blocks page)');
+    console.log('Cookie banner: No consent found, showing bottom sheet banner');
   }
 
   function setupEventListeners() {
@@ -898,4 +799,3 @@
   }
 
 })();
-

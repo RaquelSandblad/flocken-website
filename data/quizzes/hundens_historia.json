@@ -1,0 +1,161 @@
+{
+  "slug": "hundens_historia",
+  "title": "Hur bra kan du hundens historia?",
+  "description": "Hunden har funnits vid vår sida i minst 15 000 år – men vet du var, hur och varför? Viss forskning ger helt andra svar än man tror.",
+  "images": {
+    "cardKey": "flocken_quiz_hundens_historia_card",
+    "cardAlt": "Illustration av varg till hund i varm, naturlig stil."
+  },
+  "questions": [
+    {
+      "id": "historia-1",
+      "type": "fact",
+      "question": "Vilket djur är hundens närmaste nu levande släkting?",
+      "options": [
+        "Schakal",
+        "Präriehund",
+        "Varg",
+        "Räv"
+      ],
+      "correctIndex": 2,
+      "explanation": "Genetiska studier visar att hunden delar ett gemensamt ursprung med vargen – men att alla hundar bildar en egen klade som är skild från dagens vargar. Hund och varg är alltså inte samma art, men de är varandras närmaste levande släktingar.",
+      "sources": ["HISTORIA_001", "HISTORIA_002"],
+      "factId": "historia_varg_slakting"
+    },
+    {
+      "id": "historia-2",
+      "type": "fact",
+      "question": "Genetiker har undersökt vad som hände mellan hund och varg efter att domesticeringen kom igång. Vad visade de?",
+      "options": [
+        "Det har förekommit genetiskt utbyte i båda riktningar – inte bara från varg till hund",
+        "Hund och varg är genetiskt sett identiska; skillnaderna är rent beteendemässiga",
+        "Vargar i Europa härstammar från återförvildade tamhundar",
+        "Hunden härstammar från tre separata domesticeringar av olika vargpopulationer"
+      ],
+      "correctIndex": 0,
+      "explanation": "Forskning visar att hundar har påverkat vargar genetiskt och vice versa, lång tid efter att domesticeringen inleddes. Det gör hundens historia till ett nätverk av utbyten snarare än en rak linje från varg till hund.",
+      "sources": ["HISTORIA_032"],
+      "factId": "historia_genetiskt_utbyte"
+    },
+    {
+      "id": "historia-3",
+      "type": "fact",
+      "question": "Var i världen tror de flesta forskare att hunden först domesticerades?",
+      "options": [
+        "I Nordafrika, i samband med tidiga jordbrukssamhällen",
+        "Frågan är fortfarande öppen – det finns starka bevis för både Europa och Östasien",
+        "I Sibirien, baserat på de äldsta kända hundfynden",
+        "I Sydamerika, där den genetiska mångfalden hos hundar är störst"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trots decennier av DNA-studier och arkeologiska fynd finns inget vetenskapligt konsensus om exakt var domesticeringen skedde. Både Europa och Östasien har starka bevis, och vissa forskare har föreslagit att det kan ha skett oberoende på mer än ett ställe.",
+      "sources": ["HISTORIA_005", "HISTORIA_006"],
+      "factId": "historia_geografiskt_ursprung"
+    },
+    {
+      "id": "historia-4",
+      "type": "fact",
+      "question": "Forskare har studerat hundkranier från 50 000 år tillbaka – vad visade det om tidiga hundar?",
+      "options": [
+        "Att alla hundar var nästan identiska i form tills 1800-talets rasavel",
+        "Att tydlig hundform och stor variation redan fanns för ca 11 000 år sedan",
+        "Att den stora variationen i hundars utseende startade med egyptiska och kinesiska raslinjer",
+        "Att hundar inte skilde sig från vargar i form förrän för 5 000 år sedan"
+      ],
+      "correctIndex": 1,
+      "explanation": "Forskarna använde avancerade mätmetoder på kranier för att skilja tidig hund från varg – utan att jämföra med moderna rashundar. Resultatet visade att den variation vi ser idag har mycket djupare rötter än vad man länge trodde.",
+      "sources": ["HISTORIA_010", "HISTORIA_033"],
+      "factId": "historia_morfologisk_mangfald"
+    },
+    {
+      "id": "historia-5",
+      "type": "fact",
+      "question": "Hur tror forskare att domesticeringen av hunden egentligen gick till?",
+      "options": [
+        "Att mindre skygga vargar sökte sig till mänskliga boplatser och gradvis anpassade sig",
+        "Att människor aktivt fångade och tämjde vargvalpar i fångenskap",
+        "Att hundar domesticerades av bönder för jordbruksändamål",
+        "Att vargar korsades med schakaler för att ge ett mer samarbetsvilligt temperament"
+      ],
+      "correctIndex": 0,
+      "explanation": "Den mest stödda hypotesen är att mindre skygga vargar hade en fördel nära mänskliga boplatser och att de över tid blev det vi kallar hund. Aktiv tämjning av vilda djur verkar ha haft liten del i det.",
+      "sources": ["HISTORIA_003", "HISTORIA_004"],
+      "factId": "historia_domesticering_mekanism"
+    },
+    {
+      "id": "historia-6",
+      "type": "fact",
+      "question": "Bonn-Oberkassel i Tyskland är en viktig plats i hundhistorien. Varför?",
+      "options": [
+        "Det var den första platsen i Europa med organiserad hundavel i modern mening",
+        "Där hittades de äldsta kända kennelklubbsdokumenten",
+        "Fyndplatsen innehåller några av de äldsta obestridda bevisen för en domesticerad hund",
+        "Där fastslogs de tio FCI-rasgrupperna vid ett historiskt möte"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bonn-Oberkassel-fyndet innehåller en människa och en hund begravda tillsammans – DNA-bekräftat domesticerad hund. Det gör platsen central i forskning om tidiga hundar. Att klassificera ben som 'hund' eller 'varg' kan dock vara metodberoende och ibland omtvistat.",
+      "sources": ["HISTORIA_009", "HISTORIA_008"],
+      "factId": "historia_bonn_oberkassel"
+    },
+    {
+      "id": "historia-7",
+      "type": "fact",
+      "question": "Hur kom hunden till Amerika?",
+      "options": [
+        "Européer tog med sig hundar under koloniseringen på 1500-talet",
+        "Hundar korsade Berings landbrygga med människor för tusentals år sedan",
+        "Amerikanska hundar domesticerades oberoende från nordamerikanska vargar",
+        "Hunden spreds till Amerika via Polynesien och Sydostasien"
+      ],
+      "correctIndex": 1,
+      "explanation": "Genetiska studier visar att de första amerikanska hundarna härstammade från östasiatiska hundar som följde med människor över Beringia för minst 10 000 år sedan. De flesta av dessa ursprungliga hundlinjer ersattes senare av europeiska hundar efter kolonisationen.",
+      "sources": ["HISTORIA_014", "HISTORIA_016"],
+      "factId": "historia_hundar_amerika"
+    },
+    {
+      "id": "historia-8",
+      "type": "fact",
+      "question": "Vad är det äldsta kända arkeologiska beviset för att hundar använts som draghundar?",
+      "options": [
+        "Norska vikingagravar med hundspann, daterade till ca 800 e.Kr.",
+        "Egyptiska väggmålningar av hunddrivna vagnar, ca 3 000 f.Kr.",
+        "Fynd på Zhokhov-ön i arktiska Sibirien, daterade till ca 9 000 år sedan",
+        "Medeltida manuskript från 1200-talets Europa"
+      ],
+      "correctIndex": 2,
+      "explanation": "På den arktiska Zhokhov-ön i östra Sibirien har forskare hittat bevis för specialiserade slädehundar som levde för ca 9 000 år sedan. DNA-analys visar att dessa hundar redan var anpassade för arbete i extrem kyla – långt innan vikingarna eller andra europeiska kulturer använde draghundar.",
+      "sources": ["HISTORIA_017", "HISTORIA_018"],
+      "factId": "historia_aeldsta_draghundar"
+    },
+    {
+      "id": "historia-9",
+      "type": "fact",
+      "question": "När tog organiserad rasavel och standardisering av hundraser fart i Europa?",
+      "options": [
+        "Under 1800-talet, parallellt med industrialisering och framväxten av kennelklubbar",
+        "Under tidig medeltid, driven av jaktintresset hos adeln",
+        "Under 1900-talets början, som en direkt reaktion på biologisk forskning",
+        "Under antiken, med fokus på strids- och jakthundar"
+      ],
+      "correctIndex": 0,
+      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. Royal Kennel Club, som bildades 1873, räknas som världens första nationella kennelklubb och publicerade sitt första Stud Book 1874 med resultat ända från 1859.",
+      "sources": ["HISTORIA_019", "HISTORIA_020", "HISTORIA_015"],
+      "factId": "historia_1800_rasavel"
+    },
+    {
+      "id": "historia-10",
+      "type": "fact",
+      "question": "När människan övergick från jakt till jordbruk förändrades hundens kost. Vad visar genetiken?",
+      "options": [
+        "Hunden fortsatte att äta enbart kött, precis som vargen",
+        "Hundar utvecklade fler kopior av genen AMY2B, som bryter ner stärkelse",
+        "Jordbrukshundar fick mindre mat och blev därför mindre än sina föregångare",
+        "Det finns inga genetiska bevis för att jordbruket påverkade hundens kost"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ett av de tydligaste genetiska bevisen för samevolution mellan hund och människa är genen AMY2B. Hundar har betydligt fler kopior av den genen än vargar – en anpassning som sannolikt skedde i takt med att människans kost blev mer stärkelserik under jordbruksrevolutionen.",
+      "sources": ["HISTORIA_035", "HISTORIA_036"],
+      "factId": "historia_starkelsegen"
+    }
+  ]
+}

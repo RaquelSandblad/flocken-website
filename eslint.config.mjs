@@ -12,6 +12,8 @@ const eslintConfig = [
     ignores: [
       '.next/**',
       'node_modules/**',
+      'mcp-servers/**',
+      'support-system/**',
       '*.config.js',
       '*.config.mjs',
       '*.config.ts',

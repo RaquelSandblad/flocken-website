@@ -38,7 +38,7 @@ Hitta hundar som matchar din och ta kontakt direkt.
 
 
 
-Ladda ner Flocken före 28 februari
+Ladda ner Flocken före 31 mars
 
 ✔️ Få gratis premium i 6 månader.
 
@@ -52,7 +52,7 @@ Allt samlat i en app, för både vardag och speciella tillfällen.
 
 
 
-Gratis premium i 6 månader när du skapar konto före 28 februari
+Gratis premium i 6 månader när du skapar konto före 31 mars
 
 Inga betalningsuppgifter krävs.
 
@@ -68,7 +68,7 @@ Med Flocken hittar du ställen där hundar är välkomna.
 
 Ladda ner appen och gå med i Flocken nu.
 
-Gratis premium i 6 månader fram till 28 februari 🎉
+Gratis premium i 6 månader fram till 31 mars 🎉
 
 
 
@@ -82,7 +82,7 @@ Promenader, möten, passning och hundvänliga platser – allt samlat i Flocken.
 
 Ladda ner nu och få gratis premium i 6 månader
 
-Gäller till 28 februari.
+Gäller till 31 mars.
 
 
 
@@ -105,7 +105,7 @@ I appen:
 
 
 Ladda ner Flocken gratis.
-Just nu 6 månaders gratis premium (gäller till 28 februari).
+Just nu 6 månaders gratis premium (gäller till 31 mars).
 
 
 

@@ -2,6 +2,30 @@
 
 Denna checklista hjälper dig att förbereda allt innan kampanjer skapas enligt den nya strukturen.
 
+---
+
+## Status 2026-03-13 — App Install Campaign Setup
+
+### ✅ Klart
+- [x] Flocken registrerad i Meta Business Manager (App ID: `1846697516011816`)
+- [x] iOS iPhone Store ID tillagt: `6755424578`
+- [x] Android Package Name: `com.bastavan.app`
+- [x] Android Install Referrer Decryption Key: satt
+- [x] Integritetspolicy uppdaterad (SV/DA/NO) – SKAdNetwork + Android AD_ID, deployd till flocken.info
+
+### 🔲 Väntande — kräver utvecklare
+- [ ] **SKAdNetwork** – lägg till i `app.config.ts` → ny iOS-release (kritiskt för iOS-kampanjer)
+- [ ] **Ta bort AD_ID-blockering** – ta bort `com.google.android.gms.permission.AD_ID` i `app.config.ts` → ny Android-release
+- [ ] **iOS Bundle ID** – fyll i `com.bastavan.app` i Meta App Dashboard under iOS-sektionen
+- [ ] **Android Key Hash** – hämta via `eas credentials` och lägg till i Meta App Dashboard
+
+### 📋 Kampanjstrategi nu
+- Kör standard **Mobile App Store-kampanj** (iOS) med liten testbudget
+- Lämna **iOS 14+-kampanj AV** tills SKAdNetwork är på plats
+- Förvänta ca 20-25% attributionstäckning på iOS tills SKAdNetwork är implementerat
+
+---
+
 ## Status 2026-01-19
 
 **Kampanjstruktur skapad via API:**

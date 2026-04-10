@@ -37,7 +37,7 @@ Logga promenader och samla poäng längs vägen.
 Kontakta andra hundägare direkt i appen.
 
 Ladda ner Flocken nu
-Gratis premium i 6 månader när du skapar konto före 28 februari 🎉`;
+Gratis premium i 6 månader när du skapar konto före 31 mars 🎉`;
 
 const PRIMARY_TEXT_V02 = `Appen för alla hundägare 🐶
 
@@ -46,7 +46,7 @@ Para, passa, rasta och besöka – allt i samma app.
 Filtrera på ras, storlek, kön och område.
 Hitta hundar som matchar din och ta kontakt direkt.
 
-Ladda ner Flocken före 28 februari
+Ladda ner Flocken före 31 mars
 ✔️ Få gratis premium i 6 månader.
 ✔️ Inga betalningsuppgifter krävs`;
 

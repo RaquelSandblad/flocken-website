@@ -63,6 +63,15 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 - [SHARED_INFRASTRUCTURE.md](./tracking/SHARED_INFRASTRUCTURE.md) ⭐ - Översikt över delad infrastruktur
 - Se [spitakolus/tracking/](https://github.com/tbinho/spitakolus/tree/main/tracking) för delad dokumentation
 
+**Styrande kontrakt (API-first / funnel / KPI):**
+- [Analytics Architecture (Contract)](./analytics/README.md) ⭐ - Arkitektur & kontrakt för KPI/Funnel (kanalagnostisk, aggregerad, API-first)
+- [KPI Dictionary](./analytics/KPI_DICTIONARY.md) ⭐ - Standardiserade KPI-definitioner (source of truth)
+- [Funnel Contracts](./analytics/FUNNELS.md) ⭐ - Funnel-kontrakt (Store acquisition / App activation / Paid→Store lag)
+- [Data Model](./analytics/DATA_MODEL.md) ⭐ - Datamodell (raw→curated→marts, `fact_kpi_daily`, dim-tabeller)
+- [Data Sources](./analytics/DATA_SOURCES.md) ⭐ - Datakällor + connector-kontrakt (GA4→BQ, Meta API, App Store Connect)
+- [Operations](./analytics/OPERATIONS.md) ⭐ - Drift, körning (D+1), monitoring, alerting, backfill
+- [New App Onboarding](./analytics/NEW_APP_ONBOARDING.md) ⭐ - Onboarding av ny app (konfigurationsdrivet, kontrakt-first)
+
 **Nuvarande Status:**
 - [GA4 Setup Status](./tracking/GA4_SETUP_STATUS.md) - Detaljerad status för GA4 implementation
 - [GTM Setup Instructions](./tracking/GTM_SETUP_INSTRUCTIONS.md) - Flocken-specifik GTM setup
@@ -80,6 +89,7 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 
 **Övrigt:**
 - [Event Naming Convention](./tracking/EVENT_NAMING_CONVENTION.md) - Naming standarder för events
+- [Analytics Event Spec (Cross-app)](./tracking/ANALYTICS_EVENT_SPEC_CROSS_APP.md) - Canonical events + mapping mot Supabase (Flocken + Nästa Hem)
 - [Events Verification](./tracking/EVENTS_VERIFICATION.md) - Verifiera events
 - [Implementation Summary](./tracking/IMPLEMENTATION_SUMMARY.md) - Sammanfattning av implementation
 - [Privacy Compliance Check](./tracking/PRIVACY_COMPLIANCE_CHECK.md) - GDPR-kompatibilitet

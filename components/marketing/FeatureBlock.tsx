@@ -1,3 +1,5 @@
+'use client';
+
 import { PhoneMockup } from './PhoneMockup';
 
 interface FeatureBlockProps {
