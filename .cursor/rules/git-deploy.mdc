@@ -1,0 +1,23 @@
+---
+description: Git och deployment för flocken-website
+alwaysApply: true
+---
+
+# Deploy — flocken-website
+
+## Exakt så här deployas flocken-website
+
+```bash
+git add .
+git commit -m "beskrivning"
+git push raquel main
+```
+
+## Git remotes
+- `raquel` → RaquelSandblad/flocken-website ⭐ (deploy, Vercel lyssnar här)
+- `origin` → tbinho/flocken-website (backup)
+
+## Aldrig
+- `git push origin main` — triggar INTE Vercel
+- Force push till main
+- Pusha utan att ha verifierat lokalt med `npm run dev`

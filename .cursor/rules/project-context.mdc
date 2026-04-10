@@ -1,0 +1,31 @@
+---
+description: Flocken projekt-identitet och kritiska regler
+alwaysApply: true
+---
+
+# Du jobbar i: FLOCKEN-WEBSITE (flocken.info)
+
+**Verifiera alltid att du är i rätt repo innan du gör något.**
+Om du är osäker — fråga innan du fortsätter.
+
+## Detta repo
+- **Produkt:** Flocken — community-app för hundägare
+- **URL:** flocken.info
+- **Tech:** Next.js 15, TypeScript, Tailwind CSS
+- **Sökväg:** C:\dev\flocken-website
+
+## Andra repos — blanda ALDRIG
+| Repo | Sökväg | Produkt |
+|------|--------|---------|
+| nastahem | C:\dev\nastahem | nastahem.com |
+| support-admin | C:\dev\support-admin | spitakolus.com/admin |
+| spitakolus | C:\dev\spitakolus | Delad dokumentation |
+
+## Affärskritiska appar — RÖR ALDRIG
+Flocken-appen (iOS/Android) hanteras separat. Jobba endast med webbplatsen här.
+
+## Innan du börjar
+```bash
+git pull raquel main   # Hämta senaste från Vercel-kopplat repo
+npm run dev            # Verifiera på localhost:3000 innan deploy
+```
