@@ -7,8 +7,8 @@ h01: Hela hundlivet i en app
 h02: Gå med i Flocken nu
 h03: Flocken - appen för svenska hundägare
 h04: Para, passa, rasta och besöka - allt i Flocken
-h05: Ladda ner Flocken - få gratis premium
+h05: Ladda ner Flocken idag
 
 ## Descriptions  
 d01: Gratis att testa
-d02: 6 månaders gratis premium
+d02: Gratiskonto och premium

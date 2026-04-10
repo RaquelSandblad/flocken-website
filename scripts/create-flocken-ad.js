@@ -365,8 +365,7 @@ Logga promenader och samla poäng längs vägen.
 
 Kontakta andra hundägare direkt i appen.
 
-Ladda ner Flocken nu
-Gratis premium i 6 månader när du skapar konto!`;
+Ladda ner Flocken nu`;
   
   const description = 'Hitta lekkamrater, hundvakter och hundvänliga platser';
   

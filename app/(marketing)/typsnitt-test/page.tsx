@@ -121,7 +121,7 @@ export default function TypsnittTestPage() {
             <div className="mb-6">
               <p className="text-xs text-flocken-gray uppercase tracking-wide mb-2">Small Text (Footer, finteprint)</p>
               <p className={`text-sm text-flocken-gray ${font.class}`}>
-                © 2025 Spitakolus AB. Alla rättigheter förbehållna. Gratis i 6 månader för tidiga användare.
+                © 2025 Spitakolus AB. Alla rättigheter förbehållna.
               </p>
             </div>
 
