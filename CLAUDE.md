@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **General rules:** See `C:\Dev\spitakolus\CLAUDE.md` for shared standards (documentation, assets, Meta Ads, infrastructure).
+> **General rules:** See `C:\dev\spitakolus\CLAUDE.md` for shared standards (documentation, assets, Meta Ads, infrastructure).
 
 ## Repository Identity
 
