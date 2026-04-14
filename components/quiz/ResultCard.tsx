@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { AppCtaModule } from '@/components/quiz/AppCtaModule';
 import { BadgeDisplay } from '@/components/quiz/BadgeDisplay';
-import { EmailCaptureCard } from '@/components/quiz/EmailCaptureCard';
 import { track } from '@/lib/quiz/tracking';
 import type { FactQuestion, QuizDefinition } from '@/lib/quiz/types';
 
@@ -73,8 +72,6 @@ function ShareButtons({ slug, quizTitle, score }: { slug: string; quizTitle: str
 }
 
 export function ResultCard({ slug, quiz, score, badge, tier, interpretation, userAnswers }: ResultCardProps) {
-  const showEmailCapture = slug !== 'valpar_socialisering';
-
   return (
     <section className="space-y-5">
       {/* 1. Score + Badge + Dela */}
@@ -131,8 +128,6 @@ export function ResultCard({ slug, quiz, score, badge, tier, interpretation, use
         </div>
       </div>
 
-      {/* 4. E-postformulär längst ner (ej på valpar_socialisering – lead magnet-quiz) */}
-      {showEmailCapture && <EmailCaptureCard quizSlug={slug} />}
     </section>
   );
 }

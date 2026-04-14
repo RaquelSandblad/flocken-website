@@ -36,7 +36,7 @@ I appen:
 🏠 Hitta en hundvakt när du behöver.
 
 Ladda ner Flocken gratis.
-Just nu 6 månaders gratis premium (gäller till 31 mars).`;
+Gratiskonto utan tidsbegränsning — välj premium när du vill.`;
 
 const HEADLINE = 'Gå med i Flocken - lägg upp din hund';
 const DESCRIPTION = 'Appen för hundälskare';

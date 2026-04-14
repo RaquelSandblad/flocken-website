@@ -373,22 +373,48 @@ export async function trackPurchase(
 /**
  * Track subscription start
  * Använd när användare startar premium subscription
+ * Skickar också till Meta Pixel och CAPI som Subscribe event
  */
-export function trackSubscriptionStart(transactionId: string, value: number) {
-  if (typeof window === 'undefined' || !window.dataLayer) {
-    console.warn('dataLayer not available');
-    return;
-  }
-  if (!hasAnalyticsConsent()) {
+export async function trackSubscriptionStart(transactionId: string, value: number) {
+  if (typeof window === 'undefined') {
+    console.warn('Window not available');
     return;
   }
 
-  window.dataLayer.push({
-    event: 'subscription_start',
-    transaction_id: transactionId,
-    value: value,
-    currency: 'SEK'
-  });
+  const eventId = generateEventId();
+
+  // GA4: dataLayer (analytics consent required)
+  if (window.dataLayer && hasAnalyticsConsent()) {
+    window.dataLayer.push({
+      event: 'subscription_start',
+      transaction_id: transactionId,
+      value: value,
+      currency: 'SEK'
+    });
+  }
+
+  // Meta Pixel: Track as Subscribe event (only if marketing consent is granted)
+  if (window.fbq && hasMarketingConsent()) {
+    window.fbq('track', 'Subscribe', {
+      value: value,
+      currency: 'SEK',
+    }, { eventID: eventId });
+  }
+
+  // Server-side: CAPI (only if marketing consent is granted)
+  if (hasMarketingConsent()) {
+    await sendToCAPI({
+      event_name: 'Subscribe',
+      event_id: eventId,
+      custom_data: {
+        value: value,
+        currency: 'SEK',
+        transaction_id: transactionId,
+      },
+    }).catch(() => {
+      // Silently fail if CAPI is not configured
+    });
+  }
 }
 
 /**

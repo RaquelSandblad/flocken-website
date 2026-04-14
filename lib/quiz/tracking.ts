@@ -14,8 +14,6 @@ export type QuizTrackingEvent =
   | 'quiz_cta_click'
   | 'quiz_cta_download_click'
   | 'quiz_share'
-  | 'quiz_email_subscribe_attempt'
-  | 'quiz_email_subscribe_success'
   | 'quiz_app_cta_view'
   | 'quiz_app_cta_click';
 

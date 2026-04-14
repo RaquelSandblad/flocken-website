@@ -281,12 +281,47 @@
     console.log('GTM: Consent choice tracked via dataLayer');
   }
 
+  function getViewContentData() {
+    var pathname = window.location.pathname;
+    // Exact matches first
+    if (pathname === '/' || pathname === '') {
+      return {
+        content_category: 'Homepage',
+        content_name: 'Landing Page',
+        content_ids: ['flocken-homepage'],
+      };
+    }
+    if (pathname === '/download') {
+      return {
+        content_category: 'Download',
+        content_name: 'Download Page',
+        content_ids: ['flocken-download'],
+      };
+    }
+    // Quiz paths: /quiz/<slug>
+    if (pathname.startsWith('/quiz')) {
+      var quizSlug = pathname.replace(/^\/quiz\/?/, '') || 'index';
+      return {
+        content_category: 'Quiz',
+        content_name: quizSlug,
+        content_ids: ['flocken-quiz-' + quizSlug],
+      };
+    }
+    // Fallback: use first path segment as category
+    var firstSegment = pathname.split('/').filter(Boolean)[0] || 'page';
+    return {
+      content_category: firstSegment.charAt(0).toUpperCase() + firstSegment.slice(1),
+      content_name: pathname,
+      content_ids: ['flocken-' + firstSegment],
+    };
+  }
+
   function saveConsent(necessary = true, analytics = false, marketing = false) {
     const consent = createConsentObject(necessary, analytics, marketing);
     saveConsentToStorage(consent);
     updateGTMConsent(analytics, marketing);
     trackConsentChoice(analytics, marketing);
-    
+
     // CRITICAL: Block or allow tracking based on consent
     // This prevents cookies/data from being saved if user declines
     if (!analytics) {
@@ -303,13 +338,11 @@
         // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
         window.fbq('track', 'PageView');
         // Then track ViewContent for additional conversion data
-        window.fbq('track', 'ViewContent', {
-          content_name: 'Landing Page',
-          content_category: 'Homepage',
-          content_ids: ['flocken-homepage'],
+        var viewContentData = getViewContentData();
+        window.fbq('track', 'ViewContent', Object.assign({}, viewContentData, {
           content_type: 'landing_page',
-        });
-        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (new consent)');
+        }));
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (new consent)', viewContentData);
       }
     }
     
@@ -649,13 +682,11 @@
         // CRITICAL: PageView MUST be the first event for "visning av målsida" (Landing Page View) to work
         window.fbq('track', 'PageView');
         // Then track ViewContent for additional conversion data
-        window.fbq('track', 'ViewContent', {
-          content_name: 'Landing Page',
-          content_category: 'Homepage',
-          content_ids: ['flocken-homepage'],
+        var viewContentData = getViewContentData();
+        window.fbq('track', 'ViewContent', Object.assign({}, viewContentData, {
           content_type: 'landing_page',
-        });
-        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (existing consent)');
+        }));
+        console.log('Cookie banner: Meta Pixel PageView and ViewContent tracked (existing consent)', viewContentData);
       }
     }
 

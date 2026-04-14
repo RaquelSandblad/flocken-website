@@ -13,12 +13,12 @@ export default function HomePage() {
       <HeroBlock
         title="Ett enklare liv som hundägare"
         tagline="– ladda ner Flocken"
-        subtitle="Underlätta vardagen som hundägare med funktionerna Hundar, Passa, Rasta och Besöka."
+        subtitle="Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka."
         ctaPrimary={{ text: "Ladda ner på Google Play", href: "https://play.google.com/store/apps/details?id=com.bastavan.app" }}
         ctaSecondary={{ text: "Ladda ner på AppStore", href: "https://apps.apple.com/app/flocken/id6755424578" }}
         image="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
         launchInfo="Nu samlar vi Sveriges alla hundägare i Flocken. Skapa ett konto och lägg upp din hund."
-        launchOffer={`Appen är alltid gratis.\nTesta premiumfunktioner gratis i 6 månader, gäller till den 31 mars.`}
+        launchOffer={`Appen är gratis att ladda ner.\nGratiskonto utan tidsbegränsning — välj prenumeration om du vill ha premium.`}
         alignLeft={true}
       />
       
@@ -38,7 +38,7 @@ export default function HomePage() {
                   <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </svg>
-                  <span><span className="font-semibold">Hundar</span> – Hitta en lekkamrat eller parningspartner till din hund</span>
+                  <span><span className="font-semibold">Para</span> – Hitta en lekkamrat eller parningspartner till din hund</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-6 h-6 text-flocken-olive flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -80,7 +80,7 @@ export default function HomePage() {
       </section>
       
       <div id="funktioner">
-        {/* Feature: Hundar - För Marco */}
+        {/* Feature: Para - För Marco */}
         <FeatureBlock
           title="Hitta en lekkamrat eller parningspartner till din hund"
           subtitle="Enkel filtrering efter dina kriterier - slipp röriga grupper i sociala medier. Chatta direkt med hundägare i appen."
@@ -288,8 +288,8 @@ export default function HomePage() {
               
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
                 <p className="text-lg text-white font-semibold whitespace-pre-line">
-                  Appen är alltid gratis.{"\n"}
-                  Testa premiumfunktioner gratis i 6 månader, gäller till den 31 mars.
+                  Appen är gratis att ladda ner.{"\n"}
+                  Gratiskonto utan tidsbegränsning — välj prenumeration om du vill ha premium.
                 </p>
               </div>
             </div>
