@@ -4,9 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 
 const EXPERIMENT_ID = 'quiz_app_cta_v1';
 const STORAGE_KEY = 'flocken_ab_quiz_app_cta_v1';
-const CTA_URL = 'https://flocken.info/download';
+const APPSTORE_URL = 'https://apps.apple.com/app/flocken/id6755424578';
+const PLAYSTORE_URL = 'https://play.google.com/store/apps/details?id=com.bastavan.app';
+const DOWNLOAD_URL = 'https://flocken.info/download'; // fallback for desktop/unknown
 
-type VariantId = 'A' | 'B' | 'C' | 'D';
+type VariantId = 'A' | 'B' | 'C';
+type Platform = 'ios' | 'android' | 'desktop';
 
 interface VariantContent {
   headline: string;
@@ -34,15 +37,9 @@ const VARIANTS: Record<VariantId, VariantContent> = {
     imageSrc: '/assets/flocken/quiz-cta/variant-c-hundvakt.png',
     imageAlt: 'Hundvakt i Flocken-appen',
   },
-  D: {
-    headline: 'Hitta caféer som tar emot hundar',
-    body: 'Sök hundvänliga platser på kartan – perfekt när du är ute och reser',
-    imageSrc: '/assets/flocken/quiz-cta/variant-d-platser.png',
-    imageAlt: 'Hundvänliga platser i Flocken-appen',
-  },
 };
 
-const ALL_VARIANTS: VariantId[] = ['A', 'B', 'C', 'D'];
+const ALL_VARIANTS: VariantId[] = ['A', 'B', 'C'];
 
 function isValidVariant(v: string | null): v is VariantId {
   return v !== null && (ALL_VARIANTS as string[]).includes(v);
@@ -56,9 +53,32 @@ interface AppCtaModuleProps {
   quizSlug: string;
 }
 
+function detectPlatform(): Platform {
+  if (typeof navigator === 'undefined') return 'desktop';
+  const ua = navigator.userAgent.toLowerCase();
+  if (ua.includes('iphone') || ua.includes('ipad') || ua.includes('ipod')) return 'ios';
+  // iPadOS 13+ reports as Macintosh
+  if (ua.includes('macintosh') && 'ontouchend' in document) return 'ios';
+  if (ua.includes('android')) return 'android';
+  return 'desktop';
+}
+
+function getCtaUrl(platform: Platform): string {
+  if (platform === 'ios') return APPSTORE_URL;
+  if (platform === 'android') return PLAYSTORE_URL;
+  return DOWNLOAD_URL;
+}
+
+function getCtaLabel(platform: Platform): string {
+  if (platform === 'ios') return 'Ladda ner på App Store';
+  if (platform === 'android') return 'Ladda ner på Google Play';
+  return 'Ladda ner Flocken-appen';
+}
+
 export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
   const [variant, setVariant] = useState<VariantId | null>(null);
   const [imgError, setImgError] = useState(false);
+  const [platform, setPlatform] = useState<Platform>('desktop');
   const hasTrackedView = useRef(false);
 
   useEffect(() => {
@@ -70,6 +90,7 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     }
 
     setVariant(resolved);
+    setPlatform(detectPlatform());
   }, []);
 
   useEffect(() => {
@@ -119,13 +140,16 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
   }
 
   const content = VARIANTS[variant];
+  const ctaUrl = getCtaUrl(platform);
+  const ctaLabel = getCtaLabel(platform);
 
   function handleClick() {
     const eventData = {
       experiment_id: EXPERIMENT_ID,
       variant_id: variant,
       cta_name: 'quiz_result_download',
-      cta_destination: CTA_URL,
+      cta_destination: ctaUrl,
+      cta_platform: platform,
       quiz_slug: quizSlug,
       source: 'quiz_result',
     };
@@ -155,7 +179,7 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
 
   return (
     <a
-      href={CTA_URL}
+      href={ctaUrl}
       onClick={handleClick}
       className="group block overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-olive/25 bg-gradient-to-br from-flocken-cream to-flocken-sand no-underline shadow-card transition-shadow hover:shadow-lg"
       aria-label={`${content.headline} – Ladda ner Flocken-appen`}
@@ -182,7 +206,7 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
           {/* CTA button */}
           <div className="mt-5">
             <span className="inline-flex items-center gap-2 rounded-xl bg-flocken-olive px-5 py-3 text-sm font-semibold text-white transition-colors group-hover:bg-flocken-accent">
-              Ladda ner Flocken-appen
+              {ctaLabel}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -230,7 +254,6 @@ function Placeholder({ variant }: { variant: VariantId }) {
     A: 'from-flocken-olive/20 to-flocken-male/30',
     B: 'from-flocken-female/20 to-flocken-sand',
     C: 'from-flocken-brown/10 to-flocken-olive/20',
-    D: 'from-flocken-accent/20 to-flocken-cream',
   };
 
   return (

@@ -128,6 +128,9 @@ export function ResultCard({ slug, quiz, score, badge, tier, interpretation, use
         </div>
       </div>
 
+      {/* 4. Upprepad App CTA efter svarsgenomgång – fångar engagerade användare som scrollat klart */}
+      <AppCtaModule quizSlug={slug} />
+
     </section>
   );
 }
