@@ -77,50 +77,40 @@ export const experiments: Record<string, Experiment> = {
   // Definitionen finns här för dokumentation och ev. framtida MCP-analys.
   'quiz_app_cta_v1': {
     id: 'quiz_app_cta_v1',
-    name: 'Quiz App CTA – Discovery/Match/Hundvakt/Platser',
-    description: 'Testar fyra app-CTA-varianter direkt under resultatkortet. Optimerar klick till /download. Client-side assignment via localStorage.',
+    name: 'Quiz App CTA – Karta/Match/Hundvakt',
+    description: 'Testar tre app-CTA-varianter med hand-mockup-bilder. Variant D (Platser) borttagen 2026-04-14. Client-side assignment via localStorage.',
     status: 'running',
     startDate: '2026-03-18',
     targetPages: [],
     variants: [
       {
         id: 'A',
-        weight: 25,
+        weight: 33,
         content: {
           headline: 'Se hundar på kartan i din stad',
           body: 'Scrolla bland hundar – lägg upp din egen på några minuter',
-          imageSrc: '/assets/flocken/quiz-cta/variant-a-karta.png',
-          imageAlt: 'Karta med hundar i Flocken-appen',
+          imageSrc: '/assets/flocken/quiz-cta/hand-final-karta.png',
+          imageAlt: 'Hand som håller telefon med Flockens karta',
         },
       },
       {
         id: 'B',
-        weight: 25,
+        weight: 34,
         content: {
           headline: 'Hitta hundar som matchar din',
           body: 'Se personlighet och bilder – hitta rätt match direkt',
-          imageSrc: '/assets/flocken/quiz-cta/variant-b-match.png',
-          imageAlt: 'Hundprofiler i Flocken-appen',
+          imageSrc: '/assets/flocken/quiz-cta/hand-final-match.png',
+          imageAlt: 'Hand som håller telefon med hundprofiler i Flocken',
         },
       },
       {
         id: 'C',
-        weight: 25,
+        weight: 33,
         content: {
           headline: 'Hitta hundvakt som passar dig',
           body: 'Se hundvakter nära dig – nya varje dag',
-          imageSrc: '/assets/flocken/quiz-cta/variant-c-hundvakt.png',
-          imageAlt: 'Hundvakt i Flocken-appen',
-        },
-      },
-      {
-        id: 'D',
-        weight: 25,
-        content: {
-          headline: 'Hitta caféer som tar emot hundar',
-          body: 'Sök hundvänliga platser på kartan – perfekt när du är ute och reser',
-          imageSrc: '/assets/flocken/quiz-cta/variant-d-platser.png',
-          imageAlt: 'Hundvänliga platser i Flocken-appen',
+          imageSrc: '/assets/flocken/quiz-cta/hand-final-hundvakt.png',
+          imageAlt: 'Hand som håller telefon med hundvaktsprofil i Flocken',
         },
       },
     ],

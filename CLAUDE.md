@@ -153,6 +153,7 @@ flocken_ads/creative_bases/
 | GTM | Live | GTM-PD5N4GT3 (hostname: flocken.info) |
 | Meta Pixel | Live | 1140501127797453 |
 | BigQuery | Planned | flocken_raw, flocken_curated, flocken_marts |
+| Gemini Imagen | Live | AI-genererade produktbilder via Google AI Studio API. Modell: `gemini-2.5-flash-image` (image-to-image). API-nyckel: Windows env var `GEMINI_API_KEY`. Se `docs/creative/IMAGE_GENERATION.md`. |
 
 ---
 

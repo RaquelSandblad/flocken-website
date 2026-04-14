@@ -22,20 +22,20 @@ const VARIANTS: Record<VariantId, VariantContent> = {
   A: {
     headline: 'Se hundar på kartan i din stad',
     body: 'Scrolla bland hundar – lägg upp din egen på några minuter',
-    imageSrc: '/assets/flocken/quiz-cta/variant-a-karta.png',
-    imageAlt: 'Karta med hundar i Flocken-appen',
+    imageSrc: '/assets/flocken/quiz-cta/hand-final-karta.png',
+    imageAlt: 'Hand som håller telefon med Flockens karta',
   },
   B: {
     headline: 'Hitta hundar som matchar din',
     body: 'Se personlighet och bilder – hitta rätt match direkt',
-    imageSrc: '/assets/flocken/quiz-cta/variant-b-match.png',
-    imageAlt: 'Hundprofiler i Flocken-appen',
+    imageSrc: '/assets/flocken/quiz-cta/hand-final-match.png',
+    imageAlt: 'Hand som håller telefon med hundprofiler i Flocken',
   },
   C: {
     headline: 'Hitta hundvakt som passar dig',
     body: 'Se hundvakter nära dig – nya varje dag',
-    imageSrc: '/assets/flocken/quiz-cta/variant-c-hundvakt.png',
-    imageAlt: 'Hundvakt i Flocken-appen',
+    imageSrc: '/assets/flocken/quiz-cta/hand-final-hundvakt.png',
+    imageAlt: 'Hand som håller telefon med hundvaktsprofil i Flocken',
   },
 };
 
@@ -123,17 +123,17 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
   if (!variant) {
     return (
       <div
-        className="animate-pulse overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-olive/25 bg-gradient-to-br from-flocken-cream to-flocken-sand shadow-card"
+        className="animate-pulse overflow-hidden rounded-2xl bg-flocken-olive shadow-lg"
         aria-hidden="true"
       >
-        <div className="grid md:grid-cols-[1fr_220px]">
-          <div className="space-y-3 p-6 md:p-8">
-            <div className="h-3 w-32 rounded bg-flocken-olive/10" />
-            <div className="h-6 w-3/4 rounded bg-flocken-olive/10" />
-            <div className="h-4 w-2/3 rounded bg-flocken-olive/10" />
-            <div className="h-10 w-48 rounded-xl bg-flocken-olive/10" />
+        <div className="flex flex-col items-center gap-4 p-8 md:flex-row md:gap-8 md:p-10">
+          <div className="h-[200px] w-[120px] rounded-2xl bg-white/10" />
+          <div className="flex-1 space-y-3">
+            <div className="h-3 w-24 rounded bg-white/15" />
+            <div className="h-7 w-3/4 rounded bg-white/15" />
+            <div className="h-4 w-2/3 rounded bg-white/10" />
+            <div className="h-11 w-48 rounded-xl bg-white/15" />
           </div>
-          <div className="min-h-[180px] bg-flocken-sand/50 md:min-h-0" />
         </div>
       </div>
     );
@@ -154,24 +154,20 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
       source: 'quiz_result',
     };
 
-    // GA4 via gtag (direct - doesn't need GTM tag)
     if (window.gtag) {
       window.gtag('event', 'cta_click', eventData);
     }
 
-    // Meta Pixel
     if (window.fbq) {
       window.fbq('trackCustom', 'CTAClick', eventData);
     }
 
-    // GTM dataLayer (backup - uses existing cta_click tag)
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'cta_click',
       ...eventData,
     });
 
-    // Debug logging
     if (process.env.NODE_ENV === 'development') {
       console.log('[Quiz CTA] Click tracked:', eventData);
     }
@@ -181,31 +177,48 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     <a
       href={ctaUrl}
       onClick={handleClick}
-      className="group block overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-olive/25 bg-gradient-to-br from-flocken-cream to-flocken-sand no-underline shadow-card transition-shadow hover:shadow-lg"
+      className="group block overflow-hidden rounded-2xl bg-flocken-olive no-underline shadow-lg transition-all hover:shadow-xl hover:brightness-105"
       aria-label={`${content.headline} – Ladda ner Flocken-appen`}
     >
-      <div className="grid items-center md:grid-cols-[3fr_2fr]">
+      <div className="flex flex-col items-center gap-4 px-6 pb-7 pt-6 md:flex-row md:gap-10 md:px-10 md:py-8">
+
+        {/* Phone mockup */}
+        <div className="flex-shrink-0">
+          {!imgError ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={content.imageSrc}
+              alt={content.imageAlt}
+              onError={() => setImgError(true)}
+              className="h-[220px] w-auto drop-shadow-2xl md:h-[260px]"
+            />
+          ) : (
+            <div className="flex h-[220px] w-[110px] items-center justify-center rounded-2xl bg-white/10 md:h-[260px] md:w-[130px]">
+              <span className="text-3xl">🐾</span>
+            </div>
+          )}
+        </div>
 
         {/* Text + CTA */}
-        <div className="flex flex-col justify-center p-6 md:py-8 md:pl-8 md:pr-2">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
           {/* Label */}
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-flocken-olive/60">
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
             Upptäck Flocken-appen
           </span>
 
           {/* Headline */}
-          <h2 className="mt-2 text-xl font-bold leading-snug text-flocken-brown sm:text-2xl">
+          <h2 className="mt-2 text-xl font-bold leading-snug text-white sm:text-2xl">
             {content.headline}
           </h2>
 
           {/* Body */}
-          <p className="mt-2 text-sm leading-relaxed text-flocken-brown/70">
+          <p className="mt-2 text-sm leading-relaxed text-white/75">
             {content.body}
           </p>
 
-          {/* CTA button */}
+          {/* CTA button — inverterad: vit knapp på mörk bakgrund */}
           <div className="mt-5">
-            <span className="inline-flex items-center gap-2 rounded-xl bg-flocken-olive px-5 py-3 text-sm font-semibold text-white transition-colors group-hover:bg-flocken-accent">
+            <span className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-flocken-olive shadow-md transition-colors group-hover:bg-flocken-cream">
               {ctaLabel}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,48 +237,12 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
           </div>
 
           {/* Subtext */}
-          <p className="mt-2 text-xs text-flocken-gray">
+          <p className="mt-3 text-xs font-medium text-white/50">
             Gratis i App Store &amp; Google Play
           </p>
         </div>
 
-        {/* Image – 1:1 screenshots, padding keeps them off the edge */}
-        <div className="flex items-center justify-center p-4 md:py-5 md:pl-2 md:pr-5">
-          {!imgError ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={content.imageSrc}
-              alt={content.imageAlt}
-              onError={() => setImgError(true)}
-              className="h-auto w-full rounded-lg object-contain"
-            />
-          ) : (
-            <Placeholder variant={variant} />
-          )}
-        </div>
-
       </div>
     </a>
-  );
-}
-
-function Placeholder({ variant }: { variant: VariantId }) {
-  const gradients: Record<VariantId, string> = {
-    A: 'from-flocken-olive/20 to-flocken-male/30',
-    B: 'from-flocken-female/20 to-flocken-sand',
-    C: 'from-flocken-brown/10 to-flocken-olive/20',
-  };
-
-  return (
-    <div
-      className={`flex h-full min-h-[180px] flex-col items-center justify-center gap-2 bg-gradient-to-br ${gradients[variant]} p-4`}
-    >
-      <span className="text-3xl">🐾</span>
-      <span className="text-center text-xs font-medium text-flocken-brown/50">
-        App-skärmbild variant {variant}
-        <br />
-        (placeholder)
-      </span>
-    </div>
   );
 }
