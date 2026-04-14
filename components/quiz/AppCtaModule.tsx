@@ -180,7 +180,7 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
       className="group block overflow-hidden rounded-2xl bg-flocken-olive no-underline shadow-lg transition-all hover:shadow-xl hover:brightness-105"
       aria-label={`${content.headline} – Ladda ner Flocken-appen`}
     >
-      <div className="flex flex-col items-center gap-4 px-6 pb-7 pt-6 md:flex-row md:gap-10 md:px-10 md:py-8">
+      <div className="flex flex-col items-center gap-2 px-6 pb-7 pt-0 md:flex-row md:gap-10 md:px-10 md:pb-8 md:pt-0">
 
         {/* Phone mockup */}
         <div className="flex-shrink-0">
