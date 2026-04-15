@@ -18,6 +18,7 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { trackAppInstall } from '@/lib/tracking';
 
 const APPSTORE_URL = 'https://apps.apple.com/app/flocken/id6755424578';
 const PLAYSTORE_URL =
@@ -84,28 +85,31 @@ export function VLandingCTA({
   }, []);
 
   function handleClick() {
-    const eventData = {
-      experiment_id: experimentId,
-      variant: variant,
-      cta_destination: ctaUrl,
-      cta_platform: platform,
-      source: 'hookspecifik_landing',
-      cta_position: position,
-    };
+    // Standard Meta Lead-event + CAPI + GA4 via tracking-biblioteket
+    if (platform === 'ios' || platform === 'android') {
+      trackAppInstall(platform, `v_landing_${variant}`);
+    }
 
+    // Kompletterande dataLayer-push med landing-specifik metadata
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'cta_click',
-        ...eventData,
+        experiment_id: experimentId,
+        variant: variant,
+        cta_destination: ctaUrl,
+        cta_platform: platform,
+        source: 'hookspecifik_landing',
+        cta_position: position,
       });
 
-      if (window.fbq) {
-        window.fbq('trackCustom', 'CTAClick', eventData);
-      }
-
       if (process.env.NODE_ENV === 'development') {
-        console.log('[VLanding CTA] Click tracked:', eventData);
+        console.log('[VLanding CTA] Click tracked:', {
+          platform,
+          position,
+          variant,
+          meta_event: platform !== 'desktop' ? 'Lead (standard)' : 'cta_click only',
+        });
       }
     }
   }
