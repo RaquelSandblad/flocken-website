@@ -109,7 +109,7 @@ export const PASSA_CONFIG: VLandingConfig = {
   heroImageAlt:
     'Clay-illustration av kvinna som promenerar med sin cocker spaniel på en solig skogsväg',
   heroPillText: undefined,
-  heroSocialProof: '2 000+ hundägare i Sverige använder Flocken',
+  heroSocialProof: '2 000+ hundägare i Sverige använder Flocken-appen. Finns på App Store och Google Play.',
 
   // Trust strip — mappar 1:1 till Annas tre invändningar
   trustSignals: [
