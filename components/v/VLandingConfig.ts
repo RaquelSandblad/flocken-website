@@ -82,6 +82,8 @@ export interface VLandingConfig {
   recruitHeadline?: string;
   /** Body-text, max 1-2 meningar */
   recruitBody?: string;
+  /** CTA-text för rekrytering, t.ex. "Skapa profil som hundvakt" */
+  recruitCtaLabel?: string;
 
   // CTA-texter
   ctaLabel: string;
@@ -186,6 +188,7 @@ export const PASSA_CONFIG: VLandingConfig = {
   // Rekrytering — kort sektion för hundvakter
   recruitHeadline: 'Vill du erbjuda hundpassning?',
   recruitBody: 'Skapa din profil i Flocken, testa 1 vecka gratis.',
+  recruitCtaLabel: 'Skapa profil som hundvakt',
 
   // Closing CTA — skuld-narrativ från VoC
   closingHeadline: 'Du ska kunna resa utan dåligt samvete',

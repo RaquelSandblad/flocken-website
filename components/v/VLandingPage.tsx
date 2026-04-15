@@ -462,28 +462,6 @@ export function VLandingPage({ config }: VLandingPageProps) {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/* [6b] REKRYTERING — valfri sektion, flocken-cream, kort CTA         */}
-      {/* ------------------------------------------------------------------ */}
-      {config.recruitHeadline && config.recruitBody && (
-        <section className="bg-flocken-cream px-4 sm:px-6 py-10 sm:py-12" aria-label="Bli hundvakt">
-          <div className="max-w-[640px] mx-auto text-center">
-            <h2 className="text-[1.25rem] sm:text-[1.5rem] font-bold text-flocken-brown leading-snug mb-2">
-              {config.recruitHeadline}
-            </h2>
-            <p className="text-[15px] text-flocken-brown/80 leading-relaxed mb-5">
-              {config.recruitBody}
-            </p>
-            <VLandingCTA
-              label={config.ctaLabel}
-              experimentId={config.experimentId}
-              variant={config.hook}
-              position="recruit"
-            />
-          </div>
-        </section>
-      )}
-
-      {/* ------------------------------------------------------------------ */}
       {/* [7] CLOSING CTA — flocken-olive, clay-bild + CTA                   */}
       {/* ------------------------------------------------------------------ */}
       <section
@@ -563,7 +541,29 @@ export function VLandingPage({ config }: VLandingPageProps) {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/* [8] FOOTER — flocken-brown, minimal                                 */}
+      {/* [8] REKRYTERING — valfri sektion, flocken-cream, kort CTA          */}
+      {/* ------------------------------------------------------------------ */}
+      {config.recruitHeadline && config.recruitBody && (
+        <section className="bg-flocken-cream px-4 sm:px-6 py-10 sm:py-12" aria-label="Bli hundvakt">
+          <div className="max-w-[640px] mx-auto text-center">
+            <h2 className="text-[1.25rem] sm:text-[1.5rem] font-bold text-flocken-brown leading-snug mb-2">
+              {config.recruitHeadline}
+            </h2>
+            <p className="text-[15px] text-flocken-brown/80 leading-relaxed mb-5">
+              {config.recruitBody}
+            </p>
+            <VLandingCTA
+              label={config.recruitCtaLabel || config.ctaLabel}
+              experimentId={config.experimentId}
+              variant={config.hook}
+              position="recruit"
+            />
+          </div>
+        </section>
+      )}
+
+      {/* ------------------------------------------------------------------ */}
+      {/* [9] FOOTER — flocken-brown, minimal                                 */}
       {/* ------------------------------------------------------------------ */}
       <footer className="bg-flocken-brown px-4 sm:px-6 py-6">
         <div className="max-w-[1120px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-[13px]">
