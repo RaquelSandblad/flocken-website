@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { trackAppInstall } from '@/lib/tracking';
 
 const EXPERIMENT_ID = 'quiz_app_cta_v1';
 const STORAGE_KEY = 'flocken_ab_quiz_app_cta_v1';
@@ -10,6 +11,7 @@ const DOWNLOAD_URL = 'https://flocken.info/download'; // fallback for desktop/un
 
 type VariantId = 'A' | 'B' | 'C';
 type Platform = 'ios' | 'android' | 'desktop';
+type Position = 'after_badge' | 'after_review';
 
 interface VariantContent {
   headline: string;
@@ -18,28 +20,35 @@ interface VariantContent {
   imageAlt: string;
 }
 
+// A/B/C-test: tre vinklar mäts mot varandra – upptäckt (karta), förtroende (profil), enkelhet (sök).
+// Clay-stil återanvänder etablerade v-passa-bilder (2026-04-15) så CTA talar samma visuella språk
+// som landningssidorna istället för photorealistiska stockhänder.
 const VARIANTS: Record<VariantId, VariantContent> = {
   A: {
-    headline: 'Se hundar på kartan i din stad',
-    body: 'Scrolla bland hundar – lägg upp din egen på några minuter',
-    imageSrc: '/assets/flocken/quiz-cta/hand-final-karta.png',
-    imageAlt: 'Hand som håller telefon med Flockens karta',
+    headline: 'Hitta hundvakter på kartan',
+    body: 'Zooma in där du bor och se vem som är ledig – på några sekunder.',
+    imageSrc: '/assets/flocken/v-passa/arg2-hand-karta-hundvakter.jpg',
+    imageAlt: 'Clay-hand som håller telefon med Flockens karta – hundvakter markerade över hela Sverige',
   },
   B: {
-    headline: 'Hitta hundar som matchar din',
-    body: 'Se personlighet och bilder – hitta rätt match direkt',
-    imageSrc: '/assets/flocken/quiz-cta/hand-final-match.png',
-    imageAlt: 'Hand som håller telefon med hundprofiler i Flocken',
+    headline: 'Välj en hundvakt du känner dig trygg med',
+    body: 'Profiler med bild, beskrivning och bokning – så du vet vem du möter.',
+    imageSrc: '/assets/flocken/v-passa/arg1-hand-yasmin-profil.jpg',
+    imageAlt: 'Clay-hand som håller telefon med hundvaktsprofilen Yasmin och hennes golden retriever',
   },
   C: {
-    headline: 'Hitta hundvakt som passar dig',
-    body: 'Se hundvakter nära dig – nya varje dag',
-    imageSrc: '/assets/flocken/quiz-cta/hand-final-hundvakt.png',
-    imageAlt: 'Hand som håller telefon med hundvaktsprofil i Flocken',
+    headline: 'Hitta rätt hundvakt på 30 sekunder',
+    body: 'Välj tjänst och storlek – så ser du alla som passar just din hund.',
+    imageSrc: '/assets/flocken/v-passa/arg2-hand-sok-hundvakt.jpg',
+    imageAlt: 'Clay-hand som håller telefon med Flockens sökformulär för hundvakt',
   },
 };
 
 const ALL_VARIANTS: VariantId[] = ['A', 'B', 'C'];
+
+// Module-scope dedupe så dubbelrenderingar i samma besök inte dubbelräknas.
+// Nyckel: `${quizSlug}|${position}`.
+const trackedViews = new Set<string>();
 
 function isValidVariant(v: string | null): v is VariantId {
   return v !== null && (ALL_VARIANTS as string[]).includes(v);
@@ -47,10 +56,6 @@ function isValidVariant(v: string | null): v is VariantId {
 
 function pickVariant(): VariantId {
   return ALL_VARIANTS[Math.floor(Math.random() * ALL_VARIANTS.length)];
-}
-
-interface AppCtaModuleProps {
-  quizSlug: string;
 }
 
 function detectPlatform(): Platform {
@@ -75,7 +80,12 @@ function getCtaLabel(platform: Platform): string {
   return 'Ladda ner Flocken-appen';
 }
 
-export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
+interface AppCtaModuleProps {
+  quizSlug: string;
+  position?: Position;
+}
+
+export function AppCtaModule({ quizSlug, position = 'after_badge' }: AppCtaModuleProps) {
   const [variant, setVariant] = useState<VariantId | null>(null);
   const [imgError, setImgError] = useState(false);
   const [platform, setPlatform] = useState<Platform>('desktop');
@@ -95,12 +105,21 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
 
   useEffect(() => {
     if (!variant || hasTrackedView.current) return;
+
+    // Dedupe view tracking across module remounts in same session
+    const dedupeKey = `${quizSlug}|${position}`;
+    if (trackedViews.has(dedupeKey)) {
+      hasTrackedView.current = true;
+      return;
+    }
+    trackedViews.add(dedupeKey);
     hasTrackedView.current = true;
 
     const eventData = {
       experiment_id: EXPERIMENT_ID,
       variant_id: variant,
       quiz_slug: quizSlug,
+      cta_position: position,
     };
 
     // GA4 via gtag (direct - same as click tracking)
@@ -118,21 +137,20 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     if (process.env.NODE_ENV === 'development') {
       console.log('[Quiz CTA] View tracked:', eventData);
     }
-  }, [variant, quizSlug]);
+  }, [variant, quizSlug, position]);
 
   if (!variant) {
     return (
       <div
-        className="animate-pulse overflow-hidden rounded-2xl bg-flocken-olive shadow-lg"
+        className="animate-pulse overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-warm/40 bg-flocken-cream shadow-card"
         aria-hidden="true"
       >
-        <div className="flex flex-col items-center gap-4 p-8 md:flex-row md:gap-8 md:p-10">
-          <div className="h-[200px] w-[120px] rounded-2xl bg-white/10" />
+        <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:gap-6 md:p-6">
+          <div className="aspect-square w-full rounded-2xl bg-flocken-warm/20 md:h-[220px] md:w-[220px] md:flex-shrink-0" />
           <div className="flex-1 space-y-3">
-            <div className="h-3 w-24 rounded bg-white/15" />
-            <div className="h-7 w-3/4 rounded bg-white/15" />
-            <div className="h-4 w-2/3 rounded bg-white/10" />
-            <div className="h-11 w-48 rounded-xl bg-white/15" />
+            <div className="h-7 w-3/4 rounded bg-flocken-warm/20" />
+            <div className="h-4 w-2/3 rounded bg-flocken-warm/15" />
+            <div className="h-12 w-full rounded-xl bg-flocken-warm/25 md:w-56" />
           </div>
         </div>
       </div>
@@ -142,24 +160,28 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
   const content = VARIANTS[variant];
   const ctaUrl = getCtaUrl(platform);
   const ctaLabel = getCtaLabel(platform);
+  const isReviewPosition = position === 'after_review';
 
   function handleClick() {
+    // Meta Pixel: standard Lead-event + CAPI via tracking-biblioteket (platform-specifikt)
+    if (platform === 'ios' || platform === 'android') {
+      trackAppInstall(platform, `quiz_result_${quizSlug}_${position}`);
+    }
+
     const eventData = {
       experiment_id: EXPERIMENT_ID,
       variant_id: variant,
       cta_name: 'quiz_result_download',
       cta_destination: ctaUrl,
       cta_platform: platform,
+      cta_position: position,
       quiz_slug: quizSlug,
       source: 'quiz_result',
     };
 
+    // GA4 direct (quiz-specifik namngivning)
     if (window.gtag) {
       window.gtag('event', 'cta_click', eventData);
-    }
-
-    if (window.fbq) {
-      window.fbq('trackCustom', 'CTAClick', eventData);
     }
 
     window.dataLayer = window.dataLayer || [];
@@ -169,7 +191,10 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     });
 
     if (process.env.NODE_ENV === 'development') {
-      console.log('[Quiz CTA] Click tracked:', eventData);
+      console.log('[Quiz CTA] Click tracked:', {
+        ...eventData,
+        meta_event: platform !== 'desktop' ? 'Lead (standard via trackAppInstall)' : 'dataLayer only',
+      });
     }
   }
 
@@ -177,54 +202,77 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
     <a
       href={ctaUrl}
       onClick={handleClick}
-      className="group block overflow-hidden rounded-2xl bg-flocken-olive no-underline shadow-lg transition-all hover:shadow-xl hover:brightness-105"
+      className="group block overflow-hidden rounded-[var(--quiz-radius-card)] border border-flocken-warm/40 bg-flocken-cream no-underline shadow-card transition-all hover:-translate-y-0.5 hover:shadow-lg"
       aria-label={`${content.headline} – Ladda ner Flocken-appen`}
     >
-      <div className="flex flex-col items-center gap-2 px-6 pb-7 pt-0 md:flex-row md:gap-10 md:px-10 md:pb-8 md:pt-0">
+      <div className="flex flex-col gap-4 p-5 md:flex-row md:items-center md:gap-6 md:p-6">
 
-        {/* Phone mockup */}
-        <div className="flex-shrink-0">
+        {/* Clay-hand-mockup — samma visuella språk som v/passa */}
+        <div className="flex-shrink-0 self-center md:self-stretch">
           {!imgError ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={content.imageSrc}
               alt={content.imageAlt}
               onError={() => setImgError(true)}
-              className="h-[220px] w-auto drop-shadow-2xl md:h-[260px]"
+              width={640}
+              height={640}
+              loading="lazy"
+              className="mx-auto h-auto w-[240px] rounded-2xl object-cover shadow-soft transition-transform duration-300 group-hover:scale-[1.02] sm:w-[280px] md:h-[240px] md:w-[240px]"
             />
           ) : (
-            <div className="flex h-[220px] w-[110px] items-center justify-center rounded-2xl bg-white/10 md:h-[260px] md:w-[130px]">
-              <span className="text-3xl">🐾</span>
+            <div className="flex h-[240px] w-[240px] items-center justify-center rounded-2xl bg-flocken-sand">
+              <span className="text-5xl">🐾</span>
             </div>
           )}
         </div>
 
         {/* Text + CTA */}
-        <div className="flex flex-col items-center text-center md:items-start md:text-left">
-          {/* Label */}
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-white/60">
-            Upptäck Flocken-appen
-          </span>
+        <div className="flex min-w-0 flex-1 flex-col items-center text-center md:items-start md:text-left">
+          {/* Eyebrow-label — diskret kategorisering, ger textblocket ett ankare */}
+          <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-flocken-olive">
+            Flocken-appen
+          </p>
 
           {/* Headline */}
-          <h2 className="mt-2 text-xl font-bold leading-snug text-white sm:text-2xl">
+          <h2 className="mt-2 text-balance text-[22px] font-bold leading-tight text-flocken-brown sm:text-2xl md:text-[26px]">
             {content.headline}
           </h2>
 
           {/* Body */}
-          <p className="mt-2 text-sm leading-relaxed text-white/75">
+          <p className="mt-2 text-sm leading-relaxed text-flocken-gray md:text-base">
             {content.body}
           </p>
 
-          {/* CTA button — inverterad: vit knapp på mörk bakgrund */}
-          <div className="mt-5">
-            <span className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-flocken-olive shadow-md transition-colors group-hover:bg-flocken-cream">
+          {/* Social proof — andra positionen fångar engagerade användare */}
+          {isReviewPosition && (
+            <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-flocken-olive">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="size-3.5"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.78L10 14.77l-5.2 2.73.99-5.78L1.58 7.62l5.82-.85L10 1.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              2 000+ hundägare använder Flocken-appen
+            </p>
+          )}
+
+          {/* CTA-knapp — olive på cream ger stark kontrast mot klickbarheten */}
+          <div className="mt-5 w-full md:w-auto">
+            <span className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-flocken-olive px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-colors group-hover:bg-flocken-accent md:w-auto md:text-base">
               {ctaLabel}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
-                className="size-3.5"
+                className="size-4"
                 aria-hidden="true"
               >
                 <path
@@ -236,10 +284,12 @@ export function AppCtaModule({ quizSlug }: AppCtaModuleProps) {
             </span>
           </div>
 
-          {/* Subtext */}
-          <p className="mt-3 text-xs font-medium text-white/50">
-            Gratis i App Store &amp; Google Play
-          </p>
+          {/* Subtext — visas bara på desktop (mobilknappen säger redan App Store/Google Play) */}
+          {platform === 'desktop' && (
+            <p className="mt-2.5 text-xs font-medium text-flocken-gray">
+              Gratis — iOS och Android
+            </p>
+          )}
         </div>
 
       </div>
