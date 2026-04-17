@@ -219,9 +219,9 @@
   `;
 
   // Slim cookie-bar för /v/*-landningssidor.
-  // Två val: "Bara nödvändiga" (ID matchar existerande declineAllCookies-listener)
-  // och "Tillåt alla" (ID matchar acceptAllCookies-listener). För finjustering
-  // hänvisar vi till /cookiepolicy där window.showCookieSettings() öppnar modalen.
+  // Samma UX som full banner (text + 3 bockrutor + 2 knappar) men kompakt
+  // bottenbar istället för helskärmsmodal. ID:n matchar existerande event
+  // listeners i setupEventListeners() — ingen ny listener-kod krävs.
   const slimBarHTML = `
     <div id="custom-cookie-banner" style="
       position: fixed;
@@ -236,26 +236,51 @@
       display: none;
     ">
       <div style="
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
         display: flex;
-        gap: 12px;
+        gap: 16px;
         align-items: center;
         flex-wrap: wrap;
       ">
-        <p style="
-          flex: 1;
-          min-width: 200px;
+        <!-- Rubrik -->
+        <h2 style="
           margin: 0;
           color: #3E3B32;
-          font-size: 13px;
-          line-height: 1.4;
+          font-size: 15px;
+          font-weight: 700;
+          flex-shrink: 0;
         ">
-          Vi använder cookies för reklammätning och analys.
-          <a href="/cookiepolicy" style="color: #6B7A3A; text-decoration: underline; font-weight: 600;">Läs mer</a>
-        </p>
+          Webbplatsen använder cookies
+          <a href="/cookiepolicy" style="color: #6B7A3A; text-decoration: underline; font-weight: 600; font-size: 13px; margin-left: 6px;">Läs mer</a>
+        </h2>
+
+        <!-- Bockrutor -->
+        <div id="cookie-toggle-grid" style="
+          display: flex;
+          gap: 14px;
+          flex-wrap: wrap;
+          align-items: center;
+          flex: 1;
+          min-width: 200px;
+        ">
+          <label style="display: flex; align-items: center; gap: 6px; color: #3E3B32; font-size: 13px; font-weight: 600; cursor: not-allowed; opacity: 0.7;">
+            <input type="checkbox" id="necessary-toggle" checked disabled style="width: 16px; height: 16px; accent-color: #6B7A3A; cursor: not-allowed;">
+            Nödvändiga
+          </label>
+          <label style="display: flex; align-items: center; gap: 6px; color: #3E3B32; font-size: 13px; font-weight: 600; cursor: pointer;">
+            <input type="checkbox" id="analytics-toggle" checked style="width: 16px; height: 16px; accent-color: #6B7A3A; cursor: pointer;">
+            Analys
+          </label>
+          <label style="display: flex; align-items: center; gap: 6px; color: #3E3B32; font-size: 13px; font-weight: 600; cursor: pointer;">
+            <input type="checkbox" id="marketing-toggle" checked style="width: 16px; height: 16px; accent-color: #6B7A3A; cursor: pointer;">
+            Marknadsföring
+          </label>
+        </div>
+
+        <!-- Knappar -->
         <div style="display: flex; gap: 8px; flex-shrink: 0;">
-          <button id="cookie-decline-all" style="
+          <button id="cookie-accept-selected" style="
             background: transparent;
             color: #6B7A3A;
             border: 2px solid #6B7A3A;
@@ -266,7 +291,7 @@
             font-size: 14px;
             min-height: 44px;
             transition: all 0.3s ease;
-          ">Bara nödvändiga</button>
+          ">Spara val</button>
           <button id="cookie-accept-all" style="
             background: #6B7A3A;
             color: #F5F1E8;
