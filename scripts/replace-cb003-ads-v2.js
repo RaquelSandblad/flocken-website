@@ -2,9 +2,9 @@
  * CB003 REPLACE ADS v2 — efter kreativ-producent v02-leverans
  *
  * Körs när kreativ-producent levererat:
- *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_a_v02_4x5.jpg
- *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_b_v02_4x5.jpg
- *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_c_v02_4x5.jpg
+ *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_a_v03_4x5.jpg
+ *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_b_v03_4x5.jpg
+ *   - flocken_ads/creative_bases/cb003/assets/final/flocken_ad_cb003_c_v03_4x5.jpg
  *   - Copy per vinkel (primary/headline/description för static + video)
  *
  * PL fyller i VINKLAR-objektet nedan med slutgiltig v02-copy innan körning.
@@ -61,13 +61,18 @@ const ASSETS_DIR = path.join(__dirname, '..', 'flocken_ads', 'creative_bases', '
 // Varje vinkel har static (4:5) + video (9:16). Ad-namn följer v02-konvention.
 // ────────────────────────────────────────────────────────────────────────────
 
-// Väg D: alla 3 vinklar delar samma bild (flocken_ad_cb003_shared_v02_4x5.jpg
+// Väg D: alla 3 vinklar delar samma bild (flocken_ad_cb003_shared_v03_4x5.jpg
 // — återställd från git commit 3385025). Vinklar skiljs åt via copy, inte via
 // bild. Copy skriven av PL 2026-04-17 baserat på VoC + meta_ads_copy_layer +
 // principles_and_triggers (inte AI-chansad, alla QA hard gates kontrollerade
 // manuellt innan kod-commit).
 const SHARED_IMAGE_FILE = 'flocken_ad_cb003_shared_v02_4x5.jpg';
 
+// Copy v03 — efter Torbjörns feedback 2026-04-17 kväll:
+// - Ta bort "recensioner" (har vi inte)
+// - Använd "Flocken-appen" (varumärke + app-tydlighet)
+// - Radbryt mellan meningar där det blir snyggare på mobil (\n\n)
+// - Lägg mellanled i B så scen hänger ihop (scen + trygghet + lösning)
 const VINKLAR = [
   {
     code: 'a',
@@ -76,14 +81,14 @@ const VINKLAR = [
     utmCampaign: 'cb003_trygghet',
     imageFile: SHARED_IMAGE_FILE,
     static: {
-      primaryText: 'Lämna din hund hos någon du litar på. Se hundvakter nära dig i Flocken — profiler, bilder, recensioner innan du bokar.',
+      primaryText: 'Lämna din hund hos någon du litar på.\n\nSe hundvakter nära dig i Flocken-appen — profil och bild innan du bokar.',
       headline:    'Hundvakt du kan lita på',
       description: 'Välj själv, träffas först',
     },
     video: {
-      primaryText: 'Lita på den som passar din hund. I Flocken ser du hundvakter nära dig — profil, bild och recensioner.',
-      headline:    'Se vem som passar hunden',
-      description: 'Gratis. Profiler nära dig.',
+      primaryText: 'Lita på den som passar din hund.\n\nI Flocken-appen ser du hundvakter nära dig — profil och bild.',
+      headline:    'Lär känna din hundvakt',
+      description: 'Gratis app, hundvakter nära',
     },
   },
   {
@@ -93,12 +98,12 @@ const VINKLAR = [
     utmCampaign: 'cb003_skuld',
     imageFile: SHARED_IMAGE_FILE,
     static: {
-      primaryText: 'Hon tittar på dig när du packar väskan. I Flocken ser du hundvakter i närheten — profil, bild innan du bokar.',
+      primaryText: 'Hon tittar på dig när du packar väskan.\n\nMen hon blir väl omhändertagen — i Flocken-appen ser du hundvakter nära dig.',
       headline:    'Res utan dåligt samvete',
-      description: 'Träffas först, bestäm sen',
+      description: 'Rätt hundvakt, boka sen',
     },
     video: {
-      primaryText: 'Klockan är halv sju. Du packar väskan, hunden ligger i hallen. I Flocken hittar du någon hon får träffa först.',
+      primaryText: 'Klockan är halv sju, du packar väskan.\n\nHunden känner att något är på gång — men blir omhändertagen med Flocken-appen.',
       headline:    'Hundvakt hon får gilla',
       description: '2 000+ hundägare i appen',
     },
@@ -110,16 +115,23 @@ const VINKLAR = [
     utmCampaign: 'cb003_natverk',
     imageFile: SHARED_IMAGE_FILE,
     static: {
-      primaryText: 'Facebook-grupper är inte byggda för hundpassning. Flocken är. Se hundvakter nära dig innan du bokar.',
+      primaryText: 'Facebook-grupper är inte byggda för hundpassning.\n\nFlocken-appen är. Se hundvakter nära dig innan du bokar.',
       headline:    'Sluta fråga i FB-grupper',
       description: 'Profiler nära dig. Gratis.',
     },
     video: {
-      primaryText: 'Mamma orkar inte passa hunden längre. Grannen har flyttat. I Flocken hittar du hundvakter nära dig.',
+      primaryText: 'Mamma orkar inte passa hunden längre. Grannen har flyttat.\n\nFlocken-appen hittar hundvakter nära dig.',
       headline:    'Bättre än FB-grupper',
-      description: 'Profiler nära dig, gratis.',
+      description: 'Ladda ner Flocken-appen',
     },
   },
+];
+
+// ID:n för v02-ads som raderas innan v03 skapas
+const OLD_V02_AD_IDS = [
+  '120243908798540455', '120243908801240455', // trygghet static+video
+  '120243908802590455', '120243908804260455', // skuld static+video
+  '120243908805580455', '120243908806850455', // natverk static+video
 ];
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -258,13 +270,13 @@ async function getVideoThumbnail(videoId) {
 // ────────────────────────────────────────────────────────────────────────────
 
 async function createStaticAd(vinkel, imageHash) {
-  const adName = `ad_cid003_${vinkel.code}_v02_4x5_static`;
+  const adName = `ad_cid003_${vinkel.code}_v03_4x5_static`;
   console.log(`\n📢 ${adName}`);
   const utm = new URLSearchParams({
     utm_source: 'meta',
     utm_medium: 'paid_social',
     utm_campaign: vinkel.utmCampaign,
-    utm_content: `${vinkel.code}_v02_4x5`,
+    utm_content: `${vinkel.code}_v03_4x5`,
   });
   const finalUrl = `${LANDING_PAGE}?${utm.toString()}`;
 
@@ -298,13 +310,13 @@ async function createStaticAd(vinkel, imageHash) {
 }
 
 async function createVideoAd(vinkel, thumbnailUrl) {
-  const adName = `ad_cid003_${vinkel.code}_v02_9x16_video`;
+  const adName = `ad_cid003_${vinkel.code}_v03_9x16_video`;
   console.log(`\n🎬 ${adName}`);
   const utm = new URLSearchParams({
     utm_source: 'meta',
     utm_medium: 'paid_social',
     utm_campaign: vinkel.utmCampaign,
-    utm_content: `${vinkel.code}_v02_9x16`,
+    utm_content: `${vinkel.code}_v03_9x16`,
   });
   const finalUrl = `${LANDING_PAGE}?${utm.toString()}`;
 
@@ -347,6 +359,17 @@ async function main() {
   console.log('═'.repeat(72));
 
   preflight();
+
+  // Steg 0: Radera v02-ads innan v03 skapas
+  console.log('\n🗑️  Raderar 6 v02-ads...');
+  for (const id of OLD_V02_AD_IDS) {
+    try {
+      const r = await makeRequest(`/${id}`, 'DELETE');
+      console.log(`   ${r.success ? '✅' : '⚠️'} ${id}`);
+    } catch (e) {
+      console.log(`   ⚠️ ${id}: ${e.message}`);
+    }
+  }
 
   // Upload shared bild EN gång, återanvänd hash för alla vinklar (Väg D)
   console.log(`\n📤 Laddar upp shared v02-bild (${SHARED_IMAGE_FILE})...`);
