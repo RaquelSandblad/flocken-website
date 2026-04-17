@@ -72,7 +72,7 @@
       "type": "fact",
       "question": "Din hund har återkommande hudproblem och du misstänker matrelaterad allergi. Vad är det rätta sättet att ta reda på vad hunden reagerar på?",
       "options": [
-        "Blodprov för att mäta antikroppar mot vanliga proteinallergeener",
+        "Blodprov för att mäta antikroppar mot vanliga proteinallergener",
         "Eliminationsdiet med ett nytt protein i 8–12 veckor, följt av återinsättning av det misstänkta proteinet",
         "Hudtest där vanliga allergener injiceras under huden",
         "Byta till spannmålsfritt foder och utvärdera efter 2–3 veckor"
@@ -130,7 +130,7 @@
     {
       "id": "hundmat-9",
       "type": "fact",
-      "question": "Nästan all torrfoder innehåller en hel del kolhydrater. Vad stämmer egentligen om kolhydraternas roll?",
+      "question": "Nästan allt torrfoder innehåller en hel del kolhydrater. Vad stämmer egentligen om kolhydraternas roll?",
       "options": [
         "Kolhydrater är ett essentiellt näringsämne – hundar måste ha det i sin kost",
         "Kolhydrater är inte essentiella för hundar, men fungerar som energi- och fiberkälla i foder",

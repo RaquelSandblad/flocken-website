@@ -2,7 +2,7 @@
   "slug": "valpar_socialisering",
   "hidden": true,
   "title": "Hur bra är dina valp-kunskaper?",
-  "description": "De flesta vet att valpar ska socialiseras tidigt. Men vet du varför fönstret faktiskt stänger, och vad som händer om man missar det? Svaren är mer konkreta än man tror.",
+  "description": "De flesta vet att valpar ska socialiseras tidigt. Men vet du varför fönstret faktiskt stänger, och vad som händer om du missar det? Svaren är mer konkreta än man tror.",
   "images": {
     "cardKey": "flocken_quiz_valpar_socialisering_card",
     "cardAlt": "Valpar som leker och nosas med varandra."
@@ -146,7 +146,7 @@
     {
       "id": "valpar-10",
       "type": "fact",
-      "question": "En ny hundägare hämtar sin valp vid 8 veckor. En vecka senare verkar valpen plötsligt rädd för saker den nyss tyckte var ok. Vad är det troligast?",
+      "question": "En ny hundägare hämtar sin valp vid 8 veckor. En vecka senare verkar valpen plötsligt rädd för saker valpen nyss tyckte var ok. Vad är det troligast?",
       "options": [
         "Valpen är sjuk och behöver till veterinären",
         "Byte av miljö har orsakat en permanent tillbakagång i socialisering",

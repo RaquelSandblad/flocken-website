@@ -1,7 +1,7 @@
 {
   "slug": "hundens_historia",
   "title": "Hur bra kan du hundens historia?",
-  "description": "Hunden har funnits vid vår sida i minst 15 000 år – men vet du var, hur och varför? Viss forskning ger helt andra svar än man tror.",
+  "description": "Hunden har funnits vid vår sida i minst 15 000 år – men vet du var, hur och varför? Viss forskning ger helt andra svar än du tror.",
   "images": {
     "cardKey": "flocken_quiz_hundens_historia_card",
     "cardAlt": "Illustration av varg till hund i varm, naturlig stil."
@@ -55,7 +55,7 @@
     {
       "id": "historia-4",
       "type": "fact",
-      "question": "Forskare har studerat hundkranier från 50 000 år tillbaka – vad visade det om tidiga hundar?",
+      "question": "Forskare har studerat kranier från hund och varg, upp till 50 000 år gamla – vad visade det om tidiga hundar?",
       "options": [
         "Att alla hundar var nästan identiska i form tills 1800-talets rasavel",
         "Att tydlig hundform och stor variation redan fanns för ca 11 000 år sedan",
@@ -138,7 +138,7 @@
         "Under antiken, med fokus på strids- och jakthundar"
       ],
       "correctIndex": 0,
-      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. Royal Kennel Club, som bildades 1873, räknas som världens första nationella kennelklubb och publicerade sitt första Stud Book 1874 med resultat ända från 1859.",
+      "explanation": "1800-talet var decennierna då hundutställningar formerades, stamböcker inrättades och kennelklubbar grundades. The Kennel Club, som bildades 1873, räknas som världens första nationella kennelklubb och publicerade sitt första Stud Book 1874 med resultat ända från 1859.",
       "sources": ["HISTORIA_019", "HISTORIA_020", "HISTORIA_015"],
       "factId": "historia_1800_rasavel"
     },

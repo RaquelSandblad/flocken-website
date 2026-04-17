@@ -80,7 +80,7 @@
       ],
       "correctIndex": 2,
       "explanation": "I engelska utgåvor heter han Dogmatix. Det franska originalnamnet Idéfix är hämtat från 'idée fixe' – en tanke man inte kan släppa – vilket perfekt beskriver hundens besatthet vid trädfällningar. Den ordvitsen försvinner helt i den engelska översättningen. På svenska behöll man Idéfix.",
-      "sources": ["Goscinny & Uderzo – Asterix-serien", "Hanna-Barbera production history"],
+      "sources": ["Goscinny & Uderzo – Asterix-serien", "Asterix internationell översättningshistorik"],
       "factId": "kanda_idefix_namn"
     },
     {
@@ -146,7 +146,7 @@
     {
       "id": "kanda-10",
       "type": "fact",
-      "question": "Den officiella versionen hävdade länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes på 1990-talet?",
+      "question": "Den officiella versionen hävdade länge att Laika överlevde flera dagar i rymden. Vad visade dokument som frigjordes efter Sovjetunionens fall?",
       "options": [
         "Laika dog av överhettning inom några timmar efter uppskjutningen",
         "Laika sövdes ner efter tre dagar som planerat men kapseln nådde aldrig jorden",
@@ -154,7 +154,7 @@
         "Laika dog av rädsla och chock under uppskjutningen, innan kapseln nått omloppsbana"
       ],
       "correctIndex": 0,
-      "explanation": "Ryska dokument som frigjordes på 1990-talet visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
+      "explanation": "Ryska dokument som frigjordes efter Sovjetunionens fall visade att temperaturregleringen i kapseln havererade och att Laika dog av överhettning inom några timmar. Den officiella versionen om att hon levt i sex dagar var en lögn av propagandaskäl.",
       "sources": ["Malashenkov, D. – 2002 World Space Congress", "Declassified Soviet space documents"],
       "factId": "kanda_laika_sanning"
     }
