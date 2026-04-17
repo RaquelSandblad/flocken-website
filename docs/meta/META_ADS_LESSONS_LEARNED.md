@@ -1,8 +1,100 @@
 # Meta Ads - Lessons Learned
 
-**Projekt:** Flocken Meta Ads Setup  
-**Datum:** 2026-01-19 till 2026-01-20  
-**Status:** ✅ Kampanj live
+**Projekt:** Flocken Meta Ads Setup
+**Datum:** 2026-01-19 till 2026-04-17 (löpande)
+**Status:** ✅ CID001 + CID002 live; CID003 skapad PAUSED 2026-04-17
+
+## CID003 Launch (2026-04-17) — API v24.0-gotchas
+
+Se fullständig launch-dokumentation i
+`flocken_ads/creative_bases/cb003/launch_result.md`.
+
+Under launchen av CB003 stötte vi på 4 API-fel innan kampanjen skapades
+framgångsrikt. Dokumenterade här så nästa launch blir smidigare:
+
+### 1. `is_adset_budget_sharing_enabled` obligatoriskt vid ABO
+
+**Fel:** `Invalid parameter. Du måste specificera Sant eller Falskt i fältet
+is_adset_budget_sharing_enabled om du inte använder kampanjbudget.`
+
+**Orsak:** Meta v24.0 kräver explicit fält när campaign saknar `daily_budget`
+(vi kör budget på ad set-nivå = ABO).
+
+**Lösning:** `is_adset_budget_sharing_enabled: false` på campaign-create.
+
+### 2. `reels` är inte giltigt för `facebook_positions`
+
+**Fel:** `Ogiltigt värde reels för placeringsfältet facebook_positions.`
+
+**Orsak:** Facebook Reels har eget enum-namn, Instagram Reels heter bara `reels`.
+
+**Lösning:**
+```js
+facebook_positions: ['feed', 'story', 'facebook_reels']   // Facebook
+instagram_positions: ['stream', 'story', 'reels', 'explore']  // Instagram
+```
+
+### 3. `age_max < 65` blockeras vid Advantage+ Audience
+
+**Fel:** `Det går inte att ställa in målgruppskontrollen högsta ålder till
+lägre än 65 för annonsuppsättningar som använder Advantage+-målgrupper.`
+
+**Orsak:** Meta 2026-regel — Advantage+ Audience är algoritmisk och tar
+`age_max` som suggestion, inte constraint. Om du vill låsa hårdare: stäng
+av Advantage+ Audience.
+
+**Lösning:** Höj `age_max` till 65 (eller skip Advantage+ Audience för ny
+målgrupp i låg-budget-test).
+
+### 4. `creative_features_spec` enum-värden ändrade
+
+**Fel:** `Param key 'image_template' in degrees_of_freedom_spec[creative_features_spec]
+must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_METADATA_AUTOMATION,
+PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION}`
+
+**Orsak:** Meta har ändrat enum-namn flera gånger 2025-2026. Äldre rapporter
+(inklusive Gemini deep research april 2026) är redan föråldrade.
+
+**Tillåtna värden v24.0 (2026-04-17):**
+- `IG_VIDEO_NATIVE_SUBTITLE`
+- `IMAGE_ANIMATION`
+- `PRODUCT_METADATA_AUTOMATION`
+- `PROFILE_CARD`
+- `STANDARD_ENHANCEMENTS_CATALOG`
+- `TEXT_OVERLAY_TRANSLATION`
+
+**Lösning för v01:** Utelämna `degrees_of_freedom_spec` helt. Aktivera
+Advantage+ Creative manuellt i Ads Manager per ad (30 sek/ad), eller vänta
+med API-aktivering till v02 när vi vet rätt syntax.
+
+### 5. `promoted_object` behövs INTE för LANDING_PAGE_VIEWS
+
+**Fel:** `promoted_object[custom_event_type] must be one of ...OTHER` (LANDING_PAGE_VIEW
+fanns inte i enum-listan)
+
+**Orsak:** `LANDING_PAGE_VIEWS` som `optimization_goal` använder Metas
+built-in LPV-mätning och behöver inte pixel-event specificeras via
+`promoted_object`. Fältet är bara för OUTCOME_SALES med custom conversion.
+
+**Lösning:** Ta bort `promoted_object` helt från ad set-data när
+`optimization_goal = LANDING_PAGE_VIEWS`.
+
+### 6. Listnings-query defaultar till ACTIVE only
+
+**Inte ett fel — en gotcha:** `GET /campaigns/{id}/adsets` returnerar bara
+ACTIVE ad sets default. PAUSED ad sets (vanligt vid launch) syns inte om
+du inte sätter `effective_status` filter explicit.
+
+**Lösning:**
+```js
+GET /campaigns/{id}/adsets?effective_status=["ACTIVE","PAUSED","ARCHIVED"]
+```
+
+Alternativt: hämta ad set direkt via dess ID (ingen status-filter krävs).
+
+---
+
+
 
 ---
 
@@ -298,5 +390,33 @@ Med denna dokumentation bör samma setup ta **2 timmar** istället för 8:
 
 ---
 
+---
+
+## API-uppgradering: v21.0 till v24.0 (2026-04-14)
+
+**Varfor:** v21.0 ar deprecated av Meta. Uppgradering till v24.0 for att sakerstalla fortsatt funktion och tillgang till senaste features.
+
+**Vad som andrades:**
+- 37 scripts i `scripts/` -- alla `graph.facebook.com/v21.0` andrade till `v24.0`
+- 1 API-route: `app/api/meta/capi/route.ts` -- `GRAPH_API_VERSION` andrad till `v24.0`
+- 2 Dynamic Creative-scripts: `create-dynamic-creative-ads.js` och `recreate-with-dynamic-creative.js`
+- 3 dokumentationsfiler uppdaterade
+
+**Dynamic Creative (DCO) -- testkrav:**
+DCO via API kraschade i januari (se Problem 7 ovan). Med v24.0 bor `asset_feed_spec` testas pa nytt. Meta kan ha fixat kompatibiliteten. Testplan:
+1. Kor `create-dynamic-creative-ads.js` mot ett test-ad set (PAUSED)
+2. Om `asset_feed_spec` fortfarande ger "Ett ovantat fel har intraffat" -- behall strategin med separata ads
+3. Om det fungerar -- dokumentera och overvag att byta till DCO for framtida kampanjer
+
+**Risker vid uppgradering:**
+- Vissa deprecated fields kan tas bort mellan versioner -- om ett script kraschar, kontrollera Meta API changelog
+- `bid_strategy: 'LOWEST_COST_WITHOUT_CAP'` -- verifiera att detta fortfarande stods (det ar standard, bor fungera)
+- Video-upload endpoint (`graph-video.facebook.com`) -- samma versionering, bor fungera
+
+**Verifiering:** Kor `npm run build` for att sakerstalla att TypeScript-koden kompilerar. Scripts ar rena Node.js och kraver manuell testning mot Meta API.
+
+---
+
 **Dokumenterat av:** AI Assistant  
-**Verifierat:** Kampanj live 2026-01-20
+**Verifierat:** Kampanj live 2026-01-20  
+**Senast uppdaterad:** 2026-04-14 (API v21.0 -> v24.0)
