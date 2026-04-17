@@ -1,6 +1,14 @@
 (function() {
   'use strict';
 
+  // /v/*-sidor får en slim cookie-bar i botten istället för helskärmsmodal.
+  // Bakgrund: helskärmsmodal blockerar landningssidor och dödar LPV-mätning
+  // (uppskattat 70-90 % av Meta Ads-trafik klickar inte cookie-banner och
+  // får därför aldrig PageView fyrad). Slim-bar låter användaren se sidan
+  // direkt och välja consent när de är redo.
+  const isLandingPage = typeof window !== 'undefined' && typeof window.location !== 'undefined'
+    && window.location.pathname.indexOf('/v/') === 0;
+
   // Cookie banner HTML - Compact bottom sheet design
   // Anpassad för Flocken med Flockens färgschema
   const bannerHTML = `
@@ -156,6 +164,152 @@
       ">
         <h2 style="margin: 0 0 16px 0; color: #3E3B32;">Ändra cookie-inställningar</h2>
         
+        <div style="margin-bottom: 16px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
+          <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">
+            <div>
+              <strong>Nödvändiga cookies</strong>
+              <div style="font-size: 13px; color: #666; margin-top: 4px;">Krävs för webbplatsens grundfunktioner.</div>
+            </div>
+            <input type="checkbox" id="modal-necessary" checked disabled style="transform: scale(1.3);">
+          </label>
+        </div>
+
+        <div style="margin-bottom: 16px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
+          <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">
+            <div>
+              <strong>Analys cookies</strong>
+              <div style="font-size: 13px; color: #666; margin-top: 4px;">Google Analytics för användningsstatistik.</div>
+            </div>
+            <input type="checkbox" id="modal-analytics" style="transform: scale(1.3);">
+          </label>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
+          <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">
+            <div>
+              <strong>Marknadsföring cookies</strong>
+              <div style="font-size: 13px; color: #666; margin-top: 4px;">För riktad marknadsföring och annonser.</div>
+            </div>
+            <input type="checkbox" id="modal-marketing" style="transform: scale(1.3);">
+          </label>
+        </div>
+
+        <div style="display: flex; gap: 12px; justify-content: flex-end;">
+          <button id="modal-close" style="
+            background: transparent;
+            color: #3E3B32;
+            border: 2px solid #3E3B32;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+          ">Stäng</button>
+          <button id="modal-save-settings" style="
+            background: #6B7A3A;
+            color: #F5F1E8;
+            border: 2px solid #6B7A3A;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+          ">Spara inställningar</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Slim cookie-bar för /v/*-landningssidor.
+  // Två val: "Bara nödvändiga" (ID matchar existerande declineAllCookies-listener)
+  // och "Tillåt alla" (ID matchar acceptAllCookies-listener). För finjustering
+  // hänvisar vi till /cookiepolicy där window.showCookieSettings() öppnar modalen.
+  const slimBarHTML = `
+    <div id="custom-cookie-banner" style="
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #F5F1E8;
+      border-top: 3px solid #6B7A3A;
+      box-shadow: 0 -4px 12px rgba(62, 59, 50, 0.15);
+      padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+      z-index: 9999;
+      display: none;
+    ">
+      <div style="
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      ">
+        <p style="
+          flex: 1;
+          min-width: 200px;
+          margin: 0;
+          color: #3E3B32;
+          font-size: 13px;
+          line-height: 1.4;
+        ">
+          Vi använder cookies för reklammätning och analys.
+          <a href="/cookiepolicy" style="color: #6B7A3A; text-decoration: underline; font-weight: 600;">Läs mer</a>
+        </p>
+        <div style="display: flex; gap: 8px; flex-shrink: 0;">
+          <button id="cookie-decline-all" style="
+            background: transparent;
+            color: #6B7A3A;
+            border: 2px solid #6B7A3A;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+            min-height: 44px;
+            transition: all 0.3s ease;
+          ">Bara nödvändiga</button>
+          <button id="cookie-accept-all" style="
+            background: #6B7A3A;
+            color: #F5F1E8;
+            border: 2px solid #6B7A3A;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+            min-height: 44px;
+            transition: all 0.3s ease;
+          ">Tillåt alla</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal-koden återanvänds från full banner (för /cookiepolicy-sidan) -->
+    <div id="cookie-settings-modal" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(62, 59, 50, 0.85);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    ">
+      <div style="
+        background: #F5F1E8;
+        border: 3px solid #6B7A3A;
+        border-radius: 12px;
+        padding: 24px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 30px rgba(62, 59, 50, 0.5);
+      ">
+        <h2 style="margin: 0 0 16px 0; color: #3E3B32;">Ändra cookie-inställningar</h2>
+
         <div style="margin-bottom: 16px; padding: 12px; background: #FFFFFF; border-radius: 6px;">
           <label style="display: flex; align-items: center; justify-content: space-between; color: #3E3B32; margin-bottom: 8px;">
             <div>
@@ -573,7 +727,8 @@
   }
 
   function addBannerToPage() {
-    document.body.insertAdjacentHTML('beforeend', bannerHTML);
+    var html = isLandingPage ? slimBarHTML : bannerHTML;
+    document.body.insertAdjacentHTML('beforeend', html);
   }
 
   function addToggleStyles() {
@@ -734,12 +889,14 @@
     const banner = document.getElementById('custom-cookie-banner');
     if (banner) {
       banner.style.display = 'block';
-      // Disable page scrolling using html data attribute (no hydration issues)
-      if (typeof document !== 'undefined') {
+      // För full banner: blockera scroll (modalt beteende).
+      // För slim-bar på /v/*: INGEN scroll-blockering — användaren ska kunna
+      // läsa landningssidan direkt och välja consent när de är redo.
+      if (typeof document !== 'undefined' && !isLandingPage) {
         document.documentElement.setAttribute('data-modal-open', '');
       }
     }
-    console.log('Cookie banner: No consent found, showing bottom sheet banner');
+    console.log('Cookie banner: No consent found, showing ' + (isLandingPage ? 'slim-bar' : 'bottom sheet banner'));
   }
 
   function setupEventListeners() {
