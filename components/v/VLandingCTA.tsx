@@ -28,6 +28,17 @@ const DOWNLOAD_URL = '/download';
 type Platform = 'ios' | 'android' | 'desktop';
 type Position = 'header' | 'hero' | 'hero-inverse' | 'bottom' | 'closing' | 'recruit';
 
+/**
+ * Mappar CTA-position till click_location-parameter för GA4-segmentering.
+ * Används för att separera ytor i cta_click-eventet (t.ex. per kampanj/yta-analys).
+ */
+function getClickLocation(position: Position): string {
+  if (position === 'hero-inverse' || position === 'hero') return 'landing_hero';
+  if (position === 'closing') return 'result_screen';
+  // header, bottom, recruit: position-värdet räcker som identifierare
+  return position;
+}
+
 function detectPlatform(): Platform {
   if (typeof navigator === 'undefined') return 'desktop';
   const ua = navigator.userAgent.toLowerCase();
@@ -101,12 +112,14 @@ export function VLandingCTA({
         cta_platform: platform,
         source: 'hookspecifik_landing',
         cta_position: position,
+        click_location: getClickLocation(position),
       });
 
       if (process.env.NODE_ENV === 'development') {
         console.log('[VLanding CTA] Click tracked:', {
           platform,
           position,
+          click_location: getClickLocation(position),
           variant,
           meta_event: platform !== 'desktop' ? 'Lead (standard)' : 'cta_click only',
         });

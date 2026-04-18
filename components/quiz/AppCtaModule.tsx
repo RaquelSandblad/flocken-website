@@ -177,6 +177,7 @@ export function AppCtaModule({ quizSlug, position = 'after_badge' }: AppCtaModul
       cta_position: position,
       quiz_slug: quizSlug,
       source: 'quiz_result',
+      click_location: 'quiz_end_card',
     };
 
     // GA4 direct (quiz-specifik namngivning)
