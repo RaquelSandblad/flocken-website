@@ -43,7 +43,7 @@ const AD_ACCOUNT_ID = envVars.META_AD_ACCOUNT_ID || 'act_1648246706340725';
 const PAGE_ID = '936579286197312';
 const INSTAGRAM_USER_ID = '17841479914513348'; // flocken_app Business Account — verifierat via find-instagram-id.js (Ads Manager screenshot visade annat ID som visade sig vara fel)
 const LANDING_PAGE = 'https://flocken.info/v/passa';
-const DISPLAY_LINK = 'flocken.info/v/passa';
+const DISPLAY_LINK = 'flocken.info';
 
 const AD_SETS = {
   trygghet: '120243902362250455',
