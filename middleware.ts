@@ -20,11 +20,20 @@ export function middleware(request: NextRequest) {
 
   const host = request.headers.get('host')?.toLowerCase() ?? '';
   const isQuizHost = host.startsWith('quiz.flocken.info') || host.startsWith('quiz.localhost');
+  const isFlockenRootHost = host === 'flocken.info' || host === 'www.flocken.info';
 
   if (isQuizHost && !pathname.startsWith('/quiz')) {
     const rewriteUrl = request.nextUrl.clone();
     rewriteUrl.pathname = `/quiz${pathname === '/' ? '' : pathname}`;
     return NextResponse.rewrite(rewriteUrl);
+  }
+
+  // Redirect /quiz/* on flocken.info (apex) to quiz.flocken.info to enforce single canonical host
+  if (isFlockenRootHost && pathname.startsWith('/quiz')) {
+    const redirectUrl = new URL(request.url);
+    redirectUrl.hostname = 'quiz.flocken.info';
+    redirectUrl.pathname = pathname === '/quiz' ? '/' : pathname.replace(/^\/quiz/, '');
+    return NextResponse.redirect(redirectUrl, 301);
   }
 
   // Handle A/B test assignments
