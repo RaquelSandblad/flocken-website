@@ -27,6 +27,7 @@ export default async function QuizLibraryPage() {
   const allQuizzes = await getAllQuizzes();
   const QUIZ_ORDER = [
     'hundens_historia',
+    'hundrekord',
     'valpar_socialisering',
     'hundens_kroppssprak',
     'hundmat_naring',
