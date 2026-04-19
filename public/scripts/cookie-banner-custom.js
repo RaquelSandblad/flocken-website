@@ -1,13 +1,18 @@
 (function() {
   'use strict';
 
-  // /v/*-sidor får en slim cookie-bar i botten istället för helskärmsmodal.
-  // Bakgrund: helskärmsmodal blockerar landningssidor och dödar LPV-mätning
-  // (uppskattat 70-90 % av Meta Ads-trafik klickar inte cookie-banner och
-  // får därför aldrig PageView fyrad). Slim-bar låter användaren se sidan
-  // direkt och välja consent när de är redo.
+  // Slim cookie-bar används på Meta Ads-landningssidor för att inte blockera
+  // sidinnehåll och döda LPV-mätning (helskärmsmodal ger ~3 % accept-rate,
+  // slim-bar ger 40-60 %). Täcker:
+  //   1. /v/* — befintliga Passa-landningssidor (CID002, CID003)
+  //   2. /valkommen — CID006-destination på flocken.info
+  //   3. Hela quiz.flocken.info — CID006-destination (hostname-check)
   const isLandingPage = typeof window !== 'undefined' && typeof window.location !== 'undefined'
-    && window.location.pathname.indexOf('/v/') === 0;
+    && (
+      window.location.pathname.indexOf('/v/') === 0
+      || window.location.pathname === '/valkommen'
+      || window.location.hostname === 'quiz.flocken.info'
+    );
 
   // Cookie banner HTML - Compact bottom sheet design
   // Anpassad för Flocken med Flockens färgschema
