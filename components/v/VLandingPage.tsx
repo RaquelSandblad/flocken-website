@@ -285,7 +285,8 @@ export function VLandingPage({ config }: VLandingPageProps) {
             src={config.heroImageSrc}
             alt={config.heroImageAlt}
             fill
-            className="object-cover object-center"
+            className="object-cover"
+            style={{ objectPosition: config.heroObjectPosition ?? 'center 30%' }}
             sizes="100vw"
             priority
           />

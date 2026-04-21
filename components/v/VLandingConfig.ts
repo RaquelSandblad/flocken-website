@@ -52,6 +52,12 @@ export interface VLandingConfig {
   /** Bakgrundsbild till hero — fullbredd med gradient-overlay */
   heroImageSrc: string;
   heroImageAlt: string;
+  /**
+   * Valfri object-position för hero-bilden.
+   * Default: 'center 30%' (passar bilder där huvudmotivet är i övre tredjedelen, t.ex. /v/passa).
+   * För bilder med motiv i nedre halvan (t.ex. /v/hundar trehundar-bilden): 'center 65%'.
+   */
+  heroObjectPosition?: string;
   /** Valfri pill-text ovanför hero-rubriken */
   heroPillText?: string;
   /** Social proof-citat direkt under hero-CTA */
@@ -227,6 +233,8 @@ export const HUNDAR_CONFIG: VLandingConfig = {
   heroImageSrc: '/assets/flocken/v-hundar/hero-clay-trehundar-21x9.jpg',
   heroImageAlt:
     'Clay-illustration av tre hundar (pudel, cocker spaniel och maltese) som står tillsammans på en gräsplätt med staket och förortshus i bakgrunden',
+  /** Hundarna står i nedre halvan av bilden — skifta fokus nedåt så de inte klipps på mobil */
+  heroObjectPosition: 'center 65%',
   heroPillText: undefined,
   heroSocialProof:
     '2 000+ hundägare i Sverige använder Flocken-appen. Finns på App Store och Google Play.',
@@ -281,20 +289,23 @@ export const HUNDAR_CONFIG: VLandingConfig = {
   socialProofLabel: 'Så pratar hundägare om hundlivet',
   socialProofQuotes: [
     {
+      // VoC #4 (Hundägare i forum/annons, GPT v2 §1) — lekkompis-längtan
       quote:
-        'Flocken är navet i mitt hundliv numera. Mycket smidigare än grupper i sociala medier.',
+        'Jag hoppas att jag kan hitta en lämplig lekkompis till min lilla kompis. Han älskar att leka också.',
       name: 'Hundägare',
       city: 'Sverige',
     },
     {
+      // VoC #6 (Glanna.se blogg 2025, Gemini §2) — realism om hundvänskap
       quote:
-        'Vi vill så gärna att hunden ska ha kompisar, men hundar blir inte vänner bara för att vi ägare vill det.',
+        'Vi vill så gärna att hunden ska ha kompisar. Men hundar blir inte vänner bara för att vi ägare vill det.',
       name: 'Hundägare',
       city: 'Sverige',
     },
     {
+      // VoC #8 (Värnamo Nu 2016, Gemini §2) — försvunnen hund, neutral ton
       quote:
-        'En stor och en liten hund som leker tillsammans — den stora kan råka göra illa den lilla bara på grund av ren klantighet och fler kilon.',
+        'Ett tag var jag förkrossad. Jag tänkte på vad som kunde ha hänt hunden.',
       name: 'Hundägare',
       city: 'Sverige',
     },
