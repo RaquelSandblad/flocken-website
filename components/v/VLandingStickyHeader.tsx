@@ -19,9 +19,14 @@ import { VLandingCTA } from './VLandingCTA';
 interface VLandingStickyHeaderProps {
   experimentId: string;
   variant: string;
+  ctaLabel?: string;
 }
 
-export function VLandingStickyHeader({ experimentId, variant }: VLandingStickyHeaderProps) {
+export function VLandingStickyHeader({
+  experimentId,
+  variant,
+  ctaLabel = 'Hitta hundvakt',
+}: VLandingStickyHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -74,7 +79,7 @@ export function VLandingStickyHeader({ experimentId, variant }: VLandingStickyHe
         </Link>
 
         <VLandingCTA
-          label="Hitta hundvakt"
+          label={ctaLabel}
           experimentId={experimentId}
           variant={variant}
           position="header"

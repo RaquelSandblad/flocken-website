@@ -274,7 +274,11 @@ export function VLandingPage({ config }: VLandingPageProps) {
       {/* ------------------------------------------------------------------ */}
       {/* [0] HEADER — sticky, transparent → vit vid scroll (client component) */}
       {/* ------------------------------------------------------------------ */}
-      <VLandingStickyHeader experimentId={config.experimentId} variant={config.hook} />
+      <VLandingStickyHeader
+        experimentId={config.experimentId}
+        variant={config.hook}
+        ctaLabel={config.headerCtaLabel}
+      />
 
       {/* ------------------------------------------------------------------ */}
       {/* [1] HERO — clay-illustration fullbredd, gradient-overlay, vit text  */}

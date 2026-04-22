@@ -99,6 +99,8 @@ export interface VLandingConfig {
 
   // CTA-texter
   ctaLabel: string;
+  /** Text på sticky-header-CTA. Default "Hitta hundvakt" (legacy /v/passa). */
+  headerCtaLabel?: string;
   /** Text under closing CTA-knapp */
   closingSubtext: string;
 
@@ -348,6 +350,7 @@ export const HUNDAR_CONFIG: VLandingConfig = {
     'Clay-illustration av en man som visar en kart-app på sin mobil för sin uppmärksamma hund',
 
   ctaLabel: 'Ladda ner Flocken',
+  headerCtaLabel: 'Ladda ner Flocken',
   closingSubtext: 'Gratis att ladda ner. Finns på App Store och Google Play.',
 
   // Metadata
