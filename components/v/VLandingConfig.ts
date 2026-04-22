@@ -293,7 +293,7 @@ export const HUNDAR_CONFIG: VLandingConfig = {
     },
     {
       title: 'Hundar som bor i närheten',
-      body: 'I Flocken-appen ser du vilka hundar som finns nära dig. Du kan se bild, storlek, ras och en beskrivning. Du väljer själv vem du vill ses med.',
+      body: 'I Flocken-appen ser du vilka hundar som finns nära dig. Du kan se bild, storlek, ras och en beskrivning. Vem har valpar och vem vill byta hundpassning? Kontakta ägaren via chatten eller bara scrolla bland fina hundar.',
       imageStyle: 'photo',
       imageSrc: '/assets/flocken/v-hundar/arg1-hand-hundlista-1x1.jpg',
       imageAlt:
