@@ -54,7 +54,7 @@ console.log(`📋 Ad Account: ${AD_ACCOUNT_ID}\n`);
 // Funktion för att göra API-anrop
 function makeRequest(path, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
-    const url = new URL(`https://graph.facebook.com/v21.0${path}`);
+    const url = new URL(`https://graph.facebook.com/v24.0${path}`);
     url.searchParams.set('access_token', ACCESS_TOKEN);
     
     const postData = data ? JSON.stringify(data) : null;

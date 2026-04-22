@@ -62,7 +62,7 @@ const ADSET_NAME = 'as_para_puppies_swe_opt_lpv_cid001';
 
 function makeRequest(urlPath, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
-    const url = new URL(`https://graph.facebook.com/v21.0${urlPath}`);
+    const url = new URL(`https://graph.facebook.com/v24.0${urlPath}`);
     url.searchParams.set('access_token', token);
     const postData = data ? JSON.stringify(data) : null;
     const options = { method, headers: { 'Content-Type': 'application/json' } };
@@ -107,7 +107,7 @@ function uploadVideo(videoPath) {
     
     const req = https.request({
       hostname: 'graph-video.facebook.com',
-      path: `/v21.0/${AD_ACCOUNT_ID}/advideos`,
+      path: `/v24.0/${AD_ACCOUNT_ID}/advideos`,
       method: 'POST',
       headers: {
         'Content-Type': `multipart/form-data; boundary=${boundary}`,

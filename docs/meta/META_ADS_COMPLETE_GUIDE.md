@@ -333,7 +333,7 @@ await makeRequest(`/${AD_ID}`, 'POST', { status: 'ACTIVE' });
 ### Base URL
 
 ```
-https://graph.facebook.com/v21.0
+https://graph.facebook.com/v24.0
 ```
 
 ### Authentication

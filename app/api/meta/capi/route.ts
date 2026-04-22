@@ -5,7 +5,7 @@ import { rateLimit, getClientIP, rateLimitHeaders } from '@/lib/rate-limit';
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID!;
 const ACCESS_TOKEN = process.env.META_CAPI_ACCESS_TOKEN!;
-const GRAPH_API_VERSION = 'v21.0';
+const GRAPH_API_VERSION = 'v24.0';
 
 // Rate limit: 100 requests per minute per IP
 const RATE_LIMIT_CONFIG = { limit: 100, windowSeconds: 60 };

@@ -25,7 +25,7 @@ console.log('Token found:', token ? 'Yes (' + token.substring(0, 20) + '...)' : 
 
 function makeRequest(urlPath) {
   return new Promise((resolve, reject) => {
-    const url = new URL(`https://graph.facebook.com/v21.0${urlPath}`);
+    const url = new URL(`https://graph.facebook.com/v24.0${urlPath}`);
     url.searchParams.set('access_token', token);
     
     https.get(url.toString(), res => {

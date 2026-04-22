@@ -1,0 +1,922 @@
+namn,stad,lan,email,hemsida,facebook,kalla,raw_address,phone,raw_source
+Stockholms Kennelklubb,Stockholm,Stockholms län,info@stokk.se,http://www.stokk.se,https://www.facebook.com/Stockholmskennelklubb,google_maps,"Rindögatan 25, 115 58 Stockholm",08-111 11 11,serpapi_google_maps
+Hundstallet Stockholm,Bromma,Stockholms län,givarservice@hundstallet.se,https://www.hundstallet.se,https://www.facebook.com/hundstallet,google_maps,"Åkeshovs gårdsväg 10, 168 38 Bromma",010-175 32 00,serpapi_google_maps
+Bichon Havanais Kennel,Stockholm,Stockholms län,,http://www.bichonhavanais.se,https://sv-se.facebook.com/kennel.chandaroff,google_maps,"Upplandsgatan 34, 113 28 Stockholm",070-565 01 95,serpapi_google_maps
+Dog Planet AB,Stockholm,Stockholms län,info@dogplanet.se,http://www.dogplanet.se,,google_maps,"Valhallavägen 192, 115 27 Stockholm",08-660 80 20,serpapi_google_maps
+Ekfalk Animal Center | Hundhotell Stockholm-Arlanda,Märsta,Stockholms län,bokning@ekfalkanimalcenter.se,https://www.ekfalkanimalcenter.se,https://www.facebook.com/ekfalkanimalcenter,google_maps,"ALTUNA 111, 195 93 Märsta",070-883 14 57,serpapi_google_maps
+Hundgrottan,Stockholm,Stockholms län,hundgrottan@hundgrottan.com,http://www.hundgrottan.se,https://facebook.com/hundgrottan,google_maps,"Döbelnsgatan 93, 113 52 Stockholm",08-437 471 37,serpapi_google_maps
+Shaulins kennel,Stockholm,Stockholms län,boel.schaulin@gmail.com,https://shaulin.webnode.se/kontakt,,google_maps,"Skeppsbron 2, 111 30 Stockholm",08-21 85 43,serpapi_google_maps
+Jaktlyans Kennel,Norrby,Stockholms län,,http://www.jaktlyan.nu,,google_maps,"Norrbyvägen 46, 136 74 Norrby",070-324 01 62,serpapi_google_maps
+Changdobels - Gärdet Hunddagis,Stockholm,Stockholms län,gardet@changdobels.se,https://changdobels.se/hunddagis/gardet-hunddagis,https://www.facebook.com/gardethunddagis,google_maps,"Sandhamnsgatan 75, 115 28 Stockholm",08-512 561 00,serpapi_google_maps
+Changdobels - Danderyd Hundiversum,Danderyd,Stockholms län,hundiversum@changdobels.se,https://changdobels.se/hunddagis/hundiversum-hunddagis,https://www.facebook.com/Changdobelshundiversum,google_maps,"Rinkebyvägen 15, 182 36 Danderyd",08-512 561 00,serpapi_google_maps
+Hundringen,Johanneshov,Stockholms län,info@hund-ringen.se,https://www.hringen.se,https://www.facebook.com/hundringenjohanneshov,google_maps,"Fyrskeppsvägen 80, 121 54 Johanneshov",076-945 98 78,serpapi_google_maps
+Dogcare hunddagis,Johanneshov,Stockholms län,info@hunddagis.se,https://www.hunddagis.se,,google_maps,"Arkövägen 38, 121 55 Johanneshov",08-39 31 21,serpapi_google_maps
+Dog Tajm AB,Bandhagen,Stockholms län,,http://www.dogtajm.se,,google_maps,"Stallarholmsvägen 10, 124 59 Bandhagen",076-017 03 81,serpapi_google_maps
+Sweet Desires Kennel,Stockholm,Stockholms län,info@sweetdesireskennel.se,http://www.sweetdesireskennel.se/kontakt/contact,,google_maps,"Järingegränd, 163 63 Stockholm",08-36 13 16,serpapi_google_maps
+Ellios Hund & Katt,Stockholm,Stockholms län,info@ellios.se,http://www.ellios.se,https://sv-se.facebook.com/ellioshundokatt,google_maps,"Erik Dahlbergsgatan 18, 115 32 Stockholm",08-783 00 52,serpapi_google_maps
+Hundens Hus,Bromma,Stockholms län,stockholm@hundenshus.se,http://hundenshus.se,https://www.facebook.com/HundensHus,google_maps,"Åkeshovs gårdsväg 6, 168 38 Bromma",073-532 46 89,serpapi_google_maps
+Urban Dogs,Stockholm,Stockholms län,info@urbandogssthlm.se,https://urbandogssthlm.se,https://facebook.com/UrbanDogssthlm,google_maps,"Parkgatan 20, 112 30 Stockholm",070-799 49 83,serpapi_google_maps
+Norra Stockholms Hundcenter,Täby,Stockholms län,info@norrastockholmshundcenter.se,http://norrastockholmshundcenter.se,https://www.facebook.com/norrastockholmshundcenter,google_maps,"Leverantörsvägen 19, 187 66 Täby",08-425 049 69,serpapi_google_maps
+Nativedog,Stockholm,Stockholms län,info@nativedog.se,https://www.nativedog.se,https://www.facebook.com/Nativedogse-2203555856557292,google_maps,"Vinterviken, 117 65 Stockholm",073-595 20 97,serpapi_google_maps
+Hundhallen,Haninge,Stockholms län,info@vegahundcenter.se,http://www.hundhallen.se,,google_maps,"Nynäsvägen 3F, 136 47 Haninge",070-727 29 72,serpapi_google_maps
+Stockholms Hundforum Hunddagis Kungsholmen - Fridhemsplan,Stockholm,Stockholms län,info@stockholmshundforum.se,http://stockholmshundforum.se,https://www.facebook.com/stockholmshundforum,google_maps,"Celsiusgatan 6, 112 30 Stockholm",08-651 30 68,serpapi_google_maps
+Stockholms Hundforum Hunddagis Vasastan - Odenplan,Stockholm,Stockholms län,info@stockholmshundforum.se,https://stockholmshundforum.se,https://www.facebook.com/stockholmshundforum,google_maps,"Karlbergsvägen 32B, 113 27 Stockholm",08-22 44 10,serpapi_google_maps
+Stockholms Hundforum Hunddagis Kungsholmen - Thorildsplan,Stockholm,Stockholms län,info@stockholmshundforum.se,https://stockholmshundforum.se,https://www.facebook.com/stockholmshundforum,google_maps,"Gyllenborgsgatan 8, 112 43 Stockholm",08-656 93 95,serpapi_google_maps
+Karma Hundcenter,Stockholm,Stockholms län,info@karmahundcenter.se,https://karmahundcenter.se,https://www.facebook.com/karmahundcenter,google_maps,"Roslagsgatan 57, 113 54 Stockholm",073-734 20 85,serpapi_google_maps
+Stockholms Hundforum Hunddagis Södermalm - Hornstull,Stockholm,Stockholms län,info@stockholmshundforum.se,https://stockholmshundforum.se,https://www.facebook.com/stockholmshundforum,google_maps,"Hornsgatan 182, 117 34 Stockholm",08-711 41 91,serpapi_google_maps
+Stockholms Hundsportcentrum AB,Upplands Väsby,Stockholms län,info@stockholmshundsportcentrum.se,http://stockholmshundsportcentrum.se,https://www.facebook.com/stockholmshundsportcentrum,google_maps,"Runsavägen 10, 194 91 Upplands Väsby",070-292 29 20,serpapi_google_maps
+Kennel Superior White,Danderyd,Stockholms län,post@kennelsw.se,http://kennelsw.se/Kontakt.html,,google_maps,"Klubbvägen 5, 182 57 Danderyd",070-271 50 05,serpapi_google_maps
+Hund & Katt Vasastan,Stockholm,Stockholms län,,http://www.hundokatt.nu,,google_maps,"Odengatan 35, 113 51 Stockholm",070-578 80 72,serpapi_google_maps
+Chippens Kennel,Enskede,Stockholms län,,,,google_maps,"Handelsvägen 83, 122 48 Enskede",,serpapi_google_maps
+Sea Hund & Katt,Kungens Kurva,Stockholms län,huddingedjurklinik@gmail.com,http://seahundochkatt.se,,google_maps,"Ryttarhalsvägen 21, 141 75 Kungens Kurva",08-680 04 40,serpapi_google_maps
+Hundtränarna Idnert & Casteberg HB,Bromma,Stockholms län,info@hundtranarna.se,http://www.hundtranarna.se,http://facebook.com/hundtranarna,google_maps,"Ulvsundavägen 146, 168 67 Bromma",070-760 34 30,serpapi_google_maps
+Wallins Hundvård,Stockholm,Stockholms län,,,,google_maps,"114 18,, Ekhagsvägen 2, 114 18 Stockholm",08-612 84 82,serpapi_google_maps
+Canis Veritas,Stockholm,Stockholms län,info@canisveritas.se,http://www.canisveritas.se,,google_maps,"Hedinsgatan 3, 115 33 Stockholm",08-29 37 77,serpapi_google_maps
+Hundfrisören & SPA Stockholm AB,Stockholm,Stockholms län,info@hundfrisorspa.se,http://www.hundfrisorspa.se,,google_maps,"Artemisgatan 49C, 115 42 Stockholm",08-91 11 80,serpapi_google_maps
+Hundpark,Stockholm,Stockholms län,,https://www.stockholm.se/KulturFritid/Park-och-natur/Friluftsliv/Hundrastplatser,,google_maps,"Frejgatan 20X, 113 49 Stockholm",08-508 090 00,serpapi_google_maps
+Hundmodelandet Hundfrisör Stockholm,Enskede,Stockholms län,,http://www.hundmodelandet.se,,google_maps,"Knektvägen 3, 122 46 Enskede",073-646 03 39,serpapi_google_maps
+Cool Dogs Hundtrim,Stockholm,Stockholms län,,,,google_maps,"Sankt Eriksgatan 72, 113 20 Stockholm",070-338 26 67,serpapi_google_maps
+Fåfängans hundrastområde,Stockholm,Stockholms län,,,,google_maps,116 45 Stockholm,,serpapi_google_maps
+Gärdets Hundtrim,Stockholm,Stockholms län,gardetshundtrim@gmail.com,http://gardetshundtrim.se,,google_maps,"Rindögatan 32, 115 58 Stockholm",072-922 50 05,serpapi_google_maps
+"Changdobels - Östermalm hunddagis, Stureparken",Stockholm,Stockholms län,stureparken@changdobels.se,https://changdobels.se/hunddagis/ostermalm-hunddagis,https://facebook.com/changdobels.stureparken,google_maps,"Sturegatan 31, 114 36 Stockholm",08-512 561 00,serpapi_google_maps
+Prickiga hunden Hundbeteendeutredare & Rehabterapeut,Stockholm,Stockholms län,,http://prickigahunden.se,https://www.facebook.com/prickigahunden,google_maps,"Alstaviksvägen 21, 117 33 Stockholm",070-964 16 09,serpapi_google_maps
+"Hundvakt, Hundrastare, Hundrastning Stockholm - Tassevärld",Stockholm,Stockholms län,info@tassevarld.se,http://www.tassevarld.se,https://www.facebook.com/tassevarld,google_maps,,073-691 45 25,serpapi_google_maps
+Pennys Dog Spa,Stockholm,Stockholms län,info@pennys.se,http://www.pennys.se,https://www.facebook.com/pennysdogspa,google_maps,"Roslagsgatan 48, 113 54 Stockholm",073-995 57 70,serpapi_google_maps
+Himmelska Hundar,Stockholm,Stockholms län,info@himmelskahundar.se,http://www.himmelskahundar.se,,google_maps,"Hedinsgatan 13, 115 33 Stockholm",08-410 098 77,serpapi_google_maps
+Dipl.Hundfrisör Natali Gaulitz,Stockholm,Stockholms län,,,,google_maps,"Brantingsgatan 49, 115 35 Stockholm",076-393 76 47,serpapi_google_maps
+Chantli's Kennel,Torslanda,Västra Götalands län,asa.gyllenglimma@gmail.com,https://asagyllenglimma.wixsite.com/chantliskennel,http://www.facebook.com/wix,google_maps,"Bergegårdsvägen 12, 423 53 Torslanda",072-361 26 36,serpapi_google_maps
+Hundstjärnan Hunddagis,Göteborg,Västra Götalands län,,http://www.hundstjarnan.se,,google_maps,"Smidesgatan 5, 417 07 Göteborg",031-23 34 41,serpapi_google_maps
+Drömgårdens Kennel & Kurser,Härryda,Västra Götalands län,info@dromgardenskennel.se,http://dromgardenskennel.se,https://www.facebook.com/dromgardenskennel,google_maps,"Gransjöåsvägen 101, 438 92 Härryda",070-330 22 26,serpapi_google_maps
+Sjöliden's Norska Skogkatter & Australian Shepherds,Harestad,Västra Götalands län,,,,google_maps,"Toreby mosse 530, 442 74 Harestad",070-204 92 44,serpapi_google_maps
+Augustimåne,Göteborg,Västra Götalands län,,,,google_maps,"Riksdalersgatan 1B, 414 81 Göteborg",070-747 51 11,serpapi_google_maps
+Drömgårdens Hundhotel,Härryda,Västra Götalands län,julia@dromgardenshundhotel.se,http://www.dromgardenshundhotel.se,https://www.facebook.com/DromgardensHundhotel,google_maps,"Gransjöåsvägen 101, 438 92 Härryda",,serpapi_google_maps
+Labrador Retrieverklubben,Väddö,Västra Götalands län,info.ansv@labradorklubben.se,http://www.labradorklubben.se,https://facebook.com/labradorklubben,google_maps,"Nor 2261, 760 40 Väddö",0176-544 26,serpapi_google_maps
+Humlebyns,Lindome,Västra Götalands län,,https://www.humlebyns.se,,google_maps,"Humlekärrs byväg 36, 437 93 Lindome",072-199 02 99,serpapi_google_maps
+Smaskens Hundpensionat,Ytterby,Västra Götalands län,,https://swenavi.org/details/smaskens-hundpensionat-ChIJb2e,,google_maps,"Vena 430, 442 94 Ytterby",070-612 79 14,serpapi_google_maps
+Guldkullens Kennel & Kurser,Rävlanda,Västra Götalands län,info@guldkullens.se,http://www.guldkullens.se,https://www.facebook.com/guldkullens,google_maps,"Barkkulla 401, 438 97 Rävlanda",072-525 25 46,serpapi_google_maps
+Hundkojan,Göteborg,Västra Götalands län,info@hundkojan-shop.se,http://www.hundkojan-shop.se/contact_5.html,,google_maps,"Eklandagatan 9, 412 55 Göteborg",031-778 49 40,serpapi_google_maps
+Härryda Djurpensionat,Härryda,Västra Götalands län,,http://www.harrydadjurpensionat.se,,google_maps,"Risbackavägen 27, 438 94 Härryda",070-439 21 69,serpapi_google_maps
+Örjansbergets Kennel,Göteborg,Västra Götalands län,,,,google_maps,"Plantagegatan 6A, 413 05 Göteborg",070-645 41 81,serpapi_google_maps
+Seabell's Klipp & Trim,Sävedalen,Västra Götalands län,,,,google_maps,"Frejavägen 8, 433 62 Sävedalen",073-688 87 71,serpapi_google_maps
+HundXtra,Göteborg,Västra Götalands län,,http://www.hundxtra.se,,google_maps,"Stampereds Gård 1, 418 78 Göteborg",073-534 47 14,serpapi_google_maps
+Hund i focus,Kållered,Västra Götalands län,eva@hundifocus.se,http://www.hundifocus.se,https://www.facebook.com/Hundifocus,google_maps,"Tulebo strandväg 89, 428 34 Kållered",070-292 26 11,serpapi_google_maps
+Del Mar Dogs,Billdal,Västra Götalands län,,https://www.delmardogs.se,https://www.facebook.com/DRCLAUDERSSVERIGE,google_maps,"Bolshedens industriväg 34, 427 50 Billdal",070-990 08 49,serpapi_google_maps
+Dogman and friends,Göteborg,Västra Götalands län,,https://dogman.se/store-detail/dogman-and-friends-goteborg-backaplan,https://www.facebook.com/Dogmanbackaplan,google_maps,"Gamla Tuvevägen 21, 417 05 Göteborg",031-22 40 45,serpapi_google_maps
+Noordhgårdens Hundskola & Hunddagis,Ytterby,Västra Götalands län,,http://www.noordhgardens.se,,google_maps,"Ormo 130, 442 94 Ytterby",070-639 31 22,serpapi_google_maps
+Kennel Line Sam,Bredared,Västra Götalands län,linesam@gmail.com,http://www.linesam.com,,google_maps,"SLÄTTGÅRDEN, 504 96 Bredared",076-949 47 55,serpapi_google_maps
+Alléns Gård,Säve,Västra Götalands län,info@allensgard.se,http://allensgard.se,https://www.facebook.com/Allensgard,google_maps,"Gunnesby Kalsbogård 30, 423 72 Säve",070-950 10 02,serpapi_google_maps
+Hundrast,Göteborg,Västra Götalands län,,http://hundrast.com,,google_maps,"Gullbergs Strandgata 36D, 411 04 Göteborg",,serpapi_google_maps
+Vinthundspalatset AB,Göteborg,Västra Götalands län,voff@vinthundspalatset.se,https://vinthundspalatset.se,https://www.facebook.com/people/Vinthundspalatset/61564472541991,google_maps,"Wingårdsgatan 7, 416 57 Göteborg",070-690 92 11,serpapi_google_maps
+Hundens Hus Göteborg,Västra Frölunda,Västra Götalands län,goteborg@hundenshus.se,https://goteborg.hundenshus.se,https://www.facebook.com/hundenshusgoteborg,google_maps,"J A Wettergrens g 6, 421 30 Västra Frölunda",076-161 00 60,serpapi_google_maps
+Nya varvets & Göteborgs hundskola,Göteborg,Västra Götalands län,,https://hundskolan.net,https://www.facebook.com/hundskolan,google_maps,"Knipplagatan 6, 414 74 Göteborg",070-946 71 71,serpapi_google_maps
+HundSalongen,Göteborg,Västra Götalands län,,http://hundsalongen.nu,,google_maps,"Karl Johansgatan 46B, 414 59 Göteborg",,serpapi_google_maps
+GG hund&katt,Göteborg,Västra Götalands län,kontakta@gghk.se,http://www.gghk.se,https://www.facebook.com/pages/GG-G%C3%B6teborgs-Hund-Katt-Butik-och-Klinik/242489189152823,google_maps,"Vegagatan 58, 413 11 Göteborg",031-14 49 44,serpapi_google_maps
+Kennel Black Orange's Pomeranian,Hyssna,Västra Götalands län,blackorangess@hotmail.com,http://www.blackoranges.se,,google_maps,"Resselvägen 1, 511 68 Hyssna",070-545 93 08,serpapi_google_maps
+101 Labradoodles,Olofstorp,Västra Götalands län,sanna@101tassar.se,https://www.101labradoodles.com,https://www.facebook.com/Labradoodlepuppie,google_maps,"Torvhögsvägen 49, 424 91 Olofstorp",070-939 77 36,serpapi_google_maps
+Hunddagis 101 tassar,Olofstorp,Västra Götalands län,sanna@101tassar.se,http://www.101tassar.se,https://facebook.com/101tassar,google_maps,"Torvhögsvägen 49, 424 91 Olofstorp",070-939 77 36,serpapi_google_maps
+HULEBÄCK HUND,Mölnlycke,Västra Götalands län,,http://www.xn--hulebckhund-p8a.se,https://www.facebook.com/HulebackHund,google_maps,"Metallvägen 5, 435 33 Mölnlycke",076-390 04 96,serpapi_google_maps
+Chocos Hundfrisör & Dagis,Göteborg,Västra Götalands län,,,,google_maps,"Skaragatan 5, 415 16 Göteborg",076-227 95 72,serpapi_google_maps
+Hundparadiset Göteborg,Göteborg,Västra Götalands län,hundparadiset@outlook.com,http://hundparadisetgoteborg.se,https://www.facebook.com/p/Hundparadiset-G%C3%B6teborg-61552108594483,google_maps,"Gamla Boråsvägen 2, 412 76 Göteborg",073-344 20 91,serpapi_google_maps
+Kungliga Hundar,Göteborg,Västra Götalands län,helena@kungligahundar.se,http://www.kungligahundar.se,https://www.facebook.com/kungligahundar,google_maps,"Åskvädersgatan 1, 418 34 Göteborg",070-373 83 88,serpapi_google_maps
+Älvens Hundhälsa. Trim-Rehab-Spa,Hisings Backa,Västra Götalands län,,http://hundtrim-goteborg.se,https://www.facebook.com/alvenshundhalsa,google_maps,"Backa Bergögata 11, 422 46 Hisings Backa",073-987 47 15,serpapi_google_maps
+Slottsskogens hundskallgård,Göteborg,Västra Götalands län,stadsledningskontoret@stadshuset.goteborg.se,https://goteborg.se/wps/portal/start/uppleva-och-gora/parker-och-lekplatser/for-dig-som-ar-hundagare/hundrastgardar,,google_maps,"Plantskolevägen, 414 66 Göteborg",031-365 00 00,serpapi_google_maps
+Kellys Hundsalong,Göteborg,Västra Götalands län,info@kellyshundsalong.se,https://www.kellyshundsalong.se,https://facebook.com/5135967516470138,google_maps,"Övre Olskroksgatan 1, 416 67 Göteborg",073-500 04 42,serpapi_google_maps
+Den lilla hundsalongen,Göteborg,Västra Götalands län,,http://www.denlillahundsalongen.se,http://facebook.com/denlillahundsalongen,google_maps,"Hjalmar Brantingsgatan 21, 417 39 Göteborg",070-067 42 90,serpapi_google_maps
+Hundar i Kålltorp,Göteborg,Västra Götalands län,hundhik@hundhik.se,http://hundhik.se,http://www.facebook.com/hundhik,google_maps,"Virginsgatan 21, 416 54 Göteborg",070-396 14 87,serpapi_google_maps
+Haga hundfrisörer AB,Göteborg,Västra Götalands län,hagahundfrisorer@gmail.com,http://www.hagahundfrisorer.se,,google_maps,"Kastellgatan 12, 411 22 Göteborg",076-889 51 22,serpapi_google_maps
+Jessieshundar Göteborg,Göteborg,Västra Götalands län,jessieshundar@gmail.com,http://jessieshundar.se,https://www.facebook.com/jessie.domenech.9,google_maps,"Odinsgatan 24b, 411 03 Göteborg",,serpapi_google_maps
+RottiPowah Rottweiler Kennel,Malmö,Skåne län,contact@rottipowah.se,https://www.rottipowah.se,https://www.facebook.com/rottipowah,google_maps,"Professorsgatan, 215 53 Malmö",073-413 53 15,serpapi_google_maps
+Novens Kennel,Vellinge,Skåne län,info@novens-kennel.com,http://novens-kennel.com,https://www.facebook.com/novens.kennel,google_maps,"Vellinge Väster byaväg 113, 235 91 Vellinge",070-752 39 89,serpapi_google_maps
+CityDoggis Hunddagis i Malmö,Malmö,Skåne län,kontakt@citydoggis.se,http://www.citydoggis.se,https://www.facebook.com/Citydoggis,google_maps,"Östra Varvsgatan 25, 211 73 Malmö",,serpapi_google_maps
+Gaso’s Kennel,Malmö,Skåne län,,https://www.instagram.com/gasos_kennel,,google_maps,,073-572 39 59,serpapi_google_maps
+Stjärnans black and Tan Kennel,Malmö,Skåne län,,,,google_maps,"Esperantogatan 17, 215 84 Malmö",073-728 07 74,serpapi_google_maps
+kennel Sublime,Malmö,Skåne län,,http://www.kerryblueterrier.se,,google_maps,"Ormvråksgatan 42, 215 62 Malmö",040-92 13 13,serpapi_google_maps
+Sydskånska Kennelklubben,Arlöv,Skåne län,,,,google_maps,"Företagsvägen 29, 232 37 Arlöv",040-27 12 60,serpapi_google_maps
+Rissies Kennel,Genarp,Skåne län,,https://www.rissieskennel.se,,google_maps,"Genarp 1172, 247 72 Genarp",070-848 21 72,serpapi_google_maps
+Landgold kennel,Svedala,Skåne län,,,,google_maps,"Ugglarpsvägen 91 - 28, 231 96 Svedala",073-411 84 62,serpapi_google_maps
+Candy Dogz Malmö,Malmö,Skåne län,,http://www.candydogz.se,,google_maps,"Skruvgatan 7, 211 24 Malmö",073-573 83 90,serpapi_google_maps
+Tygelsjö Hundpensionat,Tygelsjö,Skåne län,info@europaresor.nu,https://xn--tygelsjhundpensionat-99b.se,,google_maps,"Glostorpsvägen 56, 218 75 Tygelsjö",040-46 94 24,serpapi_google_maps
+Dogman and friends,Arlöv,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-malmo-stora-bernstorp,https://www.facebook.com/dogmanbernstorp,google_maps,"Vassvägen 21, 232 91 Arlöv",040-618 55 10,serpapi_google_maps
+Kennel Golden Mystery,Oxie,Skåne län,kennelgoldenmystery@gmail.com,http://goldenmystery.com/hem.htm,,google_maps,"Svedalavägen 140, 238 41 Oxie",076-015 83 11,serpapi_google_maps
+Perro de Lani,Malmö,Skåne län,,,,google_maps,"Louisedalsvägen, 238 41 Malmö",073-504 78 03,serpapi_google_maps
+Dogman and friends,Malmö,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-malmo-caroli,https://www.facebook.com/Dogmancaroli,google_maps,"Östergatan 18, 211 25 Malmö",040-643 87 40,serpapi_google_maps
+Hundrastgård Stadionparken Östra,Malmö,Skåne län,malmostad@malmo.se,http://www.malmo.se/hund,https://www.facebook.com/malmostad,google_maps,217 62 Malmö,040-34 10 00,serpapi_google_maps
+Golden Retriever Life,Malmö,Skåne län,,,,google_maps,"Rödkullastigen 9B, 214 57 Malmö",076-263 16 13,serpapi_google_maps
+Orkanens Kennel,Malmö,Skåne län,,http://www.orkanens.se/en/contact-us,,google_maps,"Föreningsgatan 12, 211 44 Malmö",0435-125 61,serpapi_google_maps
+Bubblans Kennel,Malmö,Skåne län,a.umenmark@gmail.com,http://bubblanskennel.se/contact.html,,google_maps,"Fridhällagatan 28, 212 30 Malmö",070-833 91 66,serpapi_google_maps
+Ebafarmen Avel & Foder,Sölvesborg,Skåne län,ebafarmenfoder@gmail.com,http://www.ebafarmen.se,https://www.facebook.com/ebafarmen,google_maps,"Hosabyvägen 12, 294 71 Sölvesborg",070-855 06 71,serpapi_google_maps
+Huahund/Hund Pro Plus,Malmö,Skåne län,hundproplus@gmail.com,http://huahund.se/malm%C3%B6/malm%C3%B6-39056682,http://www.facebook.com/huahundosterlen,google_maps,"Gasverksgatan 5, 211 29 Malmö",070-232 53 23,serpapi_google_maps
+Celines Hundaktivering,Malmö,Skåne län,celine.fagerberg@gmail.com,http://celineshundaktivering.se,,google_maps,"Flintyxegatan 9, 213 76 Malmö",070-942 61 00,serpapi_google_maps
+Paletten Hundskola,Malmö,Skåne län,info@palettenhundskola.se,http://www.palettenhundskola.se,https://www.facebook.com/palettenhundskola,google_maps,"Boställsvägen 46, 216 21 Malmö",072-181 33 91,serpapi_google_maps
+Alfahunden,Höllviken,Skåne län,infoalfahunden@gmail.com,https://www.alfahunden.se,https://www.facebook.com/alfahunden.se,google_maps,"Räng Sandsvägen 36, 236 61 Höllviken",070-872 96 96,serpapi_google_maps
+Ribersborgs Hundrastplats,Malmö,Skåne län,,,,google_maps,217 59 Malmö,040-34 10 00,serpapi_google_maps
+Svenska Brukshundsklubbens Malmöavdelning,Limhamn,Skåne län,kansli@sbkmalmo.se,http://www.sbkmalmo.se,https://www.facebook.com/sbkmalmo,google_maps,"Hammars väg, 216 30 Limhamn",076-391 91 17,serpapi_google_maps
+Chillas Vänner Hunddagis-Hundpensionat-Hundkurser,Svedala,Skåne län,kontakt@chillasvanner.se,https://chillasvanner.se,https://www.facebook.com/profile.php,google_maps,"Travarevägen 67, 233 92 Svedala",070-834 62 76,serpapi_google_maps
+Skönadals Hundhall,Anderslöv,Skåne län,skonadalshundhall@gmail.com,https://www.boka.se/skonadalshundhall,,google_maps,"Skönadalsvägen 158, 0, 231 73 Anderslöv",070-266 67 36,serpapi_google_maps
+Salong Doggi Style By Lillan,Arlöv,Skåne län,lillan@salongdoggistyle.se,http://www.salongdoggistyle.se,https://facebook.com/profile.php,google_maps,"Tågarpsvägen 31, 212 35 Arlöv",073-728 07 74,serpapi_google_maps
+Hundharmoni NoseWork i Skåne,Svedala,Skåne län,info@hundharmoni.com,http://www.hundharmoni.com,https://www.facebook.com/Hundharmoni,google_maps,"Bolagsgatan, 233 51 Svedala",,serpapi_google_maps
+Sannas HundLiv,Sjöbo,Skåne län,,http://www.sannashundliv.se/kontakt.htm,,google_maps,"Hörrs byaväg 73, 275 92 Sjöbo",073-600 25 06,serpapi_google_maps
+Åredalens Hundsport AB,Duved,Skåne län,arehundsport@gmail.com,http://www.arehundsport.se,https://www.facebook.com/aredalenshundsport,google_maps,"Ol Persvägen 1, 837 71 Duved",0647-66 24 11,serpapi_google_maps
+Djurvetologen,Malmö,Skåne län,info@djurvetologen.se,http://djurvetologen.se,,google_maps,,070-978 18 98,serpapi_google_maps
+Jolines Flockliv,Malmö,Skåne län,,https://www.jolinesflockliv.se,,google_maps,,073-591 67 90,serpapi_google_maps
+Hundburar,Malmö,Skåne län,,,,google_maps,"Västra Kanalgatan 1, 211 41 Malmö",010-263 33 10,serpapi_google_maps
+Rönneholms Hundtrim,Malmö,Skåne län,,,,google_maps,"Västra Rönneholmsvägen 71, 217 41 Malmö",,serpapi_google_maps
+Viktors Hundvård,Malmö,Skåne län,,https://www.bokadirekt.se/places/viktors-hundvard-47655,https://www.facebook.com/bokadirekt,google_maps,"Segevångsgatan 1, 212 27 Malmö",070-014 04 66,serpapi_google_maps
+Rufs & Tufs Hundsalong,Malmö,Skåne län,info@rufsochtufs.se,https://rufsochtufs.se,https://www.facebook.com/RufsOchTufs,google_maps,"Blekingsborgsgatan 3, 214 63 Malmö",040-15 99 00,serpapi_google_maps
+Milo Hundsalong,Malmö,Skåne län,,,,google_maps,"Västra Varvsgatan 11e, 211 11 Malmö",076-769 36 00,serpapi_google_maps
+Beatrice K9 Dog Training and Adventure Company,Malmö,Skåne län,info@beatrice-k9.com,http://www.beatrice-k9.com,,google_maps,"Bergsgatan 42, 214 22 Malmö",073-071 88 82,serpapi_google_maps
+Unique Dogs Hundagis,Uppsala,Uppsala län,susanne@uniquedogs.eu,http://www.uniquedogs.eu,https://www.facebook.com/HungryHeartsKennel,google_maps,"Danmarksgatan 20, 753 23 Uppsala",072-239 69 44,serpapi_google_maps
+Kennel Graceline's,Uppsala,Uppsala län,kennel_graceline@yahoo.se,http://gracelines.se/kontakt.html,,google_maps,"Karby Lindbacken 85, 741 78 Uppsala",073-985 19 55,serpapi_google_maps
+Unique Dogs Petite,Uppsala,Uppsala län,susanne@uniquedogs.eu,https://www.uniquedogs.eu,https://www.facebook.com/HungryHeartsKennel,google_maps,"Hjalmar Brantingsgatan 10kv, 753 27 Uppsala",072-239 69 44,serpapi_google_maps
+Pet Store Sweden,Uppsala,Uppsala län,kontakt@petstoresweden.com,http://www.petstoresweden.com,,google_maps,"Fyrisvallsgatan 22, 752 28 Uppsala",076-616 53 16,serpapi_google_maps
+Uppsala Hunddagis,Uppsala,Uppsala län,kontakt@uppsalahunddagis.se,http://www.uppsalahunddagis.se,https://sv-se.facebook.com/Hundprylar,google_maps,"Vattholmavägen 63, 754 40 Uppsala",018-13 03 03,serpapi_google_maps
+Norrhund AB,Uppsala,Uppsala län,norrhund@gmail.com,http://www.norrhund.se,https://www.facebook.com/NorrHund-AB-298490190178915,google_maps,"Vedergärde 25, 755 94 Uppsala",073-586 19 99,serpapi_google_maps
+Dogman and friends,Uppsala,Uppsala län,,https://dogman.se/store-detail/dogman-and-friends-uppsala-bolanderna,https://www.facebook.com/dogmanuppsala,google_maps,"Rapsgatan 1D, 753 23 Uppsala",018-410 00 30,serpapi_google_maps
+Dogpark Uppsala,Uppsala,Uppsala län,info@dogpark.se,http://www.dogpark.se,http://www.facebook.com/dogparkuddevalla,google_maps,"Fålhagsleden 130, Årsta, 754 49 Uppsala",,serpapi_google_maps
+Parkhyddans Hund- & Kattpensionat KB,Järlåsa,Uppsala län,mail: info@parkhyddan.com,https://www.parkhyddan.com,,google_maps,"LINGONBACKA 3, 744 97 Järlåsa",018-39 11 78,serpapi_google_maps
+Svenska Hundklubben Uppsala,Uppsala,Uppsala län,info@shkuppsala.se,https://www.shkuppsala.se,https://www.facebook.com/profile.php,google_maps,"Moralund, Björkkällevägen, 741 76 Uppsala",070-334 36 16,serpapi_google_maps
+Kennel Axbor och Juniper,Uppsala,Uppsala län,,,,google_maps,"Ulrika Widerholm, Börje Nyby, 755 92 Uppsala",018-36 93 84,serpapi_google_maps
+Hundhjälpen i Uppland AB,Storvreta,Uppsala län,info@hundhjalpen.nu,https://hundhjalpen.nu,https://www.facebook.com/hundhjalpen.nu,google_maps,"Fullerövägen 730, 743 45 Storvreta",018-12 00 75,serpapi_google_maps
+Uppsala Hundvänners Lokala Kennelklubb,Uppsala,Uppsala län,uppsalahundvanner@gmail.com,http://www.uppsalahundvanner.se,https://www.facebook.com/uppsalahundvanner,google_maps,"Unnamed Road, 752 44 Uppsala",,serpapi_google_maps
+Hundhagen Eriksberg,Uppsala,Uppsala län,,https://www.uppsala.se/kultur-och-fritid/natur-parker-och-friluftsliv/parker-lekplatser-och-hundrastgardar/hundrastgardar,,google_maps,"Kvickstensvägen 13, 752 44 Uppsala",,serpapi_google_maps
+Tassistans,Uppsala,Uppsala län,,http://www.tassistans.se,,google_maps,"Storgatan 6, 753 31 Uppsala",,serpapi_google_maps
+Kennel Teasmade,Uppsala,Uppsala län,info@teasmade.se,http://www.teasmade.se/contact,,google_maps,"Tallbacksvägen 56, 756 45 Uppsala",070-249 25 00,serpapi_google_maps
+Uppsala Brukshundklubb,Uppsala,Uppsala län,medlem@uppsalabrukshundklubb.se,http://www.uppsalabrukshundklubb.se,https://www.facebook.com/Uppsalabrukshundklubb,google_maps,"Vårdsätravägen, 756 46 Uppsala",,serpapi_google_maps
+mariashundverksamhet,Uppsala,Uppsala län,mariashundverksamhet@hotmail.com,https://www.mariashundverksamhet.se,,google_maps,,079-355 28 90,serpapi_google_maps
+Stadshunden,Uppsala,Uppsala län,,http://stadshunden.se,,google_maps,"Bolandsgatan 15B, 753 23 Uppsala",073-615 75 19,serpapi_google_maps
+Uppsala Hundcenter,Uppsala,Uppsala län,lena@uppsalahundcenter.se,http://uppsalahundcenter.se,https://m.facebook.com/uppsalahundcenter,google_maps,,070-820 99 61,serpapi_google_maps
+Kadang Australian Cattle Dogs,Uppsala,Uppsala län,kadang@kadang.se,https://kadang.se,https://facebook.com/katarina.cvek,google_maps,"RASBO-STRÖJA 45, 741 78 Uppsala",070-795 69 15,serpapi_google_maps
+Hundsalong Europa,Uppsala,Uppsala län,,,,google_maps,"Geijersgatan 43, 752 31 Uppsala",018-50 09 99,serpapi_google_maps
+4is Tassar AB,Uppsala,Uppsala län,fyrislund93@gmail.com,https://4istassar.se,https://www.facebook.com/profile.php,google_maps,"Stålgatan 8, 751 08 Uppsala",018-12 61 51,serpapi_google_maps
+Jennifers Hundtrim,Uppsala,Uppsala län,,http://www.jennifershundtrim.se,https://www.facebook.com/webnode,google_maps,"Grafikgatan 25, 754 54 Uppsala",076-033 93 83,serpapi_google_maps
+Uppsala hundtrim,Uppsala,Uppsala län,,,,google_maps,"Sturegatan 24b, 752 27 Uppsala",,serpapi_google_maps
+Kennel Druvgården,Linköping,Östergötlands län,,,,google_maps,"Slattefors Sluss, 585 93 Linköping",013-15 05 04,serpapi_google_maps
+"Candy Dogs, kennel och hunddagis",Linköping,Östergötlands län,,https://naviswmap.org/details/candy-dogs-kennel-och-hunddagis-ChIJi08,,google_maps,"Vårdsberg, 585 92 Linköping",,serpapi_google_maps
+Anchilique's Kennel,Linköping,Östergötlands län,,,,google_maps,"Ärtvägen 5, 582 75 Linköping",013-39 60 51,serpapi_google_maps
+Mauritzborg hundpensionat och hundvård,Linköping,Östergötlands län,,https://www.facebook.com/profile.php,,google_maps,"MAURITZBORG, 585 99 Linköping",013-39 51 44,serpapi_google_maps
+Zesmars hunddagis,Linköping,Östergötlands län,,http://zesmars.se,,google_maps,"Gottorpsgatan 11, 582 73 Linköping",070-437 71 68,serpapi_google_maps
+Linköpings Hundungdom,Linköping,Östergötlands län,linkopingshundungdom@gmail.com,http://www.linkopingshu.se,https://www.facebook.com/LinkopingsHU,google_maps,"Åsmestad, 585 98 Linköping",,serpapi_google_maps
+Hund & Kattshopen,Linköping,Östergötlands län,info@hundkattshopen.se,http://www.hundkattshopen.se,https://www.facebook.com/hundkattshopen,google_maps,"Vistvägen 34, 587 31 Linköping",013-10 59 90,serpapi_google_maps
+Braweheart,Ulrika,Östergötlands län,,,,google_maps,"STEN, YCKE, 590 53 Ulrika",,serpapi_google_maps
+Dogman and friends,Linköping,Östergötlands län,,https://dogman.se/store-detail/dogman-and-friends-linkoping-tornby,https://www.facebook.com/people/Dogman-Link%C3%B6ping,google_maps,"Norra Svedengatan 20, 582 73 Linköping",013-474 78 10,serpapi_google_maps
+Hund-Kojan,Linköping,Östergötlands län,info@hund-kojan.se,http://hund-kojan.se,,google_maps,"Atlasgatan 16-12, 582 43 Linköping",013-10 51 90,serpapi_google_maps
+Elsas Hage Hundrastgård,Linköping,Östergötlands län,kontakt@linkoping.se,https://www.linkoping.se/uppleva-och-gora/friluftsliv-och-parker/hundrastgardar-och-hundbad,https://www.facebook.com/linkopingskommun,google_maps,"Parkgatan 3, 582 48 Linköping",,serpapi_google_maps
+Hundvardag i Linköping AB,Linköping,Östergötlands län,,http://www.hundvardaglkpg.se,,google_maps,"Nya Tanneforsvägen 70, 582 42 Linköping",,serpapi_google_maps
+Positiva Hundtränaren,Linköping,Östergötlands län,positivahundtranaren@hotmail.com,https://www.positivahundtranaren.se,https://www.facebook.com/positivahundtranaren,google_maps,"Stureplan 2, 582 21 Linköping",,serpapi_google_maps
+Linköpings Brukshundklubb,Linköping,Östergötlands län,kurserlbk@gmail.com,http://www.web.sbklinkoping.com,,google_maps,"EKÖ 3, 585 97 Linköping",,serpapi_google_maps
+"ER VETERINÄR I LINKÖPING AB - HUND, KATT & EXOTISKA DJUR",Linköping,Östergötlands län,info@ervet.se,https://ervet.se,https://www.facebook.com/ERVETERINAR,google_maps,"Skogslyckegatan 3A, 587 26 Linköping",013-12 40 30,serpapi_google_maps
+Linköpings Hunddagis,Linköping,Östergötlands län,info@linkopingshunddagis.se,http://www.linkopingshunddagis.se,,google_maps,"ÅBY MELLANGÅRD, 582 75 Linköping",013-39 60 60,serpapi_google_maps
+Spångkärrs Hunddagis,Linköping,Östergötlands län,,https://www.instagram.com/spangkarrshunddagis,,google_maps,"Spångkärr 1, 585 97 Linköping",070-948 50 02,serpapi_google_maps
+Hackefors Hunddagis AB,Linköping,Östergötlands län,info@hackeforshunddagis.se,http://hackeforshunddagis.se,,google_maps,582 33 Linköping,,serpapi_google_maps
+Fritt Följ,Linköping,Östergötlands län,kurs@frittfolj.se,https://www.frittfolj.se,,google_maps,"Smedstad Djurgården 4, 585 98 Linköping",,serpapi_google_maps
+Hundens & djurens beteendecenter,Linköping,Östergötlands län,info@beteendecenter.se,http://www.beteendecenter.se,https://www.facebook.com/hashtag/beteendecenter,google_maps,"Åsdymlingen Anderstorp, 583 37 Linköping",,serpapi_google_maps
+Lees hundpassning,Linköping,Östergötlands län,,http://www.leeshundpassning.se,,google_maps,"Rydsvägen 114 A, 584 30 Linköping",076-276 36 30,serpapi_google_maps
+Braskens Hage Hundrastgård,Linköping,Östergötlands län,kontakt@linkoping.se,https://www.linkoping.se/uppleva-och-gora/friluftsliv-och-parker/hundrastgardar-och-hundbad,https://www.facebook.com/linkopingskommun,google_maps,"Kylarevägen 4, 587 23 Linköping",,serpapi_google_maps
+Kennel Dewmist,Västerås,Västmanlands län,henric@dewmist.com,http://www.dewmist.com,,google_maps,725 96 Västerås,,serpapi_google_maps
+Sofalex kennel,Västerås,Västmanlands län,sofalex@hotmail.com,http://www.sofalex.se,,google_maps,,,serpapi_google_maps
+R4`s Djurpensionat,Västerås,Västmanlands län,r4_hunddagis@hotmail.com,http://www.r4.se,https://www.facebook.com/R4djurpensionat,google_maps,"Brandthovdagatan 22, 721 35 Västerås",021-13 49 93,serpapi_google_maps
+Vickans Hundcenter,Skultuna,Västmanlands län,vickanshundcenter@hotmail.com,http://www.vickanshundcenter.se,,google_maps,"Harakers Åkerby 1, 726 91 Skultuna",073-643 84 83,serpapi_google_maps
+HundHjärta,Västerås,Västmanlands län,info@hundhjarta.se,http://www.hundhjarta.se,,google_maps,"Saltängsvägen 10B, 721 32 Västerås",076-837 87 49,serpapi_google_maps
+Springertokens hundkurser,Västerås,Västmanlands län,kontakt@springertoken.se,http://www.springertoken.se,https://www.facebook.com/lyckligavovvar,google_maps,,,serpapi_google_maps
+Svenska Hundklubben Västerås,Västerås,Västmanlands län,mikaela.shk.vasteras@hotmail.com,http://www.shkvasteras.se,,google_maps,"Häpplinge 3, 725 96 Västerås",,serpapi_google_maps
+"MD HUND - Hundkurser, Privatträning & Butik",Västerås,Västmanlands län,,http://www.mdhund.se,https://www.facebook.com/mdhund,google_maps,"Sjöhagsvägen 6A, 721 32 Västerås",079-346 29 88,serpapi_google_maps
+ReDog Veterinärklinik och Hundrehabilitering,Västerås,Västmanlands län,reception@redog.se,http://www.redog.se,https://www.facebook.com/redogvasteras,google_maps,"Tallmätargatan 1, 721 34 Västerås",021-41 20 20,serpapi_google_maps
+Kennel Floristas,Västerås,Västmanlands län,,,,google_maps,"Trollbacksvägen 28, 725 96 Västerås",070-695 79 12,serpapi_google_maps
+Pawsome Hundkurser,Västerås,Västmanlands län,pawsomehund@gmail.com,http://www.pawsome.nu,,google_maps,"Fallhammargatan 1D, 724 66 Västerås",072-220 94 42,serpapi_google_maps
+Västerås Brukshundklubb,Västerås,Västmanlands län,ordforande@vasterasbk.se,http://www.vasterasbk.se,,google_maps,"Atmosfärvägen 12, 721 31 Västerås",,serpapi_google_maps
+Västerås Nose Work Klubb,Västerås,Västmanlands län,,http://www.vasterasnwk.se,,google_maps,,070-691 78 08,serpapi_google_maps
+Vickans Happy Dogs Hunddagis,Västerås,Västmanlands län,,http://www.happydogsdagis.se,,google_maps,"Bastborregatan, 721 34 Västerås",073-643 84 83,serpapi_google_maps
+Vickans Hunddagis,Västerås,Västmanlands län,vickanshundcenter@hotmail.com,http://www.vickanshundcenter.se,,google_maps,"Humlegatan 37, 722 26 Västerås",,serpapi_google_maps
+Önsta Hundrastgård,Västerås,Västmanlands län,,https://www.facebook.com/groups/986197971731664,,google_maps,"Önstavägen, 722 43 Västerås",,serpapi_google_maps
+TW Hundtjänst,Västerås,Västmanlands län,,http://www.twhundtjanst.se,http://www.facebook.com/TW-Hundtj%C3%A4nst-100257835156599,google_maps,"20A, 725 93 Västerås",073-565 26 15,serpapi_google_maps
+Utomhushundpark,Västerås,Västmanlands län,,,,google_maps,"Bessemergatan, 724 74 Västerås",,serpapi_google_maps
+Västerås Hundklipp,Västerås,Västmanlands län,,,,google_maps,"Saltängsvägen 10b, 721 32 Västerås",076-837 87 49,serpapi_google_maps
+Country dog salon,Västerås,Västmanlands län,info@countrydogsalon.se,http://www.countrydogsalon.se,https://www.facebook.com/profile.php,google_maps,"Broby 8, 725 96 Västerås",070-405 55 78,serpapi_google_maps
+Västerås Hundfrisörer,Västerås,Västmanlands län,,,,google_maps,"Tallmätargatan 1, 721 34 Västerås",,serpapi_google_maps
+Hundbad,Västerås,Västmanlands län,,,,google_maps,723 48 Västerås,,serpapi_google_maps
+HundHjarta Hälla,Västerås,Västmanlands län,info@hundhjarta.se,https://www.hundhjarta.se,,google_maps,"Fältmätargatan 16, 721 35 Västerås",076-837 87 49,serpapi_google_maps
+Önsta Hunddagis,Västerås,Västmanlands län,info@hundexa.se,http://www.onstahunddagis.se,https://facebook.com/%C3%96nsta-Hunddagis-201704973203327,google_maps,"Önstavägen 3, 722 43 Västerås",079-102 96 99,serpapi_google_maps
+Petras Hundfys,Västerås,Västmanlands län,petra@hundfysen.se,http://www.hundfysen.se,https://www.facebook.com/hundfysen,google_maps,"Rönnbergagatan 39, 723 46 Västerås",,serpapi_google_maps
+Butikshunden,Köping,Västmanlands län,nilla@butikshunden.se,http://www.butikshunden.se,,google_maps,"Hägersta 8, 731 92 Köping",070-215 32 32,serpapi_google_maps
+Flockens hundcenter,Vintrosa,Örebro län,info@flockens.se,https://flockens.se,https://www.facebook.com/flockens,google_maps,"HÄLLBERGSTORP 223, 719 95 Vintrosa",070-617 75 11,serpapi_google_maps
+SV Hundtassen,Örebro,Örebro län,,,,google_maps,"Skvadronvägen 11, 702 27 Örebro",070-881 01 99,serpapi_google_maps
+Hundforum,Örebro,Örebro län,sussi@hundforum.nu,http://hundforum.nu,https://www.facebook.com/Hundforum-i-%C3%96rebro-116578931729365,google_maps,"Kungsgatan 60, 702 24 Örebro",019-18 91 80,serpapi_google_maps
+kennel DenDu,Örebro,Örebro län,,,,google_maps,"Porla gränd, 702 28 Örebro",070-768 02 86,serpapi_google_maps
+Bissvargens Kennel,Örebro,Örebro län,,,,google_maps,"Lärkvägen 4, 703 48 Örebro",073-042 97 21,serpapi_google_maps
+Kennel Waterbliss,Örebro,Örebro län,kerstin.lehto@telia.com,http://www.waterbliss.se/cdb80d976a5745b0abc2cf2d49576c1f.html,,google_maps,"Byggmästaregatan 12, 703 58 Örebro",073-654 82 86,serpapi_google_maps
+Dogman and friends,Örebro,Örebro län,,https://dogman.se/store-detail/dogman-and-friends-orebro-marieberg,https://www.facebook.com/dogmanorebro,google_maps,"Säljarevägen 10A, 702 36 Örebro",019-22 32 09,serpapi_google_maps
+Hyddans Hunddagis i Ur & Skur,Örebro,Örebro län,hyddanshunddagis@hotmail.com,http://hyddanshunddagis.se,https://www.facebook.com/HyddansHunddagis,google_maps,"Gryt 335, 705 94 Örebro",070-731 56 89,serpapi_google_maps
+"Hardstyles Hundtjänst Kennel, Kurser & Hunddagis / pensionat",Kumla,Örebro län,hardstyleshundtjanst@hotmail.com,http://www.hardstyles.se,,google_maps,"Säbylund Kålgården 108, 692 91 Kumla",073-627 71 39,serpapi_google_maps
+Örebro Brukshundklubb,Örebro,Örebro län,mental@orebrobk.nu,http://orebrobk.nu,https://www.facebook.com/orebrobrukshundklubb,google_maps,"Karlslundsgatan 104, 705 93 Örebro",,serpapi_google_maps
+Örebro Hundsällskap BK,Örebro,Örebro län,vivialm53@gmail.com,http://www.ohsbk.hundpoolen.nu,,google_maps,"Törsjö 210, 702 33 Örebro",,serpapi_google_maps
+Källhagens Gård & Hundpensionat,Lindesberg,Örebro län,info@kallhagens.se,https://kallhagens.se,https://facebook.com/kallhagens,google_maps,"Aspensäng Källhagen 195, 711 93 Lindesberg",072-222 89 83,serpapi_google_maps
+Hundladan,Örebro,Örebro län,info@hundladan.com,http://hundladan.com,,google_maps,"GRÄVE 210, 705 93 Örebro",070-344 42 95,serpapi_google_maps
+Dos Barbas Hundar,Örebro,Örebro län,anders@dosbarbas.se,http://www.dosbarbas.se,https://www.facebook.com/dosbarbashundvard,google_maps,"Fällersta 325, 705 94 Örebro",070-990 68 10,serpapi_google_maps
+Örebro Hundträning,Kumla,Örebro län,ulrika@orebrohundtraning.com,https://orebrohundtraning.com,https://www.facebook.com/profile.php,google_maps,692 93 Kumla,076-289 80 17,serpapi_google_maps
+Hundpartner Sverige,Örebro,Örebro län,info@hundpartner.se,https://www.hundpartner.se,https://www.facebook.com/Hundpartner,google_maps,"Oljevägen 2B, 703 82 Örebro",073-150 08 59,serpapi_google_maps
+Hundklimpen,Örebro,Örebro län,hundklimpen@gmail.com,http://www.hundklimpen.se,http://www.facebook.com/hundklimpen,google_maps,"Rangeltorp 317, 705 94 Örebro",,serpapi_google_maps
+Hackvad Hundhall,Fjugesta,Örebro län,info@hackvadhundhall.se,http://hackvadhundhall.se,https://www.facebook.com/HackvadHundhall-1349790361703640,google_maps,716 91 Fjugesta,0585-270 80,serpapi_google_maps
+Lisas hundhjälp Hundpensionat,Ervalla,Örebro län,lisa@lisashundhjalp.se,https://lisashundhjalp.se,,google_maps,"Gustavsbergsvägen 4, 718 94 Ervalla",,serpapi_google_maps
+Hundrummet,Örebro,Örebro län,obladi@pudeltok.se,http://www.hundrummet.se,,google_maps,"Västra Vintergatan 9, 703 44 Örebro",070-237 48 88,serpapi_google_maps
+Hunddagis Trippande Tassar,Örebro,Örebro län,info@trippandetassar.se,http://www.trippandetassar.se,https://www.facebook.com/trippandetassar,google_maps,"Köping-hultgatan 4, 703 63 Örebro",,serpapi_google_maps
+Dogya,Örebro,Örebro län,,https://www.timecenter.se/dogya,,google_maps,"Köping-hultgatan 4, 703 63 Örebro",070-232 72 09,serpapi_google_maps
+Örebro Hundrastning,Fjugesta,Örebro län,,,,google_maps,"Hidingebro 1118, 716 92 Fjugesta",076-009 39 77,serpapi_google_maps
+Örebro Hundtrim Ab,Örebro,Örebro län,,,,google_maps,"Lövstagatan 4, 703 56 Örebro",076-891 63 55,serpapi_google_maps
+Lundby Hundrastgård,Örebro,Örebro län,servicecenter@orebro.se,https://www.orebro.se/kultur--fritid/natur--parker/parker/hundlekplatser.html,//www.facebook.com/orebrokommun,google_maps,"Vivallaringen, 703 74 Örebro",,serpapi_google_maps
+Skogsuddens Kennel,Helsingborg,Skåne län,git.andersson2@telia.com,https://www.skogsuddenskennel.se,https://www.facebook.com/skogsuddenskennel.se,google_maps,"Pålsjögatan 65, 254 40 Helsingborg",070-329 45 94,serpapi_google_maps
+Kennel fyra små tassar,Viken,Skåne län,,,,google_maps,"www.google.com/local/place/rap/edit/location05B, Döshultsvägen 5https:, 260 40 Viken",073-984 18 92,serpapi_google_maps
+Kennel Stars 'n Bubbles,Vallåkra,Skåne län,louise@starsnbubbles.se,https://www.starsnbubbles.se,https://facebook.com/profile.php,google_maps,"Fjärestadsvägen 127, 253 42 Vallåkra",073-821 31 04,serpapi_google_maps
+Pilshults Gård Hunddagis & Hundpensionat,Helsingborg,Skåne län,info@hunddagishelsingborg.se,http://www.hunddagishelsingborg.se,https://www.facebook.com/Palsjogardhunddagisochhundpensionat,google_maps,"Pilshultsvägen 4, 254 50 Helsingborg",073-310 16 76,serpapi_google_maps
+Helsingborgs Hundhall,Helsingborg,Skåne län,info@helsingborgshundhall.se,https://helsingborgshundhall.se,,google_maps,"Garnisonsgatan 10, 254 66 Helsingborg",070-243 89 18,serpapi_google_maps
+Ziridas Kennel,Helsingborg,Skåne län,ida@vi2hundcenter.se,http://zirida.se/kontakta,,google_maps,"Ekebyvägen 28, 253 74 Helsingborg",070-867 30 13,serpapi_google_maps
+"Hundhägn Bruces skog, norra delen",Helsingborg,Skåne län,kontaktcenter@helsingborg.se,https://helsingborg.se/uppleva-och-gora/friluftsliv-och-motion/hund/hundhagn,https://www.facebook.com/Helsingborgsstad,google_maps,"Bruces Skog, 254 64 Helsingborg",042-10 50 00,serpapi_google_maps
+Wilson Parks kennel,Helsingborg,Skåne län,,,,google_maps,"Sölvesborgsgatan 12, 252 50 Helsingborg",042-13 06 46,serpapi_google_maps
+Helsingborgs Hundtrim,Helsingborg,Skåne län,,https://www.facebook.com/helsingborgshundtrim,,google_maps,"Hävertgatan 21, 254 42 Helsingborg",042-22 60 61,serpapi_google_maps
+Råådalens Brukshundklubb,Helsingborg,Skåne län,styrelsen@raadalensbk.se,http://www.raadalensbk.se,https://www.facebook.com/raadalensbk,google_maps,"Rausvägen 61, 253 74 Helsingborg",,serpapi_google_maps
+Hundens och Kattens Veterinär,Helsingborg,Skåne län,hundensochkattens@gmail.com,http://www.hundensochkattens.com,,google_maps,"Planteringsvägen 87, 252 30 Helsingborg",042-32 68 78,serpapi_google_maps
+Vi2 Hundcenter,Helsingborg,Skåne län,info@vi2hundcenter.se,http://vi2hundcenter.se,https://www.facebook.com/vi2hundcenter,google_maps,"Ekebyvägen 28, 253 74 Helsingborg",070-867 30 13,serpapi_google_maps
+Helsingborg Brukshundklubb,Helsingborg,Skåne län,,http://www.hbgbk.com,,google_maps,"Kennelvägen 31, 255 91 Helsingborg",,serpapi_google_maps
+Hundstaff - Slitstarka hundtillbehör,Helsingborg,Skåne län,info@hundstaff.se,https://hundstaff.se,https://www.facebook.com/Hundstaff,google_maps,"Vasatorpsvägen 1G, 254 57 Helsingborg",,serpapi_google_maps
+Kennel Stars of Viken,Jonstorp,Skåne län,info@starsofviken.se,https://www.starsofviken.se,,google_maps,"Gamlegårdsvägen 13, 263 92 Jonstorp",070-201 49 62,serpapi_google_maps
+Dogman and friends,Ödåkra,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-helsingborg-vala,https://www.facebook.com/dogmanvala,google_maps,"Björkavägen 105, 260 35 Ödåkra",042-442 22 80,serpapi_google_maps
+Backes Hundhälsa,Vallåkra,Skåne län,,https://www.bokadirekt.se/places/backes-hundh%C3%A4lsa-ab-28911,https://www.facebook.com/bokadirekt,google_maps,"Engelbrektsvägen, 251 43 Vallåkra",070-629 28 51,serpapi_google_maps
+Aeneas Kennel,Helsingborg,Skåne län,,https://www.aeneaskennel.se/kontakt,,google_maps,"Norra Hunnetorpsvägen 121, 256 65 Helsingborg",042-15 02 90,serpapi_google_maps
+Kennel Chiegas,Helsingborg,Skåne län,kennel@chiegas.se,http://chiegas.se/kontakt.html,,google_maps,"Tegnérgatan 1B, 254 40 Helsingborg",073-753 34 61,serpapi_google_maps
+Bårslövs Hundhägn,Helsingborg,Skåne län,kontaktcenter@helsingborg.se,https://helsingborg.se/bo-bygga-och-miljo/djur/hund/hundrastgardar,https://www.facebook.com/Helsingborgsstad,google_maps,253 75 Helsingborg,,serpapi_google_maps
+Hundhägn Brohult/ Dalhem,Helsingborg,Skåne län,,,,google_maps,"Brohultsvägen 248, 254 65 Helsingborg",,serpapi_google_maps
+Hundarnas Salong,Helsingborg,Skåne län,,http://hundarnassalong.com,,google_maps,"Hörnlokalen, Aschebergsgatan 14A, 254 30 Helsingborg",070-883 19 52,serpapi_google_maps
+Hundriket,Helsingborg,Skåne län,,https://facebook.com/hundriket,,google_maps,"Dragaregatan 5, 254 42 Helsingborg",073-430 40 55,serpapi_google_maps
+Ättekulla Hundhägn,Helsingborg,Skåne län,kontaktcenter@helsingborg.se,https://helsingborg.se/uppleva-och-gora/friluftsliv-och-motion/hund/hundhagn,https://www.facebook.com/Helsingborgsstad,google_maps,"Lassemansvägen, 253 61 Helsingborg",042-10 50 00,serpapi_google_maps
+Hundhägn Pålsjö skog,Helsingborg,Skåne län,kontaktcenter@helsingborg.se,https://helsingborg.se/uppleva-och-gora/friluftsliv-och-motion/hund/hundhagn,https://www.facebook.com/Helsingborgsstad,google_maps,"Henrik Sylvius väg, 254 33 Helsingborg",,serpapi_google_maps
+Hundfrisörerna i Helsingborg,Helsingborg,Skåne län,,,,google_maps,"Garnisonsgatan 10, 254 66 Helsingborg",042-24 42 77,serpapi_google_maps
+Anjinsans hund och katt,Helsingborg,Skåne län,,http://www.anjinsans.se,,google_maps,"Mogatan 6, 254 64 Helsingborg",042-15 71 33,serpapi_google_maps
+Carins hundsalong,Helsingborg,Skåne län,,https://www.bokadirekt.se/places/carins-hundsalong-47734,https://www.facebook.com/bokadirekt,google_maps,"Bergaliden 21, 252 23 Helsingborg",070-652 52 89,serpapi_google_maps
+Joannas Hundglamour,Helsingborg,Skåne län,,https://www.instagram.com/joannas_hundglamour,,google_maps,"Östra Fridhemsgatan 4, 252 40 Helsingborg",076-268 91 33,serpapi_google_maps
+Lindas Hundtrim,Mörarp,Skåne län,lindashundtrim@telia.com,http://www.lindashundtrim.se,https://m.facebook.com/lindashundtrim,google_maps,"Gamla Tågarpsvägen 147, 253 56 Mörarp",072-232 79 70,serpapi_google_maps
+Smedbys Kennel,Norrköping,Östergötlands län,,http://smedby.nu,,google_maps,"SMEDBYHOV, 605 91 Norrköping",070-814 02 61,serpapi_google_maps
+Kennel Sontocs,Norrköping,Östergötlands län,,http://kennelsontocs.se,,google_maps,"Odensgatan 30 b, 603 37 Norrköping",070-518 84 42,serpapi_google_maps
+Kennel Sea Fire,Norrköping,Östergötlands län,,,,google_maps,"Rågången 12 B, 603 57 Norrköping",073-515 10 75,serpapi_google_maps
+Mi-Jos Kennel,Söderköping,Östergötlands län,,http://www.mi-jos.se,,google_maps,"Solberga 1, 614 93 Söderköping",070-960 10 63,serpapi_google_maps
+Fruängens Kennel,Norrköping,Östergötlands län,,,,google_maps,"Frugärdesvägen 18, 605 94 Norrköping",070-259 89 68,serpapi_google_maps
+Norrköpings Dogsportcenter AB,Norrköping,Östergötlands län,info@norrkopingsdogsportcenter.se,https://norrkopingsdogsportcenter.com,https://facebook.com/people/Norrk%C3%B6pings-Dogsportcenter/100094927350262,google_maps,"Sprängstensgatan 1, 603 79 Norrköping",073-442 40 43,serpapi_google_maps
+Norrköpings Brukshundsklubb,Norrköping,Östergötlands län,mariegissa20@outlook.com,http://norrkopingsbrukshundklubb.se,https://www.facebook.com/norrkopingsbrukshundklubb,google_maps,Klingstaberg 60223 Norrköping,,serpapi_google_maps
+Norrköpings Hundsporthall,Norrköping,Östergötlands län,,,,google_maps,"Moa Martinsons gata 2, 603 78 Norrköping",,serpapi_google_maps
+Ao Chins Shih-tzu,Norrköping,Östergötlands län,,,,google_maps,"Murkelgatan 11, 603 70 Norrköping",076-113 87 32,serpapi_google_maps
+Absolut Rottis,Åby,Östergötlands län,,http://absolutrottis.se,https://www.facebook.com/wix,google_maps,"FREDRIKSDAL, 616 34 Åby",,serpapi_google_maps
+Dogman and friends,Norrköping,Östergötlands län,,https://dogman.se/store-detail/dogman-and-friends-norrkoping-ingelsta,https://www.facebook.com/p/Dogman-Norrk%C3%B6ping-100075736196177,google_maps,"Koppargatan 30, 602 23 Norrköping",011-474 30 23,serpapi_google_maps
+Lund Mansion's Hundcenter & Pensionat,Söderköping,Östergötlands län,,https://lundmansion.se,https://www.facebook.com/lundmansion,google_maps,"Lund Sörgården 1, 614 92 Söderköping",073-379 86 33,serpapi_google_maps
+COF AGILITY,Norrköping,Östergötlands län,,https://cofagility.se,,google_maps,"Sprängstensgatan, 603 79 Norrköping",073-442 40 43,serpapi_google_maps
+Den Gröna Valpen,Norrköping,Östergötlands län,info@dengronavalpen.se,http://www.dengronavalpen.se,,google_maps,"Luntgatan 45, 602 19 Norrköping",073-745 62 32,serpapi_google_maps
+Hundrastgård Kneippen,Norrköping,Östergötlands län,kontakt@norrkoping.se,https://norrkoping.se/se-och-gora/parker-och-lekplatser/hundrastgardar,https://www.facebook.com/NorrkopingsKommun,google_maps,"Oskarsgatan 13, 602 37 Norrköping",,serpapi_google_maps
+Hundrastgård Vrinnevi,Norrköping,Östergötlands län,kontakt@norrkoping.se,https://norrkoping.se/se-och-gora/parker-och-lekplatser/hundrastgardar,https://www.facebook.com/NorrkopingsKommun,google_maps,"Sprängstensgatan 1, 603 79 Norrköping",,serpapi_google_maps
+Hundbad/hundrastgård Lindö,Norrköping,Östergötlands län,kontakt@norrkoping.se,https://norrkoping.se/se-och-gora/parker-och-lekplatser/hundrastgardar,https://www.facebook.com/NorrkopingsKommun,google_maps,"Pampusvägen, 603 65 Norrköping",,serpapi_google_maps
+Hundtrim,Norrköping,Östergötlands län,,,,google_maps,"Vrinnevigatan 16G, 603 58 Norrköping",,serpapi_google_maps
+Kennel Emoticon,Jönköping,Jönköpings län,jessica@emoticon.se,http://www.emoticon.se,https://www.facebook.com/jessica.bolander,google_maps,"Axamo skogsväg 28B, 555 94 Jönköping",036-31 01 16,serpapi_google_maps
+Kennel Ricebo's,Huskvarna,Jönköpings län,,http://www.ricebo.weebly.com,//facebook.com/cecilia.sorhuus.1,google_maps,"Hemmansvägen 3, 561 35 Huskvarna",070-067 17 62,serpapi_google_maps
+KENNEL PiASTIGEN,Jönköping,Jönköpings län,,,,google_maps,"Värnamovägen 18, 553 39 Jönköping",070-604 13 23,serpapi_google_maps
+Kennel Rapide Ours,Tenhult,Jönköpings län,kennel.rapideours@gmail.com,https://sites.google.com/view/kennel-rapide-ours,,google_maps,"SJÖBERG 14, 561 63 Tenhult",070-577 60 46,serpapi_google_maps
+Birch Kennel,Huskvarna,Jönköpings län,,,,google_maps,"Jägarbacken 9, 561 33 Huskvarna",079-339 17 94,serpapi_google_maps
+Beathalandet HB,Habo,Jönköpings län,kennelbeathalandet@gmail.com,https://www.beathalandet.se,https://www.facebook.com/Kennel-Beathalandet-121344697913299,google_maps,"SKOGSHEM, 566 92 Habo",036-452 40,serpapi_google_maps
+BIG hEART´S KENNEL,Jönköping,Jönköpings län,,,,google_maps,"Mariebogatan 32, 554 39 Jönköping",036-16 03 66,serpapi_google_maps
+Tullebyns Kennel,Aneby,Jönköpings län,info@connectedcms.se,http://tullebyns.se,,google_maps,"Haurida Södergård 4, 578 92 Aneby",073-141 74 42,serpapi_google_maps
+Jönköpings Brukshundklubb,Jönköping,Jönköpings län,info@jbhk.se,http://www.jbhk.se,,google_maps,"Hundstugevägen 22, 555 94 Jönköping",036-37 92 16,serpapi_google_maps
+Hundkvarteret,Jönköping,Jönköpings län,amanda@hundkvarteret.se,http://hundkvarteret.se,https://www.facebook.com/hundkvarteret,google_maps,"Klockarpsvägen 15, 554 46 Jönköping",076-075 68 31,serpapi_google_maps
+Stadsparkens Hundrastgård,Jönköping,Jönköpings län,kontaktcenter@jonkoping.se,https://www.jonkoping.se/fritid-kultur--natur/friluftsliv-natur-och-parker/parker/hundrastgardar-rastgard-for-hund,https://www.facebook.com/jonkopingskommun,google_maps,"Humlevägen, 554 39 Jönköping",,serpapi_google_maps
+Taste of the Wild,Jönköping,Jönköpings län,,https://www.petcare.se/se/foder/hund/taste-of-the-wild.html,,google_maps,"Logistikvägen 4, 556 52 Jönköping",036-32 77 30,serpapi_google_maps
+Huskvarna Hundklubb,Huskvarna,Jönköpings län,ordforande@huskvarnahundklubb.se,http://www.huskvarnahundklubb.se,,google_maps,561 93 Huskvarna,036-13 90 51,serpapi_google_maps
+Martinas Hundsalong i Jönköping,Jönköping,Jönköpings län,,https://www.facebook.com/profile.php,,google_maps,"Vaggerydsgatan 14, 553 30 Jönköping",070-202 15 00,serpapi_google_maps
+Shaadis Hundtrim,Jönköping,Jönköpings län,,,,google_maps,"Humlevägen 11, 553 38 Jönköping",072-328 79 39,serpapi_google_maps
+Kålgårdsparkens Hundrastgård,Jönköping,Jönköpings län,kontaktcenter@jonkoping.se,https://www.jonkoping.se/fritid-kultur--natur/friluftsliv-natur-och-parker/parker/hundrastgardar-rastgard-for-hund,https://www.facebook.com/jonkopingskommun,google_maps,"Västra Holmgatan 48, 553 23 Jönköping",,serpapi_google_maps
+Linns hundtrim och spa,Norrahammar,Jönköpings län,,http://www.facebook.com/linnshundtrimochspa,,google_maps,"Södra Hökhultsvägen 21, 562 31 Norrahammar",070-044 13 13,serpapi_google_maps
+UmeÄlvDalens Kennel,Umeå,Västerbottens län,,,,google_maps,"Glädjens gränd, 903 63 Umeå",090-14 85 85,serpapi_google_maps
+Oskars kennel och linsgucka,Umeå,Västerbottens län,,,,google_maps,"Västra Norrlandsgatan 12, 903 27 Umeå",,serpapi_google_maps
+Fjärdens Labradoodle,Umeå,Västerbottens län,fjardenslabradoodle@hotmail.com,https://fjardenslabradoodle.se,https://www.facebook.com/p/Fj%C3%A4rdens-Labradoodle-61550478260344,google_maps,"TAVLEFJÄRDEN 35, 905 96 Umeå",,serpapi_google_maps
+Kennel Bella Cosa,Umeå,Västerbottens län,lena@kennelbellacosa.com,http://www.kennelbellacosa.com/kontakt.html,,google_maps,"Cirkelgatan 57, 904 21 Umeå",090-13 99 17,serpapi_google_maps
+Dogman and friends,Umeå,Västerbottens län,,https://dogman.se/store-detail/dogman-and-friends-umea-strompilen,https://www.facebook.com/dogmanumea,google_maps,"Strömpilsplatsen 1, 907 43 Umeå",090-201 01 73,serpapi_google_maps
+Drottningvikens kennel,Nordmaling,Västerbottens län,lejon-elfving@hotmail.com,http://www.drottningvikens-kennel.se,https://www.facebook.com/search/top,google_maps,"LÖVSKATAN 22, 914 98 Nordmaling",070-220 44 12,serpapi_google_maps
+Kennel Paratime's,Lövånger,Västerbottens län,,,,google_maps,"Bodan 71, 932 93 Lövånger",070-282 09 93,serpapi_google_maps
+Kwai-San kennel,Lögdeå,Västerbottens län,info@kwaisan.se,https://www.kwaisan.se,https://www.facebook.com/profile.php,google_maps,"Movägen 426, 914 92 Lögdeå",,serpapi_google_maps
+Vattenbrynets kennel,Holmsund,Västerbottens län,ba_ce_ma@hotmail.com,http://www.vattenbrynets.se/kontakt.htm,,google_maps,"Taflinsvägen 14, 913 32 Holmsund",070-354 48 87,serpapi_google_maps
+Qwirhaukens Kennel,Åsele,Västerbottens län,,,,google_maps,"Sörnoret 50, 919 91 Åsele",070-226 43 07,serpapi_google_maps
+Lowriders Kennel,Ersmark,Västerbottens län,maria@lowriders.se,http://www.lowriders.se,,google_maps,"Södra ERSMARK 477, 934 41 Ersmark",070-635 74 56,serpapi_google_maps
+Arceum's Italian Greyhounds,Umeå,Västerbottens län,,http://arceum.se,,google_maps,,073-025 02 21,serpapi_google_maps
+Ulvens,Umeå,Västerbottens län,info@ulvens.se,https://www.ulvens.se,https://www.facebook.com/ulvenshund,google_maps,905 87 Umeå,,serpapi_google_maps
+Dogmanhallen,Umeå,Västerbottens län,troyopeps@gmail.com,http://www.ubhk.se,,google_maps,"Verkstadsgatan 28A, 904 32 Umeå",,serpapi_google_maps
+Next Level Dog Arena,Röbäck,Västerbottens län,info@nlda.se,http://www.nextleveldogarena.se,https://www.facebook.com/profile.php,google_maps,"Svidjevägen 8, 904 40 Röbäck",070-217 37 00,serpapi_google_maps
+Umeå Brukshundklubb,Umeå,Västerbottens län,troyopeps@gmail.com,https://ubhk.se,,google_maps,"Nydalasjön 6, 906 52 Umeå",,serpapi_google_maps
+Tjotte's kennel,Ersmark,Västerbottens län,,http://www.tjotte.se,,google_maps,"Södra Ersmark 473, 934 41 Ersmark",070-530 45 43,serpapi_google_maps
+Norrland Labradoodles,Tavelsjö,Västerbottens län,,,,google_maps,"Haddingen 84, 922 66 Tavelsjö",073-700 99 80,serpapi_google_maps
+Marris Hundar,Umeå,Västerbottens län,,https://www.bokadirekt.se/places/marris-hundar-ab-134551,https://www.facebook.com/bokadirekt,google_maps,"Stöcksjö Svartnäsväg 15, 905 80 Umeå",070-294 66 65,serpapi_google_maps
+Hundträningsytan Carlshöjd,Umeå,Västerbottens län,,,,google_maps,"Bärnstensvägen 2, 907 41 Umeå",,serpapi_google_maps
+Aktiv hundhälsa Umeå,Umeå,Västerbottens län,info@aktivhundhalsa.se,https://www.aktivhundhalsa.se,https://www.facebook.com/Aktivhundhalsa,google_maps,"Djäkneböle 744, Umeå",070-592 50 47,serpapi_google_maps
+Into the wild,Lund,Skåne län,,http://www.lund841.wordpress.com,,google_maps,"Nöbbelövs bygata 841, 226 60 Lund",070-637 47 44,serpapi_google_maps
+Kennel Mistykooi,Lund,Skåne län,,http://www.mistykooi.se/430707859,,google_maps,"Juryvägen 53, 226 57 Lund",070-090 61 09,serpapi_google_maps
+Lylysdoghouse,Lund,Skåne län,,https://lylysdoghouse.se,,google_maps,"Bankgatan 15, 223 52 Lund",046-527 27,serpapi_google_maps
+Kennel Rivenfield,Anderslöv,Skåne län,hej@rivenfield.se,https://rivenfield.se,https://www.facebook.com/Rivenfield,google_maps,"Grönbyvägen 36-10, 231 73 Anderslöv",070-213 95 50,serpapi_google_maps
+Mammut Hund och Katt,Lund,Skåne län,hej@mammut.nu,http://www.mammut.nu,https://www.facebook.com/mammuthundkatt,google_maps,"Karhögstorg 8, 223 55 Lund",046-211 21 22,serpapi_google_maps
+Hundstund,Lund,Skåne län,annat@hundstund.com,http://www.hundstund.com,https://www.facebook.com/hundstund,google_maps,"Åldermansgatan 2, 227 64 Lund",070-844 60 01,serpapi_google_maps
+Kennel By Frost,Lund,Skåne län,helle@byfrost.se,http://www.byfrost.se,,google_maps,,070-790 83 03,serpapi_google_maps
+Dogman and friends,Lund,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-lund,https://www.facebook.com/DogmanAB,google_maps,"Företagsvägen 10, 227 61 Lund",042-442 22 00,serpapi_google_maps
+KarMas Hundcenter,Lund,Skåne län,,http://karmashundcenter.se,,google_maps,,072-501 03 40,serpapi_google_maps
+TassDröm - Lyxiga hundbäddar & roliga hundleksaker Sverige,Lund,Skåne län,voff@tassdrom.se,https://www.tassdrom.se,https://www.facebook.com/people/TassDr%C3%B6m/61566376013453,google_maps,"Kungsgatan 2c, 223 50 Lund",072-961 52 53,serpapi_google_maps
+Charas 10 valpar,Lund,Skåne län,,http://www.facebook.com/charas10valpar,,google_maps,,070-145 62 90,serpapi_google_maps
+Värpinge Hundrastgård,Lund,Skåne län,lunds.kommun@lund.se,https://lund.se/uppleva-och-gora/natur-lekplatser-och-parker/hundrastgardar,http://www.facebook.com/lundskommun,google_maps,"Ministervägen 47, 227 62 Lund",046-359 50 00,serpapi_google_maps
+Hundrastgård,Unnamed Road,Skåne län,lunds.kommun@lund.se,http://www.lund.se,http://www.facebook.com/lundskommun,google_maps,Unnamed Road,,serpapi_google_maps
+Hundrastgård,Lund,Skåne län,,,,google_maps,"Fanans gränd 12, 226 48 Lund",,serpapi_google_maps
+Hundrastgården Fårhagen,Lund,Skåne län,,,,google_maps,"Skyttelinjen 85, 226 49 Lund",,serpapi_google_maps
+Höje Hund & Park AB,Lund,Skåne län,marja@hunddagis-lund.se,http://www.hunddagis-lund.se,http://www.facebook.com/HojeHundochPark,google_maps,"S:t Lars v 55, 222 70 Lund",070-315 11 90,serpapi_google_maps
+Hundtrimmeriet i Lund,Lund,Skåne län,charlott.berglund@gmail.com,http://www.hundtrimmerietilund.se,,google_maps,"Nöbbelövs torg 19, 226 52 Lund",070-945 01 22,serpapi_google_maps
+Borgarparken hundrastgård,Lund,Skåne län,lunds.kommun@lund.se,https://lund.se/uppleva-och-gora/natur-lekplatser-och-parker/hundrastgardar,http://www.facebook.com/lundskommun,google_maps,"Fäladstorget 1, 226 58 Lund",046-359 50 00,serpapi_google_maps
+Borås Brukshundklubb,Borås,Västra Götalands län,,http://www.borasbk.se,,google_maps,"Maskingatan 3, 504 62 Borås",,serpapi_google_maps
+Aki Hundcenter,Borås,Västra Götalands län,nermin@aki-hundcenter.se,http://www.aki-hundcenter.se,https://www.facebook.com/Aki-Hundcenter-AB-2142039139457539,google_maps,"Humlegatan 13, 504 51 Borås",070-940 27 95,serpapi_google_maps
+Ryaåsens Kennel Cockerpoo & Australian labradoodle,Borås,Västra Götalands län,info@ryaasens.se,http://ryaasens.se,https://www.facebook.com/ryaasenshundar,google_maps,"Sjögården 6, 504 75 Borås",070-438 41 71,serpapi_google_maps
+Hundspektra,Borås,Västra Götalands län,hej@hundspektra.se,http://hundspektra.se,https://www.facebook.com/hundspektra,google_maps,"Regementsgatan 30 E, 504 35 Borås",,serpapi_google_maps
+Hundrastgård Fjärdingsparken,Borås,Västra Götalands län,tekniska@boras.se,https://www.boras.se/upplevaochgora/lekplatserochaktivitetsplatser/hundrastplatser.4.605a2fc161ce5ff59db3a0.html,https://facebook.com/borasstad,google_maps,"Gamla Brämhultsvägen 81, 507 40 Borås",,serpapi_google_maps
+Hundflax,Borås,Västra Götalands län,,https://www.hundflax.se,https://www.facebook.com/hundflax,google_maps,,070-482 52 45,serpapi_google_maps
+Babsans hund- & kattklipp samt hunddagis,Borås,Västra Götalands län,,http://www.babsanshundochkattklipp.se,,google_maps,"Regementsgatan 2, 504 31 Borås",070-938 71 61,serpapi_google_maps
+Hundvakt,Borås,Västra Götalands län,,,,google_maps,"Gustav Adolfsgatan 60, 504 57 Borås",073-945 49 07,serpapi_google_maps
+Prima Hund,Borås,Västra Götalands län,,http://www.primacura.se,,google_maps,"Lars Kaggsgatan 2, 504 42 Borås",073-057 37 74,serpapi_google_maps
+Lavindalens Kennel,Sundsvall,Västernorrlands län,,,,google_maps,"Klissvägen 38, 853 57 Sundsvall",072-640 79 02,serpapi_google_maps
+Zallayas kennel,Kovland,Västernorrlands län,tove@zallayas.se,http://zallayas.se,,google_maps,"Tove Söderblom, Sulå 113, 855 92 Kovland",070-265 68 88,serpapi_google_maps
+Kennel Rustic,Sundsbruk,Västernorrlands län,,https://swedmapi.org/details/kennel-rustic-ChIJA3H,,google_maps,"Ekebovägen, 863 35 Sundsbruk",070-254 38 18,serpapi_google_maps
+Kennel Tale,Njurunda,Västernorrlands län,,,,google_maps,"Marnavägen 252, 862 96 Njurunda",070-663 06 36,serpapi_google_maps
+Elittrim,Sundsbruk,Västernorrlands län,,,,google_maps,"Tisdagsvägen 2, 863 34 Sundsbruk",070-667 05 64,serpapi_google_maps
+Alkett's Kennel,Sundsbruk,Västernorrlands län,,http://www.alketts.se,,google_maps,"Kantarellvägen 40, 863 34 Sundsbruk",,serpapi_google_maps
+Västernorrlands Kennelklubb,Sundsbruk,Västernorrlands län,sekreterare@vnkk.se,http://www.skk.se/vnkk,https://www.facebook.com/VasternorrlandsKennelklubb,google_maps,"Berghemsvägen 4B, 863 36 Sundsbruk",,serpapi_google_maps
+Sötnosar,Alnö,Västernorrlands län,sotnosar.nu@gmail.com,http://www.sotnosar.nu,https://www.facebook.com/Sötnosar-Djurpensionat-Alnö-Sundsvall-1212516288765762,google_maps,"Näset 200, 865 91 Alnö",073-856 74 40,serpapi_google_maps
+Thidas kennel,Sundsvall,Västernorrlands län,lotta@thidas.se,http://www.thidas.se/kontakt.html,,google_maps,"Klissvägen 15, 853 57 Sundsvall",070-317 32 08,serpapi_google_maps
+kennel Yam-Yam's,Sundsvall,Västernorrlands län,kennel@yamyams.se,http://yamyams.se/Kenneln.html,,google_maps,"Älgstigen 12, 856 43 Sundsvall",060-61 98 44,serpapi_google_maps
+Dogman and friends,Sundsvall,Västernorrlands län,,https://dogman.se/store-detail/dogman-and-friends-sundsvall-birsta,https://www.facebook.com/dogmansundsvall,google_maps,"Antennvägen 23, 863 37 Sundsvall",060-770 00 30,serpapi_google_maps
+Anna-K Dogcare - Hundtrim Sundsvall,Sundsvall,Västernorrlands län,info@annakdogcare.se,https://annakdogcare.se,https://www.facebook.com/AMNIS-Hundhus-Birsta-102511344870817,google_maps,"Västra Långgatan 58, 852 37 Sundsvall",070-172 03 19,serpapi_google_maps
+Hundens Hus Sundsvall,Sundsvall,Västernorrlands län,lena@hundsundsvall.com,https://www.hundsundsvall.com,,google_maps,"Södra Allén 5, 852 44 Sundsvall",070-286 49 80,serpapi_google_maps
+AMNIS HUNDHUS Södra Berget,Sundsvall,Västernorrlands län,sodraberget@amnishundhus.se,http://www.amnishundhus.se,https://www.facebook.com/amnishundhussodraberget,google_maps,"Bataljonsvägen 8, 852 38 Sundsvall",076-148 13 40,serpapi_google_maps
+Sundsvalls Hundsalong AB,Sundsvall,Västernorrlands län,,https://www.sundsvallshundsalong.se,https://www.facebook.com/profile.php,google_maps,"Bäckebovägen 12, 856 53 Sundsvall",073-808 75 16,serpapi_google_maps
+Sundsvalls Brukshundklubb,Sundsvall,Västernorrlands län,styrelsen@sundsvallsbhk.se,http://www.sundsvallsbhk.se,https://www.facebook.com/sundsvallsbrukshundklubb,google_maps,"Gudmundsbyn 201, 863 42 Sundsvall",,serpapi_google_maps
+AME Products,Sundsvall,Västernorrlands län,anne.lindeblad@outlook.com,http://www.ameproducts.se/aterforsaljare.html,,google_maps,"Travbanevägen 3, 857 51 Sundsvall",060-56 38 87,serpapi_google_maps
+Sundsvalls Hundpark,Sundsvall,Västernorrlands län,sundsvallshundpark@gmail.com,https://sundsvall.se/uppleva-och-gora/idrott-motion-och-friluftsliv/friluftsliv-och-motion/hundliv/hundrastgardar,https://www.facebook.com/sundsvallskommun,google_maps,"Kolvägen 3, 852 29 Sundsvall",073-824 65 56,serpapi_google_maps
+Södra Kajens hundparksförening,Sundsvall,Västernorrlands län,,https://www.facebook.com/sodrakajenshundpark,,google_maps,"98QG+57, 852 29 Sundsvall",,serpapi_google_maps
+RK9 Tjänstehundar,Sundsvall,Västernorrlands län,,https://rk9.se,,google_maps,"Kompanivägen 20, 852 38 Sundsvall",076-097 61 17,serpapi_google_maps
+AMNIS HUNDHUS Gärde,Sundsvall,Västernorrlands län,sodraberget@amnishundhus.se,http://www.amnishundhus.se,https://www.facebook.com/amnishundhussodraberget,google_maps,"Gärdevägen 9C, 856 50 Sundsvall",073-069 52 52,serpapi_google_maps
+Bicepsmarie,Sundsvall,Västernorrlands län,info@bicepsmarie.se,http://www.bicepsmarie.se,,google_maps,"Regementsvägen 2, 852 38 Sundsvall",070-245 46 19,serpapi_google_maps
+Kennel Starzingers Aurora,Gävle,Gävleborgs län,,https://swemaps.org/details/kennel-starzingers-aurora-ChIJO-0,,google_maps,"Opalvägen, 804 32 Gävle",070-955 72 89,serpapi_google_maps
+High Five's Kennel,Gävle,Gävleborgs län,,https://www.highfives.se,,google_maps,"Domarringen 6, 804 33 Gävle",070-281 35 77,serpapi_google_maps
+Gästriklands Kennelklubb,Gävle,Gävleborgs län,sekreterare@gastriklandskk.se,https://www.skk.se/gakk,,google_maps,"Norra Slottsgatan 22, 803 23 Gävle",,serpapi_google_maps
+Trajens kennel,Gävle,Gävleborgs län,,https://swemaps.org/details/trajens-kennel-ChIJgVT,,google_maps,"Oppalavägen 21, 805 97 Gävle",026-14 50 60,serpapi_google_maps
+Kennel Specialdream's,Gävle,Gävleborgs län,,,,google_maps,"Sjöbovägen 5, 804 24 Gävle",070-155 44 22,serpapi_google_maps
+cavamirs,Gävle,Gävleborgs län,erna-britt@cavamirs.se,http://cavamirs.se/contact.html,,google_maps,"Furumovägen 26 B, 806 42 Gävle",070-512 95 67,serpapi_google_maps
+Gävle Hundungdom,Gävle,Gävleborgs län,,,,google_maps,"Skogmursvägen, 805 91 Gävle",,serpapi_google_maps
+Gävle Brukshundklubb,Gävle,Gävleborgs län,sekreterare@gavlebk.se,http://gavlebk.se,,google_maps,"Skogmursvägen 74, 805 91 Gävle",,serpapi_google_maps
+Aktiv Hundgrupp,Gävle,Gävleborgs län,,https://swedmapi.org/details/aktiv-hundgrupp-ChIJWUv,,google_maps,802 67 Gävle,,serpapi_google_maps
+Annas Hundskola AB,Gävle,Gävleborgs län,anna@annashundskola.se,http://www.annashundskola.se,https://www.facebook.com/profile.php,google_maps,"Utmarksvägen 5, 802 91 Gävle",,serpapi_google_maps
+Skogmursgårdens Hunddagis & Pensionat,Gävle,Gävleborgs län,info@skogmursgarden.se,http://www.skogmursgarden.se,,google_maps,"Skogmursvägen 84, 805 91 Gävle",070-318 26 69,serpapi_google_maps
+Hundrastgård,Gävle,Gävleborgs län,,,,google_maps,804 30 Gävle,,serpapi_google_maps
+Hexornas Håla,Gävle,Gävleborgs län,,https://swemaps.org/details/hexornas-hla-ChIJydC,,google_maps,"Nobelvägen 19, 802 67 Gävle",,serpapi_google_maps
+M&L Hundcenter,Gävle,Gävleborgs län,mlhundcenter@hotmail.com,http://mlhundcenter.se,https://www.facebook.com/mlhund,google_maps,"Norra Slottsgatan 17, 803 23 Gävle",076-110 00 59,serpapi_google_maps
+Jennys Hund & Katt,Valbo,Gävleborgs län,,https://jennyshundochkatt.se,https://www.facebook.com/Jennyshundochkatt,google_maps,"Valbov. 315, 818 35 Valbo",026-13 04 70,serpapi_google_maps
+BLs Hundtjänst,Gävle,Gävleborgs län,,http://blshundtjanst.hundpoolen.se,,google_maps,"Ulvsmygen 27, 806 34 Gävle",070-743 58 54,serpapi_google_maps
+Hundfrisör Paulas Hundsalong,Gävle,Gävleborgs län,,https://www.instagram.com/fluffbypaula,,google_maps,"Norra Slottsgatan 17, 803 23 Gävle",070-993 30 65,serpapi_google_maps
+Hundfrisör Ankis hundsalong,Gävle,Gävleborgs län,,https://m.facebook.com/61570177307290,,google_maps,"Norra Slottsgatan 17, 803 23 Gävle",073-773 63 03,serpapi_google_maps
+Dog Boost,Gävle,Gävleborgs län,,http://www.dogboost.se,,google_maps,,073-663 06 68,serpapi_google_maps
+Pomitit Hunddagis,Gävle,Gävleborgs län,,http://www.adventuregavle.se,,google_maps,"Första tvärgatan 14, 802 84 Gävle",076-474 94 98,serpapi_google_maps
+Kennel Silversign,Eskilstuna,Södermanlands län,,http://www.silversign.se,,google_maps,"Ramshammar 15, 635 06 Eskilstuna",,serpapi_google_maps
+Ruskus kennel,Eskilstuna,Södermanlands län,phernilla@ruskus.se,http://ruskus.se/Ruskus%20kennel/Kontakt.html,,google_maps,"Ungergatan, 633 51 Eskilstuna",016-14 76 03,serpapi_google_maps
+Maries MOD,Husby-Rekarne,Södermanlands län,tibblan_83@hotmail.com,http://www.mariesmod.se,https://www.facebook.com/MariesMOD,google_maps,"6GF6+P8, 635 18 Husby-rekarne",073-994 83 82,serpapi_google_maps
+Eskilstuna HundCenter,Eskilstuna,Södermanlands län,,http://www.eskilstunahundcenter.se,,google_maps,"Skjulstagatan 3C, 632 29 Eskilstuna",016-51 91 98,serpapi_google_maps
+Gråsiskas Kennel,Torshälla,Södermanlands län,,https://swemaps.org/details/grsiskas-kennel-ChIJt7o,,google_maps,"Arkeologgatan 18, 644 35 Torshälla",070-626 59 75,serpapi_google_maps
+Eskilstuna Hunddressyrklubb,Eskilstuna,Södermanlands län,ehdk.ordf@gmail.com,http://www.ehdk.se,,google_maps,Linvävartorp 92,,serpapi_google_maps
+RK ProDog,Eskilstuna,Södermanlands län,,,,google_maps,"Olstorpsvägen 11, 635 08 Eskilstuna",070-759 65 40,serpapi_google_maps
+Sk Eskilstuna,Torshälla,Södermanlands län,lagunens@telia.com,http://www.skeskilstuna.se/styrelsen,,google_maps,"Säbygatan 26B, 644 34 Torshälla",076-633 49 52,serpapi_google_maps
+Kennel Broddways,Eskilstuna,Södermanlands län,josefine@broddways.se,https://www.kennelbroddway.se/contact-us.php,,google_maps,,,serpapi_google_maps
+Eskilstuna Brukshundsklubb,Eskilstuna,Södermanlands län,ordforande@eskilstunabk.se,http://eskilstunabk.se,https://www.facebook.com/eskilstunabk,google_maps,"Gamla Skolan, 632 22 Eskilstuna",,serpapi_google_maps
+Rk Rehab Eskilstuna,Eskilstuna,Södermanlands län,,https://naviswmap.org/details/rk-rehab-eskilstuna-ChIJlWk,,google_maps,"Larsbo, 635 07 Eskilstuna",072-449 60 10,serpapi_google_maps
+Kennel Eternity,Katrineholm Nv,Södermanlands län,kennel.eternity@gmail.com,https://www.eternity.se,,google_maps,,,serpapi_google_maps
+Åparkens hundlekpark,Eskilstuna,Södermanlands län,info@eskilstuna.se,https://www.eskilstuna.se/kultur-och-fritid/lekplatser-parker-och-torg/hundlekparker/aparkens-hundlekpark,https://www.facebook.com/eskilstunakommun,google_maps,"Ådalsvägen, 632 29 Eskilstuna",016-710 76 80,serpapi_google_maps
+Krongatans Hundlekpark,Eskilstuna,Södermanlands län,info@eskilstuna.se,https://www.eskilstuna.se/kultur-och-fritid/lekplatser-parker-och-torg/hundlekparker/krongatans-hundlekpark,https://www.facebook.com/eskilstunakommun,google_maps,"Grankvistgatan 6, 632 24 Eskilstuna",,serpapi_google_maps
+Lilla Asphult,Eskilstuna,Södermanlands län,marit@lillaasphult.se,http://www.lillaasphult.se,,google_maps,"Kjulamon Asphult, 635 06 Eskilstuna",070-752 80 01,serpapi_google_maps
+På Fyra Tassar AB,Eskilstuna,Södermanlands län,ingela@eskilstunahundcenter.se,http://pafyratassar.se,https://www.facebook.com/Eskilstunahundcenter,google_maps,"Skjulstagatan 3D, 632 29 Eskilstuna",073-814 69 07,serpapi_google_maps
+Helenas Hundskola,Tumbo,Södermanlands län,helenashundskola@telia.com,http://www.hundmassoren.com,https://www.facebook.com/helenashundskola,google_maps,635 31 Tumbo,070-402 82 40,serpapi_google_maps
+"Hundfrisören, Anette Blomquist",Eskilstuna,Södermanlands län,info@hundfrisoren.se,http://www.hundfrisoren.se,https://www.facebook.com/hundfrisorenieskilstuna,google_maps,"Verkstadsgatan 9c, 633 61 Eskilstuna",070-339 97 71,serpapi_google_maps
+Hundfrisören,Eskilstuna,Södermanlands län,,,,google_maps,"Tegelbruksgatan 26A, 632 28 Eskilstuna",040-008 24 50,serpapi_google_maps
+Södertälje Lokala Kennelklubb,Södertälje,Stockholms län,styrelsen@sodertaljekk.se,http://sodertaljekk.se,,google_maps,"1, Måsnarydsvägen, Södertälje",,serpapi_google_maps
+Jaktgranats kennel,Södertälje,Stockholms län,,,,google_maps,"Eksättravägen 1, 152 95 Södertälje",,serpapi_google_maps
+Sjöhaga Hundcenter,Södertälje,Stockholms län,,,,google_maps,"SJÖHAGA 1, 151 39 Södertälje",073-091 16 99,serpapi_google_maps
+"Irishcanis kennel, fd Greirish",Södertälje,Stockholms län,,,,google_maps,"Eksättravägen 5, 152 95 Södertälje",,serpapi_google_maps
+Nordic Canine’s Kennel,Järna,Stockholms län,,http://nordiccanine.se,https://www.facebook.com/NordicCanineKennel,google_maps,"Disas väg, 153 38 Järna",,serpapi_google_maps
+Stångarö Hundpensionat,Södertälje,Stockholms län,stangarohundpensionat@gmail.com,http://stangarohundpensionat.se,https://www.facebook.com/stangarohundpensionat,google_maps,"STÅNGARÖ 61, 151 52 Södertälje",072-538 26 26,serpapi_google_maps
+Kennel The Lionforce´s,Södertälje,Stockholms län,pernilla.ahlsvard@gmail.com,http://www.thelionforces.se/kontakt-25175099,https://www.facebook.com/people/Kennel-The-Lionforces/100054244821642,google_maps,"Ymervägen 28, 151 60 Södertälje",070-330 46 22,serpapi_google_maps
+Södertälje Brukshundklubb,Södertälje,Stockholms län,styrelsen.sodertaljebk@gmail.com,http://www.sodertaljebk.se,,google_maps,151 52 Södertälje,,serpapi_google_maps
+Svenska Hundklubben Södertälje,Enhörna,Stockholms län,,,,google_maps,151 50 Enhörna,,serpapi_google_maps
+Fria Hundar Skandinavien AB,Klockrike,Stockholms län,johan@friahundar.se,http://www.friahundar.se,https://www.facebook.com/friahundar,google_maps,"Örbäck 41, 591 78 Klockrike",070-483 61 01,serpapi_google_maps
+Styvje Hundcenter,Norrala,Stockholms län,styvjehundcenter@gmail.com,https://styvjehundcenter.bokamera.se/#about-us,,google_maps,"Styvje 383, 826 94 Norrala",070-214 71 21,serpapi_google_maps
+Dog Care Center Sweden AB,Södertälje,Stockholms län,,,,google_maps,"92 B, Klockarvägen, 151 62 Södertälje",070-651 90 64,serpapi_google_maps
+Happy Dogs Daycare,Södertälje,Stockholms län,hej@happydogsdaycare.se,https://www.happydogsdaycare.se,https://www.facebook.com/happydogsdaycaresodertalje,google_maps,"Täppgatan 10 A, 151 33 Södertälje",070-435 59 06,serpapi_google_maps
+Nykvarns Hundhall,Nykvarn,Stockholms län,info@nykvarnshundhall.se,http://nykvarnshundhall.se,,google_maps,"västra kumla 8A, 155 91 Nykvarn",070-597 81 05,serpapi_google_maps
+Tälje Hundtrim,Södertälje,Stockholms län,,https://www.taljehundtrim.se/index.html,,google_maps,"Dalgatan 11A, 151 33 Södertälje",08-550 377 47,serpapi_google_maps
+Labradorklubben Värmland,Karlstad,Värmlands län,birgitta.karlsson54@gmail.com,https://www.lrkvarmland.se,https://www.facebook.com/Labradorklubben.Varmland,google_maps,"Ingalills väg 6, 656 38 Karlstad",070-538 21 11,serpapi_google_maps
+Kennel Glimmaheden,Karlstad,Värmlands län,,https://naviswbusiness.org/details/kennel-glimmaheden-ChIJ5fd,,google_maps,"FÅGELVIKS-SUNDSTORP 515, 655 94 Karlstad",073-426 50 53,serpapi_google_maps
+Rumpnissens kennel Instruktör Tränare & Coach,Kil,Värmlands län,info@rumpnissenskennel.com,http://rumpnissenskennel.com,https://www.facebook.com/rumpnissenskennel,google_maps,"Granliden 1, 665 92 Kil",070-565 82 22,serpapi_google_maps
+Kennel,Karlstad,Värmlands län,mailtoinger@kennelwind.se,http://kennelhiwind.se/kontakt.html,,google_maps,"Storsvängen 35, 654 68 Karlstad",054-83 31 64,serpapi_google_maps
+Väse Djurpensionat. Hundpensionat,Väse,Värmlands län,kleven716@gmail.com,http://xn--vsedjurpensionat-vnb.se,,google_maps,"KLEVEN 716, 655 96 Väse",070-714 63 39,serpapi_google_maps
+Segerstad Hundpensionat,Vålberg,Värmlands län,,,,google_maps,"LILJENÄS 302, 664 94 Vålberg",070-324 13 17,serpapi_google_maps
+Dreamchic Kennel,Karlstad,Värmlands län,maria@dreamchicskennel.se,http://www.dreamchicskennel.se/empty_7.html,,google_maps,"Fältspatvägen 15, 653 50 Karlstad",076-111 06 67,serpapi_google_maps
+Bernerhagens kennel,Säffle,Värmlands län,trollsvans@hotmail.com,http://bernerhagen.se,,google_maps,"Björkhagen, 661 91 Säffle",070-680 12 46,serpapi_google_maps
+Dogorama Hundsporthall,Karlstad,Värmlands län,,http://www.dogorama.se,,google_maps,"Rådalsvägen 13, 653 50 Karlstad",,serpapi_google_maps
+Lappizaros kennel,Tolita,Värmlands län,,,,google_maps,"Karlslund 2, 665 92 Tolita",,serpapi_google_maps
+Hund & Kattspecialisten,Karlstad,Värmlands län,,http://www.hundkattspecialisten.se,,google_maps,"Blockgatan 8, 653 41 Karlstad",054-13 90 20,serpapi_google_maps
+Dogorama Hundshop,Karlstad,Värmlands län,,http://www.dogoramahundshop.se,,google_maps,"Rudsvägen 14, 654 63 Karlstad",,serpapi_google_maps
+Gläntans Väsen,Sunne,Värmlands län,jagtohnie@yahoo.se,http://glantansvasen.webflow.io,,google_maps,"Bjälverud 185, 686 93 Sunne",073-084 11 32,serpapi_google_maps
+Schäferhundklubben Karlstad,Karlstad,Värmlands län,anna.bergstrom@forshagaakademin.se,http://www.sksolsta.se,,google_maps,"Lovartsgatan, 652 21 Karlstad",072-214 59 18,serpapi_google_maps
+Dogorama Hund & Katt,Hammarö,Värmlands län,,https://www.dogorama.se,,google_maps,"Bivägen 7, 663 41 Hammarö",,serpapi_google_maps
+BeutystepBullies,Karlstad,Värmlands län,,,,google_maps,,076-217 09 73,serpapi_google_maps
+Karlstads Brukshundklubb,Karlstad,Värmlands län,,,,google_maps,"Höje 506, 655 92 Karlstad",,serpapi_google_maps
+Brilliant DOG,Karlstad,Värmlands län,anita@brilliantdog.se,https://brilliantdog.se,https://www.facebook.com/profile.php,google_maps,"Döbelnsgatan 8, 653 38 Karlstad",070-630 99 05,serpapi_google_maps
+Karlstads Hunddagis AB,Karlstad,Värmlands län,,http://www.karlstadshunddagis.se,,google_maps,"Stallplatsvägen 2, 654 65 Karlstad",054-21 11 40,serpapi_google_maps
+Karlstads Hundcenter,Karlstad,Värmlands län,,,,google_maps,"Stallplatsvägen 4, 654 65 Karlstad",,serpapi_google_maps
+Hundsalong Mr. Terrier AB,Karlstad,Värmlands län,hundsalong@misterterrier.se,http://www.misterterrier.se,https://www.facebook.com/misterterrier,google_maps,"Pilgården 1, 652 26 Karlstad",079-012 12 04,serpapi_google_maps
+Elins friskvård,Karlstad,Värmlands län,elinsfriskvard@gmail.com,https://www.elinsfriskvard.se,https://www.facebook.com/elinsfriskvardk9,google_maps,"Frödingshöjd 20, 656 37 Karlstad",,serpapi_google_maps
+Hundvård,Karlstad,Värmlands län,,,,google_maps,"Stinsgatan 5, 652 26 Karlstad",054-15 81 75,serpapi_google_maps
+Hundrastgård (arenan i Tormestad),Karlstad,Värmlands län,,,,google_maps,"Värmlandsgatan 2, 652 22 Karlstad",,serpapi_google_maps
+Carinas Hundtrim,Karlstad,Värmlands län,,https://swemaps.org/details/carinas-hundtrim-ChIJVz1,,google_maps,"Lingonstigen 19, 654 68 Karlstad",,serpapi_google_maps
+Changdobels - Täby Hundcenter,Täby,Stockholms län,taby@changdobels.se,https://changdobels.se/hundpensionat,https://www.facebook.com/Changdobels.Hundcenter,google_maps,"Prästgårdsvägen 55, 187 75 Täby",08-512 561 00,serpapi_google_maps
+Guldlyckans kennel,Täby,Stockholms län,,,,google_maps,"Sollentunavägen 12, 187 43 Täby",072-322 77 48,serpapi_google_maps
+Hunddrömmen AB,Täby,Stockholms län,info@hunddrommen.se,http://hunddrommen.com,https://www.facebook.com/Hundrommen,google_maps,"Renvägen 2, 187 35 Täby",070-738 19 87,serpapi_google_maps
+Hund och Kattpensionat Vallaren HB,Vallentuna,Stockholms län,,,,google_maps,"Gällstavägen 12A, 186 92 Vallentuna",08-510 231 32,serpapi_google_maps
+Hagbys Hundar HB,Täby,Stockholms län,,,,google_maps,"Hagbyvägen 44, 187 70 Täby",070-495 49 53,serpapi_google_maps
+Kennel Zetastar,Riala,Stockholms län,suzi.sundberg@gmail.com,http://www.kennelzetastar.com,https://www.facebook.com/kennelzetastar,google_maps,"Rumsättravägen 177, 761 13 Riala",070-530 06 61,serpapi_google_maps
+Changdobels - Vallentuna Hunddagis,Vallentuna,Stockholms län,vallentuna@changdobels.se,https://changdobels.se/hunddagis/vallentuna-hunddagis,https://www.facebook.com/changdobels.vallentuna.hunddagis,google_maps,"Okvistavägen 15, 186 40 Vallentuna",08-512 561 00,serpapi_google_maps
+Täby Häst & Hund,Täby,Stockholms län,,,,google_maps,"Vallavägen, 187 52 Täby",070-940 15 55,serpapi_google_maps
+Täby Kyrkby hundlekplats,Täby,Stockholms län,kc@taby.se,https://www.taby.se/fritid-och-kultur/natur-och-parker/hund-i-taby,,google_maps,"Ryavägen 13, 187 77 Täby",,serpapi_google_maps
+Enhagens hundlekplats,Täby,Stockholms län,,https://www.facebook.com/groups/455609955093709,,google_maps,"Enhagsvägen 2, 187 40 Täby",,serpapi_google_maps
+TassTrollet AB,Täby,Stockholms län,carina@tasstrollet.se,https://www.tasstrollet.se,https://www.facebook.com/profile.php,google_maps,"Åkerivägen 3, 187 75 Täby",070-818 82 99,serpapi_google_maps
+Svanstippens Hunddagis,Täby,Stockholms län,svanstippen@yahoo.se,http://www.svanstippen.se,https://www.facebook.com/SvanstippensHunddagis,google_maps,"Viggbyholmsvägen 75, 183 77 Täby",076-210 16 85,serpapi_google_maps
+Hundhus1 i Täby HB,Täby,Stockholms län,info@hundhus1.se,http://www.hundhus1.se,https://www.facebook.com/hundhus1,google_maps,"Holmgårdsvägen 5, 187 74 Täby",073-396 06 07,serpapi_google_maps
+Täby park hundlek,Täby,Stockholms län,,http://www.taby-park.se,https://www.facebook.com/BoITabyPark,google_maps,"Galoppvägen 3, 183 64 Täby",,serpapi_google_maps
+Svenska Dobermannklubben Stockholm,Täby,Stockholms län,,https://sdkstockholm.wordpress.com,,google_maps,"Löttingevägen 21, 187 69 Täby",,serpapi_google_maps
+Anderssons häst & hund AB,Täby,Stockholms län,,,,google_maps,"Ritarslingan 18, 187 66 Täby",08-756 38 00,serpapi_google_maps
+Changdobels - Danderyd Hunddagis,Danderyd,Stockholms län,danderyd@changdobels.se,https://changdobels.se/hunddagis/danderyd-hunddagis,https://www.facebook.com/danderydhunddagis,google_maps,"Rinkebyvägen 23, 182 36 Danderyd",08-512 561 00,serpapi_google_maps
+Lazy Dogspa,Täby,Stockholms län,info@lazydogspa.se,https://lazydogspa.se,https://facebook.com/profile.php,google_maps,"Hägernäsvägen 9, 183 66 Täby",076-585 91 84,serpapi_google_maps
+"Hundlekplatsen, Centralparken",Täby,Stockholms län,kc@taby.se,https://www.taby.se/fritid-och-kultur/natur-och-parker/hund-i-taby,,google_maps,"Gökvägen 29, 183 51 Täby",,serpapi_google_maps
+Stay and play hundcenter AB,Täby,Stockholms län,hunddagis@stayandplayhundcenter.se,http://www.stayandplayhundcenter.se,http://www.facebook.com/stayandplayhundcenter,google_maps,"Flygvillevägen 8, 183 67 Täby",073-585 10 09,serpapi_google_maps
+Täby Hundspa,Täby,Stockholms län,,,,google_maps,"Renvägen 2, 187 35 Täby",,serpapi_google_maps
+Altersundets Kennel,Luleå,Norrbottens län,annhelenviden@gmail.com,http://www.altersundets.se,https://www.facebook.com/altersundets,google_maps,"Altersundsvägen 208, 975 97 Luleå",0920-700 24,serpapi_google_maps
+Lillimars kennel,Luleå,Norrbottens län,,http://www.lillimars.se/frameset.html,,google_maps,"Bälingevägen 709, 975 94 Luleå",070-555 15 10,serpapi_google_maps
+Kennel Azlandos,Luleå,Norrbottens län,,,,google_maps,"Virkesvägen, 972 51 Luleå",070-540 09 98,serpapi_google_maps
+Röger Hundtjänst,Luleå,Norrbottens län,,http://www.roegers.se,,google_maps,"Upplagsvägen 26, 972 54 Luleå",072-744 67 80,serpapi_google_maps
+Stjärnskytten's Hundtjänster AB,Luleå,Norrbottens län,,,,google_maps,"Sandnäsetvägen 146, 975 94 Luleå",070-316 39 60,serpapi_google_maps
+Camatz shelties,Luleå,Norrbottens län,camatzshelties@gmail.com,https://camatz.bloggo.nu,,google_maps,"Tallskogsgatan 92, 976 36 Luleå",,serpapi_google_maps
+Binagårdens Hund- & Kattpensionat,Luleå,Norrbottens län,info@binagarden.se,http://www.binagarden.se,https://facebook.com/138177492902180,google_maps,"Svartskatavägen 996, 975 92 Luleå",0920-330 17,serpapi_google_maps
+Dogs of Hope,Södra Sunderbyn,Norrbottens län,,http://www.dogsofhope.se,https://www.facebook.com/dogsofhopelinneaholmgren,google_maps,"Sunderbyvägen 106, 954 42 Södra Sunderbyn",070-444 43 82,serpapi_google_maps
+Lilla Hundpensionatet Bälinge Luleå,Luleå,Norrbottens län,,,,google_maps,"Sandnäsetvägen 312, 975 94 Luleå",,serpapi_google_maps
+Kennel Lagoms,Luleå,Norrbottens län,lagoms@norfolk.se,http://www.norfolk.se/Kontakt.htm,,google_maps,"Alviksvägen 400, 975 93 Luleå",0920-804 02,serpapi_google_maps
+WheAtma's,Luleå,Norrbottens län,wheatmas@outlook.com,https://www.wheatmas.se/contact,,google_maps,"Kullevägen 17, 972 51 Luleå",070-339 61 21,serpapi_google_maps
+Groth's Hundtrim & Kennel,Töre,Norrbottens län,,,,google_maps,"(baksidan av huset), Backvägen 5, 950 40 Töre",070-376 75 39,serpapi_google_maps
+Botnia labradoodle,Luleå,Norrbottens län,botnialabradoodle@gmail.com,https://www.botnialabradoodle.se,https://www.facebook.com/profile.php,google_maps,"Honnörsgatan, 974 44 Luleå",070-635 45 46,serpapi_google_maps
+hundslottet,Luleå,Norrbottens län,linda@hundslottet.se,http://www.hundslottet.se,https://www.facebook.com/Hundslottet-109271510640806,google_maps,"Rävabergsvägen 50, 975 98 Luleå",070-220 41 80,serpapi_google_maps
+25:an Katt och Hund,Luleå,Norrbottens län,info@25an.nu,http://www.25an.nu,https://facebook.com/25anlulea,google_maps,"Banvägen 25A, 973 46 Luleå",072-227 27 21,serpapi_google_maps
+Luleå Brukshundklubb,Luleå,Norrbottens län,info@lulebk.nu,https://lulebk.nu,,google_maps,"Skidbacksvägen 44, 975 95 Luleå",,serpapi_google_maps
+Kennel Blåtiran,Luleå,Norrbottens län,,https://www.instagram.com/kennelblatiran,,google_maps,,072-242 62 26,serpapi_google_maps
+Sivans hundtjänst ekonomisk förening,Luleå,Norrbottens län,,,,google_maps,"Rådstugatan 2, 972 38 Luleå",,serpapi_google_maps
+Luleå Hundcenter,Luleå,Norrbottens län,,https://swemaps.org/details/lule-hundcenter-ChIJy12,,google_maps,"F, Upplagsvägen 30, 972 54 Luleå",,serpapi_google_maps
+Dogzone,Luleå,Norrbottens län,linnea@dogzone.nu,http://dogzone.nu,https://www.facebook.com/dogzone.nu,google_maps,"Måttsunds byaväg 252, 975 95 Luleå",,serpapi_google_maps
+Luleå Hundrastgård,Luleå,Norrbottens län,,https://www.lulea.se/samhalle--utveckling/aktuella-projekt/hundrastgard.html,,google_maps,"Stationsgatan 4, 972 38 Luleå",,serpapi_google_maps
+Hundvårdssalongen,Luleå,Norrbottens län,,http://www.facebook.com/hundvardssalongen,,google_maps,"Norra Vretvägen 5, 974 38 Luleå",0920-22 48 88,serpapi_google_maps
+ÅDRANS KENNEL - Papillon,Huddinge,Stockholms län,,,,google_maps,"Safirvägen 7, 141 91 Huddinge",,serpapi_google_maps
+Kennel Glamshine,Skogås,Stockholms län,,,,google_maps,"Hjorthagavägen, 142 91 Skogås",08-605 21 36,serpapi_google_maps
+Spadertass Hundcenter,Huddinge,Stockholms län,spadertasshundcenter@gmail.com,http://www.spadertass.se,,google_maps,"Björnkullaringen 48, 141 51 Huddinge",076-165 75 39,serpapi_google_maps
+Södertörns Hundcenter AB,Tullinge,Stockholms län,%20info@sodertornshundcenter.se,https://sodertornshundcenter.se,https://www.facebook.com/sodertornshundcenter,google_maps,"Gjutmästarvägen 3, 146 41 Tullinge",070-428 41 17,serpapi_google_maps
+Goat-Wool Hund & Katt Pensionat,Norra Sorunda,Stockholms län,info@goat-wool.se,http://www.goat-wool.se,https://www.facebook.com/Kennel-Goat-Wool-1394756444111308,google_maps,"Rensättravägen 1, 137 94 Norra Sorunda",070-251 91 45,serpapi_google_maps
+Guldtassens Trim & Hund Spa,Trångsund,Stockholms län,anette@guldtassens.com,http://www.guldtassens.com,https://facebook.com/Guldtassens,google_maps,"Kantljungsvägen 37, 142 64 Trångsund",073-612 27 98,serpapi_google_maps
+Vovve Lycka,Älta,Stockholms län,vovvelycka@gmail.com,https://www.vovvelycka.com,https://www.facebook.com/Vovve-Lycka-106558567659020,google_maps,"Örkroken 25, 138 40 Älta",073-523 11 64,serpapi_google_maps
+Lissma Hundhotell,Skogås,Stockholms län,nina@hundhotell.com,http://hundhotell.com,,google_maps,"Solängsvägen 9, 142 91 Skogås",,serpapi_google_maps
+Sveduddens Kennel,Bergshamra,Stockholms län,%20sveduddens@telia.com,http://www.sveduddens.se/Kontakt.htm,,google_maps,"Havsjövägen 31, 761 12 Bergshamra",0176-26 42 68,serpapi_google_maps
+Annikas Hundkälla,Huddinge,Stockholms län,hundkallan@telia.com,http://www.annikashundkalla.se,,google_maps,"Storskiftesvägen 61, 141 39 Huddinge",072-502 47 00,serpapi_google_maps
+Apollogruppen,Huddinge,Stockholms län,,,,google_maps,"Kvarnängsvägen, 141 49 Huddinge",,serpapi_google_maps
+Hundtjänsten Sverige,Tullinge,Stockholms län,info@hundtjansten.se,http://www.hundtjansten.se,https://www.facebook.com/www.hundtjansten.se,google_maps,"Pålamalmsvägen 50, 146 33 Tullinge",070-957 06 60,serpapi_google_maps
+Djurbutiken.se ( tidigare Tumba Hund & Katt),Tumba,Stockholms län,info@djurbutiken.se,https://www.djurbutiken.se,https://www.facebook.com/profile.php,google_maps,"Bergfotsvägen 5, 147 33 Tumba",08-530 379 98,serpapi_google_maps
+Nospromenaden Hundcenter,Årsta,Stockholms län,,https://www.nospromenaden.com,,google_maps,"Hjälmarsvägen 28, 120 53 Årsta",073-056 71 49,serpapi_google_maps
+The Red Dog,Huddinge,Stockholms län,info@thereddog.se,http://www.thereddog.se,,google_maps,,,serpapi_google_maps
+RP HundPiffet,Huddinge,Stockholms län,renee@hundpiffet.se,http://hundpiffet.se,,google_maps,"Älgvägen 14, 141 40 Huddinge",072-749 10 96,serpapi_google_maps
+Gava hund,Huddinge,Stockholms län,,http://gavahund.com,,google_maps,"Häggstavägen, 141 32 Huddinge",073-040 55 40,serpapi_google_maps
+Flashdance Hundcenter,Järfälla,Stockholms län,,http://www.flashdancehc.se,,google_maps,"Fakturavägen 10, 175 62 Järfälla",070-670 84 99,serpapi_google_maps
+Kennel Gårdskäls,Järfälla,Stockholms län,,https://www.gardskals.com/kontakt,,google_maps,"Oxelvägen 16 B, 175 64 Järfälla",08-760 77 78,serpapi_google_maps
+Barkarby Hunddagis,Järfälla,Stockholms län,,http://www.barkarbyhunddagis.nu,https://www.facebook.com/barkarbyhunddagis,google_maps,"Bruttovägen 24, 175 43 Järfälla",073-936 32 30,serpapi_google_maps
+Kennel Robic,Järfälla,Stockholms län,,,,google_maps,"Astrakangränd 15, 175 57 Järfälla",08-580 120 37,serpapi_google_maps
+Dogman and friends,Järfälla,Stockholms län,,https://dogman.se/store-detail/dogman-and-friends-stockholm-barkarby,https://www.facebook.com/barkarbydogman,google_maps,"Majorsvägen 2, 177 38 Järfälla",08-502 765 40,serpapi_google_maps
+Järfälla Hundsalong,Järfälla,Stockholms län,,https://m.youtube.com/@stegborgs,,google_maps,"Kopparvägen 63, 176 72 Järfälla",073-780 35 21,serpapi_google_maps
+Järfälla Brukshundklubb,Järfälla,Stockholms län,,http://www.jarfallabk.se,http://www.facebook.com/jarfallabrukshundklubb,google_maps,"E18, 176 77 Järfälla",,serpapi_google_maps
+Nova o Leias hundskola,Järfälla,Stockholms län,kontakt@novaleia.se,https://www.novaleia.se,https://www.facebook.com/profile.php,google_maps,176 71 Järfälla,,serpapi_google_maps
+Barkarby Hundsalong,Järfälla,Stockholms län,,http://www.barkarbyhundsalong.se,,google_maps,"Oxelvägen 31, 175 64 Järfälla",073-919 11 47,serpapi_google_maps
+Hundrastgård Barkarby,Järfälla,Stockholms län,kontakt@jarfalla.se,https://www.jarfalla.se/fritidochkultur/naturochfriluftsliv/hundrastgardar.4.640dac6b1300db73e7c800017237.html,https://www.facebook.com/jarfallakommun,google_maps,"Enköpingsvägen, 175 79 Järfälla",,serpapi_google_maps
+Hundpoolen AB,Sundbyberg,Stockholms län,info@hundpoolenab.se,http://www.hundpoolenab.se,,google_maps,"Vegagatan 6, 172 34 Sundbyberg",08-28 45 84,serpapi_google_maps
+Bellbreeds Kattpensionat,Bro,Stockholms län,kontakt@bellbreed.se,http://www.bellbreed.se,,google_maps,"Gruvfogdevägen 2, 197 93 Bro",070-860 44 18,serpapi_google_maps
+Ett Pet Spa&Salong (Ett Pet Sweden AB)-Kittys hundtrim,Järfälla,Stockholms län,hej@ettpet.se,https://ettpet.se,https://facebook.com/ettpetspa,google_maps,"Trehörningen 13, 176 74 Järfälla",076-005 72 36,serpapi_google_maps
+Kristys Hundtrim,Järfälla,Stockholms län,,,,google_maps,"Fakturavägen 10, 175 62 Järfälla",070-795 77 02,serpapi_google_maps
+Hundens Hörna Huvudsta,Solna,Stockholms län,info@hundenshorna.com,http://hundenshorna.com,https://www.facebook.com/HundensHornaButik,google_maps,"Polhemsgatan 11, 171 58 Solna",070-767 86 80,serpapi_google_maps
+Hundens Hörna Råsunda,Solna,Stockholms län,info@hundenshorna.com,http://www.hundenshorna.com,https://www.facebook.com/HundensHornaButik,google_maps,"Sankt Ansgars Väg 4, 169 51 Solna",070-738 22 34,serpapi_google_maps
+Emerita Hunddagis Solna,Solna,Stockholms län,,,,google_maps,"Hagbyvägen 2, 169 30 Solna",070-644 41 22,serpapi_google_maps
+Stay and Play Hundcenter,Solna,Stockholms län,hunddagis@stayandplayhundcenter.se,http://www.stayandplayhundcenter.se,http://www.facebook.com/stayandplayhundcenter,google_maps,"Huvudstagatan 12, 171 58 Solna",076-084 89 79,serpapi_google_maps
+Bergshamra Hunddagis,Solna,Stockholms län,,,,google_maps,"Järvstigen 2, 170 71 Solna",076-855 90 91,serpapi_google_maps
+Just Dog It,Solna,Stockholms län,jenny@justdogit.se,https://justdogit.se,,google_maps,"Östervägen 18B, 169 53 Solna",070-025 54 86,serpapi_google_maps
+The Kennel AB,Solna,Stockholms län,info@thekennel.se,http://www.thekennel.se,http://www.facebook.com/thekennel,google_maps,"Odlingsvägen 6, 170 77 Solna",08-444 98 80,serpapi_google_maps
+Mikis Hunddagis & Hundfrisör,Bromma,Stockholms län,info@mikishunddagis.se,https://www.mikishunddagis.se,https://www.facebook.com/mikishunddagis,google_maps,"Åkerhielmsgatan 14, 167 33 Bromma",070-712 38 80,serpapi_google_maps
+Dogcare,Bromma,Stockholms län,info@hunddagis.se,https://www.hunddagis.se,,google_maps,"Grundtvigsgatan 1, 168 48 Bromma",08-687 08 70,serpapi_google_maps
+N/E Hundäventyr,Solna,Stockholms län,info@hundaventyr.se,https://www.hundaventyr.se,https://www.facebook.com/people/Hund%C3%A4ventyr/61567684370680,google_maps,,072-939 64 58,serpapi_google_maps
+Hundcoach,Nacka,Stockholms län,emmeli@hundcoach.com,https://hundcoach.com,,google_maps,"Kvarnholmsvägen 100, 131 75 Nacka",070-777 82 12,serpapi_google_maps
+MöllerGårdens Hundcenter,Ängelholm,Stockholms län,info@mollergardenshundcenter.se,http://www.mollergardenshundcenter.se,,google_maps,"Ausås mölleväg 39, 262 95 Ängelholm",073-800 31 36,serpapi_google_maps
+B&K Hund,Solna,Stockholms län,,http://www.bkhund.se,https://www.facebook.com/profile.php,google_maps,"Råsundavägen 68, 169 57 Solna",072-366 57 36,serpapi_google_maps
+HundvaktStockholm,Solna,Stockholms län,,http://hundvaktstockholm.se,,google_maps,"Armégatan 24, 171 71 Solna",070-478 50 48,serpapi_google_maps
+"Emerita Hundfrisör, Kattfrisör Solna",Solna,Stockholms län,hej@emeritahunddagis.se,https://www.emeritahunddagis.se/hundfrisor,https://www.facebook.com/profile.php,google_maps,"Hagbyvägen 2, 169 30 Solna",076-005 29 31,serpapi_google_maps
+Emerita Hunddagis Solna Hagbyvägen,Solna,Stockholms län,hej@emeritahunddagis.se,https://www.emeritahunddagis.se/solna-hunddagis,https://www.facebook.com/wix,google_maps,"Hagbyvägen 2, 169 30 Solna",076-005 29 31,serpapi_google_maps
+Lyckliga Svansar Hundtrim,Solna,Stockholms län,,http://www.facebook.com/LyckligaSvansarHundtrim,,google_maps,"Polhemsgatan 11, 171 58 Solna",070-202 14 19,serpapi_google_maps
+Solna-Sundbybergs Brukshundklubb,Sundbyberg,Stockholms län,soren.stegius@yahoo.se,http://www.sosubk.com,http://www.facebook.com/wix,google_maps,"Sundbyberg Box 7053, 174 07 Sundbyberg",08-628 68 60,serpapi_google_maps
+Ponyos Hunddagis,Sundbyberg,Stockholms län,sofia@ponyoshunddagis.se,https://ponyoshunddagis.se,,google_maps,"Kvarngatan 38, 174 66 Sundbyberg",073-242 98 78,serpapi_google_maps
+Haglunds hundrastgård,Solna,Stockholms län,,,,google_maps,"9276+49, Children's play area, 169 66 Solna",,serpapi_google_maps
+Huvudstafältet Hundrastgård,Solna,Stockholms län,texttelefon@texttelefoni.se,https://www.solna.se/uppleva--gora/natur-och-friluftsliv/hundrastgardar,,google_maps,"Göran Perssons väg 10, 171 55 Solna",,serpapi_google_maps
+Skytteholmsfältets hundrastgård,Solna,Stockholms län,texttelefon@texttelefoni.se,https://www.solna.se/uppleva--gora/natur-och-friluftsliv/hundrastgardar,,google_maps,"Ankdammsgatan 44, 171 67 Solna",08-746 10 00,serpapi_google_maps
+Hundmodelandet Hundfrisör Stockholm,Solna,Stockholms län,,http://www.hundmodelandet.se,,google_maps,"Bryggan D, Karlbergs strand 4, 171 73 Solna",073-646 03 39,serpapi_google_maps
+Hundfrisörerna,Sundbyberg,Stockholms län,,,,google_maps,"Tulegatan 27, 172 78 Sundbyberg",08-28 53 35,serpapi_google_maps
+Vasalunds hundrastgård,Solna,Stockholms län,texttelefon@texttelefoni.se,https://www.solna.se/uppleva--gora/natur-och-friluftsliv/hundrastgardar,,google_maps,"Råsundavägen 86, 169 57 Solna",,serpapi_google_maps
+Nacka Hunddagis,Nacka,Stockholms län,,http://www.nackahunddagis.se,,google_maps,"Apportvägen 1, 131 47 Nacka",,serpapi_google_maps
+Dog Paradise,Nacka,Stockholms län,,,,google_maps,"Vikdalsgränd 10B, 131 51 Nacka",073-941 45 95,serpapi_google_maps
+Humandogs Hunddagis och hundhotell,Nacka,Stockholms län,humandogs.ab@gmail.com,https://www.humandogs.se,https://www.facebook.com/humandogssverige,google_maps,"Skurusundsvägen 153, 131 46 Nacka",070-435 40 44,serpapi_google_maps
+MyDogCare Nacka Forum,Nacka,Stockholms län,,https://mydogcare.com/nacka,https://www.facebook.com/MyDogCareSverige,google_maps,"Stadshusplatsen 4, 131 57 Nacka",072-227 39 55,serpapi_google_maps
+Primeras Hunddagis,Saltsjö-Boo,Stockholms län,jannicejuselius@primeras-hunddagis.se,http://www.primeras-hunddagis.se,,google_maps,"Ormingeplan 2, 132 30 Saltsjö-boo",072-306 18 11,serpapi_google_maps
+Nacka Brukshundklubb,Nacka,Stockholms län,sekreterare@nackabk.nu,https://www.nackabk.nu,,google_maps,"Apportvägen 1, 131 47 Nacka",073-638 86 02,serpapi_google_maps
+Värmdö hund- och kattpensionat,Värmdö,Stockholms län,,http://varmdohundokatt.se,,google_maps,"Nysvedsvägen 13, 139 51 Värmdö",070-953 43 91,serpapi_google_maps
+Hundrastgård Långsjön,Nacka,Stockholms län,info@nacka.se,https://www.nacka.se/uppleva--gora/friluftsliv-motion/hundar-i-nacka/hundrastgardar,http://www.facebook.com/nackakommun,google_maps,"Vattenverksvägen 9, 131 41 Nacka",,serpapi_google_maps
+Nacka-Värmdö Hundungdom Agilityplan,Nacka Östra,Stockholms län,styrelsen.nackahundungdom@gmail.com,http://www.nackavarmdohu.se,http://www.facebook.com/nackahundungdom,google_maps,"Skuru, Nacka Östra",,serpapi_google_maps
+Tollare Hundrastgård,Saltsjö-Boo,Stockholms län,info@nacka.se,https://www.nacka.se/uppleva--gora/friluftsliv-motion/hundar-i-nacka/hundrastgardar,http://www.facebook.com/nackakommun,google_maps,"Sockenvägen 46, 132 42 Saltsjö-boo",,serpapi_google_maps
+Hundrastgård Orminge,Saltsjö-Boo,Stockholms län,info@nacka.se,https://www.nacka.se/uppleva--gora/friluftsliv-motion/hundar-i-nacka/hundrastgardar,http://www.facebook.com/nackakommun,google_maps,"Skarpövägen, 132 33 Saltsjö-boo",,serpapi_google_maps
+MyDogCare Östermalm,Stockholm,Stockholms län,,https://mydogcare.com/ostermalm,https://www.facebook.com/MyDogCareSverige,google_maps,"Jungfrugatan 58, 115 31 Stockholm",073-818 62 22,serpapi_google_maps
+Nacka hundtjänst,Saltsjö-Boo,Stockholms län,,,,google_maps,"Ormingeplan 2, 132 30 Saltsjö-boo",08-618 18 11,serpapi_google_maps
+Älta hundhall,Älta,Stockholms län,kontakt@altahundhall.se,http://altahundhall.se,https://www.facebook.com/altahallen,google_maps,"Grustagsvägen 6, 138 40 Älta",072-302 19 22,serpapi_google_maps
+Mikaelas Härliga Hundar,Skarpnäck,Stockholms län,harligahundar@live.se,http://harligahundar.se,https://www.facebook.com/harligahundar,google_maps,"Pilottorget 8, 128 32 Skarpnäck",,serpapi_google_maps
+Hundtrim Dogstr i Nacka,Saltsjö-Boo,Stockholms län,camilla@hundtrim.nu,https://www.hundtrim.nu,,google_maps,"Norrkärrsvägen 17, 132 51 Saltsjö-boo",076-021 27 50,serpapi_google_maps
+Hundtrim Shamponix,Saltsjö-Boo,Stockholms län,hundtrimschamponix@outlook.com,http://www.hundtrimschamponix.se,https://www.facebook.com/p/Hundtrim-Schamponix-100089242161613,google_maps,"Norrkärrsvägen 17, 132 51 Saltsjö-boo",070-288 22 29,serpapi_google_maps
+Antefa's hundpensionat/boarding kennel,Haninge,Stockholms län,annica@antefas.com,http://www.hundpensionat.one,,google_maps,"Dalarövägen 85, 136 91 Haninge",070-757 40 18,serpapi_google_maps
+Hundhotell Carmbull,Jordbro,Stockholms län,gunillacarmstedt@telia.com,http://carmbull.se,,google_maps,"Övre Dåntorpsvägen 18, 136 50 Jordbro",070-255 00 35,serpapi_google_maps
+Skogslyan Djurpensionat AB,Handen,Stockholms län,christina@skogslyan.com,https://skogslyan.com,https://www.facebook.com/profile.php,google_maps,"Björkdalen 4, 136 48 Handen",070-662 66 22,serpapi_google_maps
+Hundlands Arena,Haninge,Stockholms län,info@hundlandsarena.se,http://www.hundlandsarena.se,,google_maps,"Dalarövägen 111, 137 95 Haninge",,serpapi_google_maps
+Haninge Brukshundklubb,Jordbro,Stockholms län,klubben@haningebk.se,http://haningebk.se,https://www.facebook.com/haningebrukshundklubb,google_maps,"Dåntorpsvägen 87, 136 50 Jordbro",,serpapi_google_maps
+Vega Hundcenter,Haninge,Stockholms län,info@vegahundcenter.se,https://www.vegahundcenter.se,https://www.facebook.com/vegahundcenter,google_maps,"Nynäsvägen 3F, 136 47 Haninge",073-371 49 92,serpapi_google_maps
+Lärahundsporthallen,Jordbro,Stockholms län,,,,google_maps,"Dåntorpsvägen 51, 136 50 Jordbro",073-251 17 11,serpapi_google_maps
+Hundcompagniet,Haninge,Stockholms län,ag@hundcompagniet.se,http://www.hundcompagniet.se,https://www.facebook.com/hundcompagniet,google_maps,"Nynäsvägen 3F, 136 47 Haninge",070-289 29 63,serpapi_google_maps
+Hundläroverket AB,Västerhaninge,Stockholms län,,https://www.hundlaroverket.se,,google_maps,"Stenbackens Gård, Sotholmens Byväg 12, 137 91 Västerhaninge",070-460 67 40,serpapi_google_maps
+Hundkurser - K9 Education,Vendelsö,Stockholms län,kickan@k9-education.se,http://www.hundkurser-online.com,https://www.facebook.com/Hundkurseronline,google_maps,"Högdalsvägen 9, 136 75 Vendelsö",070-494 85 79,serpapi_google_maps
+Hundblick,Tyresö,Stockholms län,hundblick@mail.com,https://www.hundblick.se,http://www.facebook.com/HundBlick-318593148159349,google_maps,"Siriusvägen 12, 135 47 Tyresö",076-369 82 50,serpapi_google_maps
+Ego Dog.s Family and Friends,Tyresö,Stockholms län,familyandfriends@egodogs.se,https://familyandfriends.egodogs.se,,google_maps,"Tegvägen 18, 135 53 Tyresö",073-200 19 60,serpapi_google_maps
+Västerhaninge Hundhall,Västerhaninge,Stockholms län,,,,google_maps,"Åbyplan 1, 137 34 Västerhaninge",,serpapi_google_maps
+Torvalla hundgård,Handen,Stockholms län,haningekommun@haninge.se,https://www.haninge.se/bygga-trafik-och-miljo/natur-parker-och-lekplatser/parkplan/hundar,https://www.facebook.com/haningekommun,google_maps,"Eskilsvägen 10A, 136 43 Handen",,serpapi_google_maps
+Haninge Hundar,Västerhaninge,Stockholms län,,,,google_maps,"Björnvägen 4, 137 31 Västerhaninge",073-426 52 91,serpapi_google_maps
+Hundrastgård,Vendelsö,Stockholms län,haningekommun@haninge.se,https://www.haninge.se/bygga-trafik-och-miljo/natur-parker-och-lekplatser/parkplan/hundar,https://www.facebook.com/haningekommun,google_maps,136 66 Vendelsö,,serpapi_google_maps
+Hundarnas Sparadis,Handen,Stockholms län,,https://hundarnassparadis.com,,google_maps,"Nynäsvägen, 136 50 Handen",076-022 25 13,serpapi_google_maps
+Sju Små Hundar,Vendelsö,Stockholms län,,https://www.sjusmahundar.com/om,https://facebook.com/sjusmahundar,google_maps,"Skansvägen 1, 136 70 Vendelsö",,serpapi_google_maps
+Hundcam,Vega,Stockholms län,camilla@hundcam.se,http://www.hundcam.se/kontakt,https://www.facebook.com/hundcam,google_maps,"Lignells väg 1, 136 49 Vega",076-168 28 94,serpapi_google_maps
+Suzzis hundklipp & Spa,Handen,Stockholms län,,,,google_maps,"Nynäsvägen 21, 136 47 Handen",073-685 98 79,serpapi_google_maps
+The Red Dog,Haninge,Stockholms län,info@thereddog.se,http://www.thereddog.se,,google_maps,,,serpapi_google_maps
+Svenska Kennelklubben,Sollentuna,Stockholms län,medlem@skk.se,https://www.skk.se,,google_maps,"Rotebergsvägen 3, 192 78 Sollentuna",08-795 30 00,serpapi_google_maps
+lagerthadogfci,Sollentuna,Stockholms län,,,,google_maps,"Armborstvägen 8, 192 59 Sollentuna",072-858 29 33,serpapi_google_maps
+My Funny Friend Bichon Havanais Kennel,Söderbärke,Stockholms län,,https://www.myfunnyfriend.se,https://facebook.com/335091396644374,google_maps,"Haga 2, 777 93 Söderbärke",,serpapi_google_maps
+Lövhyddan's hundcenter,Sorunda,Stockholms län,,,,google_maps,"Blista 16, 148 97 Sorunda",,serpapi_google_maps
+Hundrastgård Järvafältet nära Bögs Gård,Sollentuna,Stockholms län,,,,google_maps,"CWP8+H7, 191 62 Sollentuna",,serpapi_google_maps
+Hundrastgård Helenelund,Sollentuna,Stockholms län,kontaktcenter@sollentuna.se,http://www.sollentuna.se/hundrastgardar,,google_maps,"Sollentunavägen 55, 191 40 Sollentuna",,serpapi_google_maps
+"Hundhagen, Vallentuna | ABC Animals (Privat hundrasthage)",Brottby,Stockholms län,info@abcanimals.org,https://www.abcanimals.org/collections/hundhagen-vallentuna,,google_maps,"Senebyvägen 2, 186 97 Brottby",070-499 33 61,serpapi_google_maps
+Stockholmshundarna i Ur & Skur,Sollentuna,Stockholms län,urochskur@stockholmshundarna.se,http://stockholmshundarna.se,https://www.facebook.com/pages/Stockholmshundarna/133003983430663,google_maps,"Smedstorps gård 2, 192 48 Sollentuna",073-974 68 11,serpapi_google_maps
+Norrsidans HundSpa,Sollentuna,Stockholms län,,https://www.bokadirekt.se/places/norrsidans-hundspa-60882,https://www.facebook.com/bokadirekt,google_maps,"Edsbergs torg 11, 192 52 Sollentuna",072-335 01 25,serpapi_google_maps
+Antons Hundträning,Sollentuna,Stockholms län,,http://www.antonshundtraning.se,,google_maps,,,serpapi_google_maps
+Sveriges Hundungdom,Sollentuna,Stockholms län,,,,google_maps,"Rotebergsvägen 3, 192 78 Sollentuna",08-795 30 85,serpapi_google_maps
+Hundtema Hunddagis - Hunddagis Sollentuna,Sollentuna,Stockholms län,,https://hundtema.se,,google_maps,"Domherrevägen 9, 192 55 Sollentuna",076-318 02 80,serpapi_google_maps
+Dapper Dogs,Sollentuna,Stockholms län,dd.sollentuna@gmail.com,https://www.dapperdogssollentuna.se,https://www.facebook.com/profile.php,google_maps,"Sollentunavägen 131, 191 44 Sollentuna",073-759 77 44,serpapi_google_maps
+Sollentuna hundtrim,Sollentuna,Stockholms län,,http://sollentunahundtrim.se/kontakt.html,,google_maps,"Löftesvägen 6B, 191 63 Sollentuna",073-031 75 39,serpapi_google_maps
+Mera hund,Täby,Stockholms län,,,,google_maps,"Måttbandsvägen 12, 187 66 Täby",,serpapi_google_maps
+Koppla Av Hundcenter AB i Mölndal,Mölndal,Västra Götalands län,info@kopplaav.com,http://www.kopplaav.com,https://facebook.com/129692191440,google_maps,"Taljegårdsgatan 3, 431 53 Mölndal",070-090 71 56,serpapi_google_maps
+GMBK Göteborg Mölndals Brukshundsklubb,Mölndal,Västra Götalands län,hjalpatill@sbk-gmbk.se,http://www.sbk-gmbk.se,https://www.facebook.com/GoteborgMolndalsBrukshundklubb,google_maps,"Skjutfältsvägen 101, 431 90 Mölndal",,serpapi_google_maps
+Mölndals hunddagis - Mölndal,Mölndal,Västra Götalands län,molndalshunddagis@gmail.com,http://molndalshunddagis.se,https://www.facebook.com/p/M%C3%B6lndals-hunddagis-AB-100084048623355,google_maps,"Prästgårdsgatan, Pedagogen Park 20, 431 44 Mölndal",072-286 52 09,serpapi_google_maps
+Hundpositivet,Mölndal,Västra Götalands län,info@hundpositivet.com,http://www.hundpositivet.com,https://www.facebook.com/hundpositivet,google_maps,"Södra Holtermansgatan 2, 431 31 Mölndal",076-022 90 44,serpapi_google_maps
+Mölndals hundsällskap,Lindome,Västra Götalands län,kassor.mhs@gmail.com,http://www.molndalshundsallskap.se,,google_maps,"Tullbomsvägen 5, 437 41 Lindome",,serpapi_google_maps
+Göteborgs Hunddagis Mölndal,Mölndal,Västra Götalands län,alingsas@goteborgshunddagis.se,https://www.goteborgshunddagis.se,https://www.facebook.com/GoteborgsHunddagis,google_maps,"Alfagatan 4B, 431 49 Mölndal",073-511 55 07,serpapi_google_maps
+Gundefjällsgatans Hundrastplats,Mölndal,Västra Götalands län,,,,google_maps,"Gundefjällsgatan, 431 51 Mölndal",,serpapi_google_maps
+Skolleras Hundpensionat,Lindome,Västra Götalands län,,,,google_maps,437 93 Lindome,,serpapi_google_maps
+Mölndals hunddagis - Högsbo,Västra Frölunda,Västra Götalands län,molndalshunddagis@gmail.com,https://molndalshunddagis.se,https://www.facebook.com/p/M%C3%B6lndals-hunddagis-AB-100084048623355,google_maps,"E A Rosengrens g 29, 421 31 Västra Frölunda",,serpapi_google_maps
+White Diamond Dreams kennel,Mölndal,Västra Götalands län,whitediamonddream@gmail.com,https://www.whitediamonddreams.se,https://www.facebook.com/WhiteDiamondDreams,google_maps,"Fässberg Mellangård, 431 44 Mölndal",,serpapi_google_maps
+Hundakademin Mölndal-Lindome,Lindome,Västra Götalands län,info@hundakademin.com,https://hundakademin.se,,google_maps,"Annebergsvägen 19, 437 93 Lindome",031-68 55 54,serpapi_google_maps
+Dog Life Hundcenter,Mölndal,Västra Götalands län,doglifehundcenter@outlook.com,http://www.doglifehundcenter.com,,google_maps,"Eklanda Torg 2, 431 59 Mölndal",070-414 39 00,serpapi_google_maps
+Doggiz Mölndal,Mölndal,Västra Götalands län,doggizmolndal@gmail.com,http://doggizmolndal.se,https://www.facebook.com/search/top,google_maps,"Ekgatan 9, 431 35 Mölndal",,serpapi_google_maps
+Maggans Hundsalong,Mölndal,Västra Götalands län,,,,google_maps,"Kungsbackavägen 142, 431 90 Mölndal",073-651 32 12,serpapi_google_maps
+Rävekärr Hundrastgård,Mölndal,Västra Götalands län,kontakt@molndal.se,https://www.molndal.se/startsida/uppleva-och-gora/idrott-motion-och-friluftsliv/friluftsliv-och-motion/hundrastgardar.html,,google_maps,"Sandbäcksgatan, 431 33 Mölndal",,serpapi_google_maps
+Bekväma Tassar,Trollhättan,Västra Götalands län,,https://swenavi.org/details/bekvma-tassar-ChIJ_zR,,google_maps,"Installatörvägen 10, 461 37 Trollhättan",,serpapi_google_maps
+Artorpets Hunddagis & Pensionat,Trollhättan,Västra Götalands län,,http://www.artorpets.se,,google_maps,"Gärdhems Artorp Kronogården 1, 461 92 Trollhättan",073-511 05 50,serpapi_google_maps
+Torshammarens,Brålanda,Västra Götalands län,,https://www.torshammarens.se,https://www.facebook.com/torshammarens,google_maps,"Bön 600, 464 63 Brålanda",070-641 91 86,serpapi_google_maps
+Djurbutiken Fd Trollhättans Hundvård,Trollhättan,Västra Götalands län,info@trollhattanshundvard.se,http://www.trollhattanshundvard.se,,google_maps,"Ladugårdsvägen 27, 461 70 Trollhättan",070-271 56 51,serpapi_google_maps
+Örbackas Kennel,Mellerud,Västra Götalands län,orbackaskennel@gmail.com,https://www.orbackaskennel.com,https://www.facebook.com/profile.php,google_maps,"ÖRBACKA 1, 464 92 Mellerud",073-751 96 78,serpapi_google_maps
+Långvalslidens Kennel,Uddevalla,Västra Götalands län,,http://www.teambreeders.se,,google_maps,"Sira Helgas gata 5, 451 75 Uddevalla",,serpapi_google_maps
+Kennel Rapports,Nödinge,Västra Götalands län,rapports@telia.com,https://rapports.net,http://www.facebook.com/Monica-Henriksson-Hundkurser-i-N%C3%B6dinge-304375523025813,google_maps,"Bönabo 170, 449 70 Nödinge",073-500 70 78,serpapi_google_maps
+Lilla Fidos / Zoobutik & Hundtrim,Trollhättan,Västra Götalands län,info@lillafidos.se,https://lillafidos.se,https://facebook.com/lillafidos,google_maps,"Kungsgatan 27, 461 30 Trollhättan",0520-146 40,serpapi_google_maps
+Pusselgårdens kennel,Alingsås,Västra Götalands län,pusselgardenskennel@gmail.com,http://pusselgardens.one,,google_maps,"GAMLA PRÄSTGÅRDEN, 441 93 Alingsås",,serpapi_google_maps
+Fyrfota Vänner AB,Hålanda,Västra Götalands län,,http://www.fyrfotavanner.se,,google_maps,"BOET 550, 446 96 Hålanda",0520-66 80 60,serpapi_google_maps
+Pigglets,Vänersborg,Västra Götalands län,,,,google_maps,"NÄVERDRAGET 310, 462 91 Vänersborg",073-512 66 77,serpapi_google_maps
+Celso Prio,Ödenäs,Västra Götalands län,,,,google_maps,441 95 Ödenäs,073-742 44 80,serpapi_google_maps
+Kopparhult,Sollebrunn,Västra Götalands län,kurser@kopparhult.se,https://kopparhult.se,,google_maps,"Åsenvägen 16, 466 91 Sollebrunn",072-314 04 50,serpapi_google_maps
+Kennel Perchwater,Trollhättan,Västra Götalands län,,,,google_maps,"Stenbacken Öresjö 122, 461 91 Trollhättan",,serpapi_google_maps
+Aktiv Hund Trollhättan,Trollhättan,Västra Götalands län,kursanmalan@aktivhund.nu,http://www.aktivhund.nu,,google_maps,"KVARNEN, VELANDA SÄTERI, 461 98 Trollhättan",073-510 86 19,serpapi_google_maps
+Hunddrivet Hunddagis,Trollhättan,Västra Götalands län,,,,google_maps,"Drottninggatan 49, 461 33 Trollhättan",073-027 93 88,serpapi_google_maps
+Hundrastgård Strömslund,Trollhättan,Västra Götalands län,kontaktcenter@trollhattan.se,https://www.trollhattan.se/hundrastgardar,https://www.facebook.com/trollhattansstad,google_maps,"Belfragegatan 2, 461 58 Trollhättan",,serpapi_google_maps
+Trollhättans Brukshundklubb,Trollhättan,Västra Götalands län,,https://www.tbhk.se,,google_maps,"V, 461 91 Trollhättan",,serpapi_google_maps
+Vite Kvarn,Trollhättan,Västra Götalands län,kursanmalan@aktivhund.nu,http://www.aktivhund.nu,,google_maps,"Velanda Fd Station, 461 98 Trollhättan",073-687 68 76,serpapi_google_maps
+Hundrastgård Centrum,Trollhättan,Västra Götalands län,kontaktcenter@trollhattan.se,https://www.trollhattan.se/hundrastgardar,https://www.facebook.com/trollhattansstad,google_maps,"Nygatan, 461 33 Trollhättan",0520-49 50 00,serpapi_google_maps
+Trollhättans Hundsalong,Trollhättan,Västra Götalands län,sanna@thnhundsalong.se,http://trollhattanshundsalong.se,https://www.facebook.com/trollhattanshundsalong,google_maps,"Floravägen 7, 461 43 Trollhättan",076-020 86 66,serpapi_google_maps
+Troubletones Kennel,Uddevalla,Västra Götalands län,,,,google_maps,"Tjärhovsgatan 15b, 451 42 Uddevalla",,serpapi_google_maps
+Uddevalla Hundägareförening,Uddevalla,Västra Götalands län,info@uddevallahund.se,https://www.uddevallahund.se,,google_maps,"SAMNERÖD 190, 451 55 Uddevalla",073-040 61 18,serpapi_google_maps
+Uddevalla brukshundklubb,Uddevalla,Västra Götalands län,,http://www.uddevallabhk.com,https://l.facebook.com/l.php,google_maps,"UGGLEHULT 210, 451 92 Uddevalla",,serpapi_google_maps
+Uddevalla Hundhälsa,Uddevalla,Västra Götalands län,,https://www.hundhalsa.com,,google_maps,"Nordmannerödsvägen 3, 451 55 Uddevalla",073-230 03 25,serpapi_google_maps
+Hundeffekt,Uddevalla,Västra Götalands län,info@hundeffekt.se,http://www.hundeffekt.se,https://www.facebook.com/Hundeffekt-126834694526399,google_maps,"Österled 3B, 451 34 Uddevalla",072-185 10 80,serpapi_google_maps
+Hundrastgård,Uddevalla,Västra Götalands län,,,,google_maps,"Unnamed Road, 451 55 Uddevalla",,serpapi_google_maps
+Dogpark AB,Uddevalla,Västra Götalands län,info@dogpark.se,https://dogpark.se,http://www.facebook.com/dogparkuddevalla,google_maps,"Helenedalsvägen, 451 55 Uddevalla",010-491 77 77,serpapi_google_maps
+Tokiga Hundar,Uddevalla,Västra Götalands län,info@tokigahundar.se,http://www.tokigahundar.se,https://www.facebook.com/tokigahundar,google_maps,"Skalbanksvägen 6d, 451 55 Uddevalla",,serpapi_google_maps
+Signeröds Hundcenter,Uddevalla,Västra Götalands län,,http://www.signerodshundcenter.se,,google_maps,"SIGNERÖDSVALLEN 120, 451 93 Uddevalla",073-515 40 54,serpapi_google_maps
+Sandras Hundtjänst,Uddevalla,Västra Götalands län,info@k9uddevalla.se,https://uddevallahunddagis.se,https://www.facebook.com/people/K9-Uddevalla/61574791933233,google_maps,"Skalbanksvägen 6D, 451 55 Uddevalla",076-029 79 29,serpapi_google_maps
+Skövde Hunddagis,Skövde,Västra Götalands län,skovdehunddagis@gmail.com,http://www.skovdehunddagis.se,http://www.facebook.com/pages/Sk%C3%B6vde-Hunddagis/237094783020787,google_maps,"Industrigatan 3, 541 57 Skövde",076-019 94 60,serpapi_google_maps
+Hundskolorna,Skövde,Västra Götalands län,,http://hundskolorna.se,https://www.facebook.com/hundskolorna,google_maps,"Bäckaskogsvägen 1, 541 34 Skövde",070-974 65 45,serpapi_google_maps
+Skövde Brukshundklubb,Skövde,Västra Götalands län,,http://www.skovdebk.se,,google_maps,"BRUKSHUNDSKLUBBEN, LÖVSJÖTORP, 541 93 Skövde",,serpapi_google_maps
+Kennel Drömfångaren,Skövde,Västra Götalands län,,http://www.kenneldromfangaren.se,https://www.facebook.com/kenneldromfangaren,google_maps,"Tallvägen 13, 541 57 Skövde",073-364 41 48,serpapi_google_maps
+Tassa med Sara (fd.HundArena Skövde),Skövde,Västra Götalands län,,,,google_maps,"Villestigen 18, 541 93 Skövde",070-670 39 56,serpapi_google_maps
+Dogman and friends,Skövde,Västra Götalands län,,https://dogman.se/store-detail/dogman-and-friends-skovde,https://www.facebook.com/dogmanskovde,google_maps,"Norra Metallvägen 8, 549 37 Skövde",0500-10 37 10,serpapi_google_maps
+Bedas hunddagis och träning,Skövde,Västra Götalands län,,http://www.bedashunddagisochtraning.se,,google_maps,"ASKELIDEN, 549 94 Skövde",079-303 00 80,serpapi_google_maps
+Hundstallet Alingsås,Alingsås,Västra Götalands län,,https://hundstallet.se/var-verksamhet/vara-stall/hundstallet-alingsas,,google_maps,"Ridhusvägen 4, 441 93 Alingsås",010-175 32 00,serpapi_google_maps
+Pias Hund&Fritid AB,Alingsås,Västra Götalands län,info@piashundfritid.se,http://www.piashundfritid.se,https://www.facebook.com/profile.php,google_maps,"Ängsvaktaregatan 3, 441 38 Alingsås",070-563 99 75,serpapi_google_maps
+Hunddagis,Alingsås,Västra Götalands län,,,,google_maps,"Aleforsvägen 18, 441 39 Alingsås",0322-63 48 00,serpapi_google_maps
+Alingsås Hundsalong,Alingsås,Västra Götalands län,alingsashundsalong@gmail.com,http://alingsashundsalong.se,http://www.facebook.com/profile.php,google_maps,"Ängsvaktaregatan 3, 441 38 Alingsås",072-317 17 11,serpapi_google_maps
+Fyrfotat Katt och Hund,Alingsås,Västra Götalands län,fyrfotat@mail.com,http://www.fyrfotat.se,https://www.facebook.com/korkuteli032217107,google_maps,"Östra Ringgatan 13A, 441 31 Alingsås",0322-171 07,serpapi_google_maps
+Clares Hundsalong,Alingsås,Västra Götalands län,,,,google_maps,"Kungsgatan 50, 441 31 Alingsås",076-046 51 39,serpapi_google_maps
+Anne-Lis Hundsim,Alingsås,Västra Götalands län,info@annelishundsim.se,http://annelishundsim.se,https://www.facebook.com/annelishundcenter,google_maps,"Ängsvaktaregatan 3, 441 38 Alingsås",070-491 68 32,serpapi_google_maps
+Wallenius Hundar,Ljung,Västra Götalands län,info@walleniushundar.se,https://www.walleniushundar.se,,google_maps,,073-891 50 65,serpapi_google_maps
+Baggebo Hundcenter,Alingsås,Västra Götalands län,info@baggebohundcenter.se,https://www.baggebohundcenter.se,https://www.facebook.com/baggebohundcenter,google_maps,441 91 Alingsås,073-319 53 48,serpapi_google_maps
+Alingsås Hundkapplöpning,Alingsås,Västra Götalands län,tavlingsledare.sda.ghk@gmail.com,http://www.hundkapp.net,,google_maps,"Mariedalsvägen 35, 441 41 Alingsås",,serpapi_google_maps
+Hundens Dagis,Sollebrunn,Västra Götalands län,info@hundensdagis.se,http://www.hundensdagis.se,,google_maps,"Holmängsvägen 51, C/o Larsson, 466 95 Sollebrunn",070-690 53 50,serpapi_google_maps
+Alingsås Hundarena-Hunddagis,Alingsås,Västra Götalands län,alingsas@goteborgshunddagis.se,https://goteborgshunddagis.se,https://www.facebook.com/GoteborgsHunddagis,google_maps,"Verkstadsgatan 3, 441 57 Alingsås",076-325 81 63,serpapi_google_maps
+Annas Hundsalong,Nossebro,Västra Götalands län,anlishundhalsa@gmail.com,https://bokahundtrim.se/companies/annas-hundsalong,,google_maps,"Bäreberg, 465 93 Nossebro",070-779 71 56,serpapi_google_maps
+Mettes Hundtrim,Alingsås,Västra Götalands län,,https://swemaps.org/details/mettes-hundtrim-ChIJQ2T,,google_maps,"Jungmansgatan 1F, 441 39 Alingsås",0322-105 61,serpapi_google_maps
+Klintens Hundtrim,Alingsås,Västra Götalands län,,,,google_maps,"Korpabergsvägen 13, 441 41 Alingsås",070-264 95 05,serpapi_google_maps
+Hundcenter Ådi & Gänget,Lidköping,Västra Götalands län,kundtjanst@adioganget.se,https://adioganget.se,https://www.facebook.com/adiochganget,google_maps,"Wennerbergsvägen 51, 531 40 Lidköping",0510-229 00,serpapi_google_maps
+Skaraskogens hundpensionat,Lundsbrunn,Västra Götalands län,,,,google_maps,"Ledsjö Elfvik 1, 533 92 Lundsbrunn",0511-574 00,serpapi_google_maps
+Mariestads Hundpensionat,Mariestad,Västra Götalands län,,,,google_maps,"Ek 3, 542 94 Mariestad",0501-330 43,serpapi_google_maps
+Kelly's Kennel,Norge,Västra Götalands län,kellys@live.no,http://kellyskennel.no,https://www.facebook.com/KellysKennel,google_maps,"Bjørgeveien 111, 4748 Rysstad, Norge",+47 98 83 33 64,serpapi_google_maps
+Cinas hunddagis,Lidköping,Västra Götalands län,,http://www.cinashunddagis.dinstudio.se,,google_maps,"ÖDEGÅRDEN, 531 96 Lidköping",070-485 77 90,serpapi_google_maps
+Lidköpings Brukshundklubb,Vinninga,Västra Götalands län,specialsok@lidkopingbk.se,http://www.lidkopingbk.se,,google_maps,"JYCKEBO, 531 91 Vinninga",072-388 04 08,serpapi_google_maps
+Hundrastgård Margretelund,Lidköping,Västra Götalands län,kommun@lidkoping.se,https://lidkoping.se/bygga-bo-och-miljo/boende-bostader-och-tomter/bostad-halsa-och-trivsel/hundrastgard,https://www.facebook.com/motesplatserseniorer,google_maps,"Svartebäcksgatan 13, 531 38 Lidköping",,serpapi_google_maps
+Sanna's Hundsalong,Lidköping,Västra Götalands län,kontakt@sannashundsalong.se,https://www.sannashundsalong.se,https://www.facebook.com/profile.php,google_maps,"Framnäs Köpcentrum, Framnäsvägen 1, 531 60 Lidköping",076-031 11 71,serpapi_google_maps
+Norra Kedums Hundcenter,Lidköping,Västra Götalands län,norrakedumshundcenter@gmail.com,https://norrakedumshundcenter.se,https://facebook.com/norrakedumshundcenter,google_maps,"Norra Kedum Gröneberg 7, 531 97 Lidköping",070-941 62 63,serpapi_google_maps
+Håfveleds kennel,Kungälv,Västra Götalands län,viviann.hellberg@gmail.com,http://hafveleds.se/mellanpudel.html,,google_maps,"Rollsbovägen 13, 442 40 Kungälv",070-972 48 37,serpapi_google_maps
+"Anjediamond`s Hundcenter, Kungälv",Ytterby,Västra Götalands län,jessica@anjediamonds.se,http://www.anjediamondshundcenter.se,,google_maps,"Valnäsgatan 4, 442 52 Ytterby",070-773 07 29,serpapi_google_maps
+Kennel Ensemble,Kungälv,Västra Götalands län,anki@bracco.se,http://bracco.se/contact.html,,google_maps,"Sandvadet 15, 442 90 Kungälv",076-136 13 94,serpapi_google_maps
+Kayogården Hundpensionat - Hundpensionat Kungälv,Romelanda,Västra Götalands län,info@kayogarden.se,https://www.kayogarden.se,,google_maps,"Gömmet 110, 442 92 Romelanda",073-328 00 22,serpapi_google_maps
+Lady o. Lufsen Hundtrim,Kungälv,Västra Götalands län,,https://www.eniro.se/lady+o.+lufsen+hundtrim+kung%C3%A4lv/14960809/firma,,google_maps,"Vikingagatan 2C, 442 36 Kungälv",070-949 63 42,serpapi_google_maps
+Hundlyckan,Kungälv,Västra Götalands län,hund-lyckan@hotmail.com,http://www.hund-lyckan.com,http://www.facebook.com/vardagslydnadskurser,google_maps,"Tvetgatan 106, 442 33 Kungälv",073-443 96 49,serpapi_google_maps
+Kungälvs Brukshundklubb,Kareby,Västra Götalands län,styrelsen@kungalvbk.com,http://www.kungalvbk.com,https://www.facebook.com/kungalvbhk,google_maps,"Prästvägen 570, 442 93 Kareby",,serpapi_google_maps
+Fyrfotagården,Ytterby,Västra Götalands län,danjou400@gmail.com,http://www.fyrfotagarden.se,,google_maps,"BREDSTEN 400, 442 94 Ytterby",070-869 26 81,serpapi_google_maps
+Dogman and friends,Älvängen,Västra Götalands län,,https://dogman.se/store-detail/dogman-and-friends-alvangen,https://facebook.com/Dogmanalvangen,google_maps,"Svenstorpsvägen 19, 446 38 Älvängen",0303-37 35 00,serpapi_google_maps
+Kungälvs Hundpark,Kungälv,Västra Götalands län,,,,google_maps,"Simbadsgatan 1, 442 35 Kungälv",,serpapi_google_maps
+Reka’s Hundsalong (gamla RTD Hundvård),Kungälv,Västra Götalands län,,http://www.rtdhundvard.se,,google_maps,"Västra Gatan 59, 442 31 Kungälv",073-947 39 50,serpapi_google_maps
+Up and Run Hundarena,Kungälv,Västra Götalands län,,,,google_maps,"Filaregatan 19, 442 34 Kungälv",,serpapi_google_maps
+Diamonds of Åsum,Kristianstad,Skåne län,,,,google_maps,"Katrinas väg 10, 291 63 Kristianstad",076-893 73 50,serpapi_google_maps
+Kennel Angsmo's,Kristianstad,Skåne län,,https://www.angsmo.se,,google_maps,"Växthusvägen 1, 291 58 Kristianstad",044-10 12 18,serpapi_google_maps
+Balsby Hundhotell & Dagis,Kristianstad,Skåne län,,,,google_maps,"Östergårdsvägen 86, 291 94 Kristianstad",,serpapi_google_maps
+"Rya Foder & Djurhotell AB Kristianstad med varumärket ""U Design""",Tollarp,Skåne län,ryafoodhot@gmail.com,http://www.ryafoderdjurhotell.se,,google_maps,"Rya byväg 159, 298 91 Tollarp",076-878 78 21,serpapi_google_maps
+Fågelängens Husdjurspensionat,Kristianstad,Skåne län,,http://www.fagelangens.se,,google_maps,"Snårarpsvägen 48, 291 65 Kristianstad",044-22 85 38,serpapi_google_maps
+Kristianstads Brukshundklubb,Fjälkinge,Skåne län,,https://www.kristianstadsbk.se,,google_maps,"Oredslundsvägen, 291 69 Fjälkinge",,serpapi_google_maps
+Dogman and friends,Kristianstad,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-kristianstad-harlov,https://www.facebook.com/kristianstadzoologiska,google_maps,"Jochums v 14, 291 59 Kristianstad",044-300 00 30,serpapi_google_maps
+Kennel Honeytaste,Östra Sönnarslöv,Skåne län,,http://honeytaste.se,,google_maps,"Gretelundsvägen 281, 298 96 Östra Sönnarslöv",070-346 64 33,serpapi_google_maps
+Kennel Sub Terram,Smedstorp,Skåne län,ulrika@subterram.com,http://www.subterram.com,,google_maps,"Gårdlösa Brogård, 273 98 Smedstorp",073-817 22 30,serpapi_google_maps
+Lottas Hunddagis,Kristianstad,Skåne län,,http://www.lottasvovvar.hundpoolen.se,,google_maps,"Amaryllisvägen 1, 291 50 Kristianstad",,serpapi_google_maps
+Hundklippning Kristianstad,Kristianstad,Skåne län,,,,google_maps,"Hjalmar Söderbergs väg 10, 291 45 Kristianstad",,serpapi_google_maps
+Hundrastgård Charlottenborg,Kristianstad,Skåne län,,,,google_maps,"Hasselvägen 41, 291 60 Kristianstad",,serpapi_google_maps
+Amirace Hundartiklar & Söderslätts Hundtjänst,Trelleborg,Skåne län,kennel@amirace.se,http://www.amirace.se,,google_maps,"Mellanköpingevägen 187, 231 91 Trelleborg",070-954 84 00,serpapi_google_maps
+Dogman and friends,Trelleborg,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-trelleborg-city,https://www.facebook.com/dogmantrelleborg,google_maps,"Algatan 4, 231 42 Trelleborg",0410-30 19 20,serpapi_google_maps
+ParadisGårdens Hundpensionat och Hunddagis,Trelleborg,Skåne län,nathapettersson@gmail.com,http://www.paradisgarden.hundpoolen.se,,google_maps,"Värlingevägen 2-26, 231 94 Trelleborg",073-438 37 09,serpapi_google_maps
+Somollis kennel,Trelleborg V,Skåne län,,,,google_maps,Trelleborg V,070-633 22 25,serpapi_google_maps
+Black and Buffs Hundpensionat och Hunddagis,Trelleborg,Skåne län,,http://blackandbuffskennel.dinstudio.se,,google_maps,"Åkarpsvägen 230-0 Trelleborg, 231 91 Trelleborg",073-332 40 04,serpapi_google_maps
+Trelleborgs Brukshundklubb,Trelleborg,Skåne län,kansliet@trelleborgsbrukshundklubb.se,http://trelleborgsbrukshundklubb.se,,google_maps,"Gislövs strandväg 209, 231 92 Trelleborg",,serpapi_google_maps
+Trelleborg Hundarena,Trelleborg,Skåne län,,,,google_maps,"Lastvägen 11, 231 62 Trelleborg",,serpapi_google_maps
+Hundbadplats Trelleborg,Trelleborg,Skåne län,,,,google_maps,"Östra Stranden 30, 231 32 Trelleborg",,serpapi_google_maps
+Trelleborgs Hundtrim,Trelleborg,Skåne län,trelleborgs.hundtrim@hotmail.com,http://trelleborgshundtrim.bokamera.se,,google_maps,"Simmermarksvägen 5, 231 92 Trelleborg",076-109 66 40,serpapi_google_maps
+Hundrastplats,Trelleborg,Skåne län,,,,google_maps,231 67 Trelleborg,,serpapi_google_maps
+Hundrastgård,Trelleborg,Skåne län,,,,google_maps,231 54 Trelleborg,,serpapi_google_maps
+Sanna's Hundspa,Trelleborg,Skåne län,,https://swenavi.org/details/sannas-hundspa-ChIJPVi,,google_maps,"Fraktvägen 13, 231 62 Trelleborg",,serpapi_google_maps
+Hässlehoffs kennel,Hässleholm,Skåne län,hasslehoffskennel@hotmail.com,http://www.hasslehoffs.com,,google_maps,"SANDBY-KÄLLSTORP 4359, 281 91 Hässleholm",,serpapi_google_maps
+Åsgläntans Hundservice,Hässleholm,Skåne län,ayarips@yahoo.com,http://www.asglantans.se,,google_maps,"Åsvägen 27A, 281 37 Hässleholm",070-832 54 45,serpapi_google_maps
+Fåraboda Hundpensionat,Hässleholm,Skåne län,faraboda@telia.com,http://www.farabodahundpensionat.se,,google_maps,"Ignaberga attarp Fåraboda 7061, 281 92 Hässleholm",0451-77 52 71,serpapi_google_maps
+Grändens Hunddagis & Pensionat AB,Knislinge,Skåne län,hunddagis@grandens.se,http://www.grandens.se,,google_maps,"Färgerigatan 8, 289 33 Knislinge",073-426 05 11,serpapi_google_maps
+Hässleholms Hundungdom,Hässleholm,Skåne län,ordforandehhu@hotmail.com,http://www.hassleholmhu.se,,google_maps,281 95 Hässleholm,,serpapi_google_maps
+Ljungdala Hundcenter,Hässleholm,Skåne län,,http://www.ljungdala-hundcenter.se,,google_maps,"Ristvägen 9, 281 43 Hässleholm",070-837 52 96,serpapi_google_maps
+Hässleholms Brukshundklubb,Hässleholm,Skåne län,info@hassleholmbrukshundklubb.se,http://www.hassleholmbrukshundklubb.se,,google_maps,"Hässleholm 803, 281 33 Hässleholm",0451-105 90,serpapi_google_maps
+Kylestorp Hundpensionat,Hörby,Skåne län,kylestorp.hundpensionat@gmail.com,http://kylestorphundpensionat.com,,google_maps,"Kylestorp 5294, 242 95 Hörby",070-535 85 00,serpapi_google_maps
+SBaK Syd,Tyringe,Skåne län,laila.basset@outlook.com,http://www.bassetsyd.se/old/om_viltspar.htm,,google_maps,"Svärtingstorpsgatan 19, 282 34 Tyringe",073-641 49 40,serpapi_google_maps
+Hundpsykolog och Hundtränare,Linderöd,Skåne län,hundpsykolog2006@gmail.com,https://www.hundpensionatlinderod.com,https://www.facebook.com/Hundpsykolog,google_maps,"Boarpsvägen 211, 298 94 Linderöd",070-005 09 60,serpapi_google_maps
+Hund & katt Magasinet i Hässleholm HB,Hässleholm,Skåne län,,,,google_maps,"Helsingborgsvägen 8, 281 49 Hässleholm",0451-102 42,serpapi_google_maps
+Bokbackens hundpensionat,Tormestorp,Skåne län,,,,google_maps,"Högabergsvägen 10, 281 46 Tormestorp",,serpapi_google_maps
+Svartpepparns kennel,Hässleholm,Skåne län,,,,google_maps,,073-300 56 57,serpapi_google_maps
+Hundklubben Hässle,Hässleholm,Skåne län,hassleholm@ivab.com,http://www.hkhassle.se,https://www.facebook.com/100065475790928/mentions,google_maps,"Röingegatan 6995, 281 92 Hässleholm",,serpapi_google_maps
+Hundsalongen,Hässleholm,Skåne län,,,,google_maps,"Hantverkaregatan 8A, 281 48 Hässleholm",0451-411 19,serpapi_google_maps
+Kund Med Hund Handelsbolag,Landskrona,Skåne län,,,,google_maps,"Motorgatan 8, 261 51 Landskrona",072-005 10 98,serpapi_google_maps
+LM:s Vakthundar i Skåne AB,Saxtorp,Skåne län,info@lmvakthund.se,https://www.lmvakthund.se,https://www.facebook.com/Vakthundar.se,google_maps,"Landskronavägen 320, 261 93 Saxtorp",073-382 89 36,serpapi_google_maps
+Västra karaby hundpensionat klipp & trim,Dösjebro,Skåne län,,https://swenavi.org/details/western-karaby-hundpensionat-cut-trim-ChIJxSw,,google_maps,"Pilängsvägen 17-22, 244 95 Dösjebro",,serpapi_google_maps
+Dogman and friends,Löddeköpinge,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-loddekopinge,https://www.facebook.com/Dogmanloddekopinge,google_maps,"Handelsvägen 12C, 246 42 Löddeköpinge",046-378 05 17,serpapi_google_maps
+Forestad hundtrim,Ljungbyhed,Skåne län,,http://forestadhundtrim.se,,google_maps,"Forestad 4074, 264 54 Ljungbyhed",070-967 81 96,serpapi_google_maps
+Landskrona Brukshundklubb,Löddeköpinge,Skåne län,info@labk.se,https://labk.se,https://www.facebook.com/LandskronaBK,google_maps,"Silvavägen 49, 246 52 Löddeköpinge",,serpapi_google_maps
+Hundrastgård,Landskrona,Skåne län,,,,google_maps,"Gasverksgatan 12, 261 35 Landskrona",,serpapi_google_maps
+Dog Park,Landskrona,Skåne län,,,,google_maps,261 39 Landskrona,,serpapi_google_maps
+Hundsalong Fantasstisk,Landskrona,Skåne län,,,,google_maps,"Norra Infartsgatan 22A, 261 40 Landskrona",,serpapi_google_maps
+Oskarsfarms Hundpensionat,Ängelholm,Skåne län,info@oskarsfarm.se,http://oskarsfarm.se,,google_maps,"Barkåkravägen 151, 262 91 Ängelholm",070-552 18 06,serpapi_google_maps
+Dogman and friends,Ängelholm,Skåne län,,https://dogman.se/store-detail/dogman-and-friends-angelholm,https://www.facebook.com/p/Dogman-%C3%84ngelholm-100075774174589,google_maps,"Midgårdsgatan 11, 262 71 Ängelholm",0431-60 08 10,serpapi_google_maps
+Beardmarked's,Ängelholm,Skåne län,,,,google_maps,"Häggehusvägen 23, 262 94 Ängelholm",072-396 63 70,serpapi_google_maps
+Bialitt Hundcenter HB,Ängelholm,Skåne län,elsa@bialitthundcenter.se,https://www.bialitthundcenter.se,https://www.facebook.com/bialitthundcenter,google_maps,"Helsingborgsvägen 602, 262 96 Ängelholm",0431-222 00,serpapi_google_maps
+Maltehus,Ängelholm,Skåne län,,,,google_maps,"Häggehusvägen 23, 262 94 Ängelholm",,serpapi_google_maps
+Ängelholm Brukshundklubb,Ängelholm,Skåne län,,http://www.angelholmbk.se,,google_maps,"Danielslundsgatan 68, 262 62 Ängelholm",,serpapi_google_maps
+Optimal Hundglädje AB,Ängelholm,Skåne län,optimalhundgladje@gmail.com,https://www.optimalhundgladje.se,https://www.facebook.com/optimalhundgladje,google_maps,"Starby landsväg 127, 262 95 Ängelholm",073-376 46 97,serpapi_google_maps
+Hundägarskolan i Ängelholm,Ängelholm,Skåne län,info@hittahundkurs.se,https://hittahundkurs.se/hundagarskolan-angelholm-angelholm,https://www.facebook.com/Hitta-Hundkurs-101166228653987,google_maps,"Helsingborgsvägen 47, 262 72 Ängelholm",0431-154 53,serpapi_google_maps
+Varalövs hundcenter,Ängelholm,Skåne län,hundensdagis@gmail.com,http://www.varalovshundcenter.se,,google_maps,"Helsingborgsvägen 403, 262 96 Ängelholm",072-722 70 63,serpapi_google_maps
+Hundens Gård,Ängelholm,Skåne län,,,,google_maps,"Starby landsväg 127, 262 95 Ängelholm",073-903 28 51,serpapi_google_maps
+Svalbo Hundcenter,Båstad,Skåne län,,http://svalbogard.com/svalbo-hundcenter,,google_maps,"Böskestorpsvägen 101, 269 92 Båstad",070-245 10 80,serpapi_google_maps
+Hundrastgården på Villan,Ängelholm,Skåne län,,,,google_maps,"Landshövdingevägen 37, 262 52 Ängelholm",,serpapi_google_maps
+Larsgårdens Hundpensionat & Dagis HB,Eldsberga,Hallands län,kontakt@larsgardens.se,http://www.larsgardens.se,https://www.facebook.com/Larsgardenshundpensionat,google_maps,"Perstorp Larsgården 390, 305 97 Eldsberga",035-10 12 54,serpapi_google_maps
+Kennel Tollskoj,Halmstad,Hallands län,,https://swemaps.org/details/kennel-tollskoj-ChIJUUp,,google_maps,"Tiarp 287, 305 91 Halmstad",073-676 69 44,serpapi_google_maps
+Hökagårdens Hunddagis & Pensionat,Halmstad,Hallands län,hokagarden@hotmail.com,http://www.hokagarden.se,,google_maps,"Öppinge Hökagården 537, 305 94 Halmstad",070-771 26 79,serpapi_google_maps
+Halmstad City Hunddagis,Halmstad,Hallands län,info@halmstadcityhunddagis.se,http://www.halmstadcityhunddagis.se,,google_maps,"Pilefeltsgatan 54, 302 50 Halmstad",073-903 49 58,serpapi_google_maps
+Ebbarps Hundpensionat & Dagis,Laholm,Hallands län,,https://www.ebbarps.se,https://www.facebook.com/Ebbarpshunddagis,google_maps,"Ebbarp 89, 312 93 Laholm",070-200 38 45,serpapi_google_maps
+Falkline's Rottweiler Kennel,Getinge,Hallands län,alexandra@falklines.se,http://falklines.se,,google_maps,"Östra Järnvägsgatan 46, 305 75 Getinge",073-544 08 36,serpapi_google_maps
+Larsgårdens Hundpensionat & Dagis,Halmstad,Hallands län,kontakt@larsgardens.se,https://larsgardens.se,https://www.facebook.com/Larsgardenshundpensionat,google_maps,"Svingelvägen 2, 302 59 Halmstad",,serpapi_google_maps
+bgårdens hunddagis och pensionat,Simlångsdalen,Hallands län,bgardenshund@outlook.com,http://www.bgardenshund.se,,google_maps,"Håralt 937, 313 97 Simlångsdalen",070-914 98 66,serpapi_google_maps
+Stardrift`s kennel,Slättåkra,Hallands län,,https://www.kennelstardrift.se,,google_maps,"Slättåkra 420, 313 93 Slättåkra",076-267 55 21,serpapi_google_maps
+Halmstad Hundutbildning,Holm,Hallands län,,http://www.halmstadhundutbildning.se,,google_maps,"Rosenberg Rosenlund 275, 305 92 Holm",070-958 58 62,serpapi_google_maps
+Nydala Ullboden,Getinge,Hallands län,nydala.ullboden@gmail.com,http://www.nydala-ullboden.se,https://m.facebook.com/nydala.ullboden/ref=bookmarks,google_maps,"Ryd Nydala 189, 310 44 Getinge",070-232 19 23,serpapi_google_maps
+Claudias Stars,Unnaryd,Hallands län,,,,google_maps,"Färda 303. Södergård, 314 52 Unnaryd",072-252 80 87,serpapi_google_maps
+Dogz,Halmstad,Hallands län,info@dogz.se,http://www.dogz.se,https://www.facebook.com/pages/Dogz/112529302094670,google_maps,"Flygaregatan 12, 302 38 Halmstad",035-12 33 44,serpapi_google_maps
+MarCi,Halmstad,Hallands län,marci.sweden@gmail.com,https://marcihundkurser.co.uk,https://facebook.com/110840017853665,google_maps,"Viktoriagatan 2A, 302 45 Halmstad",070-454 74 65,serpapi_google_maps
+Kennel Goldflames AB,Halmstad,Hallands län,,,,google_maps,"Vallås Torg 21, 302 58 Halmstad",070-454 74 65,serpapi_google_maps
+Marleys hunddagis,Halmstad,Hallands län,,https://swenavi.org/details/marleys-hunddagis-ChIJuYQ,,google_maps,"Seminariegatan, 302 96 Halmstad",,serpapi_google_maps
+Bokbacken,Simlångsdalen,Hallands län,djurskola@outlook.com,http://www.djurskola.se,,google_maps,"MARBÄCKSHULT 219, 310 38 Simlångsdalen",,serpapi_google_maps
+Hundklipp i Halmstad,Halmstad,Hallands län,info@hundklipp.se,https://www.hundklipp.se,https://www.facebook.com/Hundklipp,google_maps,"Wallbergsgatan 5, 302 31 Halmstad",079-358 45 77,serpapi_google_maps
+Hundaktivitetscenter Halmstad AB,Genevad,Hallands län,info@hundaktivitetscenter.se,http://www.hundaktivitetscenter.se,https://www.facebook.com/hundaktivitetscenter,google_maps,"Bruksgatan 3, 312 40 Genevad",070-306 84 54,serpapi_google_maps
+Vovve på Språng,Slättåkra,Hallands län,vovve@vovvepasprang.se,http://vovvepasprang.se,https://facebook.com/VovvePS,google_maps,"Plogvägen 9B, 313 93 Slättåkra",070-777 09 96,serpapi_google_maps
+Halmstads Brukshundklubb,Halmstad,Hallands län,kurs@sbkhalmstad.se,http://www.sbkhalmstad.se,http://www.facebook.com/SBK-Halmstad-114250278615210,google_maps,"SKEDALAHED 112, 305 93 Halmstad",035-12 17 99,serpapi_google_maps
+Lilla Hundpalatset,Halmstad,Hallands län,,http://www.lillahundpalatset.se,https://www.facebook.com/644553362300149,google_maps,,,serpapi_google_maps
+Hundrastgårdarna i Linehedsparken,Halmstad,Hallands län,,,,google_maps,"Linehedsvägen 63, 302 52 Halmstad",,serpapi_google_maps
+Rotorps hundrastgård,Halmstad,Hallands län,,,,google_maps,"Fågelvägen 45, 302 37 Halmstad",,serpapi_google_maps
+Lotten's Dogspa - Hundfrisör,Halmstad,Hallands län,lotten@lottensdogspa.se,http://lottensdogspa.se,https://www.facebook.com/profile.php,google_maps,"Planetgatan 2, 302 35 Halmstad",076-128 90 01,serpapi_google_maps
+Hund & Kattshopen,Halmstad,Hallands län,,http://www.hundochkattshopen.se,https://www.facebook.com/Hund-kattshopen-190293294380959,google_maps,"Fasanvägen 16, 302 40 Halmstad",035-10 28 70,serpapi_google_maps
+Dog in Work,Halmstad,Hallands län,info@doginwork.com,http://www.doginwork.com,,google_maps,"Onsjö 415a, 305 91 Halmstad",070-378 84 42,serpapi_google_maps
+CoolDogs Hundtrim,Halmstad,Hallands län,,,,google_maps,"Kungsgatan 2, 302 45 Halmstad",070-338 26 67,serpapi_google_maps
+"Hundsalong Julia- Hundtrim, Hundfrisör, Kattfrisör",Halmstad,Hallands län,,https://hundsalongjulia.wixsite.com/hundsalong-julia,https://www.facebook.com/profile.php,google_maps,"Flygaregatan 10B, 302 36 Halmstad",076-186 75 34,serpapi_google_maps
+Knektagårdens hundpensionat,Rolfstorp,Hallands län,knektagarden@hotmail.com,http://www.knektagarden.se,https://www.facebook.com/knektagarden,google_maps,"VALINGE SÄM 4, 430 16 Rolfstorp",072-090 88 75,serpapi_google_maps
+"Ljungstorps -Kennel, kurser, friskvård",Varberg,Hallands län,carro.bohman@hotmail.com,https://www.ljungstorps.se,http://www.facebook.com/ljungstorps,google_maps,"Ljungstorp 25, 432 91 Varberg",070-818 29 18,serpapi_google_maps
+Breared,Varberg,Hallands län,,,,google_maps,"Träslöv 114, 432 91 Varberg",,serpapi_google_maps
+Kennel Riddarprinsessan's,Varberg,Hallands län,,,,google_maps,"Ribstonvägen 2B, 432 46 Varberg",073-500 78 98,serpapi_google_maps
+Wargtassens Hunddagis,Varberg,Hallands län,kontakt@wargtassenshunddagis.se,http://www.wargtassenshunddagis.se,,google_maps,"Vare 44, 432 91 Varberg",073-683 04 03,serpapi_google_maps
+Tvååkers Hundtrim,Tvååker,Hallands län,kennel@brainjacks.se,http://brainjacks.se,https://www.facebook.com/Tv%C3%A5%C3%A5kers-hundtrim-2064494400337466,google_maps,"Tvååkers Gata 1A, 432 76 Tvååker",,serpapi_google_maps
+Vovverado,Veddige,Hallands län,rosita@vovverado.se,http://www.vovverado.se,,google_maps,"Gullberg 6, 432 68 Veddige",073-051 83 44,serpapi_google_maps
+Liljedals hundpensionat,Istorp,Hallands län,liljedalshundpensionat@gmail.com,http://www.liljedalshundpensionat.se,,google_maps,"Dala Liljedal, 519 91 Istorp",073-153 24 28,serpapi_google_maps
+Kennel Newcroft's,Varberg,Hallands län,,http://kennelnewcrofts.wordpress.com,,google_maps,,070-949 79 37,serpapi_google_maps
+Millijors Kennel,Varberg,Hallands län,,,,google_maps,"Träslövsvägen 119, 432 37 Varberg",,serpapi_google_maps
+Varbergs Brukshundklubb,Varberg,Hallands län,,http://www.varbergsbk.se,https://www.facebook.com/VarbergsBrukshundklubb,google_maps,"Brearedsvägen 73B, 432 13 Varberg",,serpapi_google_maps
+Ännagårdens hund,Tvååker,Hallands län,catharina.fahlberg@telia.com,http://xn--nnagrden-zzao.se,,google_maps,"ÅHS 75, 432 76 Tvååker",070-668 54 11,serpapi_google_maps
+SK Warberg,Varberg,Hallands län,fam.winquist@telia.com,https://www.skwarberg.se,,google_maps,432 98 Varberg,,serpapi_google_maps
+Hundrastgården Breared,Varberg,Hallands län,,,,google_maps,432 38 Varberg,,serpapi_google_maps
+"Hundsalong Agnes ,hundfrisör Agnes",Varberg,Hallands län,,https://hundsalong.wixsite.com/hundsalongagnes,https://www.facebook.com/hundfrisoragnes,google_maps,"Prästgatan 36B, 432 44 Varberg",070-746 44 89,serpapi_google_maps
+Hundsalong Tvätt och Skvätt,Varberg,Hallands län,,http://tvattochskvatt.se,,google_maps,"Vrångagatan 7, 432 56 Varberg",070-277 49 91,serpapi_google_maps
+Vovking Hundcenter,Varberg,Hallands län,info@vovking.se,http://www.vovking.se,,google_maps,432 41 Varberg,070-288 80 93,serpapi_google_maps
+Create Dreams Kennel,Kungsbacka,Hallands län,,http://www.createdreams.se,,google_maps,"Gullregnsvägen 9, 434 44 Kungsbacka",076-709 86 79,serpapi_google_maps
+Kennel Grimmhills,Kungsbacka,Hallands län,grimmhillsrm@outlook.com,http://grimmhills.se,,google_maps,"Göteborgsvägen 673, 434 96 Kungsbacka",,serpapi_google_maps
+Kungsbacka Hundpensionat,Kungsbacka,Hallands län,zakeya@live.se,http://www.kungsbackahundpensionat.se,,google_maps,"Vallda Intagsv 19, 434 92 Kungsbacka",070-955 92 03,serpapi_google_maps
+Fors Hundrastgård,Kungsbacka,Hallands län,,,,google_maps,434 46 Kungsbacka,,serpapi_google_maps
+"Mariedals Hundpensionat, Kattpensionat & Hästverksamhet",Kungsbacka,Hallands län,pelle@mariedahl.se,http://www.mariedahl.se,,google_maps,"Mariedals gårdsväg 64, 434 96 Kungsbacka",070-218 59 34,serpapi_google_maps
+Dogman and friends,Kungsbacka,Hallands län,,https://dogman.se/store-detail/dogman-and-friends-kungsbacka,https://www.facebook.com/DogmanKungsbacka,google_maps,"Hedebrovägen 34, 434 39 Kungsbacka",0300-57 80 80,serpapi_google_maps
+Lilla Tassens Hunddagis,Kungsbacka,Hallands län,kontakt@lillatassen.se,http://www.lillatassen.se,,google_maps,"Varlabergsvägen 18, 434 39 Kungsbacka",070-830 96 25,serpapi_google_maps
+Kungsbacka Hundcenter,Kungsbacka,Hallands län,info@kungsbackahundcenter.se,http://www.kungsbackahundcenter.se,https://www.facebook.com/Delsj%C3%B6ns-Kungsbacka-hundcenter-105152355538800,google_maps,"Verkstadsgatan 9, 434 42 Kungsbacka",070-730 88 33,serpapi_google_maps
+Dashing Dogs,Kungsbacka,Hallands län,,http://www.dashingdogs.se,https://www.facebook.com/dashingdogssverige,google_maps,"Vallgatan 1b, 434 30 Kungsbacka",076-162 40 50,serpapi_google_maps
+Kungsbacka Brukshundklubb,Kungsbacka,Hallands län,kontakt@kbhk.se,https://www.kbhk.se/kontakt,,google_maps,"Barnamossevägen 200, 434 96 Kungsbacka",,serpapi_google_maps
+Göta Hund AB,Kullavik,Hallands län,info@gotahund.se,http://www.gotahund.se,https://www.facebook.com/assistanshundskolan,google_maps,"Gamla Särövägen 220, 429 34 Kullavik",,serpapi_google_maps
+Onsala Hundcenter,Kungsbacka,Hallands län,onsalahundcenter@hotmail.com,http://www.onsalahundcenter.se,,google_maps,"Göteborgsvägen 403, 434 95 Kungsbacka",072-746 39 20,serpapi_google_maps
+Hallands Hundhälsa,Kungsbacka,Hallands län,,http://hallandshundhalsa.com,,google_maps,"Johnssons väg 3 Energigatan 12, 434 37, 439 61 Kungsbacka",070-798 63 78,serpapi_google_maps
+Poshdog Hundtrim,Kungsbacka,Hallands län,,,,google_maps,"Vallgatan 1B, 434 30 Kungsbacka",,serpapi_google_maps
+Vällhaga Gård,Falun,Dalarnas län,,https://www.vallhagagard.se,,google_maps,"Björkbacksvägen 11, 791 94 Falun",,serpapi_google_maps
+skumparpskennel,Bunkeflostrand,Skåne län,info@skumparps.se,https://www.skumparps.se,,google_maps,"Ättehögsvägen 6B, 218 46 Bunkeflostrand",070-733 96 64,serpapi_google_maps
+Falu Hundsällskap - Faluns Lokala Kennelklubb,Falun,Dalarnas län,,https://swemaps.org/details/falu-hundsllskap-faluns-lokala-kennelklubb-ChIJmzP,,google_maps,"Främbyvägen 8, 791 52 Falun",,serpapi_google_maps
+FUXENS KENNEL,Borlänge,Dalarnas län,info@fuxen.se,http://www.fuxen.se,,google_maps,"Östanbäcksvägen 4, 781 95 Borlänge",070-664 92 54,serpapi_google_maps
+Meadow Lane's Kennel,Borlänge,Dalarnas län,,https://swemaps.org/details/meadow-lanes-kennel-ChIJ9Se,,google_maps,"Gärdesgatan 17, 784 62 Borlänge",0243-888 97,serpapi_google_maps
+Matematikens kennel,Borlänge,Dalarnas län,,,,google_maps,"Nol-saras väg, 784 54 Borlänge",070-651 22 48,serpapi_google_maps
+Kennel Chanco,Åäng,Kronobergs län,info@kennelchanco.se,http://www.kennelchanco.se,https://www.facebook.com/profile.php,google_maps,"Åäng, Ljungsäng 1, 342 92",076-858 13 58,serpapi_google_maps
+Callunavias Kennel,Lenhovda,Kronobergs län,,http://www.teambreeders.se,,google_maps,"Näsbykulla 7, 364 92 Lenhovda",070-494 69 13,serpapi_google_maps
+Ekespångs Kennel,Hamneda,Kronobergs län,susanne@ekespangskennel.se,http://www.ekespangskennel.se,,google_maps,"Bredingevägen, 341 75 Hamneda",070-256 93 57,serpapi_google_maps
+Andhämtningens Kennel,Åseda,Kronobergs län,golden@andhamtningen.se,http://www.andhamtningen.se,https://www.facebook.com/Andh%C3%A4mtningens-kennel-482953225217275,google_maps,"Källeflaga Aplalund, 364 33 Åseda",070-898 58 11,serpapi_google_maps
+Kennel Rollingwave,Östersund,Jämtlands län,kennelrollingwave@gmail.com,https://www.rollingwave.se/kontakt,,google_maps,"Åkerbärsvägen, 831 62 Östersund",070-609 21 00,serpapi_google_maps
+Skutegårdens kennel,Fåker,Jämtlands län,cardigan@telia.com,http://www.cathen.se,https://www.facebook.com/pages/Skuteg%C3%A5rdens-kennel/824283280941134,google_maps,"Skute 139, 845 93 Fåker",070-678 04 54,serpapi_google_maps
+Lillfjällets kennel,Östersund,Jämtlands län,,,,google_maps,"Repslagarstigen 28A, 831 46 Östersund",063-12 50 13,serpapi_google_maps
+Jämtland/Härjedalens Kennelklubb,Östersund,Jämtlands län,marlene.berner@outlook.com,https://www.skk.se/sv/JHKK,https://www.facebook.com/jhkennelklubb,google_maps,"Skolgatan 39, 831 44 Östersund",070-344 98 05,serpapi_google_maps
+itaharjun kennel,Sveg,Jämtlands län,,,,google_maps,"Glöte 129, 842 91 Sveg",070-662 71 71,serpapi_google_maps
+Nordkalottens Kennel,Kåge,Västerbottens län,,http://www.nordkalottens.com/se,,google_maps,"14,, 934 94 Kåge",072-740 90 77,serpapi_google_maps
+Capandus Kennel,Ödsmål,Västernorrlands län,capandus kennel%20%3cvalpar@capandus.se%3e,https://www.capandus.se/index.htm,https://www.facebook.com/capandus,google_maps,"Grinnerås, 444 95 Ödsmål",070-873 73 26,serpapi_google_maps
+Flatham´s Kennel,Piteå,Norrbottens län,flathams@telia.com,http://www.flathams.com/kontakt.htm,,google_maps,"Bölebomsvägen 36, 941 91 Piteå",0911-622 00,serpapi_google_maps
+Kennel Odd Polly,Piteå,Norrbottens län,,,,google_maps,"Finlandiagränd, 941 52 Piteå",0911-195 45,serpapi_google_maps
+Kennel Bennstaff,Öjebyn,Norrbottens län,,,,google_maps,"ÄLVSTRAND 3, 943 33 Öjebyn",073-847 85 05,serpapi_google_maps
+Sjulgårdens kennel,Roknäs,Norrbottens län,,,,google_maps,"Gamla Sjulnäsvägen 25, 946 31 Roknäs",070-283 27 28,serpapi_google_maps
+silverstjärnans kennel,Roknäs,Norrbottens län,,http://silverstjarnan.se,,google_maps,"Gunnel Hermanson, Roknäsvägen 102, 946 31 Roknäs",070-608 22 54,serpapi_google_maps
+Loumils Kennel,Roknäs,Norrbottens län,susanne@torpa.net,http://loumils.se/om-oss,,google_maps,"Roknäsvägen 270, 946 91 Roknäs",073-033 51 78,serpapi_google_maps
+Tjärdalen's Kennel,Sikfors,Norrbottens län,,,,google_maps,"Sikforsvägen 64, 942 94 Sikfors",070-318 05 75,serpapi_google_maps
+Lillstigen's kennel,Kalix,Norrbottens län,info@lillstigen.se,http://www.lillstigen.se,https://www.facebook.com/lillstigens,google_maps,"170, 952 92 Kalix",070-642 99 28,serpapi_google_maps
+Kennel Blåtiran,Piteå,Norrbottens län,,https://www.instagram.com/kennelblatiran,,google_maps,,072-242 62 26,serpapi_google_maps
+Norrtälje Lokala Kennelklubb,Rimbo,Stockholms län,,https://nlkk.se/om,,google_maps,"Björkbacken, 762 91 Rimbo",076-336 02 57,serpapi_google_maps
+GuldGrodanskennel,Norrtälje,Stockholms län,,,,google_maps,"Anderssvedjavägen 21, 761 75 Norrtälje",070-221 74 47,serpapi_google_maps
+Espab AB :: Krullets Kennel,Norrtälje,Stockholms län,info@krullets.se,http://www.krullets.se,https://facebook.com/krullets.kennel,google_maps,"Tre byars väg 145, 761 74 Norrtälje",070-680 16 80,serpapi_google_maps
+Designerline kennel,Väddö,Stockholms län,kenneldesignerline@gmail.com,http://designerline.blogspot.com,,google_maps,"Norra, 764 93 Väddö",,serpapi_google_maps
+Bergalids Kennel,Furusund,Stockholms län,info@bergalidskennel.se,https://www.bergalidskennel.se,https://www.facebook.com/bergalidskennel,google_maps,,070-956 38 83,serpapi_google_maps
+Skråmstas kennel,Sigtuna,Stockholms län,,,,google_maps,"Hälgesta 201, 193 91 Sigtuna",08-590 707 15,serpapi_google_maps
+Kennel Jenzan,Vallentuna,Stockholms län,,,,google_maps,"Kullängen 32, 186 96 Vallentuna",,serpapi_google_maps
+Kennel,Vallentuna,Stockholms län,,http://www.diamondswolfeyes.com/Kontaktsida,,google_maps,"Ripvägen 6, 186 96 Vallentuna",073-682 14 26,serpapi_google_maps
+Evallens Kennel,Almunge,Stockholms län,ewa@martensby.se,http://www.martensby.se,https://www.facebook.com/ewa.myrbrink,google_maps,"Mårtensby, 741 97 Almunge",,serpapi_google_maps
+Kennel Updates,Upplands Väsby,Stockholms län,,https://naviswmap.org/details/kennel-updates-ChIJn2I,,google_maps,"Båtsmansvägen 1, 194 47 Upplands Väsby",070-712 37 00,serpapi_google_maps
+Björnbrisens Kennel,Upplands Väsby,Stockholms län,,https://bjornbrisens.wordpress.com,,google_maps,"26 E, Väsbyvägen, 194 35 Upplands Väsby",,serpapi_google_maps
+ArbaQ´s Kennel,Upplands Väsby,Stockholms län,marie.backstrom@ri.se,http://www.arbaq.se/kontakt.htm,,google_maps,"Almvägen, 194 92 Upplands Väsby",070-433 55 45,serpapi_google_maps
+hunduppfödare,Solna,Stockholms län,,,,google_maps,"Råsundavägen 70, 169 57 Solna",+372 5392 9498,serpapi_google_maps
+Kennel Carhartt,Åkersberga,Stockholms län,,https://www.facebook.com/kennelcarhartt,,google_maps,"TRYFFELVÄGEN 5, 184 34 Åkersberga",070-974 36 08,serpapi_google_maps
+Kennel Itanema,Åkersberga,Stockholms län,therese@itanema.se,https://www.itanema.se,,google_maps,"Syrsavägen 4C, 184 38 Åkersberga",073-985 44 95,serpapi_google_maps
+Mälarvindens Kennel,Åkersberga,Stockholms län,,http://malarvindens.se,,google_maps,"Fjärilsvägen 14A, 184 38 Åkersberga",076-251 95 85,serpapi_google_maps
+Kennel AngelRiesen's,Åkersberga,Stockholms län,,http://www.angelryd.se/kontakt.html,,google_maps,"Knipvägen 111, 184 62 Åkersberga",08-540 679 20,serpapi_google_maps
+Lillhamras Kennel,Enköping,Uppsala län,,,,google_maps,"Vallby Hånninby 11, 745 98 Enköping",,serpapi_google_maps
+Chamorels Kennel,Enköping,Uppsala län,,,,google_maps,"LÅNGTORA, 745 96 Enköping",,serpapi_google_maps
+Saivalainens kennel,Enköping,Uppsala län,,https://saivalainens.se,,google_maps,"SPARRSÄTRA BENALA TORP 13, 745 95 Enköping",072-382 52 05,serpapi_google_maps
+Kennel Yrar,Enköping,Uppsala län,hundar@yrar.se,http://www.yrar.se,https://www.facebook.com/agnes.t.yrar,google_maps,"VECKHOLMS-SÄBY 8, 745 99 Enköping",070-874 70 66,serpapi_google_maps
+Jägarfamiljens Kennel,Nyköping,Södermanlands län,jagarfamiljenskennel@gmail.com,http://jagarfamiljens.se,http://www.facebook.com/J%C3%A4garfamiljens-Kennel-287720738049430,google_maps,"Råby Bro Smedstugan 1, 611 94 Nyköping",076-106 04 20,serpapi_google_maps
+FREIJAHUSETS KENNEL,Nyköping,Södermanlands län,,,,google_maps,"Stenbrovägen 9, 611 37 Nyköping",0155-28 39 83,serpapi_google_maps
+Kennel Three Pines,Nyköping,Södermanlands län,,http://www.kennelthreepines.com/15/8/kontakt,,google_maps,"Höders väg 15, 611 50 Nyköping",070-546 56 44,serpapi_google_maps
+Kennel Fornix,Katrineholm,Södermanlands län,,,,google_maps,"Anna-Karin Widén, Duvslaget 1, 641 35 Katrineholm",0150-596 98,serpapi_google_maps
+My’s Stuteri och Kennel AB,Björkvik,Södermanlands län,,http://www.mysstuteriochkennel.se,,google_maps,"Västra Å, 641 98 Björkvik",076-878 55 83,serpapi_google_maps
+Gullvivebacken's kennel,Enhörna,Södermanlands län,sara.palonen77@gmail.com,https://kennelsida.wixsite.com/gullvivebackens,,google_maps,"Stjärna 26, 151 96 Enhörna",,serpapi_google_maps
+Kennel Kemppi´s,Strängnäs,Södermanlands län,asa.kemppi@gmail.com,http://www.kemppis.se/empty_7.html,,google_maps,"Tranbärsstigen 6 E, 645 43 Strängnäs",073-523 59 56,serpapi_google_maps
+Strängnäs Lokala Kennelklubb,Strängnäs,Södermanlands län,info@slkk.se,http://www.slkk.se,https://www.facebook.com/StrangnasLokalaKennelklubb,google_maps,"Elofsbergsvägen 9, 645 47 Strängnäs",,serpapi_google_maps
+Kennel Happy Queens,Motala,Östergötlands län,,http://www.kennelhappyqueens.com,,google_maps,"Kastbergavägen 9, 591 95 Motala",076-162 38 99,serpapi_google_maps
+Rosettasweets Kennel,Motala,Östergötlands län,,,,google_maps,"Södra Herrgårdsgatan 31, 591 32 Motala",073-201 77 64,serpapi_google_maps
+Kennel Stenseiten,Motala,Östergötlands län,lapphund@stenseiten.se,http://www.stenseiten.se,,google_maps,"Pärlvägen 5, 591 72 Motala",072-844 22 28,serpapi_google_maps
+Bernervillans Kennel,Finspång,Östergötlands län,,http://www.bernervillan.se,,google_maps,"Örebrovägen 80, 612 94 Finspång",0122-600 12,serpapi_google_maps
+Husses Kennel,Finspång,Östergötlands län,,http://husses.se,,google_maps,"Hälla 4 Lilla Vrå, 612 95 Finspång",073-826 99 17,serpapi_google_maps
+Kennel World's Wildest,Mjölby,Östergötlands län,info@worldswildest.se,http://www.worldswildest.se,,google_maps,595 95 Mjölby,,serpapi_google_maps
+Kennel Poppi's,Värnamo,Jönköpings län,,http://www.kennelpoppis.se/Kontakt,,google_maps,"Jönköpingsvägen 62, 331 34 Värnamo",073-083 77 03,serpapi_google_maps
+Mölleskog kennel,Fryele,Jönköpings län,molleskogs@hotmail.com,http://www.molleskogskennel.se,,google_maps,"7438+5G, 331 96 Fryele",,serpapi_google_maps
+Chapong´s Kennel,Värnamo,Jönköpings län,,,,google_maps,"Bolavägen 89, 331 53 Värnamo",0370-126 69,serpapi_google_maps
+Kennel Nobis,Värnamo,Jönköpings län,,https://naviswbusiness.org/details/kennel-nobis-ChIJAQA,,google_maps,"Smultronvägen 23, 331 42 Värnamo",0370-474 81,serpapi_google_maps
+Kennel Breaking The Rules,Värnamo,Jönköpings län,,https://kennelbreakingtherules.com,,google_maps,,,serpapi_google_maps
+Kennel Superioue's,Flisby,Jönköpings län,info@superioues.se,http://www.superioues.se,,google_maps,"Brittatorpet 1, 578 95 Flisby",076-820 00 22,serpapi_google_maps
+Lundholmens Kennel,Skogstorp,Jönköpings län,,,,google_maps,"Torsvägen 3 B, 633 69 Skogstorp",070-576 30 21,serpapi_google_maps
+Hundpensionat Alex Kennel,Skåne-Tranås,Jönköpings län,,http://alexkennel.se,,google_maps,"Månslunda 1115, 273 92 Skåne-Tranås",073-035 69 38,serpapi_google_maps
+Björkebäcks kennel och hundpensionat,Tranås,Jönköpings län,,https://www.yourvismawebsite.com/bjorkebackens-kennel-hundpensionat/hundpensionat,,google_maps,,070-627 15 52,serpapi_google_maps
+"Astrid och lammen, Kennel Awayoflife",Tranås,Jönköpings län,,,,google_maps,,070-923 56 23,serpapi_google_maps
+Eskilsgårds Kennel,Hamneda,Kronobergs län,,,,google_maps,"Ivla 4, 341 75 Hamneda",,serpapi_google_maps
+Småland-Ölands Kennelklubb,Lenhovda,Kronobergs län,info@smokk.se,http://www.smokk.se,https://www.facebook.com/smalandolands.kennelklubb,google_maps,"Apoteksgatan 9, 364 42 Lenhovda",0474-210 07,serpapi_google_maps
+Rågläntans Kennel,Alvesta,Kronobergs län,,http://raglantans.se,,google_maps,"Forsdala Gårddala 1, 342 90 Alvesta",,serpapi_google_maps
+Blekinge Kennelklubb,Karlskrona,Blekinge län,,https://www.skk.se/bkk,,google_maps,"Hagtornsvägen 27, 371 48 Karlskrona",0455-843 15,serpapi_google_maps
+Kennel Glädjeruset,Fridlevstad,Blekinge län,ebbasmatte77@gmail.com,https://www.kennelgladjeruset.se/kurser-workshops/kurs,http://www.facebook.com/ebbasmatte,google_maps,"Bränteknuva, 373 35 Fridlevstad",,serpapi_google_maps
+Kråkslottets Kennel,Rödeby,Blekinge län,,,,google_maps,"Madvägen 11, 373 43 Rödeby",,serpapi_google_maps
+Kennel Space,Rockneby,Blekinge län,,,,google_maps,"Axeltorpet 101, 395 92 Rockneby",,serpapi_google_maps
+Sköneviks Kennel,Ronneby,Blekinge län,,,,google_maps,"Vierydsvägen 199, 372 90 Ronneby",,serpapi_google_maps
+Brixbäcks Kennel,Oskarshamn,Kalmar län,,https://www.brixback.se,https://facebook.com/profile.php,google_maps,"August Och Huldas väg 6, 572 50 Oskarshamn",076-169 20 79,serpapi_google_maps
+Havslätts Kennel,Oskarshamn,Kalmar län,,,,google_maps,"Rosendalsvägen 4, 572 40 Oskarshamn",,serpapi_google_maps
+Västerviks Kennelklubb,Västervik,Kalmar län,,,,google_maps,"KEJSERSLUND, GÄDDEGLOVÄGEN, 593 41 Västervik",,serpapi_google_maps
+Cavvastar’s kennel och hundtrim,Visby,Gotlands län,,https://www.facebook.com/profile.php,,google_maps,"Väskinde Olofstorpsvägen 6, 622 75 Visby",070-993 66 62,serpapi_google_maps
+Fröken Saber: hundtrim och kennel,Visby,Gotlands län,frokensaraberg@gmail.com,https://www.alertandbrave.se,,google_maps,"Snäckhöjdskvior 9, 621 41 Visby",070-738 80 89,serpapi_google_maps
+Shiragårdens Kennel,Kristinehamn Municipality,Värmlands län,,,,google_maps,Kristinehamn Municipality,,serpapi_google_maps
+Maloyals Kennel,Kristinehamn,Värmlands län,,,,google_maps,"Hedehult 1, 681 91 Kristinehamn",073-577 60 62,serpapi_google_maps
+Kennel Lloyd-Willner,Kristinehamn,Värmlands län,,,,google_maps,"Värmlands Säby, Udderud,, Udderud, 681 92 Kristinehamn",076-790 07 94,serpapi_google_maps
+Chosen Angels kennel,Kristinehamn,Värmlands län,,https://www.facebook.com/groups/45285723813,,google_maps,"Roverudsvägen, 681 92 Kristinehamn",,serpapi_google_maps
+Kennel Barecho,Sandviken,Gävleborgs län,,http://www.barecho.com,,google_maps,"Hedåsvägen 20, 811 61 Sandviken",070-311 31 65,serpapi_google_maps
+hotsweets kennel,Söderhamn,Gävleborgs län,,,,google_maps,"Sofieholm 735, 826 91 Söderhamn",070-765 79 17,serpapi_google_maps
+Kennel TufflaZ,Sandarne,Gävleborgs län,info@tufflaz.se,http://www.tufflaz.se,https://www.facebook.com/tufflaz,google_maps,,,serpapi_google_maps
+Tokbäckens Kennel,Bollnäs,Gävleborgs län,,,,google_maps,"Rasslengatan, 821 94 Bollnäs",070-622 34 89,serpapi_google_maps
+Kennel Momabo's,Bollnäs,Gävleborgs län,iapudel@gmail.com,http://www.momabos.se,,google_maps,"Odengatan 13, 821 43 Bollnäs",070-214 31 06,serpapi_google_maps
+Jezzamynens kennel,Bollnäs,Gävleborgs län,,http://www.jezzamynens.se/kontakta,,google_maps,"Växbovägen 114, 821 51 Bollnäs",0278-262 31,serpapi_google_maps
+Flugdammens Eros Landseer Kennel,Bollnäs,Gävleborgs län,inga.malm@flugdammen.se,http://flugdammen.se/flugdammens%20Kennel.html,,google_maps,"Flugbo 7400, 821 92 Bollnäs",,serpapi_google_maps
+Hudiksvalls Kennelklubb,Hudiksvall,Gävleborgs län,info@hudiksvallskennelklubb.se,http://www.hudiksvallskennelklubb.se,,google_maps,"Stenbergsvägen, 824 40 Hudiksvall",,serpapi_google_maps
+Melody Club's kennel,Avesta,Dalarnas län,,,,google_maps,"Maria Björk and Sören Sjögren, Älvbrovägen 112, 774 35 Avesta",+91 706677054,serpapi_google_maps
+Kennel master of puppies,Avesta,Dalarnas län,,,,google_maps,,070-394 45 51,serpapi_google_maps
+Bländvita Kennel,Fjugesta,Jönköpings län,ida.otterholm@gmail.com,http://xn--blndvita-1za.se,https://facebook.com/138727210104503,google_maps,"Sörby Stenriket, 716 91 Fjugesta",073-802 11 71,serpapi_google_maps
+Kennel Snesslinge,Östhammar,Jönköpings län,kennelsnesslinge@gmail.com,http://kennelsnesslinge.se,https://www.facebook.com/kennelsnesslinge,google_maps,742 93 Östhammar,070-795 21 48,serpapi_google_maps
+Kennel Gerfelli´s,Grillby,Dalarnas län,,,,google_maps,"17, 749 51 Grillby",073-141 85 58,serpapi_google_maps
+Järlemossens Kennel,Nora,Örebro län,,,,google_maps,"Järle stationsväg 11, 713 91 Nora",,serpapi_google_maps
+Linlands Kennel,Bälinge,Örebro län,,,,google_maps,"BÄLINGE LINDESBERG 10, 740 22 Bälinge",,serpapi_google_maps
+"Ideborgens Kennel, Hundvård & Hundpensionat",Köping,Västmanlands län,,,,google_maps,"Hörnberga 8, 731 95 Köping",0221-800 08,serpapi_google_maps
+Kennel Puckings,Köping,Västmanlands län,,http://puckings.com,,google_maps,"Alf Memner, 731 93 Köping",070-594 19 55,serpapi_google_maps
+Köpings kennelklubb KAK,Kolsva,Västmanlands län,info@kopingskennelklubbkak.se,http://www.kopingskennelklubbkak.se,,google_maps,"Lundby 16, 730 30 Kolsva",,serpapi_google_maps
+Kennel Merytyme,Sala,Västmanlands län,,,,google_maps,"Brogatan 23, 733 33 Sala",076-367 13 85,serpapi_google_maps
+Kennel Blåtassen,Sala,Västmanlands län,,,,google_maps,"SKORKEBO 110, 733 92 Sala",073-673 40 06,serpapi_google_maps
+Fagersta Kennelklubb,Fagersta,Västmanlands län,fagerstakk@hotmail.com,http://fagerstakk.se,,google_maps,"Ulvsbovägen 10, 737 92 Fagersta",,serpapi_google_maps
+kennel kätran,Kramfors,Västernorrlands län,,,,google_maps,"Envägen 5, 872 43 Kramfors",070-658 08 12,serpapi_google_maps
+kennel waytogo,Sollefteå,Västernorrlands län,,http://www.kennelwaytogo.se/sv-SE/kennel-wtg/kontakt-3125083,,google_maps,"Remslegatan, 881 50 Sollefteå",070-885 95 86,serpapi_google_maps
+Kennel Fly High,Näsåker,Västernorrlands län,,,,google_maps,"Gårelehöjden 233, 881 99 Näsåker",072-244 58 76,serpapi_google_maps
+Försvarets hundtjänstenhet Avelsstation,Sollefteå,Västernorrlands län,,,,google_maps,"Hågestavägen 249, 881 41 Sollefteå",0505-45 10 00,serpapi_google_maps
+Norrskenets Kennel,Själevad,Västerbottens län,,http://www.norrskenets.se/utstallning.html,,google_maps,"Västerhusänget 226, 894 91 Själevad",0660-37 92 78,serpapi_google_maps
+Röjvallens Kennel,Lycksele,Västerbottens län,,,,google_maps,"Barrvägen 10, 921 46 Lycksele",,serpapi_google_maps
+Hem /Norrskenets kennel,Junsele,Västerbottens län,,http://www.norrskenets.se,,google_maps,883 71 Junsele,,serpapi_google_maps
+Kennel Arctic Arssarnerit,Skogså,Norrbottens län,,,,google_maps,"405, 961 91 Skogså",070-381 62 79,serpapi_google_maps
+Kennel Blåtiran,Boden,Norrbottens län,,https://www.instagram.com/kennelblatiran,,google_maps,,072-242 62 26,serpapi_google_maps
+Topforce kennel,Boden,Norrbottens län,,,,google_maps,"Övre Svartlå 30, 961 98 Boden",,serpapi_google_maps
+Kennel Galactic Defender,Kiruna,Norrbottens län,galacticdefender@hotmail.com,http://www.galacticdefender.se/kenneln.html,,google_maps,"Lappgatan 29 A, 981 35 Kiruna",073-026 72 62,serpapi_google_maps
+Kennel Vet Point,Kiruna,Norrbottens län,,https://swedmapi.org/details/kennel-vet-point-ChIJKct,,google_maps,"Oinakkavägen 12, 981 92 Kiruna",0980-290 29,serpapi_google_maps
+Kennel Request,Malmberget,Norrbottens län,,http://kennelrequest.se/updat_2019.htm,,google_maps,"Laxvägen 7, 983 34 Malmberget",070-652 44 38,serpapi_google_maps

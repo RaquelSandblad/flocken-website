@@ -21,7 +21,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { UserCircle, MessageCircle, Gift } from 'lucide-react';
+import { UserCircle, MessageCircle, Gift, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { VLandingCTA } from './VLandingCTA';
 import { VLandingStickyHeader } from './VLandingStickyHeader';
@@ -91,6 +91,7 @@ function TrustIcon({ icon }: { icon: VLandingTrustSignal['icon'] }) {
   const cls = 'w-6 h-6 shrink-0 text-flocken-accent';
   if (icon === 'user-circle') return <UserCircle className={cls} aria-hidden="true" />;
   if (icon === 'message-circle') return <MessageCircle className={cls} aria-hidden="true" />;
+  if (icon === 'map-pin') return <MapPin className={cls} aria-hidden="true" />;
   return <Gift className={cls} aria-hidden="true" />;
 }
 
@@ -281,11 +282,27 @@ export function VLandingPage({ config }: VLandingPageProps) {
       <section className="relative overflow-hidden" aria-label="Hero">
         {/* Bakgrundsbild */}
         <div className="relative w-full h-[55vh] sm:h-[60vh] lg:h-[65vh] min-h-[400px]">
+          {/* Mobil-version (< 640px): visas bara om heroImageSrcMobile är satt */}
+          {config.heroImageSrcMobile && (
+            <Image
+              src={config.heroImageSrcMobile}
+              alt={config.heroImageAlt}
+              fill
+              className="object-cover sm:hidden"
+              style={{ objectPosition: config.heroObjectPosition ?? 'center 30%' }}
+              sizes="100vw"
+              priority
+            />
+          )}
+          {/* Desktop/fallback-version: gömd på mobil om mobilbild finns, annars alltid synlig */}
           <Image
             src={config.heroImageSrc}
             alt={config.heroImageAlt}
             fill
-            className="object-cover"
+            className={cn(
+              'object-cover',
+              config.heroImageSrcMobile && 'hidden sm:block'
+            )}
             style={{ objectPosition: config.heroObjectPosition ?? 'center 30%' }}
             sizes="100vw"
             priority
@@ -379,10 +396,9 @@ export function VLandingPage({ config }: VLandingPageProps) {
       {/* [5] ARGUMENT 3 — flocken-sand, overlapping mockups höger            */}
       {/* ------------------------------------------------------------------ */}
       {config.arguments.map((arg, i) => {
-          // Argument 1 (i=0): text vänster, bild höger
-          // Argument 2 (i=1): bild vänster, text höger (spegelvänt)
-          // Argument 3 (i=2): text vänster, bild höger
-          const isTextLeft = i !== 1;
+          // Alternerande layout: jämnt index = text vänster, udda = bild vänster.
+          // Ger naturlig "zig-zag" oavsett antal block (3, 5, eller fler).
+          const isTextLeft = i % 2 === 0;
           const bgClass = config.argumentBackgrounds[i];
 
           return (

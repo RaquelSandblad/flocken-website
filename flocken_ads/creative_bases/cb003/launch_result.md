@@ -1,9 +1,50 @@
 ---
 title: "CB003 Passa — Launch-utfall"
-version: "1.0"
-last_updated: "2026-04-17"
-status: "launched-paused"
+version: "1.1"
+last_updated: "2026-04-21"
+status: "launched-rotated-paused"
 author: "Claude (PL) + kreativ-producent"
+---
+
+## Rotation 2026-04-21 (v1.1)
+
+Rotation via `scripts/rotate-cb003-u1.js`. Alla nya objekt skapade som PAUSED — Torbjörn aktiverar manuellt.
+
+**Pausat:**
+- Natverk ad set (120243902373180455) — underpresterade CTR-link 5.99 %
+- Trygghet video-ad (120243902367790455) — redan arkiverad i Meta
+- Skuld video-ad (120243902372190455) — redan arkiverad i Meta
+
+**Nya objekt (alla PAUSED):**
+
+```
+Ad Set "natverk-v2" (120244162260850455) · 50 SEK/dag · U1-vinkel (Facebook-grupp-frustration)
+  ├── Static 4:5: 120244162262120455
+  │   Copy: p16 + h11 + d08
+  │   Creative: flocken_ad_cb003_u1_v01_4x5.jpg
+  └── Static 9:16: 120244162264230455
+      Copy: p16 + h11 + d08 (samma)
+      Creative: flocken_ad_cb003_u1_v01_9x16.jpg
+
+Ad Set "trygghet" (120243902362250455) · NY 9:16 static
+  └── Static 9:16: 120244162267300455
+      Copy: p01 + h01 + d01
+      Creative: flocken_ad_cb003_a_v03_9x16.jpg (lady-dog-walk)
+
+Ad Set "skuld" (120243902368990455) · NY 9:16 static (alt C: samma bild som Trygghet)
+  └── Static 9:16: 120244162268390455
+      Copy: p05 + h05 + d04
+      Creative: flocken_ad_cb003_a_v03_9x16.jpg (lady-dog-walk — delad med Trygghet)
+```
+
+**Beslut rotationen:**
+- U1-hook: Facebook-grupp-frustration (Cowork-iteration 2026-04-21, brief `G:/Min enhet/Spitakolus/creative/flocken/draft/brief_copy_natverk-v2_20260421.md`)
+- d08 kortades "Ladda ner Flocken-appen gratis" (31) → "Ladda ner Flocken gratis" (24) för Meta 27-gräns
+- Skuld alt C: delar samma 9:16-bild som Trygghet — enkel baseline för att snabbt få igång 9:16 utan ny produktion
+- Targeting på Natverk-v2: kopierad från gamla Natverk ad set (Advantage+ Audience PÅ, SE, 25-65, Dogs interest)
+
+**Rapportfil:** `flocken_ads/creative_bases/cb003/rotation_20260421_result.json`
+
 ---
 
 # CB003 Passa — Launch-utfall

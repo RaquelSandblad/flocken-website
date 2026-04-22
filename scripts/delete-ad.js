@@ -35,7 +35,7 @@ if (!adId) {
 
 console.log(`🗑️  Tar bort ad ${adId}...`);
 
-const url = new URL(`https://graph.facebook.com/v21.0/${adId}`);
+const url = new URL(`https://graph.facebook.com/v24.0/${adId}`);
 url.searchParams.set('access_token', token);
 
 const req = https.request(url, { method: 'DELETE' }, res => {

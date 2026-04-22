@@ -156,7 +156,7 @@
 **Problem:** Olika API-versioner kan returnera olika data.
 
 **Förklaring:**
-- **API v21.0:** Används i scripten
+- **API v24.0:** Används i scripten (uppgraderad april 2026 fran v21.0)
 - **Ads Manager:** Kan använda nyare API-versioner internt
 - Vissa fields kan vara deprecated eller ändras
 
@@ -296,5 +296,5 @@ Om du ser skillnader mellan API och Ads Manager:
 ---
 
 **Senast uppdaterad:** 2026-01-25  
-**API Version:** v21.0  
+**API Version:** v24.0  
 **Data Period:** 2025-12-26 till 2026-01-25 (UTC)

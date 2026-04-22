@@ -125,6 +125,63 @@ _(18 tecken)_
 
 ---
 
+## Vinkel 4: Natverk-v2 (U1 — Facebook-grupp-frustration)
+
+**Ersätter Vinkel 3 (Nätverket försvinner) i CID003.** Gamla Natverk ad set pausas, nytt ad set Natverk-v2 skapas med nya bilder och U1-copy. Hypotes H4: U1-vinkeln träffar bredare demografisk bas (alla som är med i hundgrupper på FB) än den specifika familjesituationen.
+
+**Producerad av:** Cowork + Torbjörn 2026-04-21 (brief: `G:/Min enhet/Spitakolus/creative/flocken/draft/brief_copy_natverk-v2_20260421.md`)
+
+### Primary text
+
+p13: Lagt ut i hundgruppen. Fått tre svar. Ingen bild. Ingen profil. Inget att bedöma. I Flocken-appen ser du hundvakterna på kartan – med profil och bild – innan du kontaktar någon.
+_(181 tecken)_
+
+p14: Du vet hur det brukar gå när du frågar i gruppen. I Flocken-appen ser du hundvakterna nära dig – med bild, beskrivning och karta – innan du skriver ett enda meddelande.
+_(170 tecken)_
+
+p15: Inlägget drunknar. Personen som svarar är okänd. I Flocken-appen finns hundvakterna samlade på kartan. Du ser vem de är innan du väljer vem du kontaktar.
+_(154 tecken)_
+
+**p16 ✓ VALD:** Facebook-grupper är bra för mycket. Att hitta hundvakt är inte ett av dem. I Flocken-appen har varje hundvakt en profil med bild. Du ser vem som finns nära dig innan du frågar.
+_(179 tecken — primary tillåter längre, första 125 tecken landar innan "Läs mer"-klipp)_
+
+p17: Frågar du i gruppen vet du aldrig vem som svarar. I Flocken-appen väljer du själv – du ser hundvakterna på kartan, med bild och profil, innan du kontaktar någon.
+_(164 tecken)_
+
+### Headlines
+
+**h11 ✓ VALD:** Se vilka hundvakter som finns nära dig
+_(38 tecken — under 40-gräns)_
+
+h12: Du väljer. Innan du frågar.
+_(27 tecken)_
+
+h13: Inte en grupp. Ett nätverk.
+_(27 tecken)_
+
+h14: Hundvakter nära dig, med profil
+_(31 tecken)_
+
+### Descriptions
+
+**d08 ✓ VALD (KORTAD):** Ladda ner Flocken gratis
+_(24 tecken — kortad från 31 för att hålla Meta 27-teckengräns)_
+
+d09: Se hundvakter nära dig
+_(22 tecken)_
+
+d10: Bild, profil och karta
+_(22 tecken)_
+
+### Kreativ kopplad
+
+- 4:5: `flocken_ad_cb003_u1_v01_4x5.jpg` (man tittar på mobil med karta, clay-stil)
+- 9:16: `flocken_ad_cb003_u1_v01_9x16.jpg` (samma motiv, stående)
+
+Båda ligger i `flocken_ads/creative_bases/cb003/assets/final/`.
+
+---
+
 ## CTA-knappval per objective
 
 | Objective | CTA-knapp |

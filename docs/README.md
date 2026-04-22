@@ -182,6 +182,14 @@ Dokumentationen är organiserad i kategorier för enklare navigering:
 
 ---
 
+### ⚙️ **Make.com — Automation** (`make/`)
+
+AI-styrd automatisering via Make MCP. Outreach-flöden för hunddagis och kennlar.
+
+- [Make Blueprint API Guide](./make/MAKE_BLUEPRINT_API_GUIDE.md) ⭐ — Kritiska lärdomar, rätt blueprint-format, kolumnmappning, aktiva scenarier
+
+---
+
 ### 🛠️ **Development** (`development/`)
 
 - [Infrastructure](./development/INFRASTRUCTURE.md) ⭐ - Testing, Validation, Security, ESLint

@@ -9,7 +9,7 @@
 
 export interface VLandingTrustSignal {
   /** Lucide-icon-name eller liknande identifier — används av layout för ikonval */
-  icon: 'user-circle' | 'message-circle' | 'gift';
+  icon: 'user-circle' | 'message-circle' | 'gift' | 'map-pin';
   text: string;
 }
 
@@ -58,6 +58,12 @@ export interface VLandingConfig {
    * För bilder med motiv i nedre halvan (t.ex. /v/hundar trehundar-bilden): 'center 65%'.
    */
   heroObjectPosition?: string;
+  /**
+   * Valfri mobil-specifik hero-bild (< 640px viewport). Används när 16:9-bilden
+   * kropar för hårt på mobil och en mer kvadratisk/portrait version ger bättre komposition.
+   * Faller tillbaka till heroImageSrc om inte angiven.
+   */
+  heroImageSrcMobile?: string;
   /** Valfri pill-text ovanför hero-rubriken */
   heroPillText?: string;
   /** Social proof-citat direkt under hero-CTA */
@@ -66,10 +72,10 @@ export interface VLandingConfig {
   // Trust strip (sektion 2, flocken-brown bakgrund)
   trustSignals: [VLandingTrustSignal, VLandingTrustSignal, VLandingTrustSignal];
 
-  // Tre argument — var och en med sin screenshot-stil
-  arguments: [VLandingArgument, VLandingArgument, VLandingArgument];
-  /** Bakgrundsfärger per argument: index 0=arg1, 1=arg2, 2=arg3 */
-  argumentBackgrounds: [string, string, string];
+  /** Argument-sektioner — minst 3, kan vara fler. Index mappas till argumentBackgrounds. */
+  arguments: VLandingArgument[];
+  /** Bakgrundsfärger per argument — måste ha samma längd som arguments. */
+  argumentBackgrounds: string[];
 
   // Social proof-sektion (sektion 6, flocken-brown bakgrund)
   /** Rubrik ovanför citatkorten */
@@ -213,13 +219,15 @@ export const PASSA_CONFIG: VLandingConfig = {
 };
 
 // ---------------------------------------------------------------------------
-// Hundar — CB004 v2 (2026-04-22)
-// Bildstatus:
-//   hero   — LEVERERAD: hero-clay-trehundar-21x9.jpg (2400×1029, 21:9)
-//   arg1   — SAKNAS: arg1-hand-lekkompis-filter.jpg — väntar Torbjörns produktion
-//   arg2   — LEVERERAD: arg2-clay-fb-kaos-1x1.jpg (1:1, clay-stil hand+mobil+FB-kaos)
-//   arg3   — LEVERERAD: arg3-clay-forsvunnen-1x1.jpg (1024×1024, clay-stil hand+mobil+karta+varningstriangel)
-//   closing — SAKNAS: closing-clay-hund-nara.jpg — väntar Torbjörns produktion
+// Hundar — CB004 v3 (2026-04-22)
+// Bilder valda ur v-hundar-mockup-selection/ tillsammans med Torbjörn, alla LEVERERADE:
+//   hero    — hero-clay-trehundar-16x9.jpg (tre lekande hundar)
+//   arg1    — arg1-hand-hundlista-1x1.jpg (mobil med hundprofiler)
+//   arg2    — arg2-hand-karta-1x1.jpg (mobil med karta över hundar)
+//   arg3    — arg3-clay-kvinna-hund-promenad-1x1.jpg (kvinna + hund på skogsstig)
+//   arg4    — arg4-hand-varning-natt-1x1.jpg (mobil med karta + varning, nattstämning)
+//   arg5    — arg5-hand-fb-kryss-1x1.jpg (FB-kaos överstruket med rött kryss)
+//   closing — closing-clay-man-soker-hund-1x1.jpg (man visar karta på mobil för hund)
 // ---------------------------------------------------------------------------
 
 export const HUNDAR_CONFIG: VLandingConfig = {
@@ -227,14 +235,15 @@ export const HUNDAR_CONFIG: VLandingConfig = {
   experimentId: 'CB004',
 
   // Hero
-  heroTitle: 'Hunden behöver mer än dig',
+  heroTitle: 'Öppna världen för din hund',
   heroSubtitle:
-    'Du är hundens värld. Men den mår bättre med fler i den.',
-  heroImageSrc: '/assets/flocken/v-hundar/hero-clay-trehundar-21x9.jpg',
+    'Du är störst i hundens värld. Med Flocken-appen blir den ännu lite större.',
+  heroImageSrc: '/assets/flocken/v-hundar/hero-clay-trehundar-16x9.jpg',
+  heroImageSrcMobile: '/assets/flocken/v-hundar/hero-clay-trehundar-v2-4x5.jpg',
   heroImageAlt:
-    'Clay-illustration av tre hundar (pudel, cocker spaniel och maltese) som står tillsammans på en gräsplätt med staket och förortshus i bakgrunden',
-  /** Hundarna står i nedre halvan av bilden — skifta fokus nedåt så de inte klipps på mobil */
-  heroObjectPosition: 'center 65%',
+    'Clay-illustration av tre hundar (pudel, cocker spaniel och maltese) som springer tillsammans på en gräsmatta med staket och förortshus i bakgrunden',
+  // Ingen heroObjectPosition-override — ärver default 'center 30%'.
+  // Mobil (< 640px) använder 4:5-version för att visa alla tre hundar utan att kropas.
   heroPillText: undefined,
   heroSocialProof:
     '2 000+ hundägare i Sverige använder Flocken-appen. Finns på App Store och Google Play.',
@@ -243,47 +252,64 @@ export const HUNDAR_CONFIG: VLandingConfig = {
   trustSignals: [
     {
       icon: 'user-circle',
-      text: 'Filter på storlek, ras och temperament',
+      text: 'Filtrera på storlek, ras och temperament',
     },
     {
-      icon: 'gift',
+      icon: 'map-pin',
       text: 'Hundar nära dig, visas på kartan',
     },
     {
       icon: 'message-circle',
-      text: 'Realtidslarm om hunden springer bort',
+      text: 'Chatta med hundägare i appen',
     },
   ],
 
-  // Tre argument
+  // Fem argument — ordning enligt Torbjörns spec 2026-04-22:
+  //   1 matchning → 2 problem (FB-grupper) → 3 hundvakt → 4 karta närhet → 5 larm
   arguments: [
     {
       title: 'En kompis som matchar',
-      body: 'Små hundar leker hårt när de är rätt matchade. Stora blir försiktiga när de är det. I Flocken-appen väljer du bort felmatchningarna innan ni träffas, så slipper leken bli för intensiv.',
+      body: 'Hundar leker bäst när de hittar någon som matchar. I Flocken-appen letar du i lugn och ro bland hundar som passar din innan du tar kontakt.',
       imageStyle: 'photo',
-      imageSrc: '/assets/flocken/v-hundar/arg1-hand-lekkompis-filter.jpg', // SAKNAS — väntar Torbjörns produktion
+      imageSrc: '/assets/flocken/v-hundar/arg2-hand-karta-1x1.jpg',
       imageAlt:
-        'Hand som håller en telefon med Flockens filter-vy för lekkompisar — storlek, ras och temperament',
+        'Hand som håller en telefon med Flockens karta — hundar i närheten visas som markörer',
+    },
+    {
+      title: 'Slut på röriga grupper',
+      body: 'Facebook-grupper är bra till mycket. Men vissa saker är de inte anpassade för, som att söka en lekkompis till hunden.',
+      imageStyle: 'photo',
+      imageSrc: '/assets/flocken/v-hundar/arg5-hand-fb-kryss-v3-1x1.jpg',
+      imageAlt:
+        'Hand som håller en telefon med Facebook-gruppskaos överstruket med rött kryss',
+    },
+    {
+      title: 'Hundvakter i ditt grannskap',
+      body: 'Sök på kartan och se vem som finns nära dig. Läs profilen och träffas innan passningen för att skapa trygghet.',
+      imageStyle: 'illustration',
+      imageSrc: '/assets/flocken/v-hundar/arg3-clay-kvinna-hund-promenad-1x1.jpg',
+      imageAlt:
+        'Clay-illustration av kvinna som promenerar med sin hund på en skogsstig — lummigt, lugnt, vardag',
     },
     {
       title: 'Hundar som bor i närheten',
-      body: 'I Flocken-appen ser du vilka hundar som finns nära dig, på kartan. Profil, bild, storlek, ras. Du väljer själv vem du vill ses med. Ingen grupptråd, ingen tagg, ingen algoritm som bestämmer åt dig.',
+      body: 'I Flocken-appen ser du vilka hundar som finns nära dig. Du kan se bild, storlek, ras och en beskrivning. Du väljer själv vem du vill ses med.',
       imageStyle: 'photo',
-      imageSrc: '/assets/flocken/v-hundar/arg2-clay-fb-kaos-1x1.jpg',
+      imageSrc: '/assets/flocken/v-hundar/arg1-hand-hundlista-1x1.jpg',
       imageAlt:
-        'Clay-illustration av hand som håller mobil med Facebook-gruppskaos — kontrast mot Flockens enkla vy',
+        'Hand som håller en telefon med Flockens hundlista — profiler med namn, ras och ort nära dig',
     },
     {
-      title: 'Om något händer finns grannarna där',
-      body: 'Om hunden springer iväg får hundägare i närheten en push-notis direkt. Inte ett inlägg som kanske dyker upp i flödet några timmar senare. Gemenskapen du bygger i vardagen är den du behöver när det gäller.',
+      title: 'Om hunden springer bort',
+      body: 'Om din hund försvinner kan du snabbt markera det med en varning på kartan. Då ser andra användare av Flocken det direkt.',
       imageStyle: 'photo',
-      imageSrc: '/assets/flocken/v-hundar/arg3-clay-forsvunnen-1x1.jpg',
+      imageSrc: '/assets/flocken/v-hundar/arg4-hand-varning-natt-1x1.jpg',
       imageAlt:
-        'Clay-illustration av hand som håller mobil med Flockens larmvy — karta, varningstriangel, nattstämning',
+        'Hand som håller en telefon med Flockens karta — varningssymbol markerar en försvunnen hund, nattstämning',
     },
   ],
 
-  argumentBackgrounds: ['bg-flocken-cream', 'bg-white', 'bg-flocken-sand'],
+  argumentBackgrounds: ['bg-flocken-cream', 'bg-white', 'bg-flocken-sand', 'bg-flocken-cream', 'bg-white'],
 
   // Social proof
   socialProofLabel: 'Så pratar hundägare om hundlivet',
@@ -293,33 +319,33 @@ export const HUNDAR_CONFIG: VLandingConfig = {
       quote:
         'Jag hoppas att jag kan hitta en lämplig lekkompis till min lilla kompis. Han älskar att leka också.',
       name: 'Hundägare',
-      city: 'Sverige',
+      city: 'Hundforum',
+    },
+    {
+      // HUNDAR_RESEARCH_SYNTHESIS.md — FB-grupp-friktion, syntes från VoC
+      quote:
+        "Det är tröttande att 'pitcha' sin hund om och om igen i varje grupp.",
+      name: 'Hundägare',
+      city: 'Facebook-grupp',
     },
     {
       // VoC #6 (Glanna.se blogg 2025, Gemini §2) — realism om hundvänskap
       quote:
         'Vi vill så gärna att hunden ska ha kompisar. Men hundar blir inte vänner bara för att vi ägare vill det.',
       name: 'Hundägare',
-      city: 'Sverige',
-    },
-    {
-      // VoC #8 (Värnamo Nu 2016, Gemini §2) — försvunnen hund, neutral ton
-      quote:
-        'Ett tag var jag förkrossad. Jag tänkte på vad som kunde ha hänt hunden.',
-      name: 'Hundägare',
-      city: 'Sverige',
+      city: 'Glanna.se',
     },
   ],
 
   // Recruit-sektion BORTTAGEN i v2 (Torbjörns beslut — kennlar mejlas direkt)
 
   // Closing CTA
-  closingHeadline: 'Ett ställe för allt som rör hunden',
+  closingHeadline: 'Flocken öppnar hundvärlden',
   closingBody:
-    'Ladda ner Flocken-appen. Hitta lekkompisar, hundar i närheten och grannar som finns där när det gäller.',
-  closingImageSrc: '/assets/flocken/v-hundar/closing-clay-hund-nara.jpg', // SAKNAS — väntar Torbjörns produktion
+    'Ladda ner Flocken-appen. Hitta lekkompisar, hundar i närheten och passning när du behöver.',
+  closingImageSrc: '/assets/flocken/v-hundar/closing-clay-man-soker-hund-1x1.jpg',
   closingImageAlt:
-    'Clay-illustration av en hund som ligger tryggt bredvid ägarens fötter — hemmiljö, gröna växter',
+    'Clay-illustration av en man som visar en kart-app på sin mobil för sin uppmärksamma hund',
 
   ctaLabel: 'Ladda ner Flocken',
   closingSubtext: 'Gratis att ladda ner. Finns på App Store och Google Play.',

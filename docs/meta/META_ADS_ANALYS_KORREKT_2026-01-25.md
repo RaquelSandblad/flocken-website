@@ -237,4 +237,4 @@ Baserat på nuvarande prestanda:
 
 **Genererad:** 2026-01-25  
 **Nästa uppdatering:** 2026-02-01  
-**Data källa:** Meta Marketing API v21.0
+**Data källa:** Meta Marketing API v24.0

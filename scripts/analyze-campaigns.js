@@ -42,7 +42,7 @@ if (!ACCESS_TOKEN) {
 // Funktion för att göra API-anrop med timeout och bättre felhantering
 function makeRequest(path, timeout = 30000) {
   return new Promise((resolve, reject) => {
-    const url = new URL(`https://graph.facebook.com/v21.0${path}`);
+    const url = new URL(`https://graph.facebook.com/v24.0${path}`);
     url.searchParams.set('access_token', ACCESS_TOKEN);
     
     const req = https.request(url, (res) => {

@@ -55,12 +55,14 @@ if (fs.existsSync(envPath)) {
 const ACCESS_TOKEN = envVars.META_ACCESS_TOKEN || envVars.META_ADS_API_TOKEN || envVars.META_MARKETING_API_TOKEN;
 const AD_ACCOUNT_ID = envVars.META_AD_ACCOUNT_ID || 'act_1648246706340725';
 const PAGE_ID = '936579286197312';
-const INSTAGRAM_ID = envVars.META_INSTAGRAM_ID || null;
+// IG Business Account — Flocken (flocken_app). Får ALDRIG vara null — Torbjörns feedback 2026-04-21.
+const INSTAGRAM_ID = envVars.META_INSTAGRAM_ID || '17841479914513348';
 const PIXEL_ID = '854587690618895';
 
 const CID = 'cid003';
 const LANDING_PAGE = 'https://flocken.info/v/passa';
-const DISPLAY_LINK = 'flocken.info/v/passa';
+// Display link = rotdomän i feed. Torbjörns feedback 2026-04-21: aldrig path.
+const DISPLAY_LINK = 'flocken.info';
 const ASSETS_DIR = path.join(__dirname, '..', 'flocken_ads', 'creative_bases', 'cb003', 'assets', 'final');
 // CB003 v01 använder befintlig funktionsdemo-video för alla 3 ad sets (delas).
 // Vinklar skiljs åt via Primary Text + Headline (visas över videon i Meta-feed).
@@ -344,7 +346,7 @@ async function createStaticAd(adsetId, vinkel, imageHash) {
     page_id: PAGE_ID,
     link_data: linkData,
   };
-  if (INSTAGRAM_ID) objectStorySpec.instagram_actor_id = INSTAGRAM_ID;
+  objectStorySpec.instagram_actor_id = INSTAGRAM_ID;
 
   const creativeResult = await makeRequest(`/${AD_ACCOUNT_ID}/adcreatives`, 'POST', {
     name: `${adName} Creative`,
@@ -393,7 +395,7 @@ async function createVideoAd(adsetId, vinkel, videoId, thumbnailUrl) {
     page_id: PAGE_ID,
     video_data: videoData,
   };
-  if (INSTAGRAM_ID) objectStorySpec.instagram_actor_id = INSTAGRAM_ID;
+  objectStorySpec.instagram_actor_id = INSTAGRAM_ID;
 
   const creativeResult = await makeRequest(`/${AD_ACCOUNT_ID}/adcreatives`, 'POST', {
     name: `${adName} Creative`,

@@ -87,8 +87,8 @@ export function ResultCard({ slug, quiz, score, badge, tier, interpretation, use
         <ShareButtons slug={slug} quizTitle={quiz.title} score={score} />
       </div>
 
-      {/* 2. App CTA – A/B-test (variant A/B/C/D slumpas per besökare) */}
-      <AppCtaModule quizSlug={slug} />
+      {/* 2. App CTA – A/B-test (variant A/B/C slumpas per besökare) */}
+      <AppCtaModule quizSlug={slug} position="after_badge" />
 
       {/* 3. Svarsgenomgång */}
       <div className="rounded-[var(--quiz-radius-card)] border border-flocken-warm/40 bg-white p-6 shadow-card">
@@ -128,8 +128,8 @@ export function ResultCard({ slug, quiz, score, badge, tier, interpretation, use
         </div>
       </div>
 
-      {/* 4. Upprepad App CTA efter svarsgenomgång – fångar engagerade användare som scrollat klart */}
-      <AppCtaModule quizSlug={slug} />
+      {/* 4. Upprepad App CTA efter svarsgenomgång – social proof-varianten, fångar engagerade användare som scrollat klart */}
+      <AppCtaModule quizSlug={slug} position="after_review" />
 
     </section>
   );

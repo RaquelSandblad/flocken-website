@@ -24,7 +24,7 @@ const ADSETS = [
 
 function makeRequest(urlPath, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
-    const url = new URL(`https://graph.facebook.com/v21.0${urlPath}`);
+    const url = new URL(`https://graph.facebook.com/v24.0${urlPath}`);
     url.searchParams.set('access_token', token);
     const postData = data ? JSON.stringify(data) : null;
     const options = { method, headers: { 'Content-Type': 'application/json' } };

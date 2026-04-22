@@ -4,6 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > **General rules:** See `C:\dev\spitakolus\CLAUDE.md` for shared standards (documentation, assets, Meta Ads, infrastructure).
 
+## Make.com Automation
+
+Outreach-flöden för hunddagis/kennlar styrs via Make MCP.
+Se **[docs/make/MAKE_BLUEPRINT_API_GUIDE.md](./docs/make/MAKE_BLUEPRINT_API_GUIDE.md)** för:
+- Kritiska blueprint-regler (array för `to`, alias via RPC för `from`, restore-metadata)
+- Aktiva scenario-ID:n och kopplingsID:n
+- Kolumnmappning per sheet
+
+---
+
 ## Repository Identity
 
 **This is flocken-website** - the Flocken product repository.

@@ -1,0 +1,47 @@
+{
+  "paused": [
+    {
+      "type": "adset",
+      "name": "Natverk",
+      "id": "120243902373180455"
+    },
+    {
+      "type": "ad",
+      "name": "Trygghet video",
+      "id": "120243902367790455"
+    },
+    {
+      "type": "ad",
+      "name": "Skuld video",
+      "id": "120243902372190455"
+    }
+  ],
+  "newAdSets": [
+    {
+      "name": "Natverk-v2 (U1)",
+      "id": "120244162260850455"
+    }
+  ],
+  "newAds": [
+    {
+      "adset": "Natverk-v2",
+      "format": "4:5",
+      "id": "120244162262120455"
+    },
+    {
+      "adset": "Natverk-v2",
+      "format": "9:16",
+      "id": "120244162264230455"
+    },
+    {
+      "adset": "Trygghet",
+      "format": "9:16 static",
+      "id": "120244162267300455"
+    },
+    {
+      "adset": "Skuld",
+      "format": "9:16 static",
+      "id": "120244162268390455"
+    }
+  ]
+}

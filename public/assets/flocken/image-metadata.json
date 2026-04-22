@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "project": "Flocken",
-  "lastUpdated": "2026-03-08T13:47:02.847Z",
+  "lastUpdated": "2026-04-18T09:23:59.901Z",
   "images": {
     "flocken_image_community": {
       "originalPath": "assets/flocken/_originals/flocken_image_community.jpg",
@@ -9,7 +9,7 @@
         "width": 2752,
         "height": 1536
       },
-      "processedAt": "2026-03-08T13:44:47.353Z",
+      "processedAt": "2026-04-18T09:22:34.434Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -54,7 +54,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_community_medium.avif",
-            "size": 162428
+            "size": 162929
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_community_medium.webp",
@@ -72,7 +72,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_community_large.avif",
-            "size": 294128
+            "size": 294386
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_community_large.webp",
@@ -90,7 +90,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_community_hero.avif",
-            "size": 579018
+            "size": 579061
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_community_hero.webp",
@@ -109,7 +109,7 @@
         "width": 2048,
         "height": 2048
       },
-      "processedAt": "2026-03-08T13:45:02.507Z",
+      "processedAt": "2026-04-18T09:22:40.552Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -154,7 +154,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_hero_medium.avif",
-            "size": 172292
+            "size": 172419
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_hero_medium.webp",
@@ -172,7 +172,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_hero_large.avif",
-            "size": 295654
+            "size": 295843
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_hero_large.webp",
@@ -190,7 +190,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_hero_hero.avif",
-            "size": 378888
+            "size": 379312
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_hero_hero.webp",
@@ -209,7 +209,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-03-08T13:45:31.023Z",
+      "processedAt": "2026-04-18T09:22:51.864Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -254,7 +254,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_medium.avif",
-            "size": 84320
+            "size": 84963
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_medium.webp",
@@ -272,7 +272,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_large.avif",
-            "size": 104728
+            "size": 105619
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_large.webp",
@@ -290,7 +290,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_hero.avif",
-            "size": 158680
+            "size": 159805
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_trbg_1x1_hero.webp",
@@ -309,7 +309,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-03-08T13:45:57.540Z",
+      "processedAt": "2026-04-18T09:23:02.506Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -354,7 +354,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_medium.avif",
-            "size": 74453
+            "size": 74995
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_medium.webp",
@@ -372,7 +372,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.avif",
-            "size": 98158
+            "size": 98800
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_large.webp",
@@ -390,7 +390,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_hero.avif",
-            "size": 164783
+            "size": 165752
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_some-mess_v1_wbg_1x1_hero.webp",
@@ -409,7 +409,7 @@
         "width": 1024,
         "height": 1024
       },
-      "processedAt": "2026-03-08T13:45:22.301Z",
+      "processedAt": "2026-04-18T09:22:48.211Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -454,7 +454,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_medium.avif",
-            "size": 72487
+            "size": 72997
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_medium.webp",
@@ -472,7 +472,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_large.avif",
-            "size": 100094
+            "size": 100140
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_large.webp",
@@ -490,7 +490,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_hero.avif",
-            "size": 187142
+            "size": 188177
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_image_jmf_v1_1x1_hero.webp",
@@ -509,7 +509,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:46:12.950Z",
+      "processedAt": "2026-04-18T09:23:08.330Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -554,7 +554,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hero_medium.avif",
-            "size": 47691
+            "size": 47842
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hero_medium.webp",
@@ -572,7 +572,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hero_large.avif",
-            "size": 73259
+            "size": 73610
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hero_large.webp",
@@ -590,7 +590,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hero_hero.avif",
-            "size": 117526
+            "size": 118371
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hero_hero.webp",
@@ -609,7 +609,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:46:22.572Z",
+      "processedAt": "2026-04-18T09:23:11.936Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -654,7 +654,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_medium.avif",
-            "size": 35294
+            "size": 35452
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_medium.webp",
@@ -672,7 +672,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_large.avif",
-            "size": 56772
+            "size": 57293
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_large.webp",
@@ -690,7 +690,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_hero.avif",
-            "size": 98182
+            "size": 98629
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_historia_card_hero.webp",
@@ -709,7 +709,7 @@
         "width": 1312,
         "height": 816
       },
-      "processedAt": "2026-03-08T13:46:51.646Z",
+      "processedAt": "2026-04-18T09:23:36.824Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -754,7 +754,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_medium.avif",
-            "size": 43539
+            "size": 43896
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_medium.webp",
@@ -772,7 +772,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_large.avif",
-            "size": 67868
+            "size": 68218
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_large.webp",
@@ -790,7 +790,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_hero.avif",
-            "size": 110180
+            "size": 110941
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundsport_card_hero.webp",
@@ -809,7 +809,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:43:57.369Z",
+      "processedAt": "2026-04-18T09:23:45.233Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -854,7 +854,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_medium.avif",
-            "size": 44013
+            "size": 44277
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_medium.webp",
@@ -872,7 +872,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_large.avif",
-            "size": 68977
+            "size": 69116
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_large.webp",
@@ -890,7 +890,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_hero.avif",
-            "size": 114891
+            "size": 115194
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_rasers_syfte_card_hero.webp",
@@ -909,7 +909,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:44:07.159Z",
+      "processedAt": "2026-04-18T09:23:48.963Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -954,7 +954,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_result_medium.avif",
-            "size": 27230
+            "size": 27499
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_result_medium.webp",
@@ -972,7 +972,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_result_large.avif",
-            "size": 41394
+            "size": 41709
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_result_large.webp",
@@ -990,7 +990,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_result_hero.avif",
-            "size": 72026
+            "size": 72310
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_result_hero.webp",
@@ -1009,7 +1009,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:46:31.322Z",
+      "processedAt": "2026-04-18T09:23:15.388Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1054,7 +1054,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_medium.avif",
-            "size": 29995
+            "size": 30229
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_medium.webp",
@@ -1072,7 +1072,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_large.avif",
-            "size": 48690
+            "size": 48689
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_large.webp",
@@ -1090,7 +1090,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.avif",
-            "size": 84683
+            "size": 85305
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundens_kroppssprak_syfte_card_hero.webp",
@@ -1109,7 +1109,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:46:42.426Z",
+      "processedAt": "2026-04-18T09:23:19.605Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1154,7 +1154,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_medium.avif",
-            "size": 34586
+            "size": 34775
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_medium.webp",
@@ -1172,7 +1172,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_large.avif",
-            "size": 58440
+            "size": 58179
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_large.webp",
@@ -1190,7 +1190,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_hero.avif",
-            "size": 100649
+            "size": 100515
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_hundmat_naring_card_hero.webp",
@@ -1209,7 +1209,7 @@
         "width": 1376,
         "height": 768
       },
-      "processedAt": "2026-03-08T13:44:17.537Z",
+      "processedAt": "2026-04-18T09:23:56.659Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1254,7 +1254,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_medium.avif",
-            "size": 33302
+            "size": 33415
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_medium.webp",
@@ -1272,7 +1272,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_large.avif",
-            "size": 53288
+            "size": 53342
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_large.webp",
@@ -1290,7 +1290,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.avif",
-            "size": 90425
+            "size": 90417
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_card_hero.webp",
@@ -1309,7 +1309,7 @@
         "width": 1080,
         "height": 608
       },
-      "processedAt": "2026-03-08T13:43:44.171Z",
+      "processedAt": "2026-04-18T09:23:40.616Z",
       "variants": {
         "thumbnail": {
           "dimensions": {
@@ -1354,7 +1354,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.avif",
-            "size": 82446
+            "size": 82694
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_medium.webp",
@@ -1372,7 +1372,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_large.avif",
-            "size": 128134
+            "size": 127861
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_large.webp",
@@ -1390,7 +1390,7 @@
           },
           "avif": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_hero.avif",
-            "size": 198809
+            "size": 199200
           },
           "webp": {
             "path": "assets/flocken/generated/flocken_quiz_kanda_hundar_card_hero.webp",
@@ -1499,6 +1499,406 @@
           "jpg": {
             "path": "assets/flocken/generated/quiz_valpar_socialisering_1x1_hero.jpg",
             "size": 165385
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundrekord_card": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundrekord_card.jpeg",
+      "originalDimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "processedAt": "2026-04-18T09:23:32.812Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_thumbnail.avif",
+            "size": 7612
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_thumbnail.webp",
+            "size": 5656
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_thumbnail.jpg",
+            "size": 6529
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_small.avif",
+            "size": 12846
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_small.webp",
+            "size": 10408
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_small.jpg",
+            "size": 13448
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_medium.avif",
+            "size": 28741
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_medium.webp",
+            "size": 26030
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_medium.jpg",
+            "size": 36935
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_large.avif",
+            "size": 50057
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_large.webp",
+            "size": 46472
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_large.jpg",
+            "size": 67515
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 2752,
+            "height": 1536
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_hero.avif",
+            "size": 106628
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_hero.webp",
+            "size": 97216
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_card_hero.jpg",
+            "size": 145053
+          }
+        }
+      }
+    },
+    "flocken_quiz_valpar_socialisering_1x1": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_valpar_socialisering_1x1.jpeg",
+      "originalDimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "processedAt": "2026-04-18T09:23:52.567Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_thumbnail.avif",
+            "size": 7901
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_thumbnail.webp",
+            "size": 5470
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_thumbnail.jpg",
+            "size": 6562
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_small.avif",
+            "size": 24714
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_small.webp",
+            "size": 19998
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_small.jpg",
+            "size": 26165
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_medium.avif",
+            "size": 53705
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_medium.webp",
+            "size": 49524
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_medium.jpg",
+            "size": 72348
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_large.avif",
+            "size": 70998
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_large.webp",
+            "size": 69932
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_large.jpg",
+            "size": 104684
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_hero.avif",
+            "size": 103015
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_hero.webp",
+            "size": 100670
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_valpar_socialisering_1x1_hero.jpg",
+            "size": 165385
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundrekord_1x1": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundrekord_1x1.jpeg",
+      "originalDimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "processedAt": "2026-04-18T09:23:22.951Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_thumbnail.avif",
+            "size": 6429
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_thumbnail.webp",
+            "size": 4764
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_thumbnail.jpg",
+            "size": 5862
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_small.avif",
+            "size": 19707
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_small.webp",
+            "size": 16428
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_small.jpg",
+            "size": 23142
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_medium.avif",
+            "size": 43031
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_medium.webp",
+            "size": 41968
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_medium.jpg",
+            "size": 62356
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_large.avif",
+            "size": 73178
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_large.webp",
+            "size": 74394
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_large.jpg",
+            "size": 112942
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 2048,
+            "height": 2048
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_hero.avif",
+            "size": 100733
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_hero.webp",
+            "size": 98450
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_1x1_hero.jpg",
+            "size": 152688
+          }
+        }
+      }
+    },
+    "flocken_quiz_hundrekord_4x5": {
+      "originalPath": "assets/flocken/_originals/flocken_quiz_hundrekord_4x5.jpeg",
+      "originalDimensions": {
+        "width": 1856,
+        "height": 2304
+      },
+      "processedAt": "2026-04-18T09:23:28.268Z",
+      "variants": {
+        "thumbnail": {
+          "dimensions": {
+            "width": 1856,
+            "height": 2304
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_thumbnail.avif",
+            "size": 6008
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_thumbnail.webp",
+            "size": 4554
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_thumbnail.jpg",
+            "size": 5773
+          }
+        },
+        "small": {
+          "dimensions": {
+            "width": 1856,
+            "height": 2304
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_small.avif",
+            "size": 19329
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_small.webp",
+            "size": 17524
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_small.jpg",
+            "size": 25031
+          }
+        },
+        "medium": {
+          "dimensions": {
+            "width": 1856,
+            "height": 2304
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_medium.avif",
+            "size": 42640
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_medium.webp",
+            "size": 42988
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_medium.jpg",
+            "size": 67792
+          }
+        },
+        "large": {
+          "dimensions": {
+            "width": 1856,
+            "height": 2304
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_large.avif",
+            "size": 74990
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_large.webp",
+            "size": 74050
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_large.jpg",
+            "size": 125032
+          }
+        },
+        "hero": {
+          "dimensions": {
+            "width": 1856,
+            "height": 2304
+          },
+          "avif": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_hero.avif",
+            "size": 87438
+          },
+          "webp": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_hero.webp",
+            "size": 82408
+          },
+          "jpg": {
+            "path": "assets/flocken/generated/flocken_quiz_hundrekord_4x5_hero.jpg",
+            "size": 136834
           }
         }
       }

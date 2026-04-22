@@ -136,7 +136,7 @@ if (!AD_ACCOUNT_ID) {
 
 async function makeRequest(path) {
   return new Promise((resolve, reject) => {
-    const url = `https://graph.facebook.com/v21.0${path}${path.includes('?') ? '&' : '?'}access_token=${ACCESS_TOKEN}`;
+    const url = `https://graph.facebook.com/v24.0${path}${path.includes('?') ? '&' : '?'}access_token=${ACCESS_TOKEN}`;
     
     console.log(`🔗 Request: ${path.substring(0, 100)}...`);
     
