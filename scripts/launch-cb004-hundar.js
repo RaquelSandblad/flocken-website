@@ -301,7 +301,7 @@ async function createStaticAd(adsetId, vinkel, format, imageHash) {
 
   const objectStorySpec = {
     page_id: PAGE_ID,
-    instagram_actor_id: INSTAGRAM_ID,
+    instagram_user_id: INSTAGRAM_ID, // v24: instagram_actor_id deprecated
     link_data: linkData,
   };
 
