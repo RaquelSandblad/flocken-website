@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "HWBGW56WBU.com.bastavan.app",
+        "paths": ["/auth/*"]
+      }
+    ]
+  }
+}
