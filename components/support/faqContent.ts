@@ -1,10 +1,10 @@
 import type { LucideIcon } from 'lucide-react';
-import { PawPrint, Smartphone, Shield, UserCheck } from 'lucide-react';
+import { PawPrint, Smartphone, Shield } from 'lucide-react';
 
 export const FAQ_TOPICS: {
   icon: LucideIcon;
   title: string;
-  items: { q: string; a: string }[];
+  items: { q: string; a: string; key?: string }[];
 }[] = [
   {
     icon: Smartphone,
@@ -20,7 +20,8 @@ export const FAQ_TOPICS: {
       },
       {
         q: 'Är Flocken gratis?',
-        a: 'Ja, Flocken är gratis att ladda ner och du kan använda ett gratiskonto utan tidsbegränsning. För premiumfunktioner finns prenumerationsalternativ.',
+        a: 'Ja, Flocken har ett gratiskonto utan tidsbegränsning. För premiumfunktioner finns prenumerationsalternativ anpassade efter din roll.',
+        key: 'pricing',
       },
       {
         q: 'Hur återställer jag mitt lösenord?',

@@ -2,6 +2,7 @@
 
 import { ChevronDown } from 'lucide-react';
 import { FAQ_TOPICS } from './faqContent';
+import { PricingCards } from './PricingCards';
 
 export function FaqSection() {
   return (
@@ -32,6 +33,11 @@ export function FaqSection() {
                     <p className="px-5 pb-4 pt-1 text-flocken-brown/80 leading-relaxed text-sm">
                       {item.a}
                     </p>
+                    {item.key === 'pricing' && (
+                      <div className="px-5 pb-5">
+                        <PricingCards />
+                      </div>
+                    )}
                   </details>
                 ))}
               </div>
