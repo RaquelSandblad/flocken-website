@@ -115,11 +115,11 @@ export function Header({ variant = 'marketing' }: HeaderProps) {
               </p>
               <nav className="rounded-xl bg-white/80 border border-flocken-sand/60 overflow-hidden shadow-soft">
                 <Link
-                  href="/funktioner#para"
+                  href="/funktioner#hundar"
                   className="block px-4 py-3.5 text-flocken-brown hover:bg-flocken-cream hover:text-flocken-olive transition-colors border-b border-flocken-sand/40 last:border-b-0"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Para
+                  Hundar
                 </Link>
                 <Link
                   href="/funktioner#passa"

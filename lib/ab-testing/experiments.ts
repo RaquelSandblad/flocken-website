@@ -20,7 +20,7 @@ export const experiments: Record<string, Experiment> = {
           // Text content
           heroTitle: 'Ett enklare liv som hundägare',
           heroTagline: '– ladda ner Flocken',
-          heroSubtitle: 'Underlätta vardagen som hundägare med funktionerna Para, Passa, Rasta och Besöka.',
+          heroSubtitle: 'Underlätta vardagen som hundägare med funktionerna Hundar, Passa, Rasta och Besöka.',
           ctaPrimaryText: 'Ladda ner på Google Play',
           ctaSecondaryText: 'Ladda ner på AppStore',
 

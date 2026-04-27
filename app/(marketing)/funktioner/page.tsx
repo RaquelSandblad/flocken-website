@@ -5,7 +5,7 @@ import { VideoPlayer } from '@/components/marketing/VideoPlayer';
 import { trackAppInstall } from '@/lib/tracking';
 
 export default function FunktionerPage() {
-  const paraRef = useRef<HTMLElement>(null);
+  const hundarRef = useRef<HTMLElement>(null);
   const passaRef = useRef<HTMLElement>(null);
   const rastaRef = useRef<HTMLElement>(null);
   const besokaRef = useRef<HTMLElement>(null);
@@ -48,10 +48,10 @@ export default function FunktionerPage() {
         <div className="container-custom">
           <nav className="flex flex-nowrap justify-center gap-2 sm:gap-4 py-4 overflow-x-auto">
             <button
-              onClick={() => scrollToSection(paraRef)}
+              onClick={() => scrollToSection(hundarRef)}
               className="px-3 sm:px-6 py-2 text-flocken-brown hover:text-flocken-olive bg-flocken-cream rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0"
             >
-              Para
+              Hundar
             </button>
             <button
               onClick={() => scrollToSection(passaRef)}
@@ -75,17 +75,17 @@ export default function FunktionerPage() {
         </div>
       </section>
 
-      {/* Para Section */}
-      <section 
-        ref={paraRef}
-        id="para"
+      {/* Hundar Section */}
+      <section
+        ref={hundarRef}
+        id="hundar"
         className="section-padding bg-white scroll-mt-24"
       >
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-flocken-brown mb-4">
-                Para
+                Hundar
               </h2>
               <p className="text-xl text-flocken-brown max-w-3xl mx-auto mb-2">
                 Hitta en lekkamrat eller parningspartner till din hund. Genom att filtrera på kön, storlek, ort och ras blir det enkelt att matcha rätt.
@@ -108,7 +108,7 @@ export default function FunktionerPage() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-2xl font-bold text-flocken-brown mb-6">
-                    Så fungerar funktionen Para
+                    Så fungerar funktionen Hundar
                   </h3>
                   
                   <div className="space-y-4 text-flocken-brown">
@@ -211,7 +211,7 @@ export default function FunktionerPage() {
                     </p>
                     
                     <p>
-                      I funktionen passa ser du inte andra hundägare som är intresserade av att byta hundvaktstjänster. Dessa hittar du i Para där du klickar i &quot;intresserad av att dela hundpassning&quot; i sökfunktionen.
+                      I funktionen passa ser du inte andra hundägare som är intresserade av att byta hundvaktstjänster. Dessa hittar du i Hundar där du klickar i &quot;intresserad av att dela hundpassning&quot; i sökfunktionen.
                     </p>
                     
                     <div className="bg-white rounded-xl p-4 mt-6">
