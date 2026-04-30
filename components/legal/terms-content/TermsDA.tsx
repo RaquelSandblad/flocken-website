@@ -8,7 +8,7 @@ export function TermsDA() {
       <h1>Brugervilkår</h1>
 
       <p className="lead">
-        Sidst opdateret: 12. februar 2026
+        Sidst opdateret: 30. april 2026
       </p>
 
       <p>
@@ -124,7 +124,7 @@ export function TermsDA() {
 
       <h2 id="funktioner">4. Tjenestens funktioner</h2>
 
-      <h3 id="funk-hundar">4.1 Hundar (Hundematchning)</h3>
+      <h3 id="funk-hundar">4.1 Hundar</h3>
       <p><strong>Tilladt brug:</strong></p>
       <ul>
         <li>Finde hunde til parring eller leg</li>
@@ -245,7 +245,7 @@ export function TermsDA() {
       <h3 id="innehall-rapportering">5.4 Rapportering af upassende indhold</h3>
       <p>
         Hvis du støder på indhold der overtræder disse vilkår, bedes du rapportere det via appens
-        rapporteringsfunktion eller kontakte os på support@spitakolus.com.
+        rapporteringsfunktion eller kontakte os på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h3 id="innehall-community">5.5 Community Guidelines</h3>
@@ -269,7 +269,7 @@ export function TermsDA() {
         <li>Vi kan fjerne indhold der overtræder disse retningslinjer uden forudgående advarsel</li>
         <li>Vi kan udstede advarsler, midlertidige udelukkelser eller permanente udelukkelser ved gentagne eller alvorlige overtrædelser</li>
         <li>Vi samarbejder med myndigheder ved mistanke om kriminalitet</li>
-        <li>Vores beslutninger om moderering er endelige, men du kan kontakte os på support@spitakolus.com hvis du mener at en beslutning er forkert</li>
+        <li>Vores beslutninger om moderering er endelige, men du kan kontakte os på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> hvis du mener at en beslutning er forkert</li>
       </ul>
 
       <h2 id="integritet">6. Privatliv og databeskyttelse</h2>
@@ -291,7 +291,7 @@ export function TermsDA() {
       </p>
       <ul>
         <li>Få adgang til dine personoplysninger</li>
-        <li>Rette forkert oplysninger</li>
+        <li>Rette forkerte oplysninger</li>
         <li>Slette din konto og dine oplysninger</li>
         <li>Eksportere dine oplysninger (dataportabilitet)</li>
         <li>Gøre indsigelse mod visse behandlinger</li>
@@ -299,7 +299,7 @@ export function TermsDA() {
       </ul>
       <p>
         For at udøve dine rettigheder eller få mere information, besøg vores side for
-        <Link href="/privacy-choices" className="text-flocken-olive hover:underline">privatlivsindstillinger</Link> eller kontakt os på support@spitakolus.com.
+        <Link href="/privacy-choices" className="text-flocken-olive hover:underline">privatlivsindstillinger</Link> eller kontakt os på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h2 id="ansvar">7. Ansvarsbegrænsning</h2>
@@ -312,7 +312,7 @@ export function TermsDA() {
       <ul>
         <li>Afbrydelser i tjenesten (planlagte eller uplanlagte)</li>
         <li>Datatab</li>
-        <li>Tekniske fejl eller fejl</li>
+        <li>Tekniske fejl eller bugs</li>
         <li>Tredjepartstjenester (inklusive men ikke begrænset til betalingsudbydere, korttjenester, cloud-tjenester, analyseværktøjer og beskedtjenester) der ikke fungerer eller er utilgængelige</li>
         <li>Tab der opstår på grund af tekniske problemer</li>
       </ul>
@@ -369,7 +369,7 @@ export function TermsDA() {
       <h3 id="uppsagning-anvandare">9.1 Opsigelse af dig</h3>
       <p>
         Du kan til enhver tid afslutte din konto ved at slette den i appens indstillinger eller ved at
-        kontakte os på support@spitakolus.com.
+        kontakte os på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h3 id="uppsagning-oss">9.2 Opsigelse af os</h3>
@@ -401,7 +401,7 @@ export function TermsDA() {
 
       <h3 id="tvist-konsument">11.3 Forbrugertvist</h3>
       <p>
-        Hvis du er forbrugers kan du også henvende dig til Allmänna reklamationsnämnden (ARN) for tvistløsning.
+        Hvis du er forbruger, kan du også henvende dig til Allmänna reklamationsnämnden (ARN) for tvistløsning.
         <br/>
         <strong>Websted:</strong>{' '}
         <a href="https://www.arn.se" target="_blank" rel="noopener noreferrer" className="text-flocken-olive hover:underline">www.arn.se</a>
@@ -423,17 +423,14 @@ export function TermsDA() {
       <h2 id="kontakt">13. Kontakt os</h2>
 
       <p>
-        Hvis du har spørgsmål om disse vilkår, kontakt os:
+        Hvis du har spørgsmål om disse vilkår, besøg vores <Link href="/support" className="text-flocken-olive hover:underline">kontaktside</Link> eller send en e-mail til <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> med &quot;Brugervilkår&quot; i emnefeltet.
       </p>
       <ul>
-        <li><strong>E-mail:</strong> support@spitakolus.com</li>
-        <li><strong>Postadresse:</strong> Spitakolus AB, Svängrumsgatan 46, 421 71 Västra Frölunda</li>
         <li><strong>Organisationsnummer:</strong> 559554-6101</li>
-        <li><strong>Emne:</strong> Skriv &quot;Brugervilkår&quot; i emnefeltet</li>
       </ul>
 
       <p className="mt-8 text-sm text-flocken-gray">
-        Disse brugervilkår blev senest opdateret 12. februar 2026 og træder i kraft øjeblikkeligt.
+        Disse brugervilkår blev senest opdateret 30. april 2026 og træder i kraft øjeblikkeligt.
       </p>
     </>
   );

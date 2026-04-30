@@ -8,7 +8,7 @@ export function TermsNO() {
       <h1>Brukervilkår</h1>
 
       <p className="lead">
-        Sist oppdatert: 12. februar 2026
+        Sist oppdatert: 30. april 2026
       </p>
 
       <p>
@@ -84,7 +84,7 @@ export function TermsNO() {
 
       <h3 id="pren-fornyelse">3.2 Automatisk fornyelse</h3>
       <ul>
-        <li>Abonnementet løper til videre og fornyes automatisk hver måned/år i henhold til valgt periode</li>
+        <li>Abonnementet løper inntil videre og fornyes automatisk hver måned/år i henhold til valgt periode</li>
         <li>Fornyelse skjer automatisk ved slutten av hver periode med mindre du sier opp abonnementet</li>
         <li>For å slå av automatisk fornyelse må du si opp abonnementet i App Store eller Google Play-innstillingene</li>
         <li>Oppsigelse må skje før neste faktureringsperiode for å unngå betaling</li>
@@ -124,7 +124,7 @@ export function TermsNO() {
 
       <h2 id="funktioner">4. Tjenestens funksjoner</h2>
 
-      <h3 id="funk-hundar">4.1 Hundar (Hundematching)</h3>
+      <h3 id="funk-hundar">4.1 Hundar</h3>
       <p><strong>Tillatt bruk:</strong></p>
       <ul>
         <li>Finne hunder for parring eller lek</li>
@@ -140,7 +140,7 @@ export function TermsNO() {
         <li>Du er ansvarlig for alle avtaler med andre brukere</li>
         <li>Flocken er ikke part i noen avtaler mellom brukere</li>
         <li>Vi tar ikke ansvar for resultatet av parringer som skjer via appen</li>
-        <li>Du er ansvarlig for å følge svensk dyrevelferdslovgivning og etiske retningslinjer for hundavl</li>
+        <li>Du er ansvarlig for å følge gjeldende dyrevelferdslovgivning og etiske retningslinjer for hundavl</li>
       </ul>
 
       <h3 id="funk-passa">4.2 Pass (Hundepassingstjenester)</h3>
@@ -245,7 +245,7 @@ export function TermsNO() {
       <h3 id="innehall-rapportering">5.4 Rapportering av upassende innhold</h3>
       <p>
         Hvis du støter på innhold som bryter med disse vilkårene, vennligst rapporter det via appens
-        rapporteringsfunksjon eller kontakt oss på support@spitakolus.com.
+        rapporteringsfunksjon eller kontakt oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h3 id="innehall-community">5.5 Community Guidelines</h3>
@@ -269,7 +269,7 @@ export function TermsNO() {
         <li>Vi kan fjerne innhold som bryter med disse retningslinjene uten forhåndsvarsel</li>
         <li>Vi kan utstede advarsler, midlertidige utestengelser eller permanente utestengelser ved gjentatte eller alvorlige overtredelser</li>
         <li>Vi samarbeider med myndigheter ved mistanke om kriminalitet</li>
-        <li>Våre beslutninger om moderering er endelige, men du kan kontakte oss på support@spitakolus.com hvis du mener at en beslutning er feilaktig</li>
+        <li>Våre beslutninger om moderering er endelige, men du kan kontakte oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> hvis du mener at en beslutning er feilaktig</li>
       </ul>
 
       <h2 id="integritet">6. Personvern og databeskyttelse</h2>
@@ -299,7 +299,7 @@ export function TermsNO() {
       </ul>
       <p>
         For å utøve dine rettigheter eller få mer informasjon, besøk vår side for{' '}
-        <Link href="/privacy-choices" className="text-flocken-olive hover:underline">personvernvalg</Link> eller kontakt oss på support@spitakolus.com.
+        <Link href="/privacy-choices" className="text-flocken-olive hover:underline">personvernvalg</Link> eller kontakt oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h2 id="ansvar">7. Ansvarsbegrensning</h2>
@@ -312,7 +312,7 @@ export function TermsNO() {
       <ul>
         <li>Avbrudd i tjenesten (planlagte eller uplanlagte)</li>
         <li>Datatap</li>
-        <li>Tekniske feil eller feil</li>
+        <li>Tekniske feil eller bugs</li>
         <li>Tredjepartstjenester (inkludert men ikke begrenset til betalingsleverandører, karttjenester, skytjenester, analyseverktøy og meldingstjenester) som ikke fungerer eller er utilgjengelige</li>
         <li>Tap som oppstår på grunn av tekniske problemer</li>
       </ul>
@@ -369,7 +369,7 @@ export function TermsNO() {
       <h3 id="uppsagning-anvandare">9.1 Oppsigelse av deg</h3>
       <p>
         Du kan når som helst avslutte kontoen din ved å slette den i appens innstillinger eller ved å
-        kontakte oss på support@spitakolus.com.
+        kontakte oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.
       </p>
 
       <h3 id="uppsagning-oss">9.2 Oppsigelse av oss</h3>
@@ -423,17 +423,14 @@ export function TermsNO() {
       <h2 id="kontakt">13. Kontakt oss</h2>
 
       <p>
-        Hvis du har spørsmål om disse vilkårene, kontakt oss:
+        Hvis du har spørsmål om disse vilkårene, besøk vår <Link href="/support" className="text-flocken-olive hover:underline">kontaktside</Link> eller send e-post til <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> med &quot;Brukervilkår&quot; i emnefeltet.
       </p>
       <ul>
-        <li><strong>E-post:</strong> support@spitakolus.com</li>
-        <li><strong>Postadresse:</strong> Spitakolus AB, Svängrumsgatan 46, 421 71 Västra Frölunda</li>
         <li><strong>Organisasjonsnummer:</strong> 559554-6101</li>
-        <li><strong>Sak:</strong> Skriv &quot;Brukervilkår&quot; i emnefeltet</li>
       </ul>
 
       <p className="mt-8 text-sm text-flocken-gray">
-        Disse brukervilkårene ble sist oppdatert 12. februar 2026 og trer i kraft umiddelbart.
+        Disse brukervilkårene ble sist oppdatert 30. april 2026 og trer i kraft umiddelbart.
       </p>
     </>
   );

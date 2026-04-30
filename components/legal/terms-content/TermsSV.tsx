@@ -8,7 +8,7 @@ export function TermsSV() {
       <h1>Användarvillkor</h1>
 
       <p className="lead">
-        <strong>Senast uppdaterad:</strong> 12 februari 2026
+        <strong>Senast uppdaterad:</strong> 30 april 2026
       </p>
 
       <p>Välkommen till Flocken! Dessa användarvillkor (&quot;Villkor&quot;) reglerar din användning av mobilapplikationen Flocken (&quot;Appen&quot;, &quot;Tjänsten&quot;) som tillhandahålls av Spitakolus AB (&quot;vi&quot;, &quot;oss&quot;, &quot;vår&quot;).</p>
@@ -29,24 +29,11 @@ export function TermsSV() {
       <h2 id="konto">2. Konto och registrering</h2>
 
       <h3 id="konto-skapa">2.1 Skapa konto</h3>
-      <ul>
-        <li>Du måste ange korrekt och fullständig information.</li>
-        <li>Du är ansvarig för att hålla dina inloggningsuppgifter säkra.</li>
-        <li>Ett konto får inte delas med andra personer.</li>
-        <li>Du är ansvarig för all aktivitet som sker via ditt konto.</li>
-        <li>Vi förbehåller oss rätten att avsluta eller suspendera konton som bryter mot dessa villkor.</li>
-      </ul>
+      <p>Du ansvarar för att ange korrekt och fullständig information samt att hålla dina inloggningsuppgifter säkra. Kontot är personligt och får inte delas med andra. Du är ansvarig för all aktivitet som sker via ditt konto, och vi förbehåller oss rätten att avsluta eller suspendera konton som bryter mot dessa villkor.</p>
 
       <h3 id="konto-foraldrar">2.2 Föräldraansvar</h3>
-      <p>Om du är förälder eller vårdnadshavare och tillåter ditt barn att använda Flocken, är du ansvarig för:</p>
-      <ul>
-        <li>Att övervaka barnets användning av appen.</li>
-        <li>All aktivitet som sker via barnets konto.</li>
-        <li>Att barnets användning följer dessa användarvillkor.</li>
-        <li>Eventuella prenumerationer eller betalningar som görs via barnets konto.</li>
-        <li>Att säkerställa att barnet inte delar personlig information med okända.</li>
-      </ul>
-      <p>Vi rekommenderar att föräldrar aktivt engagerar sig i sina barns användning av sociala appar och diskuterar säker internetanvändning.</p>
+      <p>Om du är förälder eller vårdnadshavare och tillåter ditt barn att använda Flocken, är du ansvarig för barnets användning av appen. Det innefattar all aktivitet via barnets konto, eventuella prenumerationer och betalningar, samt att barnets användning följer dessa villkor.</p>
+      <p>Se till att barnet inte delar personlig information med okända. Vi rekommenderar att föräldrar aktivt engagerar sig i sina barns användning av sociala appar och diskuterar säker internetanvändning.</p>
 
       <h3 id="konto-typer">2.3 Kontotyper</h3>
       <p>Flocken erbjuder fyra kontotyper:</p>
@@ -61,131 +48,40 @@ export function TermsSV() {
       <h2 id="prenumeration">3. Prenumeration och betalning</h2>
 
       <h3 id="pren-betalning">3.1 Betalning och fakturering</h3>
-      <ul>
-        <li>Betalning sker via Apple App Store (för iOS) eller Google Play Store (för Android) enligt deras respektive villkor och regler.</li>
-        <li>Priser anges inklusive moms.</li>
-        <li>Alla betalningar hanteras av Apple eller Google – vi tar inte emot betalningar direkt.</li>
-        <li>Du får kvitto via e-post efter varje betalning från respektive plattform.</li>
-        <li>För återbetalningar och refunderingar, följ Apple App Store eller Google Play Stores regler.</li>
-      </ul>
+      <p>Betalning sker via Apple App Store (iOS) eller Google Play Store (Android) i enlighet med respektive plattforms villkor. Vi tar inte emot betalningar direkt. Priser anges inklusive moms och du får kvitto via e-post från den plattform du använder. Vid frågor om återbetalningar och refunderingar gäller App Store respektive Google Play Stores regler.</p>
 
       <h3 id="pren-fornyelse">3.2 Automatisk förnyelse</h3>
-      <ul>
-        <li>Prenumerationen löper tillsvidare och förnyas automatiskt varje månad/år enligt vald period.</li>
-        <li>Förnyelse sker automatiskt vid slutet av varje period om du inte säger upp prenumerationen.</li>
-        <li>För att stänga av automatisk förnyelse måste du säga upp prenumerationen i App Store eller Google Play-inställningarna.</li>
-        <li>Uppsägning måste ske innan nästa faktureringsperiod för att undvika betalning.</li>
-        <li>Vid uppsägning behåller du tillgång till premiumfunktionerna till periodens slut.</li>
-      </ul>
+      <p>Prenumerationen löper tillsvidare och förnyas automatiskt vid varje periods slut. För att stänga av automatisk förnyelse måste du säga upp prenumerationen i App Store eller Google Play-inställningarna innan nästa faktureringsperiod börjar. Vid uppsägning behåller du tillgång till premiumfunktionerna fram till periodens slut.</p>
 
       <h3 id="pren-trial">3.3 Provperioder</h3>
-      <ul>
-        <li>Vi kan erbjuda provperioder där du kan testa appen utan kostnad.</li>
-        <li>Under provperioden behöver du inte ange betalningsuppgifter.</li>
-        <li>Du förbinder dig inte att fortsätta med en betalversion efter provperioden.</li>
-        <li>Om du väljer att inte betala efter provperioden kan du fortsätta använda appen i en begränsad gratisversion.</li>
-        <li>Längd och villkor för provperioder anges i appen när erbjudandet görs.</li>
-      </ul>
+      <p>Vi kan erbjuda provperioder utan kostnad där ingen betalningsinformation krävs. Du förbinder dig inte till en betalversion. Väljer du att inte teckna prenumeration efter provperioden fortsätter du i en begränsad gratisversion. Längd och villkor anges i appen när erbjudandet görs.</p>
 
       <h3 id="pren-uppsagning">3.4 Uppsägning</h3>
-      <ul>
-        <li>Du kan säga upp prenumerationen när som helst i App Store eller Google Play-inställningarna.</li>
-        <li>Uppsägning måste ske innan nästa faktureringsperiod börjar.</li>
-        <li>Uppsägning träder i kraft vid nästa faktureringsperiod.</li>
-        <li>Ingen återbetalning sker för redan betalda perioder.</li>
-        <li>Vid uppsägning behåller du tillgång till premiumfunktionerna till periodens slut.</li>
-        <li>Efter uppsägning övergår ditt konto automatiskt till en begränsad gratisversion.</li>
-        <li>Du kan när som helst uppgradera till premiumversion igen.</li>
-      </ul>
+      <p>Du kan säga upp prenumerationen när som helst i App Store eller Google Play-inställningarna, men uppsägningen måste ske innan nästa faktureringsperiod börjar. Uppsägning träder i kraft vid nästa faktureringsperiod. Ingen återbetalning sker för redan betalda perioder. Du behåller tillgång till premiumfunktionerna till periodens slut, varefter kontot automatiskt övergår till en begränsad gratisversion. Du kan när som helst uppgradera igen.</p>
 
       <h3 id="pren-priser-andring">3.5 Priser och prisändringar</h3>
-      <ul>
-        <li>Priser för prenumerationer visas i appen och kan variera beroende på kontotyp och vald period.</li>
-        <li>Vi kan erbjuda kampanjer och rabatter som påverkar priserna.</li>
-        <li>Priser anges inklusive moms.</li>
-        <li>Vi förbehåller oss rätten att ändra priser.</li>
-        <li>Prisändringar meddelas minst 30 dagar i förväg via e-post och i appen.</li>
-        <li>Om du inte godkänner nya priser kan du säga upp prenumerationen innan ändringen träder i kraft.</li>
-        <li>Om du fortsätter använda tjänsten efter prisändringen godkänner du automatiskt de nya priserna.</li>
-      </ul>
+      <p>Priser visas i appen och varierar beroende på kontotyp och vald period. Alla priser anges inklusive moms. Vi kan erbjuda kampanjer och rabatter.</p>
+      <p>Vi förbehåller oss rätten att ändra priser med minst 30 dagars förvarning via e-post och i appen. Godkänner du inte nya priser kan du säga upp prenumerationen innan ändringen träder i kraft. Fortsätter du använda tjänsten efter prisändringen godkänner du automatiskt de nya priserna.</p>
 
       <h2 id="funktioner">4. Tjänstens funktioner</h2>
 
-      <h3 id="funk-hundar">4.1 Hundar (Hundmatchning)</h3>
-      <p><strong>Tillåten användning:</strong></p>
-      <ul>
-        <li>Hitta hundar för parning eller lek.</li>
-        <li>Filtrera på ras, storlek, hälsotester och andra kriterier.</li>
-        <li>Kontakta andra hundägare via appens meddelandefunktion.</li>
-        <li>Lägga upp hundprofiler med bilder och information.</li>
-      </ul>
-      <p><strong>Användaransvar:</strong></p>
-      <ul>
-        <li>Du ansvarar för att uppge korrekta uppgifter om din hund.</li>
-        <li>Hälsotester och stamtavlor måste vara äkta och verifierbara.</li>
-        <li>Du ansvarar för alla överenskommelser med andra användare.</li>
-        <li>Flocken är inte part i några avtal mellan användare.</li>
-        <li>Vi tar inget ansvar för resultatet av parningar som sker via appen.</li>
-        <li>Du ansvarar för att följa svensk djurskyddslagstiftning och etiska riktlinjer för hundavel.</li>
-      </ul>
+      <h3 id="funk-hundar">4.1 Hundar</h3>
+      <p>I funktionen Hundar kan du hitta hundar för parning eller lek, filtrera på ras, storlek, hälsotester och andra kriterier, kontakta andra hundägare via appens meddelandefunktion samt lägga upp hundprofiler med bilder och information.</p>
+      <p>Du ansvarar för att uppgifterna om din hund är korrekta och att hälsotester och stamtavlor är äkta och verifierbara.</p>
+      <p>Alla överenskommelser om parning träffas direkt mellan användarna. Flocken är inte part i dessa avtal och tar inget ansvar för resultaten. Du ansvarar för att följa svensk djurskyddslagstiftning och etiska riktlinjer för hundavel.</p>
 
       <h3 id="funk-passa">4.2 Passa (Hundvaktstjänster)</h3>
-      <p><strong>För hundvakter:</strong></p>
-      <ul>
-        <li>Du måste ange korrekta uppgifter om erfarenhet och tjänster.</li>
-        <li>Du ansvarar för hundens säkerhet under passning.</li>
-        <li>Du måste ha lämplig försäkring som täcker hundvaktstjänster.</li>
-        <li>Du ansvarar för att följa alla instruktioner från hundägaren.</li>
-        <li>Du måste informera hundägaren om eventuella incidenter eller problem omedelbart.</li>
-      </ul>
-      <p><strong>För hundägare:</strong></p>
-      <ul>
-        <li>Du ansvarar för att ge korrekta instruktioner om hundens behov.</li>
-        <li>Du måste informera om medicinska behov, allergier eller beteendeproblem.</li>
-        <li>Du ansvarar för att din hund är vaccinerad och frisk.</li>
-        <li>Betalning för hundvaktstjänster sker direkt mellan dig och hundvakten – Flocken tar ingen provision.</li>
-        <li>Du ansvarar för att säkerställa att hundvakten har lämplig försäkring.</li>
-      </ul>
-      <p><strong>Ansvarsbegränsning:</strong></p>
-      <ul>
-        <li>Flocken är en förmedlingsplattform – vi är inte hundvaktstjänsten.</li>
-        <li>Vi kontrollerar inte hundvakternas kompetens, lämplighet eller försäkringar.</li>
-        <li>Alla avtal om passning är mellan dig och hundvakten.</li>
-        <li>Vi ansvarar inte för skador, förluster eller olyckor under passning.</li>
-        <li>Användaren måste själv säkerställa adekvat försäkring och juridiskt skydd.</li>
-        <li>Vi förbehåller oss rätten att ta bort användare som bryter mot dessa regler.</li>
-      </ul>
+      <p><strong>För hundvakter</strong> gäller att du anger korrekta uppgifter om din erfarenhet och dina tjänster, ansvarar för hundens säkerhet under passning och har lämplig försäkring som täcker hundvaktstjänster.</p>
+      <p>Du ska följa alla instruktioner från hundägaren och informera omgående om eventuella incidenter eller problem.</p>
+      <p><strong>För hundägare</strong> gäller att du ger korrekta instruktioner om hundens behov och informerar om medicinska behov, allergier eller beteendeproblem. Du ansvarar för att hunden är vaccinerad och frisk. Betalning sker direkt mellan dig och hundvakten. Flocken tar ingen provision, men du ansvarar för att kontrollera att hundvakten har lämplig försäkring.</p>
+      <p>Flocken är en förmedlingsplattform. Vi är inte hundvaktstjänsten och är inte part i de avtal som ingås.</p>
+      <p>Vi kontrollerar inte hundvakternas kompetens, lämplighet eller försäkringar, och vi ansvarar inte för skador, förluster eller olyckor under passning. Användaren måste själv säkerställa adekvat försäkring och juridiskt skydd. Vi förbehåller oss rätten att ta bort användare som bryter mot dessa regler.</p>
 
       <h3 id="funk-rasta">4.3 Rasta (Promenad-tracking)</h3>
-      <p><strong>Tillåten användning:</strong></p>
-      <ul>
-        <li>Spåra dina promenader med GPS.</li>
-        <li>Spara rundor privat eller dela dem offentligt.</li>
-        <li>Se andras delade rundor.</li>
-        <li>Samla poäng baserat på sträcka.</li>
-        <li>Dela promenader med vänner.</li>
-      </ul>
-      <p><strong>Användaransvar:</strong></p>
-      <ul>
-        <li>Du ansvarar för att följa lokala regler och lagar vid promenader.</li>
-        <li>Du ansvarar för att hålla din hund kopplad där det krävs.</li>
-        <li>GPS-data lagras enligt vår integritetspolicy.</li>
-      </ul>
+      <p>I funktionen Rasta kan du spåra promenader med GPS, spara rundor privat eller dela dem offentligt, se andras delade rundor, samla poäng baserat på sträcka och dela promenader med vänner. Du ansvarar för att följa lokala regler och lagar vid promenader samt hålla hunden kopplad där det krävs. GPS-data lagras enligt vår integritetspolicy.</p>
 
       <h3 id="funk-besoka">4.4 Besöka (Hundvänliga platser)</h3>
-      <p><strong>Tillåten användning:</strong></p>
-      <ul>
-        <li>Hitta hundvänliga caféer, restauranger och barer.</li>
-        <li>Lägga till saknade platser.</li>
-        <li>Filtrera på kategori.</li>
-        <li>Lämna recensioner och betyg.</li>
-      </ul>
-      <p><strong>Användaransvar:</strong></p>
-      <ul>
-        <li>Du ansvarar för att informationen du lägger till är korrekt.</li>
-        <li>Recensioner måste vara ärliga och baserade på faktiska upplevelser.</li>
-        <li>Vi förbehåller oss rätten att ta bort felaktig eller olämplig information.</li>
-      </ul>
+      <p>I funktionen Besöka hittar du hundvänliga caféer, restauranger och barer. Du kan lägga till saknade platser, filtrera på kategori och lämna recensioner och betyg. Du ansvarar för att informationen du lägger till är korrekt och att recensioner är ärliga och baserade på faktiska upplevelser. Vi förbehåller oss rätten att ta bort felaktig eller olämplig information.</p>
 
       <h2 id="innehall">5. Användargenererat innehåll</h2>
 
@@ -214,11 +110,11 @@ export function TermsSV() {
       </ul>
 
       <h3 id="innehall-licens">5.3 Licens till oss</h3>
-      <p>Genom att ladda upp innehåll ger du oss en icke-exklusiv, global, royaltyfri licens att använda, visa och distribuera innehållet inom tjänsten. Detta är nödvändigt för att appen ska fungera (t.ex. visa dina hundbilder för andra användare). Du behåller äganderätten till ditt innehåll.</p>
+      <p>Genom att ladda upp innehåll ger du oss en icke-exklusiv, global, royaltyfri licens att använda, visa och distribuera innehållet inom tjänsten. Detta är nödvändigt för att appen ska fungera, till exempel för att visa dina hundbilder för andra användare. Du behåller äganderätten till ditt innehåll.</p>
       <p>Vi förbehåller oss rätten att ta bort, redigera eller moderera innehåll som bryter mot dessa villkor utan föregående meddelande.</p>
 
       <h3 id="innehall-rapportering">5.4 Rapportering av olämpligt innehåll</h3>
-      <p>Om du stöter på innehåll som bryter mot dessa villkor, vänligen rapportera det via appens rapporteringsfunktion eller kontakta oss på support@spitakolus.com.</p>
+      <p>Om du stöter på innehåll som bryter mot dessa villkor, vänligen rapportera det via appens rapporteringsfunktion eller kontakta oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.</p>
 
       <h3 id="innehall-community">5.5 Community Guidelines</h3>
       <p>För att upprätthålla en säker och trevlig miljö för alla användare förväntar vi oss att du:</p>
@@ -231,15 +127,7 @@ export function TermsSV() {
         <li><strong>Kommunicerar konstruktivt:</strong> Undvik konflikter, trakasserier och hotfullt beteende.</li>
         <li><strong>Tar ansvar vid hundmöten:</strong> Säkerställ att hundmöten sker på säkra platser och att alla parter är bekväma.</li>
       </ul>
-      <p><strong>Vårt ansvar och rätt att moderera:</strong></p>
-      <ul>
-        <li>Vi övervakar och modererar innehåll och beteende i appen.</li>
-        <li>Vi kan granska rapporterat innehåll och vidta åtgärder vid överträdelser.</li>
-        <li>Vi kan ta bort innehåll som bryter mot dessa riktlinjer utan föregående varning.</li>
-        <li>Vi kan utfärda varningar, tillfälliga avstängningar eller permanenta avstängningar vid upprepade eller allvarliga överträdelser.</li>
-        <li>Vi samarbetar med myndigheter vid misstanke om brott.</li>
-        <li>Våra beslut om moderering är slutgiltiga, men du kan kontakta oss på support@spitakolus.com om du anser att ett beslut är felaktigt.</li>
-      </ul>
+      <p>Vi övervakar och modererar innehåll och beteende i appen och kan granska rapporterat innehåll, ta bort innehåll utan föregående varning samt utfärda varningar eller tillfälliga och permanenta avstängningar vid upprepade eller allvarliga överträdelser. Vi samarbetar med myndigheter vid misstanke om brott. Våra modereringsbeslut är slutgiltiga, men du kan kontakta oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> om du anser att ett beslut är felaktigt.</p>
 
       <h2 id="integritet">6. Integritet och dataskydd</h2>
 
@@ -257,36 +145,23 @@ export function TermsSV() {
         <li>Invända mot viss behandling.</li>
         <li>Återkalla ditt samtycke.</li>
       </ul>
-      <p>För att utöva dina rättigheter eller få mer information, besök vår sida för <Link href="/privacy-choices" className="text-flocken-olive hover:underline">integritetsinställningar</Link> eller kontakta oss på support@spitakolus.com.</p>
+      <p>För att utöva dina rättigheter eller få mer information, besök vår sida för <Link href="/privacy-choices" className="text-flocken-olive hover:underline">integritetsinställningar</Link> eller kontakta oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.</p>
 
       <h2 id="ansvar">7. Ansvarsbegränsning</h2>
 
       <h3 id="ansvar-tjanst">7.1 Tjänstens tillgänglighet</h3>
-      <p>Vi strävar efter hög tillgänglighet, men kan inte garantera att tjänsten alltid är tillgänglig eller felfri. Vi ansvarar inte för:</p>
-      <ul>
-        <li>Avbrott i tjänsten (planerade eller oplanerade).</li>
-        <li>Dataförlust.</li>
-        <li>Tekniska fel eller buggar.</li>
-        <li>Tredjepartstjänster som inte fungerar eller är otillgängliga.</li>
-        <li>Förluster som uppstår på grund av tekniska problem.</li>
-      </ul>
+      <p>Vi strävar efter hög tillgänglighet, men kan inte garantera att tjänsten alltid är tillgänglig eller felfri.</p>
+      <p>Vi ansvarar inte för avbrott (planerade eller oplanerade), dataförlust, tekniska fel eller buggar, tredjepartstjänster som inte fungerar eller är otillgängliga, eller förluster som uppstår till följd av tekniska problem.</p>
 
       <h3 id="ansvar-anvandare">7.2 Användarinteraktioner</h3>
-      <p>Flocken är en plattform för att koppla samman hundägare. Vi ansvarar inte för:</p>
-      <ul>
-        <li>Avtal eller transaktioner mellan användare.</li>
-        <li>Beteende eller handlingar från andra användare.</li>
-        <li>Skador som uppstår vid hundmöten, passning eller andra aktiviteter.</li>
-        <li>Falskt eller vilseledande innehåll från användare.</li>
-        <li>Veterinära frågor eller hälsoproblem hos hundar.</li>
-        <li>Ekonomiska förluster som uppstår i samband med användning av tjänsten.</li>
-      </ul>
+      <p>Flocken är en plattform för att koppla samman hundägare och ansvarar inte för avtal eller transaktioner mellan användare, beteende eller handlingar från andra användare, eller skador som uppstår vid hundmöten, passning eller andra aktiviteter.</p>
+      <p>Vi ansvarar inte heller för falskt eller vilseledande innehåll, veterinära frågor eller hälsoproblem hos hundar, eller ekonomiska förluster som uppstår i samband med användning av tjänsten.</p>
 
       <h3 id="ansvar-max">7.3 Maximalt ansvar</h3>
       <p>Vårt totala ansvar gentemot dig är begränsat till det belopp du har betalat för prenumerationen under de senaste 12 månaderna. Vi ansvarar inte för indirekta skador, förlorad vinst eller andra konsekvenser.</p>
 
       <h3 id="ansvar-force-majeure">7.4 Force Majeure</h3>
-      <p>Vi ansvarar inte för förseningar eller utebliven prestation av våra åtaganden enligt dessa villkor om detta orsakas av omständigheter utanför vår rimliga kontroll, inklusive men inte begränsat till:</p>
+      <p>Vi ansvarar inte för förseningar eller utebliven prestation av våra åtaganden om detta orsakas av omständigheter utanför vår rimliga kontroll, inklusive men inte begränsat till:</p>
       <ul>
         <li>Naturkatastrofer (översvämningar, jordbävningar, stormar, etc.).</li>
         <li>Krig, terrorism eller civil oro.</li>
@@ -297,7 +172,7 @@ export function TermsSV() {
         <li>Myndighetsbeslut, lagändringar eller andra regleringsåtgärder.</li>
         <li>Fel eller avbrott hos tredjepartsleverantörer som är utanför vår kontroll.</li>
       </ul>
-      <p>Vid sådana omständigheter kommer våra åtaganden att skjutas upp under den tid hindret består. Om hindret varar längre än 60 dagar har både du och vi rätt att säga upp avtalet utan ersättningsskyldighet.</p>
+      <p>Vid sådana omständigheter skjuts våra åtaganden upp under den tid hindret består. Om hindret varar längre än 60 dagar har både du och vi rätt att säga upp avtalet utan ersättningsskyldighet.</p>
 
       <h2 id="upphovsratt">8. Upphovsrätt och immateriella rättigheter</h2>
       <p>Appen, inklusive dess design, logotyp, text och kod, är skyddad av upphovsrätt och andra immateriella rättigheter som tillhör Spitakolus AB eller våra licensgivare. Du får inte kopiera, modifiera eller distribuera appen utan vårt skriftliga tillstånd.</p>
@@ -305,7 +180,7 @@ export function TermsSV() {
       <h2 id="uppsagning">9. Uppsägning av tjänsten</h2>
 
       <h3 id="uppsagning-anvandare">9.1 Uppsägning av dig</h3>
-      <p>Du kan när som helst avsluta ditt konto genom att ta bort det i appens inställningar eller genom att kontakta oss på support@spitakolus.com.</p>
+      <p>Du kan när som helst avsluta ditt konto genom att ta bort det i appens inställningar eller genom att kontakta oss på <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a>.</p>
 
       <h3 id="uppsagning-oss">9.2 Uppsägning av oss</h3>
       <p>Vi förbehåller oss rätten att avsluta eller suspendera ditt konto omedelbart om du bryter mot dessa villkor, utan föregående meddelande. Vi kan också avsluta tjänsten helt med 30 dagars varsel.</p>
@@ -333,16 +208,13 @@ export function TermsSV() {
       <p>Dessa villkor utgör hela avtalet mellan dig och oss gällande användningen av tjänsten.</p>
 
       <h2 id="kontakt">13. Kontakta oss</h2>
-      <p>Om du har frågor om dessa villkor, kontakta oss:</p>
+      <p>Om du har frågor om dessa villkor, besök vår <Link href="/support" className="text-flocken-olive hover:underline">kontaktsida</Link> eller skicka e-post till <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">support@flocken.info</a> med &quot;Användarvillkor&quot; i ämnesraden.</p>
       <ul>
-        <li><strong>E-post:</strong> support@spitakolus.com</li>
-        <li><strong>Postadress:</strong> Spitakolus AB, Svängrumsgatan 46, 421 71 Västra Frölunda</li>
         <li><strong>Organisationsnummer:</strong> 559554-6101</li>
-        <li><strong>Ärende:</strong> Skriv &quot;Användarvillkor&quot; i ämnesraden.</li>
       </ul>
 
       <p className="mt-8 text-sm text-flocken-gray">
-        Dessa användarvillkor uppdaterades senast 12 februari 2026 och träder i kraft omedelbart.
+        Dessa användarvillkor uppdaterades senast 30 april 2026 och träder i kraft omedelbart.
       </p>
     </>
   );

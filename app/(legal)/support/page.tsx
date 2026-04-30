@@ -12,10 +12,7 @@ export default function SupportPage() {
       <h1>Support & Kontakt</h1>
 
       <p className="lead">
-        Har du frågor eller behöver hjälp? Fyll i formuläret nedan eller maila oss på{' '}
-        <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">
-          support@flocken.info
-        </a>.
+        Har du frågor eller behöver hjälp? Fyll i formuläret nedan så återkommer vi.
       </p>
 
       <div className="not-prose mt-6">
@@ -29,10 +26,7 @@ export default function SupportPage() {
       <h2 id="feedback" className="mt-10">Feedback & Förslag</h2>
       <p>
         Vi uppskattar all feedback! Om du har förslag på förbättringar eller nya
-        funktioner, tveka inte att höra av dig — antingen via formuläret ovan eller direkt till{' '}
-        <a href="mailto:support@flocken.info" className="text-flocken-olive hover:underline">
-          support@flocken.info
-        </a>.
+        funktioner, tveka inte att höra av dig via formuläret ovan.
       </p>
     </>
   );
