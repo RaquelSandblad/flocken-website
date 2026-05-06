@@ -599,7 +599,7 @@ export function VLandingPage({ config }: VLandingPageProps) {
             </Link>
             <span className="text-flocken-gray">|</span>
             <Link
-              href="/villkor"
+              href="/anvandarvillkor"
               className="text-flocken-gray hover:text-white transition-colors"
             >
               Villkor
