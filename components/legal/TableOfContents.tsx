@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
 interface TOCItem {
@@ -9,9 +10,20 @@ interface TOCItem {
   level: number;
 }
 
+type Language = 'sv' | 'da' | 'no' | 'pt';
+
+const tocTitles: Record<Language, string> = {
+  sv: 'På denna sida',
+  da: 'På denne side',
+  no: 'På denne siden',
+  pt: 'Nesta página',
+};
+
 export function TableOfContents() {
+  const searchParams = useSearchParams();
   const [items, setItems] = useState<TOCItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
+  const lang = (searchParams.get('lang') as Language) || 'sv';
   
   useEffect(() => {
     // Find all h2 and h3 headings with IDs
@@ -49,7 +61,7 @@ export function TableOfContents() {
   return (
     <nav className="space-y-2">
       <p className="text-sm font-semibold text-flocken-brown mb-4">
-        På denna sida
+        {tocTitles[lang]}
       </p>
       {items.map((item) => (
         <Link
