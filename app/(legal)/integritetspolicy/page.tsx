@@ -1,50 +1,38 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { LanguageSwitcher, type Language } from '@/components/legal/LanguageSwitcher';
+import { useEffect } from 'react';
+import { LanguageSwitcher } from '@/components/legal/LanguageSwitcher';
+import { useLanguage } from '@/components/legal/LanguageContext';
 import { PrivacySV } from '@/components/legal/privacy-content/PrivacySV';
 import { PrivacyDA } from '@/components/legal/privacy-content/PrivacyDA';
 import { PrivacyNO } from '@/components/legal/privacy-content/PrivacyNO';
 import { PrivacyPT } from '@/components/legal/privacy-content/PrivacyPT';
 
-const titles: Record<Language, string> = {
+const titles = {
   sv: 'Integritetspolicy för Flocken',
   da: 'Privatlivspolitik for Flocken',
   no: 'Personvernerklæring for Flocken',
   pt: 'Política de Privacidade da Flocken',
-};
+} as const;
 
-function PrivacyPageContent() {
-  const searchParams = useSearchParams();
-  const langParam = searchParams.get('lang') as Language | null;
-  const [lang, setLang] = useState<Language>(
-    langParam && ['sv', 'da', 'no', 'pt'].includes(langParam) ? langParam : 'sv'
-  );
+export default function IntegritetspolicyPage() {
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    document.title = titles[lang];
+    document.title = titles[language];
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', titles[lang]);
+      metaDescription.setAttribute('content', titles[language]);
     }
-  }, [lang]);
+  }, [language]);
 
   return (
     <>
-      <LanguageSwitcher current={lang} onChange={setLang} />
-      {lang === 'sv' && <PrivacySV />}
-      {lang === 'da' && <PrivacyDA />}
-      {lang === 'no' && <PrivacyNO />}
-      {lang === 'pt' && <PrivacyPT />}
+      <LanguageSwitcher current={language} onChange={setLanguage} />
+      {language === 'sv' && <PrivacySV />}
+      {language === 'da' && <PrivacyDA />}
+      {language === 'no' && <PrivacyNO />}
+      {language === 'pt' && <PrivacyPT />}
     </>
-  );
-}
-
-export default function IntegritetspolicyPage() {
-  return (
-    <Suspense fallback={<div className="animate-pulse h-96" />}>
-      <PrivacyPageContent />
-    </Suspense>
   );
 }

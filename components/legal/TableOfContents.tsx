@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { useLanguage } from './LanguageContext';
 
 interface TOCItem {
   id: string;
@@ -10,58 +10,73 @@ interface TOCItem {
   level: number;
 }
 
-type Language = 'sv' | 'da' | 'no' | 'pt';
-
-const tocTitles: Record<Language, string> = {
+const tocTitles = {
   sv: 'På denna sida',
   da: 'På denne side',
   no: 'På denne siden',
   pt: 'Nesta página',
-};
+} as const;
 
 export function TableOfContents() {
-  const searchParams = useSearchParams();
+  const { language } = useLanguage();
   const [items, setItems] = useState<TOCItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
-  const lang = (searchParams.get('lang') as Language) || 'sv';
   
   useEffect(() => {
-    // Find all h2 and h3 headings with IDs
-    const headings = Array.from(
-      document.querySelectorAll('h2[id], h3[id]')
-    );
+    let observer: IntersectionObserver | null = null;
+    let retryTimeout: NodeJS.Timeout | null = null;
     
-    const tocItems: TOCItem[] = headings.map((heading) => ({
-      id: heading.id,
-      text: heading.textContent || '',
-      level: heading.tagName === 'H2' ? 2 : 3,
-    }));
+    // Wait for content to render, then find headings
+    const findHeadings = () => {
+      const headings = Array.from(
+        document.querySelectorAll('h2[id], h3[id]')
+      );
+      
+      if (headings.length === 0) {
+        // Retry after a short delay if no headings found yet
+        retryTimeout = setTimeout(findHeadings, 100);
+        return;
+      }
+      
+      const tocItems: TOCItem[] = headings.map((heading) => ({
+        id: heading.id,
+        text: heading.textContent || '',
+        level: heading.tagName === 'H2' ? 2 : 3,
+      }));
+      
+      setItems(tocItems);
+      
+      // Intersection observer for active section
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveId(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: '-80px 0px -80% 0px' }
+      );
+      
+      headings.forEach((heading) => observer?.observe(heading));
+    };
     
-    setItems(tocItems);
+    // Start looking for headings
+    findHeadings();
     
-    // Intersection observer for active section
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-80px 0px -80% 0px' }
-    );
-    
-    headings.forEach((heading) => observer.observe(heading));
-    
-    return () => observer.disconnect();
-  }, []);
+    // Cleanup function
+    return () => {
+      if (retryTimeout) clearTimeout(retryTimeout);
+      if (observer) observer.disconnect();
+    };
+  }, [language]);
   
   if (items.length === 0) return null;
   
   return (
     <nav className="space-y-2">
       <p className="text-sm font-semibold text-flocken-brown mb-4">
-        {tocTitles[lang]}
+        {tocTitles[language]}
       </p>
       {items.map((item) => (
         <Link

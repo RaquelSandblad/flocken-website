@@ -1,16 +1,16 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { LanguageSwitcher, type Language } from '@/components/legal/LanguageSwitcher';
+import { useEffect } from 'react';
+import { LanguageSwitcher } from '@/components/legal/LanguageSwitcher';
+import { useLanguage } from '@/components/legal/LanguageContext';
 import { PrivacyChoicesPT } from '@/components/legal/privacy-choices/PrivacyChoicesPT';
 
-const titles: Record<Language, string> = {
+const titles = {
   sv: 'Integritetsval - Flocken',
   da: 'Privatlivsvalg - Flocken',
   no: 'Personvernvalg - Flocken',
   pt: 'Escolhas de Privacidade - Flocken',
-};
+} as const;
 
 const PrivacyChoicesSV = () => (
   <>
@@ -140,42 +140,30 @@ const PrivacyChoicesSV = () => (
   </>
 );
 
-function PrivacyChoicesContent() {
-  const searchParams = useSearchParams();
-  const langParam = searchParams.get('lang') as Language | null;
-  const [lang, setLang] = useState<Language>(
-    langParam && ['sv', 'da', 'no', 'pt'].includes(langParam) ? langParam : 'sv'
-  );
+export default function PrivacyChoicesPage() {
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    document.title = titles[lang];
+    document.title = titles[language];
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', titles[lang]);
+      metaDescription.setAttribute('content', titles[language]);
     }
-  }, [lang]);
+  }, [language]);
 
   return (
     <>
-      <LanguageSwitcher current={lang} onChange={setLang} />
-      {lang === 'sv' && <PrivacyChoicesSV />}
-      {lang === 'pt' && <PrivacyChoicesPT />}
-      {(lang === 'da' || lang === 'no') && (
+      <LanguageSwitcher current={language} onChange={setLanguage} />
+      {language === 'sv' && <PrivacyChoicesSV />}
+      {language === 'pt' && <PrivacyChoicesPT />}
+      {(language === 'da' || language === 'no') && (
         <div className="bg-flocken-sand/30 border border-flocken-sand p-6 rounded-lg">
           <p className="text-flocken-brown">
-            Översättning till {lang === 'da' ? 'danska' : 'norska'} kommer snart. 
+            Översättning till {language === 'da' ? 'danska' : 'norska'} kommer snart. 
             Välj svenska eller portugisiska i språkväljaren ovan.
           </p>
         </div>
       )}
     </>
-  );
-}
-
-export default function PrivacyChoicesPage() {
-  return (
-    <Suspense fallback={<div className="animate-pulse h-96" />}>
-      <PrivacyChoicesContent />
-    </Suspense>
   );
 }

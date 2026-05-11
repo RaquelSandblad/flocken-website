@@ -1,8 +1,12 @@
+'use client';
+
+import { Suspense } from 'react';
 import { Header } from '@/components/shared/Header';
 import { Footer } from '@/components/shared/Footer';
 import { TableOfContents } from '@/components/legal/TableOfContents';
+import { LanguageProvider } from '@/components/legal/LanguageContext';
 
-export default function LegalLayout({
+function LegalLayoutContent({
   children,
 }: {
   children: React.ReactNode;
@@ -31,6 +35,20 @@ export default function LegalLayout({
       </div>
       <Footer variant="legal" />
     </>
+  );
+}
+
+export default function LegalLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <Suspense fallback={<div className="animate-pulse h-96" />}>
+      <LanguageProvider>
+        <LegalLayoutContent>{children}</LegalLayoutContent>
+      </LanguageProvider>
+    </Suspense>
   );
 }
 
