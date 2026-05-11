@@ -1,6 +1,6 @@
 'use client';
 
-export type Language = 'sv' | 'da' | 'no';
+export type Language = 'sv' | 'da' | 'no' | 'pt';
 
 interface LanguageSwitcherProps {
   current: Language;
@@ -11,6 +11,7 @@ const labels: Record<Language, string> = {
   sv: 'Svenska',
   da: 'Dansk',
   no: 'Norsk',
+  pt: 'Português',
 };
 
 export function LanguageSwitcher({ current, onChange }: LanguageSwitcherProps) {
