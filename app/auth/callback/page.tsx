@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { Container } from '@/components/shared/Container';
 
-// Translations for the callback page
 const TRANSLATIONS = {
   sv: {
     title: 'E-post bekräftad!',
@@ -11,10 +10,6 @@ const TRANSLATIONS = {
     openBtn: 'Öppna Flocken-appen',
     countdownPrefix: 'Öppnar appen automatiskt om',
     countdownSuffix: 'sekunder...',
-    noAppHint: 'Har du inte appen? Ladda ner den gratis i',
-    appStore: 'App Store',
-    or: 'eller',
-    googlePlay: 'Google Play',
   },
   da: {
     title: 'E-mail bekræftet!',
@@ -22,10 +17,6 @@ const TRANSLATIONS = {
     openBtn: 'Åbn Flocken-appen',
     countdownPrefix: 'Åbner appen automatisk om',
     countdownSuffix: 'sekunder...',
-    noAppHint: 'Har du ikke appen? Download den gratis i',
-    appStore: 'App Store',
-    or: 'eller',
-    googlePlay: 'Google Play',
   },
   no: {
     title: 'E-post bekreftet!',
@@ -33,10 +24,6 @@ const TRANSLATIONS = {
     openBtn: 'Åpne Flocken-appen',
     countdownPrefix: 'Åpner appen automatisk om',
     countdownSuffix: 'sekunder...',
-    noAppHint: 'Har du ikke appen? Last den ned gratis i',
-    appStore: 'App Store',
-    or: 'eller',
-    googlePlay: 'Google Play',
   },
   pt: {
     title: 'E-mail confirmado!',
@@ -44,10 +31,6 @@ const TRANSLATIONS = {
     openBtn: 'Abrir o app Flocken',
     countdownPrefix: 'Abrindo o app automaticamente em',
     countdownSuffix: 'segundos...',
-    noAppHint: 'Não tem o app? Baixe grátis na',
-    appStore: 'App Store',
-    or: 'ou',
-    googlePlay: 'Google Play',
   },
 } as const;
 
@@ -122,7 +105,7 @@ export default function AuthCallbackPage() {
 
           {/* Countdown hint */}
           {countdown > 0 && (
-            <p className="text-flocken-gray text-sm mb-6">
+            <p className="text-flocken-gray text-sm">
               {t.countdownPrefix}{' '}
               <span className="inline-flex items-center justify-center w-6 h-6 bg-flocken-sand rounded-full text-flocken-olive font-bold text-xs">
                 {countdown}
@@ -131,32 +114,8 @@ export default function AuthCallbackPage() {
             </p>
           )}
 
-          <div className="border-t border-flocken-warm my-6" />
-
-          {/* Download hint */}
-          <p className="text-flocken-gray text-sm">
-            {t.noAppHint}{' '}
-            <a
-              href="https://apps.apple.com/app/flocken/id6739530744"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-flocken-olive font-semibold hover:underline"
-            >
-              {t.appStore}
-            </a>{' '}
-            {t.or}{' '}
-            <a
-              href="https://play.google.com/store/apps/details?id=com.spitakolus.tindog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-flocken-olive font-semibold hover:underline"
-            >
-              {t.googlePlay}
-            </a>
-          </p>
-
           {/* Language selector */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-8">
             {(['sv', 'da', 'no', 'pt'] as Lang[]).map((l) => (
               <button
                 key={l}
