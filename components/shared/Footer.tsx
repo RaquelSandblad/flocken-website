@@ -48,6 +48,7 @@ export function Footer({ variant = 'marketing' }: FooterProps) {
                 <li><Link href="/#passa" className="text-flocken-gray hover:text-flocken-olive transition-colors">Passa</Link></li>
                 <li><Link href="/#rasta" className="text-flocken-gray hover:text-flocken-olive transition-colors">Rasta</Link></li>
                 <li><Link href="/#besoka" className="text-flocken-gray hover:text-flocken-olive transition-colors">Besöka</Link></li>
+                <li><Link href="/om-flocken" className="text-flocken-gray hover:text-flocken-olive transition-colors">Om Flocken</Link></li>
               </ul>
             </div>
             
