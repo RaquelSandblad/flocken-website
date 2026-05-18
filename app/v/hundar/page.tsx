@@ -1,33 +1,27 @@
 /**
- * /v/hundar — Hookspecifik landningssida för Hundar-funktionen.
+ * /v/hundar — Hookspecifik landningssida för Hundar-funktionen. V2-design.
  *
- * CB004: Tre vinklar (Lekkompis, Karta/Närheten, Försvunnen hund).
  * Trafik: Meta Ads med utm_campaign=cb004_<vinkel>
- *
- * För att lägga till fler hooks:
- *   1. Skapa en ny config i /components/v/VLandingConfig.ts
- *   2. Skapa /app/v/[hook]/page.tsx som importerar den config:en
- *   Det är allt.
  */
 
 import type { Metadata } from 'next';
-import { VLandingPage } from '@/components/v/VLandingPage';
-import { HUNDAR_CONFIG } from '@/components/v/VLandingConfig';
+import { VLandingPageV2 } from '@/components/v/VLandingPageV2';
+import { HUNDAR_V2_CONFIG } from '@/components/v/VLandingConfigV2';
 
 export const metadata: Metadata = {
-  title: HUNDAR_CONFIG.pageTitle,
-  description: HUNDAR_CONFIG.pageDescription,
+  title: HUNDAR_V2_CONFIG.pageTitle,
+  description: HUNDAR_V2_CONFIG.pageDescription,
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: HUNDAR_CONFIG.pageTitle,
-    description: HUNDAR_CONFIG.pageDescription,
-    images: [HUNDAR_CONFIG.heroImageSrc],
+    title: HUNDAR_V2_CONFIG.pageTitle,
+    description: HUNDAR_V2_CONFIG.pageDescription,
+    images: [HUNDAR_V2_CONFIG.heroImageSrc],
   },
 };
 
 export default function HundarLandingPage() {
-  return <VLandingPage config={HUNDAR_CONFIG} />;
+  return <VLandingPageV2 config={HUNDAR_V2_CONFIG} />;
 }
