@@ -171,7 +171,9 @@ function ArgRow({ arg, index }: { arg: ArgumentV2; index: number }) {
               style={{ fontSize: 'clamp(1.75rem, 4.5vw, 2.75rem)', letterSpacing: '-0.03em', color: '#2A2820' }}
             >
               {arg.title.prefix}
-              <SA>{arg.title.accent}</SA>
+              <span style={{ color: '#6B7A3A' }}>
+                <SA>{arg.title.accent}</SA>
+              </span>
             </h2>
             <p
               className="leading-[1.65] max-w-[32rem]"
@@ -206,9 +208,9 @@ export function VLandingPageV2({ config }: VLandingPageV2Props) {
         ctaLabel={config.headerCtaLabel}
       />
 
-      {/* ── HERO ── fullbredd, content längst ner ── */}
+      {/* ── HERO ── fullbredd, content i botten på mobile/laptop, centrerat på storskärm ── */}
       <section
-        className="relative overflow-hidden -mt-14"
+        className="relative overflow-hidden -mt-14 flex flex-col justify-end min-[1400px]:justify-center"
         style={{ minHeight: '78vh', maxHeight: '820px', color: '#FAF6EC' }}
         aria-label="Hero"
       >
@@ -248,8 +250,8 @@ export function VLandingPageV2({ config }: VLandingPageV2Props) {
           aria-hidden="true"
         />
 
-        {/* Innehåll — absolut längst ner */}
-        <div className="absolute bottom-0 left-0 right-0 pb-12 pt-20">
+        {/* Innehåll — i flow, sitter där sektionens justify-content placerar det */}
+        <div className="relative pb-12 pt-20 min-[1400px]:py-16 w-full">
         <div className="max-w-[1100px] mx-auto px-5 sm:px-8">
           <div className="max-w-[640px]">
 
@@ -531,7 +533,9 @@ export function VLandingPageV2({ config }: VLandingPageV2Props) {
                   style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', letterSpacing: '-0.025em', color: '#2A2820' }}
                 >
                   {config.recruit.title.prefix}
-                  <SA>{config.recruit.title.accent}</SA>
+                  <span style={{ color: '#6B7A3A' }}>
+                    <SA>{config.recruit.title.accent}</SA>
+                  </span>
                 </h2>
                 <p style={{ fontSize: '1.0625rem', color: '#5C5A50', maxWidth: '36rem' }}>
                   {config.recruit.body}
