@@ -213,9 +213,9 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
   heroEyebrow: 'Hundar · För dig och din hund',
   heroTitle: { prefix: 'Öppna världen för din ', accent: 'hund.' },
   heroLead:
-    'Du är störst i hundens värld. Med Flocken-appen blir den ännu lite större — lekkamrater, grannar och hundar i närheten.',
+    'Du är störst i hundens värld. Med Flocken-appen blir den ännu lite större. Lekkamrater, hundvakt och passningsbyte.',
   heroCtaLabel: 'Ladda ner Flocken',
-  heroMetaText: '2 000+ hundägare i Sverige använder Flocken-appen.',
+  heroMetaText: '4 000+ hundägare i Sverige använder Flocken-appen.',
   heroDogAvatars: [
     { src: '/assets/flocken/v2/avatars/5.png' },
     { src: '/assets/flocken/v2/avatars/6.png' },
@@ -234,7 +234,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
 
   arguments: [
     {
-      num: 'i. — Matchning',
+      num: 'Matchning',
       title: { prefix: 'En kompis som ', accent: 'matchar.' },
       body: 'Hundar leker bäst när de hittar någon som matchar. I Flocken-appen letar du i lugn och ro bland hundar som passar din — innan du tar kontakt.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg2.jpg',
@@ -242,7 +242,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
       bg: 'paper',
     },
     {
-      num: 'ii. — Slut på rörigt',
+      num: 'Slut på rörigt',
       title: { prefix: 'Slut på röriga ', accent: 'grupper.' },
       body: 'Facebook-grupper är bra till mycket. Men vissa saker är de inte anpassade för — som att söka en lekkompis till hunden.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg5.jpg',
@@ -252,7 +252,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
       bg: 'cream',
     },
     {
-      num: 'iii. — Hundvakt',
+      num: 'Hundvakt',
       title: { prefix: 'Hundvakter i ditt ', accent: 'grannskap.' },
       body: 'Sök på kartan och se vem som finns nära dig. Läs profilen och träffas innan passningen — för att skapa trygghet.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg3.jpg',
@@ -260,7 +260,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
       bg: 'sand',
     },
     {
-      num: 'iv. — Närheten',
+      num: 'Närheten',
       title: { prefix: 'Hundar som bor i ', accent: 'närheten.' },
       body: 'I Flocken-appen ser du vilka hundar som finns nära dig — bild, storlek, ras och en beskrivning. Vem har valpar och vem vill byta hundpassning? Kontakta ägaren via chatten — eller bara scrolla bland fina hundar.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg1.jpg',
@@ -270,7 +270,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
       bg: 'paper',
     },
     {
-      num: 'v. — Larm',
+      num: 'Larm',
       title: { prefix: 'Om hunden springer ', accent: 'bort.' },
       body: 'Om din hund försvinner kan du snabbt markera det med en varning på kartan. Då ser andra användare av Flocken det direkt.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg4.jpg',
