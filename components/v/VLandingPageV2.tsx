@@ -156,16 +156,18 @@ function ArgRow({ arg, index }: { arg: ArgumentV2; index: number }) {
 
           {/* Text */}
           <div className={isFlipped ? 'sm:order-1' : 'sm:order-2'}>
-            <div
-              className="mb-2.5 text-[1.125rem]"
-              style={{
-                fontFamily: 'var(--font-instrument-serif)',
-                fontStyle: 'italic',
-                color: '#6B7A3A',
-              }}
-            >
-              {arg.num}
-            </div>
+            {arg.num && (
+              <div
+                className="mb-2.5 text-[1.125rem]"
+                style={{
+                  fontFamily: 'var(--font-instrument-serif)',
+                  fontStyle: 'italic',
+                  color: '#6B7A3A',
+                }}
+              >
+                {arg.num}
+              </div>
+            )}
             <h2
               className="font-bold leading-[1.05] mb-4 max-w-[18ch]"
               style={{ fontSize: 'clamp(1.75rem, 4.5vw, 2.75rem)', letterSpacing: '-0.03em', color: '#2A2820' }}

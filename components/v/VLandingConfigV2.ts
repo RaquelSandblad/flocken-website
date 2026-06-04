@@ -32,8 +32,8 @@ export interface TrustItemV2 {
 export type ArgBg = 'paper' | 'cream' | 'sand';
 
 export interface ArgumentV2 {
-  /** Serif-stilt etikett ovanför rubriken, t.ex. "i. — Matchning" */
-  num: string;
+  /** Valfri serif-stilt etikett ovanför rubriken. Tom/utelämnad = döljs. */
+  num?: string;
   title: HeadlineV2;
   body: string;
   imageSrc: string;
@@ -213,7 +213,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
   heroEyebrow: 'Hundar · För dig och din hund',
   heroTitle: { prefix: 'Öppna världen för din ', accent: 'hund.' },
   heroLead:
-    'Du är störst i hundens värld. Med Flocken-appen blir den ännu lite större. Lekkamrater, hundvakt och passningsbyte.',
+    'I Flocken-appen samlar vi hundar från hela Sverige för att bygga landets största hundcommunity. Sök på kartan efter lekkamrater eller passningsbyte. När du behöver på dina villkor.',
   heroCtaLabel: 'Ladda ner Flocken',
   heroMetaText: '4 000+ hundägare i Sverige använder Flocken-appen.',
   heroDogAvatars: [
@@ -227,42 +227,38 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
   heroImageAlt: '',
 
   trustItems: [
-    { icon: 'filter',  label: 'Filtrera',          description: ' på storlek, ras och temperament' },
-    { icon: 'map-pin', label: 'Hundar nära dig',    description: ', visas på kartan' },
-    { icon: 'chat',    label: 'Chatta',             description: ' med hundägare i appen' },
+    { icon: 'person',  label: 'Hundvakter',        description: ' i närheten' },
+    { icon: 'map-pin', label: 'Hundar',            description: ' i ditt område på kartan' },
+    { icon: 'chat',    label: 'Chatta',            description: ' med hundägare i appen' },
   ],
 
   arguments: [
     {
-      num: 'Matchning',
-      title: { prefix: 'En kompis som ', accent: 'matchar.' },
-      body: 'Hundar leker bäst när de hittar någon som matchar. I Flocken-appen letar du i lugn och ro bland hundar som passar din — innan du tar kontakt.',
-      imageSrc: '/assets/flocken/v2/v-hundar-arg2.jpg',
-      imageAlt: 'Hand som håller en telefon med Flockens karta — hundar i närheten visas som markörer',
+      title: { prefix: 'Hundvakter i ditt ', accent: 'grannskap.' },
+      body: 'Sök på kartan och se hundvakter nära dig. Läs profilen och se tillgänglighet. Ta kontakt när det känns rätt.',
+      imageSrc: '/assets/flocken/v2/v-hundar-arg3.jpg',
+      imageAlt: 'Clay-illustration av kvinna som promenerar med sin hund på en skogsstig',
       bg: 'paper',
     },
     {
-      num: 'Slut på rörigt',
-      title: { prefix: 'Slut på röriga ', accent: 'grupper.' },
-      body: 'Facebook-grupper är bra till mycket. Men vissa saker är de inte anpassade för — som att söka en lekkompis till hunden.',
-      imageSrc: '/assets/flocken/v2/v-hundar-arg5.jpg',
-      imageAlt:
-        'Hand som håller en telefon med Facebook-gruppskaos överstruket med rött kryss',
+      title: { prefix: 'En kompis som ', accent: 'matchar.' },
+      body: 'Hundar leker bäst när de hittar någon som matchar. Flocken-appen är full av hundar med profilkort över hela Sverige. Sök på kartan efter hundar som passar din och ta kontakt med ägaren i appens chatt.',
+      imageSrc: '/assets/flocken/v2/v-hundar-arg2.jpg',
+      imageAlt: 'Hand som håller en telefon med Flockens karta — hundar i närheten visas som markörer',
       flip: true,
       bg: 'cream',
     },
     {
-      num: 'Hundvakt',
-      title: { prefix: 'Hundvakter i ditt ', accent: 'grannskap.' },
-      body: 'Sök på kartan och se vem som finns nära dig. Läs profilen och träffas innan passningen — för att skapa trygghet.',
-      imageSrc: '/assets/flocken/v2/v-hundar-arg3.jpg',
-      imageAlt: 'Clay-illustration av kvinna som promenerar med sin hund på en skogsstig',
+      title: { prefix: 'Slut på röriga ', accent: 'grupper.' },
+      body: 'Facebook-grupper är bra till mycket. Men vissa saker är de inte anpassade för. I Flocken söker du på kartan eller med filtreringar.',
+      imageSrc: '/assets/flocken/v2/v-hundar-arg5.jpg',
+      imageAlt:
+        'Hand som håller en telefon med Facebook-gruppskaos överstruket med rött kryss',
       bg: 'sand',
     },
     {
-      num: 'Närheten',
-      title: { prefix: 'Hundar som bor i ', accent: 'närheten.' },
-      body: 'I Flocken-appen ser du vilka hundar som finns nära dig — bild, storlek, ras och en beskrivning. Vem har valpar och vem vill byta hundpassning? Kontakta ägaren via chatten — eller bara scrolla bland fina hundar.',
+      title: { prefix: 'Hundar i närheten och över ', accent: 'hela landet.' },
+      body: 'I Flocken-appen ser du vilka hundar som finns nära dig med bild, storlek, ras och en beskrivning. Du kan se valpar på gång eller vem som har en hund för parning, även kennlar. Ta kontakt via chatten eller bara scrolla bland fina hundar.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg1.jpg',
       imageAlt:
         'Hand som håller en telefon med Flockens hundlista — profiler med namn, ras och ort nära dig',
@@ -270,7 +266,6 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
       bg: 'paper',
     },
     {
-      num: 'Larm',
       title: { prefix: 'Om hunden springer ', accent: 'bort.' },
       body: 'Om din hund försvinner kan du snabbt markera det med en varning på kartan. Då ser andra användare av Flocken det direkt.',
       imageSrc: '/assets/flocken/v2/v-hundar-arg4.jpg',
