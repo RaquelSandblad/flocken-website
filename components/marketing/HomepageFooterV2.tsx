@@ -51,7 +51,7 @@ export function HomepageFooterV2() {
                 Instagram
               </a>
               <a
-                href="https://www.facebook.com/flocken.info"
+                href="https://www.facebook.com/people/Flocken/61584380168066/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#E8DCC0] transition-colors"
