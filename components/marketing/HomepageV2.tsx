@@ -24,6 +24,7 @@ import { Instrument_Serif } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { VLandingCTAV2 } from '@/components/v/VLandingCTAV2';
+import { HomepageFooterV2 } from './HomepageFooterV2';
 import type {
   HomepageConfigV2,
   FunctionCard,
@@ -244,7 +245,7 @@ export function HomepageV2({ config }: HomepageV2Props) {
         }}
       >
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex items-center justify-between py-4">
-          <Link href="/preview/start-v2" aria-label="Flocken hem" className="flex items-center">
+          <Link href="/" aria-label="Flocken hem" className="flex items-center">
             <Image
               src="/assets/flocken/logo/logo_icon_flocken_large_1x1.png"
               alt="Flocken"
@@ -882,40 +883,8 @@ export function HomepageV2({ config }: HomepageV2Props) {
         </div>
       </section>
 
-      {/* ── FOOTER ── ink ── */}
-      <footer
-        className="py-8"
-        style={{
-          background: '#2A2820',
-          borderTop: '1px solid rgba(245, 239, 226, 0.1)',
-        }}
-      >
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex flex-wrap justify-between items-center gap-4">
-          <span style={{ fontSize: '0.8125rem', color: 'rgba(245, 239, 226, 0.6)' }}>
-            © {new Date().getFullYear()} Flocken, en tjänst från Spitakolus AB
-          </span>
-          <nav className="flex gap-5">
-            {[
-              { href: '/integritetspolicy', label: 'Integritet' },
-              { href: '/anvandarvillkor', label: 'Villkor' },
-              { href: '/support', label: 'Kontakt' },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                style={{
-                  fontSize: '0.8125rem',
-                  color: 'rgba(245, 239, 226, 0.6)',
-                  textDecoration: 'none',
-                }}
-                className="hover:text-[#E8DCC0] transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </footer>
+      {/* ── FOOTER ── full V2-footer med alla länkar ── */}
+      <HomepageFooterV2 />
     </div>
   );
 }
