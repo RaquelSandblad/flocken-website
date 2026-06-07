@@ -1,5 +1,5 @@
-import { Header } from '@/components/shared/Header';
-import { Footer } from '@/components/shared/Footer';
+import { HeaderV2 } from '@/components/shared/HeaderV2';
+import { HomepageFooterV2 } from '@/components/marketing/HomepageFooterV2';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ export default function MarketingLayout({
 }) {
   return (
     <>
-      <Header variant="marketing" />
+      <HeaderV2 />
       {children}
-      <Footer variant="marketing" />
+      <HomepageFooterV2 />
     </>
   );
 }

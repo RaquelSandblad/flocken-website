@@ -22,8 +22,8 @@
 
 import { Instrument_Serif } from 'next/font/google';
 import Image from 'next/image';
-import Link from 'next/link';
 import { VLandingCTAV2 } from '@/components/v/VLandingCTAV2';
+import { HeaderV2 } from '@/components/shared/HeaderV2';
 import { HomepageFooterV2 } from './HomepageFooterV2';
 import type {
   HomepageConfigV2,
@@ -236,43 +236,8 @@ export function HomepageV2({ config }: HomepageV2Props) {
       className={`min-h-screen flex flex-col ${instrumentSerif.variable}`}
       style={{ background: '#FAF6EC', color: '#2A2820' }}
     >
-      {/* ── HEADER ── statisk (ej sticky), papper-bakgrund med svag border ── */}
-      <header
-        className="w-full"
-        style={{
-          background: 'rgba(250, 246, 236, 0.92)',
-          borderBottom: '1px solid rgba(42, 40, 32, 0.06)',
-        }}
-      >
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex items-center justify-between py-4">
-          <Link href="/" aria-label="Flocken hem" className="flex items-center">
-            <Image
-              src="/assets/flocken/logo/logo_icon_flocken_large_1x1.png"
-              alt="Flocken"
-              width={36}
-              height={36}
-              style={{ height: 36, width: 'auto', display: 'block' }}
-            />
-          </Link>
-          <nav className="hidden sm:flex gap-9 text-[0.9375rem] font-medium" style={{ color: '#5C5A50' }}>
-            <a href="#ekosystem" className="hover:opacity-70 transition-opacity">Kartan</a>
-            <a href="#funktioner" className="hover:opacity-70 transition-opacity">Funktioner</a>
-            <a href="#story" className="hover:opacity-70 transition-opacity">Bakgrund</a>
-          </nav>
-          <a
-            href="#ladda-ner"
-            className="inline-flex items-center rounded-full font-semibold transition-opacity hover:opacity-90"
-            style={{
-              padding: '0.625rem 1.125rem',
-              background: '#2A2820',
-              color: '#FAF6EC',
-              fontSize: '0.875rem',
-            }}
-          >
-            Ladda ner
-          </a>
-        </div>
-      </header>
+      {/* ── HEADER ── delad V2-header ── */}
+      <HeaderV2 />
 
       {/* ── HERO ── ljus, grid med text + bild + flytande bubblor ── */}
       <section
