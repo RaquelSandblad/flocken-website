@@ -1,226 +1,509 @@
+/**
+ * /om-flocken — Flocken V2-design.
+ *
+ * Berättelsen bakom appen, i samma V2-designspråk som start- och funktionssidan
+ * (Instrument Serif-accenter, eyebrow-mönster, paper/cream/ink/olive-rytm).
+ * Header + footer kommer från (marketing)-layouten (global V2-chrome).
+ *
+ * Story-linjen är synkad med startsidans grundarhistoria: Raquel letade efter
+ * en VÄN till sin toypudel Malua (inte parning). Parning nämns bara som ett av
+ * flera behov andra hundägare hade. Rubriken "Det började med en pudel i
+ * Göteborg" är behållen på begäran.
+ *
+ * Skrivregel: inga em-streck (—), inga förbjudna ord (plattform, community,
+ * sömlös, utforska, underlättar).
+ */
+
+import { Instrument_Serif } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { VLandingCTAV2 } from '@/components/v/VLandingCTAV2';
 
 export const metadata: Metadata = {
-  title: "Om Flocken – berättelsen bakom appen",
-  description: "Flocken byggdes av hundmänniskor som levde med problemet appen löser. Läs historien bakom.",
+  title: 'Om Flocken – berättelsen bakom appen',
+  description:
+    'Flocken byggdes av hundmänniskor som levde med problemet appen löser. Det började med en pudel i Göteborg som behövde en vän. Läs historien bakom.',
+  alternates: { canonical: '/om-flocken' },
 };
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  style: ['italic'],
+  weight: '400',
+  variable: '--font-instrument-serif',
+  display: 'swap',
+});
+
+// ─── Hjälpkomponenter (samma DNA som HomepageV2) ───────────────────────────────
+
+/** Rubrik-accent: Instrument Serif italic */
+function SA({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      style={{
+        fontFamily: 'var(--font-instrument-serif)',
+        fontStyle: 'italic',
+        fontWeight: 400,
+        letterSpacing: '-0.01em',
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+
+/** Eyebrow: 24px linje + uppercase etikett */
+function Eyebrow({
+  children,
+  style,
+}: {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <div
+      className="flex items-center gap-2.5 mb-5 text-[0.75rem] font-semibold tracking-[0.14em] uppercase"
+      style={style}
+    >
+      <span className="inline-block w-6 h-px bg-current shrink-0" aria-hidden="true" />
+      {children}
+    </div>
+  );
+}
 
 export default function OmFlockenPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 bg-flocken-brown">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <p className="text-flocken-sand/70 text-sm font-semibold uppercase tracking-widest mb-6">
-              Om Flocken
-            </p>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-8">
-              Varför finns det ingen app där man kan se vilka hundar som finns i närheten?
+    <div className={instrumentSerif.variable} style={{ background: '#FAF6EC', color: '#2A2820' }}>
+      {/* ── HERO ── papper, intro ── */}
+      <section className="relative overflow-hidden" style={{ background: '#FAF6EC' }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 700px 500px at 80% 25%, rgba(232, 220, 192, 0.5) 0%, transparent 60%), radial-gradient(ellipse 500px 400px at 12% 90%, rgba(139, 164, 93, 0.12) 0%, transparent 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-[1200px] mx-auto px-5 sm:px-8 py-16 sm:py-24">
+          <div className="max-w-[42rem]">
+            <Eyebrow style={{ color: '#6B7A3A' }}>Om Flocken</Eyebrow>
+            <h1
+              className="font-extrabold leading-[1.05] mb-6"
+              style={{
+                fontSize: 'clamp(2.25rem, 6vw, 4rem)',
+                letterSpacing: '-0.025em',
+                color: '#2A2820',
+                maxWidth: '16ch',
+              }}
+            >
+              Vi byggde appen vi själva{' '}
+              <span style={{ color: '#6B7A3A' }}>
+                <SA>saknade.</SA>
+              </span>
             </h1>
-            <p className="text-xl text-flocken-sand/80 leading-relaxed">
-              Den frågan ställde vi en dag. Sedan byggde vi Flocken.
+            <p
+              style={{
+                fontSize: 'clamp(1.0625rem, 2vw, 1.25rem)',
+                lineHeight: 1.6,
+                color: '#5C5A50',
+                maxWidth: '34rem',
+              }}
+            >
+              Flocken kom till för att vi inte hittade den själva. En plats där hundar och deras
+              människor kan hitta varandra på riktigt, nära där man bor.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Problemet */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* ── STORY ── mörk, bild + text + pullquote (rubriken behållen) ── */}
+      <section
+        className="relative overflow-hidden py-20 sm:py-24"
+        style={{ background: '#2A2820', color: '#FAF6EC' }}
+        aria-label="Berättelsen"
+      >
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 600px 400px at 80% 20%, rgba(139, 164, 93, 0.08) 0%, transparent 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 min-[880px]:grid-cols-2 gap-12 min-[880px]:gap-20 items-center">
+            {/* Bild: Malua som valp */}
+            <div
+              className="relative w-full aspect-square overflow-hidden"
+              style={{
+                borderRadius: '1.5rem',
+                boxShadow: '0 30px 60px -20px rgba(0, 0, 0, 0.5)',
+              }}
+            >
+              <Image
+                src="/assets/flocken/v2/home/real-malua-valp-1x1.jpg"
+                alt="Malua som valp, en apricotfärgad toypudel med rosa sele på en sten i skogen"
+                fill
+                className="object-cover"
+                sizes="(max-width: 880px) 100vw, 50vw"
+              />
+            </div>
+            {/* Text */}
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-flocken-brown mb-6">
-                Det började med en pudel i Göteborg
+              <Eyebrow style={{ color: '#8BA45D' }}>Så här började det</Eyebrow>
+              <h2
+                className="font-bold leading-[1.05] mb-6"
+                style={{
+                  fontSize: 'clamp(1.875rem, 4.5vw, 3rem)',
+                  letterSpacing: '-0.03em',
+                  color: '#FAF6EC',
+                  maxWidth: '20ch',
+                }}
+              >
+                Det började med en pudel{' '}
+                <span style={{ color: '#D4A574' }}>
+                  <SA>i Göteborg.</SA>
+                </span>
               </h2>
-              <div className="space-y-5 text-lg text-flocken-brown leading-relaxed">
+              <p
+                className="mb-4"
+                style={{
+                  color: 'rgba(245, 239, 226, 0.82)',
+                  fontSize: '1.0625rem',
+                  lineHeight: 1.7,
+                  maxWidth: '32rem',
+                }}
+              >
+                Idén till Flocken kom när Raquel letade efter en vän till sin toypudel Malua. Någon
+                att leka och umgås med, gärna i närheten. Det var svårare än hon trott. Det fanns
+                ingen bra plats att leta på.
+              </p>
+              <blockquote
+                className="my-6"
+                style={{
+                  paddingLeft: '1.5rem',
+                  borderLeft: '3px solid #D4A574',
+                  fontFamily: 'var(--font-instrument-serif)',
+                  fontStyle: 'italic',
+                  fontSize: '1.5rem',
+                  lineHeight: 1.35,
+                  color: '#FAF6EC',
+                  maxWidth: '28rem',
+                }}
+              >
+                Facebook-grupperna var röriga, och när vi äntligen fick svar bodde personen på
+                andra sidan Sverige.
+              </blockquote>
+              <div
+                className="mb-6"
+                style={{
+                  paddingLeft: '1.5rem',
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  color: '#8BA45D',
+                }}
+              >
+                Raquel, grundare
+              </div>
+              <p
+                className="mb-4"
+                style={{
+                  color: 'rgba(245, 239, 226, 0.82)',
+                  fontSize: '1.0625rem',
+                  lineHeight: 1.7,
+                  maxWidth: '32rem',
+                }}
+              >
+                När hon frågade runt visade det sig att andra satt med samma sak. En del sökte
+                lekkamrater, andra en hundvakt eller någon att para hunden med. Alla letade, ingen
+                hittade.
+              </p>
+              <p
+                style={{
+                  color: '#FAF6EC',
+                  fontSize: '1.0625rem',
+                  lineHeight: 1.7,
+                  maxWidth: '32rem',
+                  fontWeight: 500,
+                }}
+              >
+                Så hon bestämde sig för att göra något åt det. Att samla alla hundar på ett ställe,
+                så att man kan söka istället för att hoppas på rätt inlägg vid rätt tillfälle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INSIKTEN ── cream, centrerad pullquote ── */}
+      <section className="py-20 sm:py-24" style={{ background: '#F5EFE2' }} aria-label="Insikten">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="max-w-[44rem] mx-auto text-center">
+            <Eyebrow style={{ color: '#6B7A3A', justifyContent: 'center' }}>Insikten</Eyebrow>
+            <h2
+              className="font-bold leading-[1.05] mb-8"
+              style={{
+                fontSize: 'clamp(1.875rem, 4.5vw, 3rem)',
+                letterSpacing: '-0.03em',
+                color: '#2A2820',
+              }}
+            >
+              Det saknades något{' '}
+              <span style={{ color: '#6B7A3A' }}>
+                <SA>helt annat.</SA>
+              </span>
+            </h2>
+            <p
+              className="mb-8"
+              style={{
+                fontFamily: 'var(--font-instrument-serif)',
+                fontStyle: 'italic',
+                fontSize: 'clamp(1.5rem, 3.5vw, 2.125rem)',
+                lineHeight: 1.3,
+                color: '#2A2820',
+              }}
+            >
+              Varför finns det ingen app där man faktiskt kan se hundarna omkring sig?
+            </p>
+            <div
+              className="space-y-4 text-left mx-auto"
+              style={{ maxWidth: '38rem', fontSize: '1.0625rem', lineHeight: 1.7, color: '#5C5A50' }}
+            >
+              <p>
+                En plats där varje hund har en egen profil. Där kartan är navet, för möten mellan
+                hundar sker alltid i verkligheten. Där du kan filtrera på ras, stad och vad ni
+                söker.
+              </p>
+              <p>
+                Inte ett socialt flöde till. Inte en Facebook-grupp. Ett verktyg byggt för riktiga
+                hundägare och vardagliga behov.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── VAD VI BYGGDE ── papper, tre värdekort ── */}
+      <section className="py-20 sm:py-24" style={{ background: '#FAF6EC' }} aria-label="Det vi byggde">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="text-center max-w-[40rem] mx-auto mb-14">
+            <Eyebrow style={{ color: '#6B7A3A', justifyContent: 'center' }}>Det vi byggde</Eyebrow>
+            <h2
+              className="font-bold leading-[1.05]"
+              style={{
+                fontSize: 'clamp(1.875rem, 4.5vw, 3rem)',
+                letterSpacing: '-0.03em',
+                color: '#2A2820',
+              }}
+            >
+              En app med{' '}
+              <span style={{ color: '#6B7A3A' }}>
+                <SA>kartan i centrum.</SA>
+              </span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[960px] mx-auto">
+            {[
+              {
+                title: 'Kartan i centrum',
+                body: 'Se hundar, hundvakter och ställen i närheten. Möten sker i verkligheten, inte i ett flöde.',
+                tone: 'paper' as const,
+              },
+              {
+                title: 'Riktiga profiler',
+                body: 'Varje hund har en egen profil med ras, ålder och vad ni söker. Inte ett inlägg som försvinner.',
+                tone: 'ink' as const,
+              },
+              {
+                title: 'Sökning som fungerar',
+                body: 'Filtrera fram precis det ni behöver. Slipp fel svar från fel stad om fel ras.',
+                tone: 'sand' as const,
+              },
+            ].map((card, i) => {
+              const tones = {
+                paper: { bg: '#F5EFE2', title: '#2A2820', body: '#5C5A50', accent: '#6B7A3A' },
+                ink: { bg: '#2A2820', title: '#FAF6EC', body: 'rgba(245, 239, 226, 0.8)', accent: '#8BA45D' },
+                sand: { bg: '#E8DCC0', title: '#2A2820', body: '#5C5A50', accent: '#4D5A28' },
+              };
+              const s = tones[card.tone];
+              return (
+                <div
+                  key={i}
+                  className="rounded-3xl p-8"
+                  style={{ background: s.bg, transform: card.tone === 'ink' ? 'translateY(-12px)' : undefined }}
+                >
+                  <div
+                    className="mb-3"
+                    style={{
+                      fontFamily: 'var(--font-instrument-serif)',
+                      fontStyle: 'italic',
+                      fontSize: '1.125rem',
+                      color: s.accent,
+                      fontWeight: 500,
+                    }}
+                  >
+                    0{i + 1}
+                  </div>
+                  <h3 className="font-bold mb-2.5" style={{ fontSize: '1.3125rem', lineHeight: 1.2, color: s.title }}>
+                    {card.title}
+                  </h3>
+                  <p style={{ fontSize: '0.9375rem', lineHeight: 1.6, color: s.body }}>{card.body}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VILKA VI ÄR ── olive-deep, bild + text ── */}
+      <section
+        className="relative overflow-hidden py-20 sm:py-24"
+        style={{ background: '#4D5A28', color: '#FAF6EC' }}
+        aria-label="Vilka vi är"
+      >
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            top: '-30%',
+            left: '-10%',
+            width: '60%',
+            height: '130%',
+            background: 'radial-gradient(circle, rgba(245, 239, 226, 0.05) 0%, transparent 60%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 min-[900px]:grid-cols-[1.05fr_1fr] gap-12 min-[900px]:gap-20 items-center">
+            <div>
+              <Eyebrow style={{ color: '#E8DCC0' }}>Vilka vi är</Eyebrow>
+              <h2
+                className="font-bold leading-[1.05] mb-6"
+                style={{
+                  fontSize: 'clamp(1.875rem, 4.5vw, 3rem)',
+                  letterSpacing: '-0.03em',
+                  color: '#FAF6EC',
+                  maxWidth: '18ch',
+                }}
+              >
+                Ett litet bolag med{' '}
+                <span style={{ color: '#D4A574' }}>
+                  <SA>hundhjärta.</SA>
+                </span>
+              </h2>
+              <div
+                className="space-y-4"
+                style={{ color: 'rgba(245, 239, 226, 0.85)', fontSize: '1.0625rem', lineHeight: 1.7, maxWidth: '32rem' }}
+              >
                 <p>
-                  Vi skapade Flocken för att vi själva hade behövt appen. När vi ville para vår lilla Tik visade det sig vara svårare än vi tänkt.
+                  Flocken är inte byggt av ett stort techbolag. Det är byggt av hundmänniskor som
+                  levde med problemet appen löser.
                 </p>
                 <p>
-                  Vi missade flera löpperioder. Det fanns helt enkelt ingen bra plats att leta på.
+                  Vi är ett litet svenskt bolag och drivkraften är personlig. Visionen är att samla
+                  Skandinaviens hundägare på samma ställe och göra det enklare att hitta varandra,
+                  oavsett om det gäller lekkamrater, hundvakt, promenader eller någon att para
+                  hunden med.
                 </p>
-                <p>
-                  Traditionella avelsorganisationer var stela. Grupperna i sociala medier var röriga. Inlägg försvann och när vi äntligen verkade hitta rätt visade det sig att hanen bodde på andra sidan Sverige. Det hade vi gärna vetat från början.
+                <p style={{ color: '#FAF6EC' }}>
+                  Hundar skapar relationer mellan människor som annars aldrig hade mötts. Det är den
+                  känslan hela appen vilar på.
                 </p>
               </div>
             </div>
-            <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-card">
+            <div
+              className="relative w-full aspect-square overflow-hidden"
+              style={{ borderRadius: '1.75rem', boxShadow: '0 40px 80px -30px rgba(0, 0, 0, 0.5)' }}
+            >
               <Image
                 src="/assets/flocken/generated/flocken_image_malua-arlo-coco-jumping-dog-park_1x1.jpeg"
-                alt="Hundar leker i hundparken"
+                alt="Tre hundar som leker tillsammans i en hundrastgård"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Insikten */}
-      <section className="section-padding bg-flocken-sand">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-flocken-brown mb-10">
-              Det saknades något helt annat
-            </h2>
-            <blockquote className="relative">
-              <div className="text-flocken-olive/30 text-8xl font-serif leading-none select-none mb-2">&ldquo;</div>
-              <p className="text-2xl lg:text-3xl font-semibold text-flocken-brown leading-snug -mt-6">
-                Varför finns det ingen app där man faktiskt kan upptäcka hundar omkring sig?
-              </p>
-            </blockquote>
-            <div className="mt-10 space-y-4 text-lg text-flocken-brown leading-relaxed">
-              <p>
-                En plats där hundar har egna profiler. Där kartan är i centrum, för möten mellan hundar och människor sker alltid i verkligheten. Där man kan filtrera efter ras, stad och vad man söker.
-              </p>
-              <p>
-                Inte ett till socialt nätverk. Inte en Facebook-grupp. Ett praktiskt verktyg byggt för riktiga hundägare och verkliga behov.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vad Flocken är */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center mb-14">
-            <h2 className="text-3xl lg:text-4xl font-bold text-flocken-brown">
-              Det vi byggde
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-flocken-cream rounded-2xl p-8 text-center">
-              <div className="w-14 h-14 mx-auto mb-5 bg-flocken-sand rounded-2xl flex items-center justify-center">
-                <svg className="w-7 h-7 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-flocken-brown mb-2">Kartan i centrum</h3>
-              <p className="text-flocken-gray text-sm leading-relaxed">
-                Se hundar och hundägare i närheten. Möten sker i verkligheten, inte bara digitalt.
-              </p>
-            </div>
-            <div className="bg-flocken-cream rounded-2xl p-8 text-center">
-              <div className="w-14 h-14 mx-auto mb-5 bg-flocken-sand rounded-2xl flex items-center justify-center">
-                <svg className="w-7 h-7 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-flocken-brown mb-2">Riktiga profiler</h3>
-              <p className="text-flocken-gray text-sm leading-relaxed">
-                Varje hund har en egen profil. Ras, ålder, kön, vad de söker. Inte ett inlägg som försvinner.
-              </p>
-            </div>
-            <div className="bg-flocken-cream rounded-2xl p-8 text-center">
-              <div className="w-14 h-14 mx-auto mb-5 bg-flocken-sand rounded-2xl flex items-center justify-center">
-                <svg className="w-7 h-7 text-flocken-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-flocken-brown mb-2">Filtrering som fungerar</h3>
-              <p className="text-flocken-gray text-sm leading-relaxed">
-                Sök efter precis det du behöver. Slipp fel svar från fel stad om fel ras.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vilka vi är */}
-      <section className="section-padding bg-flocken-brown">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[380px] rounded-2xl overflow-hidden shadow-card">
-              <Image
-                src="/assets/flocken/generated/flocken_image_malua-arlo-coco-chasing-ball_16x9.jpeg"
-                alt="Hundar springer och leker"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ett litet bolag med hundhjärta
+      {/* ── CTA ── olive-deep kort i papper ── */}
+      <section className="py-12 sm:py-20" style={{ background: '#FAF6EC' }} aria-label="Ladda ner">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div
+            className="relative overflow-hidden rounded-3xl sm:rounded-[2rem] p-8 sm:p-16 grid grid-cols-1 sm:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-12 items-center"
+            style={{ background: '#4D5A28', color: '#FAF6EC' }}
+          >
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                top: '-20%',
+                right: '-10%',
+                width: '60%',
+                height: '140%',
+                background: 'radial-gradient(circle, rgba(232, 220, 192, 0.16) 0%, transparent 60%)',
+              }}
+              aria-hidden="true"
+            />
+            <div className="relative">
+              <Eyebrow style={{ color: '#E8DCC0' }}>Välkommen in i Flocken</Eyebrow>
+              <h2
+                className="font-bold leading-[1.05] mb-5"
+                style={{
+                  fontSize: 'clamp(1.875rem, 4.5vw, 3rem)',
+                  letterSpacing: '-0.03em',
+                  color: '#FAF6EC',
+                  maxWidth: '14ch',
+                }}
+              >
+                Gå med i{' '}
+                <span style={{ color: '#D4A574' }}>
+                  <SA>flocken.</SA>
+                </span>
               </h2>
-              <div className="space-y-5 text-lg text-flocken-sand/80 leading-relaxed">
-                <p>
-                  Flocken är inte byggt av ett internationellt techbolag. Det är byggt av hundmänniskor som levde med de problem appen löser.
-                </p>
-                <p>
-                  Vi är ett litet svenskt bolag. Drivkraften är personlig. Visionen är att samla Skandinaviens hundägare på ett ställe och göra det enklare att hitta varandra, oavsett om det handlar om hundvakt, lekkamrater, promenader eller parning.
-                </p>
-                <p>
-                  Hundar skapar relationer mellan människor som annars aldrig hade mötts. Det är inte teknik för teknikens skull. Det är den känslan hela appen vilar på.
-                </p>
-              </div>
+              <p
+                className="mb-7"
+                style={{
+                  fontSize: 'clamp(1.0625rem, 2vw, 1.1875rem)',
+                  lineHeight: 1.55,
+                  color: 'rgba(245, 239, 226, 0.92)',
+                  maxWidth: '30rem',
+                }}
+              >
+                Gratis att ladda ner. Se vilka hundar som redan finns nära dig.
+              </p>
+              <VLandingCTAV2
+                label="Ladda ner Flocken"
+                experimentId="OMFLOCKEN"
+                variant="om-flocken"
+                position="closing"
+              />
+              <p className="mt-4" style={{ fontSize: '0.875rem', color: 'rgba(245, 239, 226, 0.7)' }}>
+                Har du frågor?{' '}
+                <Link href="/support" className="underline hover:opacity-80 transition-opacity">
+                  Kontakta oss
+                </Link>
+              </p>
+            </div>
+            <div
+              className="hidden sm:block relative aspect-square overflow-hidden"
+              style={{
+                borderRadius: '1.5rem',
+                boxShadow: '0 30px 60px -20px rgba(0, 0, 0, 0.3)',
+                transform: 'rotate(2deg)',
+              }}
+            >
+              <Image
+                src="/assets/flocken/v2/home/real-chico-coco-park.jpg"
+                alt="Två hundar som springer tillsammans i en park"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1100px) 45vw, 460px"
+              />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Kärnan */}
-      <section className="section-padding bg-flocken-cream">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-flocken-brown mb-6">
-              Hundar skapar relationer mellan människor
-            </h2>
-            <p className="text-lg text-flocken-brown leading-relaxed mb-4">
-              Det är kärnan i det vi gör. Inte teknik för teknikens skull, inte en app för att appen ska existera.
-            </p>
-            <p className="text-lg text-flocken-brown leading-relaxed">
-              Flocken byggdes för att lösa ett problem vi själva levde med. Kanske är det just därför det känns mänskligt.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-flocken-olive to-flocken-accent">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
-              Gå med i flocken
-            </h2>
-            <p className="text-xl text-white/90">
-              Gratis att ladda ner. Prova och se vilka hundar som finns i närheten.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.bastavan.app"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft"
-              >
-                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                </svg>
-                Google Play
-              </a>
-              <a
-                href="https://apps.apple.com/app/flocken/id6755424578"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-flocken-olive rounded-xl font-semibold text-lg hover:bg-flocken-cream transition-all hover:scale-105 shadow-soft"
-              >
-                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C1.79 15.25 2.1 7.59 9.5 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                </svg>
-                App Store
-              </a>
-            </div>
-            <p className="text-white/70 text-sm">
-              Har du frågor?{' '}
-              <Link href="/support" className="underline hover:text-white transition-colors">
-                Kontakta oss
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
