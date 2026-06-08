@@ -216,8 +216,7 @@ export default function OmFlockenPage() {
                 }}
               >
                 När hon frågade runt visade det sig att andra satt med samma sak. En del sökte
-                lekkamrater, andra en hundvakt eller någon att para hunden med. Alla letade, ingen
-                hittade.
+                lekkamrater, andra en hundvakt eller någon att para hunden med.
               </p>
               <p
                 style={{
