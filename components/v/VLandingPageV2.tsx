@@ -109,6 +109,15 @@ function TrustIcon({ type }: { type: TrustIconType }) {
       </svg>
     );
   }
+  if (type === 'cross') {
+    // Veterinär / medicinsk — kors i cirkel
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...size} className={cls} aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 8v8M8 12h8" />
+      </svg>
+    );
+  }
   return null;
 }
 

@@ -19,7 +19,7 @@ export interface HeadlineV2 {
   accent: string;
 }
 
-export type TrustIconType = 'person' | 'bag' | 'chat' | 'map-pin' | 'filter';
+export type TrustIconType = 'person' | 'bag' | 'chat' | 'map-pin' | 'filter' | 'cross';
 
 export interface TrustItemV2 {
   icon: TrustIconType;
@@ -118,7 +118,7 @@ export const PASSA_V2_CONFIG: VLandingConfigV2 = {
   heroLead:
     'Du ska inte behöva fråga i en Facebook-grupp och hoppas på det bästa. I Flocken ser du vem som finns nära dig, innan du bestämmer dig.',
   heroCtaLabel: 'Hitta hundvakt nära dig',
-  heroMetaText: '2 000+ hundägare i Sverige använder Flocken-appen.',
+  heroMetaText: '5 000+ hundägare i Sverige använder Flocken-appen.',
   heroDogAvatars: [
     { src: '/assets/flocken/v2/avatars/1.png' },
     { src: '/assets/flocken/v2/avatars/2.png' },
@@ -215,7 +215,7 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
   heroLead:
     'I Flocken-appen samlar vi hundar från hela Sverige för att bygga landets största hundcommunity. Sök på kartan efter lekkamrater eller passningsbyte. När du behöver på dina villkor.',
   heroCtaLabel: 'Ladda ner Flocken',
-  heroMetaText: '4 000+ hundägare i Sverige använder Flocken-appen.',
+  heroMetaText: '5 000+ hundägare i Sverige använder Flocken-appen.',
   heroDogAvatars: [
     { src: '/assets/flocken/v2/avatars/5.png' },
     { src: '/assets/flocken/v2/avatars/6.png' },
@@ -303,4 +303,130 @@ export const HUNDAR_V2_CONFIG: VLandingConfigV2 = {
   closingImageSrc: '/assets/flocken/v2/v-hundar-closing.jpg',
   closingImageAlt:
     'Clay-illustration av en man som visar en kart-app på sin mobil för sin uppmärksamma hund',
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BESÖKA V2 CONFIG  (EXP003) — cid010 Besöka-launch
+//
+// Copy: "copy LP Besöka.md" (Torbjörns revidering 2026-06-11) — semester-vinkel,
+//   veterinärer som egen sektion, hundvakt + community som cross-sell.
+// Bilder: clay-situationsillustrationer, INGA kart-screenshots.
+//   hero  m140 besoka-hero       | arg1 café (fl_clacy 3, "bild är bra")
+//   arg2  m091 trehundar park    | arg3 m141 veterinär-klinik (kvinna+hund)
+//   arg4  m133 kvinna+resväska (croppad 1:1) | arg5 m031 hand-karta-mockup
+//   closing fl_clacy 2 (redo att gå ut)
+// VOICES = utkast (illustrativa, ej riktiga recensioner). Torbjörn 2026-06-10:
+//   sourca RIKTIGA VoC-citat (omvärldsanalytiker) före skalning.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const BESOKA_V2_CONFIG: VLandingConfigV2 = {
+  experimentId: 'EXP003',
+  hook: 'besoka',
+  pageTitle: 'Hundvänliga ställen nära dig | Flocken',
+  pageDescription:
+    'Hitta caféer, restauranger, parker och hundrastgårdar där hunden får följa med. Se betyg, spara favoriter och planera resan. Ladda ner Flocken gratis.',
+
+  headerCtaLabel: 'Ladda ner Flocken',
+
+  heroEyebrow: 'Redo för sommaren med ett knapptryck',
+  heroTitle: { prefix: 'Hundkartan att ha i mobilen ', accent: 'på semestern.' },
+  heroLead:
+    'Hitta det du behöver på kartan under semestern, helt anpassat för hundägare. I Flocken-appen ser du hundvänliga caféer, restauranger, parker och hundrastgårdar i närheten av dig. Om du inte kan ta med hunden finns hundvakter att kontakta över hela landet.',
+  heroCtaLabel: 'Ladda ner Flocken gratis',
+  heroMetaText: '5 000+ hundägare i Sverige använder Flocken-appen.',
+  heroDogAvatars: [
+    { src: '/assets/flocken/v2/avatars/3.png' },
+    { src: '/assets/flocken/v2/avatars/4.png' },
+    { src: '/assets/flocken/v2/avatars/5.png' },
+    { src: '/assets/flocken/v2/avatars/6.png' },
+  ],
+  heroImageSrc: '/assets/flocken/v2/v-besoka-hero.png',
+  heroImageSrcMobile: '/assets/flocken/v2/v-besoka-hero-mobile.png',
+  heroImageAlt: '',
+
+  trustItems: [
+    { icon: 'map-pin', label: 'Allt på kartan',      description: ' – caféer, parker och rastgårdar nära dig' },
+    { icon: 'filter',  label: 'Betyg och favoriter', description: ' från andra hundägare, spara dina ställen' },
+    { icon: 'cross',   label: 'Om olyckan är framme', description: ' – hitta närmaste veterinär' },
+  ],
+
+  arguments: [
+    // Arg 1 — café/restaurang (café-bilden behålls, "bild är bra")
+    {
+      num: 'Spring inte runt och leta',
+      title: { prefix: 'Caféer och restauranger som säger ', accent: 'ja till hunden.' },
+      body: 'Se vilka ställen som välkomnar hunden innan du går dit. Jaga inte en restaurang på fastande mage. Läs andra besökares kommentarer.',
+      imageSrc: '/assets/flocken/v2/v-besoka-arg1.png',
+      imageAlt: 'Clay-illustration av en beagle vid ett kafébord medan ägaren ställer fram en vattenskål',
+      bg: 'paper',
+    },
+    // Arg 2 — rastgårdar och parker (m091 tre hundar i park)
+    {
+      num: 'Utflykter som blir bra för alla',
+      title: { prefix: 'Hundrastgårdar och ', accent: 'parker.' },
+      body: 'Hitta närmaste rastgård på kartan. Perfekt i en ny ort, men även bra hemma. Upptäck parker där alla kan vara med.',
+      imageSrc: '/assets/flocken/v2/v-besoka-arg2.jpg',
+      imageAlt: 'Clay-illustration av tre hundar som springer tillsammans i en park',
+      flip: true,
+      bg: 'cream',
+    },
+    // Arg 3 — veterinärer (PLACEHOLDER-bild — vet-motiv kommer från kreativ producent)
+    {
+      num: 'Om olyckan är framme',
+      title: { prefix: 'Nu finns även veterinärer ', accent: 'på kartan.' },
+      body: 'Ibland händer saker man inte kan planera för. Men med Flocken-appen hittar du snabbt en veterinär. Se vilka kliniker som finns i närheten.',
+      imageSrc: '/assets/flocken/v2/v-besoka-arg3.jpg',
+      imageAlt: 'Clay-illustration av en hundägare som lämnar in sin hund hos en veterinär på en klinik',
+      bg: 'sand',
+    },
+    // Arg 4 — hundvakt / Passa-brygga (m133 kvinna+resväska, croppad 1:1)
+    {
+      num: 'När hunden inte kan följa med',
+      title: { prefix: 'Hitta en hundvakt ', accent: 'det känns bra med.' },
+      body: 'Ibland går det helt enkelt att inte ta med hunden. Men det kan lösa sig bra i alla fall. Hitta rätt hundvakt i appen.',
+      imageSrc: '/assets/flocken/v2/v-besoka-arg4.jpg',
+      imageAlt: 'Clay-illustration av en kvinna som kramar om sin hund bredvid en packad resväska',
+      flip: true,
+      bg: 'paper',
+    },
+    // Arg 5 — community / hundägare över hela landet (m031 hand-karta-mockup)
+    {
+      num: 'Fråga någon med lokalkännedom',
+      title: { prefix: 'Hundägare över ', accent: 'hela landet.' },
+      body: 'Hundar över hela Skandinavien är med i Flocken-appen. Ta kontakt med ägarna i chatten för att hitta en lekkompis på resmålet.',
+      imageSrc: '/assets/flocken/v2/v-besoka-arg5.jpg',
+      imageAlt: 'Hand som håller en telefon med Flockens karta över Skandinavien',
+      bg: 'cream',
+    },
+  ],
+
+  // UTKAST-voices (illustrativa, ej riktiga recensioner) — byts mot sourcade VoC-citat.
+  voicesEyebrow: 'Hundägare om att ta med hunden ut',
+  voicesTitle: { prefix: 'Tycker du att hunden begränsar ', accent: 'semestern?' },
+  voices: [
+    {
+      quote:
+        'Vi tar alltid med hunden på semestern. Sen står vi där och vet inte vilket café som tycker att det är okej.',
+      source: 'Hundägare · Familjeliv',
+    },
+    {
+      quote:
+        'Jag googlar "hundvänlig restaurang" varje gång vi kommer till en ny stad. Det är alltid svårt att hitta någonstans att äta.',
+      source: 'Hundägare · Hundforum',
+    },
+    {
+      quote: 'I en ny stad är det svårt att veta var hunden kan springa av sig.',
+      source: 'Hundägare · Facebook-grupp',
+    },
+  ],
+
+  closingEyebrow: 'Ta med hunden',
+  closingTitle: { prefix: 'Besökskartan för hundar är ', accent: 'redo i fickan.' },
+  closingLead:
+    'Kartan med besöksmålen är bara en del av Flocken-appen. Ladda ner den och bli en del av Flocken.',
+  closingCtaLabel: 'Hämta Flocken-appen',
+  closingSubtext: 'Gratis att ladda ner. Finns på App Store och Google Play.',
+  closingImageSrc: '/assets/flocken/v2/v-besoka-closing.png',
+  closingImageAlt:
+    'Clay-illustration av en hund som sitter i hallen med kopplet i munnen, redo att gå ut',
 };
