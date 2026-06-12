@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "HWBGW56WBU.com.bastavan.app",
-        "paths": ["/auth/*"]
+        "paths": ["/auth/*", "/event/*"]
       }
     ]
   }
