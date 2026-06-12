@@ -4,11 +4,13 @@
  * Flödet: användare delar ett event i appen → mottagaren får en
  * https://flocken.info/event/<id>-länk. Har mottagaren appen öppnas eventet
  * direkt via universal/app links; annars visas den här sidan med titel,
- * datum, tid och plats + knappar för att öppna/hämta appen.
+ * datum, tid, plats och vilka som är intresserade + knappar för att
+ * öppna/hämta appen.
  *
  * Interaktion (anmäla intresse) sker ALLTID i appen med konto — sidan är
  * medvetet läs-och-läck-ingenting: den hämtar bara det RLS redan gör publikt
- * (is_active=true, godkända företagsprofiler) med publika anon-nycklar.
+ * (is_active=true, godkända företagsprofiler, deltagare/hundar som redan
+ * visas för gäster i appen) med publika anon-nycklar.
  *
  * Appen finns i två regioner med separata databaser — vi provar Europa först
  * och faller tillbaka till Brasilien.
@@ -39,6 +41,12 @@ const REGIONS = [
 
 const UUID_RE = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
 
+interface EventDog {
+  id: string;
+  name: string;
+  image: string | null;
+}
+
 interface SharedEvent {
   id: string;
   title: string;
@@ -49,8 +57,11 @@ interface SharedEvent {
   end_time: string | null;
   location_name: string | null;
   city: string | null;
+  dog_id: string | null;
   business_id: string | null;
   businessName?: string | null;
+  participantCount: number;
+  dogs: EventDog[];
   locale: string;
 }
 
@@ -59,30 +70,64 @@ async function fetchFromRegion(
   id: string
 ): Promise<SharedEvent | null> {
   const headers = { apikey: region.anonKey, Authorization: `Bearer ${region.anonKey}` };
+  const get = async (path: string) => {
+    const res = await fetch(`${region.url}/rest/v1/${path}`, {
+      headers,
+      next: { revalidate: 300 },
+    });
+    return res.ok ? res.json() : null;
+  };
+
   try {
-    const res = await fetch(
-      `${region.url}/rest/v1/calendar_events?id=eq.${id}&is_active=eq.true` +
-        `&select=id,title,description,event_type,event_date,start_time,end_time,location_name,city,business_id`,
-      { headers, next: { revalidate: 300 } }
-    );
-    if (!res.ok) return null;
-    const rows = (await res.json()) as Omit<SharedEvent, 'locale'>[];
-    if (!rows.length) return null;
-    const event: SharedEvent = { ...rows[0], locale: region.locale };
+    const rows = (await get(
+      `calendar_events?id=eq.${id}&is_active=eq.true` +
+        `&select=id,title,description,event_type,event_date,start_time,end_time,location_name,city,dog_id,business_id`
+    )) as Omit<SharedEvent, 'locale' | 'participantCount' | 'dogs'>[] | null;
+    if (!rows?.length) return null;
+
+    const event: SharedEvent = {
+      ...rows[0],
+      locale: region.locale,
+      participantCount: 0,
+      dogs: [],
+    };
 
     // Arrangerande företag (RLS visar bara godkända profiler)
     if (event.business_id) {
       try {
-        const bizRes = await fetch(
-          `${region.url}/rest/v1/business_profiles?id=eq.${event.business_id}&select=name`,
-          { headers, next: { revalidate: 300 } }
-        );
-        if (bizRes.ok) {
-          const biz = (await bizRes.json()) as { name: string }[];
-          event.businessName = biz[0]?.name ?? null;
-        }
+        const biz = (await get(`business_profiles?id=eq.${event.business_id}&select=name`)) as
+          | { name: string }[]
+          | null;
+        event.businessName = biz?.[0]?.name ?? null;
       } catch {}
     }
+
+    // Intresserade + deras hundar (samma data som gäster ser i appen)
+    try {
+      const parts = (await get(
+        `event_participants?event_id=eq.${id}&select=user_id,dog_id`
+      )) as { user_id: string; dog_id: string | null }[] | null;
+      event.participantCount = parts?.length ?? 0;
+
+      const dogIds = [
+        ...new Set(
+          [event.dog_id, ...(parts ?? []).map(p => p.dog_id)].filter(Boolean) as string[]
+        ),
+      ];
+      if (dogIds.length > 0) {
+        const dogs = (await get(
+          `dogs?id=in.(${dogIds.join(',')})&select=id,name,images`
+        )) as { id: string; name: string; images: string[] | null }[] | null;
+        event.dogs = (dogs ?? []).map(d => ({
+          id: d.id,
+          name: d.name,
+          image: Array.isArray(d.images) && d.images.length > 0 ? d.images[0] : null,
+        }));
+        // Skaparens hund först, som i appen
+        event.dogs.sort((a, b) => (a.id === event.dog_id ? -1 : b.id === event.dog_id ? 1 : 0));
+      }
+    } catch {}
+
     return event;
   } catch {
     return null;
@@ -113,11 +158,80 @@ function formatEventDate(event: SharedEvent): string {
   return `${dateText} ${kl} ${time}${end}`;
 }
 
-const EVENT_TYPE_LABELS: Record<string, { sv: string; pt: string; emoji: string }> = {
-  walk: { sv: 'Hundpromenad', pt: 'Passeio com cães', emoji: '🐾' },
-  course: { sv: 'Kurs', pt: 'Curso', emoji: '🎓' },
-  city_event: { sv: 'Händelse', pt: 'Evento', emoji: '📍' },
+const EVENT_TYPE_LABELS: Record<string, { sv: string; pt: string }> = {
+  walk: { sv: 'Hundpromenad', pt: 'Passeio com cães' },
+  course: { sv: 'Kurs', pt: 'Curso' },
+  city_event: { sv: 'Händelse', pt: 'Evento' },
 };
+
+// ─── Ikoner i Flocken-stil (linje-ikoner i oliv, samma manér som appen) ──────
+
+function IconCalendar() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mt-0.5 h-5 w-5 shrink-0 text-flocken-olive"
+      aria-hidden
+    >
+      <rect x="3" y="5" width="18" height="16" rx="3" />
+      <path d="M8 3v4M16 3v4M3 10h18" />
+    </svg>
+  );
+}
+
+function IconPin() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mt-0.5 h-5 w-5 shrink-0 text-flocken-olive"
+      aria-hidden
+    >
+      <path d="M12 21.5S5 15.6 5 10a7 7 0 0 1 14 0c0 5.6-7 11.5-7 11.5z" />
+      <circle cx="12" cy="10" r="2.6" />
+    </svg>
+  );
+}
+
+function IconBriefcase() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="mt-0.5 h-4 w-4 shrink-0 text-flocken-olive"
+      aria-hidden
+    >
+      <rect x="3" y="8" width="18" height="12" rx="2.5" />
+      <path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18" />
+    </svg>
+  );
+}
+
+/** Tassavtryck — platshållare för hundar utan bild. */
+function IconPaw({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+      <ellipse cx="12" cy="15.5" rx="4.2" ry="3.6" />
+      <ellipse cx="6.2" cy="10.5" rx="1.9" ry="2.4" />
+      <ellipse cx="10" cy="7.5" rx="1.9" ry="2.5" />
+      <ellipse cx="14" cy="7.5" rx="1.9" ry="2.5" />
+      <ellipse cx="17.8" cy="10.5" rx="1.9" ry="2.4" />
+    </svg>
+  );
+}
 
 export async function generateMetadata({
   params,
@@ -158,14 +272,27 @@ export default async function EventPage({
   const typeMeta = EVENT_TYPE_LABELS[event.event_type] ?? EVENT_TYPE_LABELS.city_event;
   const place = [event.location_name, event.city].filter(Boolean).join(', ');
 
+  const n = event.participantCount;
   const t = {
     organizer: isPt ? 'Organizado por' : 'Arrangeras av',
     openInApp: isPt ? 'Abrir no app Flocken' : 'Öppna i Flocken-appen',
     getApp: isPt ? 'Baixar o app Flocken' : 'Hämta Flocken-appen',
+    interested:
+      n === 1
+        ? isPt
+          ? '1 pessoa está interessada'
+          : '1 person är intresserad'
+        : isPt
+          ? `${n} pessoas estão interessadas`
+          : `${n} personer är intresserade`,
     interactHint: isPt
       ? 'Para demonstrar interesse e participar, você precisa do app Flocken e de uma conta — leva um minutinho.'
       : 'För att anmäla intresse och delta behöver du Flocken-appen och ett konto — det tar bara en minut.',
   };
+
+  const MAX_DOGS_SHOWN = 5;
+  const shownDogs = event.dogs.slice(0, MAX_DOGS_SHOWN);
+  const extraDogs = event.dogs.length - shownDogs.length;
 
   return (
     <main className="min-h-screen bg-flocken-cream flex flex-col items-center justify-center px-4 py-12 md:py-16">
@@ -189,9 +316,8 @@ export default async function EventPage({
 
         <div className="rounded-2xl bg-white shadow-card border border-flocken-warm overflow-hidden">
           {/* Hero */}
-          <div className="bg-flocken-olive px-6 py-8 text-center">
-            <div className="text-4xl mb-3" aria-hidden>{typeMeta.emoji}</div>
-            <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-small font-bold text-white uppercase tracking-wide">
+          <div className="bg-flocken-olive px-6 py-7 text-center">
+            <span className="inline-block rounded-full bg-white/20 px-4 py-1.5 text-small font-bold text-white uppercase tracking-wide">
               {isPt ? typeMeta.pt : typeMeta.sv}
             </span>
           </div>
@@ -202,14 +328,23 @@ export default async function EventPage({
             </h1>
 
             {event.businessName ? (
-              <p className="mt-2 text-small font-semibold text-flocken-olive">
-                💼 {t.organizer} {event.businessName}
+              <p className="mt-2 flex items-center gap-2 text-small font-semibold text-flocken-olive">
+                <IconBriefcase />
+                {t.organizer} {event.businessName}
               </p>
             ) : null}
 
-            <div className="mt-4 space-y-2 text-body text-flocken-brown">
-              <p>📅 {formatEventDate(event)}</p>
-              {place ? <p>📍 {place}</p> : null}
+            <div className="mt-4 space-y-2.5 text-body text-flocken-brown">
+              <p className="flex items-start gap-2.5">
+                <IconCalendar />
+                <span>{formatEventDate(event)}</span>
+              </p>
+              {place ? (
+                <p className="flex items-start gap-2.5">
+                  <IconPin />
+                  <span>{place}</span>
+                </p>
+              ) : null}
             </div>
 
             {event.description ? (
@@ -217,6 +352,46 @@ export default async function EventPage({
                 {event.description}
               </p>
             ) : null}
+
+            {/* Intresserade */}
+            {(n > 0 || event.dogs.length > 0) && (
+              <div className="mt-5 rounded-xl bg-flocken-cream px-4 py-3.5">
+                {event.dogs.length > 0 ? (
+                  <div className="mb-2 flex items-center">
+                    {shownDogs.map((dog, i) => (
+                      <span
+                        key={dog.id}
+                        title={dog.name}
+                        className={`inline-block h-10 w-10 overflow-hidden rounded-full border-2 border-white bg-flocken-sand shadow-soft ${i > 0 ? '-ml-2.5' : ''}`}
+                      >
+                        {dog.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element -- externa S3-bilder, undviker remotePatterns-config
+                          <img
+                            src={dog.image}
+                            alt={dog.name}
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <IconPaw className="h-full w-full p-2 text-flocken-olive" />
+                        )}
+                      </span>
+                    ))}
+                    {extraDogs > 0 ? (
+                      <span className="-ml-2.5 inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-flocken-olive text-small font-bold text-white shadow-soft">
+                        +{extraDogs}
+                      </span>
+                    ) : null}
+                    <span className="ml-3 text-small font-semibold text-flocken-brown">
+                      {shownDogs.map(d => d.name).join(', ')}
+                      {extraDogs > 0 ? ` +${extraDogs}` : ''}
+                    </span>
+                  </div>
+                ) : null}
+                {n > 0 ? (
+                  <p className="text-small text-flocken-brown/80">{t.interested}</p>
+                ) : null}
+              </div>
+            )}
 
             <div className="mt-6 space-y-3">
               <a
