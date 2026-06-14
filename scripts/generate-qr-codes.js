@@ -31,7 +31,12 @@ const LOGO_PATH = path.resolve(
 );
 
 const FLOCKEN_BROWN = '#3E3B32';
+const FLOCKEN_OLIVE_DEEP = '#4D5A28';
+const BLACK = '#000000';
 const WHITE = '#FFFFFF';
+
+// Delad UTM för tryck-QR (skylt ute). Ingen campaign på begäran.
+const PRINT_UTM = 'utm_source=print_skylt_ute&utm_medium=qr';
 
 // Logo occupies 18% of QR width — well within ECC-H's 30% recovery tolerance.
 // 4-module quiet zone is included automatically by qrcode lib (margin: 4).
@@ -48,21 +53,47 @@ const TARGETS = [
     url: 'https://flocken.info/download?utm_source=print_skylt_ute&utm_medium=qr&utm_campaign=print_2026q2',
     pxSize: 2048,
   },
+  // Svartvita tryck-QR med UTM (utan campaign). Tass-loggan oliv i mitten.
+  {
+    name: 'flocken_qr_valkommen',
+    url: `https://flocken.info/valkommen?${PRINT_UTM}`,
+    pxSize: 1024,
+    dark: BLACK,
+  },
+  {
+    name: 'flocken_qr_valkommen_print',
+    url: `https://flocken.info/valkommen?${PRINT_UTM}`,
+    pxSize: 2048,
+    dark: BLACK,
+  },
+  {
+    name: 'flocken_qr_download',
+    url: `https://flocken.info/download?${PRINT_UTM}`,
+    pxSize: 1024,
+    dark: BLACK,
+  },
+  {
+    name: 'flocken_qr_download_print',
+    url: `https://flocken.info/download?${PRINT_UTM}`,
+    pxSize: 2048,
+    dark: BLACK,
+  },
 ];
 
 async function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-async function generateOne({ name, url, pxSize }) {
+async function generateOne({ name, url, pxSize, dark = FLOCKEN_BROWN }) {
   console.log(`\n=== ${name} (${pxSize}px) ===`);
   console.log(`URL: ${url}`);
+  console.log(`Module color: ${dark}`);
 
   const qrOptions = {
     errorCorrectionLevel: 'H',
     margin: 4,
     color: {
-      dark: FLOCKEN_BROWN,
+      dark,
       light: WHITE,
     },
   };
